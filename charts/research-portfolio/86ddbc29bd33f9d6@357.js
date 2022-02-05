@@ -1,14 +1,9 @@
 // https://observablehq.com/@d3/zoomable-sunburst@357
 export default function define(runtime, observer) {
   const main = runtime.module();
-  // const fileAttachments = new Map([["flare-2.json",new URL("./files/e65374209781891f37dea1e7a6e1c5e020a3009b8aedf113b4c80942018887a1176ad4945cf14444603ff91d3da371b3b0d72419fa8d2ee0f6e815732475d5de",import.meta.url)]]);
   const fileAttachments = new Map([["flare-2.json",new URL("flare-2.json",import.meta.url)]]);
   main.builtin("FileAttachment", runtime.fileAttachments(name => fileAttachments.get(name)));
-//   main.variable(observer()).define(["md"], function(md){return(
-// md`# Zoomable Sunburst
 
-// This variant of a [sunburst diagram](/@d3/sunburst) shows only two layers of the hierarchy at a time. Click a node to zoom in, or the center to zoom out. Compare to an [icicle](/@d3/zoomable-icicle).`
-// )});
   main.variable(observer("chart")).define("chart", ["partition","data","d3","width","color","arc","format","radius"], function(partition,data,d3,width,color,arc,format,radius)
 {
   const root = partition(data);
@@ -18,10 +13,6 @@ export default function define(runtime, observer) {
   const svg = d3.select("#research-chart-section").append("svg")
   .attr("viewBox", [0, 0, width, width])
   .style("font", "10px sans-serif");
-
-  // const svg = d3.create("svg")
-  //     .attr("viewBox", [0, 0, width, width])
-  //     .style("font", "10px sans-serif");
 
   const g = svg.append("g")
       .attr("transform", `translate(${width / 2},${width / 2})`);
@@ -53,7 +44,7 @@ export default function define(runtime, observer) {
       .attr("dy", "0.35em")
       .attr("fill-opacity", d => +labelVisible(d.current))
       .attr("transform", d => labelTransform(d.current))
-      .text(d => d.data.name);
+      .text(d => d.data.name.substring(0,28) + (d.data.name.length > 28 ? " ..." : ""));
 
   const parent = g.append("circle")
       .datum(root)
