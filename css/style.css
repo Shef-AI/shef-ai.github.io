@@ -400,7 +400,7 @@ a:focus, a:hover {
 }
 
 .single-page-header:before {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.8);
   position: absolute;
   content: '';
   top: 0;
