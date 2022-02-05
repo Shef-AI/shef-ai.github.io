@@ -33,6 +33,8 @@
   <link rel="stylesheet" href="plugins/slick/slick.css">
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">  
+  <!-- Chart Stylesheet -->
+  <link rel="stylesheet" href="charts/research-portfolio/inspector.css">  
 
 </head>
 
@@ -145,28 +147,27 @@ End Fixed Navigation
 <section class="portfolio section-sm">
 	<div class="container-fluid">
 		<div class="row">
-			
 			<!-- section title -->
 			<div class="col-12">
-			<div class="title text-center" >
-				<h2>Sheffield Portfolio</h2>
-				<p>Visualizing Knowledge and Information of Researchers at The University of Sheffield</p>
-				<div class="border"></div>
-			</div>
+				<div class="title text-center" >
+					<h2>Sheffield Portfolio</h2>
+					<p>Visualizing Knowledge and Information of Researchers at The University of Sheffield</p>
+					<div class="border"></div>
+				</div>
 			</div>
 			<!-- /section title -->
-		
 		</div> <!-- end row -->
 	</div> <!-- end container -->
-	<div class="container-fluid" id="research-chart-section">
-		<script type="module">
-			import define from "./charts/research-portfolio/index.js";
-			import {Runtime, Library, Inspector} from "./charts/research-portfolio/runtime.js";        
-			// import {Runtime, Library, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-			// import define from "https://api.observablehq.com/@observablehq/hello-world.js?v=3";
-			const runtime = new Runtime();
-			const main = runtime.module(define, Inspector.into(document.body));
-		</script>
+
+	<div class="container-fluid col-md-10">
+		<div id="research-chart-section">
+			<script type="module">
+				import define from "./charts/research-portfolio/index.js";
+				import {Runtime, Library, Inspector} from "./charts/research-portfolio/runtime.js";        
+				const runtime = new Runtime();
+				const main = runtime.module(define, Inspector.into(document.body));
+			</script>
+		</div>
 	</div> <!-- end container -->
 </section> <!-- end section -->
 
