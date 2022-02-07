@@ -1,1 +1,472 @@
-{"name": "flare", "children": [{"name": "Artificial Intelligence", "children": [{"name": "Multi-agent systems", "value": 91}, {"name": "Turing trustworthy AI forum", "value": 79}, {"name": "Fairness, transparency, privacy", "value": 115}, {"name": "Game AI", "value": 133}, {"name": "Robust machine learning", "value": 56}, {"name": "Natural language processing", "value": 101}, {"name": "Increasing transparency and explainability", "value": 74}, {"name": "Fairness and bias in algorithmic systems", "value": 99}, {"name": "Robust and adaptable systems", "value": 113}, {"name": "Enabling human control ", "value": 104}, {"name": "Deploying robotics and autonomous systems", "value": 135}, {"name": "Human-machine interaction  ", "value": 182}]}, {"name": "Arts and the Humanities", "children": [{"name": "AI & arts", "value": 127}, {"name": "Computer vision for digital heritage", "value": 125}, {"name": "Humanities and data science", "value": 82}, {"name": "Unlocking the value of our cultural heritage", "value": 70}, {"name": "Revolutionising data-driven research in the arts and humanities, and social sciences?", "value": 108}]}, {"name": "Business and the economy", "children": [{"name": "Economic data science", "value": 85}, {"name": "Entrepreneurship", "value": 82}, {"name": "Responsible data science and AI in the financial system", "value": 116}, {"name": "Real-time economy monitoring and actionable intelligence", "value": 188}, {"name": "Sustainable financial systems", "value": 117}, {"name": "Token economy and distributed financial systems.", "value": 89}]}, {"name": "Data Science at Scale", "children": [{"name": " *Increasing the scalability of data-driven computing tasks ", "value": 60}, {"name": "Improving accessibility and efficiency of high-performance and cloud computing systems ", "value": 88}, {"name": "Hardware for data science and AI  ", "value": 35}]}, {"name": "Data-centric Engineering", "children": [{"name": "Data science for engineering structural integrity", "value": 106}, {"name": "Machine learning for radio frequency applications", "value": 136}, {"name": "Optimising maintenance and supply chains", "value": 114}, {"name": "Monitoring complex systems  ", "value": 116}, {"name": "Data-driven design for sensing and autonomous operations", "value": 76}, {"name": "Digital Twins", "value": 148}]}, {"name": "Defence and Security", "children": [{"name": "Privacy-preserving data analysis", "value": 78}, {"name": "Developing best practice for collecting cybersecurity data", "value": 91}, {"name": "Trustworthy digital identity", "value": 92}, {"name": "Protecting Democarcy", "value": 88}, {"name": "Enhancing UK cyber security ", "value": 84}, {"name": "Privacy enhancing technologies\n ", "value": 104}, {"name": "Social justice and human rights", "value": 85}, {"name": "Security and climate change", "value": 89}]}, {"name": "Environment and Energy", "children": [{"name": "Environment and sustainability", "value": 105}, {"name": "Advanced modelling to tackle climate change", "value": 79}, {"name": "Detect and monitor biodiversity", "value": 74}]}, {"name": "Health and Medical Sciences", "children": [{"name": "Data science for mental health", "value": 138}, {"name": "Clinical AI", "value": 61}, {"name": "Omics data generation and analysis group", "value": 119}, {"name": "Clinical trial optimisation", "value": 74}, {"name": "Prediction, detection, diagnosis and treatment of illness", "value": 88}, {"name": "Hetergenous treatment and individualised response", "value": 135}, {"name": "Privacy for heath data assets", "value": 92}, {"name": "Legal, ethical and trusted AI for healthcare", "value": 84}]}, {"name": "Methodological challenges", "children": [{"name": "Knowledge graphs", "value": 84}, {"name": "Causal inference", "value": 105}, {"name": "Uncertainty quantification", "value": 139}, {"name": "AI in resource- and data-constrained environments", "value": 188}, {"name": "Visualization", "value": 109}, {"name": "Low-dimensional structure in data and graphs: models, analysis, and algorithms", "value": 111}]}, {"name": "Public policy and services", "children": [{"name": "Data Ethics Group", "value": 79}, {"name": "Data science education", "value": 82}, {"name": "Decision making for policy makers", "value": 208}, {"name": "Improving public service provision", "value": 230}, {"name": "Ethical data science and AI in policy-making  ", "value": 143}, {"name": "Regulating for acceptable use of data science and ai  ", "value": 181}]}, {"name": "Scientific Discovery", "children": [{"name": "High dimensional statistics", "value": 115}, {"name": "Rough paths: machine learning for sequential data", "value": 69}, {"name": "Machine learning and dynamical systems", "value": 114}, {"name": "Learning the organisational principles of living systems", "value": 92}, {"name": "Analysis of networks", "value": 90}, {"name": "Machine learning for molecules and materials", "value": 70}, {"name": "Topology and geometry for data", "value": 92}, {"name": "Novel chemicals and materials", "value": 90}, {"name": "Understanding complex molecular biology", "value": 83}, {"name": "Rare event detection  ", "value": 117}]}, {"name": "Social science", "children": [{"name": "Facilitating responsible participation in data science", "value": 123}, {"name": "Social data science", "value": 111}, {"name": "Data science for sports, activity, and well-being", "value": 70}, {"name": "Bridging machine learning and behaviour models", "value": 67}, {"name": "Media in the digital age", "value": 121}, {"name": "Data and inequality", "value": 127}]}, {"name": "Sustainable Agriculture and Food", "value": 20}, {"name": "Tools Practices and Systems", "children": [{"name": "The open-source ecosystem: maintenance and sustainability ", "value": 107}, {"name": "Reproducible and reusable workflows ", "value": 135}, {"name": "Optimising high-performance computing and secure data access ", "value": 142}, {"name": "Democratising access and improving cross-sector inclusion ", "value": 169}]}, {"name": "Urban analytics", "children": [{"name": "Urban analytics (Interest group)", "value": 79}, {"name": "Understanding behaviour and social change in cities", "value": 88}, {"name": "Promoting social inclusion, prosperity and well-being in cities", "value": 72}, {"name": " *Spatial analysis and spatial data infrastructure and visualisation  ", "value": 114}, {"name": "Mobility, active lifestyles, urban environments and population health", "value": 147}, {"name": "Developing urban digital twins", "value": 98}]}]}
+{
+    "name": "flare",
+    "children":
+    [
+        {
+            "name": "Artificial Intelligence",
+            "children":
+            [
+                {
+                    "name": "Multi-agent systems",
+                    "value": 91
+                },
+                {
+                    "name": "Turing trustworthy AI forum",
+                    "value": 79
+                },
+                {
+                    "name": "Fairness, transparency, privacy",
+                    "value": 115
+                },
+                {
+                    "name": "Game AI",
+                    "value": 133
+                },
+                {
+                    "name": "Human-machine interaction",
+                    "value": 56
+                },
+                {
+                    "name": "Natural language processing",
+                    "value": 101
+                },
+                {
+                    "name": "Increasing transparency and explainability",
+                    "value": 74
+                },
+                {
+                    "name": "Fairness and bias in algorithmic systems",
+                    "value": 99
+                },
+                {
+                    "name": "Robust and adaptable systems",
+                    "value": 113
+                },
+                {
+                    "name": "Enabling human control ",
+                    "value": 104
+                },
+                {
+                    "name": "Deploying robotics and autonomous systems",
+                    "value": 135
+                },
+                {
+                    "name": "Robust machine learning",
+                    "children":
+                    [
+                    	{
+                    		"name": "Haiping Lu",
+                    		"value": 100
+                    	},
+                    	{
+                    		"name": "Peizhen Bai",
+                    		"value": 30
+                    	},
+                    	{
+                    		"name": "Sina Tabakhi",
+                    		"value": 30
+                    	},
+                    	{
+                    		"name": "Shuo Zhou",
+                    		"value": 12
+                    	},
+                    	{
+                    		"name": "Lawrence Schobs",
+                    		"value": 10
+                    	}
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Arts and the Humanities",
+            "children":
+            [
+                {
+                    "name": "AI & arts",
+                    "value": 127
+                },
+                {
+                    "name": "Computer vision for digital heritage",
+                    "value": 125
+                },
+                {
+                    "name": "Humanities and data science",
+                    "value": 82
+                },
+                {
+                    "name": "Unlocking the value of our cultural heritage",
+                    "value": 70
+                },
+                {
+                    "name": "Revolutionising data-driven research in the arts and humanities, and social sciences?",
+                    "value": 108
+                }
+            ]
+        },
+        {
+            "name": "Business and the economy",
+            "children":
+            [
+                {
+                    "name": "Economic data science",
+                    "value": 85
+                },
+                {
+                    "name": "Entrepreneurship",
+                    "value": 82
+                },
+                {
+                    "name": "Responsible data science and AI in the financial system",
+                    "value": 116
+                },
+                {
+                    "name": "Real-time economy monitoring and actionable intelligence",
+                    "value": 188
+                },
+                {
+                    "name": "Sustainable financial systems",
+                    "value": 117
+                },
+                {
+                    "name": "Token economy and distributed financial systems.",
+                    "value": 89
+                }
+            ]
+        },
+        {
+            "name": "Data Science at Scale",
+            "children":
+            [
+                {
+                    "name": " *Increasing the scalability of data-driven computing tasks ",
+                    "value": 60
+                },
+                {
+                    "name": "Improving accessibility and efficiency of high-performance and cloud computing systems ",
+                    "value": 88
+                },
+                {
+                    "name": "Hardware for data science and AI  ",
+                    "value": 35
+                }
+            ]
+        },
+        {
+            "name": "Data-centric Engineering",
+            "children":
+            [
+                {
+                    "name": "Data science for engineering structural integrity",
+                    "value": 106
+                },
+                {
+                    "name": "Machine learning for radio frequency applications",
+                    "value": 136
+                },
+                {
+                    "name": "Optimising maintenance and supply chains",
+                    "value": 114
+                },
+                {
+                    "name": "Monitoring complex systems  ",
+                    "value": 116
+                },
+                {
+                    "name": "Data-driven design for sensing and autonomous operations",
+                    "value": 76
+                },
+                {
+                    "name": "Digital Twins",
+                    "value": 148
+                }
+            ]
+        },
+        {
+            "name": "Defence and Security",
+            "children":
+            [
+                {
+                    "name": "Privacy-preserving data analysis",
+                    "value": 78
+                },
+                {
+                    "name": "Developing best practice for collecting cybersecurity data",
+                    "value": 91
+                },
+                {
+                    "name": "Trustworthy digital identity",
+                    "value": 92
+                },
+                {
+                    "name": "Protecting Democarcy",
+                    "value": 88
+                },
+                {
+                    "name": "Enhancing UK cyber security ",
+                    "value": 84
+                },
+                {
+                    "name": "Privacy enhancing technologies\n ",
+                    "value": 104
+                },
+                {
+                    "name": "Social justice and human rights",
+                    "value": 85
+                },
+                {
+                    "name": "Security and climate change",
+                    "value": 89
+                }
+            ]
+        },
+        {
+            "name": "Environment and Energy",
+            "children":
+            [
+                {
+                    "name": "Environment and sustainability",
+                    "value": 105
+                },
+                {
+                    "name": "Advanced modelling to tackle climate change",
+                    "value": 79
+                },
+                {
+                    "name": "Detect and monitor biodiversity",
+                    "value": 74
+                }
+            ]
+        },
+        {
+            "name": "Health and Medical Sciences",
+            "children":
+            [
+                {
+                    "name": "Data science for mental health",
+                    "value": 138
+                },
+                {
+                    "name": "Clinical AI",
+                    "value": 61
+                },
+                {
+                    "name": "Omics data generation and analysis group",
+                    "value": 119
+                },
+                {
+                    "name": "Clinical trial optimisation",
+                    "value": 74
+                },
+                {
+                    "name": "Prediction, detection, diagnosis and treatment of illness",
+                    "value": 88
+                },
+                {
+                    "name": "Hetergenous treatment and individualised response",
+                    "value": 135
+                },
+                {
+                    "name": "Privacy for heath data assets",
+                    "value": 92
+                },
+                {
+                    "name": "Legal, ethical and trusted AI for healthcare",
+                    "value": 84
+                }
+            ]
+        },
+        {
+            "name": "Methodological challenges",
+            "children":
+            [
+                {
+                    "name": "Knowledge graphs",
+                    "value": 84
+                },
+                {
+                    "name": "Causal inference",
+                    "value": 105
+                },
+                {
+                    "name": "Uncertainty quantification",
+                    "value": 139
+                },
+                {
+                    "name": "AI in resource- and data-constrained environments",
+                    "value": 188
+                },
+                {
+                    "name": "Visualization",
+                    "value": 109
+                },
+                {
+                    "name": "Low-dimensional structure in data and graphs: models, analysis, and algorithms",
+                    "value": 111
+                }
+            ]
+        },
+        {
+            "name": "Public policy and services",
+            "children":
+            [
+                {
+                    "name": "Data Ethics Group",
+                    "value": 79
+                },
+                {
+                    "name": "Data science education",
+                    "value": 82
+                },
+                {
+                    "name": "Decision making for policy makers",
+                    "value": 208
+                },
+                {
+                    "name": "Improving public service provision",
+                    "value": 230
+                },
+                {
+                    "name": "Ethical data science and AI in policy-making  ",
+                    "value": 143
+                },
+                {
+                    "name": "Regulating for acceptable use of data science and ai  ",
+                    "value": 181
+                }
+            ]
+        },
+        {
+            "name": "Scientific Discovery",
+            "children":
+            [
+                {
+                    "name": "High dimensional statistics",
+                    "value": 115
+                },
+                {
+                    "name": "Rough paths: machine learning for sequential data",
+                    "value": 69
+                },
+                {
+                    "name": "Machine learning and dynamical systems",
+                    "value": 114
+                },
+                {
+                    "name": "Learning the organisational principles of living systems",
+                    "value": 92
+                },
+                {
+                    "name": "Analysis of networks",
+                    "value": 90
+                },
+                {
+                    "name": "Machine learning for molecules and materials",
+                    "value": 70
+                },
+                {
+                    "name": "Topology and geometry for data",
+                    "value": 92
+                },
+                {
+                    "name": "Novel chemicals and materials",
+                    "value": 90
+                },
+                {
+                    "name": "Understanding complex molecular biology",
+                    "value": 83
+                },
+                {
+                    "name": "Rare event detection  ",
+                    "value": 117
+                }
+            ]
+        },
+        {
+            "name": "Social science",
+            "children":
+            [
+                {
+                    "name": "Facilitating responsible participation in data science",
+                    "value": 123
+                },
+                {
+                    "name": "Social data science",
+                    "value": 111
+                },
+                {
+                    "name": "Data science for sports, activity, and well-being",
+                    "value": 70
+                },
+                {
+                    "name": "Bridging machine learning and behaviour models",
+                    "value": 67
+                },
+                {
+                    "name": "Media in the digital age",
+                    "value": 121
+                },
+                {
+                    "name": "Data and inequality",
+                    "value": 127
+                }
+            ]
+        },
+        {
+            "name": "Sustainable Agriculture and Food",
+            "value": 20
+        },
+        {
+            "name": "Tools Practices and Systems",
+            "children":
+            [
+                {
+                    "name": "The open-source ecosystem: maintenance and sustainability ",
+                    "value": 107
+                },
+                {
+                    "name": "Reproducible and reusable workflows ",
+                    "value": 135
+                },
+                {
+                    "name": "Optimising high-performance computing and secure data access ",
+                    "value": 142
+                },
+                {
+                    "name": "Democratising access and improving cross-sector inclusion ",
+                    "value": 169
+                }
+            ]
+        },
+        {
+            "name": "Urban analytics",
+            "children":
+            [
+                {
+                    "name": "Urban analytics (Interest group)",
+                    "value": 79
+                },
+                {
+                    "name": "Understanding behaviour and social change in cities",
+                    "value": 88
+                },
+                {
+                    "name": "Promoting social inclusion, prosperity and well-being in cities",
+                    "value": 72
+                },
+                {
+                    "name": " *Spatial analysis and spatial data infrastructure and visualisation  ",
+                    "value": 114
+                },
+                {
+                    "name": "Mobility, active lifestyles, urban environments and population health",
+                    "value": 147
+                },
+                {
+                    "name": "Developing urban digital twins",
+                    "value": 98
+                }
+            ]
+        }
+    ]
+}
