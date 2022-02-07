@@ -33,6 +33,8 @@
   <link rel="stylesheet" href="plugins/slick/slick.css">
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">  
+  <!-- bootstrap icons css-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
 
 </head>
 
@@ -78,36 +80,36 @@ Fixed Navigation
 
       <div class="collapse navbar-collapse" id="navigation">
         <ul class="navbar-nav ml-auto text-center">
-          <li class="nav-item ">
-            <a class="nav-link" href="index.html">Homepage</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Research
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="research.html">Research Groups</a>
+              <a class="dropdown-item" href="software.html">Software</a>
+            </div>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="about.html">About Us</a>
+            <a class="nav-link" href="people.html">People</a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="service.html">Services</a>
-          </li>
-          <li class="nav-item ">
+		      <li class="nav-item ">
             <a class="nav-link" href="portfolio.html">Portfolio</a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="team.html">Team</a>
+		      <li class="nav-item ">
+            <a class="nav-link" href="news.html">News</a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="pricing.html">Pricing</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="contact.html">Contact</a>
+		      <li class="nav-item ">
+            <a class="nav-link" href="events.html">Events</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
-              Pages
+              Contributions
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="404.html">404 Page</a>
-              <a class="dropdown-item" href="blog.html">Blog Page</a>
-              <a class="dropdown-item" href="single-post.html">Blog Single Page</a>
+              <a class="dropdown-item" href="https://github.com/SheffieldAI/sheffieldai.github.io/projects/1" target="_blank">Project Board</a>
+              <a class="dropdown-item" href="https://github.com/SheffieldAI/sheffieldai.github.io/discussions" target="_blank">Discussion Board</a>
             </div>
           </li>
         </ul>
@@ -127,6 +129,7 @@ End Fixed Navigation
 				<h2>Blog Single</h2>
 				<ol class="breadcrumb header-bradcrumb justify-content-center">
 				  <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
+          <li class="breadcrumb-item"><a href="news.html" class="text-white">News</a></li>
 				  <li class="breadcrumb-item active">Blog Single</li>
 				</ol>
 			</div>
@@ -141,35 +144,28 @@ End Fixed Navigation
       <div class="col-lg-8">
         <article class="post">
           <div class="post-image">
-            <img class="img-fluid w-100" src="images/blog/post-1.jpg" alt="post-image">
+            <img class="img-fluid w-100" src="images/news/news-12-01-2022.jpg" alt="post-image">
           </div>
           <!-- Post Content -->
           <div class="post-content">
-            <h3>Cras Sed Elit Sit Amet.</h3>
+            <h3>Sheffield Startup team 'The Bridge' made the Europe regional finals for the IBM Call for Code Global Challenge.</h3>
             <ul class="list-inline">
-              <li class="list-inline-item">
-                <a href="#">Admin</a>&nbsp;/
-              </li>
-              <li class="list-inline-item">
-                <a href="#">30 comments</a>&nbsp;/
-              </li>
-              <li class="list-inline-item">
-                <a href="#">30 likes</a>
-              </li>
+              <i class="bi bi-calendar">
+                 Jan 12, 2022
+              </i>
             </ul>
-            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              Sed ut perspiciatis unde omnis natus error sit voluptatem accusantium dolore mque laudantium totam rem aperiam
-              eaque ipsa quae ab illo inventore veritatis et quasi archite beatae vitae dicta sunt explicabo. nemo enim ipsam
-              voluptatem quia voluptassit.aspernatur aut odit aut fugit.</p>
-            <p>Sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt neque poro quisquam est, qui dolorem
-              ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
-              labore et dolore magnam aliquam quaerat voluptatem</p>
-            <!-- blockquote -->
-            <blockquote data-aos="fade-left" data-aos-duration="1000">Excepteur sint occaecat cupidatat non proi dent, sunt in culpa qui officia deserunt mollit anim iest.laborum.
-              sed perspiciatis unde omnis iste natus error voluptatem accusantium dolore mque laudantium.</blockquote>
-            <p>Occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Seper spiciatis
-              unde omnis natus error sit voluptatem accusantium doloremque laudantium totam rem. aperiam eaque ipsa quae
-              ab illo inventore veritatis.</p>
+            <p>The Call for Code initiative has been running for four years. It is the largest tech for good initiative of its kind. 
+              The world is facing unprecedented, interconnected challenges and IMB believe technology can help, 
+              whether that is through challenges, deployments, or open source development.  
+              This competition is aligned with IBM’s initiative to invest $30 million over five years to use the full potential
+               of technologies in order to protect the environment, save human lives and improve the future of the next generations.</p>
+            <p>The team, made up of four computer science students, all had a shared vision: bridging the gap between the Global North and South.
+               Marvelous Jibogu, Ben Dawson, Bagha Charuduth, and Jameel Chagpar form one of two British finalist teams in the IBM Call for Code challenge 2021.
+                Their solution, aptly called The Bridge, allows sellers living in the Global South to sell products to buyers in the Global North while cutting out the shipping process.
+                Their solution has a positive impact on improving the quality of life for sellers living in the Global South, and at the same time helps combat climate change.</p>
+            <p>The team met as part of the Sheffield Startup - an annual event run within the Department of Computer Science with support from the Institute of Coding,
+               Kollider and Barclays bank. Students from any discipline/subject are invited to join as well as recent graduates. The event aims to help develop entrepreneurship
+                skills and the process of creating a Startup through a series of workshops, industry talks and workshops.</p>
             <!-- post share -->
             <ul class="post-content-share list-inline">
               <li class="list-inline-item">
@@ -193,50 +189,6 @@ End Fixed Navigation
                 </a>
               </li>
             </ul>
-            <h3>2 comments</h3>
-            <ul class="comment-list">
-              <!-- comment list -->
-              <li class="comment-list-item">
-                <div class="comment-list-item-image">
-                  <img src="images/blog/comment-1.jpg" alt="comment-img">
-                </div>
-                <div class="comment-list-item-content">
-                  <h5>Anke Kirsch</h5>
-                  <h6>Aug 20, 2018</h6>
-                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor emque laudant tota rem
-                    ape riamipsa eaque. </p>
-                  <a href="#" class="comment-btn">reply</a>
-                </div>
-              </li>
-              <li class="comment-list-item">
-                <div class="comment-list-item-image">
-                  <img src="images/blog/comment-2.jpg" alt="comment-img">
-                </div>
-                <div class="comment-list-item-content">
-                  <h5>Falk Burger</h5>
-                  <h6>Aug 20, 2018</h6>
-                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor emque laudant tota rem
-                    ape riamipsa eaque. </p>
-                  <a href="#" class="comment-btn">reply</a>
-                </div>
-              </li>
-            </ul>
-            <h3>Leave A Comments</h3>
-            <!-- Comment Form -->
-            <form action="#" class="comment-form">
-              <div class="row">
-                <div class="col-lg-6 col-md-6">
-                  <input type="text" name="first-name" class="form-control" id="first-name" placeholder="First Name" required>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                  <input type="email" name="mail" class="form-control" id="mail" placeholder="Email" required>
-                </div>
-                <div class="col-lg-12 col-md-12">
-                  <textarea class="form-control" name="msg" id="msg" rows="6" placeholder="Message" required></textarea>
-                </div>
-              </div>
-              <button type="submit" value="send" class="btn btn-primary">send Message</button>
-            </form>
           </div>
         </article>
       </div>
@@ -334,7 +286,7 @@ End Fixed Navigation
       <div class="row">
         <div class="col-sm-3 col-md-3 col-lg-3">
           <h3>about</h3>
-          <p>Integer posuere erat a ante venenati dapibus posuere velit aliquet. Fusce dapibus, tellus cursus commodo, tortor mauris sed posuere.</p>
+          <p>About about about about about about about about about about about about about about about about about about about about.</p>
         </div>
         <!-- End of .col-sm-3 -->
 
