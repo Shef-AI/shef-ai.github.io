@@ -29,6 +29,7 @@ jobs:
           CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
           FILE_ID: ${{ secrets.FILE_ID }}
         run: |
-          echo env.FILE_ID
-          python tools/download_from_drive.py --token env.TOKEN --refresh_token env.REFRESH_TOKEN --client_id env.CLIENT_ID --client_secret env.CLIENT_SECRET --file_id env.FILE_ID --output_path "./test.csv"
+          echo ${{ secrets.FILE_ID }}
+          echo $env.TOKEN
+          python tools/download_from_drive.py --token ${{ secrets.REFRESH_TOKEN }} --refresh_token ${{ secrets.REFRESH_TOKEN }} --client_id ${{ secrets.CLIENT_ID }} --client_secret ${{ secrets.CLIENT_SECRET }} --file_id ${{ secrets.FILE_ID }} --output_path "./test.csv"
         shell: bash -l {0}
