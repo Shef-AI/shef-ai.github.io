@@ -39,6 +39,7 @@ def main():
     args = arg_parse()
     download_fileid = args.file_id
     file_output_path = args.output_path
+    print(f"file_id: {args.file_id}")
     info = {"token": args.token,
             "refresh_token": args.refresh_token,
             "token_uri": TOKEN_URI,
