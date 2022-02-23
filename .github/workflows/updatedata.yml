@@ -19,8 +19,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies
         run: |
-          conda activate test
-          pip3 install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
+          pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
         shell: bash -l {0}
       - name: Download data from google drive
         env:
