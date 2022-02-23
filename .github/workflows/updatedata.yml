@@ -19,7 +19,8 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies
         run: |
-          pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
+          conda activate test
+          pip3 install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
         shell: bash -l {0}
       - name: Download data from google drive
         env:
@@ -29,4 +30,4 @@ jobs:
           CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
           FILE_ID: ${{ secrets.FILE_ID }}
         run: |
-          python tools/download_from_drive.py --token $TOKEN --refresh_token $REFRESH_TOKEN --client_id $CLIENT_ID --client_secret $CLIENT_SECRET --file_id $FILE_ID --output_path "./test.csv"
+          python3 tools/download_from_drive.py --token $TOKEN --refresh_token $REFRESH_TOKEN --client_id $CLIENT_ID --client_secret $CLIENT_SECRET --file_id $FILE_ID --output_path "./test.csv"
