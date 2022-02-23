@@ -39,7 +39,6 @@ def main():
     args = arg_parse()
     download_fileid = args.file_id
     file_output_path = args.output_path
-    print(f"file_id: {args.file_id}")
     info = {"token": args.token,
             "refresh_token": args.refresh_token,
             "token_uri": TOKEN_URI,
@@ -65,7 +64,7 @@ def main():
     with open(file_output_path, 'wb') as f:
         f.write(fh.read())
         f.close()
-    print(f"the file is saved to : {file_output_path}")
+    print(f"The downloaded file is saved to : {file_output_path}")
 
 
 if __name__ == '__main__':
