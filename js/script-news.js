@@ -1,4 +1,4 @@
-import data from "./news.json" assert { type: "json" };
+import data from "../json/news.json" assert { type: "json" };
 
 data.content.forEach(function(element){
   $('#news-section').append(
@@ -9,9 +9,9 @@ data.content.forEach(function(element){
         '</div>' +
         '<div class="content">' +
           '<p><i class="bi bi-calendar"> ' + element["date"] +'</i></p>'+
-          '<h3><a href="' + element["link"] + '.html">' + element["title"] + '</a></h3>' +
+          '<h3><a href=single-news.html?id=' + element["id"] + '>' + element["title"] + '</a></h3>' +
           '<p>' + element["body"] + '</p>' + 
-          '<a class="btn btn-main" href="' + element["link"] + '.html">Read more</a>' + 
+          '<a class="btn btn-main" href=single-news.html?id=' + element["id"] + '>Read more</a>' + 
         '</div>' +
       '</div>' +  
     '</article>');
