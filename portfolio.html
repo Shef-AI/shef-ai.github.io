@@ -164,58 +164,7 @@ End Fixed Navigation
 </section> <!-- end section -->
 
 
-<footer id="footer" class="bg-one">
-  <div class="top-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-3 col-md-3 col-lg-3">
-          <h3>about</h3>
-          <p>About about about about about about about about about about about about about about about about about about about about.</p>
-        </div>
-        <!-- End of .col-sm-3 -->
-
-        <div class="col-sm-3 col-md-3 col-lg-3">
-          <ul>
-            <li><h3>Our Services</h3></li>
-            <li><a href="#">Service 1</a></li>
-            <li><a href="#">Service 2</a></li>
-            <li><a href="#">Service 3</a></li>
-            <li><a href="#">Service 4</a></li>
-          </ul>
-        </div>
-        <!-- End of .col-sm-3 -->
-
-        <div class="col-sm-3 col-md-3 col-lg-3">
-          <ul>
-            <li><h3>Quick Links</h3></li>
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
-            <li><a href="#">Link 4</a></li>
-          </ul>
-        </div>
-        <!-- End of .col-sm-3 -->
-
-        <div class="col-sm-3 col-md-3 col-lg-3">
-          <ul>
-            <li><h3>Connect with us Socially</h3></li>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Youtube</a></li>
-            <li><a href="#">Pinterest</a></li>
-          </ul>
-        </div>
-        <!-- End of .col-sm-3 -->
-
-      </div>
-    </div> <!-- end container -->
-  </div>
-  <div class="footer-bottom">
-	<h5>Copyright 2022 University of Sheffield.</h5>
-  </div>
-</footer> <!-- end footer -->
-
-
+    <div id="footer-section"></div>
     <!-- end Footer Area
     ========================================== -->
 
@@ -249,6 +198,12 @@ End Fixed Navigation
     
     <!-- Custom js -->
     <script src="js/script.js"></script>
+
+    <script> 
+      $(function(){
+        $("#footer-section").load("footer.html"); 
+      });
+    </script> 
 
   </body>
   </html>
