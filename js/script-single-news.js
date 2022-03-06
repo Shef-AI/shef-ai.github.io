@@ -11,7 +11,7 @@ var element = data.content.find(element => element["id"] === params.id);
 if (element) {
     $('#news-section').append(
         '<div class="post-image">' + 
-            '<img class="img-fluid w-100" src="images/news/' + element["image"] + '" alt="post-image">' + 
+            '<img class="img-fluid w-100" src="images/news/' + element["image"] + '" alt=News-"' + element["title"] + '">' + 
         '</div>' +
         '<div class="post-content">' +
             '<ul class="list-inline">' +
@@ -45,7 +45,7 @@ for (var i = 0; i < data.content.length && i < 3; i++) {
     $('#latest-news').append(
         '<li class="widget-post-list-item">' +
             '<div class="widget-post-image">' +
-                '<a href="single-news.html?id=' + newsElement["id"] + '"> <img src="images/news/' + newsElement["image"] + '" alt="post-img"></a>' +
+                '<a href="single-news.html?id=' + newsElement["id"] + '"> <img src="images/news/' + newsElement["image"] + '" alt="News-' + newsElement["title"] + '"></a>' +
             '</div>' +
             '<div class="widget-post-content">' +
                 '<a href="single-news.html?id=' + newsElement["id"] + '"><h5>News 1</h5></a>' + 

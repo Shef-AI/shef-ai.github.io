@@ -5,7 +5,7 @@ data.content.forEach(function(element){
     '<article class="col-md-4 col-sm-6 col-xs-12 ">'+
       '<div class="post-item">' + 
         '<div class="media-wrapper">' + 
-          '<img src="images/news/' + element["image"] +'" alt="amazing caves coverimage" class="img-fluid">' + 
+          '<img src="images/news/' + element["image"] +'" alt="News-' + element["title"] + '" class="img-fluid">' + 
         '</div>' +
         '<div class="content">' +
           '<p><i class="bi bi-calendar"> ' + element["date"] +'</i></p>'+
