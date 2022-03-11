@@ -2,7 +2,7 @@ import data from "../json/people.json" assert { type: "json" };
 
 data.content.forEach(function(element){
   $('#people-section').append(
-    '<div class="col-md-4 col-sm-6 ">' +
+    '<div class="col-md-4 col-sm-6">' +
       '<div class="team-member text-center">' +
         '<div class="member-photo">' +
           '<img class="img-fluid" src="images/people/' + element["image"] + '" alt="Academic-Staff-' + element["name"] + '">' +
