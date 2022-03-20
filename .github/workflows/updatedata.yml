@@ -2,6 +2,10 @@ name: updatedata
 
 on: workflow_dispatch
 
+permissions:
+  contents: read
+  pull-requests: write
+
 jobs:
   updatedata:
     name: Update data
@@ -23,7 +27,7 @@ jobs:
         shell: bash -l {0}
       - name: Download data from google drive
         env:
-          TOKEN: ${{ secrets.TOKEN }}
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
           CLIENT_ID: ${{ secrets.CLIENT_ID }}
           CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
@@ -47,8 +51,7 @@ jobs:
             Create PR
             - Auto-generated PR in action
             - Create test.csv
-
-            [1]: https://github.com/peter-evans/create-pull-request
+            - https://github.com/peter-evans/create-pull-request
           labels: |
             test
             automated pr
