@@ -9,6 +9,7 @@ for (var i = 0; i < data.content.length && i < 3; i++) {
                     '<img loading="lazy" src="images/news/' + newsElement["image"] + '" alt="News-' + newsElement["title"] + '" class="img-fluid">' +
                 '</div>' +
                 '<div class="content">' +
+                    '<p><i class="bi bi-calendar"> ' + newsElement["date"] +'</i></p>'+
                     '<h3><a href="single-news.html?id=' + newsElement["id"] + '">' + newsElement["title"] + '</a></h3>' +
                     '<p>' + newsElement["body"] + '</p>' +
                     '<a class="btn btn-main" href="single-news.html?id=' + newsElement["id"] + '">Read more</a>' +
