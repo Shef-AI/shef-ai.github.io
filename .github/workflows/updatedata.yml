@@ -33,7 +33,7 @@ jobs:
           CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
           FILE_ID: ${{ secrets.FILE_ID }}
         run: |
-          python tools/download_from_drive.py --token "$TOKEN" --refresh_token "$REFRESH_TOKEN" --client_id "$CLIENT_ID" --client_secret "$CLIENT_SECRET" --file_id "$FILE_ID" --output_path "./test.csv"
+          python tools/download_from_drive.py --token "$TOKEN" --refresh_token "$REFRESH_TOKEN" --client_id "$CLIENT_ID" --client_secret "$CLIENT_SECRET" --file_id "$EVENT_ID" --output_path "./json/event.json"
         shell: bash -l {0}
       - name: Create Pull Request
         id: cpr
