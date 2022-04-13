@@ -27,7 +27,7 @@ def arg_parse():
                         help='client id')
     parser.add_argument('--client_secret', required=True, type=str, metavar='CLIENT_SECRET',
                         help='client secret')
-    parser.add_argument('--file_id', required=True, type=str, metavar='FILE',
+    parser.add_argument('--folder_id', required=True, type=str, metavar='FOLDER',
                         help='Download file id')
     parser.add_argument('--output_path', required=True, type=str, metavar='OUTPUT',
                         help='Output file path')
@@ -35,9 +35,24 @@ def arg_parse():
     return args
 
 
+def download_files(service, download_fileid, file_output_path):
+    request = service.files().get_media(fileId=download_fileid)
+    fh = io.BytesIO()
+    downloader = MediaIoBaseDownload(fh, request)
+    done = False
+    while not done:
+        status, done = downloader.next_chunk()
+        print("    Download progress {0}".format(status.progress() * 100))
+    fh.seek(0)
+    with open(file_output_path, 'wb') as f:
+        f.write(fh.read())
+        f.close()
+    print(f"    The downloaded file is saved to : {file_output_path}")
+
+
 def main():
     args = arg_parse()
-    download_fileid = args.file_id
+    folder_id = args.folder_id
     file_output_path = args.output_path
     info = {"token": args.token,
             "refresh_token": args.refresh_token,
@@ -46,25 +61,30 @@ def main():
             "client_secret": args.client_secret,
             "scopes": SCOPES
             }
+
     creds = Credentials.from_authorized_user_info(info, SCOPES)
     service = build('drive', 'v3', credentials=creds)
 
-    request = service.files().export_media(fileId=download_fileid, mimeType='text/csv')
-
-    fh = io.BytesIO()
-    downloader = MediaIoBaseDownload(fh, request)
-    done = False
-
-    while not done:
-        status, done = downloader.next_chunk()
-        print("Download progress {0}".format(status.progress() * 100))
-
-    fh.seek(0)
-
-    with open(file_output_path, 'wb') as f:
-        f.write(fh.read())
-        f.close()
-    print(f"The downloaded file is saved to : {file_output_path}")
+    results = service.files().list(
+        pageSize=1000, q=folder_id+" in parents", fields="nextPageToken, files(id, name, mimeType, trashed)").execute()
+    items = results.get('files', [])
+    if not items:
+        print('No files found.')
+    else:
+        print('Files:')
+        for item in items:
+            print(f"\n    Name: {item['name']}, MimeType: {item['mimeType']}, TrashedStatus:{item['trashed']}")
+            if not item['trashed']:
+                try:
+                    if item['mimeType'] == "application/json":
+                        file_output_path = "./json/" + item['name']
+                    elif item['mimeType'].startswith("image"):
+                        file_output_path = "./images/events/" + item['name']
+                    else:
+                        continue
+                    download_files(service, item['id'], file_output_path)
+                except Exception as e:
+                    print(f"    An exception occurred when trying to download file '{item['name']}' with error '{e}'")
 
 
 if __name__ == '__main__':
