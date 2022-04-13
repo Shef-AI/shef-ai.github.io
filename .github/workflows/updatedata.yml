@@ -31,7 +31,6 @@ jobs:
           REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
           CLIENT_ID: ${{ secrets.CLIENT_ID }}
           CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
-          FILE_ID: ${{ secrets.FILE_ID }}
           FOLDER_ID: ${{ secrets.FOLDER_ID }}
         run: |
           python tools/download_from_drive.py --token "$TOKEN" --refresh_token "$REFRESH_TOKEN" --client_id "$CLIENT_ID" --client_secret "$CLIENT_SECRET" --folder_id "$FOLDER_ID" --output_path "./test.csv"
@@ -56,6 +55,6 @@ jobs:
           labels: |
             test
             automated pr
-          assignees: pz-white
-          reviewers: pz-white
+          assignees: SinaTabakhi
+          reviewers: SinaTabakhi
           draft: false
