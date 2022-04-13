@@ -1,6 +1,6 @@
 import data from "../json/events.json" assert { type: "json" };
 
-data.content.forEach(function(element){
+data.forEach(function(element){
   $('#events-section').append(
     '<div class="row">' +
       '<div class="col-md-6">' +

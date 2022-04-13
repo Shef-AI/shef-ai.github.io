@@ -1,6 +1,6 @@
 import data from "../json/news.json" assert { type: "json" };
 
-data.content.forEach(function(element){
+data.forEach(function(element){
   $('#news-section').append(
     '<article class="col-md-4 col-sm-6 col-xs-12 ">'+
       '<div class="post-item">' + 

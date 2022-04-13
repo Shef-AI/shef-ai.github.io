@@ -1,7 +1,7 @@
 import data from "../json/news.json" assert { type: "json" };
 
-for (var i = 0; i < data.content.length && i < 3; i++) {
-    var newsElement = data.content[i];
+for (var i = 0; i < data.length && i < 3; i++) {
+    var newsElement = data[i];
     $('#latest-news-section').append(
         '<article class="col-lg-4 col-md-6">' + 
             '<div class="post-item">' +

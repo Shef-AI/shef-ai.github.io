@@ -1,7 +1,7 @@
 import data from "../json/events.json" assert { type: "json" };
 
-for (var i = 0; i < data.content.length && i < 3; i++) {
-    var eventElement = data.content[i];
+for (var i = 0; i < data.length && i < 3; i++) {
+    var eventElement = data[i];
     $('#latest-events-section').append(
       '<div class="col-md-6 col-sm-4">' +
         '<img loading="lazy" src="images/events/' + eventElement["image"] + '" alt="Event-' + eventElement["title"] + '" class="img-fluid">' +

@@ -1,6 +1,6 @@
 import data from "../json/people.json" assert { type: "json" };
 
-data.content.forEach(function(element){
+data.forEach(function(element){
   $('#people-section').append(
     '<div class="col-md-4 col-sm-6">' +
       '<div class="team-member text-center">' +

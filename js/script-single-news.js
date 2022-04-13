@@ -6,7 +6,7 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
 });
 
 // Search the json file to find the element by id
-var element = data.content.find(element => element["id"] === params.id);
+var element = data.find(element => element["id"] === params.id);
 
 if (element) {
     $('#news-section').append(
@@ -40,8 +40,8 @@ else {
     window.location.href = "../404.html"
 }
 
-for (var i = 0; i < data.content.length && i < 3; i++) {
-    var newsElement = data.content[i];
+for (var i = 0; i < data.length && i < 3; i++) {
+    var newsElement = data[i];
     $('#latest-news').append(
         '<li class="widget-post-list-item">' +
             '<div class="widget-post-image">' +

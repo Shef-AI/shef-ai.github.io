@@ -1,26 +1,23 @@
-{
-    "content":
-    [
-        {
-            "id" : "1D78TeItvj3idhrxVmtkm8bm5mvg_FAUp",
-            "date": "Jun 10, 2022",
-            "title": "Coming soon!",
-            "body": "Coming soon!",
-            "image" : "1D78TeItvj3idhrxVmtkm8bm5mvg_FAUp.jpg"
-        },
-        {
-            "id" : "1D78TeItvj3idhrxVmtkm8bm5mvg_FAUq",
-            "date": "Mar 22, 2022",
-            "title": "Coming soon!",
-            "body": "Coming soon!",
-            "image" : "1D78TeItvj3idhrxVmtkm8bm5mvg_FAUp.jpg"
-        },
-        {
-            "id" : "1D78TeItvj3idhrxVmtkm8bm5mvg_FAUt",
-            "date": "Apr 1, 2022",
-            "title": "Coming soon!",
-            "body": "Coming soon!",
-            "image" : "1D78TeItvj3idhrxVmtkm8bm5mvg_FAUp.jpg"
-        }
-    ]
-}
+[
+    {
+        "id" : "1D78TeItvj3idhrxVmtkm8bm5mvg_FAUp",
+        "date": "Jun 10, 2022",
+        "title": "Coming soon!",
+        "body": "Coming soon!",
+        "image" : "1D78TeItvj3idhrxVmtkm8bm5mvg_FAUp.jpg"
+    },
+    {
+        "id" : "1D78TeItvj3idhrxVmtkm8bm5mvg_FAUq",
+        "date": "Mar 22, 2022",
+        "title": "Coming soon!",
+        "body": "Coming soon!",
+        "image" : "1D78TeItvj3idhrxVmtkm8bm5mvg_FAUp.jpg"
+    },
+    {
+        "id" : "1D78TeItvj3idhrxVmtkm8bm5mvg_FAUt",
+        "date": "Apr 1, 2022",
+        "title": "Coming soon!",
+        "body": "Coming soon!",
+        "image" : "1D78TeItvj3idhrxVmtkm8bm5mvg_FAUp.jpg"
+    }
+]

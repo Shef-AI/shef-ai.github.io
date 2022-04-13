@@ -1,6 +1,6 @@
 import data from "../json/software.json" assert { type: "json" };
 
-data.content.forEach(function(element){
+data.forEach(function(element){
 
   var languages = element["languages"].split(",");
   var language_list = '<ul>';

@@ -6,7 +6,7 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
 });
 
 // Search the json file to find the element by id
-var element = data.content.find(element => element["id"] === params.id);
+var element = data.find(element => element["id"] === params.id);
 
 if (element) {
     $('#event-section').append(

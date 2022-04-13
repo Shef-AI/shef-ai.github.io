@@ -1,11 +1,8 @@
-{
-    "content":
-    [
-        {
-            "id" : "1D78TeItvj3idhrxVmtkm8bm5mvg_FAUp",
-            "title": "Software",
-            "description": "Coming soon!",
-            "languages": "Python, Cython"
-        }
-    ]
-}
+[
+    {
+        "id" : "1D78TeItvj3idhrxVmtkm8bm5mvg_FAUp",
+        "title": "Software",
+        "description": "Coming soon!",
+        "languages": "Python, Cython"
+    }
+]
