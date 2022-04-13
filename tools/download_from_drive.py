@@ -27,7 +27,7 @@ def arg_parse():
                         help='client id')
     parser.add_argument('--client_secret', required=True, type=str, metavar='CLIENT_SECRET',
                         help='client secret')
-    parser.add_argument('--folder_id', required=True, type=str, metavar='FOLDER',
+    parser.add_argument('--folder_id', required=True, type=str, metavar='FOLDER_ID',
                         help='Download file id')
     parser.add_argument('--output_path', required=True, type=str, metavar='OUTPUT',
                         help='Output file path')
