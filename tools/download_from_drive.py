@@ -28,9 +28,9 @@ def arg_parse():
     parser.add_argument('--client_secret', required=True, type=str, metavar='CLIENT_SECRET',
                         help='client secret')
     parser.add_argument('--folder_id', required=True, type=str, metavar='FOLDER_ID',
-                        help='Download file id')
+                        help='Download folder id')
     parser.add_argument('--output_path', required=True, type=str, metavar='OUTPUT',
-                        help='Output file path')
+                        help='Output folder name')
     args = parser.parse_args()
     return args
 
@@ -53,7 +53,7 @@ def download_files(service, download_fileid, file_output_path):
 def main():
     args = arg_parse()
     folder_id = args.folder_id
-    file_output_path = args.output_path
+    output_folder = args.output_path
     info = {"token": args.token,
             "refresh_token": args.refresh_token,
             "token_uri": TOKEN_URI,
@@ -79,7 +79,7 @@ def main():
                     if item['mimeType'] == "application/json":
                         file_output_path = "./json/" + item['name']
                     elif item['mimeType'].startswith("image"):
-                        file_output_path = "./images/events/" + item['name']
+                        file_output_path = f"./images/{output_folder}/" + item['name']
                     else:
                         continue
                     download_files(service, item['id'], file_output_path)

@@ -1,4 +1,4 @@
-name: updatedata
+name: update-events
 
 on: workflow_dispatch
 
@@ -7,8 +7,8 @@ permissions:
   pull-requests: write
 
 jobs:
-  updatedata:
-    name: Update data
+  update-events:
+    name: update events
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -31,16 +31,17 @@ jobs:
           REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
           CLIENT_ID: ${{ secrets.CLIENT_ID }}
           CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
-          FOLDER_ID: ${{ secrets.FOLDER_ID }}
+          FOLDER_ID: ${{ secrets.EVENT_FOLDER_ID }}
+          OUTPUT_FOLDER_NAME: ${{ secrets.EVENT_OUTPUT_FOLDER_NAME }}
         run: |
-          python tools/download_from_drive.py --token "$TOKEN" --refresh_token "$REFRESH_TOKEN" --client_id "$CLIENT_ID" --client_secret "$CLIENT_SECRET" --folder_id "$FOLDER_ID" --output_path "./test.csv"
+          python tools/download_from_drive.py --token "$TOKEN" --refresh_token "$REFRESH_TOKEN" --client_id "$CLIENT_ID" --client_secret "$CLIENT_SECRET" --folder_id "$FOLDER_ID" --output_path "$OUTPUT_FOLDER_NAME"
         shell: bash -l {0}
       - name: Create Pull Request
         id: cpr
         uses: peter-evans/create-pull-request@v4
         with:
           token: ${{ secrets.PAT }}
-          commit-message: Update data
+          commit-message: Update events
           committer: GitHub <noreply@github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           signoff: false
@@ -50,7 +51,7 @@ jobs:
           body: |
             Create PR
             - Auto-generated PR in action
-            - Create test.csv
+            - Create events.json and images
             - https://github.com/peter-evans/create-pull-request
           labels: |
             test
