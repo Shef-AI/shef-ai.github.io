@@ -32,9 +32,8 @@ jobs:
           CLIENT_ID: ${{ secrets.CLIENT_ID }}
           CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
           FOLDER_ID: ${{ secrets.EVENT_FOLDER_ID }}
-          OUTPUT_FOLDER_NAME: ${{ secrets.EVENT_OUTPUT_FOLDER_NAME }}
         run: |
-          python tools/download_from_drive.py --token "$TOKEN" --refresh_token "$REFRESH_TOKEN" --client_id "$CLIENT_ID" --client_secret "$CLIENT_SECRET" --folder_id "$FOLDER_ID" --output_path "$OUTPUT_FOLDER_NAME"
+          python tools/download_from_drive.py --token "$TOKEN" --refresh_token "$REFRESH_TOKEN" --client_id "$CLIENT_ID" --client_secret "$CLIENT_SECRET" --folder_id "$FOLDER_ID" --output_path "events"
         shell: bash -l {0}
       - name: Create Pull Request
         id: cpr
