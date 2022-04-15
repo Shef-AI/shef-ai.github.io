@@ -44,7 +44,7 @@ jobs:
           committer: GitHub <noreply@github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           signoff: false
-          branch: update_data
+          branch: update-events
           delete-branch: true
           title: '[Test] Create PR'
           body: |
