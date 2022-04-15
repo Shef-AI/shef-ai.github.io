@@ -7,7 +7,7 @@ permissions:
   pull-requests: write
 
 jobs:
-  updatedate:
+  update-events:
     name: update events
     runs-on: ${{ matrix.os }}
     strategy:
