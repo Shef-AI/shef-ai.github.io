@@ -1,23 +1,9 @@
 [
     {
-        "id" : "1D78TeItvj3idhrxVmtkm8bm5mvg_FAUp",
-        "date": "Jun 10, 2022",
-        "title": "Coming soon!",
-        "body": "Coming soon!",
-        "image" : "1D78TeItvj3idhrxVmtkm8bm5mvg_FAUp.jpg"
-    },
-    {
-        "id" : "1D78TeItvj3idhrxVmtkm8bm5mvg_FAUq",
-        "date": "Mar 22, 2022",
-        "title": "Coming soon!",
-        "body": "Coming soon!",
-        "image" : "1D78TeItvj3idhrxVmtkm8bm5mvg_FAUp.jpg"
-    },
-    {
-        "id" : "1D78TeItvj3idhrxVmtkm8bm5mvg_FAUt",
-        "date": "Apr 1, 2022",
-        "title": "Coming soon!",
-        "body": "Coming soon!",
-        "image" : "1D78TeItvj3idhrxVmtkm8bm5mvg_FAUp.jpg"
+        "title": "Sheffield one of first recipients of Turing Network Development Awards",
+        "body": "The University of Sheffield has been announced as one of the first recipients of a new award launched by The Alan Turing Institute, the UK’s national institute for data science and artificial intelligence (AI).\n\nThe University is among 24 UK universities to receive the first-ever Turing Network Development Award which will support the University’s data science and AI research and build on the world-leading expertise at Sheffield to contribute to a national programme that sets the UK apart as a leader in the field.\n\nThe exploration of data science and AI has the potential to transform society by tackling some of the global challenges facing healthcare, social justice and manufacturing and industry today, using the wealth of digital data produced by these sectors to improve outcomes and improve lives.",
+        "image": "14NhoRNy8WslWMQsSuvllIXPP_EtwiDfA.jpg",
+        "date": "February 07,2022",
+        "id": "14NhoRNy8WslWMQsSuvllIXPP_EtwiDfA"
     }
 ]
