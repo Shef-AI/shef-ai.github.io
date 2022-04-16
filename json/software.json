@@ -1,8 +1,23 @@
 [
     {
-        "id" : "1D78TeItvj3idhrxVmtkm8bm5mvg_FAUp",
-        "title": "Software",
-        "description": "Coming soon!",
-        "languages": "Python, Cython"
+        "id" : "4a1e96b4-0646-4832-b4d2-66439d7ef32c",
+        "title": "PyKale",
+        "description": "PyKale is a library in the PyTorch ecosystem aiming to bridge gaps between data, software, and end users.",
+        "languages": "Python",
+        "link": "https://github.com/pykale/pykale"
+    },
+    {
+        "id" : "98678221-48bd-4d43-bc44-1a0fc92ed910",
+        "title": "GPy",
+        "description": "GPy uses Python to implement a range of machine learning algorithms based on Gaussian processes.",
+        "languages": "Python,Cython",
+        "link": "https://github.com/SheffieldML/GPy"
+    },
+    {
+        "id" : "3375ed78-5432-4368-9dba-b3a34873fcd8",
+        "title": "GATE",
+        "description": "GATE (general architecture for text engineering) is an open source software toolkit capable of solving almost any text processing problem.",
+        "languages": "Java",
+        "link": "https://gate.ac.uk/"
     }
 ]

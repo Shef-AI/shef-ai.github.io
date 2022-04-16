@@ -17,10 +17,10 @@ data.forEach(function(element){
           '<p>' + element["description"] + '</p>' +
         '</div>' +
 
-        '<h3>Languages</h3>' +
+        '<h6>Languages</h6>' +
         language_list+
 
-        '<a class="btn btn-main" href="#" target="_blank">MORE</a>' +
+        '<a class="btn btn-main" href="' + element["link"] + '" target="_blank">MORE</a>' +
       '</div>' +
     '</div>' 
     );
