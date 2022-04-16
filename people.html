@@ -79,24 +79,40 @@
 	</div>
 </section>
 
-	<!-- Start Our Team
+<!-- Start Our Team
 		=========================================== -->
-<section class="team" id="team">
-	<div class="container" >
-		<div class="row" id="people-section">
-			<!-- section title -->
-			<div class="col-12">
-				<div class="title text-center ">
+
+<section class="portfolio team section-sm" id="portfolio">
+	<div class="container-fluid">
+		<div class="row ">
+			<div class="col-lg-12">
+
+				<!-- section title -->
+				<div class="title text-center">
 					<h2>People</h2>
-					<p>Want to get in touch with a staff member in the Department of Computer Science? Find their contact details here.</p>
+					<p>Want to get in touch with a researcher at the University of Sheffield? Find their contact details here.</p>
 					<div class="border"></div>
 				</div>
-			</div>
-			<!-- /section title -->
-			<script type="module" src="js/script-people.js"></script>
-		</div> <!-- End row -->
-	</div> <!-- End container -->
+				<!-- /section title -->
+
+				<div class="portfolio-filter">
+					<button type="button" data-filter="all">All</button>
+					<button type="button" data-filter="medical">Health and Medical Sciences</button>
+					<button type="button" data-filter="engineering">Data-centric Engineering</button>
+					<button type="button" data-filter="science">Science</button>
+					<button type="button" data-filter="humanities">Humanities and Social Sciences</button>
+					<button type="button" data-filter="security">Security, Business, & Public Policy</button>
+					<button type="button" data-filter="challenges">Cross-cutting Challenges</button>
+				</div>
+
+				<div class="row filtr-container" id="people-section">
+					<script type="module" src="js/script-people.js"></script>
+				</div>
+			</div> <!-- /end col-lg-12 -->
+		</div> <!-- end row -->
+	</div> <!-- end container -->
 </section> <!-- End section -->
+
 
 
 	<div id="footer-section"></div>

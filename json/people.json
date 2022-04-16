@@ -1,9 +1,79 @@
 [
     {
-        "id" : "1D78TeItvj3idhrxVmtkm8bm5mvg_FAUp",
-        "name": "Researcher Name",
-        "rank" : "Academic Rank",
-        "bio" : "Short bio!",
-        "image" : "1D78TeItvj3idhrxVmtkm8bm5mvg_FAUp.png"
+        "name": "Haiping Lu",
+        "rank" : "Senior Lecturer",
+        "bio" : "His research focuses on developing translational AI technologies for better analysing multimodal data.",
+        "areas" : "medical, engineering",
+        "homepage": "https://haipinglu.github.io/",
+        "linkedin": "https://uk.linkedin.com/in/haiping-lu-4821206",
+        "scholar": "https://scholar.google.co.uk/citations?user=CArrsDMAAAAJ",
+        "github": "https://github.com/haipinglu",
+        "image" : "1D78TeItvj3idhrxVmtkm8bm5mvg_FAUp.jpg"
+    },
+    {
+        "name": "Researcher 1",
+        "rank" : "Adacemic Rank",
+        "bio" : "Short bio Short bio Short bio Short bio Short bio Short bio Short bio Short bio Short bio Short bio.",
+        "areas" : "medical",
+        "homepage": "#",
+        "linkedin": "#",
+        "scholar": "#",
+        "github": "#",
+        "image" : "default.png"
+    },
+    {
+        "name": "Researcher 2",
+        "rank" : "Adacemic Rank",
+        "bio" : "Short bio Short bio Short bio Short bio Short bio Short bio Short bio Short bio Short bio Short bio.",
+        "areas" : "engineering",
+        "homepage": "#",
+        "linkedin": "#",
+        "scholar": "#",
+        "github": "#",
+        "image" : "default.png"
+    },
+    {
+        "name": "Researcher 3",
+        "rank" : "Adacemic Rank",
+        "bio" : "Short bio Short bio Short bio Short bio Short bio Short bio Short bio Short bio Short bio Short bio.",
+        "areas" : "science",
+        "homepage": "#",
+        "linkedin": "#",
+        "scholar": "#",
+        "github": "#",
+        "image" : "default.png"
+    },
+    {
+        "name": "Researcher 4",
+        "rank" : "Adacemic Rank",
+        "bio" : "Short bio Short bio Short bio Short bio Short bio Short bio Short bio Short bio Short bio Short bio.",
+        "areas" : "humanities",
+        "homepage": "#",
+        "linkedin": "#",
+        "scholar": "#",
+        "github": "#",
+        "image" : "default.png"
+    },
+    {
+        "name": "Researcher 5",
+        "rank" : "Adacemic Rank",
+        "bio" : "Short bio Short bio Short bio Short bio Short bio Short bio Short bio Short bio Short bio Short bio.",
+        "areas" : "security",
+        "homepage": "#",
+        "linkedin": "#",
+        "scholar": "#",
+        "github": "#",
+        "image" : "default.png"
+    },
+    {
+        "name": "Researcher 6",
+        "rank" : "Adacemic Rank",
+        "bio" : "Short bio Short bio Short bio Short bio Short bio Short bio Short bio Short bio Short bio Short bio.",
+        "areas" : "challenges",
+        "homepage": "#",
+        "linkedin": "#",
+        "scholar": "#",
+        "github": "#",
+        "image" : "default.png"
     }
 ]
