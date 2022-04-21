@@ -465,12 +465,12 @@ a:focus, a:hover {
           transform: scaleY(0);
   -webkit-transform-origin: top;
           transform-origin: top;
-  background: #000;
+  background: rgb(27, 27, 27);
 }
 
 @media (max-width: 991px) {
   .navigation .dropdown-menu {
-    display: none;
+    display: block;
     opacity: 1;
     visibility: visible;
     -webkit-transform: scaleY(1);
@@ -1065,7 +1065,7 @@ a:focus, a:hover {
 ==================================================================*/
 .pricing-table {
   padding: 100px 0;
-  background: url("../images/pricing-bg.jpg");
+  background: url("../images/software-bg.jpg");
   position: relative;
 }
 
