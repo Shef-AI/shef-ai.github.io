@@ -17,6 +17,7 @@ if (element) {
             '<ul class="list-inline">' +
                 '<i class="bi bi-calendar"> ' + element["date"] + ' <br/></i>' +
                 '<i class="bi bi-clock"> ' + element["time"] + ' <br/></i>' +
+                '<i class="bi bi-alarm"> ' + element["duration"] + ' Hours<br/></i>' +
                 '<i class="bi bi-geo-alt"> ' + element["location"] + ' <br/></i>' +
                 (element["virtual"] ? 
                     ('<i class="bi bi bi-camera-video"><a href="' + element["virtual"] + ' "> Virtual Meeting</a><br/></i>') : 

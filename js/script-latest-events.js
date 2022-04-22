@@ -8,7 +8,8 @@ for (var i = 0; i < data.length && i < 3; i++) {
         '<p>' +
             '<ul class="list-inline">' +
                 '<i class="bi bi-calendar"> ' + eventElement["date"] + '&nbsp;&nbsp;&nbsp;</i>' +
-                '<i class="bi bi-clock"> ' + eventElement["time"] + '</i>' +
+                '<i class="bi bi-clock"> ' + eventElement["time"] + '&nbsp;&nbsp;&nbsp;</i>' +
+                '<i class="bi bi-alarm"> ' + eventElement["duration"] + ' Hours</i>' +
             '</ul>' +
             '<ul class="list-inline">' +
                 '<i class="bi bi-geo-alt"> ' + eventElement["location"] + '</i>' +

@@ -13,7 +13,8 @@ data.forEach(function(element){
         '<p>' +
           '<ul class="list-inline">' +
             '<i class="bi bi-calendar"> ' + element["date"] + '&nbsp;&nbsp;&nbsp;</i>' +
-            '<i class="bi bi-clock"> ' + element["time"] + '</i>' +
+            '<i class="bi bi-clock"> ' + element["time"] + '&nbsp;&nbsp;&nbsp;</i>' +
+            '<i class="bi bi-alarm"> ' + element["duration"] + ' Hours</i>' +
           '</ul>' +
           '<ul class="list-inline">' +
             '<i class="bi bi-geo-alt"> ' + element["location"] + '</i>' +
