@@ -13,6 +13,10 @@ for (var i = 0; i < data.length && i < 3; i++) {
             '<ul class="list-inline">' +
                 '<i class="bi bi-geo-alt"> ' + eventElement["location"] + '</i>' +
             '</ul>' +
+            (eventElement["virtual"] ? 
+              ('<ul class="list-inline"><i class="bi bi bi-camera-video"><a href="' + eventElement["virtual"] + '"> Virtual Meeting</a></i></ul>') : 
+              '<br/>'
+            )+  
         '</p>' +
         '<p><h3><a href="single-event.html?id=' + eventElement["id"] + '" style="color: black">' + eventElement["title"] + '</a></h3></p>' +
         '<p>' + eventElement["body"] + '</p>' +

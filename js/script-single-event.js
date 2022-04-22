@@ -18,6 +18,10 @@ if (element) {
                 '<i class="bi bi-calendar"> ' + element["date"] + ' <br/></i>' +
                 '<i class="bi bi-clock"> ' + element["time"] + ' <br/></i>' +
                 '<i class="bi bi-geo-alt"> ' + element["location"] + ' <br/></i>' +
+                (element["virtual"] ? 
+                    ('<i class="bi bi bi-camera-video"><a href="' + element["virtual"] + ' "> Virtual Meeting</a><br/></i>') : 
+                    '<br/>'
+                )+                 
             '</ul>' +
             '<h3>' + element["title"] + '</h3>' +
             '<p>' + element["body"] + '</p>' +
