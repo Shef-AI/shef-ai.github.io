@@ -11,7 +11,7 @@ for (var i = 0; i < data.length && i < 3; i++) {
                 '<div class="content">' +
                     '<p><i class="bi bi-calendar"> ' + newsElement["date"] +'</i></p>'+
                     '<h3><a href="single-news.html?id=' + newsElement["id"] + '">' + newsElement["title"] + '</a></h3>' +
-                    '<p>' + newsElement["body"] + '</p>' +
+                    '<p>' + newsElement["summary"] + '</p>' +
                     '<a class="btn btn-main" href="single-news.html?id=' + newsElement["id"] + '">Read more</a>' +
                 '</div>' +
             '</div>' +

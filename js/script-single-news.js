@@ -48,7 +48,7 @@ for (var i = 0; i < data.length && i < 3; i++) {
                 '<a href="single-news.html?id=' + newsElement["id"] + '"> <img src="images/news/' + newsElement["image"] + '" alt="News-' + newsElement["title"] + '"></a>' +
             '</div>' +
             '<div class="widget-post-content">' +
-                '<a href="single-news.html?id=' + newsElement["id"] + '"><h5>' + element["title"] + '</h5></a>' + 
+                '<a href="single-news.html?id=' + newsElement["id"] + '"><h5>' + newsElement["title"] + '</h5></a>' + 
                 '<h6>' + newsElement["date"] + '</h6>' +
             '</div>' +
         '</li>' 

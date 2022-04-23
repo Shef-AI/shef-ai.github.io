@@ -10,7 +10,7 @@ data.forEach(function(element){
         '<div class="content">' +
           '<p><i class="bi bi-calendar"> ' + element["date"] +'</i></p>'+
           '<h3><a href=single-news.html?id=' + element["id"] + '>' + element["title"] + '</a></h3>' +
-          '<p>' + element["body"] + '</p>' + 
+          '<p>' + element["summary"] + '</p>' + 
           '<a class="btn btn-main" href=single-news.html?id=' + element["id"] + '>Read more</a>' + 
         '</div>' +
       '</div>' +  
