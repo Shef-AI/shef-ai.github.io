@@ -1,9 +1,10 @@
 [
     {
+        "id": "1D78TeItvj3idhrxVmtkm8bm5mvg_FAUp",
         "name": "Haiping Lu",
         "rank" : "Senior Lecturer",
         "bio" : "His research focuses on developing translational AI technologies for better analysing multimodal data.",
-        "areas" : "medical, engineering",
+        "areas" : "medical, engineering", 
         "homepage": "https://haipinglu.github.io/",
         "linkedin": "https://uk.linkedin.com/in/haiping-lu-4821206",
         "scholar": "https://scholar.google.co.uk/citations?user=CArrsDMAAAAJ",
@@ -11,9 +12,10 @@
         "image" : "1D78TeItvj3idhrxVmtkm8bm5mvg_FAUp.jpg"
     },
     {
+        "id": "951600e0-9f4d-4429-ba7a-30a5de50d405",
         "name": "Researcher 1",
         "rank" : "Adacemic Rank",
-        "bio" : "Short bio Short bio Short bio Short bio Short bio Short bio Short bio Short bio Short bio Short bio.",
+        "bio" : "Short bio of Researcher 1",
         "areas" : "medical",
         "homepage": "#",
         "linkedin": "#",
@@ -22,9 +24,10 @@
         "image" : "default.png"
     },
     {
+        "id": "e1a30ed0-9c34-408d-9428-3be9116e7a51",
         "name": "Researcher 2",
         "rank" : "Adacemic Rank",
-        "bio" : "Short bio Short bio Short bio Short bio Short bio Short bio Short bio Short bio Short bio Short bio.",
+        "bio" : "Short bio of Researcher 2",
         "areas" : "engineering",
         "homepage": "#",
         "linkedin": "#",
@@ -33,9 +36,10 @@
         "image" : "default.png"
     },
     {
+        "id": "77c744cd-d910-4cd3-a4fb-af7f0b891b46",
         "name": "Researcher 3",
         "rank" : "Adacemic Rank",
-        "bio" : "Short bio Short bio Short bio Short bio Short bio Short bio Short bio Short bio Short bio Short bio.",
+        "bio" : "Short bio of Researcher 3",
         "areas" : "science",
         "homepage": "#",
         "linkedin": "#",
@@ -44,9 +48,10 @@
         "image" : "default.png"
     },
     {
+        "id": "d2e36470-578d-4095-acdf-78103e9a3660",
         "name": "Researcher 4",
         "rank" : "Adacemic Rank",
-        "bio" : "Short bio Short bio Short bio Short bio Short bio Short bio Short bio Short bio Short bio Short bio.",
+        "bio" : "Short bio of Researcher 4",
         "areas" : "humanities",
         "homepage": "#",
         "linkedin": "#",
@@ -55,9 +60,10 @@
         "image" : "default.png"
     },
     {
+        "id": "2b649eed-2e3b-4963-aa30-84a81506f5fa",
         "name": "Researcher 5",
         "rank" : "Adacemic Rank",
-        "bio" : "Short bio Short bio Short bio Short bio Short bio Short bio Short bio Short bio Short bio Short bio.",
+        "bio" : "Short bio of Researcher 5",
         "areas" : "security",
         "homepage": "#",
         "linkedin": "#",
@@ -66,9 +72,10 @@
         "image" : "default.png"
     },
     {
+        "id": "a70d43b6-f718-43b6-881d-03fc9b858d6a",
         "name": "Researcher 6",
         "rank" : "Adacemic Rank",
-        "bio" : "Short bio Short bio Short bio Short bio Short bio Short bio Short bio Short bio Short bio Short bio.",
+        "bio" : "Short bio of Researcher 6",
         "areas" : "challenges",
         "homepage": "#",
         "linkedin": "#",
