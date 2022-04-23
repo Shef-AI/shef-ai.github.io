@@ -20,7 +20,7 @@ for (var i = 0; i < data.length && i < 3; i++) {
             )+  
         '</p>' +
         '<p><h3><a href="single-event.html?id=' + eventElement["id"] + '" style="color: black">' + eventElement["title"] + '</a></h3></p>' +
-        '<p>' + eventElement["body"] + '</p>' +
+        '<p>' + eventElement["summary"] + '</p>' +
         '<a class="btn btn-main" href="single-event.html?id=' + eventElement["id"] + '">Read more</a>' +
       '</div>' 
     );

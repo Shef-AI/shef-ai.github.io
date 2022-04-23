@@ -24,7 +24,7 @@ data.forEach(function(element){
             '<br/>'
           )+  
         '</p>' +
-        '<p>' + element["body"] + '</p>' +
+        '<p>' + element["summary"] + '</p>' +
       '</div>' +
     '</div>' +
     '<p></p><p></p>');
