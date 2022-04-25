@@ -15,7 +15,7 @@ for (var i = 0; i < data.length && i < 3; i++) {
                 '<i class="bi bi-geo-alt"> ' + eventElement["location"] + '</i>' +
             '</ul>' +
             (eventElement["virtual"] ? 
-              ('<ul class="list-inline"><i class="bi bi bi-camera-video"><a href="' + eventElement["virtual"] + '">Virtual Participation Link</a></i></ul>') : 
+              ('<ul class="list-inline"><i class="bi bi bi-camera-video"><a href="' + eventElement["virtual"] + '"> Virtual Meeting</a></i></ul>') : 
               '<br/>'
             )+  
         '</p>' +

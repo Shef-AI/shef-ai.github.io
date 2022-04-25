@@ -20,7 +20,7 @@ if (element) {
                 '<i class="bi bi-alarm"> ' + element["duration"] + ' Hours<br/></i>' +
                 '<i class="bi bi-geo-alt"> ' + element["location"] + ' <br/></i>' +
                 (element["virtual"] ? 
-                    ('<i class="bi bi bi-camera-video"><a href="' + element["virtual"] + ' ">Virtual Participation Link</a><br/></i>') : 
+                    ('<i class="bi bi bi-camera-video"><a href="' + element["virtual"] + ' "> Virtual Meeting</a><br/></i>') : 
                     '<br/>'
                 )+                 
             '</ul>' +
