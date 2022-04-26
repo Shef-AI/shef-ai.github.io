@@ -6,16 +6,16 @@ for (var i = 0; i < data.length && i < 3; i++) {
       '<div class="col-md-6 col-sm-4">' +
         '<img loading="lazy" src="images/events/' + eventElement["image"] + '" alt="Event-' + eventElement["title"] + '" class="img-fluid">' +
         '<p>' +
-            '<ul class="list-inline">' +
+            '<ul class="list-inline system-style">' +
                 '<i class="bi bi-calendar"> ' + eventElement["date"] + '&nbsp;&nbsp;&nbsp;</i>' +
                 '<i class="bi bi-clock"> ' + eventElement["time"] + '&nbsp;&nbsp;&nbsp;</i>' +
                 '<i class="bi bi-alarm"> ' + eventElement["duration"] + ' Hours</i>' +
             '</ul>' +
-            '<ul class="list-inline">' +
+            '<ul class="list-inline system-style">' +
                 '<i class="bi bi-geo-alt"> ' + eventElement["location"] + '</i>' +
             '</ul>' +
             (eventElement["virtual"] ? 
-              ('<ul class="list-inline"><i class="bi bi bi-camera-video"><a href="' + eventElement["virtual"] + '"> Virtual Participation Link</a></i></ul>') : 
+              ('<ul class="list-inline system-style"><i class="bi bi bi-camera-video"><a href="' + eventElement["virtual"] + '"> Virtual Participation Link</a></i></ul>') : 
               '<br/>'
             )+  
         '</p>' +
