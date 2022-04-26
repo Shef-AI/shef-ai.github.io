@@ -49,6 +49,24 @@ def download_files(service, download_fileid, file_output_path):
         f.close()
     print(f"    The downloaded file is saved to : {file_output_path}")
 
+def load_json_file(file_path):
+    with open(file_path, "r") as f:
+        json_dict = json.load(f)
+    return json_dict
+
+
+def add_new_entry_from_drive(git_file_path, drive_file_path):
+    git_dict = load_json_file(git_file_path)
+    drive_dict = load_json_file(drive_file_path)
+    git_entry_ids = set([git_entry["id"] for git_entry in git_dict])
+    drive_entry_ids = set([drive_entry["id"] for drive_entry in drive_dict])
+    add_new_ids = drive_entry_ids - git_entry_ids
+    for new_id in add_new_ids:
+        for drive_entry in drive_dict:
+            if drive_entry["id"] == new_id:
+                git_dict.append(drive_entry)
+    return git_dict
+
 
 def main():
     args = arg_parse()
@@ -77,12 +95,21 @@ def main():
             if not item['trashed']:
                 try:
                     if item['mimeType'] == "application/json":
-                        file_output_path = "./json/" + item['name']
+                        download_name = "{0}_{2}.{1}".format(*item['name'].rsplit('.', 1) + ["drive"])
+                        file_output_path = "./json/" + download_name
+                        repo_file_path = "./json/" + item['name']
+                        download_files(service, item['id'], file_output_path)
+                        print(f"    Update {item['name']} with latest data in drive")
+                        update_output_dict = add_new_entry_from_drive(repo_file_path, file_output_path)
+                        with open(repo_file_path, 'w') as fp:
+                            json.dump(update_output_dict, fp, indent=4, ensure_ascii=False)
+                        print(f"    Remove download file from drive: {file_output_path}")
+                        os.remove(file_output_path)
                     elif item['mimeType'].startswith("image"):
                         file_output_path = f"./images/{output_folder}/" + item['name']
+                        download_files(service, item['id'], file_output_path)
                     else:
                         continue
-                    download_files(service, item['id'], file_output_path)
                 except Exception as e:
                     print(f"    An exception occurred when trying to download file '{item['name']}' with error '{e}'")
 
