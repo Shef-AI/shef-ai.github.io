@@ -10,5 +10,16 @@
         "body": "Welcome to the second Sheffield Data Science and AI Community Meeting. Invitations were sent to all who signed up via our previous survey on IGs & Community Meeting II.<br/><br/>\nProvisional agenda: <br/>\n14:00 - 15:00 Interest group building activities (presentations, group discussion, Turing dialogs).<br/>\n15:00 - 16:00 Problem-solution/grant dating activities (presentation & individual discussion). <br/>\n16:00 - 17:00 Socialising over tea and coffee and follow-up discussions.",
         "image": "19c4QFYIAzLV15j6sBx8SmWMCbv0hmF5r.jpg",
         "id": "19c4QFYIAzLV15j6sBx8SmWMCbv0hmF5r"
+    },
+    {
+        "time": "10:00",
+        "date": "Friday 01 April 2022",
+        "duration": 1,
+        "location": "Nowhere",
+        "title": "My test title",
+        "summary": "My test summary",
+        "body": "My test body",
+        "image": "1BJCmzYNbH4XcKn48cKOx4lsDEimcBolQ.jpg",
+        "id": "1BJCmzYNbH4XcKn48cKOx4lsDEimcBolQ"
     }
 ]
