@@ -7,7 +7,8 @@ body {
 
 p {
   font-family: "Source Sans Pro", sans-serif;
-  color: #848484;
+  /* color: #848484; */
+  color: #0e0e0e;
   font-size: 16px;
 }
 
@@ -1605,7 +1606,8 @@ a:focus, a:hover {
 }
 
 .post-content ul li {
-  color: #aaa;
+  /* color: #aaa; */
+  color: #0e0e0e;
 }
 
 .post-content ul li a {
