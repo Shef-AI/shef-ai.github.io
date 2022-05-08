@@ -1270,25 +1270,60 @@ a:focus, a:hover {
   color: #fff;
 }
 
+.services .service-block.color-bg-2 {
+  background: #F6F6F6;
+  color: #000000;
+}
+
+.services .service-block.color-bg-2 i, .services .service-block.color-bg-2 h3, .services .service-block.color-bg-2 p {
+  color: #000000;
+}
+
 .services .service-block .service-icon {
   margin-bottom: 30px;
 }
 
 .services .service-block i {
-  font-size: 75px;
-  color: #28ABE3;
+  /* font-size: 75px; */
+  /* color: #28ABE3; */
+  font-size: 14px;
+  color: #000000;
 }
 
 .services .service-block h3 {
   color: #333;
-  font-size: 18px;
-  text-transform: uppercase;
+  font-size: 22px;
+  text-transform: capitalize;
   font-weight: bold;
 }
 
 .services .service-block p {
-  font-size: 14px;
+  font-size: 16px;
   color: #666;
+}
+
+.services .service-block .btn-main {
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  color: #000000;
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 8px 20px;
+  text-transform: uppercase;
+  border-radius: 40px;
+}
+
+.services .service-block .btn-main-2 {
+  background: #28ABE3;
+  border: 1px solid #28ABE3;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 8px 20px;
+  text-transform: uppercase;
+  border-radius: 40px;
 }
 
 /*=================================================================
@@ -1325,6 +1360,81 @@ a:focus, a:hover {
   transition: all 0.3s ease 0s;
 }
 
+/*=================================================================
+  Gallery section
+==================================================================*/
+.grallery {
+  padding: 100px 0 130px;
+}
+
+.grallery-bg {
+  background: #F6F6F6;
+}
+
+.grallery .grallery-block.color-bg {
+  background: #28ABE3;
+  color: #fff;
+}
+
+.grallery .grallery-block.color-bg i, .grallery .grallery-block.color-bg h3, .grallery .grallery-block.color-bg p {
+  color: #fff;
+}
+
+.grallery .grallery-block.color-bg-2 {
+  background: #F6F6F6;
+  color: #000000;
+}
+
+.grallery .grallery-block.color-bg-2 i, .grallery .grallery-block.color-bg-2 h3, .grallery .grallery-block.color-bg-2 p {
+  color: #000000;
+}
+
+.grallery .grallery-block .grallery-icon {
+  margin-bottom: 30px;
+}
+
+.grallery .grallery-block i {
+  /* font-size: 75px; */
+  /* color: #28ABE3; */
+  font-size: 14px;
+  color: #000000;
+}
+
+.grallery .grallery-block h3 {
+  color: #333;
+  font-size: 22px;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.grallery .grallery-block p {
+  font-size: 16px;
+  color: #666;
+}
+
+.grallery .grallery-block .btn-main {
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  color: #000000;
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 8px 20px;
+  text-transform: uppercase;
+  border-radius: 40px;
+}
+
+.grallery .grallery-block .btn-main-2 {
+  background: #28ABE3;
+  border: 1px solid #28ABE3;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 8px 20px;
+  text-transform: uppercase;
+  border-radius: 40px;
+}
 /*=================================================================
   Our skills
 ==================================================================*/
