@@ -1,6 +1,18 @@
 [
     {
         "time": "14:00",
+        "date": "Wednesday 08 June 2022",
+        "duration": 3,
+        "location": "Design Studio 2, Pam Liversidge Building, Corner of Broad Lane and Newcastle Street (entrance on Newcastle Street).",
+        "virtual": "https://meet.google.com/ayq-wiva-zit",
+        "title": "Data Science & AI Community Meeting III: Turing Network Development",
+        "summary": "Join us for our third community meeting <b>in person</b>, 8th June 14:00 to 17:00. The meeting is by invitation and will take place in person at E Floor of Pam Liversidge Building, PLB - Design Studio 2, and virtually.",
+        "body": "Join us for our third community meeting <b>in person</b>, 8th June 14:00 to 17:00. The meeting is by invitation and will take place in person at E Floor of Pam Liversidge Building, PLB - Design Studio 2, and virtually with the following planned: \n<ul>\n<li>Community update by Award Lead</li>\n<li> 3-min pitches from Sheffield researchers and local industry representative(s)</li>\n<li>3-min pitches from Turing researchers </li>\n<li>Q & A Discussion </li>\n<li>All pitches & dialogues will be organised into six themes mapping to the  <a href=\"https://sheffieldai.github.io/research-areas.html\">six Shef.AI | Research Areas</a> </li>\n<li>Tea and Coffee; socialising and parallel IG breakout discussions</li> \n</ul>\nProgramme will be finalised end May. Watch this space.",
+        "image": "1yWraEgpROkFXe6br56NFewTvTBeR2fPt.jpg",
+        "id": "1yWraEgpROkFXe6br56NFewTvTBeR2fPt"
+    },
+    {
+        "time": "14:00",
         "date": "Wednesday 27 April 2022",
         "duration": 3,
         "location": "INOXDINE, Students’ Union Building, Durham Road, Sheffield S10 2TG [FULLY BOOKED]",
@@ -10,17 +22,5 @@
         "body": "Welcome to the second Sheffield Data Science and AI Community Meeting. Invitations were sent to all who signed up via our previous survey on IGs & Community Meeting II.<br/><br/>\nAll parts of the meeting are hybrid and open to Google meets EXCEPT 15:00-15:45\n<ul>\n        <li>14:00 - 15:00 Turing dialogues and presentations\n        <ul class=\"user-style square\">\n                <li>14:00-14:15: Award Lead update with Q&A </li>\n                <li>14:15-14:30: Dialogue with ATI: Increasing AI transparency, explainability, interpretability, and energy-efficiency [IG 6b]</li>\n                <li>14:30-14:45: Dialogue with ATI: Revolutionising data-driven research in the arts, humanities, and social sciences [IG 4b]</li>\n                <li>14:45-15:00 Five IG pitches\n                <ul class=\"user-style square\">\n                        <li>Detecting rare events for new insights into the Universe’s fundamentals</li>\n                        <li>Best practices for accessible, sustainable, and scalable systems</li>\n                        <li>Safe, smart, connected technology (e.g. robotics) and human-machine interaction</li>\n                        <li>Studying mobility, active lifestyles, urban environments, and population health</li>\n                        <li>Advancing pedagogy and policy to develop education in DS & AI</li>\n                </ul>\n                </li>\n  </ul>\n  </li>\n  <li>15:00 - 15:15: Tea & coffee</li>\n  <li>[Multiple sessions–no public Google meets] 15:15 - 15:40 IG parallel breakout discussions\n        <ul class=\"square\">\n                <li>Dialogue with ATI [IG 4b]</li>\n                <li>Dialogue with ATI [IG 5b]</li>\n                <li>Within-IG discussions for other IGs</li>\n        </ul>\n  </li>\n  <li>15:45 - 16:15 Group and Individual pitches\n        <ul class=\"square\">\n                <li>Research IT Forum</li>\n                <li>Automating/improving data preparation, access, understanding & exploitation</li>\n                <li>Using and analysing data to confidently infer causal relationships</li>\n                <li>Tracking insects in the wild</li>\n                <li>Machine vision for human machine interaction</li>\n                <li>Text mining from diverse natural language sources</li>\n                <li>Knowledge-aware machine learning: An accessible software for multiple data sources</li>\n                <li>Visualisation for sense-making</li>\n                <li>Emulation-based uncertainty quantification methodology: Building energy simulation use case</li>\n        </ul>\n  </li>\n  <li>16:15-17:00 Final Turing dialogues\n        <ul class=\"square\">\n                <li>16:15-16:30: Dialogue with ATI: Effective and efficient information visualisation to various audiences [IG 6f]</li>\n                <li>16.30-16:55: Dialogue with ATI: Identifying and tackling mis- and disinformation & enhancing privacy/security [IG 5a]</li>\n                <li>16.55-17:00: Closing</li>\n        </ul>\n  </li>\n  <li>17:00-17:30 Socialising</li>\n</ul>",
         "image": "19c4QFYIAzLV15j6sBx8SmWMCbv0hmF5r.jpg",
         "id": "19c4QFYIAzLV15j6sBx8SmWMCbv0hmF5r"
-    },
-    {
-        "time": "14:00",
-        "date": "Wednesday 08 June 2022",
-        "duration": 3,
-        "location": "Design Studio 2, Pam Liversidge Building, Corner of Broad Lane and Newcastle Street (entrance on Newcastle Street).",
-        "virtual": "https://meet.google.com/ayq-wiva-zit",
-        "title": "Data Science & AI Community Meeting III: Turing Network Development",
-        "summary": "Join us for our third community meeting <b>in person</b>, 8th June 14:00 to 17:00. The meeting is by invitation and will take place in person at E Floor of Pam Liversidge Building, PLB - Design Studio 2, and virtually.",
-        "body": "Join us for our third community meeting <b>in person</b>, 8th June 14:00 to 17:00. The meeting is by invitation and will take place in person at E Floor of Pam Liversidge Building, PLB - Design Studio 2, and virtually with the following planned: \n<ul>\n<li>Community update by Award Lead</li>\n<li> 3-min pitches from Sheffield researchers and local industry representative(s)</li>\n<li>3-min pitches from Turing researchers </li>\n<li>Q & A Discussion </li>\n<li>All pitches & dialogues will be organised into six themes mapping to the six Shef.AI | Research Areas (sheffieldai.github.io) </li>\n<li>All pitches & dialogues will be organised into six themes mapping to the  <a href=\"https://sheffieldai.github.io/research-areas.html\">six Shef.AI | Research Areas</a> </li>\n<li>Tea and Coffee; socialising and parallel IG breakout discussions</li> \n<li>Tea and Coffee; socialising and parallel IG breakout discussions</li> \n</ul>\nProgramme will be finalised end May. Watch this space.",
-        "image": "1yWraEgpROkFXe6br56NFewTvTBeR2fPt.jpg",
-        "id": "1yWraEgpROkFXe6br56NFewTvTBeR2fPt"
     }
 ]
