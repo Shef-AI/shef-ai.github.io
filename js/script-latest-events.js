@@ -1,7 +1,7 @@
 fetch('../json/events.json')
   .then(response => response.json())
   .then(data => {
-    for (var i = 0; i < data.length && i < 3; i++) {
+    for (var i = 0; i < data.length && i < 2; i++) {
       var eventElement = data[i];
       $('#latest-events-section').append(
         '<div class="col-md-6 col-sm-4">' +
