@@ -4,7 +4,7 @@ fetch('../json/software.json')
     data.forEach(function(element){
 
       var languages = element["languages"].split(",");
-      var language_list = '<ul>';
+      var language_list = '<ul class="system-style">';
       for (let i = 0; i < languages.length; i++) {
         language_list += '<li><i class="tf-ion-ios-arrow-forward"></i>' + languages[i] + '</li>';
       }
