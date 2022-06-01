@@ -33,7 +33,7 @@ To update the latest LinkedIn post on the website:
 8.	Replace the url in `embed-link` field with the copied link from LinkedIn.
 
 
-## How to update news/events content:
+## How to update news/events content
 All news/events data have been stored in `.json` files available in the `json` folder of the project repository.
 Provided below are the steps you can pass to update the news/events data:
 1. Prepare the text you are going to put on the website. If you are willing to use the formatted text, you can use one of the following converter websites to generate HTML code from your rich text:
