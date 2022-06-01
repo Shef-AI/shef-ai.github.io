@@ -31,3 +31,18 @@ To update the latest LinkedIn post on the website:
      ```
 7.	Open the `media-linkedin.json` file that is available in `json` folder of the project repository.
 8.	Replace the url in `embed-link` field with the copied link from LinkedIn.
+
+
+## How to update news/events content:
+All news/events data have been stored in `.json` files available in the `json` folder of the project repository.
+Provided below are the steps you can pass to update the news/events data:
+1. Prepare the text you are going to put on the website. If you are willing to use the formatted text, you can use one of the following converter websites to generate HTML code from your rich text:
+   - https://onlinehtmleditor.dev/
+   - https://wordtohtml.net/
+   
+   Please write your text in the text box and convert it to HTML codes.
+2. When your text has been formatted and HTML code has been generated, you must convert it to a single-line JSON file. In other words, multiline texts are not allowed to be used in JSON files. You can convert multiline formatted text to single-line text using the following website:
+   - https://tools.knowledgewalls.com/online-multiline-to-single-line-converter
+3. You have now prepared your text in JSON format. The last step is to update the record in `.json` files:
+   1. Open the `news.json` or `events.json` file in the `json` folder of the project repository.
+   2. Replace the value of your desired field with the generated single-line text from the previous steps.
