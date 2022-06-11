@@ -57,7 +57,7 @@ def download_files(service, download_fileid, file_output_path):
 
 def load_json_file(file_path):
     with open(file_path, "rb") as f:
-        json_dict = json.load(f, object_pairs_hook=OrderedDict)
+        json_dict = json.load(f)
     return json_dict
 
 
@@ -98,8 +98,7 @@ def main():
     service = build('drive', 'v3', credentials=creds)
 
     results = service.files().list(
-        pageSize=1000, q=folder_id + " in parents",
-        fields="nextPageToken, files(id, name, mimeType, trashed)").execute()
+        pageSize=1000, q=folder_id + " in parents", fields="nextPageToken, files(id, name, mimeType, trashed)").execute()
     items = results.get('files', [])
     if not items:
         print('No files found.')
