@@ -14,7 +14,7 @@ fetch('../json/opportunities.json')
                 '<div class="post-content">' +
                     '<h3>' + element["title"] + '</h3>' +
                     '<ul class="list-inline">' +
-                        '<i class="bi bi-calendar"> ' + element["date"] + ' <br/></i>' +
+                        '<i class="bi bi-alarm"> ' + element["date"] + ' <br/></i>' +
                     '</ul>' +
                     '<p>' + element["body"] + '</p>' +
                     '<ul class="post-content-share list-inline">' +
