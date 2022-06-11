@@ -1,0 +1,60 @@
+name: update-opportunities
+
+on: workflow_dispatch
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  update-opportunities:
+    name: update opportunities
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        python-version: [3.7]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python using Miniconda
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+          auto-update-conda: true
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+          pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
+        shell: bash -l {0}
+      - name: Download data from google drive
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REFRESH_TOKEN: ${{ secrets.REFRESH_TOKEN }}
+          CLIENT_ID: ${{ secrets.CLIENT_ID }}
+          CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+          FOLDER_ID: ${{ secrets.OPPORTUNITIES_FOLDER_ID }}
+        run: |
+          python tools/download_from_drive.py --token "$TOKEN" --refresh_token "$REFRESH_TOKEN" --client_id "$CLIENT_ID" --client_secret "$CLIENT_SECRET" --folder_id "$FOLDER_ID" --output_path "opportunities"
+        shell: bash -l {0}
+      - name: Create Pull Request
+        id: cpr
+        uses: peter-evans/create-pull-request@v4
+        with:
+          token: ${{ secrets.PAT }}
+          commit-message: Update opportunities
+          committer: GitHub <noreply@github.com>
+          author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+          signoff: false
+          branch: update-opportunities
+          delete-branch: true
+          title: '[Test] Create PR'
+          body: |
+            Create PR
+            - Auto-generated PR in action
+            - Create opportunities.json
+            - https://github.com/peter-evans/create-pull-request
+          labels: |
+            test
+            automated pr
+          assignees: SinaTabakhi
+          reviewers: SinaTabakhi
+          draft: false
