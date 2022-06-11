@@ -3,17 +3,22 @@ import argparse
 import json
 import os
 import io
+import sys
+import calendar
+from collections import OrderedDict
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaIoBaseDownload
 from googleapiclient.errors import HttpError
+from datetime import datetime
 
 SCOPES = ['https://www.googleapis.com/auth/drive']
 TOKEN_URI = "https://oauth2.googleapis.com/token"
 API_NAME = 'drive'
 API_VERSION = 'v3'
+cals = {month: index for index, month in enumerate(calendar.month_name) if month}
 
 
 def arg_parse():
@@ -49,8 +54,9 @@ def download_files(service, download_fileid, file_output_path):
         f.close()
     print(f"    The downloaded file is saved to : {file_output_path}")
 
+
 def load_json_file(file_path):
-    with open(file_path, "r") as f:
+    with open(file_path, "rb") as f:
         json_dict = json.load(f)
     return json_dict
 
@@ -66,6 +72,14 @@ def add_new_entry_from_drive(git_file_path, drive_file_path):
             if drive_entry["id"] == new_id:
                 git_dict.append(drive_entry)
     return git_dict
+
+
+def convert_datetime(item_dict):
+    week, day, month, year = item_dict["date"].split()
+    month = cals[month]
+    date_str = f"{day}/{month}/{year[2:]} {item_dict['time']}"
+    date_time = datetime.strptime(date_str, '%d/%m/%y %H:%M')
+    return date_time
 
 
 def main():
@@ -84,7 +98,7 @@ def main():
     service = build('drive', 'v3', credentials=creds)
 
     results = service.files().list(
-        pageSize=1000, q=folder_id+" in parents", fields="nextPageToken, files(id, name, mimeType, trashed)").execute()
+        pageSize=1000, q=folder_id + " in parents", fields="nextPageToken, files(id, name, mimeType, trashed)").execute()
     items = results.get('files', [])
     if not items:
         print('No files found.')
@@ -101,6 +115,8 @@ def main():
                         download_files(service, item['id'], file_output_path)
                         print(f"    Update {item['name']} with latest data in drive")
                         update_output_dict = add_new_entry_from_drive(repo_file_path, file_output_path)
+                        # sort items by published date order
+                        update_output_dict.sort(key=lambda x: convert_datetime(x))
                         with open(repo_file_path, 'w') as fp:
                             json.dump(update_output_dict, fp, indent=4, ensure_ascii=False)
                         print(f"    Remove download file from drive: {file_output_path}")
@@ -112,6 +128,7 @@ def main():
                         continue
                 except Exception as e:
                     print(f"    An exception occurred when trying to download file '{item['name']}' with error '{e}'")
+                    sys.exit(1)
 
 
 if __name__ == '__main__':
