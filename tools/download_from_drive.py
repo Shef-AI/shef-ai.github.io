@@ -77,8 +77,12 @@ def add_new_entry_from_drive(git_file_path, drive_file_path):
 def convert_datetime(item_dict):
     week, day, month, year = item_dict["date"].split()
     month = cals[month]
-    date_str = f"{day}/{month}/{year[2:]} {item_dict['time']}"
-    date_time = datetime.strptime(date_str, '%d/%m/%y %H:%M')
+    if "time" in item_dict:
+        date_str = f"{day}/{month}/{year[2:]} {item_dict['time']}"
+        date_time = datetime.strptime(date_str, '%d/%m/%y %H:%M')
+    else:
+        date_str = f"{day}/{month}/{year[2:]}"
+        date_time = datetime.strptime(date_str, '%d/%m/%y')
     return date_time
 
 
