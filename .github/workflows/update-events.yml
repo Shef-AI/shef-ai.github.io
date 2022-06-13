@@ -1,6 +1,11 @@
 name: update-events
 
-on: workflow_dispatch
+on: 
+  workflow_dispatch
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '0 0 * * *' # every midnight
+  
 
 permissions:
   contents: read
