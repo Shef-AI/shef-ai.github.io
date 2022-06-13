@@ -101,7 +101,7 @@
           }
         };
         var filterizd = $('.filtr-container').filterizr(options);
-        console.log(filterizd._fltr.options.filter);
+        
         $('.researchArea').on('change', function(event) {
           researchAreaValue = $(event.currentTarget).val();
           if (researchAreaValue === 'all')

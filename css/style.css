@@ -58,6 +58,11 @@ a:focus, a:hover {
   font-size: 14px;
 }
 
+.advanced-search-block {
+  margin-bottom: 20px;
+}
+
+
 @media (max-width: 1150px) {
   .teamblock {
     padding-bottom: 100px;
