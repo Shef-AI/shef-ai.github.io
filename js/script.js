@@ -52,11 +52,74 @@
   /* =========================================================================  */
 
     // filter
+
     setTimeout(function(){
       var containerEl = document.querySelector('.filtr-container');
       var filterizd;
       if (containerEl) {
-        filterizd = $('.filtr-container').filterizr({});
+        var researchAreaValue = 'all';
+        var researchInterestValue = 'all';
+        var options = {
+          animationDuration: 0.5,
+          callbacks: {
+            onInit: function() { },
+            onFilteringStart: function() { },
+            onFilteringEnd: function() { },
+            onShufflingStart: function() { },
+            onShufflingEnd: function() { },
+            onSortingStart: function() { },
+            onSortingEnd: function() { }
+          },
+          controlsSelector: '',
+          delay: 0,
+          delayMode: 'progressive',
+          easing: 'ease-out',
+          filter: 'all',
+          filterOutCss: {
+            opacity: 0,
+            transform: 'scale(0.5)'
+          },
+          filterInCss: {
+            opacity: 0,
+            transform: 'scale(1)'
+          },
+          gridItemsSelector: '.filtr-item',
+          gutterPixels: 10,
+          layout: 'sameSize',
+          multifilterLogicalOperator: 'and',
+          searchTerm: '',
+          setupControls: true,
+          spinner: {
+            enabled: false,
+            fillColor: '#2184D0',
+            styles: {
+              height: '75px',
+              margin: '0 auto',
+              width: '75px',
+              'z-index': 2,
+            },
+          }
+        };
+        var filterizd = $('.filtr-container').filterizr(options);
+        console.log(filterizd._fltr.options.filter);
+        $('.researchArea').on('change', function(event) {
+          researchAreaValue = $(event.currentTarget).val();
+          if (researchAreaValue === 'all')
+            filterizd.filterizr('setOptions', { filter: researchInterestValue });
+          else if (researchInterestValue === 'all')
+            filterizd.filterizr('setOptions', { filter: researchAreaValue });
+          else
+            filterizd.filterizr('setOptions', { filter: [researchAreaValue, researchInterestValue] });
+       });
+       $('.researchInterest').on('change', function(event) {
+          researchInterestValue = $(event.currentTarget).val();
+          if (researchInterestValue === 'all')
+            filterizd.filterizr('setOptions', { filter: researchAreaValue });
+          else if (researchAreaValue === 'all')
+            filterizd.filterizr('setOptions', { filter: researchInterestValue });
+          else
+            filterizd.filterizr('setOptions', { filter: [researchAreaValue, researchInterestValue] });
+       });
       }
     }, 500);
 

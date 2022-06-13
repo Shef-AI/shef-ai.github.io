@@ -116,14 +116,51 @@
           </div>
           <!-- /section title -->
 
-          <div class="portfolio-filter">
-            <button type="button" data-filter="all">All</button>
-            <button type="button" data-filter="medical">Health and Medical Sciences</button>
-            <button type="button" data-filter="engineering">Data-centric Engineering</button>
-            <button type="button" data-filter="science">Science</button>
-            <button type="button" data-filter="humanities">Humanities and Social Sciences</button>
-            <button type="button" data-filter="security">Security, Business, & Public Policy</button>
-            <button type="button" data-filter="challenges">Cross-cutting Challenges</button>
+          <!-- Advance Search -->
+				  <div class="advance-search">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-12 col-md-12 align-content-center">
+                  <div class="form-row">
+                    <div class="form-group col-md-4">
+                      <select class="w-100 form-control mt-lg-1 mt-md-2 researchArea">
+                        <option data-multifilter="all"          value="all">Research Area</option>
+                        <option data-multifilter="medical"      value="medical">Health and Medical Sciences</option>
+                        <option data-multifilter="engineering"  value="engineering">Data-centric Engineering</option>
+                        <option data-multifilter="science"      value="science">Science</option>
+                        <option data-multifilter="humanities"   value="humanities">Humanities and Social Sciences</option>
+                        <option data-multifilter="security"     value="security">Security, Business, & Public Policy</option>
+                        <option data-multifilter="challenges"   value="challenges">Cross-cutting Challenges</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                      <select class="w-100 form-control mt-lg-1 mt-md-2 researchInterest">
+                        <option data-multifilter="all"      value="all">Research Interest</option>
+                        <!-- Machine learning -->
+                        <option data-multifilter="applicationsML" value="applicationsML">Applications (Machine learning)</option>
+                        <option data-multifilter="computerVision" value="computerVision">Computer vision</option>
+                        <option data-multifilter="deepLearning" value="deepLearning">Deep learning</option>
+                        <option data-multifilter="NaturalLanguageProcessing" value="NaturalLanguageProcessing">Natural language processing</option>
+                        <option data-multifilter="PatternRecognition" value="PatternRecognition">Pattern recognition</option>
+                        <option data-multifilter="ReinforcementLearning" value="ReinforcementLearning">Reinforcement learning</option>
+                        <option data-multifilter="semiSupervisedLearning" value="semiSupervisedLearning">Semi-supervised learning</option>
+                        <option data-multifilter="speechRecognition" value="speechRecognition">Speech recognition</option>
+                        <option data-multifilter="supervisedLearning" value="supervisedLearning">Supervised learning</option>
+                        <option data-multifilter="unsupervisedLearning" value="unsupervisedLearning">Unsupervised learning</option>
+                        <!-- Optimisation -->
+                        <option data-multifilter="convexProgramming" value="convexProgramming">Convex programming</option>
+                        <option data-multifilter="dataStructures" value="dataStructures">Data structures</option>
+                        <option data-multifilter="nonlinearProgramming" value="nonlinearProgramming">Nonlinear programming</option>
+                        <option data-multifilter="stochasticOptimisation" value="stochasticOptimisation">Stochastic optimisation</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                      <input type="text" class="form-control my-2 my-lg-1 researcherName" placeholder="Search..." data-search>
+                    </div>
+                  </div>                
+                </div>
+              </div>
+            </div>
           </div>
           <div id="accordion">
             <div class="row filtr-container" id="people-section">
@@ -154,6 +191,7 @@
   <script src="plugins/form-validation/jquery.validate.min.js"></script>
 
   <!-- Bootstrap4 -->
+  <script src="plugins/bootstrap/js/bootstrap.bundle.js"></script>
   <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
   <!-- Parallax -->
   <script src="plugins/parallax/jquery.parallax-1.1.3.js"></script>
@@ -165,7 +203,6 @@
   <script src="plugins/filterizr/jquery.filterizr.min.js"></script>
   <!-- Smooth Scroll js -->
   <script src="plugins/smooth-scroll/smooth-scroll.min.js"></script>
-
   <!-- Custom js -->
   <script src="js/script.js"></script>
 

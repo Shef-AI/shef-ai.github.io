@@ -3,7 +3,7 @@ fetch('../json/people.json')
   .then(data => {
     data.forEach(function(element){
       $('#people-section').append(
-        '<div class="teamblock col-md-3 col-sm-6 col-xs-6 filtr-item" data-category="mix, ' + element["areas"] + '">' +
+        '<div class="teamblock col-md-3 col-sm-6 col-xs-6 filtr-item" data-category="' + element["areas"] + "," + element["interests"] + '">' +
           '<div class="team-member">'+
             '<div class="portfolio-block member-photo">' +
               '<div style="text-align: center;"><img class="img-fluid" src="images/people/' + element["image"] + '" alt="Academic-Staff-' + element["name"] + '"></div>' +
