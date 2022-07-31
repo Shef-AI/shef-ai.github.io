@@ -108,7 +108,10 @@ def main():
         print('No files found.')
     else:
         print('Files:')
-        image_lst = os.listdir(f"./images/{output_folder}/")
+        try:
+            image_lst = os.listdir(f"./images/{output_folder}/")
+        except:
+            image_lst = []
         for item in items:
             print(f"\n    Name: {item['name']}, MimeType: {item['mimeType']}, TrashedStatus:{item['trashed']}")
             if not item['trashed']:
