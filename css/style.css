@@ -61,6 +61,26 @@ a:focus, a:hover {
   background-color: white!important;
 }
 
+.notice-section {
+  font-weight: bold;
+  font-size: larger;
+}
+
+.notice-subsection {
+  font-weight: bold;
+  font-size: large;
+}
+
+.notice-subsubsection {
+  font-weight: bold;
+}
+
+.notice ol > li::marker {
+  font-weight: bold;
+  font-size: larger;
+}
+
+
 .teamblock {
   padding-bottom: 100px;
   font-size: 14px;
