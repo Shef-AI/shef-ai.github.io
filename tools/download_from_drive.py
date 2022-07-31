@@ -108,6 +108,7 @@ def main():
         print('No files found.')
     else:
         print('Files:')
+        image_lst = os.listdir(f"./images/{output_folder}/")
         for item in items:
             print(f"\n    Name: {item['name']}, MimeType: {item['mimeType']}, TrashedStatus:{item['trashed']}")
             if not item['trashed']:
@@ -125,7 +126,7 @@ def main():
                             json.dump(update_output_dict, fp, indent=4, ensure_ascii=False)
                         print(f"    Remove download file from drive: {file_output_path}")
                         os.remove(file_output_path)
-                    elif item['mimeType'].startswith("image"):
+                    elif item['mimeType'].startswith("image") and item['name'] not in image_lst:
                         file_output_path = f"./images/{output_folder}/" + item['name']
                         download_files(service, item['id'], file_output_path)
                     else:
