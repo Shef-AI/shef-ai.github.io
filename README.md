@@ -46,3 +46,7 @@ Provided below are the steps you can pass to update the news/events data:
 3. You have now prepared your text in JSON format. The last step is to update a record in the `.json` files:
    1. Open the `news.json` or `events.json` file in the `json` folder of the project repository.
    2. Replace the value of your desired field with the generated single-line text from the previous steps.
+   
+## Privacy notice
+To see our Privacy Notice, please go to [Shef.AI Website Policy Notice](https://sheffieldai.github.io/privacy-notice.html) about what types of personal information will be gathered and how this information will be used.
+
