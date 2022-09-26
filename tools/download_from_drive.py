@@ -124,7 +124,10 @@ def main():
                         print(f"    Update {item['name']} with latest data in drive")
                         update_output_dict = add_new_entry_from_drive(repo_file_path, file_output_path)
                         # sort items by published date order
-                        update_output_dict.sort(key=lambda x: convert_datetime(x), reverse=True)
+                        if 'date' in update_output_dict[0].keys():
+                            update_output_dict.sort(key=lambda x: convert_datetime(x), reverse=True)
+                        else:
+                            update_output_dict.sort(key=lambda x: x['name'], reverse=False)
                         with open(repo_file_path, 'w') as fp:
                             json.dump(update_output_dict, fp, indent=4, ensure_ascii=False)
                         print(f"    Remove download file from drive: {file_output_path}")
