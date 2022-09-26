@@ -17,6 +17,22 @@
     },
     {
         "title": "Mr",
+        "name": "Lawrence Schobs",
+        "position": "PhD student",
+        "affiliation": "University of Sheffield",
+        "research_area": "Health and Medical Sciences, Data-centric Engineering, Science",
+        "research_interests_terms": "Computer vision, Machine learning",
+        "short_biography": "I am a third year PhD student researching medical image analysis with deep learning. I focus on landmark localization and estimating uncertainty.",
+        "research_interests_summary": "computer vision, medical image analysis, landmark localization, segmentation, uncertainty estimation",
+        "homepage": "#",
+        "linkedin": "https://github.com/schobs/",
+        "googlescholar": "#",
+        "github": "https://scholar.google.com/citations?user=FvndeeQAAAAJ&hl=en",
+        "id": "3ff3f929-f62c-4e4e-b50d-2f359bdc4a53",
+        "shef_ai_link": "lawrence-schobs"
+    },
+    {
+        "title": "Mr",
         "name": "Mohammod Suvon",
         "position": "Reasearch Support Engineer",
         "affiliation": "The University of Sheffiled",
@@ -48,5 +64,22 @@
         "image": "1mMG0eNbXVVigqcbWc2s6xb3SqvpKPTUh.png",
         "id": "1mMG0eNbXVVigqcbWc2s6xb3SqvpKPTUh",
         "shef_ai_link": "shuo-zhou"
+    },
+    {
+        "title": "Mr",
+        "name": "Sina Tabakhi",
+        "position": "Researcher Ph.D. Student",
+        "affiliation": "University of Sheffield",
+        "research_area": "Health and Medical Sciences, Science",
+        "research_interests_terms": "Data structures and algorithms, Information theory, Machine learning, Mathematical modelling, Statistical methods and theory",
+        "short_biography": "I am a Ph.D. student in the Department of Computer Science at the University of Sheffield, working in the Machine Learning Research Group under the supervision of Dr. Haiping Lu. Before joining UoS, I had worked in the industry as a software engineer for five years, where I was in charge of developing software, bug fixing, and data visualization. I graduated with a Master’s degree as the first honor student in Computer Engineering, Artificial Intelligence, from the University of Kurdistan, supervised by Dr. Parham Moradi.",
+        "research_interests_summary": "My research aims to reduce the dimensionality of big data through feature selection. Recently, I have been working on machine learning techniques to integrate multi-omics data that help design an accurate life-threatening disease diagnostic system.",
+        "homepage": "https://sinatabakhi.github.io/",
+        "linkedin": "https://uk.linkedin.com/in/sina-tabakhi",
+        "googlescholar": "https://scholar.google.com/citations?user=G6JSFp8AAAAJ&hl=en",
+        "github": "https://github.com/SinaTabakhi",
+        "image": "1IRTL0QorHPXYujE5SnULzvKk9gGRdhR4.JPEG",
+        "id": "1IRTL0QorHPXYujE5SnULzvKk9gGRdhR4",
+        "shef_ai_link": "sina-tabakhi"
     }
 ]
