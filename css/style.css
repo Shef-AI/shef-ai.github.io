@@ -194,6 +194,11 @@ a:focus, a:hover {
   padding: 40px 0;
 }
 
+.divider {
+  height: 5px;
+  background: #28ABE3;
+}
+
 #preloader {
   background: #fff;
   height: 100%;
