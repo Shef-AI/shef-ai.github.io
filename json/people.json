@@ -1,3 +1,52 @@
 [
-
+    {
+        "title": "Mr",
+        "name": "Lawrence Schobs",
+        "position": "PhD student",
+        "affiliation": "University of Sheffield",
+        "research_area": "Health and Medical Sciences, Data-centric Engineering, Science",
+        "research_interests_terms": "Computer vision, Machine learning",
+        "short_biography": "I am a third year PhD student researching medical image analysis with deep learning. I focus on landmark localization and estimating uncertainty.",
+        "research_interests_summary": "computer vision, medical image analysis, landmark localization, segmentation, uncertainty estimation",
+        "homepage": "#",
+        "linkedin": "https://github.com/schobs/",
+        "googlescholar": "#",
+        "github": "https://scholar.google.com/citations?user=FvndeeQAAAAJ&hl=en",
+        "id": "aa4c6dfd-6304-4745-b76d-805db1dc3225",
+        "shef_ai_link": "lawrence-schobs"
+    },
+    {
+        "title": "Mr",
+        "name": "Mohammod Suvon",
+        "position": "Reasearch Support Engineer",
+        "affiliation": "The University of Sheffiled",
+        "research_area": "Health and Medical Sciences, Data-centric Engineering",
+        "research_interests_terms": "Computer vision, Machine learning, Natural language processing",
+        "short_biography": "Mohammod Suvon completed his bachelor's degree in Computer Science and Engineering from North South University, Dhaka, Bangladesh. He has recently completed his Master's in Computer Science with speech and language processing at the University of Sheffield, UK. Currently, he is working as a research support engineer under Dr. Hiping Lu. ",
+        "research_interests_summary": "His current research interest is in multimodal learning on clinical datasets. He is currently working with EHR data on Pulmonary Atrial Hypertension patients to predict one-year mortality.",
+        "homepage": "#",
+        "linkedin": "https://www.linkedin.com/in/md-naimul/",
+        "googlescholar": "https://scholar.google.com/citations?user=DGYUifQAAAAJ&hl=en",
+        "github": "https://github.com/Mdnaimulislam",
+        "image": "1ckjYX-0_wMsnlHHtdMb_90PROE47Fb3I.jpg",
+        "id": "1ckjYX-0_wMsnlHHtdMb_90PROE47Fb3I",
+        "shef_ai_link": "mohammod-suvon"
+    },
+    {
+        "title": "Dr",
+        "name": "Shuo Zhou",
+        "position": "Academic Fellow in Machine Learning",
+        "affiliation": "University of Sheffield",
+        "research_area": "Health and Medical Sciences, Data-centric Engineering",
+        "research_interests_terms": "Machine learning",
+        "short_biography": "I am an academic fellow in machine learning at the Machine Learning Research Group, Department of Computer Science, University of Sheffield.\n\nMy current research focuses on developing interpretable machine learning methods and tools for medical image analysis. I am a co-creator and core developer of open-source library PyKale, which provides a range of accessible multi-modal and transfer learning algorithms.\n\nI serve as a reviewer of IEEE Transactions on Neural Networks and Learning Systems and IEEE Transactions on Cognitive and Developmental Systems. I also served as a PC member of IJCAI 2022. I am an awardee of Post-Doctoral Enrichment Awards (PDEA) 2022, offered by the Alan Turing Institute.",
+        "research_interests_summary": "Interpretable Machine Learning, Medical Image Analysis",
+        "homepage": "https://shuo-zhou.github.io/",
+        "linkedin": "https://www.linkedin.com/in/shuo-zhou-02754763/",
+        "googlescholar": "https://scholar.google.com/citations?user=b90lZb4AAAAJ",
+        "github": "https://github.com/shuo-zhou",
+        "image": "1mMG0eNbXVVigqcbWc2s6xb3SqvpKPTUh.png",
+        "id": "1mMG0eNbXVVigqcbWc2s6xb3SqvpKPTUh",
+        "shef_ai_link": "shuo-zhou"
+    }
 ]
