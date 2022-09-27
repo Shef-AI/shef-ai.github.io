@@ -3,11 +3,11 @@ fetch('../json/people.json')
   .then(data => {
     data.forEach(function(element){
       var fullNamePerson = element["name"];
-      var imageId = element["image"];
+      var imageId = element["photo"];
 
       if (element.hasOwnProperty("title"))
         fullNamePerson = element["title"] + ' ' + fullNamePerson;
-      if (!element.hasOwnProperty("image"))
+      if (!element.hasOwnProperty("photo"))
         imageId = 'default.png';
 
       $('#people-section').append(
@@ -19,7 +19,7 @@ fetch('../json/people.json')
                 '<ul class="clearfix">' +
                   '<li><a href="' + element["homepage"] + '" target="_blank"><i class="tf-ion-link"></i></a></li>' +
                   '<li><a href="' + element["linkedin"] + '" target="_blank"><i class="tf-ion-social-linkedin"></i></a></li>' +
-                  '<li><a href="' + element["googlescholar"] + '" target="_blank"><i class="tf-ion-social-google"></i></a></li>' +
+                  '<li><a href="' + element["google_scholar"] + '" target="_blank"><i class="tf-ion-social-google"></i></a></li>' +
                   '<li><a href="' + element["github"] + '" target="_blank"><i class="tf-ion-social-github"></i></a></li>' +
                 '</ul>' +
               '</div>' +
@@ -29,7 +29,7 @@ fetch('../json/people.json')
               '<div><h4>' + element["position"] + '</h4></div>' +
               '<div><h4>' + element["affiliation"] + '</h4></div>' +
               '<br/>' +
-              '<div><h4>' + element["research_area"] + '</h4></div>' +
+              '<div><h4>' + element["research_areas"] + '</h4></div>' +
             '</div>' +
           '</div>' +
         '</div>'
