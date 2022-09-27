@@ -1607,6 +1607,7 @@ a:focus, a:hover {
 .single-member .img-fluid {
   height: 350px;
   max-height: 100%;
+  border-radius: 50%;
 }
 
 .team .member-photo:hover img {
