@@ -33,6 +33,23 @@
         "shef_ai_link": "mohammod-suvon"
     },
     {
+        "title": "Mr",
+        "name": "Peizhen Bai",
+        "position": "Researcher Ph.D. Student",
+        "affiliation": "University of Sheffield",
+        "research_area": "Health and Medical Sciences, Data-centric Engineering, Science",
+        "research_interests_terms": "Data structures and algorithms, Information theory, Machine learning, Natural language processing, Neuroscience and cognitive science, Parallel computing",
+        "short_biography": "I am a CS Ph.D. student at the University of Sheffield, supervised by Dr. Haiping Lu. My research focuses on domain transferability challenge arising from machine learning (esp. graph-based methods) adoption in real-world drug discovery. Previously, I worked at Apple Siri team as a data engineer, developing large-scale machine learned system. I am contributing to the development of open source PyKale Library and Sheffield AI Turing Network.",
+        "research_interests_summary": "Deep Representation Learning, Graph Neural Networks and Knowledge Graph in Drug Discovery.",
+        "homepage": "https://peizhenbai.me/",
+        "linkedin": "https://www.linkedin.com/in/peizhen-bai/",
+        "googlescholar": "https://scholar.google.com/citations?user=Xj0GCwYAAAAJ&hl=en&oi=ao",
+        "github": "https://github.com/pz-white",
+        "image": "1gfhl9EGhrWHeLveHFQTFEal5jWuCW_og.jpg",
+        "id": "1gfhl9EGhrWHeLveHFQTFEal5jWuCW_og",
+        "shef_ai_link": "peizhen-bai"
+    },
+    {
         "title": "Dr",
         "name": "Shuo Zhou",
         "position": "Academic Fellow in Machine Learning",
