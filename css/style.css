@@ -1604,6 +1604,11 @@ a:focus, a:hover {
   max-height: 100%;
 }
 
+.single-member .img-fluid {
+  height: 350px;
+  max-height: 100%;
+}
+
 .team .member-photo:hover img {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
