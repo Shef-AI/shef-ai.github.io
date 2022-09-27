@@ -25,6 +25,11 @@ fetch('../json/people.json')
             });
             interestsTermsTags += '</ul>';
 
+            var areasTerms = element["research_area"].split(",");
+            var areasTermsTags = '';
+            areasTerms.forEach(function(item){
+                areasTermsTags += '<a class="btn rounded-pill btn-outline-primary mr-2 mb-2" href="#" role="button">' + item + '</a>';
+            });
 
             $('#profile-section').append(
                 '<div class="col-md-5 single-member text-center">'+
@@ -40,19 +45,21 @@ fetch('../json/people.json')
                             '<li class="list-inline-item"><a href="' + element["googlescholar"] + '"><i class="tf-ion-social-google" style="font-size: 35px"></i></a></li>'+
                             '<li class="list-inline-item"><a href="' + element["github"]+ '"><i class="tf-ion-social-github" style="font-size: 35px"></i></a></li>'+
                         '</ul>'+
-                    '</div>'+
+                    '</div><br/>'+
+                    areasTermsTags +
                 '</div>'+
                 '<div class="col-md-7">'+
                     (element["short_biography"] ? 
                         ('<h2>Biography</h2>'+
                             '<div class="divider my-4"></div>'+
-                            '<p>' + element["short_biography"] + '</p>') : 
+                            '<p>' + element["short_biography"] + '</p><br/>') : 
                         '<br/>'
-                    )+       
+                    )+ 
                     '<h2>Research Interests</h2>' +
                     '<div class="divider my-4"></div>'+
                     (element["research_interests_summary"] ? ('<p>' + element["research_interests_summary"] + '</p>') : '')+
                     interestsTermsTags +
+                    '<br/>' +
                 '</div>'
             );
         }
