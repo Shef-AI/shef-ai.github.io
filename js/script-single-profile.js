@@ -18,6 +18,14 @@ fetch('../json/people.json')
             if (!element.hasOwnProperty("image"))
               imageId = 'default.png';
 
+            var interestsTerms = element["research_interests_terms"].split(",");
+            var interestsTermsTags = '<ul>';
+            interestsTerms.forEach(function(item){
+                interestsTermsTags += '<li>' + item + '</li>';
+            });
+            interestsTermsTags += '</ul>';
+
+
             $('#profile-section').append(
                 '<div class="col-md-5 single-member">'+
                     '<img class="img-fluid" src="images/people/' + imageId + '" alt="' + fullNamePerson + '">'+
@@ -35,18 +43,16 @@ fetch('../json/people.json')
                     '</div>'+
                 '</div>'+
                 '<div class="col-md-7">'+
-                (element["short_biography"] ? 
-                    ('<h2>Biography</h2>'+
-                        '<div class="divider my-4"></div>'+
-                        '<p>' + element["short_biography"] + '</p>') : 
-                    '<br/>'
-                )+       
-                (element["research_interests_summary"] ? 
-                    ('<h2>Research Interests</h2>'+
-                        '<div class="divider my-4"></div>'+
-                        '<p>' + element["research_interests_summary"] + '</p>') : 
-                    '<br/>'
-                )+
+                    (element["short_biography"] ? 
+                        ('<h2>Biography</h2>'+
+                            '<div class="divider my-4"></div>'+
+                            '<p>' + element["short_biography"] + '</p>') : 
+                        '<br/>'
+                    )+       
+                    '<h2>Research Interests</h2>' +
+                    '<div class="divider my-4"></div>'+
+                    (element["research_interests_summary"] ? ('<p>' + element["research_interests_summary"] + '</p>') : '')+
+                    interestsTermsTags +
                 '</div>'
             );
         }
