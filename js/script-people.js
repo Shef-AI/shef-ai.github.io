@@ -25,18 +25,11 @@ fetch('../json/people.json')
               '</div>' +
             '</div>' +
             '<div class="member-content text-center">' +
-              '<a href="single-profile.html?user=' + element["shef_ai_link"] + '"><h4>' + fullNamePerson + '</h4></a>' +
-              '<div>' + element["position"] + '</div>' +
-              '<div>' + element["affiliation"] + '</div>' +
-              '<a data-toggle="collapse" data-target="#col' + element["id"] + '">' +
-                '<h3><span class="bi bi-plus-square" style="font-size: 1rem"></span></h3>' +
-              '</a>' +
-              '<div id="col' + element["id"]  + '" class="collapse" data-parent="#accordion">' +
-                (element["short_biography"] ? 
-                  ('<div class="card-body">' + element["short_biography"] + '</div>') : 
-                  '<br/>'
-                )+
-              '</div>' +
+              '<a href="single-profile.html?user=' + element["shef_ai_link"] + '"><h3>' + fullNamePerson + ' <span class="bi bi-arrow-bar-right" style="font-size: 1.3rem"></span></h3></a>' +
+              '<div><h4>' + element["position"] + '</h4></div>' +
+              '<div><h4>' + element["affiliation"] + '</h4></div>' +
+              '<br/>' +
+              '<div><h4>' + element["research_area"] + '</h4></div>' +
             '</div>' +
           '</div>' +
         '</div>'

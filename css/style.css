@@ -1578,9 +1578,15 @@ a:focus, a:hover {
 }
 
 .team .team-member .member-content h3 {
-  font-size: 20px;
+  font-size: 23px;
   margin: 0 0 5px;
   color: #333;
+}
+
+.team .team-member .member-content h4 {
+  font-size: 15px;
+  margin: 0 0 5px;
+  color: #757575;
 }
 
 .team .team-member .member-content span {
