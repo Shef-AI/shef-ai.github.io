@@ -48,22 +48,5 @@
         "photo": "1mMG0eNbXVVigqcbWc2s6xb3SqvpKPTUh.png",
         "id": "1mMG0eNbXVVigqcbWc2s6xb3SqvpKPTUh",
         "shef_ai_link": "shuo-zhou"
-    },
-    {
-        "title": "Mr",
-        "name": "Sina Tabakhi",
-        "position": "Researcher Ph.D. Student",
-        "affiliation": "The University of Sheffield",
-        "research_areas": "Health and Medical Sciences, Data-centric Engineering, Science",
-        "research_interest_terms": "Data structures and algorithms, Information retrieval, Information theory, Machine learning, Mathematical modelling, Neuroscience and cognitive science, Statistical methods and theory",
-        "short_biography": "I am a Ph.D. student in the Department of Computer Science at the University of Sheffield, working in the Machine Learning Research Group under the supervision of Dr. Haiping Lu. Before joining UoS, I had worked in the industry as a software engineer for five years, where I was in charge of developing software, bug fixing, and data visualization. I graduated with a Master’s degree as the first honor student in Computer Engineering, Artificial Intelligence, from the University of Kurdistan, supervised by Dr. Parham Moradi.",
-        "research_interest_summary": "My research aims to reduce the dimensionality of big data through feature selection. Recently, I have been working on machine learning techniques to integrate multi-omics data that help design an accurate life-threatening disease diagnostic system.",
-        "homepage": "https://sinatabakhi.github.io/",
-        "linkedin": "https://uk.linkedin.com/in/sina-tabakhi",
-        "google_scholar": "https://scholar.google.com/citations?user=G6JSFp8AAAAJ&hl=en",
-        "github": "https://github.com/SinaTabakhi",
-        "photo": "1l4Q-rt5uUVHKOnj16CSECVbd4G2HAkTe.JPEG",
-        "id": "1l4Q-rt5uUVHKOnj16CSECVbd4G2HAkTe",
-        "shef_ai_link": "sina-tabakhi"
     }
 ]
