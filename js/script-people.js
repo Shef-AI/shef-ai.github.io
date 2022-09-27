@@ -11,7 +11,7 @@ fetch('../json/people.json')
         imageId = 'default.png';
 
       $('#people-section').append(
-        '<div class="teamblock col-md-3 col-sm-6 col-xs-6 filtr-item" data-category="' + element["research_area"] + "," + element["research_interests_terms"] + '">' +
+        '<div class="teamblock col-md-3 col-sm-6 col-xs-6 filtr-item" data-category="' + element["research_areas"] + "," + element["research_interest_terms"] + '">' +
           '<div class="team-member">'+
             '<div class="portfolio-block member-photo">' +
               '<div style="text-align: center;"><img class="img-fluid" src="images/people/' + imageId + '" alt="' + fullNamePerson + '"></div>' +
