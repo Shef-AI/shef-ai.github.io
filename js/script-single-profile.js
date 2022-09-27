@@ -19,7 +19,7 @@ fetch('../json/people.json')
               imageId = 'default.png';
 
             $('#profile-section').append(
-                '<div class="col-md-5">'+
+                '<div class="col-md-5 single-member">'+
                     '<img class="img-fluid" src="images/people/' + imageId + '" alt="' + fullNamePerson + '">'+
                     '<div class="info-block mt-4">'+
                         '<h3 class="mb-0">' + fullNamePerson + '</h3>'+
