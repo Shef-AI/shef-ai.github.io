@@ -1,5 +1,22 @@
 [
     {
+        "title": "Dr",
+        "name": "Grant Hill",
+        "position": "Senior Lecturer in Theoretical Chemistry",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Science",
+        "research_interest_terms": "Machine learning, Mathematical modelling, Optimisation, Visualisation",
+        "short_biography": "I obtained my MChem degree from the University of York in 2002, followed by a PhD in theoretical chemistry from the same institute in 2005. After periods of postdoctoral study in Cardiff and Washington State, I had a temporary position at the University of Glasgow. I joined the University of Sheffield in 2014.",
+        "research_interest_summary": "I am interested in exploring fundamental questions in chemistry/physics at the molecular level using theoretical and computational tools. Recent areas of focus include the use of data science and machine learning techniques to design new molecules/materials and to improve the methods of quantum chemistry.",
+        "homepage": "https://www.sheffield.ac.uk/chemistry/people/academic/j-grant-hill",
+        "linkedin": "https://www.linkedin.com/in/grant-hill-097941b3/",
+        "google_scholar": "https://scholar.google.com/citations?user=EVzyuwIAAAAJ&hl=en",
+        "github": "https://github.com/JGrantHill",
+        "photo": "1EugU1mTPOxNShIPbGJYSMQo7_C9Y_Ivt.png",
+        "id": "1EugU1mTPOxNShIPbGJYSMQo7_C9Y_Ivt",
+        "shef_ai_link": "grant-hill"
+    },
+    {
         "title": "Mr",
         "name": "Lawrence Schobs",
         "position": "PhD student",
