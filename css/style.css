@@ -1624,6 +1624,10 @@ a.disabled{
   border-radius: 50%;
 }
 
+.single-member  {
+  padding-bottom: 30px;
+}
+
 .team .member-photo:hover img {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
