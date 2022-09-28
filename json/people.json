@@ -1,6 +1,21 @@
 [
     {
         "title": "Dr",
+        "name": "Cass Zhixue Zhao",
+        "position": "Research Associate",
+        "affiliation": "University of Sheffield ",
+        "research_areas": "Science, Humanities and Social Sciences, Cross-cutting Challenges",
+        "research_interest_terms": "Machine learning, Natural language processing",
+        "homepage": "#",
+        "linkedin": "#",
+        "google_scholar": "#",
+        "github": "GitHub.com/casszhao",
+        "photo": "1VlJJC-yBrcmVzGiesc02EGCURfiEXNf4.jpeg",
+        "id": "1VlJJC-yBrcmVzGiesc02EGCURfiEXNf4",
+        "shef_ai_link": "cass-zhixue-zhao"
+    },
+    {
+        "title": "Dr",
         "name": "Grant Hill",
         "position": "Senior Lecturer in Theoretical Chemistry",
         "affiliation": "University of Sheffield",
