@@ -17,6 +17,23 @@
     },
     {
         "title": "Mr",
+        "name": "Mohammod Naimul Islam Suvon",
+        "position": "Research Support Engineer",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Health and Medical Sciences, Data-centric Engineering",
+        "research_interest_terms": "Computer vision, Machine learning, Natural language processing",
+        "short_biography": "Mohammod Suvon completed his bachelor's degree in Computer Science and Engineering from North South University, Dhaka, Bangladesh. He has recently completed his Master's in Computer Science with speech and language processing at the University of Sheffield, UK. Currently, he is working as a research support engineer under Dr. Haiping Lu. ",
+        "research_interest_summary": "Mohammod Suvon's current research interest is in multimodal learning on clinical datasets.",
+        "homepage": "#",
+        "linkedin": "https://www.linkedin.com/in/md-naimul",
+        "google_scholar": "https://scholar.google.com/citations?user=DGYUifQAAAAJ&hl=en",
+        "github": "https://github.com/Mdnaimulislam",
+        "photo": "1D6rZNArfbPtcSXJR1_FfiUNxmV9bRTyF.jpg",
+        "id": "1D6rZNArfbPtcSXJR1_FfiUNxmV9bRTyF",
+        "shef_ai_link": "mohammod-naimul-islam-suvon"
+    },
+    {
+        "title": "Mr",
         "name": "Peizhen Bai",
         "position": "Researcher Ph.D. Student",
         "affiliation": "University of Sheffield",
@@ -31,6 +48,20 @@
         "photo": "1gfhl9EGhrWHeLveHFQTFEal5jWuCW_og.jpg",
         "id": "1gfhl9EGhrWHeLveHFQTFEal5jWuCW_og",
         "shef_ai_link": "peizhen-bai"
+    },
+    {
+        "title": "Mr",
+        "name": "Shunbao Li",
+        "position": "phd student",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Health and Medical Sciences, Data-centric Engineering",
+        "research_interest_terms": "Knowledge representation, Machine learning",
+        "homepage": "#",
+        "linkedin": "#",
+        "google_scholar": "#",
+        "github": "#",
+        "id": "f490bde6-b965-44c0-96f7-3e0eb7854d3d",
+        "shef_ai_link": "shunbao-li"
     },
     {
         "title": "Dr",
@@ -65,5 +96,19 @@
         "photo": "1nVk48jgEULijnh83n2qqtw8Iu7YSdpa-.JPEG",
         "id": "1nVk48jgEULijnh83n2qqtw8Iu7YSdpa-",
         "shef_ai_link": "sina-tabakhi"
+    },
+    {
+        "title": "Mr",
+        "name": "xulong wang",
+        "position": "PhD student",
+        "affiliation": "University of sheffield",
+        "research_areas": "Health and Medical Sciences",
+        "research_interest_terms": "Knowledge representation, Machine learning, Mathematical modelling",
+        "homepage": "#",
+        "linkedin": "#",
+        "google_scholar": "#",
+        "github": "#",
+        "id": "70f1bd28-6d8b-4aba-a1c9-2b35a8dbd9c6",
+        "shef_ai_link": "xulong-wang"
     }
 ]
