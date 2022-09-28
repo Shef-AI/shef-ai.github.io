@@ -16,6 +16,23 @@
     },
     {
         "title": "Dr",
+        "name": "Gavin Boyce",
+        "position": "Head of Faculty & Research Partnership",
+        "affiliation": "University of Sheffield Library",
+        "research_areas": "Cross-cutting Challenges",
+        "research_interest_terms": "Human computer interface, Machine learning, Natural language processing, Visualisation",
+        "short_biography": "I have a background in Philosophy, Computing and Psychology. I currently work as Head of Faculty & Research Partnership in the University of Sheffield library. Day-to-day I head up the small, but perfectly formed, Faculty Engagement team; 12 dedicated specialist librarians who endeavour to support both staff and student needs across all disciplines within the University. Much of my focus is on ensuring that the Library will continue to be the beating heart of the University in five to ten years time and in the current environment this requires a combination of careful long-term planning and fleet-footed opportunism.",
+        "research_interest_summary": "My PhD thesis was on the topic of Artificial Intelligence, an an interdisciplinary piece of work that had neither the a priori rigour that it takes to satisfy pure philosophers, nor sufficient lines of code to mollify decent computer scientists. I spent my nights working on Yorick Wilkes' Japanese-Electronic dictionary. I have leaned towards AI, HCI and the applications thereof ever since.",
+        "homepage": "#",
+        "linkedin": "www.linkedin.com/in/gavin-boyce-4552525a",
+        "google_scholar": "#",
+        "github": "#",
+        "photo": "1TLW7SyUc0Lf_Hzpkl_5KnLBhmmW3JfJR.jpeg",
+        "id": "1TLW7SyUc0Lf_Hzpkl_5KnLBhmmW3JfJR",
+        "shef_ai_link": "gavin-boyce"
+    },
+    {
+        "title": "Dr",
         "name": "Grant Hill",
         "position": "Senior Lecturer in Theoretical Chemistry",
         "affiliation": "University of Sheffield",
