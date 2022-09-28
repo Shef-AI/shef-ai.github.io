@@ -40,10 +40,10 @@ fetch('../json/people.json')
                         '<h5>' + element["affiliation"] + '</h5>'+
       
                         '<ul class="list-inline mt-4">'+
-                            '<li class="list-inline-item"><a href="' + element["homepage"] + '" target="_blank"><i class="tf-ion-link" style="font-size: 40px"></i></a></li>'+
-                            '<li class="list-inline-item"><a href="' + element["linkedin"] + '" target="_blank"><i class="tf-ion-social-linkedin" style="font-size: 40px"></i></a></li>'+
-                            '<li class="list-inline-item"><a href="' + element["google_scholar"] + '" target="_blank"><i class="tf-ion-social-google" style="font-size: 40px"></i></a></li>'+
-                            '<li class="list-inline-item"><a href="' + element["github"]+ '" target="_blank"><i class="tf-ion-social-github" style="font-size: 38px"></i></a></li>'+
+                            '<li class="list-inline-item"><a href="' + element["homepage"] + '" target="_blank" class=' + (element["homepage"].trim() == "#" ? "disabled" : "") + '><i class="tf-ion-link" style="font-size: 40px"></i></a></li>'+
+                            '<li class="list-inline-item"><a href="' + element["linkedin"] + '" target="_blank" class=' + (element["linkedin"].trim() == "#" ? "disabled" : "") + '><i class="tf-ion-social-linkedin" style="font-size: 40px"></i></a></li>'+
+                            '<li class="list-inline-item"><a href="' + element["google_scholar"] + '" target="_blank" class=' + (element["google_scholar"].trim() == "#" ? "disabled" : "") + '><i class="tf-ion-social-google" style="font-size: 40px"></i></a></li>'+
+                            '<li class="list-inline-item"><a href="' + element["github"]+ '" target="_blank" class=' + (element["github"].trim() == "#" ? "disabled" : "") + '><i class="tf-ion-social-github" style="font-size: 38px"></i></a></li>'+
 
                         '</ul>'+
                     '</div><br/>'+

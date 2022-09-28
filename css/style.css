@@ -53,6 +53,12 @@ a:focus, a:hover {
   color: #28ABE3;
 }
 
+a.disabled{
+  pointer-events: none!important;
+  cursor: default!important;
+  opacity: 0.3!important;
+}
+
 .latest-item-index-dark {
   background-color: #F6F6F6;
 }

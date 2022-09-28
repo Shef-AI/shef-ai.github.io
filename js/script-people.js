@@ -17,10 +17,10 @@ fetch('../json/people.json')
               '<div style="text-align: center;"><img class="img-fluid" src="images/people/' + imageId + '" alt="' + fullNamePerson + '"></div>' +
               '<div class="caption mask">' +
                 '<ul class="clearfix">' +
-                  '<li><a href="' + element["homepage"] + '" target="_blank"><i class="tf-ion-link"></i></a></li>' +
-                  '<li><a href="' + element["linkedin"] + '" target="_blank"><i class="tf-ion-social-linkedin"></i></a></li>' +
-                  '<li><a href="' + element["google_scholar"] + '" target="_blank"><i class="tf-ion-social-google"></i></a></li>' +
-                  '<li><a href="' + element["github"] + '" target="_blank"><i class="tf-ion-social-github"></i></a></li>' +
+                  '<li><a href="' + element["homepage"] + '" target="_blank" class=' + (element["homepage"].trim() == "#" ? "disabled" : "") + '><i class="tf-ion-link"></i></a></li>' +
+                  '<li><a href="' + element["linkedin"] + '" target="_blank" class=' + (element["linkedin"].trim() == "#" ? "disabled" : "") + '><i class="tf-ion-social-linkedin"></i></a></li>' +
+                  '<li><a href="' + element["google_scholar"] + '" target="_blank" class=' + (element["google_scholar"].trim() == "#" ? "disabled" : "") + '><i class="tf-ion-social-google"></i></a></li>' +
+                  '<li><a href="' + element["github"] + '" target="_blank" class=' + (element["github"].trim() == "#" ? "disabled" : "") + '><i class="tf-ion-social-github"></i></a></li>' +
                 '</ul>' +
               '</div>' +
             '</div>' +
