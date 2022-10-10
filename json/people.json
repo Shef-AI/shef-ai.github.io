@@ -117,6 +117,23 @@
     },
     {
         "title": "Mr",
+        "name": "Rea Nkhumise",
+        "position": "PhD Researcher",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Data-centric Engineering, Science, Cross-cutting Challenges",
+        "research_interest_terms": "Automatic control, Computer vision, Information theory, Knowledge representation, Machine learning, Multi-agent reasoning, Robotics",
+        "short_biography": "I'm a robotics engineer with entrepreneurial experience, and have affinity for tackling complex problems with practical application to the general masses - hence I founded a startup company in Robotics & Software. I appreciate the interdisciplinary and system thinking approaches in applying robotics research to mitigate commonly faced societal problems.",
+        "research_interest_summary": "My work is about Robotic Reinforcement Learning which aims to enable industrial robotic manipulators reach complete autonomy, through self-learning of new tasks and adapting to perturbations fast and flexibly. ",
+        "homepage": "https://nkhumise.com/",
+        "linkedin": "https://www.linkedin.com/in/rea-nkhumise-756a15aa/",
+        "google_scholar": "#",
+        "github": "https://github.com/rabs910509",
+        "photo": "1Lmas7eSycSiB4vkxbGgo42RWodz-nhaU.jpg",
+        "id": "1Lmas7eSycSiB4vkxbGgo42RWodz-nhaU",
+        "shef_ai_link": "rea-nkhumise"
+    },
+    {
+        "title": "Mr",
         "name": "Shunbao Li",
         "position": "phd student",
         "affiliation": "University of Sheffield",
