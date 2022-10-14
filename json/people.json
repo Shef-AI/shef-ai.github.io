@@ -33,6 +33,23 @@
     },
     {
         "title": "Dr",
+        "name": "Giuliano Punzo",
+        "position": "The University of Sheffield",
+        "affiliation": "The University of Sheffield",
+        "research_areas": "Data-centric Engineering",
+        "research_interest_terms": "Automatic control, Mathematical modelling, Multi-agent reasoning",
+        "short_biography": "Dr Punzo received the BEng and the MEng in aerospace engineer from the University of Naples Federico II and forked for a brief period at Thales Alenia Space (Turin). He started the doctoral studies and was awarded a PhD in Swarm Engineering in 2014 at the University of Strathclyde in Glasgow. Giuliano held research and teaching posts at the University of Strathclyde, the University of Glasgow and The University of Sheffield before becoming a lecturer in Aerospace Systems at the department of Automatic Control and Systems Engineering at the University of Sheffield in 2019. ",
+        "research_interest_summary": "Giuliano’s research interests are in the broad area of control theory and complex systems. His current research aims at understanding complex dynamics at the interface between social and technical systems. These include the use of public services such as transportation or water systems, how these impact the demographic and the resilience of both the infrastructure and the community they serve. Research areas of interest include network theory, control theory, games on networks, consensus, and complexity.",
+        "homepage": "https://www.sheffield.ac.uk/acse/department/people/academic/giuliano-punzo",
+        "linkedin": "https://www.linkedin.com/in/giuliano-punzo-8a29508a/",
+        "google_scholar": "https://scholar.google.com/citations?hl=en&user=NMUsstMAAAAJ",
+        "github": "#",
+        "photo": "1ko_zLKVAjxPGNKxbzrLbSpA4nqjZJ6Kq.png",
+        "id": "1ko_zLKVAjxPGNKxbzrLbSpA4nqjZJ6Kq",
+        "shef_ai_link": "giuliano-punzo"
+    },
+    {
+        "title": "Dr",
         "name": "Grant Hill",
         "position": "Senior Lecturer in Theoretical Chemistry",
         "affiliation": "University of Sheffield",
