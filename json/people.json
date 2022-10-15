@@ -116,6 +116,23 @@
         "shef_ai_link": "lawrence-schobs"
     },
     {
+        "title": "Professor",
+        "name": "Lyudmila Mihaylova",
+        "position": "University Of Sheffield",
+        "affiliation": "University Of Sheffield",
+        "research_areas": "Data-centric Engineering, Cross-cutting Challenges",
+        "research_interest_terms": "Automatic control, Computer vision, Machine learning, Mathematical modelling, Multi-agent reasoning, Robotics, Statistical methods and theory",
+        "short_biography": "I am a Professor in Signal Processing and Control at the Automatic Control and Systems Engineering Department, on Sheffield Robotics and Insigneo. I serve as Associate Editor-in-Chief for the IEEE Transactions on Aerospace and Electronic Systems, a Senior Area Editor of the Signal Processing journal and as part of the organising committees of IEEE conferences on information fusion, ICASSP, conferences on intelligent transport and others.",
+        "research_interest_summary": "I have broad research interests and expertise in the areas of autonomous systems with applications to cities, autonomous and assisted living systems. My recent work is in the areas of machine learning, intelligent sensing, navigation, tracking and other tasks with multi-sensor data – from images and videos to time series data. Autonomous image and video analytics faces a number of challenges due to the huge volumes of data that sensors provide, the changeable environmental conditions and other factors. However, it is important to know when the methods work well and when they are not reliable, e.g. how much could we trust the obtained results? How could we quantify the impact of uncertainties on the developed solutions?",
+        "homepage": "https://www.sheffield.ac.uk/acse/people/lsm  ",
+        "linkedin": "https://www.linkedin.com/in/lyudmila-mihaylova-a35a2383/",
+        "google_scholar": "https://scholar.google.co.uk/citations?hl=en&user=-tI15hMAAAAJ&view_op=list_works",
+        "github": "#",
+        "photo": "1CMUSifVddwg63csiTfU3UfiVxv-z_042.jpg",
+        "id": "1CMUSifVddwg63csiTfU3UfiVxv-z_042",
+        "shef_ai_link": "lyudmila-mihaylova"
+    },
+    {
         "title": "Mr",
         "name": "Mohammod Naimul Islam Suvon",
         "position": "Research Support Engineer",
