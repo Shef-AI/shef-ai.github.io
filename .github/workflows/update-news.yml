@@ -55,7 +55,7 @@ jobs:
           signoff: false
           branch: update-news
           delete-branch: true
-          title: '[Test] Create PR'
+          title: 'Automatic news data update'
           body: |
             Create PR
             - Auto-generated PR in action
