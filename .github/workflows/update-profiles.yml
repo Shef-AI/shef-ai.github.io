@@ -56,7 +56,7 @@ jobs:
           signoff: false
           branch: update-profiles
           delete-branch: true
-          title: '[Test] Create PR'
+          title: 'Automatic profiles data update'
           body: |
             Create PR
             - Auto-generated PR in action
