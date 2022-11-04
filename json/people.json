@@ -67,6 +67,23 @@
     },
     {
         "title": "Dr",
+        "name": "Grigorios Kyritsakas",
+        "position": "Research Associate",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Data-centric Engineering, Science",
+        "research_interest_terms": "Machine learning, Mathematical modelling, Optimisation, Statistical methods and theory",
+        "short_biography": "Dr Grigorios Kyritsakas received his MEng in Environmental Engineering from the Technical University of Crete and his Msc in hydrology from Imperial College London. He then worked as a water engineering consultant for a period of 10 years working on the design of water and wastewater treatment plants and distribution systems. He then got back in academia in 2017 to purchase a PhD in data analytics for drinking water quality at University of Sheffield Civil and Structural engineering department. With the completion of his studies in 2021, he stayed in the department as a post-doc research associate working on machine learning application for improving drinking water quality.",
+        "research_interest_summary": "Grigorio's research interests are in the are of water quality, hydraulics, water infrastructures, and public health. His current research focuses on application of machine learning applications for understanding factors related to water quality deterioration, predicting future deterioration events and improving the quality of the water that is consumed. His research area of interest also includes the digital transformation of the water systems and the application of graph network theory in drinking water distribution systems.  ",
+        "homepage": "https://www.sheffield.ac.uk/civil/people/research/grigorios-kyritsakas",
+        "linkedin": "https://www.linkedin.com/in/greg-kyritsakas-a7439684/",
+        "google_scholar": "#",
+        "github": "#",
+        "photo": "1N0PsZuSpOa4n9_A52SQGNDNKA9gsOLSv.jpg",
+        "id": "1N0PsZuSpOa4n9_A52SQGNDNKA9gsOLSv",
+        "shef_ai_link": "grigorios-kyritsakas"
+    },
+    {
+        "title": "Dr",
         "name": "Haiping Lu",
         "position": "Senior Lecturer in Machine Learning",
         "affiliation": "University of Sheffield",
