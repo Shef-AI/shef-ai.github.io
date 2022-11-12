@@ -1,5 +1,16 @@
 [
     {
+        "time": "10:00",
+        "date": "Monday 21 November 2022",
+        "duration": 6,
+        "location": "Enigma, the Alan Turing Institute ",
+        "title": "Turing Workshop on Open-Source AI Software for Healthcare",
+        "summary": "<p>Join us at the <a href=\"https://sites.google.com/sheffield.ac.uk/ai-software4health/ \">Turing Workshop on Open-Source AI Software for Healthcare</a> to be held at Enigma, the Alan Turing Institute, with online access via Zoom.</p>\n",
+        "body": "<p>Join us at the <a href=\"https://sites.google.com/sheffield.ac.uk/ai-software4health/ \">Turing Workshop on Open-Source AI Software for Healthcare</a> to be held at Enigma, the Alan Turing Institute, with online access via Zoom.</p>\n<p>This workshop aims to bring together research communities interested in this topic to share experiences and discuss recent advances, challenges, and ways forward. The programme will include talks from leading researchers/developers of scikit-learn, Binder, JupyterHub, The Turing Way, MONAI, TorchIO, nilearn, ChemicalX, and DeepReg, as well as a panel discussion on bottlenecks, researcher engagement, and the impact of AI standards. In-person registration has now closed. Registration for online attendance is open until the end of Thursday 17th Nov (GMT).</p>\n<p><a href=\"https://docs.google.com/forms/d/e/1FAIpQLScUuUyeGdSfgT7NmjEIdvbuA5ePFKdA5KHHd8ZOQo3ePHEB9g/viewform\">Register here.</a></p><p>A link for joining remotely will be sent to registrants by email before the workshop.</p>\n<p>This event is jointly supported by the <a href=\"https://www.turing.ac.uk/post-doctoral-enrichment-awards-pdea\">Turing Post Doctoral Enrichment Awards (PDEA)</a> and the <a href=\"https://www.turing.ac.uk/research/interest-groups/meta-learning-multimodal-data\">Turing Interest Group Meta-Learning for Multimodal Data</a>. </p>\n",
+        "image": "1CRgW1qKAAAXd1iHsNIdNpGMFhyPofspB.jpg",
+        "id": "1CRgW1qKAAAXd1iHsNIdNpGMFhyPofspB"
+    },
+    {
         "time": "09:30",
         "date": "Tuesday 01 November 2022",
         "duration": 7,
