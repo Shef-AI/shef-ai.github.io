@@ -218,6 +218,23 @@
         "shef_ai_link": "rea-nkhumise"
     },
     {
+        "title": "Professor",
+        "name": "Richard Clayton",
+        "position": "Professor of Computational Physiology",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Health and Medical Sciences, Cross-cutting Challenges",
+        "research_interest_terms": "Machine learning, Mathematical modelling, Parallel computing, Statistical methods and theory",
+        "short_biography": "My undergraduate degree was in Applied Physics, followed by a PhD in Medical Physics based at the Freeman Hospital in Newcastle upon Tyne. I continued in research funded by British Heart Foundation fellowships, before moving to Sheffield Computer Science in 2003.",
+        "research_interest_summary": "My research interests range from physiological signal processing through to multiscale modelling of the heart. More recently I have focussed on statistical machine learning methods for uncertainty quantification and model calibration.",
+        "homepage": "https://www.sheffield.ac.uk/dcs/people/academic/richard-clayton",
+        "linkedin": "https://uk.linkedin.com/in/richard-clayton-b133229",
+        "google_scholar": "https://scholar.google.com/citations?user=XzTziRcAAAAJ&hl=en",
+        "github": "https://github.com/RichardClayton",
+        "photo": "1Oh_6-sPKtKKId_Kv1G5JtUSIAkxzWYIZ.jpeg",
+        "id": "1Oh_6-sPKtKKId_Kv1G5JtUSIAkxzWYIZ",
+        "shef_ai_link": "richard-clayton"
+    },
+    {
         "title": "Mr",
         "name": "Shunbao Li",
         "position": "phd student",
