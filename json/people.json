@@ -150,6 +150,23 @@
         "shef_ai_link": "lyudmila-mihaylova"
     },
     {
+        "title": "Dr",
+        "name": "Mark Stevenson",
+        "position": "Senior Lecturer in Natural Language Processing ",
+        "affiliation": "University of Sheffield ",
+        "research_areas": "Health and Medical Sciences, Data-centric Engineering, Cross-cutting Challenges",
+        "research_interest_terms": "Human computer interface, Information retrieval, Information theory, Knowledge representation, Machine learning, Natural language processing, Optimisation, Safety and ethics, Social data science, Visualisation",
+        "short_biography": "I am a Senior Lecturer in Computer Science and member of the Natural Language Processing group. I have been Principal Investigator of projects funded by a range of sources including the EPSRC, EU and Google. I have been an EPSRC Advanced Research Fellow and previously co-ordinated an EU-funded project. Before taking up my current role I worked in a range of commercial and academic organisations including Reuters Ltd (where I was involved in the production and dissemination of the widely used Reuters Corpus), Adastral Park (British Telecom’s research lab) and the Center for the Study of Language and Information, Stanford University. ",
+        "research_interest_summary": "My research focuses on Natural Language Processing and Information Retrieval. My main interest is in the development of systems that allow users to access information contained within large collections of documents and to make decisions based on this information. To this end I have worked on a range of topics including lexical semantics, scholarly document processing, Information Extraction, plagiarism/reuse detection, Technology Assisted Review, exploratory search and evidence synthesis. I have applied these technologies to a range of areas including biomedical text mining, cultural heritage and software testing.",
+        "homepage": "http://staffwww.dcs.shef.ac.uk/people/M.Stevenson/",
+        "linkedin": "#",
+        "google_scholar": "https://scholar.google.co.uk/citations?user=tXe1lgkAAAAJ&hl=en",
+        "github": "https://github.com/drmarkstevenson",
+        "photo": "1RvinID0NJgMoA0Dv-LS09CpkL8qY6Ajj.jpeg",
+        "id": "1RvinID0NJgMoA0Dv-LS09CpkL8qY6Ajj",
+        "shef_ai_link": "mark-stevenson"
+    },
+    {
         "title": "Mr",
         "name": "Mohammod Naimul Islam Suvon",
         "position": "Research Support Engineer",
@@ -314,6 +331,23 @@
         "photo": "1ombF2Py3ZFimi5OV-TdKxtW9qidIFqc8.jpg",
         "id": "1ombF2Py3ZFimi5OV-TdKxtW9qidIFqc8",
         "shef_ai_link": "tom-stafford"
+    },
+    {
+        "title": "Dr",
+        "name": "Venet Osmani",
+        "position": "Senior Lecturer in Data Science for Health",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Health and Medical Sciences, Science",
+        "research_interest_terms": "Computer vision, Data structures and algorithms, Human computer interface, Information retrieval, Knowledge representation, Machine learning, Multi-agent reasoning, Natural language processing, Neuroscience and cognitive science, Privacy and trust, Safety and ethics, Social data science, Statistical methods and theory, Visualisation",
+        "short_biography": "Before joining the University of Sheffield, I was a tenured Senior Researcher in Digital Health Centre at Fondazione Bruno Kessler research institute, Italy where I led a group of researchers and students in tackling challenges in medicine using machine learning methods. I was also a lecturer in the department of Psychology and Cognitive Science at University of Trento, Italy.",
+        "research_interest_summary": "My research interests are in developing machine learning methods, to address some of the fundamental questions in medicine. These include:\n\n    predictive modelling\n    explainable AI\n    generative adversarial approaches (GAN)\n    causal inference\n    health inequality and bias\n\nMy work focuses on analysis of large-scale, longitudinal health records, including:\n\n    biomarkers\n    imaging\n    multi-omics\n    routine health care data\n\nThe main aims are to optimise treatment strategies, improve patient care, and provide novel insights to health institutions.",
+        "homepage": "https://www.sheffield.ac.uk/is/people/academic/venet-osmani",
+        "linkedin": "https://venetosmani.com/?research",
+        "google_scholar": "#",
+        "github": "#",
+        "photo": "1SX85VmqM1JiQo9mahI7H54jZCqa2BPRE.jpg",
+        "id": "1SX85VmqM1JiQo9mahI7H54jZCqa2BPRE",
+        "shef_ai_link": "venet-osmani"
     },
     {
         "title": "Mr",
