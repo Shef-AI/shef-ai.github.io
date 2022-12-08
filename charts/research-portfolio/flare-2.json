@@ -1,58 +1,36 @@
 {
-    "name": "flare",
+    "name": "Portfolio",
     "children":
     [
         {
-            "name": "Health and Medical Sciences",
+            "name": "Health & medical sciences",
             "children":
             [
                 {
-                    "name": "Early and accurate detection, diagnosis and treatment of illness(es)",
-                    "children":
-                    [
-                        {
-                            "name": "Haiping Lu",
-                            "value": 25
-                        },
-                        {
-                            "name": "Peizhen Bai",
-                            "value": 10
-                        },
-                        {
-                            "name": "Sina Tabakhi",
-                            "value": 10
-                        },
-                        {
-                            "name": "Shuo Zhou",
-                            "value": 7
-                        },
-                        {
-                            "name": "Lawrence Schobs",
-                            "value": 5
-                        }
-                    ]
+                    "name": "Disease diagnosis/treatment",
+                    "value": 62
                 },
                 {
-                    "name": "Tackling mental health (e.g. depression, dementia, and cognitive) problems",
-                    "value": 16
+                    "name": "Mental health",
+                    "value": 18
                 },
                 {
-                    "name": "Collection, analysis, and interpretation of medical images and omics data",
-                    "value": 38
+                    "name": "Medical images/omics",
+                    "value": 42
                 }
             ]
         },
         {
-            "name": "Data-centric Engineering",
+            "name": "Data-centric engineering",
             "children":
             [
                 {
-                    "name": "Data-driven design for sensing and autonomous operations",
-                    "value": 27
+                    "name": "Sensing & auto operation",
+                    "value": 31
                 },
                 {
-                    "name": "Physics-guided/ compliant learning for complex systems",
-                    "value": 40
+                    "name": "Complex systems",
+                    "value": 46
                 }
             ]
         },
@@ -61,30 +39,30 @@
             "children":
             [
                 {
-                    "name": "Creating and using novel chemicals and materials",
-                    "value": 12
+                    "name": "Molecules & materials",
+                    "value": 17
                 },
                 {
-                    "name": "Detecting rare events for new insights into the Universe’s fundamentals",
-                    "value": 8
+                    "name": "Universe’s fundamentals",
+                    "value": 17
                 },
                 {
-                    "name": "Tackling climate/environmental change & understanding biology",
-                    "value": 22
+                    "name": "Climate environment & bio",
+                    "value": 30
                 }
             ]
         },
         {
-            "name": "Humanities and Social Sciences",
+            "name": "Humanities & social sciences",
             "children":
             [
                 {
-                    "name": "Studying mobility, active lifestyles, urban environments, and population health",
-                    "value": 33
+                    "name": "Urban/population studies",
+                    "value": 40
                 },
                 {
-                    "name": "Revolutionising data-driven research in the arts, humanities, and social sciences",
-                    "value": 44
+                    "name": "Data-driven arts/humanities/socialsci",
+                    "value": 57
                 }
             ]
         },
@@ -93,16 +71,16 @@
             "children":
             [
                 {
-                    "name": "Identifying and tackling mis- and disinformation & enhancing privacy/security",
-                    "value": 24
+                    "name": "Misinfo, privacy, & security",
+                    "value": 30
                 },
                 {
-                    "name": "Shaping the future of innovation and entrepreneurship and building trust",
+                    "name": "Innovation & entrepreneurship",
                     "value": 32
                 },
                 {
-                    "name": "Advancing pedagogy and policy to develop education in DS & AI",
-                    "value": 28
+                    "name": "Pedagogy & policy for education",
+                    "value": 31
                 }
             ]
         },
@@ -111,36 +89,36 @@
             "children":
             [
                 {
-                    "name": "Best practices for accessible, sustainable, and scalable systems",
+                    "name": "Accessible/sustainable/scalable",
+                    "value": 46
+                },
+                {
+                    "name": "Explainability/energy-efficiency",
+                    "value": 71
+                },
+                {
+                    "name": "HCI/robotics",
+                    "value": 48
+                },
+                {
+                    "name": "Automate data prep/access/use",
+                    "value": 54
+                },
+                {
+                    "name": "Causality inference",
+                    "value": 45
+                },
+                {
+                    "name": "Visualisation",
                     "value": 40
                 },
                 {
-                    "name": "Increasing AI transparency, explainability, interpretability, and energy-efficiency",
-                    "value": 59
+                    "name": "Data integration/uncover factors",
+                    "value": 71
                 },
                 {
-                    "name": "Safe, smart, connected technology (e.g. robotics) and human-machine interaction",
-                    "value": 43
-                },
-                {
-                    "name": "Automating/improving data preparation, access, understanding & exploitation",
-                    "value": 41
-                },
-                {
-                    "name": "Using and analysing data to confidently infer causal relationships",
-                    "value": 32
-                },
-                {
-                    "name": "Effective and efficient information visualisation to various audiences",
-                    "value": 29
-                },
-                {
-                    "name": "Integration of data/knowledge & disentangling of hidden factors",
-                    "value": 60
-                },
-                {
-                    "name": "Accounting for uncertainties in models for physical and social processes",
-                    "value": 31
+                    "name": "Uncertainty estimation",
+                    "value": 35
                 }
             ]
         }

@@ -12,7 +12,7 @@ export default function define(runtime, observer) {
 
   const svg = d3.select("#research-chart-section").append("svg")
   .attr("viewBox", [0, 0, width, width])
-  .style("font", "10px sans-serif");
+  .style("font", "9px sans-serif");
 
   const g = svg.append("g")
       .attr("transform", `translate(${width / 2},${width / 2})`);
@@ -44,7 +44,7 @@ export default function define(runtime, observer) {
       .attr("dy", "0.35em")
       .attr("fill-opacity", d => +labelVisible(d.current))
       .attr("transform", d => labelTransform(d.current))
-      .text(d => d.data.name.substring(0,28) + (d.data.name.length > 28 ? " ..." : ""));
+      .text(d => d.data.name.substring(0,35) + (d.data.name.length > 35 ? " ..." : ""));
 
   const parent = g.append("circle")
       .datum(root)
