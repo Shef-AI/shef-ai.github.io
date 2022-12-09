@@ -252,6 +252,23 @@
         "shef_ai_link": "richard-clayton"
     },
     {
+        "title": "Dr",
+        "name": "Robert Turner",
+        "position": "Senior Research Software Engineer",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Cross-cutting Challenges",
+        "research_interest_terms": "Machine learning",
+        "short_biography": "Bob is a senior research software engineer who started his career in software and databases after completing a degree in Applied Physics at the University of Durham. After four years in the private sector, he did a PhD in Biophysics at the University of Leeds, before working as a postdoc researcher at the University of Sheffield in several departments, including Physics and Astronomy, Molecular Biology and Biotechnology Mechanical Engineering and the Dental School, reflecting an unusually broad range of research interests spanning microscopy, microbiology, engineering and healthcare.",
+        "research_interest_summary": "Bob’s role includes contributing to the management of the RSE team, under Paul Richmond’s leadership. His work includes:\n\n- Advising and helping researchers to implement good software engineering practises (e.g. testing, version control, documentation, reproducible execution, packaging, licensing)\n- Writing research software (e.g. in Python, MATLAB, R)\n- Training\n- Establishing new externally-funded collaborations\n- Advocating and acting to improve the standards of research software (e.g. running or delivering talks, communication via social media, engagement with university committees)",
+        "homepage": "https://rse.shef.ac.uk/contact/bob-turner/",
+        "linkedin": "https://www.linkedin.com/in/robert-turner-56808594/",
+        "google_scholar": "https://scholar.google.com/citations?hl=en&user=JdHx1A8AAAAJ",
+        "github": "https://github.com/bobturneruk",
+        "photo": "12Z6NQZN7dXIygpC4H1akTir2DkQJPz4f.png",
+        "id": "12Z6NQZN7dXIygpC4H1akTir2DkQJPz4f",
+        "shef_ai_link": "robert-turner"
+    },
+    {
         "title": "Mr",
         "name": "Shunbao Li",
         "position": "phd student",
