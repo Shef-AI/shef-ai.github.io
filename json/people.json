@@ -168,6 +168,23 @@
     },
     {
         "title": "Mr",
+        "name": "Max Gamill",
+        "position": "PhD Student",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Health and Medical Sciences, Science",
+        "research_interest_terms": "Computer vision, Machine learning",
+        "short_biography": "I am a PhD student in the Materials Science and Engineering department at the University of Sheffield working within the Pyne lab, led by Dr Alice Pyne. I graduated from the University of Leeds, obtaining a First Class master’s degree in Physics, where I implemented and analysed the quality of deep learning 3D super-resolution models under the supervision of Dr Aleks Ponjavic. Here, I also completed a year in industry with IBM as a technical support analyst for the business reporting tool Cognos Analytics.",
+        "research_interest_summary": "The flexibility of DNA allows it to adopt a wide range of conformations induced by its compaction within the nucleus, and interactions with DNA-processing enzymes during vital cell processes such as transcription and replication. This variation in topological complexity has been shown to influence DNA-protein interactions such as those with Topoisomerases, antibacterial and anti-cancer therapeutics and CRISPR-Cas-9.\n\nMy research investigates DNA topological complexity seen in atomic force microscopy (AFM) images, and aims to quantify features and characteristics seen within datasets via machine learning techniques in an open and accessible way through our AFM image processing software, TopoStats (https://github.com/AFM-SPM/TopoStats.git).",
+        "homepage": "https://pyne-lab.uk/",
+        "linkedin": "https://www.linkedin.com/in/max-gamill/",
+        "google_scholar": "#",
+        "github": "https://github.com/MaxGamill-Sheffield",
+        "photo": "1XXbS02usgyogTmdePoDOZUnlVo4RJ7Ek.jpg",
+        "id": "1XXbS02usgyogTmdePoDOZUnlVo4RJ7Ek",
+        "shef_ai_link": "max-gamill"
+    },
+    {
+        "title": "Mr",
         "name": "Mohammod Naimul Islam Suvon",
         "position": "Research Support Engineer",
         "affiliation": "University of Sheffield",
