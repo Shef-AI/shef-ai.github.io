@@ -1,6 +1,22 @@
 [
     {
         "title": "Dr",
+        "name": "Andrew Cox",
+        "position": "Senior Lecturer",
+        "affiliation": "Information School",
+        "research_areas": "Humanities and Social Sciences",
+        "research_interest_terms": "Privacy and trust, Safety and ethics, Social data science",
+        "research_interest_summary": "My main interests are in the responsible implementation of AI systems in the context of libraries (e.g. university and national libraries, health libraries or the corporate or government context) and their impact on the information profession. So I am interested in the strategic decision making around AI, the relevant applications, ethics issues, the competencies required by professionals to support them and the implementation drivers and challenges.",
+        "homepage": "https://www.sheffield.ac.uk/is/people/academic/andrew-cox",
+        "linkedin": "https://www.linkedin.com/in/amcox/",
+        "google_scholar": "https://scholar.google.com/citations?user=cFuSAbgAAAAJ&hl=en",
+        "github": "#",
+        "photo": "1AO1gpnehwLFGQKLhJ8CnIesYYg1mWXp-.jpg",
+        "id": "1AO1gpnehwLFGQKLhJ8CnIesYYg1mWXp-",
+        "shef_ai_link": "andrew-cox"
+    },
+    {
+        "title": "Dr",
         "name": "Cass Zhixue Zhao",
         "position": "Research Associate",
         "affiliation": "University of Sheffield ",
