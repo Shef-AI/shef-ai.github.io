@@ -31,6 +31,23 @@
         "shef_ai_link": "cass-zhixue-zhao"
     },
     {
+        "title": "Professor",
+        "name": "Dennis Wang",
+        "position": "Advanced Visiting Fellow, University of Sheffield",
+        "affiliation": "Imperial College London and A*STAR Bioinformatics Institute",
+        "research_areas": "Health and Medical Sciences",
+        "research_interest_terms": "Knowledge representation, Machine learning, Privacy and trust, Visualisation",
+        "short_biography": "Prof Dennis Wang holds the Academy of Medical Sciences Professorship (Chair in Data Science) at Imperial College London, and is a Visiting Fellow at the University of Sheffield. Additionally, he is a principal investigator with both A*STAR’s Singapore Institute for Clinical \n Sciences and the Bioinformatics Institute. He received his PhD in Biostatistics from the University of Cambridge, followed by postdoctoral research at AstraZeneca and Microsoft Research in the area of computational biology.",
+        "research_interest_summary": "Dennis’ research focuses on translating patterns in the human genome into actionable information that accelerates the development of treatments for complex diseases. Specialising in big data analysis, drug development (small molecules and biologics), algorithmic development, software design, web service development, genomic profiling, and statistical inference. His experience includes applying machine learning and statistical approaches to identify patterns from large genomic data sets and providing clinically actionable biomarkers to drug development teams.",
+        "homepage": "https://www.imperial.ac.uk/people/dennis.wang",
+        "linkedin": "https://sg.linkedin.com/in/dennis-wang-77378828",
+        "google_scholar": "https://scholar.google.co.uk/citations?user=1dgKTJoAAAAJ&hl=en",
+        "github": "#",
+        "photo": "15JTp_MFpziFxNYjSqpyyoYPoDRw2y6Hm.jpg",
+        "id": "15JTp_MFpziFxNYjSqpyyoYPoDRw2y6Hm",
+        "shef_ai_link": "dennis-wang"
+    },
+    {
         "title": "Dr",
         "name": "Gavin Boyce",
         "position": "Head of Faculty & Research Partnership",
@@ -133,6 +150,23 @@
         "shef_ai_link": "jacob-macdonald"
     },
     {
+        "title": "Dr",
+        "name": "Kathryn Simpson",
+        "position": "Lecturer in Digital Humanities",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Humanities and Social Sciences",
+        "research_interest_terms": "Computer vision, Information theory, Knowledge representation, Machine learning, Visualisation",
+        "short_biography": "    I am a Lecturer in Digital Humanities in the Digital Humanities Institute (DHI), with a particular research focus on critical digital cultural heritage.\n    I was previously a Lecturer in Information Studies at the University of Glasgow and prior to that a Fellow of the Institute for Advanced Studies in the Humanities at the University of Edinburgh.\n    I am a Trustee of the David Livingstone Birthplace, Chair of both the Expert Advisory Panel and of the Audience, Learning, Engagement and Collections Committee. I am an Associate Project Scholar and UK Outreach Coordinator of Livingstone Online. \n",
+        "research_interest_summary": "I am interested in digital tools and platforms which support open-access historical research and enable cross-silo scrapping of texts, images and objects to allow us to renegotiate histories in ways which do not belittle or obfuscate traditional knowledges and frameworks whilst providing richer and deeper understanding of heritage. I am particularly interested in the application of AI in cultural heritage environments and its use in negating or challenging established patterns and behaviours around museal collections.",
+        "homepage": "https://www.sheffield.ac.uk/dhi/about-dhi/people/kathryn-c-s-simpson",
+        "linkedin": "https://www.linkedin.com/in/kate-simpson-b7b1022b/",
+        "google_scholar": "#",
+        "github": "#",
+        "photo": "1EiGSINZKBTKQRN26nW90Oqk3u0rR80YG.jpg",
+        "id": "1EiGSINZKBTKQRN26nW90Oqk3u0rR80YG",
+        "shef_ai_link": "kathryn-simpson"
+    },
+    {
         "title": "Mr",
         "name": "Lawrence Schobs",
         "position": "PhD student",
@@ -232,6 +266,23 @@
         "photo": "1gfhl9EGhrWHeLveHFQTFEal5jWuCW_og.jpg",
         "id": "1gfhl9EGhrWHeLveHFQTFEal5jWuCW_og",
         "shef_ai_link": "peizhen-bai"
+    },
+    {
+        "title": "Professor",
+        "name": "Peter Bath",
+        "position": "Professor of Health Informatics and Data Analytics",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Health and Medical Sciences, Humanities and Social Sciences",
+        "research_interest_terms": "Machine learning, Privacy and trust, Social data science",
+        "short_biography": "Peter Bath has been undertaking research applying statistical methods and AI methods to analysing health data for over 25 years. His interests are in identifying predictors of health and well-being in older people, but he is also interested in other groups. He has authored almost 300 publications including 136 articles in refereed journals in print and 115 refereed conference proceedings/abstracts. Recently Peter has been working with colleagues in scHARR to identify predictors of adverse outcomes among people with suspected COVID-19 during the pandemic. Peter has supervised over 30 PhD students to successful completion. Other areas of research interest include health information behaviours and evaluating health information systems.\n",
+        "research_interest_summary": "Peter is currently working on the Pre-Hospital PRIEST study, which is developing tools to predict adverse outcomes among people with suspected COVID-19. This has involved the use of statistical methods and AI methods to develop better predictive models. Peter is also examining outcomes among older people through secondary analyses of the English Longitudinal Study of Ageing (ELSA). Other work has involved examining the utility of patient-level data for population health management for the former Rotherham Clinical Commissioning Group (RCCG). Peter is the Training and Capacity Building lead for the HDR-UK Northern Care Homes Partnership.",
+        "homepage": "https://www.sheffield.ac.uk/is/people/academic/peter-bath",
+        "linkedin": "#",
+        "google_scholar": "https://scholar.google.com/citations?user=-ExSN_IAAAAJ&hl=en",
+        "github": "#",
+        "photo": "1aBJoCG_AABXt3hWcrAw6mTqBNHfb5oJQ.jpg",
+        "id": "1aBJoCG_AABXt3hWcrAw6mTqBNHfb5oJQ",
+        "shef_ai_link": "peter-bath"
     },
     {
         "title": "Dr",
