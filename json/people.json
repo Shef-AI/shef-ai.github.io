@@ -251,6 +251,23 @@
         "shef_ai_link": "mohammod-naimul-islam-suvon"
     },
     {
+        "title": "Dr",
+        "name": "Monica Lestari Paramita",
+        "position": "Lecturer in Data Science",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Data-centric Engineering, Humanities and Social Sciences",
+        "research_interest_terms": "Human computer interface, Information retrieval, Natural language processing, Social data science",
+        "short_biography": "I am a Lecturer in Data Science and the deputy head of the Information Retrieval Research Group in the Information School, University of Sheffield. I obtained my PhD from the Information School, University of Sheffield in 2019. Prior to my lectureship, I worked as a researcher for 10 years in diverse areas of Information Retrieval and Natural Language Processing. My research roles included investigating cross-lingual similarity in the Web, developing systems to support information access, and analysing users' behaviour when interacting with such systems. I have co-authored over 25 publications, ranging from conference papers, book chapters, and journal articles. ",
+        "research_interest_summary": "My research focuses on the study of bias and transparency in information retrieval and multilingual information access. I am especially interested to investigate how bias-aware search engines should be designed to support users in their search tasks. I am also interested in researching cross-lingual similarity in Wikipedia; this includes creating methods to measure cross-lingual similarity, understanding the extent of dissimilarity in Wikipedia and why they exist, and how this impacts different users (e.g., users in different locations or those speaking different languages).",
+        "homepage": "https://www.sheffield.ac.uk/is/people/academic/monica-lestari-paramita",
+        "linkedin": "https://www.linkedin.com/in/monica-paramita-78b37ba/",
+        "google_scholar": "https://scholar.google.com/citations?user=w8qf-uoAAAAJ",
+        "github": "#",
+        "photo": "1XmXlQCiisalg6wPetV0J7nOYEf2fo-oT.png",
+        "id": "1XmXlQCiisalg6wPetV0J7nOYEf2fo-oT",
+        "shef_ai_link": "monica-lestari-paramita"
+    },
+    {
         "title": "Mr",
         "name": "Peizhen Bai",
         "position": "Researcher Ph.D. Student",
