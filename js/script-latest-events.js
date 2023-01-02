@@ -4,7 +4,7 @@ fetch('../json/events.json')
     for (var i = 0; i < data.length && i < 2; i++) {
       var eventElement = data[i];
       $('#latest-events-section').append(
-        '<div class="col-md-6 col-sm-4">' +
+        '<div class="col-md-6 col-sm-4 latest-event">' +
           '<img loading="lazy" src="images/events/' + eventElement["image"] + '" alt="Event-' + eventElement["title"] + '" class="img-fluid">' +
           '<p>' +
               '<ul class="list-inline system-style">' +

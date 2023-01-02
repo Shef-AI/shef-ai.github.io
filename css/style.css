@@ -1145,6 +1145,20 @@ a.disabled{
   color: #666;
 }
 
+
+/*=================================================================
+  Event section
+==================================================================*/
+
+.latest-event .img-fluid {
+  height: 300px;
+  object-fit:contain;
+  max-height: 100%;
+  max-width: 100%;    
+  display: block;
+  margin: auto auto;
+}
+
 /*=================================================================
   Pricing section
 ==================================================================*/
@@ -2329,6 +2343,9 @@ a.disabled{
   .team .member-photo .img-fluid {
     height: 250px;
   }
+  .latest-event .img-fluid {
+    height: 250px;
+  }
   .mask ul {
     top: 85px;
   }
@@ -2396,6 +2413,9 @@ a.disabled{
   .team .member-photo .img-fluid {
     height: 250px;
   }
+  .latest-event .img-fluid {
+    height: 200px;
+  }
   /* our skills */
   .skill-chart {
     margin: 0 auto 40px;
@@ -2428,6 +2448,15 @@ a.disabled{
   /* singla blog page */
   .author-social {
     margin-left: 0;
+  }
+}
+
+/*============================================================
+	Mobile (Portrait) Design for a width of 320px
+==============================================================*/
+@media (min-width: 577px) and (max-width: 767px) {
+  .latest-event .img-fluid {
+    height: 150px;
   }
 }
 
