@@ -1159,6 +1159,15 @@ a.disabled{
   margin: auto auto;
 }
 
+.event-collection .img-fluid {
+  height: 300px;
+  object-fit:contain;
+  max-height: 100%;
+  max-width: 100%;    
+  display: block;
+  margin: auto auto;
+}
+
 /*=================================================================
   Pricing section
 ==================================================================*/
