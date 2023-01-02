@@ -1151,7 +1151,6 @@ a.disabled{
 ==================================================================*/
 .latest-event .img-fluid {
   height: 300px;
-  object-fit:contain;
   max-height: 100%;
   max-width: 100%;    
   display: block;
@@ -1160,7 +1159,6 @@ a.disabled{
 
 .event-collection .img-fluid {
   height: 300px;
-  object-fit:contain;
   max-height: 100%;
   max-width: 100%;    
   display: block;
@@ -1174,6 +1172,16 @@ a.disabled{
   height: 200px;
   max-height: 100%;
   max-width: 100%;    
+  display: block;
+  margin: auto auto;
+}
+
+.news-collection .img-fluid {
+  height: 200px;
+  max-height: 100%;
+  max-width: 100%;    
+  display: block;
+  margin: auto auto;
 }
 
 /*=================================================================
@@ -2363,6 +2371,9 @@ a.disabled{
   .latest-event .img-fluid {
     height: 250px;
   }
+  .news-collection .img-fluid {
+    height: 165px;
+  }
   .mask ul {
     top: 85px;
   }
@@ -2433,6 +2444,12 @@ a.disabled{
   .latest-event .img-fluid {
     height: 200px;
   }
+  .event-collection .img-fluid {
+    height: 200px;
+  }
+  .news-collection .img-fluid {
+    height: 120px;
+  }
   /* our skills */
   .skill-chart {
     margin: 0 auto 40px;
@@ -2473,7 +2490,10 @@ a.disabled{
 ==============================================================*/
 @media (min-width: 577px) and (max-width: 767px) {
   .latest-event .img-fluid {
-    height: 150px;
+    height: 90px;
+  }
+  .news-collection .img-fluid {
+    height: 135px !important;
   }
 }
 
@@ -2641,6 +2661,9 @@ a.disabled{
   }
   .latest-news .img-fluid {
     height: 290px;  
+  }
+  .news-collection .img-fluid {
+    height: 270px;
   }
   .team-mate img {
     margin: 0 auto;

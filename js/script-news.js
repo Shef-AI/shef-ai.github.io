@@ -5,7 +5,7 @@ fetch('../json/news.json')
       $('#news-section').append(
         '<article class="col-md-4 col-sm-6 col-xs-12 ">'+
           '<div class="post-item">' + 
-            '<div class="media-wrapper">' + 
+            '<div class="media-wrapper news-collection">' + 
               '<img src="images/news/' + element["image"] +'" alt="News-' + element["title"] + '" class="img-fluid">' + 
             '</div>' +
             '<div class="content">' +
