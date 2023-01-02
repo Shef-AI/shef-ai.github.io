@@ -1149,7 +1149,6 @@ a.disabled{
 /*=================================================================
   Event section
 ==================================================================*/
-
 .latest-event .img-fluid {
   height: 300px;
   object-fit:contain;
@@ -1166,6 +1165,15 @@ a.disabled{
   max-width: 100%;    
   display: block;
   margin: auto auto;
+}
+
+/*=================================================================
+  News section
+==================================================================*/
+.latest-news .img-fluid {
+  height: 200px;
+  max-height: 100%;
+  max-width: 100%;    
 }
 
 /*=================================================================
@@ -2630,6 +2638,9 @@ a.disabled{
   .team-mate {
     margin: 0 auto 30px;
     width: 280px;
+  }
+  .latest-news .img-fluid {
+    height: 290px;  
   }
   .team-mate img {
     margin: 0 auto;

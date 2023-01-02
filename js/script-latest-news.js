@@ -6,7 +6,7 @@ fetch('../json/news.json')
         $('#latest-news-section').append(
             '<article class="col-lg-4 col-md-6">' + 
                 '<div class="post-item">' +
-                    '<div class="media-wrapper">' +
+                    '<div class="media-wrapper latest-news">' +
                         '<img loading="lazy" src="images/news/' + newsElement["image"] + '" alt="News-' + newsElement["title"] + '" class="img-fluid">' +
                     '</div>' +
                     '<div class="content">' +
