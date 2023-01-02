@@ -1621,7 +1621,11 @@ a.disabled{
 
 .team .member-photo .img-fluid {
   height: 350px;
+  object-fit:contain;
   max-height: 100%;
+  max-width: 100%;    
+  display: block;
+  margin: auto auto;
 }
 
 .single-member .img-fluid {
@@ -2292,6 +2296,13 @@ a.disabled{
 /*============================================================
 	For Small Desktop
 ==============================================================*/
+
+@media (min-width: 1150px) and (max-width: 1280px) {
+  .team .member-photo .img-fluid {
+    height: 300px;
+  }
+}
+
 @media (min-width: 700px) and (max-width: 1090px) {
   .counters-item:before {
     display: none;
@@ -2314,6 +2325,9 @@ a.disabled{
   /* our team */
   .team-mate {
     margin-bottom: 30px;
+  }
+  .team .member-photo .img-fluid {
+    height: 250px;
   }
   .mask ul {
     top: 85px;
@@ -2378,6 +2392,9 @@ a.disabled{
   .team-mate {
     margin: 0 auto 30px;
     width: 280px;
+  }
+  .team .member-photo .img-fluid {
+    height: 250px;
   }
   /* our skills */
   .skill-chart {
