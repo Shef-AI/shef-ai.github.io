@@ -30,6 +30,7 @@ fetch('../json/people.json')
               '<div><h4>' + element["affiliation"] + '</h4></div>' +
               '<br/>' +
               '<div><h4>' + element["research_areas"] + '</h4></div>' +
+              '<div style="display: none;">' + element["research_interest_summary"] + '</div>' +
             '</div>' +
           '</div>' +
         '</div>'
