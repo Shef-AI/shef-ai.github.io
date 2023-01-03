@@ -9,8 +9,8 @@ fetch('../json/opportunities.json')
         button_style = "btn-main"
       }
       $('#opportunities-section').append(
-        '<div class="col-lg-6 col-sm-6 mb-4 mb-lg-0">' +
-          '<div class="service-block p-4 ' + block_style + ' text-center">' +
+        '<div class="col-lg-6 col-sm-6 mb-4 mb-lg-0 service-block ' + block_style + '">' +
+          '<div class="p-4 text-center">' +
             '<a href="single-opportunity.html?id=' + element["id"] + '"><h3>' + element["title"] + '</h3></a>' +
             '<i class="bi bi-alarm" > ' + element["date"] + '</i>' +
             '<p>' + element["summary"] + '</p>' +

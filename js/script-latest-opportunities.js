@@ -10,8 +10,8 @@ fetch('../json/opportunities.json')
         }
         var newsElement = data[i];
         $('#latest-opportunities-section').append(
-            '<div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">' +
-                '<div class="service-block p-4 ' + block_style + ' text-center">' +
+            '<div class="col-lg-4 col-sm-6 mb-4 mb-lg-0 service-block ' + block_style + '">' +
+                '<div class="p-4 text-center">' +
                     '<a href="single-opportunity.html?id=' + newsElement["id"] + '"><h3>' + newsElement["title"] + '</h3></a>' +
                     '<i class="bi bi-alarm" > ' + newsElement["date"] + '</i>' +
                     '<p>' + newsElement["summary"] + '</p>' +
