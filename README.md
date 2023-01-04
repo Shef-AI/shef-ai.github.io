@@ -2,7 +2,7 @@
 
 
  <div align="center" width="50px"> 
-     <a href="https://sheffieldai.github.io/"><img src="https://raw.githubusercontent.com/SheffieldAI/sheffieldai.github.io/main/images/favicon.png" alt="logo" width="20%" /></a>
+     <a href="https://sheffieldai.github.io/"><img src="https://raw.githubusercontent.com/SheffieldAI/sheffieldai.github.io/main/images/favicons/favicon.png" alt="logo" width="20%" /></a>
      <p font-size="100px"><b>Sheffield Data Science and AI community</b></p> 
  </div>
 
