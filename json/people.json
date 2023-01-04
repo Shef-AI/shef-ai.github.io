@@ -16,6 +16,23 @@
         "shef_ai_link": "andrew-cox"
     },
     {
+        "title": "Professor",
+        "name": "Ashutosh Tiwari",
+        "position": "Airbus/RAEng Chair in Digital Manufacturing",
+        "affiliation": "Faculty Director of Research and Innovation - Engineering, University of Sheffield",
+        "research_areas": "Data-centric Engineering, Cross-cutting Challenges",
+        "research_interest_terms": "Computer vision, Human computer interface, Machine learning, Optimisation, Robotics",
+        "short_biography": "Professor Ashutosh Tiwari (PhD CEng FIMechE FIET) holds the prestigious RAEng/Airbus Research Chair in Digital Manufacturing at the University of Sheffield. He is also the Faculty Director of Research and Innovation for Engineering at the University of Sheffield. Internationally renowned for research in digital manufacturing, he has a track record of leading cross-TRL projects worth over £15mn, produced 343 publications (155 journal and 133 conference papers, h-index 38, citation count over 9,000), graduated 36 PhDs, and was awarded an EPSRC HVM Catapult Fellowship. He is an Associate Editor of ‘AI for Engineering Design, Analysis and Manufacturing Journal’ (Cambridge University Press).",
+        "research_interest_summary": "AI for Manufacturing",
+        "homepage": "https://www.sheffield.ac.uk/acse/department/people/academic/ashutosh-tiwari",
+        "linkedin": "https://www.linkedin.com/in/ashutosh-tiwari-sheffield/?originalSubdomain=uk",
+        "google_scholar": "https://scholar.google.co.uk/citations?user=szOOPsMAAAAJ&hl=en",
+        "github": "#",
+        "photo": "1Dj3LtCpe8gGp-PigUpUKFHZzfaTqrhS-.jfif",
+        "id": "1Dj3LtCpe8gGp-PigUpUKFHZzfaTqrhS-",
+        "shef_ai_link": "ashutosh-tiwari"
+    },
+    {
         "title": "Dr",
         "name": "Cass Zhixue Zhao",
         "position": "Research Associate",
@@ -266,6 +283,23 @@
         "photo": "1XmXlQCiisalg6wPetV0J7nOYEf2fo-oT.png",
         "id": "1XmXlQCiisalg6wPetV0J7nOYEf2fo-oT",
         "shef_ai_link": "monica-lestari-paramita"
+    },
+    {
+        "title": "Dr",
+        "name": "Olayiwola Oladiran",
+        "position": "Lecturer in Real Estate",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Humanities and Social Sciences, Cross-cutting Challenges",
+        "research_interest_terms": "Data structures and algorithms, Machine learning, Robotics, Safety and ethics, Social data science, Statistical methods and theory, Visualisation",
+        "short_biography": "Ola is currently a Lecturer in Real Estate at the Urban Studies and Planning Department. He gained his PhD in Real Estate and Urban Economics from Henley Business School, University of Reading. He previously worked as a Lecturer in Real Estate at Leeds Beckett University and Henley Business School, University of Reading. His research focuses on real estate economics with a core interest in digital/IT applications to real estate (PropTech), residential real estate, and operational real estate markets. ",
+        "research_interest_summary": "My broad research interest is in real estate economics. I am currently exploring the various ways through which digital technology can enhance the efficiency of real estate operations and practice, and how these can further improve various aspects of the built environment. I also utilise various quantitative techniques to understand the demand and pricing mechanism in operational and residential real estate markets. ",
+        "homepage": "https://www.sheffield.ac.uk/usp/people/academic-staff/olayiwola-oladiran",
+        "linkedin": "https://www.linkedin.com/in/lolayiwolaoladiran/",
+        "google_scholar": "https://scholar.google.com/citations?hl=en&user=O1cBdLEAAAAJ",
+        "github": "https://github.com/oooladiran",
+        "photo": "1gcwUGXEKHBSLG1eeUFaPogzvi0hqJ97s.jpg",
+        "id": "1gcwUGXEKHBSLG1eeUFaPogzvi0hqJ97s",
+        "shef_ai_link": "olayiwola-oladiran"
     },
     {
         "title": "Mr",
