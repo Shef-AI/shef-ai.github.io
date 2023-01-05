@@ -133,13 +133,13 @@
         "shef_ai_link": "grigorios-kyritsakas"
     },
     {
-        "title": "Dr",
+        "title": "Professor",
         "name": "Haiping Lu",
-        "position": "Senior Lecturer in Machine Learning",
+        "position": "Professor of Machine Learning",
         "affiliation": "University of Sheffield",
         "research_areas": "Health and Medical Sciences, Science, Cross-cutting Challenges",
         "research_interest_terms": "Computer vision, Knowledge representation, Machine learning, Mathematical modelling, Multi-agent reasoning, Neuroscience and cognitive science, Statistical methods and theory",
-        "short_biography": "I am a Senior Lecturer in Machine Learning and AI Strategy Lead at the Department of Computer Science, and Insigneo Research Director for Healthcare Data / AI, University of Sheffield. I am also the Turing Network Development Award Lead at Sheffield and the Machine Learning Theme Lead for Sheffield in the N8 Centre of Excellence in Computationally Intensive Research. I serve as an Associate Editor of IEEE Transactions on Neural Networks and Learning Systems, IEEE Transactions on Cognitive and Developmental Systems, and World Scientific Annual Review of Artificial Intelligence. I was a recipient of an Amazon Research Award, an AAAI Outstanding PC Member Award, and an IEEE CIS Outstanding PhD Dissertation Award. I am a Senior Member of IEEE.",
+        "short_biography": "I am a Professor of Machine Learning, the Turing Network Development Award Lead, and Insigneo Research Director for Healthcare Data / AI at University of Sheffield. I am is also the lead organiser of the Alan Turing Institute’s interest group on meta-learning for multimodal data and the Machine Learning Theme Lead for Sheffield in the N8 Centre of Excellence in Computationally Intensive Research. I serve as an Associate Editor of IEEE Transactions on Neural Networks and Learning Systems, and IEEE Transactions on Cognitive and Developmental Systems. I was a recipient of an Amazon Research Award, an AAAI Outstanding PC Member Award, and an IEEE CIS Outstanding PhD Dissertation Award. I am a Senior Member of IEEE.",
         "research_interest_summary": "My research focuses on developing translational AI technologies for better analysing multimodal data in healthcare and beyond, particularly multidimensional data and heterogeneous graphs in bioinformatics and medical imaging. I lead the development of the PyKale library (https://github.com/pykale/pykale) to provide more accessible machine learning from multiple sources for interdisciplinary research, officially part of the PyTorch ecosystem (https://pytorch.org/ecosystem/).",
         "homepage": "https://haipinglu.github.io/",
         "linkedin": "https://uk.linkedin.com/in/haiping-lu-4821206",
