@@ -251,6 +251,23 @@
         "shef_ai_link": "max-gamill"
     },
     {
+        "title": "Dr",
+        "name": "Michael Farnsworth",
+        "position": "Research Associate in Digital Manufacturing",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Data-centric Engineering, Science, Cross-cutting Challenges",
+        "research_interest_terms": "Automatic control, Computer vision, Human computer interface, Machine learning, Natural language processing, Neuroscience and cognitive science, Optimisation, Robotics",
+        "short_biography": "Dr Farnsworth graduated from the biological sciences having pursued a BSc in Biochemistry at Cardiff University before undertaking an MSc in Computer Science at the University of the West of England. He continued with his interest in biologically inspired computation, undertaking a PhD at Cranfield University on the evolutionary design optimisation of Micro-Electro-Mechanical Systems (MEMS). He continued with this theme over a number of projects throughout his time at Cranfield University and the University of Sheffield, ranging from autonomous maintenance, manufacturing informatics and process optimisation. He is currently the lead researcher for the digital manufacturing theme within the EPSRC Future Electrical Machines Manufacturing hub.",
+        "research_interest_summary": "In my current role as a research associate within ACSE and research lead within the FEMM hub I focus on developing digital and sensor-based solutions for automation and tracking and traceability of manufacturing processes. The core of this research is centred on my interests in biologically inspired computing, whether it be evolutionary computation, machine learning and AI, or robotics and cognitive neuroscience. This includes investigating the latest deep neural network-based machine vision and machine learning solutions, whilst exploring novel bio-inspired event based sensors and cognitive architectures. In my free time I also explore how machine learning can be incorporated into the field of climate science and modelling.",
+        "homepage": "https://electricalmachineshub.ac.uk/about-us/team/",
+        "linkedin": "https://www.linkedin.com/in/michaeljfarnsworth/",
+        "google_scholar": "https://scholar.google.com/citations?hl=en&authuser=1&user=2Ao35tgAAAAJ",
+        "github": "#",
+        "photo": "1QqGCWFHe8xisIJ68QbXuCccRS5G-u7bF.jpg",
+        "id": "1QqGCWFHe8xisIJ68QbXuCccRS5G-u7bF",
+        "shef_ai_link": "michael-farnsworth"
+    },
+    {
         "title": "Mr",
         "name": "Mohammod Naimul Islam Suvon",
         "position": "Research Support Engineer",
