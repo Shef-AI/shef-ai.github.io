@@ -65,6 +65,23 @@
         "shef_ai_link": "dennis-wang"
     },
     {
+        "title": "Mr",
+        "name": "Edwin Brown",
+        "position": "Research Software Engineer",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Data-centric Engineering, Cross-cutting Challenges",
+        "research_interest_terms": "Computer vision, Machine learning",
+        "short_biography": "Edwin joined the Research Software Engineer (RSE) team in October 2022. He comes from a background in geophysics following a BSc and MSc in Geophysical Sciences at the University of Leeds. After university, he worked in the private sector, developing machine learning (ML) workflows to solve geophysical imaging and inversion problems.\n\nEdwin has practical experience in the designing, training and evaluation of ML models. He is experienced in Python having worked with data science libraries such as Numpy, Pandas, Scikit-learn, Tensorflow and Keras. He has a growing interest in MLOps (Machine Learning Operations) and the practical challenges of scaling up ML practices.",
+        "research_interest_summary": "Edwin's role as a Research Software Engineer (RSE) is to aid researchers in Machine Learning Projects. This can be as simple as bug fixing a training script to more complex challenges such as developing software for an end-to-end machine learning project. He also helps deliver Git and Deep Learning training. ",
+        "homepage": "https://rse.shef.ac.uk/contact/edwin-brown/",
+        "linkedin": "https://www.linkedin.com/in/edwin-brown-214471108/",
+        "google_scholar": "#",
+        "github": "https://github.com/EdwinB12",
+        "photo": "1k77Av5_dypfWTcGx1esVBIQeA6RMWKqn.jpeg",
+        "id": "1k77Av5_dypfWTcGx1esVBIQeA6RMWKqn",
+        "shef_ai_link": "edwin-brown"
+    },
+    {
         "title": "Dr",
         "name": "Gavin Boyce",
         "position": "Head of Faculty & Research Partnership",
