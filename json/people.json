@@ -235,6 +235,23 @@
     },
     {
         "title": "Dr",
+        "name": "Mark Hodgkinson",
+        "position": "Research Fellow",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Science",
+        "research_interest_terms": "Machine learning, Parallel computing",
+        "short_biography": "I have extensive experience analysing large datasets and writing data processing algorithms for High Energy Physics Experiments. I did my Phd with the University of Manchester, spending most of the time on placement at the Stanford Linear Accelerator Laboratory working on the BaBar experiment.  I then joined the University of Sheffield as an e-science software developer for several years working on data processing software for the ATLAS experiment at CERN. I was subsequently a Research Associate working on the ATLAS experiment with Sheffield before being promoted to Research Fellow.",
+        "research_interest_summary": "As the main developer of the Particle Flow data processing algorithm, used by the ATLAS experiment to process data centrally for physicists to subsequently analyse, I am particularly interested in how we could augment or replace this with a machine learning approach. Currently I am interested in studying Convolutional Neural Networks, Graph Neural Networks and Mixed Density Networks to provide predictions of charge particle energy deposits in the ATLAS particle detectors. I have in the past worked on usage of machine learning techniques to identify particle types on High Energy Physics Experiments, some of which are currently deployed as standard techniques used in the ATLAS data processing workflows.",
+        "homepage": "http://mhodgkin.web.cern.ch/mhodgkin/",
+        "linkedin": "https://www.linkedin.com/in/mark-hodgkinson-844b006/",
+        "google_scholar": "#",
+        "github": "https://github.com/shefmarkh",
+        "photo": "1clt865KbVcop4FnG6i4sax6ffZQ_1goZ.jpg",
+        "id": "1clt865KbVcop4FnG6i4sax6ffZQ_1goZ",
+        "shef_ai_link": "mark-hodgkinson"
+    },
+    {
+        "title": "Dr",
         "name": "Mark Stevenson",
         "position": "Senior Lecturer in Natural Language Processing ",
         "affiliation": "University of Sheffield ",
