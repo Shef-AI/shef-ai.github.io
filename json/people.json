@@ -185,6 +185,22 @@
     },
     {
         "title": "Dr",
+        "name": "Joe Atkinson",
+        "position": "Lecturer in Law",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Humanities and Social Sciences, Security and Business and Public Policy",
+        "research_interest_terms": "Human computer interface, Privacy and trust, Safety and ethics",
+        "research_interest_summary": "Law and Regulation of AI",
+        "homepage": "https://www.sheffield.ac.uk/law/people/law-academic-staff/joe-atkinson",
+        "linkedin": "https://www.linkedin.com/in/joe-atkinson-038508a0/",
+        "google_scholar": "https://scholar.google.co.uk/citations?user=wcwdT1QAAAAJ&hl=en&oi=ao",
+        "github": "#",
+        "photo": "1VyWz24ZqDYplsvirNVYIMcnVZjSRno2Z.jpg",
+        "id": "1VyWz24ZqDYplsvirNVYIMcnVZjSRno2Z",
+        "shef_ai_link": "joe-atkinson"
+    },
+    {
+        "title": "Dr",
         "name": "Kathryn Simpson",
         "position": "Lecturer in Digital Humanities",
         "affiliation": "University of Sheffield",
