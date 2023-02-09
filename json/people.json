@@ -234,6 +234,23 @@
     },
     {
         "title": "Professor",
+        "name": "Li Su",
+        "position": "Professor of Neuroimaging",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Health and Medical Sciences",
+        "research_interest_terms": "Neuroscience and cognitive science",
+        "short_biography": "Professor Li Su is Chair of Neuroimaging and the Head of the Artificial Intelligence and Computational Neuroscience Group. He has a joint appointment at the Neuroscience Institute, University of Sheffield and the Department of Psychiatry, University of Cambridge. His research group and laboratory locate in both universities. He is a Fellow at Clare Hall, University of Cambridge and a Specialist Committee Member at National Institute for Health and Care Excellence (NICE). He is a regional co-lead for the National Network for the Application of Data Science and AI to Dementia Research (DEMON) and member of Grant Review Committee for the Lewy Body Society. ",
+        "research_interest_summary": "He leads the Artificial Intelligence & Computational Neuroscience Group, which aims to combine innovative and original computational methods with the state-of-the-art brain imaging techniques such as MEG/EEG, 7T MRI and PET in understanding, detecting and developing treatments for neurological and psychiatric conditions.",
+        "homepage": "https://www.sheffield.ac.uk/medicine/people/neuroscience/li-su",
+        "linkedin": "https://uk.linkedin.com/in/li-su-abb8aa7a?trk=people-guest_people_search-card",
+        "google_scholar": "https://scholar.google.com/citations?user=cEZMoeYAAAAJ&hl=en",
+        "github": "#",
+        "photo": "1GEAlADJ73Eeq9Q3LAisU8RxJcx7MCdmU.jpg",
+        "id": "1GEAlADJ73Eeq9Q3LAisU8RxJcx7MCdmU",
+        "shef_ai_link": "li-su"
+    },
+    {
+        "title": "Professor",
         "name": "Lyudmila Mihaylova",
         "position": "University Of Sheffield",
         "affiliation": "University Of Sheffield",
@@ -469,6 +486,23 @@
         "photo": "12Z6NQZN7dXIygpC4H1akTir2DkQJPz4f.png",
         "id": "12Z6NQZN7dXIygpC4H1akTir2DkQJPz4f",
         "shef_ai_link": "robert-turner"
+    },
+    {
+        "title": "Professor",
+        "name": "Roger K. Moore",
+        "position": "Chair of Spoken Language Processing",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Science, Cross-cutting Challenges",
+        "research_interest_terms": "Automatic control, Human computer interface, Machine learning, Natural language processing, Robotics, Speech recognition",
+        "short_biography": "Prof. Moore has over 40 years’ experience in Speech Technology R&D and, although an engineer by training, much of his research has been based on insights from human behaviour.  As Head of the UK Government's Speech Research Unit from 1985 to 1999, he was responsible for the development of the Aurix range of speech technology products and the subsequent formation of 20/20 Speech Ltd.  Since 2004 he has been Professor of Spoken Language Processing at the University of Sheffield, and also holds Visiting Chairs at Bristol Robotics Laboratory and University College London Psychology & Language Sciences.  He has been President of the International Speech Communication Association, and is current Editor-in-Chief of Computer Speech & Language.",
+        "research_interest_summary": "spoken language processing by mind and machine; vocal interactivity between 'intelligent' agents; embodied and situated communicative behaviour",
+        "homepage": "https://staffwww.dcs.shef.ac.uk/people/R.K.Moore/",
+        "linkedin": "https://www.linkedin.com/in/roger-moore-6671972/",
+        "google_scholar": "https://scholar.google.co.uk/citations?user=Ib1I-uAAAAAJ",
+        "github": "#",
+        "photo": "1NZmPJQZpsB0-qUMlB2p_UEbUD2MGxTrp.jpg",
+        "id": "1NZmPJQZpsB0-qUMlB2p_UEbUD2MGxTrp",
+        "shef_ai_link": "roger-k.-moore"
     },
     {
         "title": "Mr",
