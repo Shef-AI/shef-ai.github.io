@@ -11,6 +11,18 @@
         "id": "1dY_9H9D5GyXQnWkDBVxVQzTGFRPcvDVN"
     },
     {
+        "time": "13:00",
+        "date": "Thursday 23 February 2023",
+        "duration": 1,
+        "location": "Online event",
+        "virtual": " https://meet.google.com/dde-bczh-jfe",
+        "title": "MODULATION BY CHANGE PREDICTION ERROR BUILDS HIGH-LEVEL REPRESENTATION IN SENSORY CORTICES",
+        "summary": "Dr. Guillaume Bellec' s research has given remarkable contributions to machine learning and neuroscience, showing us how it is possible to derive biologically plausible learning rules that can perform well in complex tasks from first principles. ",
+        "body": "Dr. Guillaume Bellec' s talk.\nBabies and humans appear to learn from very little data in comparison with machines. Towards a functional model of representation learning in visual cortices, we derive a brain plasticity model using self-supervised learning theory from AI. The resulting learning theory models learning in babies on at least two levels: at the cognitive level, self-supervision signals come from spontaneous gaze changes (saccades), and at the mechanistic level, all the terms required to compute the parameter gradients can be mapped with data-grounded mechanisms (the learning rule is layer-wise local and only requires pre-post activity, top-down dendritic input or global neuromodulator-like factor). Despite this realism, we demonstrate that this algorithm builds useful hierarchical representations in visual cortices by testing it on machine learning benchmarks. Going further, we will sketch how to extend this theory in other sensory pathways with time-varying inputs (like the auditory pathway) towards a general theory of brain plasticity inspired by AI theory.",
+        "image": "1aShcsfyRvYXwFDzGuLVDJEJucfcFtc6O.jpg",
+        "id": "1aShcsfyRvYXwFDzGuLVDJEJucfcFtc6O"
+    },
+    {
         "time": "10:00",
         "date": "Monday 21 November 2022",
         "duration": 6,
