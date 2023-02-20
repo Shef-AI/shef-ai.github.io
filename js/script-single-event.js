@@ -12,7 +12,7 @@ fetch('../json/events.json')
         if (element) {
             $('#event-section').append(
                 '<div class="post-image">' +
-                    '<img class="img-fluid w-100" src="images/events/' + element["image"] + '" alt="Event-' + element["title"] + '">' +
+                    '<img class="img-fluid" src="images/events/' + element["image"] + '" alt="Event-' + element["title"] + '">' +
                 '</div>' +
                 '<div class="post-content">' +
                     '<ul class="list-inline">' +
@@ -43,6 +43,17 @@ fetch('../json/events.json')
                     '</ul>' +
                 '</div>'
             );
+
+            $(window).on('load', function() {
+                // Get the width and height of the image
+                var imageWidth = $('.post-image img').width();
+                var imageHeight = $('.post-image img').height();
+                if (imageWidth > imageHeight * 1.4) {
+                    // Add the w-100 class to the img element
+                    $('.post-image img').addClass('w-100');
+                }
+            });
+
         }
         else {
             window.location.href = "../404.html"
