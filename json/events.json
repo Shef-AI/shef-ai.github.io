@@ -1,5 +1,17 @@
 [
     {
+        "time": "15:00",
+        "date": "Friday 10 March 2023",
+        "duration": 1,
+        "location": "Online event",
+        "virtual": "https://meet.google.com/zns-usxs-gdy",
+        "title": "Probing motor adaptation with recurrent networks",
+        "summary": "Prof. Claudia Clopath talk",
+        "body": "Animals use afferent feedback to rapidly correct ongoing movements in\nthe presence of a perturbation. Repeated exposure to a predictable\nperturbation leads to behavioural adaptation that counteracts its\neffects. Primary motor cortex (M1) is intimately involved in both\nprocesses, integrating inputs from various sensorimotor brain regions\nto update the motor output. Here, we investigate whether\nfeedback-based motor control and motor adaptation may share a common\nimplementation in M1 circuits. We trained a recurrent neural network\nto control its own output through an error feedback signal, which\nallowed it to recover rapidly from external perturbations.\nImplementing a biologically plausible plasticity rule based on this\nsame feedback signal also enabled the network to learn to counteract\npersistent perturbations through a trial-by-trial process, in a manner\nthat reproduced several key aspects of human adaptation. Moreover, the\nresultant network activity changes were also present in neural\npopulation recordings from monkey M1. Online movement correction and\nlonger-term motor adaptation may thus share a common implementation in\nneural circuits.",
+        "image": "15niKJIJOltTDIXFfl4sK2MD3__wix2Lz.jpg",
+        "id": "15niKJIJOltTDIXFfl4sK2MD3__wix2Lz"
+    },
+    {
         "time": "12:00",
         "date": "Wednesday 08 March 2023",
         "duration": 4,
