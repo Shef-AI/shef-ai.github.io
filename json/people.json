@@ -1,5 +1,22 @@
 [
     {
+        "title": "Professor",
+        "name": "Amaka C Offiah",
+        "position": "Professor of Paediatric Musculoskeletal Imaging ",
+        "affiliation": "University of Sheffield and Sheffield Children's Hosptial",
+        "research_areas": "Health and Medical Sciences",
+        "research_interest_terms": "Data structures and algorithms, Information retrieval, Machine learning",
+        "short_biography": "I am a clinical academic with my major interest being in optimising and improving the diagnosis of child physical abuse and in differentiating abuse from underlying musculoskeletal disorders and bone fragility. I am one of only a few black female professors in the UK (as of 2023). I am Chair of the European Society of Paediatric Radiology Child Abuse Task Force and Managing Editor (outside the Americas) for the journal Pediatric Radiology, being the first female and the first person from an ethnic minority background to hold this role. ",
+        "research_interest_summary": "I'm interested in using AI to identify the subtle fractures seen on images obtained in suspected child abuse; in collating and identifying patterns that might improve the diagnosis of abuse from the large volume of data obtained for each child in accidental and suspected abuse scenarios and in using AI to improve our understanding of injury mechanisms in infants.",
+        "homepage": "https://www.sheffield.ac.uk/medicine/people/oncology-metabolism/amaka-offiah",
+        "linkedin": "https://www.linkedin.com/in/amaka-c-offiah-4428a435/?originalSubdomain=uk",
+        "google_scholar": "https://0-scholar-google-com.brum.beds.ac.uk/citations?user=5pceUbUAAAAJ&hl=en",
+        "github": "#",
+        "photo": "1jLumBSoOYw4Y6wihOyi6x2O3MlVXg0i2.JPG",
+        "id": "1jLumBSoOYw4Y6wihOyi6x2O3MlVXg0i2",
+        "shef_ai_link": "amaka-c-offiah"
+    },
+    {
         "title": "Dr",
         "name": "Andrew Cox",
         "position": "Senior Lecturer",
@@ -503,6 +520,23 @@
         "photo": "1NZmPJQZpsB0-qUMlB2p_UEbUD2MGxTrp.jpg",
         "id": "1NZmPJQZpsB0-qUMlB2p_UEbUD2MGxTrp",
         "shef_ai_link": "roger-k.-moore"
+    },
+    {
+        "title": "Dr",
+        "name": "Ross Drummond",
+        "position": "Research Fellow",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Data-centric Engineering, Cross-cutting Challenges",
+        "research_interest_terms": "Automatic control, Machine learning, Mathematical modelling, Neuroscience and cognitive science, Optimisation, Robotics",
+        "short_biography": "I am research fellow in ACSE and will join as a lecturer upon the completion of my fellowship in Dec '23. Before then, I was a post-doc in the Control Group at the University of Oxford. ",
+        "research_interest_summary": "My research interests focus on the use of control theory and its application to modelling and management of batteries. I have developed tools that use the techniques from control theory to compute robustness certificates. I have used these techniques to provide stability guarantees, robust pruning methods and to connect neural networks to model predictive control. ",
+        "homepage": "#",
+        "linkedin": "#",
+        "google_scholar": "https://scholar.google.co.uk/citations?user=_fqk_tkAAAAJ&hl=en",
+        "github": "#",
+        "photo": "1hep25DowkCiZOaLTLOmxLs2MRuFkJMT5.jpg",
+        "id": "1hep25DowkCiZOaLTLOmxLs2MRuFkJMT5",
+        "shef_ai_link": "ross-drummond"
     },
     {
         "title": "Mr",
