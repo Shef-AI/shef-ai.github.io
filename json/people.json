@@ -387,6 +387,23 @@
     },
     {
         "title": "Dr",
+        "name": "Nemanja Vaci",
+        "position": "Lecturer",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Science",
+        "research_interest_terms": "Machine learning, Natural language processing",
+        "short_biography": "I am psychologist and applied statistician with extensive experience in data science. ",
+        "research_interest_summary": "I am interested in how people develop their knowledge and skill over a lifetime. My research focuses on the investigation of how we learn and develop expertise when we reach the peak level of performance, and how we experience age-related decline in performance. As well as factors that relate to cognitive decline in the case of age-related diseases, such as dementia. I use large and passively collected data: chess, NBA, and football records in expertise research and electronic health records (EHRs) in clinical research.",
+        "homepage": "https://www.sheffield.ac.uk/psychology/people/academic/nemanja-vaci",
+        "linkedin": "#",
+        "google_scholar": "#",
+        "github": "#",
+        "photo": "1jm-RXdrJlW0bP0Hbsak3TEjnr5mrS64L.jpeg",
+        "id": "1jm-RXdrJlW0bP0Hbsak3TEjnr5mrS64L",
+        "shef_ai_link": "nemanja-vaci"
+    },
+    {
+        "title": "Dr",
         "name": "Olayiwola Oladiran",
         "position": "Lecturer in Real Estate",
         "affiliation": "University of Sheffield",
