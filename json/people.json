@@ -672,6 +672,23 @@
     },
     {
         "title": "Mr",
+        "name": "William Deakin ",
+        "position": "Trains Portfolio Architect",
+        "affiliation": "University of Sheffield ",
+        "research_areas": "Data-centric Engineering, Cross-cutting Challenges",
+        "research_interest_terms": "Computer systems and architectures, Computer vision, Data structures and algorithms, Human computer interface, Knowledge representation, Machine learning, Natural language processing, Optimisation, Privacy and trust, Safety and ethics, Visualisation",
+        "short_biography": "Following post-graduate studies in solid-state physics at the University of Manchester, my  background is in applied application artificial intelligence in published and electronic media. Following working in system delivery in the European mobile telephony I currently work in the British Rail industry as the technical assurance and delivery lead for national systems and interfaces for timetable and strategic planning, operations and performance systems.",
+        "research_interest_summary": "My professional interests are in an assessment of the state of the art in information and meaning extraction from unstructured text and documents. I also have an interest in visual data representation for safe methods of work, data visualization and effect network transport flow algorithms for constrained systems. For example, plan and constraint optimization in the European rail network. ",
+        "homepage": "https://fosstodon.org/@wnd",
+        "linkedin": "https://www.linkedin.com/in/will-deakin-538729/",
+        "google_scholar": "#",
+        "github": "https://github.com/anisotropi4",
+        "photo": "1D46KQN643hzLN1-RXWNdkqr76-exnrSc.jpg",
+        "id": "1D46KQN643hzLN1-RXWNdkqr76-exnrSc",
+        "shef_ai_link": "william-deakin"
+    },
+    {
+        "title": "Mr",
         "name": "xulong wang",
         "position": "PhD student",
         "affiliation": "University of sheffield",
