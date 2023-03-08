@@ -235,6 +235,23 @@
     },
     {
         "title": "Mr",
+        "name": "Killian Gleeson",
+        "position": "PhD Student",
+        "affiliation": " University of Sheffield",
+        "research_areas": "Data-centric Engineering",
+        "research_interest_terms": "Automatic control, Data structures and algorithms, Human computer interface, Information retrieval, Machine learning, Optimisation, Statistical methods and theory, Visualisation",
+        "short_biography": "Currently pursuing a PhD at the University of Sheffield, sponsored by Siemens UK. The aim of this PhD is to develop data analysis routines to derive actionable information from high-resolution water quality sensor data (aka smart water quality) within drinking water distribution systems. After obtaining an MSc in Environmental and Energy Engineering from the University of Sheffield in 2015, worked for 4 years as a data analyst in the test engineering industry for Nprime Ltd in Sheffield, assisting international manufacturing and defence companies to gain insights into the performance of their machinery and vehicles.",
+        "research_interest_summary": "I am interested in using digitalisation to address real world engineering challenges, particularly in how we can optimise use of sensing technology to understand complex systems.",
+        "homepage": "https://decodedata.sheffield.ac.uk",
+        "linkedin": "https://www.linkedin.com/in/killian-gleeson/",
+        "google_scholar": "#",
+        "github": "#",
+        "photo": "1J5MgpgXJvF5AsUFi5xIcl3MwRtcTgbDW.jpg",
+        "id": "1J5MgpgXJvF5AsUFi5xIcl3MwRtcTgbDW",
+        "shef_ai_link": "killian-gleeson"
+    },
+    {
+        "title": "Mr",
         "name": "Lawrence Schobs",
         "position": "PhD student",
         "affiliation": "University of Sheffield",
