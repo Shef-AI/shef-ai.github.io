@@ -14,7 +14,7 @@ fetch('../json/people.json')
         '<div class="teamblock col-md-3 col-sm-6 col-xs-6 filtr-item" data-category="' + element["research_areas"] + "," + element["research_interest_terms"] + '">' +
           '<div class="team-member">'+
             '<div class="portfolio-block member-photo">' +
-              '<div style="text-align: center;"><img class="img-fluid" src="images/people/' + imageId + '" alt="' + fullNamePerson + '"></div>' +
+              '<div style="text-align: center;"><img class="img-fluid" src="images/people/' + imageId + '" onerror="this.src=\'images/people/default.png\'" alt="' + fullNamePerson + '"></div>' +
               '<div class="caption mask">' +
                 '<ul class="clearfix">' +
                   '<li><a href="' + element["homepage"] + '" target="_blank" class=' + (element["homepage"].trim() == "#" ? "disabled" : "") + '><i class="tf-ion-link"></i></a></li>' +

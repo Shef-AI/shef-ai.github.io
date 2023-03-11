@@ -33,7 +33,7 @@ fetch('../json/people.json')
 
             $('#profile-section').append(
                 '<div class="col-md-5 single-member text-center">'+
-                    '<img class="img-fluid" src="images/people/' + imageId + '" alt="' + fullNamePerson + '">'+
+                    '<img class="img-fluid" src="images/people/' + imageId + '" onerror="this.src=\'images/people/default.png\'" alt="' + fullNamePerson + '">'+
                     '<div class="info-block mt-4">'+
                         '<h3 class="mb-0">' + fullNamePerson + '</h3>'+
                         '<p>' + element["position"] + '</p>'+
