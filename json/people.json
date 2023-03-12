@@ -706,6 +706,23 @@
     },
     {
         "title": "Mr",
+        "name": "Yue Yao",
+        "position": "Research Assistant",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Data-centric Engineering, Cross-cutting Challenges",
+        "research_interest_terms": "Automatic control, Computer vision, Machine learning, Robotics",
+        "short_biography": "I am a Research Assistant in Robotics and Sensing for Manufacturing at the department of Automatic Control and Systems Engineering, University of Sheffield. I received my MSc degree from the University of Sheffield and was awarded the 2021-22 Nicholson Prize for Masters Studies.",
+        "research_interest_summary": "My research focuses on Robotics and Digital Manufacturing. I am currently also involved in research on AI in manufacturing.\n\nRobotics\nDigital Manufacturing\nManufacturing Assembly\nComputer Vision\nMachine Learning\nDigital Twin",
+        "homepage": "https://www.sheffield.ac.uk/acse/department/people/research-staff/yue-yao",
+        "linkedin": "https://www.linkedin.com/in/alex-yue-yao/",
+        "google_scholar": "#",
+        "github": "#",
+        "photo": "1nmlhPvlHkNJ4_89ckH9SLkCKyY7wKMxl.jpg",
+        "id": "1nmlhPvlHkNJ4_89ckH9SLkCKyY7wKMxl",
+        "shef_ai_link": "yue-yao"
+    },
+    {
+        "title": "Mr",
         "name": "xulong wang",
         "position": "PhD student",
         "affiliation": "University of sheffield",
