@@ -1,4 +1,4 @@
-// Get the value of "user" in "https://sheffieldai.github.io/single-profile.html?user=some_value"
+// Get the value of "user" in "https://shef-ai.github.io/single-profile.html?user=some_value"
 const params = new Proxy(new URLSearchParams(window.location.search), {
   get: (searchParams, prop) => searchParams.get(prop),
 });

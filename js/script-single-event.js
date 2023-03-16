@@ -1,4 +1,4 @@
-// Get the value of "id" in "https://sheffieldai.github.io/events.html?id=some_value"
+// Get the value of "id" in "https://shef-ai.github.io/events.html?id=some_value"
 const params = new Proxy(new URLSearchParams(window.location.search), {
   get: (searchParams, prop) => searchParams.get(prop),
 });

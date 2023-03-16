@@ -2,21 +2,21 @@
 
 
  <div align="center" width="50px"> 
-     <a href="https://sheffieldai.github.io/"><img src="https://raw.githubusercontent.com/SheffieldAI/sheffieldai.github.io/main/images/favicons/favicon.png" alt="logo" width="20%" /></a>
+     <a href="https://shef-ai.github.io/"><img src="https://raw.githubusercontent.com/shef-ai/shef-ai.github.io/main/images/favicons/favicon.png" alt="logo" width="20%" /></a>
      <p font-size="100px"><b>Sheffield Data Science and AI community</b></p> 
  </div>
 
 ----
-![Website](https://img.shields.io/website?down_message=down&up_message=live&url=https%3A%2F%2Fsheffieldai.github.io%2F)
-[![GitHub stars](https://img.shields.io/github/stars/SheffieldAI/sheffieldai.github.io)](https://github.com/SheffieldAI/sheffieldai.github.io/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/SheffieldAI/sheffieldai.github.io)](https://github.com/SheffieldAI/sheffieldai.github.io/network)
-[![GitHub license](https://img.shields.io/github/license/SheffieldAI/sheffieldai.github.io)](https://github.com/SheffieldAI/sheffieldai.github.io/blob/main/LICENSE)
+![Website](https://img.shields.io/website?down_message=down&up_message=live&url=https%3A%2F%2Fshef-ai.github.io%2F)
+[![GitHub stars](https://img.shields.io/github/stars/shef-ai/shef-ai.github.io)](https://github.com/shef-ai/shef-ai.github.io/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/shef-ai/shef-ai.github.io)](https://github.com/shef-ai/shef-ai.github.io/network)
+[![GitHub license](https://img.shields.io/github/license/shef-ai/shef-ai.github.io)](https://github.com/shef-ai/shef-ai.github.io/blob/main/LICENSE)
 
 This is the official website for the Data Science and Artificial Intelligence community at The University of Sheffield. 
 
 ## How to update the LinkedIn post
 To update the latest LinkedIn post on the website:
-1. Navigate to the post on the [LinkedIn feed](https://www.linkedin.com/feed/) you want to embed to the [Shef.AI](https://sheffieldai.github.io/) website.
+1. Navigate to the post on the [LinkedIn feed](https://www.linkedin.com/feed/) you want to embed to the [Shef.AI](https://shef-ai.github.io/) website.
 3. Click the **More** icon in the post’s top right corner.
 4. Click **Embed this post**.
 5. Copy the url that is available in `scr` attribute from the pop-up window.
@@ -48,5 +48,5 @@ Provided below are the steps you can pass to update the news/events data:
    2. Replace the value of your desired field with the generated single-line text from the previous steps.
    
 ## Privacy notice
-To see our Privacy Notice, please go to [Shef.AI Website Policy Notice](https://sheffieldai.github.io/privacy-notice.html) about what types of personal information will be gathered and how this information will be used.
+To see our Privacy Notice, please go to [Shef.AI Website Policy Notice](https://shef-ai.github.io/privacy-notice.html) about what types of personal information will be gathered and how this information will be used.
 
