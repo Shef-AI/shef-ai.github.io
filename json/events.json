@@ -1,5 +1,16 @@
 [
     {
+        "time": "14:00",
+        "date": "Wednesday 22 March 2023",
+        "duration": 1,
+        "location": "Pam Liversidge Building - LT1",
+        "title": "No such thing as a model-free lunch? Model-free search and reliable decision making",
+        "summary": "ACSE research seminar on learning for control. ",
+        "body": " Inspired by breakthrough results in the processing of complex data, machine learning is being increasingly applied to problems in decision-making and control. However, to be suitable for deployment in applications, we require learning-based algorithms that come with guarantees of reliability, robustness, and safety. \n\nThis talk will focus on the reliability of model-free policy search, addressing the question: when do such methods find optimal solutions, and when do they get trapped in poor local minima? Existing work has considered static policies; however, for dynamic policies that remember past observations - necessary for optimal decision making in many applications - these questions have hitherto remained unanswered. Focusing on the classic control-theoretic problem of output estimation, I will present the first model-free policy search algorithm for dynamic policies guaranteed to converge to the optimal solution. \n\nAlong the way, I’ll also describe my path toward working on this problem, highlighting some of my contributions to model-based approaches for safe and reliable control, including data-driven robust control, system identification, and trajectory optimization. I will offer my perspective on the strengths and weaknesses of model-free and model-based methods, as well as the ways in which they complement each other. ",
+        "image": "1277AlhkMMQbzoKdFU5Y771_78WAsq3ce.jpg",
+        "id": "1277AlhkMMQbzoKdFU5Y771_78WAsq3ce"
+    },
+    {
         "time": "15:00",
         "date": "Friday 10 March 2023",
         "duration": 1,
