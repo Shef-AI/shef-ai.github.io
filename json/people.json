@@ -1,6 +1,23 @@
 [
     {
         "title": "Professor",
+        "name": "Aline Villavicencio",
+        "position": "Chair in Natural Language Processing",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Health and Medical Sciences, Data-centric Engineering, Humanities and Social Sciences, Cross-cutting Challenges",
+        "research_interest_terms": "Information retrieval, Machine learning, Natural language processing, Neuroscience and cognitive science, Social data science, Statistical methods and theory, Visualisation",
+        "short_biography": "I am affiliated to the  Department of Computer Science, University of Sheffield (UK). I received my PhD from the University of Cambridge  (UK) in 2001, and held postdoctoral positions at the University of Cambridge  and University of Essex (UK). I have also been a Visiting Scholar at the MIT (USA) in 2014/2015 and in 2011/2012. In 2014 I was a Visiting Scholar at the Labo­ra­toire LaTTiCe at the École Normale Supé­rieure (France), in 2012/2013 an Erasmus-Mundus Visiting Scholar at Saarland University (Germany) and from 2006-2009 at the University of Bath. From 2007-2017 I had a Research Fellowship from the Brazilian Scientific Research Council (CNPq). ",
+        "research_interest_summary": "My research interests are in Natural Language Processing, multilinguality, and cognitively motivated models of language, for typical and clinical conditions. ",
+        "homepage": "https://sites.google.com/view/alinev",
+        "linkedin": "#",
+        "google_scholar": "https://scholar.google.co.uk/citations?user=zbwPYqwAAAAJ",
+        "github": "#",
+        "photo": "1n7_qiQh2KA_QZSVdazFTGNffLTfBVg-R.jpg",
+        "id": "1n7_qiQh2KA_QZSVdazFTGNffLTfBVg-R",
+        "shef_ai_link": "aline-villavicencio"
+    },
+    {
+        "title": "Professor",
         "name": "Amaka C Offiah",
         "position": "Professor of Paediatric Musculoskeletal Imaging ",
         "affiliation": "University of Sheffield and Sheffield Children's Hosptial",
