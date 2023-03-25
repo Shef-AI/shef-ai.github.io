@@ -82,6 +82,23 @@
         "shef_ai_link": "cass-zhixue-zhao"
     },
     {
+        "title": "Dr",
+        "name": "Denis Newman-Griffis",
+        "position": "Lecturer in Data Science",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Health and Medical Sciences, Humanities and Social Sciences, Cross-cutting Challenges",
+        "research_interest_terms": "Knowledge representation, Machine learning, Natural language processing, Safety and ethics, Social data science",
+        "short_biography": "I am a Lecturer in Data Science in the University of Sheffield's Information School and Deputy Coordinator of the MSc in Data Science. I was an NLM Postdoctoral Fellow in the University of Pittsburgh Department of Biomedical Informatics, a Pre-Doctoral Fellow of the National Institutes of Health Clinical Center, and did my PhD at the Ohio State University. I have conducted research across NLP, machine learning, medical informatics, and responsible and ethical AI. I received the American Medical Informatics Association (AMIA) Doctoral Dissertation Award for my work at the intersection of NLP and disability, and am a member of the UK Young Academy. I proudly identify as queer and neurodivergent, and my pronouns are they/them.",
+        "research_interest_summary": "I am interested in responsible and effective AI, in terms of principles, practices, and projects. I am currently working across several interrelated areas: (1) intersection of informatics and disability, in terms of how data science and AI methods conceive of, implement, and analyse disability; (2) responsible and effective data science, in terms of best practices grounded in social and organisational context; (3) practical natural language processing for health; and (4) applied text analysis for the science of science.\n\n- Information extraction\n- Representation learning\n- Critical disability studies\n- Responsible and ethical AI\n- Professional practices of data science\n- Translational NLP",
+        "homepage": "https://www.sheffield.ac.uk/is/people/academic/denis-newman-griffis",
+        "linkedin": "https://www.linkedin.com/in/drgriffis/",
+        "google_scholar": "https://scholar.google.com/citations?hl=en&user=Aj5bTx8AAAAJ",
+        "github": "https://github.com/drgriffis",
+        "photo": "1mSAEZXkDwRkHFg6D5F33kCovRtZfIq6J.jpeg",
+        "id": "1mSAEZXkDwRkHFg6D5F33kCovRtZfIq6J",
+        "shef_ai_link": "denis-newman-griffis"
+    },
+    {
         "title": "Professor",
         "name": "Dennis Wang",
         "position": "Advanced Visiting Fellow, University of Sheffield",
