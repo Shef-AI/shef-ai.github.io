@@ -3,36 +3,42 @@
         "id" : "e083111a-2fda-4622-b681-56ea74d7391f",
         "title": "Health and Medical Sciences",
         "description" : "Improving the detection, diagnosis, and treatment of illness; advancing the scientific understanding of disease and improving health through the application of data science and AI.",
+        "ig-groups" : "Disease diagnosis/treatment, Mental health, Medical images/omics",
         "image" : "e083111a-2fda-4622-b681-56ea74d7391f.jpg"
     },
     {
         "id" : "328f00a7-0a31-4feb-a923-40702dc82ad7",
         "title": "Data-centric Engineering",
         "description" : "Addressing key challenges in data-centric engineering; transforming design, construction and maintenance, and making engineering smarter, safer and more energy efficient.",
+        "ig-groups" : "Sensing & auto operation, Complex systems",
         "image" : "328f00a7-0a31-4feb-a923-40702dc82ad7.jpg"
     },
     {
         "id" : "e9ff91af-dea1-4660-9778-8fcc747c05a0",
         "title": "Science",
         "description" : "Data science and AI for advancing scientific research: transforming methodology and practice, accelerating the discovery process.",
+        "ig-groups" : "Molecules & materials, Universe’s fundamentals, Climate environment & bio",
         "image" : "e9ff91af-dea1-4660-9778-8fcc747c05a0.jpg"
     },
     {
         "id" : "4d37f855-987a-43de-9ec2-496dd6552c47",
         "title": "Humanities and Social Sciences",
         "description" : "Transforming theory and practice in social science research through the application of data science and AI; and focussing on the consequences of data science and AI technologies for our society and culture.",
+        "ig-groups" : "Urban/population studies, Data-driven arts/humanities/socialsci",
         "image" : "4d37f855-987a-43de-9ec2-496dd6552c47.jpg"
     },
     {
         "id" : "5c1a675d-6bd4-4d77-bd15-17229c610893",
         "title": "Security, Business, & Public Policy",
         "description" : "Using Data Science and AI to improve the effectiveness and efficiency of data-driven public services; to solve policy issues and build ethical foundations for data science and AI policy making.",
+        "ig-groups" : "Misinfo & privacy & security, Innovation & entrepreneurship, Pedagogy & policy for education",
         "image" : "5c1a675d-6bd4-4d77-bd15-17229c610893.jpg"
     },
     {
         "id" : "0ad58a7a-b5e1-485b-ba86-5448a0fe8d55",
         "title": "Cross-cutting Challenges",
         "description" : "Investigating core challenges and common science problems across data science and AI,  in more generic settings and not limited to specific applications.",
+        "ig-groups" : "Accessible/sustainable/scalable, Explainability/energy-efficiency, HCI/robotics, Automate data prep/access/use, Causality inference, Visualisation, Data integration/uncover factors, Data integration/uncover factors",
         "image" : "0ad58a7a-b5e1-485b-ba86-5448a0fe8d55.jpg"
     }
 ]
