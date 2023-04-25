@@ -19,9 +19,10 @@ fetch('../json/people.json')
               imageId = 'default.png';
 
             var interestsTerms = element["research_interest_terms"].split(",");
-            var interestsTermsTags = '<ul>';
+            var interestsTermsTags = '<ul class="feature-list system-style">';
             interestsTerms.forEach(function(item){
-                interestsTermsTags += '<li>' + item + '</li>';
+                // interestsTermsTags += '<li>' + item + '</li>';
+                interestsTermsTags += '<li> <i class="tf-ion-android-checkmark-circle"></i>' + item + '</li>';
             });
             interestsTermsTags += '</ul>';
 
@@ -49,7 +50,7 @@ fetch('../json/people.json')
                     '</div><br/>'+
                     areasTermsTags +
                 '</div>'+
-                '<div class="col-md-7">'+
+                '<div class="col-md-7 interests">'+
                     (element["short_biography"] ? 
                         ('<h2>Biography</h2>'+
                             '<div class="divider my-4"></div>'+

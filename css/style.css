@@ -1747,6 +1747,33 @@ a.disabled{
   background: #fff;
 }
 
+.interests .feature-list {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 12px;
+  font-size: 20px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  padding-bottom: 10px;
+}
+
+.interests .feature-list li {
+  width: 100%;
+  color: #000;
+  display: inline-block;
+  font-size: 15px;
+  font-family: "Source Sans Pro", sans-serif;
+  margin-bottom: 5px;
+  font-weight: 400;
+  padding-left: 5px;
+}
+
+.interests .feature-list li i {
+  color: #440099;
+  margin-right: 8px;
+}
+
+
 .team .member-photo:hover img {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
