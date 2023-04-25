@@ -13,8 +13,21 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Catamaran", sans-serif;
-  font-weight: 600;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
+  font-weight: 700;
+}
+
+h1 a strong, h2 a strong, h3 a strong, h4 a strong, h5 a strong, h6 a strong {
+  font-weight: 700;
 }
 
 .no-padding {
@@ -750,16 +763,18 @@ a.disabled{
 
 .slider-item h1 {
   color: #fff;
-  font-size: 50px;
+  font-size: 60px;
   line-height: 70px;
   letter-spacing: 2px;
-  font-weight: 700;
+  font-weight: 900 !important;
   margin-bottom: 20px;
 }
 
 .slider-item p {
   color: #fff;
   margin-bottom: 20px;
+  font-size: 1.1em;
+  font-weight: 700 !important;
 }
 
 .hero-slider {
@@ -895,7 +910,7 @@ a.disabled{
   display: inline-block;
   color: #666;
   font-size: 13px;
-  font-family: "Catamaran", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   margin-bottom: 5px;
   font-weight: 600;
 }
@@ -929,7 +944,7 @@ a.disabled{
   margin-right: 12px;
   margin-left: -45px;
   content: "\f375";
-  font-family: "themefisher-font";
+  font-family: "Source Sans Pro";
   opacity: 1;
   border-radius: 50%;
   padding: 2px 8px;
@@ -998,7 +1013,7 @@ a.disabled{
   height: 45px !important;
   color: #0c0c0c;
   height: 38px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 14px;
   border-radius: 0;
 }
