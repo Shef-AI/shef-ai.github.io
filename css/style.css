@@ -215,8 +215,7 @@ a.disabled{
 }
 
 .divider {
-  height: 5px;
-  background: #28ABE3;
+  border-bottom: 5px solid #440099;
 }
 
 #preloader {
