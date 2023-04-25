@@ -768,11 +768,13 @@ a.disabled{
   letter-spacing: 2px;
   font-weight: 900 !important;
   margin-bottom: 20px;
+  text-shadow: 1px 1px 10px #000, 1px 1px 30px #000;
 }
 
 .slider-item p {
   color: #fff;
   margin-bottom: 20px;
+  text-shadow: 1px 1px 5px #000, 1px 1px 10px #000;
   font-size: 1.1em;
   font-weight: 700 !important;
 }
