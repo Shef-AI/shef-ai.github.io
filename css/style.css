@@ -478,6 +478,7 @@ a.disabled{
 .single-page-header {
   background-image: url("../images/about/about-header.jpg");
   background-size: cover;
+  background-position: center center;
   padding: 140px 0 70px;
   text-align: center;
   color: #fff;
@@ -485,7 +486,7 @@ a.disabled{
 }
 
 .single-page-header:before {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.2);
   position: absolute;
   content: '';
   top: 0;
