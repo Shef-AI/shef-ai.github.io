@@ -10,6 +10,7 @@ p {
   /* color: #848484; */
   color: #0e0e0e;
   font-size: 16px;
+  text-rendering: optimizeLegibility;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -341,19 +342,17 @@ a.disabled{
 }
 
 .title h2 {
-  font-weight: 600;
+  font-weight: 900;
   font-size: 35px;
   color: #232323;
 }
 
 .title p {
-  color: #848484;
   width: 50%;
   margin: 0 auto;
 }
 
 .title.full p {
-  color: #848484;
   width: 80%;
   margin: 0 auto;
 }
