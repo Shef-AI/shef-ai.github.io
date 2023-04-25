@@ -1729,6 +1729,24 @@ a.disabled{
   padding-bottom: 30px;
 }
 
+.single-member a {
+  color: #440099;
+  border-color: #440099;
+  font-weight: 700;
+}
+
+.single-member a:hover {
+  transition: none;
+  color: #fff;
+  background: #1468a0;
+  border-color: #1468a0;
+}
+
+.single-member .list-inline a:hover {
+  color: #1468a0;
+  background: #fff;
+}
+
 .team .member-photo:hover img {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
