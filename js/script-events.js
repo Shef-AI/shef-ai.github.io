@@ -12,12 +12,12 @@ fetch('../json/events.json')
           '<div class="col-md-6">' +
             '<h2><a style="color: black;" href="single-event.html?id=' + element["id"] + '">' + element["title"] + '</a></h2>' +
             '<p>' +
-              '<ul class="list-inline system-style">' +
+              '<ul class="list-inline system-style event-item">' +
                 '<i class="bi bi-calendar"> ' + element["date"] + '&nbsp;&nbsp;&nbsp;</i>' +
                 '<i class="bi bi-clock"> ' + element["time"] + '&nbsp;&nbsp;&nbsp;</i>' +
                 '<i class="bi bi-alarm"> ' + element["duration"] + ' Hours</i>' +
               '</ul>' +
-              '<ul class="list-inline system-style">' +
+              '<ul class="list-inline system-style event-item">' +
                 '<i class="bi bi-geo-alt"> ' + element["location"] + '</i>' +
               '</ul>' +
               (element["virtual"] ? 
