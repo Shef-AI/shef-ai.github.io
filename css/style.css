@@ -360,7 +360,7 @@ a.disabled{
 }
 
 .title {
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   overflow: hidden;
 }
 
@@ -2660,6 +2660,9 @@ a.disabled{
   .author-bio h5 {
     margin-left: 70px;
   }
+  .social-media {
+    padding-bottom: 30px;
+  }
 }
 
 /*============================================================
@@ -2742,6 +2745,9 @@ a.disabled{
   .author-social {
     margin-left: 0;
   }
+  .social-media {
+    padding-bottom: 30px;
+  }
 }
 
 /*============================================================
@@ -2753,6 +2759,9 @@ a.disabled{
   }
   .news-collection .img-fluid {
     height: 135px !important;
+  }
+  .social-media {
+    padding-bottom: 30px;
   }
 }
 
@@ -2840,7 +2849,7 @@ a.disabled{
   }
   /* latest posts */
   #blog {
-    padding-bottom: 0;
+    padding-bottom: 70px;
   }
   .note {
     margin-bottom: 30px;
@@ -2896,6 +2905,9 @@ a.disabled{
   .author-avatar {
     margin-right: 10px;
   }
+  .social-media {
+    padding-bottom: 30px;
+  }
 }
 
 /*============================================================
@@ -2947,7 +2959,7 @@ a.disabled{
   }
   /* latest posts */
   #blog {
-    padding-bottom: 0;
+    padding-bottom: 70px;
   }
   .note {
     margin: 0 auto 30px;
@@ -2960,6 +2972,9 @@ a.disabled{
   /* blog page */
   .tab-post-nav li a {
     padding: 10px 15px;
+  }
+  .social-media {
+    padding-bottom: 30px;
   }
 }
 
