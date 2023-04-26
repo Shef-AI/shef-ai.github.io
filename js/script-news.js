@@ -9,7 +9,7 @@ fetch('../json/news.json')
               '<img src="images/news/' + element["image"] +'" alt="News-' + element["title"] + '" class="img-fluid">' + 
             '</div>' +
             '<div class="content">' +
-              '<p><i class="bi bi-calendar"> ' + element["date"] +'</i></p>'+
+              '<p class="news-item"><i class="bi bi-calendar"> ' + element["date"] +'</i></p>'+
               '<h3><a href=single-news.html?id=' + element["id"] + '>' + element["title"] + '</a></h3>' +
               '<p class="system-link">' + element["summary"] + '</p>' + 
               '<a class="btn btn-main" href=single-news.html?id=' + element["id"] + '>Read more</a>' + 
