@@ -1503,12 +1503,12 @@ a.disabled{
 }
 
 .services .service-block.color-bg {
-  background: #28ABE3;
-  color: #fff;
+  background: #9ADBE8;
+  color: #000;
 }
 
 .services .service-block.color-bg i, .services .service-block.color-bg h3, .services .service-block.color-bg p {
-  color: #fff;
+  color: #000;
 }
 
 .services .service-block.color-bg-2 {
@@ -1544,8 +1544,8 @@ a.disabled{
 }
 
 .services .service-block .btn-main {
-  background: #ffffff;
-  border: 1px solid #ffffff;
+  background: #F6F6F6;
+  border: 1px solid #F6F6F6;
   color: #000000;
   display: inline-block;
   font-size: 14px;
@@ -1556,15 +1556,22 @@ a.disabled{
 }
 
 .services .service-block .btn-main-2 {
-  background: #28ABE3;
-  border: 1px solid #28ABE3;
-  color: #fff;
+  background: #9ADBE8;
+  border: 1px solid #9ADBE8;
+  color: #000000;
   display: inline-block;
   font-size: 14px;
   letter-spacing: 1px;
   padding: 8px 20px;
   text-transform: uppercase;
   border-radius: 40px;
+  font-weight: 700;
+}
+
+.service-block-item i {
+  color: #005A8F;
+  font-weight: 900;
+  font-size: 16px;
 }
 
 /*=================================================================

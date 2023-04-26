@@ -13,10 +13,10 @@ fetch('../json/opportunities.json')
             $('#opportunity-section').append(
                 '<div class="post-content">' +
                     '<h3>' + element["title"] + '</h3>' +
-                    '<ul class="list-inline">' +
+                    '<ul class="list-inline service-block-item">' +
                         '<i class="bi bi-alarm"> ' + element["date"] + ' <br/></i>' +
                     '</ul>' +
-                    '<p>' + element["body"] + '</p>' +
+                    '<div class="system-link">' + element["body"] + '</div>' +
                     '<ul class="post-content-share list-inline">' +
                         '<li class="list-inline-item">' +
                             '<a href="#"><i class="tf-ion-social-twitter"></i></a>' +
