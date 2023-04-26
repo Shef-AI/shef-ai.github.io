@@ -4,7 +4,7 @@ fetch('../json/news.json')
     for (var i = 0; i < data.length && i < 3; i++) {
         var newsElement = data[i];
         $('#latest-news-section').append(
-            '<article class="col-lg-4 col-md-6">' + 
+            '<article class="col-lg-4 col-md-6 news-post-box">' + 
                 '<div class="post-item">' +
                     '<div class="media-wrapper latest-news">' +
                         '<img loading="lazy" src="images/news/' + newsElement["image"] + '" alt="News-' + newsElement["title"] + '" class="img-fluid">' +

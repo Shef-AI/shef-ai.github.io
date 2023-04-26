@@ -3,7 +3,7 @@ fetch('../json/news.json')
   .then(data => {
     data.forEach(function(element){
       $('#news-section').append(
-        '<article class="col-md-4 col-sm-6 col-xs-12 ">'+
+        '<article class="col-md-4 col-sm-6 col-xs-12 news-post-box">'+
           '<div class="post-item">' + 
             '<div class="media-wrapper news-collection">' + 
               '<img src="images/news/' + element["image"] +'" alt="News-' + element["title"] + '" class="img-fluid">' + 

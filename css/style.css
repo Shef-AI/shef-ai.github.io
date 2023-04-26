@@ -1268,6 +1268,10 @@ a.disabled{
   margin: auto auto;
 }
 
+.event-post-box {
+  display: flex;
+}
+
 .event-item i {
   color: #005A8F;
   font-weight: 900;
@@ -1294,6 +1298,10 @@ a.disabled{
   max-width: 100%;    
   display: block;
   margin: auto auto;
+}
+
+.news-post-box {
+  display: flex;
 }
 
 .news-content {
