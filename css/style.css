@@ -64,6 +64,17 @@ a {
   color: #005A8F;
 }
 
+
+.system-link-virtual a {
+  color: #440099;
+  border-bottom: none;
+  font-weight: 700;
+}
+
+.system-link-virtual a:hover {
+  color: #005A8F;
+}
+
 iframe {
   border: 0;
 }
@@ -150,10 +161,11 @@ a.disabled{
 }
 
 .btn-main {
-  background: #28ABE3;
-  border: 1px solid #28ABE3;
-  color: #fff;
+  background: #9ADBE8;
+  border: 1px solid #9ADBE8;
+  color: #2B353E;
   display: inline-block;
+  font-weight: 700;
   font-size: 14px;
   letter-spacing: 1px;
   padding: 12px 40px;
@@ -162,7 +174,8 @@ a.disabled{
 }
 
 .btn-main:hover {
-  color: #fff;
+  background-color: #85d4e3;
+  color: #2B353E;
 }
 
 .btn-transparent {
@@ -825,7 +838,7 @@ a.disabled{
   z-index: 9;
   height: 70px;
   width: 70px;
-  background: rgba(40, 171, 227, 0.5);
+  background: rgba(154, 219, 232, 0.502);
   color: #fff;
   border: 0;
   line-height: 70px;
@@ -863,7 +876,7 @@ a.disabled{
 }
 
 .slick-arrow:hover {
-  background: #28ABE3;
+  background: #85d4e3;
 }
 
 .prevArrow {
@@ -1494,13 +1507,13 @@ a.disabled{
 
 .service-2 .service-item:hover i {
   background: #fff;
-  color: #28ABE3;
+  color: #440099;
 }
 
 .service-2 .service-item i {
   font-size: 30px;
   display: inline-block;
-  background: #28ABE3 none repeat scroll 0 0;
+  background: #440099 none repeat scroll 0 0;
   border-radius: 30px;
   box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.1);
   color: #fff;
@@ -1915,7 +1928,7 @@ a.disabled{
 }
 
 .post-item .content p {
-  color: #757575;
+  color: #2B353E;
   font-size: 14px;
   margin: 10px 0;
 }
