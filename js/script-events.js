@@ -3,7 +3,7 @@ fetch('../json/events.json')
   .then(data => {
     data.forEach(function(element){
       $('#events-section').append(
-        '<div class="row">' +
+        '<div class="row event-collection-content">' +
           '<div class="col-md-6 event-collection">' +
             '<a href="single-event.html?id=' + element["id"] + '">' +
               '<img class="img-fluid" src="images/events/' + element["image"] +'" alt="Event-' + element["title"] + '">' +

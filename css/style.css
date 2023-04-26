@@ -1262,6 +1262,13 @@ a.disabled{
   margin: auto auto;
 }
 
+.event-collection-content {
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,0.2);
+  padding: 15px;
+}
+
 .single-event .post-image .img-fluid {
   max-height: 620px;
   max-width: 100%;    
