@@ -3,7 +3,7 @@ fetch('../json/research.json')
   .then(data => {
     data.forEach(function(element){
       var igGroup = element["ig-groups"].split(",");
-      var igGroupTags = '<ul class="feature-list system-style"><h5>IG Groups:</h5>';
+      var igGroupTags = '<ul class="feature-list system-style"><h5>Interest Groups:</h5>';
       igGroup.forEach(function(item){
         igGroupTags += '<li> <i class="tf-ion-android-checkmark-circle"></i>' + item + '</li>';
       });
