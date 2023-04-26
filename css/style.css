@@ -1276,6 +1276,10 @@ a.disabled{
   margin: auto auto;
 }
 
+.event-content {
+  margin-bottom: 30px;
+}
+
 .event-post-box {
   display: flex;
 }

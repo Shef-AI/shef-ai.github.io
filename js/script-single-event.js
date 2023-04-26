@@ -26,7 +26,7 @@ fetch('../json/events.json')
                         )+                 
                     '</ul>' +
                     '<h3>' + element["title"] + '</h3>' +
-                    '<div class="system-link">' + element["body"] + '</div>' +
+                    '<div class="event-content system-link">' + element["body"] + '</div>' +
                     '<ul class="post-content-share list-inline">' +
                         '<li class="list-inline-item">' +
                             '<a href="#"><i class="tf-ion-social-twitter"></i></a>' +
