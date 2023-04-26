@@ -10,11 +10,15 @@ fetch('../json/research.json')
       igGroupTags += '</ul>';
 
       $('#research-section').append(
-        '<div class="col-md-6 col-sm-4 research">' +
-          '<a href="#"><img src="images/research/' + element["image"] + '" alt="Reseach-Group-' + element["title"] + '" class="img-fluid"></a>' +
-          '<p><h3>' + element["title"] + '</h3></p>' +
-          '<p>' + element["description"] + '</p>' +
-          igGroupTags +
+        '<div class="col-md-6 col-sm-4 research-box">' +
+          '<div class="research-item">' +
+            '<a href="#"><img src="images/research/' + element["image"] + '" alt="Reseach-Group-' + element["title"] + '" class="img-fluid"></a>' +
+              '<div class="research-content">' +
+                '<p><h3>' + element["title"] + '</h3></p>' +
+                '<p>' + element["description"] + '</p>' +
+                igGroupTags +
+              '</div>' +
+          '</div>' +
         '</div>' 
       );
     });

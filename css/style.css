@@ -1021,7 +1021,7 @@ a.disabled{
 /*=================================================================
   Research area section
   ==================================================================*/
-.research .feature-list {
+.research-content .feature-list {
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 12px;
@@ -1031,7 +1031,7 @@ a.disabled{
   padding-bottom: 10px;
 }
 
-.research .feature-list li {
+.research-content .feature-list li {
   width: 50%;
   color: #000;
   display: inline-block;
@@ -1042,9 +1042,37 @@ a.disabled{
   padding-left: 5px;
 }
 
-.research .feature-list li i {
+.research-content .feature-list li i {
   color: #440099;
   margin-right: 8px;
+}
+
+.research-box {
+  display: flex;
+  flex: 0 0 47%;
+  padding-right: 15px;
+  padding-left: 15px;
+  max-width: 47%;
+  margin-bottom: 20px;
+}
+
+.research-item {
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,0.2);
+}
+
+.research-content {
+  padding: 15px;
+}
+
+.research-box-short {
+  display: flex;
+  flex: 0 0 33%;
+  padding-right: 15px;
+  padding-left: 15px;
+  max-width: 33%;
+  margin-bottom: 20px;
 }
 
 /*=================================================================

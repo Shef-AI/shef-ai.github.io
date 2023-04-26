@@ -4,11 +4,22 @@ fetch('../json/research.json')
     for (var i = 0; i < data.length && i < 3; i++) {
       var newsElement = data[i];
       $('#research-section').append(
-        '<div class="col-md-4 col-sm-4">' +
-          '<a href="#"><img src="images/research/' + newsElement["image"] + '" alt="Reseach-Group-' + newsElement["title"] + '" class="img-fluid"></a>' +
-          '<p><h3>' + newsElement["title"] + '</h3></p>' +
-          '<p>' + newsElement["description"] + '</p>' +
+        '<div class="col-md-4 col-sm-4 research-box-short">' +
+          '<div class="research-item">' +
+            '<a href="#"><img src="images/research/' + newsElement["image"] + '" alt="Reseach-Group-' + newsElement["title"] + '" class="img-fluid"></a>' +
+              '<div class="research-content">' +
+                '<p><h3>' + newsElement["title"] + '</h3></p>' +
+                '<p>' + newsElement["description"] + '</p>' +
+              '</div>' +
+          '</div>' +
         '</div>' 
+
+
+        // '<div class="col-md-4 col-sm-4">' +
+        //   '<a href="#"><img src="images/research/' + newsElement["image"] + '" alt="Reseach-Group-' + newsElement["title"] + '" class="img-fluid"></a>' +
+        //   '<p><h3>' + newsElement["title"] + '</h3></p>' +
+        //   '<p>' + newsElement["description"] + '</p>' +
+        // '</div>' 
       );
     }
   });
