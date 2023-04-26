@@ -15,11 +15,11 @@ fetch('../json/news.json')
                     '<img class="img-fluid w-100" src="images/news/' + element["image"] + '" alt=News-"' + element["title"] + '">' + 
                 '</div>' +
                 '<div class="post-content">' +
-                    '<ul class="list-inline">' +
+                    '<ul class="list-inline news-item">' +
                         '<i class="bi bi-calendar"> ' + element["date"] + '</i>' +
                     '</ul>' +
                     '<h3>' + element["title"] + '</h3>' +
-                    '<p>' + element["body"] + '</p>' + 
+                    '<div class="news-content system-link">' + element["body"] + '</div>' + 
                     '<ul class="post-content-share list-inline">' +
                         '<li class="list-inline-item">' +
                             '<a href="#"> <i class="tf-ion-social-twitter"></i> </a>' +
@@ -50,7 +50,7 @@ fetch('../json/news.json')
                     '</div>' +
                     '<div class="widget-post-content">' +
                         '<a href="single-news.html?id=' + newsElement["id"] + '"><h5>' + newsElement["title"] + '</h5></a>' + 
-                        '<h6>' + newsElement["date"] + '</h6>' +
+                        '<h6 style="color:#005A8F">' + newsElement["date"] + '</h6>' +
                     '</div>' +
                 '</li>' 
             );

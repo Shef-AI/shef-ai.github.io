@@ -9,6 +9,42 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: local(""),
+    url(/fonts/source-sans-pro-v21-latin-300.woff2) format("woff2"),
+    url(/fonts/source-sans-pro-v21-latin-300.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url(/fonts/source-sans-pro-v21-latin-regular.woff2) format("woff2"),
+    url(/fonts/source-sans-pro-v21-latin-regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local(""),
+    url(/fonts/source-sans-pro-v21-latin-700.woff2) format("woff2"),
+    url(/fonts/source-sans-pro-v21-latin-700.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 900;
+  src: local(""),
+    url(/fonts/source-sans-pro-v21-latin-900.woff2) format("woff2"),
+    url(/fonts/source-sans-pro-v21-latin-900.woff) format("woff");
+}
+
 [class^="tf-"], [class*=" tf-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'themefisher-font' !important;

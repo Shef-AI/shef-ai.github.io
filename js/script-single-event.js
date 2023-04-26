@@ -15,18 +15,18 @@ fetch('../json/events.json')
                     '<img class="img-fluid" src="images/events/' + element["image"] + '" alt="Event-' + element["title"] + '">' +
                 '</div>' +
                 '<div class="post-content">' +
-                    '<ul class="list-inline">' +
+                    '<ul class="list-inline event-item">' +
                         '<i class="bi bi-calendar"> ' + element["date"] + ' <br/></i>' +
                         '<i class="bi bi-clock"> ' + element["time"] + ' <br/></i>' +
                         '<i class="bi bi-alarm"> ' + element["duration"] + ' Hours<br/></i>' +
                         '<i class="bi bi-geo-alt"> ' + element["location"] + ' <br/></i>' +
                         (element["virtual"] ? 
-                            ('<i class="bi bi bi-camera-video"><a href="' + element["virtual"] + ' "> Virtual Participation Link</a><br/></i>') : 
+                            ('<i class="bi bi bi-camera-video system-link-virtual"><a href="' + element["virtual"] + ' "> Virtual Participation Link</a><br/></i>') : 
                             '<br/>'
                         )+                 
                     '</ul>' +
                     '<h3>' + element["title"] + '</h3>' +
-                    '<p>' + element["body"] + '</p>' +
+                    '<div class="system-link">' + element["body"] + '</div>' +
                     '<ul class="post-content-share list-inline">' +
                         '<li class="list-inline-item">' +
                             '<a href="#"><i class="tf-ion-social-twitter"></i></a>' +

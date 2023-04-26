@@ -10,9 +10,9 @@ fetch('../json/news.json')
                         '<img loading="lazy" src="images/news/' + newsElement["image"] + '" alt="News-' + newsElement["title"] + '" class="img-fluid">' +
                     '</div>' +
                     '<div class="content">' +
-                        '<p><i class="bi bi-calendar"> ' + newsElement["date"] +'</i></p>'+
+                        '<p class="news-item"><i class="bi bi-calendar"> ' + newsElement["date"] +'</i></p>'+
                         '<h3><a href="single-news.html?id=' + newsElement["id"] + '">' + newsElement["title"] + '</a></h3>' +
-                        '<p>' + newsElement["summary"] + '</p>' +
+                        '<p class="system-link">' + newsElement["summary"] + '</p>' +
                         '<a class="btn btn-main" href="single-news.html?id=' + newsElement["id"] + '">Read more</a>' +
                     '</div>' +
                 '</div>' +
