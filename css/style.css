@@ -1748,8 +1748,8 @@ a.disabled{
 .single-member a:hover {
   transition: none;
   color: #fff;
-  background: #1468a0;
-  border-color: #1468a0;
+  background: rgb(68, 0, 153);
+  border-color: #440099;
 }
 
 .single-member .list-inline a:hover {
