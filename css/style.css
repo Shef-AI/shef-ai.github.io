@@ -2745,6 +2745,10 @@ a.disabled{
   .author-social {
     margin-left: 0;
   }
+  .research-box {
+    flex: none;
+    max-width: 100%;
+  }
   .social-media {
     padding-bottom: 30px;
   }
@@ -2759,6 +2763,10 @@ a.disabled{
   }
   .news-collection .img-fluid {
     height: 135px !important;
+  }
+  .research-box {
+    flex: none;
+    max-width: 100%;
   }
   .social-media {
     padding-bottom: 30px;
@@ -2905,6 +2913,10 @@ a.disabled{
   .author-avatar {
     margin-right: 10px;
   }
+  .research-box {
+    flex: none;
+    max-width: 100%;
+  }
   .social-media {
     padding-bottom: 30px;
   }
@@ -2972,6 +2984,10 @@ a.disabled{
   /* blog page */
   .tab-post-nav li a {
     padding: 10px 15px;
+  }
+  .research-box {
+    flex: none;
+    max-width: 100%;
   }
   .social-media {
     padding-bottom: 30px;
