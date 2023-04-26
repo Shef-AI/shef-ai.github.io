@@ -972,7 +972,7 @@ a.disabled{
   margin-right: 12px;
   margin-left: -45px;
   content: "\f375";
-  font-family: "Source Sans Pro";
+  font-family: "themefisher-font";
   opacity: 1;
   border-radius: 50%;
   padding: 2px 8px;
@@ -1339,6 +1339,10 @@ a.disabled{
 /*=================================================================
   Pricing section
 ==================================================================*/
+.pricing-table-box {
+  display: flex;
+}
+
 .pricing-table {
   padding: 100px 0;
   background: url("../images/software-bg.jpg");
@@ -1350,7 +1354,7 @@ a.disabled{
 }
 
 .pricing-table:before {
-  background: rgba(0, 0, 0, 0.62);
+  background: rgba(0, 0, 0, 0.30);
   position: absolute;
   z-index: 999;
   content: '';
@@ -1369,6 +1373,10 @@ a.disabled{
   padding: 40px 55px 65px;
   background: #fff;
   margin-bottom: 20px;
+
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,0.2);
 }
 
 .pricing-table .pricing-item a.btn-main {

@@ -13,13 +13,6 @@ fetch('../json/research.json')
               '</div>' +
           '</div>' +
         '</div>' 
-
-
-        // '<div class="col-md-4 col-sm-4">' +
-        //   '<a href="#"><img src="images/research/' + newsElement["image"] + '" alt="Reseach-Group-' + newsElement["title"] + '" class="img-fluid"></a>' +
-        //   '<p><h3>' + newsElement["title"] + '</h3></p>' +
-        //   '<p>' + newsElement["description"] + '</p>' +
-        // '</div>' 
       );
     }
   });
@@ -30,7 +23,7 @@ fetch('../json/software.json')
     for (var i = 0; i < data.length && i < 3; i++) {
       var newsElement = data[i];
       $('#software-section').append(
-        '<div class="col-md-4 col-sm-6 col-xs-12">' +
+        '<div class="col-md-4 col-sm-6 col-xs-12 research-box-short">' +
           '<div class="pricing-item">' +
             '<div class="price-title">' +
               '<strong class="value">' + newsElement["title"] + '</strong>' +

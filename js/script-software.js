@@ -11,7 +11,7 @@ fetch('../json/software.json')
       language_list += '</ul>'
     
       $('#software-section').append(
-        '<div class="col-md-4 col-sm-6 col-xs-12">' +
+        '<div class="col-md-4 col-sm-6 col-xs-12 pricing-table-box">' +
           '<div class="pricing-item">' +
             '<div class="price-title">' +
               '<strong class="value">' + element["title"] + '</strong>' +
