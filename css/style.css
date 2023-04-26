@@ -944,6 +944,10 @@ a.disabled{
   margin-right: 8px;
 }
 
+.about-forms {
+  display: flex;
+}
+
 /*=================================================================
   About us 2 section
 ==================================================================*/
@@ -1568,6 +1572,8 @@ a.disabled{
 ==================================================================*/
 .service-2 .service-item {
   border: 1px solid #eee;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2);
   margin-bottom: 30px;
   padding: 50px 20px;
   transition: all 0.3s ease 0s;
