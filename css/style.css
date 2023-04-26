@@ -1259,6 +1259,20 @@ a.disabled{
   margin: auto auto;
 }
 
+.news-content {
+  margin-bottom: 30px;
+}
+
+.news-item i {
+  color: #005A8F;
+  font-weight: 900;
+}
+
+.news-item i:before {
+  color: #005A8F;
+}
+
+
 /*=================================================================
   Pricing section
 ==================================================================*/
@@ -1986,13 +2000,13 @@ a.disabled{
 
 .post-content-share li a i {
   line-height: 45px;
-  color: #000;
+  color: #440099;
   transition: .3s ease;
 }
 
 .post-content-share li:hover {
-  background: #28ABE3;
-  border-color: #28ABE3;
+  background: #440099;
+  border-color: #fff;
 }
 
 .post-content-share li:hover i {
