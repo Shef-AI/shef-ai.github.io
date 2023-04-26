@@ -1862,10 +1862,50 @@ a.disabled{
   border-color: #440099;
 }
 
-.single-member .list-inline a:hover {
-  color: #1468a0;
-  background: #fff;
+.single-member-share {
+  margin-bottom: 100px;
 }
+
+.single-member-share li {
+  height: 45px;
+  width: 45px;
+  border: 1px solid #ddd;
+  text-align: center;
+  background: #fff;
+  transition: .3s ease;
+  margin-right: 10px;
+}
+
+.single-member-share li a i {
+  line-height: 45px;
+  color: #440099;
+  transition: .3s ease;
+}
+
+.single-member-share a:hover {
+  background: none;
+}
+
+.single-member-share li:hover {
+  background: #440099;
+  border-color: #fff;
+}
+
+.single-member-share li:hover i {
+  color: #fff;
+}
+
+.single-member-share li.disabled-item:hover {
+  pointer-events: none!important;
+  background: #fff;
+  border-color: #ddd;
+}
+
+.single-member-share li.disabled-item:hover i {
+  pointer-events: none!important;
+  color: #440099;
+}
+
 
 .interests .feature-list {
   margin-top: 10px;

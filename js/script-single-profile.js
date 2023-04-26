@@ -40,12 +40,11 @@ fetch('../json/people.json')
                         '<p>' + element["position"] + '</p>'+
                         '<h5>' + element["affiliation"] + '</h5>'+
       
-                        '<ul class="list-inline mt-4">'+
-                            '<li class="list-inline-item"><a href="' + element["homepage"] + '" target="_blank" class=' + (element["homepage"].trim() == "#" ? "disabled" : "") + '><i class="tf-ion-link" style="font-size: 40px"></i></a></li>'+
-                            '<li class="list-inline-item"><a href="' + element["linkedin"] + '" target="_blank" class=' + (element["linkedin"].trim() == "#" ? "disabled" : "") + '><i class="tf-ion-social-linkedin" style="font-size: 40px"></i></a></li>'+
-                            '<li class="list-inline-item"><a href="' + element["google_scholar"] + '" target="_blank" class=' + (element["google_scholar"].trim() == "#" ? "disabled" : "") + '><i class="tf-ion-social-google" style="font-size: 40px"></i></a></li>'+
-                            '<li class="list-inline-item"><a href="' + element["github"]+ '" target="_blank" class=' + (element["github"].trim() == "#" ? "disabled" : "") + '><i class="tf-ion-social-github" style="font-size: 38px"></i></a></li>'+
-
+                        '<ul class="single-member-share list-inline mt-4">'+
+                            '<li class="list-inline-item ' + (element["homepage"].trim() == "#" ? "disabled-item" : '') + '"><a href="' + element["homepage"] + '" target="_blank" class=' + (element["homepage"].trim() == "#" ? "disabled" : "") + '><i class="tf-ion-link" style="font-size: 30px"></i></a></li>'+
+                            '<li class="list-inline-item ' + (element["linkedin"].trim() == "#" ? "disabled-item" : '') + '"><a href="' + element["linkedin"] + '" target="_blank" class=' + (element["linkedin"].trim() == "#" ? "disabled" : "") + '><i class="tf-ion-social-linkedin" style="font-size: 30px"></i></a></li>'+
+                            '<li class="list-inline-item ' + (element["google_scholar"].trim() == "#" ? "disabled-item" : '') + '"><a href="' + element["google_scholar"] + '" target="_blank" class=' + (element["google_scholar"].trim() == "#" ? "disabled" : "") + '><i class="tf-ion-social-google" style="font-size: 30px"></i></a></li>'+
+                            '<li class="list-inline-item ' + (element["github"].trim() == "#" ? "disabled-item" : '') + '"><a href="' + element["github"]+ '" target="_blank" class=' + (element["github"].trim() == "#" ? "disabled" : "") + '><i class="tf-ion-social-github" style="font-size: 30px"></i></a></li>'+
                         '</ul>'+
                     '</div><br/>'+
                     areasTermsTags +
