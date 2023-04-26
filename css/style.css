@@ -69,6 +69,7 @@ a {
   color: #440099;
   border-bottom: none;
   font-weight: 700;
+  font-size: 16px;
 }
 
 .system-link-virtual a:hover {
@@ -1275,6 +1276,7 @@ a.disabled{
 .event-item i {
   color: #005A8F;
   font-weight: 900;
+  font-size: 16px;
 }
 
 .event-item i:before {
@@ -1311,6 +1313,7 @@ a.disabled{
 .news-item i {
   color: #005A8F;
   font-weight: 900;
+  font-size: 16px;
 }
 
 .news-item i:before {
