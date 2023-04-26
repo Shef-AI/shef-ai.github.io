@@ -21,11 +21,11 @@ fetch('../json/events.json')
                 '<i class="bi bi-geo-alt"> ' + element["location"] + '</i>' +
               '</ul>' +
               (element["virtual"] ? 
-                ('<ul class="list-inline system-style"><i class="bi bi bi-camera-video"><a href="' + element["virtual"] + ' "> Virtual Participation Link</a><br/></i></ul>') : 
+                ('<ul class="list-inline system-style system-link-virtual"><i class="bi bi bi-camera-video"><a href="' + element["virtual"] + ' "> Virtual Participation Link</a><br/></i></ul>') : 
                 '<br/>'
               )+  
             '</p>' +
-            '<p>' + element["summary"] + '</p>' +
+            '<p class="system-link">' + element["summary"] + '</p>' +
           '</div>' +
         '</div>' +
         '<p></p><p></p>');
