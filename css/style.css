@@ -54,6 +54,16 @@ a {
   transition: all .3s ease-in 0s;
 }
 
+.system-link a {
+  color: #440099;
+  border-bottom: 2px solid #D0D2D4;
+  font-weight: 700;
+}
+
+.system-link a:hover {
+  color: #005A8F;
+}
+
 iframe {
   border: 0;
 }
@@ -1685,18 +1695,18 @@ a.disabled{
 .team .team-member .member-content h3 {
   font-size: 23px;
   margin: 0 0 5px;
-  color: #333;
+  color: #440099;
 }
 
 .team .team-member .member-content h4 {
   font-size: 15px;
   margin: 0 0 5px;
-  color: #757575;
+  color: #000;
 }
 
 .team .team-member .member-content span {
   font-size: 14px;
-  color: #555;
+  color: #440099;
 }
 
 .team .team-member .member-content p {
@@ -1773,7 +1783,6 @@ a.disabled{
   margin-right: 8px;
 }
 
-
 .team .member-photo:hover img {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
@@ -1784,7 +1793,7 @@ a.disabled{
 }
 
 .team .member-photo .mask {
-  background: rgba(40, 171, 227, 0.7);
+  background: #440099b3;
   position: absolute;
   width: 100%;
   bottom: 0;
