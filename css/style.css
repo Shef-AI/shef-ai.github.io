@@ -1940,6 +1940,9 @@ a.disabled{
 .post-item {
   background: #fff;
   margin-bottom: 20px;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px 0 rgba(0,0,0,0.2)
 }
 
 .post-item .content {
