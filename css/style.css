@@ -2749,6 +2749,10 @@ a.disabled{
     flex: none;
     max-width: 100%;
   }
+  .research-box-short {
+    flex: none;
+    max-width: 100%;
+  }
   .social-media {
     padding-bottom: 30px;
   }
@@ -2765,6 +2769,10 @@ a.disabled{
     height: 135px !important;
   }
   .research-box {
+    flex: none;
+    max-width: 100%;
+  }
+  .research-box-short {
     flex: none;
     max-width: 100%;
   }
@@ -2917,6 +2925,10 @@ a.disabled{
     flex: none;
     max-width: 100%;
   }
+  .research-box-short {
+    flex: none;
+    max-width: 100%;
+  }
   .social-media {
     padding-bottom: 30px;
   }
@@ -2986,6 +2998,10 @@ a.disabled{
     padding: 10px 15px;
   }
   .research-box {
+    flex: none;
+    max-width: 100%;
+  }
+  .research-box-short {
     flex: none;
     max-width: 100%;
   }
