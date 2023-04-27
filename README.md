@@ -3,7 +3,7 @@
 
  <div align="center" width="50px"> 
      <a href="https://shef-ai.github.io/"><img src="https://avatars.githubusercontent.com/u/94853016?s=400&u=4c39d19e8e83f556b8d0c13170df35178ff669f0&v=4" alt="logo" width="20%" /></a>
-     <p font-size="100px"><b>Sheffield Centre for Machine Intelligence Community</b></p> 
+     <p font-size="100px"><b>Sheffield Data Science and AI Community</b></p> 
  </div>
 
 ----
@@ -12,7 +12,7 @@
 [![GitHub forks](https://img.shields.io/github/forks/shef-ai/shef-ai.github.io)](https://github.com/shef-ai/shef-ai.github.io/network)
 [![GitHub license](https://img.shields.io/github/license/shef-ai/shef-ai.github.io)](https://github.com/shef-ai/shef-ai.github.io/blob/main/LICENSE)
 
-This is the official website for the Centre for Machine Intelligence Community at The University of Sheffield. 
+This is the official website for the Sheffield Data Science and AI Community. 
 
 ## How to update the LinkedIn post
 To update the latest LinkedIn post on the website:
