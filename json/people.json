@@ -689,6 +689,23 @@
     },
     {
         "title": "Dr",
+        "name": "Thomas Wilkes",
+        "position": "Research Fellow",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Science",
+        "research_interest_terms": "Computer vision, Information retrieval, Machine learning",
+        "short_biography": "Thomas joined The University of Sheffield in 2015, where he completed a PhD on the development of low-cost remote sensing instruments for application in volcano monitoring. Subsequently, as a post-doctoral researcher at The University of Sheffield, he was responsible for the development and wider dissemination of SO2 measurement systems.\n\nIn 2021 he began a three-year Leverhulme Early Career Fellowship at Sheffield. The project aims to improve our understanding of SO2 emissions from volcanoes, namely their measurement, associated errors, and how these relate to volcanic activity.",
+        "research_interest_summary": "I began my academic career as a geoscientist but through my PhD (and beyond) I have developed further skills and interests in software engineering (predominantly in Python), instrument design and machine learning. I have recently developed a CNN model for the semantic segmentation of explosive volcanic plumes in webcam imagery, with the aim of automating the provision of important monitoring parameters for volcano observatories. As machine learning continues to grow rapidly, and become more freely/easily available to end-users, I continue to look for ways that it can be used to help to solve problems in volcanology.",
+        "homepage": "https://www.sheffield.ac.uk/geography/people/academic-staff/thomas-wilkes",
+        "linkedin": "#",
+        "google_scholar": "https://scholar.google.com/citations?user=t39nA-IAAAAJ&hl=en",
+        "github": "https://github.com/twVolc",
+        "photo": "15yG-NtjqELJAwpgGTek5DtiBV6R0w4sZ.jpg",
+        "id": "15yG-NtjqELJAwpgGTek5DtiBV6R0w4sZ",
+        "shef_ai_link": "thomas-wilkes"
+    },
+    {
+        "title": "Dr",
         "name": "Tom Stafford",
         "position": "Senior Lecturer in Psychology & Cognitive Science",
         "affiliation": "University of Sheffield",
