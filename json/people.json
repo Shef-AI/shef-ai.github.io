@@ -706,6 +706,23 @@
     },
     {
         "title": "Dr",
+        "name": "Tom Pering",
+        "position": "Senior Lecturer in Volcanology",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Science, Humanities and Social Sciences",
+        "research_interest_terms": "Machine learning, Mathematical modelling, Statistical methods and theory, Visualisation",
+        "short_biography": "I am a volcanologist and Senior Lecturer at the University of Sheffield with an interest in developing low-cost monitoring techniques with the goal of eruption forecasting. I am also interested in understanding the mechanisms for eruptive activity in basaltic magmas. I obtained my PhD in Volcanology from the University of Sheffield following on from a Masters in Volcanology and Geological Hazards at Lancaster. My teaching in the department includes first and second year statistics.",
+        "research_interest_summary": "The volcano team at Sheffield has a particular expertise in the usage of ultraviolet cameras for the measurement of sulphur dioxide emissions. We are currently developing the techniques and protocols for full and automated usage of these systems, looking to incorporate machine learning techniques. I am also interested in the modelling of gas-liquid flow computationally and in the lab.",
+        "homepage": "https://www.sheffield.ac.uk/geography/people/academic-staff/tom-pering",
+        "linkedin": "#",
+        "google_scholar": "https://scholar.google.co.uk/citations?user=i2UrS9gAAAAJ&hl=en",
+        "github": "#",
+        "photo": "1F2X2IF805m3exBoT218QgX2MYewgZXrK.jpg",
+        "id": "1F2X2IF805m3exBoT218QgX2MYewgZXrK",
+        "shef_ai_link": "tom-pering"
+    },
+    {
+        "title": "Dr",
         "name": "Tom Stafford",
         "position": "Senior Lecturer in Psychology & Cognitive Science",
         "affiliation": "University of Sheffield",
