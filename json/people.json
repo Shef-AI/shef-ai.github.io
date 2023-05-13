@@ -150,6 +150,23 @@
         "shef_ai_link": "gavin-boyce"
     },
     {
+        "title": "Professor",
+        "name": "George Panoutsos",
+        "position": "Professor of Computational Intelligence",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Data-centric Engineering",
+        "research_interest_terms": "Automatic control, Machine learning, Optimisation",
+        "short_biography": "George Panoutsos received his PhD degree in automatic control and systems engineering from the University of Sheffield, Sheffield, U.K, in 2007. He joined the Department of Automatic Control and Systems Engineering (University of Sheffield, UK) as a Lecturer in 2010, and promoted to Professor of Computational Intelligence in 2019.",
+        "research_interest_summary": "George has a research grant portfolio of over £3M from the UK EPSRC, Innovate UK, EU Horizon 2020 and direct industry funding, as well as over 100 research publications in theoretical as well as applied contributions in the areas of computational intelligence, data-driven modelling, optimisation, and decision support systems. In terms of applied research, the majority of his work is on advanced manufacturing systems, as well as healthcare applications, while also currently exploring research applications in infrastructure.",
+        "homepage": "https://www.sheffield.ac.uk/acse/department/people/academic/george-panoutsos",
+        "linkedin": "https://www.linkedin.com/in/george-panoutsos-88984a226/",
+        "google_scholar": "https://scholar.google.com/citations?user=Fqj53uoAAAAJ&hl=en",
+        "github": "#",
+        "photo": "1UEGHDabFMPRB8aK3NmpCnFoXMA8Fh-Ae.jpg",
+        "id": "1UEGHDabFMPRB8aK3NmpCnFoXMA8Fh-Ae",
+        "shef_ai_link": "george-panoutsos"
+    },
+    {
         "title": "Dr",
         "name": "Giuliano Punzo",
         "position": "The University of Sheffield",
