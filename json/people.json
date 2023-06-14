@@ -825,6 +825,23 @@
     },
     {
         "title": "Mr",
+        "name": "Ze Zhang",
+        "position": "Research Associate",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Data-centric Engineering",
+        "research_interest_terms": "Computer vision, Machine learning, Robotics",
+        "short_biography": "Ze Zhang is currently a Research Associate within the Department of Automatic Control and\nSystems Engineering at the University of Sheffield, and a research theme lead within the EPSRC Made Smarter Innovation - Research Centre for Connected Factories on the topic of in-process monitoring. He finished his Ph.D. in 2023 at the University of Sheffield on deep learning based sensor fusion and received his M.Sc. degree in Electronic and Electrical Engineering from the University of Sheffield in 2018. Before his research career, he worked in the electric power industry after graduating from his B.Sc at Jiangnan University in 2012. ",
+        "research_interest_summary": "His research focuses on the use of artificial intelligence for manufacturing systems, including in-process monitoring and robot perception systems. His interested technologies include sensor fusion, multi-modal fusion, computer vision and generative deep learning.  ",
+        "homepage": "https://www.sheffield.ac.uk/acse/department/people/research-staff/ze-zhang",
+        "linkedin": "https://www.linkedin.com/in/ze-zhang-781306259",
+        "google_scholar": "https://scholar.google.com/citations?hl=en&user=MLrRd0AAAAAJ",
+        "github": "https://github.com/Zee0549",
+        "photo": "1XfDU-hhWEuLpUz7OgrQZxrdBnUlXPhXn.jpg",
+        "id": "1XfDU-hhWEuLpUz7OgrQZxrdBnUlXPhXn",
+        "shef_ai_link": "ze-zhang"
+    },
+    {
+        "title": "Mr",
         "name": "xulong wang",
         "position": "PhD student",
         "affiliation": "University of sheffield",
