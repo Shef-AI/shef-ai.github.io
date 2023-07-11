@@ -11,6 +11,18 @@
         "id": "1lcCCVI-lrl2FG4lG1caWgKLYDDg9_s2R"
     },
     {
+        "time": "11:00",
+        "date": "Tuesday 13 June 2023",
+        "duration": 1,
+        "location": "Ada Lovelace room, Regent Court",
+        "virtual": "http://meet.google.com/aaf-mbqj-cot",
+        "title": "Dr. Hwee Kuan Lee talk",
+        "summary": "Hwee Kuan Lee’s talk. Their current research involves developing Artificial Intelligence (AI) research for clinical and biological applications. His laboratory focuses on diverse research activities, including more basic AI-centric research as well as AI applications.",
+        "body": "Fully supervised Deep Learning methods are very effective in providing high performance. However, this approach has two major drawbacks. Firstly fully supervised methods require tedious expert annotations.\nSecondly, the AI trained on expert labels cannot surpass the standard of the expert and therefore AI performance degrades as the labels become noisy. We proposed an indirect way of training our AI models using a weakly supervised, multi-instance, multi-task learning paradigm that avoids detailed annotations.\nWith this indirect way of training our AI, we demonstrated that our learning paradigm can elucidate\ninstance-level features very well. This work also provides mathematical guarantees on some properties of our weakly supervised method.",
+        "image": "1FXO6YW5KHL3f88xnHP-Zh7QeoGYpcrAA.png",
+        "id": "1FXO6YW5KHL3f88xnHP-Zh7QeoGYpcrAA"
+    },
+    {
         "time": "12:00",
         "date": "Monday 22 May 2023",
         "duration": 1,
