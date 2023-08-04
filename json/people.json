@@ -437,6 +437,23 @@
         "shef_ai_link": "michael-farnsworth"
     },
     {
+        "title": "Professor",
+        "name": "Mike Thelwall",
+        "position": "Professor of Data Science",
+        "affiliation": "Information School, University of Sheffield",
+        "research_areas": "Humanities and Social Sciences",
+        "research_interest_terms": "Natural language processing, Social data science, Social media",
+        "short_biography": "I am a social scientist, programmer and mathematician. have researched social media methods and bibliometrics (research evaluation), collaborated on many international multidisciplinary research projects and have worked on external contracts applying innovative bibliometrics for various external organisations, including the United Nations Development Programme. I was part of the Metric Tide group that evaluated the role of bibliometrics in the Research Excellence Framework and now sit on the UK Forum for Responsible Research Metrics. In 2022 I led a team assessing whether artificial intelligence could play a role in future research assessment in the UK.",
+        "research_interest_summary": "I am interested in applying machine learning to social science problems. I have used machine learning for sentiment analysis and research quality estimation but am looking to connect to other social scientists to work on applied problems.",
+        "homepage": "https://www.sheffield.ac.uk/is/people/academic/mike-thelwall",
+        "linkedin": "https://uk.linkedin.com/in/mikethelwall",
+        "google_scholar": "https://scholar.google.ca/citations?user=8jCKL1sAAAAJ&hl=en",
+        "github": "#",
+        "photo": "17slwOqMF01ykzke74p-PbqIzH-WVo9LD.png",
+        "id": "17slwOqMF01ykzke74p-PbqIzH-WVo9LD",
+        "shef_ai_link": "mike-thelwall"
+    },
+    {
         "title": "Mr",
         "name": "Mohammod Naimul Islam Suvon",
         "position": "Research Support Engineer",
