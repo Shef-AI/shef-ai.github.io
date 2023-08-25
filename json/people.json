@@ -624,6 +624,23 @@
         "shef_ai_link": "robert-turner"
     },
     {
+        "title": "Dr",
+        "name": "Rodrigo Kazu Siqueira",
+        "position": "Data Scientist / Researcher",
+        "affiliation": "AMRC / INSIGNEO",
+        "research_areas": "Health and Medical Sciences, Data-centric Engineering, Cross-cutting Challenges",
+        "research_interest_terms": "Data structures and algorithms, Machine learning, Neuroscience and cognitive science, Visualisation",
+        "short_biography": "ORCID: orcid.org/0000-0002-3511-6439\nScopus Author ID: 56590059200 \n\nI am a researcher in computational neuroscience with experience in complex networks, comparative neuroanatomy and cell culturing. I am a member of INSIGNEO and a data scientist for the AMRC at the University of Sheffield. My primary computational skills include Python, C/C++, MATLAB, R, data mining, predictive analysis and data analytics All of that with the communication of actionable results demonstrated by my various talks and papers, most of which are available online. ",
+        "research_interest_summary": "My research interests include general intelligence, network neuroscience and information processing in the somatosensory cortex.  My latest work helped people walk again through the modelling of tactile responses for real-time feedback prosthetics! Additionally, I am trying to change the way we understand brain development utilising a computational model of neuronal networks based on brain evolution network neuroscience. Currently at the AMRC, I am shaping the next generation of data scientists leading a project called NextGen that also showcases the capabilities of our AMRC data cloud. I am also a part of several projects that include data analytics, technical delivery and client engagement for data-driven projects in manufacturing.",
+        "homepage": "#",
+        "linkedin": "https://www.linkedin.com/in/rodrigokazu/",
+        "google_scholar": "https://scholar.google.co.uk/citations?user=9L_gpmUAAAAJ&hl=en",
+        "github": "https://github.com/rodrigokazu",
+        "photo": "1qzbHg8MR0q0fxVpFL6EO6ClXXx799vZi.png",
+        "id": "1qzbHg8MR0q0fxVpFL6EO6ClXXx799vZi",
+        "shef_ai_link": "rodrigo-kazu-siqueira"
+    },
+    {
         "title": "Professor",
         "name": "Roger K. Moore",
         "position": "Chair of Spoken Language Processing",
