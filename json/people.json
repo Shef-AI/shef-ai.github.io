@@ -659,6 +659,23 @@
     },
     {
         "title": "Dr",
+        "name": "Ronald Dyer",
+        "position": "Academic Lead - Digital Innovation - SUMS",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Health and Medical Sciences, Humanities and Social Sciences",
+        "research_interest_terms": "Data structures and algorithms, Information retrieval, Machine learning, Robotics, Visualisation",
+        "short_biography": "I possesses over 20 years of project management experience across financial service, education, agriculture and energy focused organisational transformation initiatives.\n\nHe has worked on several large IT integration projects at Goldman Sachs, Citi-Bank and the Inter-American Development Bank.\n\nDr. Dyer is a graduate of Grenoble Ecole de Management, France, where he attained a Doctorate in Business Administration, holds an MBA in Project Management from - Henley Graduate School of Business University of Reading, UK as well as undergraduate degree from Wilfrid Laurier University, Canada in Business Administration.",
+        "research_interest_summary": "Research focuses on utilization of game-based-learning, data visualization and artificial intelligence - technology assets (i.e. artefacts) for improved decision-making and problem-solving within organization. The research is underpinned by ludus and paidia theory, presenting opportunities for innovative co-created solutions informing human performance improvement through game-play.\n\nThese tech-assets/artefacts incorporate AI and analytics leveraging play typologies to identify user approaches to adoption and optimization of operational capabilities, improved synthesis of information, contextualization of opportunities, problems-analysis, scenario development and organizational performance.",
+        "homepage": "https://www.sheffield.ac.uk/management/people/academic-staff/ronald-dyer",
+        "linkedin": "#",
+        "google_scholar": "https://scholar.google.com/citations?hl=en&user=2iDTQU8AAAAJ",
+        "github": "#",
+        "photo": "1lhl2NstAocWo1HAjCDBl7WBqT7tQEdUU.jfif",
+        "id": "1lhl2NstAocWo1HAjCDBl7WBqT7tQEdUU",
+        "shef_ai_link": "ronald-dyer"
+    },
+    {
+        "title": "Dr",
         "name": "Ross Drummond",
         "position": "Research Fellow",
         "affiliation": "University of Sheffield",
