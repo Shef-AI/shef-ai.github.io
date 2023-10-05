@@ -219,6 +219,23 @@
     },
     {
         "title": "Professor",
+        "name": "Guy Brown",
+        "position": "Professor of Computer Science",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Health and Medical Sciences",
+        "research_interest_terms": "Human computer interface, Machine learning, Speech recognition",
+        "short_biography": "Professor Brown has led a team focused on the design and development of machine hearing systems at Sheffield for more than 25 years. From 2015-2023 he was Head of the Department of Computer Science. He is the co-editor (with DeLiang Wang) of Computational auditory scene analysis: Principles, Algorithms, and Applications (IEEE Press/Wiley-Interscience).",
+        "research_interest_summary": "My main research interest is machine hearing, which aims to build AI systems that replicate the ability of human listeners to understand complex mixtures of sound. I have published on noise-robust automatic speech recognition, models of auditory function in normal and impaired hearing, models of binaural sound localisation and the phonetics of overlapping speech. Most recently my interests have focused on applications of machine hearing in health technology, particularly on the use of acoustic biomarkers to screen for sleep disordered breathing (obstructive sleep apnoea) and tuberculosis.",
+        "homepage": "https://www.sheffield.ac.uk/dcs/people/academic/guy-brown",
+        "linkedin": "https://www.linkedin.com/in/guy-brown-8505a0/",
+        "google_scholar": "https://scholar.google.com/citations?user=5KOpQLQAAAAJ&hl=en",
+        "github": "https://github.com/guyjbrown",
+        "photo": "19tkMfWDUEDJ_ww8-IzrJBGRfoq1s762i.jpeg",
+        "id": "19tkMfWDUEDJ_ww8-IzrJBGRfoq1s762i",
+        "shef_ai_link": "guy-brown"
+    },
+    {
+        "title": "Professor",
         "name": "Haiping Lu",
         "position": "Professor of Machine Learning",
         "affiliation": "University of Sheffield",
