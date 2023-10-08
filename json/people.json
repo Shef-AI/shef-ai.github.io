@@ -252,6 +252,22 @@
         "shef_ai_link": "haiping-lu"
     },
     {
+        "title": "Professor",
+        "name": "Ian Kellar ",
+        "position": "Professor of Health Psychology",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Health and Medical Sciences, Humanities and Social Sciences",
+        "research_interest_terms": "Information retrieval, Natural language processing, Social data science",
+        "short_biography": "I am a professor of health psychology with expertise in developing and evaluating interventions that use behaviour change techniques for implementation both in the UK and in LMICs. I have been an investigator on research grants totalling £28.6 million of funding, of which 17 were peer-reviewed Research Council grants, including 5 NIHR Programme Grants for Applied Research and 2 NIHR Research and Innovation for Global Health Transformation grants.",
+        "research_interest_summary": "I'm interested in the potential of automation to scale the analysis of qualitative data using behavioural science theories for use in large trials in behavioural medicine, and in the potential of ontology informed topic modelling to identify or extend behavioural science ontologies.",
+        "homepage": "https://www.sheffield.ac.uk/psychology/people/academic/ian-kellar",
+        "linkedin": "https://www.linkedin.com/in/driankellar",
+        "google_scholar": "https://scholar.google.com/citations?user=dxsONpsAAAAJ&hl=en&authuser=1",
+        "github": "#",
+        "id": "dbdeab59-7dae-4a42-8f70-b4efd03e92b3",
+        "shef_ai_link": "ian-kellar"
+    },
+    {
         "title": "Dr",
         "name": "Jacob Macdonald",
         "position": "Lecturer in GIS and Spatial Analysis",
