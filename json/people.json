@@ -34,6 +34,22 @@
         "shef_ai_link": "amaka-c-offiah"
     },
     {
+        "title": "Ms",
+        "name": "Amnah Alluqmani",
+        "position": "PhD student at the information school",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Humanities and Social Sciences",
+        "research_interest_terms": "Computer vision, Information retrieval, Knowledge representation, Social data science",
+        "short_biography": "I'm a PhD student in Data Science. I work on generating visual representations of clothing images to assist people with visual impairments in purchasing online.",
+        "research_interest_summary": "I have a strong interest in employing AI tools to aid individuals with visual impairments, and I'm also intrigued by the computer vision power of extracting valuable information from visual data.",
+        "homepage": "#",
+        "linkedin": "#",
+        "google_scholar": "https://scholar.google.com/citations?user=GU8DavgAAAAJ&hl=en",
+        "github": "#",
+        "id": "9354cc96-531c-42da-8d18-7045b3e041a7",
+        "shef_ai_link": "amnah-alluqmani"
+    },
+    {
         "title": "Dr",
         "name": "Andrew Cox",
         "position": "Senior Lecturer",
@@ -250,6 +266,22 @@
         "photo": "12ljRr7KrZEetwGzsiPa5uBN3AvlSXD5K.jpeg",
         "id": "12ljRr7KrZEetwGzsiPa5uBN3AvlSXD5K",
         "shef_ai_link": "haiping-lu"
+    },
+    {
+        "title": "Miss",
+        "name": "Haolin Wang",
+        "position": "AI Research Engineer",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Data-centric Engineering, Science",
+        "research_interest_terms": "Data structures and algorithms, Knowledge representation, Machine learning, Mathematical modelling, Statistical methods and theory",
+        "short_biography": "Haolin is an AI Research Engineer (AIRE) at the University of Sheffield, under the lead of Prof. Haiping Lu.\n\nHaolin received her Master’s degree in Data Analytics from the University of Sheffield in 2022. Prior to that, she received her Bachelor’s degree in Mathematics from the University of Oxford in 2021. See her LinkedIn for more information.",
+        "homepage": "#",
+        "linkedin": "https://www.linkedin.com/in/haolin-wang-26aa6b179/",
+        "google_scholar": "#",
+        "github": "https://github.com/wang-hlin",
+        "photo": "17vMIVxRMyOR1dOL_2nw0ymtUn3tg0Ag6.jpeg",
+        "id": "17vMIVxRMyOR1dOL_2nw0ymtUn3tg0Ag6",
+        "shef_ai_link": "haolin-wang"
     },
     {
         "title": "Professor",
@@ -533,6 +565,22 @@
         "photo": "1XmXlQCiisalg6wPetV0J7nOYEf2fo-oT.png",
         "id": "1XmXlQCiisalg6wPetV0J7nOYEf2fo-oT",
         "shef_ai_link": "monica-lestari-paramita"
+    },
+    {
+        "title": "Mr",
+        "name": "Neil Ireson",
+        "position": "Research Associate",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Health and Medical Sciences",
+        "research_interest_terms": "Human computer interface, Information retrieval, Machine learning, Natural language processing",
+        "research_interest_summary": "My research interests can broadly be defined as knowledge acquisition from data. This has primarily focused on the use of Machine Learning, most recently applied to the understanding of individual and population movements: to identify mobility patterns indicative of criminal activity, such as drug and human trafficking; and using mobile device sensor data to understand how contextual factors (e.g., weather, journey purpose) influence mobility, for health and well-being.",
+        "homepage": "https://www.sheffield.ac.uk/dcs/people/research-staff/neil-ireson",
+        "linkedin": "#",
+        "google_scholar": "https://scholar.google.co.uk/citations?user=XWIa0O0AAAAJ",
+        "github": "https://github.com/neilireson",
+        "photo": "1JEpk5zXEGyNlYeOk6-qHca0jFcw6OHr2.jpeg",
+        "id": "1JEpk5zXEGyNlYeOk6-qHca0jFcw6OHr2",
+        "shef_ai_link": "neil-ireson"
     },
     {
         "title": "Dr",
@@ -903,6 +951,23 @@
         "photo": "1D46KQN643hzLN1-RXWNdkqr76-exnrSc.jpg",
         "id": "1D46KQN643hzLN1-RXWNdkqr76-exnrSc",
         "shef_ai_link": "william-deakin"
+    },
+    {
+        "title": "Dr",
+        "name": "Xianyuan Liu",
+        "position": "Senior AI Research Engineer",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Health and Medical Sciences, Data-centric Engineering, Cross-cutting Challenges",
+        "research_interest_terms": "Computer vision, Machine learning",
+        "short_biography": "I currently serve as a Senior AI Research Engineer at the Department of Computer Science, and as the Assistant Head of AI Research Engineering at the Centre for Machine Intelligence, both at the University of Sheffield. My current research focuses on developing machine learning methods and tools for healthcare and multi-modal learning.",
+        "research_interest_summary": "Domain Adaptation",
+        "homepage": "https://xianyuanliu.github.io/",
+        "linkedin": "https://www.linkedin.com/in/xianyuanliu/",
+        "google_scholar": "https://scholar.google.com/citations?user=oEsfAycAAAAJ",
+        "github": "https://github.com/xianyuanliu",
+        "photo": "1S4jk7-mJlozAmdPdA-Li06on1FBskSR-.JPG",
+        "id": "1S4jk7-mJlozAmdPdA-Li06on1FBskSR-",
+        "shef_ai_link": "xianyuan-liu"
     },
     {
         "title": "Mr",
