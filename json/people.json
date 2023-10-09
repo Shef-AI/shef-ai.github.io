@@ -487,6 +487,20 @@
         "shef_ai_link": "mike-thelwall"
     },
     {
+        "title": "Dr",
+        "name": "Min Tao",
+        "position": "Research Associate",
+        "affiliation": "University of Sheffield.",
+        "research_areas": "Health and Medical Sciences, Data-centric Engineering, Science, Humanities and Social Sciences, Security and Business and Public Policy, Cross-cutting Challenges",
+        "research_interest_terms": "Automatic control, Computer systems and architectures, Data structures and algorithms, Knowledge representation, Machine learning, Mathematical modelling, Multi-agent reasoning, Optimisation, Parallel computing, Robotics, Statistical methods and theory",
+        "homepage": "#",
+        "linkedin": "#",
+        "google_scholar": "#",
+        "github": "#",
+        "id": "615d1444-b28f-48cf-afc6-fac9714e404a",
+        "shef_ai_link": "min-tao"
+    },
+    {
         "title": "Mr",
         "name": "Mohammod Naimul Islam Suvon",
         "position": "Research Support Engineer",
