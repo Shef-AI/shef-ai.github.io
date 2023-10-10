@@ -132,6 +132,23 @@
         "shef_ai_link": "dennis-wang"
     },
     {
+        "title": "Dr",
+        "name": "Donghwan Shin",
+        "position": "Lecturer in Teseting",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Security and Business and Public Policy, Cross-cutting Challenges",
+        "research_interest_terms": "Safety and ethics",
+        "short_biography": "I am a lecturer (assistant professor in the American system) at the Department of Computer Science, University of Sheffield, Sheffield, UK. My research interests lie in mutation testing, testing for ML-enabled cyber-physical systems (e.g., ML-enabled automated driving systems), and log analysis (e.g., model inference and anomaly detection). I have published many research papers at venues such as ICSE, ICST, ISSTA, and MODELS and journals such as TSE, EMSE, and STVR. Please see my Google Scholar page (https://scholar.google.co.kr/citations?user=6uSW0MQAAAAJ) for details.",
+        "research_interest_summary": "More and more software systems are integrated with Artificial Intelligence (AI), especially Machine Learning (ML) and Deep Learning (DL). However, ML/DL models are inherently different from traditional software programs; such models obtain decision logic via \"training\", whereas traditional programs obtain it via \"programming\". To address this challenge, I developed an automated test data (image) generation technique for DL models with many outputs (e.g., DNNs for facial key-point detection). Also, I developed efficient testing techniques for ML-enabled Automated Driving Systems (ADS) using surrogate models and reinforcement learning. ",
+        "homepage": "https://dshin.info",
+        "linkedin": "#",
+        "google_scholar": "https://scholar.google.co.kr/citations?user=6uSW0MQAAAAJ",
+        "github": "#",
+        "photo": "1XjHSuWAHzGx4bkPs56FiuYOFwXNf25GG.jpg",
+        "id": "1XjHSuWAHzGx4bkPs56FiuYOFwXNf25GG",
+        "shef_ai_link": "donghwan-shin"
+    },
+    {
         "title": "Mr",
         "name": "Edwin Brown",
         "position": "Research Software Engineer",
