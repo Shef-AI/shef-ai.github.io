@@ -50,6 +50,22 @@
         "shef_ai_link": "amnah-alluqmani"
     },
     {
+        "title": "Ms",
+        "name": "Amnah Alluqmani",
+        "position": "PhD student at the information school",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Humanities and Social Sciences",
+        "research_interest_terms": "Computer vision, Information retrieval, Knowledge representation, Social data science",
+        "short_biography": "I'm a PhD student in Data Science. I work on generating visual representations of clothing images to assist people with visual impairments in purchasing online.",
+        "research_interest_summary": "Knowledge representation - information retrieval computer vision ",
+        "homepage": "#",
+        "linkedin": "#",
+        "google_scholar": "https://scholar.google.com/citations?user=GU8DavgAAAAJ&hl=en",
+        "github": "#",
+        "id": "f1d6fccc-9be4-417b-88d0-d0573b361069",
+        "shef_ai_link": "amnah-alluqmani"
+    },
+    {
         "title": "Dr",
         "name": "Andrew Cox",
         "position": "Senior Lecturer",
@@ -285,6 +301,23 @@
         "shef_ai_link": "haiping-lu"
     },
     {
+        "title": "Professor",
+        "name": "Hamish Cunningham ",
+        "position": "Professor of Computer Science ",
+        "affiliation": "University of Sheffield ",
+        "research_areas": "Data-centric Engineering, Science, Humanities and Social Sciences, Cross-cutting Challenges",
+        "research_interest_terms": "Computer systems and architectures, Information retrieval, Machine learning, Natural language processing, Robotics, Speech recognition",
+        "short_biography": "I used to hope that as time passed I would become older and wiser, but it seems that I just become odder and wider. Find me at https://hamish.gate.ac.uk ",
+        "research_interest_summary": "Dynamic conversation management for privacy preserving AI ",
+        "homepage": "https://Han",
+        "linkedin": "#",
+        "google_scholar": "#",
+        "github": "https://hamish.gate.ac.uk ",
+        "photo": "1U83J1vfoHGbsQNWcnbsBcEyj9IrSuNTU.jpg",
+        "id": "1U83J1vfoHGbsQNWcnbsBcEyj9IrSuNTU",
+        "shef_ai_link": "hamish-cunningham"
+    },
+    {
         "title": "Miss",
         "name": "Haolin Wang",
         "position": "AI Research Engineer",
@@ -348,6 +381,23 @@
         "photo": "1VyWz24ZqDYplsvirNVYIMcnVZjSRno2Z.jpg",
         "id": "1VyWz24ZqDYplsvirNVYIMcnVZjSRno2Z",
         "shef_ai_link": "joe-atkinson"
+    },
+    {
+        "title": "Dr",
+        "name": "Jon Stammers",
+        "position": "Senior Theme Lead - Data, Connectivity & AI",
+        "affiliation": "University of Sheffield AMRC",
+        "research_areas": "Data-centric Engineering, Cross-cutting Challenges",
+        "research_interest_terms": "Data structures and algorithms, Machine learning, Safety and ethics, Social data science",
+        "short_biography": "Dr Jon Stammers is the Senior Theme Lead for Data, Connectivity and AI within the AMRC's Integrated Manufacturing Group. Based in the state-of-the-art Factory 2050, Jon's team has capabilities spanning Smart Factories, Data Security, Industrial IoT, Data Science, AI, and Computer Vision. He started his career at the AMRC working in and eventually leading the Process Monitoring and Control team, focusing on data capture from sensors and machine tools and deriving insight from the data streams. He sits on the IET's Manufacturing Technical Network committee, contributing to and organising events focused on digital manufacturing, and has co-authored a book chapter on Smart Manufacturing. ",
+        "research_interest_summary": "My research interests include the application of data science techniques within a manufacturing context, such as to identify significant performance indicators in large data sets, correlation of data sources from across the shop floor, and optimising data visualisation for its intended purpose. I am also very interested in how we can better prepare industry to adopt data-centric methods and AI.",
+        "homepage": "#",
+        "linkedin": "https://www.linkedin.com/in/jon-stammers/",
+        "google_scholar": "#",
+        "github": "#",
+        "photo": "1MPXw2z3YMEpjpcydokM-bjG-qeKgsa9k.jpg",
+        "id": "1MPXw2z3YMEpjpcydokM-bjG-qeKgsa9k",
+        "shef_ai_link": "jon-stammers"
     },
     {
         "title": "Dr",
@@ -985,6 +1035,20 @@
         "photo": "1S4jk7-mJlozAmdPdA-Li06on1FBskSR-.JPG",
         "id": "1S4jk7-mJlozAmdPdA-Li06on1FBskSR-",
         "shef_ai_link": "xianyuan-liu"
+    },
+    {
+        "title": "Mr",
+        "name": "Xulong Wang",
+        "position": "Student",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Health and Medical Sciences",
+        "research_interest_terms": "Knowledge representation, Machine learning",
+        "homepage": "#",
+        "linkedin": "#",
+        "google_scholar": "#",
+        "github": "#",
+        "id": "2739aaee-ab63-46e3-a603-9f2b97f476ae",
+        "shef_ai_link": "xulong-wang"
     },
     {
         "title": "Mr",
