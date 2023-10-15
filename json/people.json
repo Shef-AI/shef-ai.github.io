@@ -1067,5 +1067,19 @@
         "photo": "1XfDU-hhWEuLpUz7OgrQZxrdBnUlXPhXn.jpg",
         "id": "1XfDU-hhWEuLpUz7OgrQZxrdBnUlXPhXn",
         "shef_ai_link": "ze-zhang"
+    },
+    {
+        "title": "Mr",
+        "name": "xulong wang",
+        "position": "PhD student",
+        "affiliation": "University of sheffield",
+        "research_areas": "Health and Medical Sciences",
+        "research_interest_terms": "Knowledge representation, Machine learning, Mathematical modelling",
+        "homepage": "#",
+        "linkedin": "#",
+        "google_scholar": "#",
+        "github": "#",
+        "id": "70f1bd28-6d8b-4aba-a1c9-2b35a8dbd9c6",
+        "shef_ai_link": "xulong-wang"
     }
 ]
