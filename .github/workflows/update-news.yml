@@ -64,6 +64,6 @@ jobs:
           labels: |
             test
             automated pr
-          assignees: SinaTabakhi
-          reviewers: SinaTabakhi
+          assignees: kjones002
+          reviewers: kjones002
           draft: false
