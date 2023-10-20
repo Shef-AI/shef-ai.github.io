@@ -319,6 +319,23 @@
     },
     {
         "title": "Professor",
+        "name": "Helen Kennedy",
+        "position": "Professor of Digital Society",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Humanities and Social Sciences",
+        "research_interest_terms": "Privacy and trust, Safety and ethics, Social media, Visualisation",
+        "short_biography": "I am interested in how AI, automation and datafication are experienced by non-expert folk as part of their everyday lives, and strategies for living with data. This means thinking about how data, AI and automation come into being, the contexts in which they are made and shaped, how and whether they can be fair, equitable and just, how they should be governed, what good digital societies looks like and why the concept of ‘the digital good’ is so contested. ",
+        "research_interest_summary": "In addition to the above,:\nCurrent research: ESRC Digital Good Network (https://digitalgood.net/)\nRecent research: the Living With Data programme (https://livingwithdata.org/)\nI am also interested in data visualisaton in society, social media, platform politics and algorithmic culture. I have secured over £8m in research funding. Most of my research involves collaborating with non-academic stakeholders to seek to enact change (eg government departments, media organisations). \n\nI am on the strategy group for Responsible AI (RAI) UK: https://www.rai.ac.uk/.",
+        "homepage": "https://www.sheffield.ac.uk/socstudies/people/academic-staff/helen-kennedy",
+        "linkedin": "https://www.linkedin.com/in/kennedyhelen/",
+        "google_scholar": "#",
+        "github": "#",
+        "photo": "1HIj5nQgavFylGrgWSKHW1iebx11hrxFU.jpg",
+        "id": "1HIj5nQgavFylGrgWSKHW1iebx11hrxFU",
+        "shef_ai_link": "helen-kennedy"
+    },
+    {
+        "title": "Professor",
         "name": "Ian Kellar ",
         "position": "Professor of Health Psychology",
         "affiliation": "University of Sheffield",
@@ -349,6 +366,23 @@
         "photo": "1N9mjeKsbPO7CZ0dR_2uVJrSSa0_TdTAH.jpeg",
         "id": "1N9mjeKsbPO7CZ0dR_2uVJrSSa0_TdTAH",
         "shef_ai_link": "jacob-macdonald"
+    },
+    {
+        "title": "Dr",
+        "name": "Jefersson A. dos Santos",
+        "position": "Lecturer in Computer Vision",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Health and Medical Sciences, Science, Cross-cutting Challenges",
+        "research_interest_terms": "Computer vision, Machine learning",
+        "short_biography": "Jefersson A. dos Santos is currently an Assistant Professor (Lecturer) in Computer Vision at the University of Sheffield, United Kingdom. He used to hold a position as Associate Professor at the Universidade Federal de Minas Gerais, Brazil (2013 - 2022). Jefersson is an IEEE Senior Member. He is currently an Associate Editor for the IEEE Geoscience and Remote Sensing Letters and Co-Chair for the ISPRS Working Group for AI/ML for Geospatial Data. Jefersson also serves as a PC member for several refereed journals and conferences. Jefersson held the prestigious CNPq Productivity Research Scholarship (2016 - 2022).\n",
+        "research_interest_summary": "Jefersson research interests include machine learning, computer vision, image processing, and remote sensing. Besides always aiming at excellence and impacting outcomes in Computer Science, I am especially interested in inter-, cross-, multidisciplinary research.\n\nHis work in recent years has focused on developing new computational approaches and techniques to mitigate the problems of pixel-level image annotation for real-world applications, which especially include medical and remote sensing image analysis.\n",
+        "homepage": "https://www.sheffield.ac.uk/dcs/people/academic/jefersson-alex-dos-santos",
+        "linkedin": "https://www.linkedin.com/in/jefersson",
+        "google_scholar": "https://scholar.google.com/citations?user=wXQnnTUAAAAJ&hl",
+        "github": "#",
+        "photo": "15u_OnQMv8khilWbwsTO3mUN7ql1mS_P3.jpeg",
+        "id": "15u_OnQMv8khilWbwsTO3mUN7ql1mS_P3",
+        "shef_ai_link": "jefersson-a.-dos-santos"
     },
     {
         "title": "Dr",
