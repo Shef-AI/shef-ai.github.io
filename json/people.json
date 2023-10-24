@@ -98,6 +98,22 @@
         "shef_ai_link": "cass-zhixue-zhao"
     },
     {
+        "title": "Mr",
+        "name": "David King",
+        "position": "Head of Digital Design",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Health and Medical Sciences, Cross-cutting Challenges",
+        "research_interest_terms": "Automatic control, Computer systems and architectures, Computer vision, Human computer interface, Machine learning, Multi-agent reasoning, Natural language processing, Neuroscience and cognitive science, Optimisation, Robotics, Safety and ethics, Visualisation",
+        "short_biography": "David has over twenty years of industrial experience in product research and development (R&D). He began his career developing industrial control and instrumentation systems. This was followed by seventeen years working in R&D for a global OEM developing award winning industrial products for infrared non-contact temperature measurement and thermal imaging. David's engineering qualifications include Electronics and Control Systems Engineering and Computer Science. David is also a PhD researcher within the UoS EEE researching the application of Hyperspectral Imaging and Machine Learning.\nDavid is also a Co-director of the UoS INSIGNEO Institute smart devices and sensors theme.\n",
+        "research_interest_summary": "David's current research interests include Digital Healthcare, I4.0 sensor systems, machine learning, AI in design, and digital technology to enable the circular economy.",
+        "homepage": "https://www.sheffield.ac.uk/amrc/amrc-research-staff/david-king",
+        "linkedin": "https://www.linkedin.com/in/dcking",
+        "google_scholar": "#",
+        "github": "#",
+        "id": "cb79d73f-6638-4164-9c1c-2ffcb37168f7",
+        "shef_ai_link": "david-king"
+    },
+    {
         "title": "Dr",
         "name": "Denis Newman-Griffis",
         "position": "Lecturer in Data Science",
@@ -520,6 +536,23 @@
     },
     {
         "title": "Dr",
+        "name": "Mahnaz Arvaneh",
+        "position": "Senior Lecturer",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Health and Medical Sciences, Cross-cutting Challenges",
+        "research_interest_terms": "Human computer interface, Machine learning, Neuroscience and cognitive science",
+        "short_biography": "Dr Arvaneh is a Senior Lecturer at the Department of Automatic Control and Systems Engineering, University of Sheffield. Her research focuses on user-centred design of non-invasive closed-loop neural interfaces and their applications in monitoring and enhancing physical and cognitive performance. She is the director of Brain-Computer Interface laboratory, where she conducts theoretical, experimental as well as translational research to develop therapeutic neuro-technologies. Her work on neural interfaces has received international recognition and high-profile media coverage, e.g. BBC Tech Tent, BBC Radio 4, Sky News. She contributed to the “Royal Society expert perspective report on neural interface technologies” launched in 2019.",
+        "research_interest_summary": "My primary research interests are in the areas of brain-computer interface (BCI), neural signal processing, machine learning and their applications in monitoring and enhancing physical and mental health. I am the director of Physiological Signals and Systems laboratory at University of Sheffield, where we combine analytical and experimental techniques to develop improved therapeutic, assistive, adaptive and rehabilitative technologies for a variety of conditions.",
+        "homepage": "https://www.sheffield.ac.uk/acse/department/people/academic/mahnaz-arvaneh",
+        "linkedin": "https://www.linkedin.com/in/mahnaz-arvaneh-88a16536/?originalSubdomain=uk",
+        "google_scholar": "https://scholar.google.com/citations?user=HBxF7nAAAAAJ&hl=en&oi=ao",
+        "github": "https://NA",
+        "photo": "1-pIes3g4K4nKMYnfMZ6cjOSUoBRlKgR_.jpg",
+        "id": "1-pIes3g4K4nKMYnfMZ6cjOSUoBRlKgR_",
+        "shef_ai_link": "mahnaz-arvaneh"
+    },
+    {
+        "title": "Dr",
         "name": "Mark Hodgkinson",
         "position": "Research Fellow",
         "affiliation": "University of Sheffield",
@@ -887,6 +920,22 @@
         "photo": "1HsHYzm8SOoMwVOHSgod2eG0zFtx_kAtD.png",
         "id": "1HsHYzm8SOoMwVOHSgod2eG0zFtx_kAtD",
         "shef_ai_link": "saori-shibata"
+    },
+    {
+        "title": "Mr",
+        "name": "Scott Herod",
+        "position": "Technical Lead for AI and Modelling",
+        "affiliation": "University of Sheffield AMRC",
+        "research_areas": "Data-centric Engineering, Cross-cutting Challenges",
+        "research_interest_terms": "Computer vision, Machine learning, Natural language processing, Visualisation",
+        "short_biography": "Technical Lead for AI and Modelling at the University of Sheffield AMRC's Design and Prototyping Group (DPG). ",
+        "research_interest_summary": "I am interested in many forms of AI and machine learning such as, machine vision and image analysis techniques, Reinforcement Learning, Natural Language Processing, Large Language Models, Classical machine learning techniques, mathematical modelling and simulation.\n\nI also have a background in VR/AR work and visualisation.",
+        "homepage": "https://www.amrc.co.uk/",
+        "linkedin": "https://www.linkedin.com/in/scott-herod/",
+        "google_scholar": "#",
+        "github": "#",
+        "id": "bb3fad5f-da72-4fc2-aa2a-b1fb892f5c32",
+        "shef_ai_link": "scott-herod"
     },
     {
         "title": "Mr",
