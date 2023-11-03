@@ -435,6 +435,23 @@
     },
     {
         "title": "Dr",
+        "name": "Jonathan Aitken",
+        "position": "Senior University Teacher",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Data-centric Engineering",
+        "research_interest_terms": "Automatic control, Computer systems and architectures, Computer vision, Machine learning, Mathematical modelling, Robotics, Safety and ethics",
+        "short_biography": "Dr Aitken holds a MEng (2005) and PhD (2009) in Electronic Engineering, from the University of York. He moved to the University of Sheffield in 2013 as a Research Fellow, before becoming a University Teacher in 2018 and a Senior University Teacher in 2021.\n\nDr Aitken previously worked in the Computer Science Department at the University of York, where he was a member of the High Integrity Systems Engineering Group, working on safety in Systems-of-Systems, especially dynamic risk assessment, and developed interests in evolving justifiably safe systems. ",
+        "research_interest_summary": "Dr Aitken is an experienced project leader, and has held 11 research council or industrial grants as either Principal or Co-Investigator. Currently he is a Co-Investigator of the EPSRC Platform Grant “Pervasive Sensing for Buried Pipes”. He is involved with the mapping and navigation systems for robots deployed in sewerage and clean water systems. This includes supervising projects developing novel AI-based simultaneous localisation and mapping algorithms, such as HFNet-SLAM.\n",
+        "homepage": "https://www.sheffield.ac.uk/acse/department/people/academic/jonathan-m-aitken",
+        "linkedin": "https://www.linkedin.com/in/jonathan-aitken-90271713/",
+        "google_scholar": "https://scholar.google.co.uk/citations?user=K9YdiGUAAAAJ&hl=en&oi=ao",
+        "github": "https://github.com/jonaitken",
+        "photo": "1mgq6Vons6S-UEW5b7RCYzkASt2DRAuM3.jpg",
+        "id": "1mgq6Vons6S-UEW5b7RCYzkASt2DRAuM3",
+        "shef_ai_link": "jonathan-aitken"
+    },
+    {
+        "title": "Dr",
         "name": "Kathryn Simpson",
         "position": "Lecturer in Digital Humanities",
         "affiliation": "University of Sheffield",
