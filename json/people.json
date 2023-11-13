@@ -166,6 +166,23 @@
     },
     {
         "title": "Mr",
+        "name": "Edward Rawson",
+        "position": "PhD student",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Data-centric Engineering",
+        "research_interest_terms": "Computer vision, Machine learning",
+        "short_biography": "I am a PhD student in the Department of Mechanical Engineering and have previously completed a BEng in the same department. In my free time, I enjoy running and cycling both in the Peaks and at home in the Pennines.",
+        "research_interest_summary": "My research is on deep learning methods towards the control of alloy microstructures via a novel multi-laser powder bed fusion process; Diode Area Melting. Specifically, I am finding ways to incorporate prior knowledge into video Generative Adversarial Networks to increase data efficiency, interpretability and physical realism of predictions. Towards this goal, I am also interested in graph networks and implicit neural representation.",
+        "homepage": "https://github.com/Edward-Rawson",
+        "linkedin": "https://www.linkedin.com/in/edward-rawson",
+        "google_scholar": "#",
+        "github": "https://github.com/Edward-Rawson",
+        "photo": "15EjDF5JTxSBKH8iTiUwh0C6gbA8jWDxe.jpg",
+        "id": "15EjDF5JTxSBKH8iTiUwh0C6gbA8jWDxe",
+        "shef_ai_link": "edward-rawson"
+    },
+    {
+        "title": "Mr",
         "name": "Edwin Brown",
         "position": "Research Software Engineer",
         "affiliation": "University of Sheffield",
