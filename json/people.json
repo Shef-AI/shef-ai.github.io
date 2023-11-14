@@ -149,6 +149,23 @@
     },
     {
         "title": "Dr",
+        "name": "Diana Maynard",
+        "position": "Senior Research Fellow",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Data-centric Engineering, Science, Humanities and Social Sciences, Cross-cutting Challenges",
+        "research_interest_terms": "Natural language processing, Social data science, Social media",
+        "short_biography": "Dr. Diana Maynard has been working in Natural Language Processing for over 30 years. Since 2000 she has been one of the key developers of the GATE NLP toolkit, leading work on Sheffield’s open-source multilingual text analysis tools. Her main research interests are in practical, multidisciplinary approaches to text and social media analysis. She is currently working on various projects based around the detection, analysis and escalation of online hate speech, bias in Machine Learning. She has strong interests in journalist safety working closely with the Centre for Freedom of the Media and the Department of Journalism, Media and Communication; as well as in sustainability, working with the Institute for Sustainable Food.",
+        "research_interest_summary": "\nSocial media analysis;\n\nOnline abuse and hate speech;\n\nSafety of journalists;\n\nSentiment analysis;\n\nNews and information bias;\n\nMultidisciplinary work combining text analysis with behavioural and social information.",
+        "homepage": "https://www.sheffield.ac.uk/dcs/people/research-staff/diana-maynard",
+        "linkedin": "https://www.linkedin.com/in/dianamaynard/",
+        "google_scholar": "https://scholar.google.co.uk/citations?user=YZZPJ2oAAAAJ&hl=en",
+        "github": "https://github.com/dianamaynard",
+        "photo": "17ZnSzap57AFKAQ7-ChtVciNFO0RhlQb3.jpg",
+        "id": "17ZnSzap57AFKAQ7-ChtVciNFO0RhlQb3",
+        "shef_ai_link": "diana-maynard"
+    },
+    {
+        "title": "Dr",
         "name": "Donghwan Shin",
         "position": "Lecturer in Teseting",
         "affiliation": "University of Sheffield",
