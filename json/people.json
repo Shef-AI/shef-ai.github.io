@@ -98,6 +98,23 @@
         "shef_ai_link": "cass-zhixue-zhao"
     },
     {
+        "title": "Dr",
+        "name": "Chen Chen",
+        "position": "Lecturer in Computer Vision",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Health and Medical Sciences, Data-centric Engineering",
+        "research_interest_terms": "Computer vision, Machine learning, Optimisation, Privacy and trust",
+        "short_biography": "Dr Chen (Cherise) Chen obtained her MSc and Ph.D. degree in Advanced Computing from Imperial College London, in 2016 and 2022, respectively. From 2022, she worked as a research associate at Imperial College London. During the time at Imperial, she worked closely with Prof. Daniel Rueckert and Dr. Wenjia Bai, on numerous projects with cardiac imaging. She was also a research scientist at HeartFlow. After that, she joined Oxford BioMedIA group, University of Oxford in 2023, working closely with Prof. Vicente Grau. She has engaged in a variety of projects that apply artificial intelligence to cardiac, brain, and prostate imaging.",
+        "research_interest_summary": "Dr. Chen's research primarily revolves around the intersection of artificial intelligence (AI) and healthcare. Her focus is particularly strong in the domains of medical multi-modal data analysis (e.g, image, signal, text) with machine learning. Her work aims to develop and validate robust, data-efficient, and reliable machine learning algorithms that can enhance the scalability of AI-driven medical data analysis in practical applications. ",
+        "homepage": "https://sites.google.com/view/morningchen-site/home;",
+        "linkedin": "https://uk.linkedin.com/in/chen-cherise",
+        "google_scholar": "https://scholar.google.co.uk/citations?user=gPuRZmgAAAAJ&hl=en",
+        "github": "https://github.com/cherise215/",
+        "photo": "1vUhnVRLb0sFbktD0O80QHekLabadALgc.jpg",
+        "id": "1vUhnVRLb0sFbktD0O80QHekLabadALgc",
+        "shef_ai_link": "chen-chen"
+    },
+    {
         "title": "Mr",
         "name": "David King",
         "position": "Head of Digital Design",
@@ -869,6 +886,22 @@
         "photo": "1Oh_6-sPKtKKId_Kv1G5JtUSIAkxzWYIZ.jpeg",
         "id": "1Oh_6-sPKtKKId_Kv1G5JtUSIAkxzWYIZ",
         "shef_ai_link": "richard-clayton"
+    },
+    {
+        "title": "Dr",
+        "name": "Robert Loftin",
+        "position": "Lecturer in Machine Learning",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Data-centric Engineering, Science",
+        "research_interest_terms": "Computer vision, Human computer interface, Machine learning, Multi-agent reasoning, Natural language processing, Robotics",
+        "short_biography": "Robert received his PhD in Computer Science from North Carolina State University in 2019, under the supervision of Dave Roberts.  After completing his PhD, he did a two-year post-doc with Microsoft Research Cambridge, exploring the use of Reinforcement Learning and Interactive Learning in commercial game development. He also completed a post-doc at TU Delft with Frans Oliehoek, where he focused on applying game theory and multi-agent reinforcement learning to human-AI cooperation.  Robert is currently a Lecturer in Machine Learning at the University of Sheffield.",
+        "research_interest_summary": "My research focuses on how AI can learn through interaction with humans. Virtually all applications of AI involve solving problems defined by humans. The goal of my work is to allow humans and artificial agents to work together to build a shared understanding of such tasks, enabling AI that leverages human knowledge, and ensuring that learned behaviors are truly aligned with human intentions. My research attempts to cover all aspects of this problem, from its theoretical foundations to the development of scalable interactive learning algorithms, and their evaluation with real human users. My work spans many topics within and related to AI, including (Deep) Reinforcement Learning, Game Theory and Multi-Agent Systems, and Cognitive Science.",
+        "homepage": "https://www.sheffield.ac.uk/dcs/people/academic/robert-loftin",
+        "linkedin": "https://uk.linkedin.com/in/robert-loftin-b3b44529a",
+        "google_scholar": "https://scholar.google.com/citations?user=ttJ9AWAAAAAJ",
+        "github": "#",
+        "id": "7ed5d1ba-948f-4c88-bb2d-5f8fe7690361",
+        "shef_ai_link": "robert-loftin"
     },
     {
         "title": "Dr",
