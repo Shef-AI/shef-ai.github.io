@@ -1,5 +1,22 @@
 [
     {
+        "title": "Dr",
+        "name": "Adam Dennis",
+        "position": "Research Associate",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Data-centric Engineering",
+        "research_interest_terms": "Data structures and algorithms, Machine learning, Optimisation, Safety and ethics",
+        "short_biography": "Adam recently completed his PhD in the Blast and Impact Dynamics research group at the University of Sheffield. His project, titled 'Machine Learning Tools for Blast Load Prediction in Obstructed Environments', explored a range of methods for developing rapid analysis tools that can assist with human injury prediction and structural damage estimations following the detonation of a high explosive. He is now continuing this work within the group, aiming to apply Machine Learning approaches to a range of problems.",
+        "research_interest_summary": "My research and professional interests are currently centered around the development of Fast Running Engineering Models (FREMs), with a focus on applying novel Machine learning methods to improve existing analysis approaches. At present, this covers the following topics:\n\n- Complex blast loading prediction\n- Human injury prevention\n- Structural response estimation\n- Computational modelling\n- Efficient building design",
+        "homepage": "https://www.sheffield.ac.uk/civil/people/research/adam-dennis",
+        "linkedin": "https://uk.linkedin.com/in/adam-dennis-uos",
+        "google_scholar": "https://scholar.google.com/citations?user=zUb0QdwAAAAJ&hl=en&oi=ao",
+        "github": "#",
+        "photo": "1u9Zh3PQ2Ud6ckPmJNV_kM3yPMDARz5OS.jpg",
+        "id": "1u9Zh3PQ2Ud6ckPmJNV_kM3yPMDARz5OS",
+        "shef_ai_link": "adam-dennis"
+    },
+    {
         "title": "Professor",
         "name": "Aline Villavicencio",
         "position": "Chair in Natural Language Processing",
