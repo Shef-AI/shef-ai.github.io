@@ -1,5 +1,16 @@
 [
     {
+        "time": "11:30",
+        "date": "Wednesday 06 March 2024",
+        "duration": 5,
+        "location": "Inox Dine, Level 5, Students' Union Building Durham Road, Sheffield, S10 2TG",
+        "title": " Shef.AI Community Meeting 7",
+        "summary": "Please join us at our Seventh Community Meeting, Wednesday 6th March 2024 at Inox Dine with networking lunch. Open to all with an interest in AI.",
+        "body": "<p style=\"text-align: start;color: rgb(43, 53, 62);background-color: rgb(255, 255, 255);font-size: 19px;\">Please join us at our Seventh Community Meeting, Wednesday 6th March 2024 at Inox Dine with networking lunch. Open to all with an interest in AI.<br><br><strong><strong>The meeting is in-person only</strong></strong> and will include: an update by Prof. Guy Brown, Interim Director for the Centre for Machine Intelligence (CMI), an update on the AI Research Engineering (AIRE) Team by Prof Haiping Lu, and guest speaker, Prof Suzanne Mason who will talk about Data Connect. We will also have community pitches, open-mic, networking opportunities and more!<br><br><strong><strong>Provisional agenda:</strong></strong></p>\n<p style=\"text-align: start;color: rgb(43, 53, 62);background-color: rgb(255, 255, 255);font-size: 19px;\">Arrival, coffee and registration: 11:30 - 12:00<br>Shef.AI update: 12:00 - 12:30<br>Lunch: 12:30 - 13:30<br>Community pitches: 13:30 - 14:15<br>Invited talk: 14:15 - 14:35<br>Panel discussion: 14:35 - 15:30<br>Informal coffee, IG meetings and networking: 15:30 - 16.30</p>",
+        "image": "1UGV6lKARFLkLKAkydGB3ZsqurUYbEHJT.jpg",
+        "id": "1UGV6lKARFLkLKAkydGB3ZsqurUYbEHJT"
+    },
+    {
         "time": "12:00",
         "date": "Wednesday 11 October 2023",
         "duration": 4,
