@@ -589,6 +589,23 @@
     },
     {
         "title": "Dr",
+        "name": "Jingxia Wang",
+        "position": "Lecturer in GIS",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Humanities and Social Sciences, Cross-cutting Challenges",
+        "research_interest_terms": "Knowledge representation, Machine learning, Social data science, Visualisation",
+        "short_biography": "I am a researcher with expertise in spatial planning, land resources management, and urban nature, specializing in landscape and urban ecology, green infrastructure planning, and social-ecological systems research. Leveraging GeoAI and AI/ML methods, I apply advanced techniques for image analysis and spatial analysis to address urban challenges within the conceptual contexts of nature-based solutions, ecosystem services, climate change adaptation, and biodiversity conservation. Furthermore, I lead the AI-Interest Group, dedicated to addressing climate/environmental change and understanding biology through innovative AI approaches. ",
+        "research_interest_summary": "My current research involves integrating GIS, remote sensing, and AI techniques for image analysis and spatial analytics. I'm particularly interested in utilising environmental data from sensors, digital twins and IoT devices to inform decision-making in urban nature management. I explore the application of AI in analysing environmental and soundscape data and enhancing biodiversity connectivity.",
+        "homepage": "https://jingxiawang.com/ ",
+        "linkedin": "https://www.linkedin.com/in/jingxia-wang-a47811246/",
+        "google_scholar": "https://scholar.google.de/citations?user=lot3w4YAAAAJ&hl=en&authuser=1",
+        "github": "#",
+        "photo": "1gPchH7O5Sl0ggVIcsVNv4FOiEXnhSjbT.jpg",
+        "id": "1gPchH7O5Sl0ggVIcsVNv4FOiEXnhSjbT",
+        "shef_ai_link": "jingxia-wang"
+    },
+    {
+        "title": "Dr",
         "name": "Joanna Tidy",
         "position": "Lecturer in Politics",
         "affiliation": "University of Sheffield",
