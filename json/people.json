@@ -1376,6 +1376,23 @@
     },
     {
         "title": "Dr",
+        "name": "Tamora James",
+        "position": "Research Software Engineer",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Health and Medical Sciences, Data-centric Engineering, Science, Cross-cutting Challenges",
+        "research_interest_terms": "Computer vision, Machine learning",
+        "short_biography": "Tamora began her career in web and software development, later completing an MRes and PhD in population ecology and conservation demography at the University of Sheffield. During her PhD she became interested in how she could help other researchers to improve their research software outputs by teaching them about commonly used software development tools and practices. After completing her PhD, she joined the Centre for Environmental Modelling and Computation (CEMAC) at the University of Leeds where she worked on projects including weather forecasting in Africa, visualisation of climate co-benefits, and detection of biometeors in radar data. In 2023 she returned to the University of Sheffield as a Research Software Engineer for AI/ML.\n",
+        "research_interest_summary": "Tamora’s role involves providing research software engineering support for AI/ML projects, including CMI-funded RSE support for members of the University community to enable, design, implement and refine AI/ML applications in their research projects.",
+        "homepage": "https://www.sheffield.ac.uk/dcs/people/research-staff/tamora-james",
+        "linkedin": "https://uk.linkedin.com/in/tamora-james",
+        "google_scholar": "#",
+        "github": "https://github.com/tdjames1/",
+        "photo": "1-MG8X1Ri_XMow4PkjGf3JsiA8taeazBx.jpg",
+        "id": "1-MG8X1Ri_XMow4PkjGf3JsiA8taeazBx",
+        "shef_ai_link": "tamora-james"
+    },
+    {
+        "title": "Dr",
         "name": "Thomas Wilkes",
         "position": "Research Fellow",
         "affiliation": "University of Sheffield",
