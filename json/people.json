@@ -1393,6 +1393,23 @@
     },
     {
         "title": "Dr",
+        "name": "Susan Oman ",
+        "position": "Lecturer, Data, AI and Society",
+        "affiliation": "University of Sheffield.",
+        "research_areas": "Humanities and Social Sciences",
+        "research_interest_terms": "Data structures and algorithms, Privacy and trust, Safety and ethics, Social data science",
+        "short_biography": "I investigate AI, data and evidence, and how they work for and against the publics they ostensibly serve. \nThis means investigating data and analytics and how they work in policy and practice contexts and the ethics of their role in social change.\nI am interested in the processes of datification, digitialisation and automation as they experienced, by those from across society that promote their use, in policy, workplaces and our everyday lives, and those who are concerned, resist or simply ignore them. ",
+        "research_interest_summary": "Current research: 1 Public Voices in AI: https://digitalgood.net/dg-research/public-voices-in-ai/; \n2 BRAID project: The Framing Responsible AI Implementation and Management (FRAIM) https://sites.google.com/d/1ABAvJmX6i9AzwjwrmG6LP-ZDo51riwwi/p/1F8lAUsZSHLgb5lZfy1RoFp75f8edsmoQ/edit \n3 AHRC Policy fellowship - Digital and International\n\nPrevious research: 1 https://livingwithdata.org/\n2 well-being data monograph: https://link.springer.com/book/10.1007/978-3-030-72937-0 and website: well-beingdata.com\n3 EDI data in the creative industries: https://well-beingdata.com/book/wp-content/uploads/2022/06/OMAN-Policy-Brief-Measuring-Social-Mobility-CCIs.pdf ",
+        "homepage": "https://www.sheffield.ac.uk/is/people/academic/susan-oman",
+        "linkedin": "https://uk.linkedin.com/in/susan-oman-8a297456",
+        "google_scholar": "#",
+        "github": "#",
+        "photo": "1Y7WtsAEL7nc0y8FRYdiixR5al6aUyeha.jpeg",
+        "id": "1Y7WtsAEL7nc0y8FRYdiixR5al6aUyeha",
+        "shef_ai_link": "susan-oman"
+    },
+    {
+        "title": "Dr",
         "name": "Tamora James",
         "position": "Research Software Engineer",
         "affiliation": "University of Sheffield",
