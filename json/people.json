@@ -589,6 +589,23 @@
     },
     {
         "title": "Dr",
+        "name": "Jiahong Chen",
+        "position": "Lecturer in Law",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Humanities and Social Sciences",
+        "research_interest_terms": "Human computer interface, Privacy and trust, Safety and ethics",
+        "short_biography": "Dr Jiahong Chen is a Lecturer in Law at the University of Sheffield. Previously he worked at the University of Nottingham as a Research Fellow in IT Law, and before that, completed his PhD at the University of Edinburgh. He is the PI of the ongoing ESRC-funded project \"The Internet of Tactical Engagement (IoTE)\" (ES/Y00020X/1), addressing public attitudes towards data-driven public communications in smart homes and the associated policy implications. He is also a Co-I on the £4.38m Responsible AI UK Keystone project \"Addressing Socio-technical Limitations of Large Language Models for Medical and Social Computing (AdSoLve)\" (EP/Y009800/1), leading the legal use case to tackle the challenges around ChatGPT-like Generative AI systems.",
+        "research_interest_summary": "His research focuses on the intersection between law and technology, in particular data protection law, cybersecurity law, law and AI, data ethics and internet regulation.",
+        "homepage": "https://www.sheffield.ac.uk/law/people/law-academic-staff/jiahong-chen-0",
+        "linkedin": "#",
+        "google_scholar": "https://scholar.google.com/citations?user=V0w8mncAAAAJ",
+        "github": "#",
+        "photo": "178-DZtkQSbvcFfm3XfQtkg-BYOzaSRvg.jpg",
+        "id": "178-DZtkQSbvcFfm3XfQtkg-BYOzaSRvg",
+        "shef_ai_link": "jiahong-chen"
+    },
+    {
+        "title": "Dr",
         "name": "Jingxia Wang",
         "position": "Lecturer in GIS",
         "affiliation": "University of Sheffield",
