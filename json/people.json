@@ -1279,6 +1279,23 @@
     },
     {
         "title": "Dr",
+        "name": "Samuel Birks",
+        "position": "University Teacher in Medical Education",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Health and Medical Sciences",
+        "research_interest_terms": "Knowledge representation, Privacy and trust, Safety and ethics",
+        "short_biography": "Dr Samuel Birks is a University Teacher in Medical Education within the School of Medicine at the University of Sheffield. He is clinically trained by background and practises as a doctor in the Emergency Department whilst also working as an educator in the medical school. His role in academia encompasses digital learning and he has led the development of guidance on the use of generative AI in undergraduate and postgraduate medical education.",
+        "research_interest_summary": "Dr Birks' research and professional interests include generative AI literacy amongst students and academic staff, the use of generative AI as a tool for learning, and the ethical and academic considerations of incorporation of AI into education.",
+        "homepage": "https://www.sheffield.ac.uk/smph/people/clinical-medicine/samuel-birks",
+        "linkedin": "https://www.linkedin.com/in/sam-birks/",
+        "google_scholar": "#",
+        "github": "#",
+        "photo": "1wL8HJT1oCK72213td4Z-b8uu-ibR4mp1.png",
+        "id": "1wL8HJT1oCK72213td4Z-b8uu-ibR4mp1",
+        "shef_ai_link": "samuel-birks"
+    },
+    {
+        "title": "Dr",
         "name": "Saori Shibata",
         "position": "Lecturer in East Asian Studies",
         "affiliation": "University of Sheffield",
