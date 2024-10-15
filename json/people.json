@@ -201,6 +201,22 @@
     },
     {
         "title": "Mr",
+        "name": "Dave Holloway",
+        "position": "Senior Digital Learning Advisor",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Cross-cutting Challenges",
+        "research_interest_terms": "Human computer interface, Social media, Visualisation",
+        "research_interest_summary": "AI image generation. Accessibility.",
+        "homepage": "#",
+        "linkedin": "https://www.linkedin.com/in/davemedlo",
+        "google_scholar": "#",
+        "github": "#",
+        "photo": "130ZHUZMykWMlKep-z-pSmg3L0VhFh3Pk.jpeg",
+        "id": "130ZHUZMykWMlKep-z-pSmg3L0VhFh3Pk",
+        "shef_ai_link": "dave-holloway"
+    },
+    {
+        "title": "Mr",
         "name": "David King",
         "position": "Head of Digital Design",
         "affiliation": "University of Sheffield",
@@ -805,6 +821,21 @@
         "photo": "1CMUSifVddwg63csiTfU3UfiVxv-z_042.jpg",
         "id": "1CMUSifVddwg63csiTfU3UfiVxv-z_042",
         "shef_ai_link": "lyudmila-mihaylova"
+    },
+    {
+        "title": "Dr",
+        "name": "Madhu Pahar",
+        "position": "Research Fellow",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Health and Medical Sciences",
+        "research_interest_terms": "Machine learning, Natural language processing, Neuroscience and cognitive science, Speech recognition",
+        "homepage": "#",
+        "linkedin": "https://www.linkedin.com/in/madhurananda/",
+        "google_scholar": "https://scholar.google.co.uk/citations?user=P2clDtkAAAAJ&hl=en",
+        "github": "#",
+        "photo": "1nsTlWtf_UK1bjgLoCLKA1MS5E5qTfrWQ.jpg",
+        "id": "1nsTlWtf_UK1bjgLoCLKA1MS5E5qTfrWQ",
+        "shef_ai_link": "madhu-pahar"
     },
     {
         "title": "Dr",
