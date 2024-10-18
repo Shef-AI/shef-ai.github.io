@@ -906,6 +906,22 @@
         "shef_ai_link": "mark-stevenson"
     },
     {
+        "title": "Dr",
+        "name": "Max Champneys",
+        "position": "Research fellow in AI",
+        "affiliation": "University of Shefifeld",
+        "research_areas": "Data-centric Engineering, Science, Cross-cutting Challenges",
+        "research_interest_terms": "Automatic control, Data structures and algorithms, Information retrieval, Information theory, Machine learning, Mathematical modelling, Optimisation, Parallel computing, Statistical methods and theory",
+        "short_biography": "Max is a research fellow in AI for sustainability and resilience as part of the centre for machine intelligence at the university of Sheffield, a post he has held since November 2024. He was awarded his PhD in nonlinear structural dynamics at the University of Sheffield in March 2023. Max has also held a number of postdoctoral positions looking at the treatment of uncertainty in structural dynamics.",
+        "research_interest_summary": "Max has a general interest in the treatment of uncertainty in engineering and beyond. Max's research centres around data and AI driven quantification and propagation of uncertainty in complex interdisciplinary systems with applications from populations of offshore wind turbines to characterisation of ultra-thin materials with neutron reflectometry. ",
+        "homepage": "https://github.com/MDCHAMP",
+        "linkedin": "#",
+        "google_scholar": "https://scholar.google.com/citations?user=CZUn_TAAAAAJ&hl=en",
+        "github": "https://github.com/MDCHAMP",
+        "id": "04bff787-a8fa-491b-9ba7-5a7a003ba2ff",
+        "shef_ai_link": "max-champneys"
+    },
+    {
         "title": "Mr",
         "name": "Max Gamill",
         "position": "PhD Student",
