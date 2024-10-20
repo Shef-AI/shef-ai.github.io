@@ -402,6 +402,23 @@
         "shef_ai_link": "george-panoutsos"
     },
     {
+        "title": "Ms",
+        "name": "Ghada Sasi",
+        "position": "PhD researcher and Grantham Scholar.",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Science",
+        "research_interest_terms": "Machine learning, Visualisation",
+        "short_biography": "I obtained my Bachelor of Science in Biology with honors (1st Prize, Merit) from Omar Al Mukhtar University in Derna, Libya, in 2007. Following that, I served as a research assistant at the same campus. I then completed my Master’s in Plant Physiology from Ain Shams University in Cairo, Egypt, in 2019. Currently, I am pursuing my PhD under Dr. Adrien Chauvet in the School of Mathematical and Physical Sciences, Department of Chemistry. Co-Supervisors Professor Stephen Rolfe, School of Biosciences, and Professor Stephen Matcher, Department of Electronic and Electrical Engineering, TUoS. My PhD focuses on using Optical Coherence Tomography (OCT), a novel laser-based imaging techniques, to detect early infection of crops.",
+        "research_interest_summary": "We collaborated with a software company to develop machine learning-based software tailored to our project for OCT image segmentation and classification.",
+        "homepage": "https://grantham.sheffield.ac.uk/scholars/ghada-sasi/",
+        "linkedin": "https://www.linkedin.com/in/ghada-sasi-4a410b94/",
+        "google_scholar": "#",
+        "github": "#",
+        "photo": "1hw9wRqxsO8uDKAPZeGmlIJMk9OPdgKB-.jpg",
+        "id": "1hw9wRqxsO8uDKAPZeGmlIJMk9OPdgKB-",
+        "shef_ai_link": "ghada-sasi"
+    },
+    {
         "title": "Dr",
         "name": "Giuliano Punzo",
         "position": "The University of Sheffield",
