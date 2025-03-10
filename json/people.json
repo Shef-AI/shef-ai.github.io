@@ -621,6 +621,23 @@
         "shef_ai_link": "jefersson-a.-dos-santos"
     },
     {
+        "title": "Mr",
+        "name": "Jiabang Chen",
+        "position": "PhD student",
+        "affiliation": "EEE Department, University of Sheffield",
+        "research_areas": "Health and Medical Sciences, Cross-cutting Challenges",
+        "research_interest_terms": "Computer vision, Machine learning",
+        "short_biography": "Mr. Jiabang Chen obtained his Bachelor Degree from East China University of Science and Technology, and was an exchange student in the University of Sheffield from 2019-2020. In Sheffield, he worked with Prof. George Panoutsos for cancer cell image classification. He obtained his Master Degree from Imperial College London from 2020-2021, and worked with Dr. Kalofonou Melpomeni on primer design and cancer detection",
+        "research_interest_summary": "My research interests mainly lie in deep learning, computer vision, medical image analysis, and explainable AI",
+        "homepage": "#",
+        "linkedin": "https://www.linkedin.com/in/jiabangchen",
+        "google_scholar": "#",
+        "github": "#",
+        "photo": "1eCyidD2aKHTZSDT6O2kBfyZN94Jpivgv.jpg",
+        "id": "1eCyidD2aKHTZSDT6O2kBfyZN94Jpivgv",
+        "shef_ai_link": "jiabang-chen"
+    },
+    {
         "title": "Dr",
         "name": "Jiahong Chen",
         "position": "Lecturer in Law",
@@ -1326,6 +1343,23 @@
     },
     {
         "title": "Dr",
+        "name": "Saleh Farazi",
+        "position": "Lecturer in Strategic Management",
+        "affiliation": "Sheffield University Management School",
+        "research_areas": "Health and Medical Sciences, Humanities and Social Sciences, Security and Business and Public Policy, Cross-cutting Challenges",
+        "research_interest_terms": "Computer vision, Human computer interface, Machine learning, Natural language processing, Privacy and trust, Safety and ethics, Social data science, Social media",
+        "short_biography": "Dr. Mohammad Saleh Farazi is a Lecturer (Assistant Professor) in Strategy at Sheffield University Management School. He has also taught Technology & Innovation Management at New Jersey Institute of Technology, Carlos III University of Madrid, Sharif University of Technology, and Rotterdam School of Management (Erasmus University). His work has appeared in globally acclaimed journals such as Research Policy, R&D Management, and Technovation, among others, in addition to being presented at major international conferences. He regularly reviews for several leading Management journals and he also sits on the Editorial Board of the South Asian Journal of Business Studies.",
+        "research_interest_summary": "Saleh is an applied researcher with a passion about the strategic management of technological innovation and a particular focus on the healthcare sector. He is interested in studying how digital health platforms can create more value for the society and how they are transforming the economy. He is also interested in exploring the strategic management of knowledge and technology in R&D partnerships, including biopharma alliances. As a secondary research interest, he has also taken part in collaborative research that seeks to identify the origins of the gender gap in financing social ventures (i.e. why is it that female social entrepreneurs are less likely to raise equity financing, and what can be done to bridge the gap?).",
+        "homepage": "#",
+        "linkedin": "https://www.sheffield.ac.uk/management/people/academic-staff/esib/mohammad-saleh-farazi",
+        "google_scholar": "https://scholar.google.com/citations?user=XfpcUpoAAAAJ&hl=en&oi=ao",
+        "github": "https://github.com/salehfarazi",
+        "photo": "1GxCYE7PC7aviDLwayv41E7rgsE_jBc56.jpeg",
+        "id": "1GxCYE7PC7aviDLwayv41E7rgsE_jBc56",
+        "shef_ai_link": "saleh-farazi"
+    },
+    {
+        "title": "Dr",
         "name": "Samer Alabed",
         "position": "NIHR Clinical Lecturer in Radiology",
         "affiliation": "University of Sheffield",
@@ -1407,6 +1441,23 @@
         "photo": "1TTyfl7eU2VbII2WNQStcnGF1QVkW1cH8.JPG",
         "id": "1TTyfl7eU2VbII2WNQStcnGF1QVkW1cH8",
         "shef_ai_link": "shaoxiong-sun"
+    },
+    {
+        "title": "Miss",
+        "name": "Sheeba Ancy Koilpillai",
+        "position": "Data Manager",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Health and Medical Sciences, Data-centric Engineering, Security and Business and Public Policy",
+        "research_interest_terms": "Data structures and algorithms, Knowledge representation, Privacy and trust, Safety and ethics, Visualisation",
+        "short_biography": "Data Manager for Data Connect and South Yorkshire Digital Health Hub",
+        "research_interest_summary": "As a Data Manager, I manage and curate sensitive patient-level health datasets, ensuring compliance with NHS ethics, GDPR, and data governance standards. I oversee database management and pseudonymization, preventing re-identification while maintaining data integrity and security. My role involves implementing access controls, auditing data processes, and ensuring adherence to NHS Data Security and Protection (DSP) standards. I apply the Five Safes framework for responsible data access and the FAIR principles to enable ethical data sharing and interoperability. Collaborating with researchers, ethics committees, and data custodians, I support privacy-preserving research while protecting participant rights.",
+        "homepage": "#",
+        "linkedin": "https://www.linkedin.com/in/sheeba-ancy-64a539141/",
+        "google_scholar": "#",
+        "github": "#",
+        "photo": "1QIvPziE0pxmptA3gQWfpOECzqXX4gISi.jpg",
+        "id": "1QIvPziE0pxmptA3gQWfpOECzqXX4gISi",
+        "shef_ai_link": "sheeba-ancy-koilpillai"
     },
     {
         "title": "Mr",
