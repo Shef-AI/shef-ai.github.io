@@ -873,6 +873,23 @@
     },
     {
         "title": "Dr",
+        "name": "Madhurananda Pahar",
+        "position": "Research Fellow",
+        "affiliation": "University of Sheffield ",
+        "research_areas": "Health and Medical Sciences",
+        "research_interest_terms": "Human computer interface, Machine learning, Natural language processing, Neuroscience and cognitive science, Speech recognition",
+        "short_biography": "Madhu is an energetic, motivated, hardworking, enthusiastic, experienced ML and AI engineer & researcher, working to apply machine learning and signal processing in the field of Biology. He studied Mathematics in hin undergraduation and focused on applied mathematics in his MSc. His PhD was devoted towards developing a biologically inspired audio coding technique. ",
+        "research_interest_summary": "Madhu is working to apply machine learning and signal processing in the field of Biology.\nPreviously, he was involved in detecting and classifying TB and COVID-19 vocal audio, such as cough, breath and speech in real-world environments, as well as monitoring patients' long-term recovery using smart sensors, such as an accelerometer, in South Africa.\nHe also developed deep learning methods from third-generation sequencing (Oxford Nanopore) signals to study genomics, epigenomics, transcriptomics and epi-transcriptomics in the USA. Currently, he is analysing speech to automatically detect the signs of early cognitive decline,​ such as mild cognitive impairment (MCI) and dementia, in Sheffield, UK. ",
+        "homepage": "https://www.sheffield.ac.uk/cs/people/research-staff/madhurananda-pahar",
+        "linkedin": "https://www.linkedin.com/in/madhurananda/",
+        "google_scholar": "https://scholar.google.co.uk/citations?user=P2clDtkAAAAJ&hl=en",
+        "github": "https://github.com/Madhurananda",
+        "photo": "1v_NLSSRjvm_JlxSCC0R8YXkqsxovldsi.jpg",
+        "id": "1v_NLSSRjvm_JlxSCC0R8YXkqsxovldsi",
+        "shef_ai_link": "madhurananda-pahar"
+    },
+    {
+        "title": "Dr",
         "name": "Mahnaz Arvaneh",
         "position": "Senior Lecturer",
         "affiliation": "University of Sheffield",
