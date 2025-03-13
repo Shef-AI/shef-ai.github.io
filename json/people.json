@@ -1089,6 +1089,23 @@
         "shef_ai_link": "nabila-cruz"
     },
     {
+        "title": "Dr",
+        "name": "Neda Azarmehr",
+        "position": "Lecturer in Data Science and AI",
+        "affiliation": " University of Sheffield",
+        "research_areas": "Health and Medical Sciences",
+        "research_interest_terms": "Computer vision, Machine learning",
+        "short_biography": "Neda joined the Information School in January 2025 as a Lecturer in Data Science and AI. She holds a PhD in Computer Science with a focus in computer vision for cardiovascular imaging, particularly echocardiography, from the University of Lincoln (2021) in collaboration with Imperial College London. After completing her PhD, she worked as a Postdoctoral Research Fellow at the University of Sheffield School of Dentistry, where she developed advanced deep learning algorithms for CR-UK funded projects using digital pathology images. Prior to this, she was a Lecturer in Computer Science and the Course Director of the MSc AI program at the University of West London. She is a Fellow of the HEA and a Royal Academy of Engineering Frontiers awardee.",
+        "research_interest_summary": "Neda’s research focuses on deep learning and computer vision techniques in healthcare domains, particularly medical imaging and computer-aided diagnosis. Examples of Neda’s research include automated echocardiography view detection with a focus on lightweight deep neural network, left ventricle segmentation, speckle tracking in echocardiography, colonic polyp detection, and the quantification of digital pathology images with a focus on head and neck cancer. Neda is also interested in trustworthy AI, focusing on issues such as bias, fairness, and interpretability in algorithm development and inference. She aims to explore multimodal AI and generative models for future integration in medical imaging.",
+        "homepage": "https://www.sheffield.ac.uk/is/people/academic/neda-azarmehr",
+        "linkedin": "https://www.linkedin.com/in/nedaazarmehr",
+        "google_scholar": "https://scholar.google.co.uk/citations?user=MbztIDgAAAAJ&hl=en",
+        "github": "https://github.com/NdaAzr",
+        "photo": "1dqdPAZM78Z5ruJYaVah2AtjZsUT1FmXL.png",
+        "id": "1dqdPAZM78Z5ruJYaVah2AtjZsUT1FmXL",
+        "shef_ai_link": "neda-azarmehr"
+    },
+    {
         "title": "Mr",
         "name": "Neil Ireson",
         "position": "Research Associate",
