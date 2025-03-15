@@ -102,6 +102,23 @@
     },
     {
         "title": "Dr",
+        "name": "Anastasia Karpunina",
+        "position": "Postdoctoral Researcher",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Humanities and Social Sciences",
+        "research_interest_terms": "Safety and ethics, Social data science",
+        "short_biography": "I am an experienced social worker specialising in working with children and families at risk. After frontline practice, I transitioned into academia as a social work educator and a researcher, focusing on the intersection of AI, pedagogy, and social work.",
+        "research_interest_summary": "My research explores the use of virtual environments and AI avatars in social work education. My current project examines how AI can meet the demands of professions that rely on communication and interaction with diverse and vulnerable individuals. I am also interested in the ethical challenges and biases associated with AI that may impact the learning process.",
+        "homepage": "#",
+        "linkedin": "https://www.linkedin.com/in/karpunina",
+        "google_scholar": "#",
+        "github": "#",
+        "photo": "1kadiSPnd4DrwkIDA5wm6TXJ7zTy-eLgk.jpg",
+        "id": "1kadiSPnd4DrwkIDA5wm6TXJ7zTy-eLgk",
+        "shef_ai_link": "anastasia-karpunina"
+    },
+    {
+        "title": "Dr",
         "name": "Andrew Cox",
         "position": "Senior Lecturer",
         "affiliation": "Information School",
