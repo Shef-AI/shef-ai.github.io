@@ -1824,5 +1824,22 @@
         "photo": "1XfDU-hhWEuLpUz7OgrQZxrdBnUlXPhXn.jpg",
         "id": "1XfDU-hhWEuLpUz7OgrQZxrdBnUlXPhXn",
         "shef_ai_link": "ze-zhang"
+    },
+    {
+        "title": "Dr",
+        "name": "Zheng Yuan",
+        "position": "Senior Lecturer in Natural Language Processing",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Health and Medical Sciences, Data-centric Engineering, Humanities and Social Sciences, Cross-cutting Challenges",
+        "research_interest_terms": "Human computer interface, Information retrieval, Knowledge representation, Machine learning, Multi-agent reasoning, Natural language processing, Social data science, Social media",
+        "short_biography": "Zheng Yuan is a Senior Lecturer (Associate Professor) in Natural Language Processing (NLP) in the School of Computer Science at the University of Sheffield. Before joining Sheffield, Zheng was a Lecturer in the Department of Informatics at King's College London, a Research Associate in the Department of Computer Science and Technology at the University of Cambridge, and a Fellow in Computer Science at Trinity College (Cambridge). Zheng holds a PhD in Natural Language Processing and an MPhil in Advanced Computer Science from the University of Cambridge, as well as a BSc(Eng) from Queen Mary University of London.",
+        "research_interest_summary": "Zheng is working on machine learning for natural language processing, including real-world applications in education, creativity, healthcare, social media, and finance.",
+        "homepage": "https://www.sheffield.ac.uk/cs/people/academic/zheng-yuan",
+        "linkedin": "https://www.linkedin.com/in/zheng-yuan-a0979738/",
+        "google_scholar": "https://scholar.google.com/citations?user=7B4GHsMAAAAJ",
+        "github": "#",
+        "photo": "1xRKqmYIVSgj5IYOoCYkNj1-hp8rVVVxg.png",
+        "id": "1xRKqmYIVSgj5IYOoCYkNj1-hp8rVVVxg",
+        "shef_ai_link": "zheng-yuan"
     }
 ]
