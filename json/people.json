@@ -791,6 +791,23 @@
     },
     {
         "title": "Dr",
+        "name": "Kate Miltner",
+        "position": "Lecturer in Data, AI, & Society",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Humanities and Social Sciences",
+        "research_interest_terms": "Safety and ethics, Social media",
+        "short_biography": "I am a Lecturer (Assistant Professor) in Data, AI, and Society at the Information School at the University of Sheffield and a Member of the UK Young Academy. Previously, I was a Marie Skłodowska-Curie Actions Fellow at The University of Edinburgh. I have held research appointments at Microsoft Research New England and Twitter, and visiting positions at the University of California, Berkeley and the University of Amsterdam. My research has been has been cited by the United Nations, the Council of Europe, European Parliament, the Nordic Council, the Organization for Security and Co-operation in Europe, the Law Commission, and the Department of Culture, Media, and Sport. In 2024, I was a finalist for the BBC New Generation Thinkers scheme.",
+        "research_interest_summary": "I am interested in how (and in what forms) power circulates through digital ecosystems, how structural inequalities are (re)produced within and across digital contexts, and how power and inequality shape what happens—and for whom—in digital spaces. I am currently examining how portrayals of visual generative AI in advertising and news media have consequences for how we understand what generative AI is and who it is for. As a Co-I on the UKRI-funded Framing Responsible AI Implementation and Management project, I am investigating the key factors that influence how responsible AI is implemented and managed in both public and private sector institutions. ",
+        "homepage": "https://katemiltner.com",
+        "linkedin": "https://www.linkedin.com/in/katemiltner/",
+        "google_scholar": "https://scholar.google.com/citations?user=NEIRJGsAAAAJ&hl=en",
+        "github": "#",
+        "photo": "1ZSbVmcm6nLx8i72G3JdZV7nCs7WFny-U.jpg",
+        "id": "1ZSbVmcm6nLx8i72G3JdZV7nCs7WFny-U",
+        "shef_ai_link": "kate-miltner"
+    },
+    {
+        "title": "Dr",
         "name": "Kathryn Simpson",
         "position": "Lecturer in Digital Humanities",
         "affiliation": "University of Sheffield",
