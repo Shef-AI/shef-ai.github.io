@@ -1843,6 +1843,23 @@
         "shef_ai_link": "yue-yao"
     },
     {
+        "title": "Dr",
+        "name": "Yuri Mejia",
+        "position": "Research Associate",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Data-centric Engineering, Cross-cutting Challenges",
+        "research_interest_terms": "Data structures and algorithms, Information theory, Knowledge representation, Machine learning, Mathematical modelling, Natural language processing, Optimisation, Statistical methods and theory",
+        "short_biography": "Dr. Yuri Mejia is a Research Associate at the University of Sheffield, specialising in the digitalisation of manufacturing processes. Her work focuses on developing solutions for in-process monitoring, real-time simulation, and integrating sustainability and circular economy principles into advanced manufacturing systems. She collaborates with the industry to enhance efficiency and quality in sectors such as aerostructures and high-rate production systems.",
+        "research_interest_summary": "She has contributed to major research initiatives, including ATI projects such as DELTA, DAWN, and EPSRC Circular 4.0, focusing on data analytics, monitoring algorithms, and sustainable manufacturing strategies. Her expertise spans time-series data analysis, failure mode modelling, and the development of simulation models to evaluate circular economy impacts.",
+        "homepage": "https://ymejiam.github.io/index.html ",
+        "linkedin": "https://www.linkedin.com/in/yuri-mejia-b9121528/",
+        "google_scholar": "https://scholar.google.com/citations?hl=en&view_op=list_works&authuser=1&gmla=ANZ5fUPAxvfRRIKPUq_6PWCpVV1M6gMiKXLLljHnnEieqUnj5urbqNxX8ki0NE4tc8UwvfQdJDyMagsX8OKXYlwnSsva&user=VNhWdv0AAAAJ",
+        "github": "https://github.com/ymejiam",
+        "photo": "1_3RzvkmmGYAb5i__u_3YvV4J86t5Qt0d.jpg",
+        "id": "1_3RzvkmmGYAb5i__u_3YvV4J86t5Qt0d",
+        "shef_ai_link": "yuri-mejia"
+    },
+    {
         "title": "Mr",
         "name": "Ze Zhang",
         "position": "Research Associate",
