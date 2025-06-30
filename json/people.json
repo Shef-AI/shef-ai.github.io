@@ -1207,6 +1207,23 @@
         "shef_ai_link": "olayiwola-oladiran"
     },
     {
+        "title": "Dr",
+        "name": "Oscar Mendoza",
+        "position": "Research Software Engineer (ML)",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Data-centric Engineering",
+        "research_interest_terms": "Computer vision, Data structures and algorithms, Information retrieval, Machine learning, Natural language processing",
+        "short_biography": "PhD in Computer Science with more than 3 years of experience as a data scientist, specialising in deep learning models for natural language processing and information retrieval, supported by over 5 years of dedicated research.",
+        "research_interest_summary": "Advanced machine learning algorithms for fault detection in aerospace engine time-series data.",
+        "homepage": "https://ospitia.github.io/",
+        "linkedin": "https://www.linkedin.com/in/oscar-e-mendoza-07827a245/",
+        "google_scholar": "#",
+        "github": "https://github.com/ospitia",
+        "photo": "1ANXwZXylVKbqEjiDJt04wEgp0gA-H5bv.jpg",
+        "id": "1ANXwZXylVKbqEjiDJt04wEgp0gA-H5bv",
+        "shef_ai_link": "oscar-mendoza"
+    },
+    {
         "title": "Mr",
         "name": "Peizhen Bai",
         "position": "Researcher Ph.D. Student",
