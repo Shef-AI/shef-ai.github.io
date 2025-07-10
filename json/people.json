@@ -1814,6 +1814,23 @@
         "shef_ai_link": "xin-zhao"
     },
     {
+        "title": "Dr",
+        "name": "Xu Xu",
+        "position": "Senior Lecturer in Complex Systems Modelling",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Health and Medical Sciences, Data-centric Engineering, Cross-cutting Challenges",
+        "research_interest_terms": "Automatic control, Data structures and algorithms, Mathematical modelling, Statistical methods and theory",
+        "short_biography": "Dr Xu Xu is a Senior Lecturer in Complex Systems Modelling in the Department of Computer Science and the INSIGNEO Institute for in silico Medicine, at the University of Sheffield, UK. ",
+        "research_interest_summary": "My current research focuses on haemodynamics and multi-scale modelling for personalised cardiovascular healthcare. In particular, my research interests include: \n• Compartmental cardiovascular model for personalised healthcare\n• Uncertainty quantification and parameter identification\n• Multi-scale and multi-component lattice Boltzmann simulations of blood flow\n• Nonlinear dynamics, control and state estimation\n• Cellular automata and swarm robotics",
+        "homepage": "https://sheffield.ac.uk/cs/people/academic/xu-xu",
+        "linkedin": "https://www.linkedin.com/in/xu-xu-85662b64/?originalSubdomain=uk",
+        "google_scholar": "https://scholar.google.com/citations?user=i72Tzd0AAAAJ&hl=en",
+        "github": "#",
+        "photo": "1VAv8w4KRMaaCQIt46yoMy-HRyi2uin-t.jpg",
+        "id": "1VAv8w4KRMaaCQIt46yoMy-HRyi2uin-t",
+        "shef_ai_link": "xu-xu"
+    },
+    {
         "title": "Mr",
         "name": "Xulong Wang",
         "position": "Student",
