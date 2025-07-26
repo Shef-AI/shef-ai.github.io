@@ -385,6 +385,22 @@
         "shef_ai_link": "edwin-brown"
     },
     {
+        "title": "Dr",
+        "name": "Eleftherios Ioannou",
+        "position": "Research Associate",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Science, Cross-cutting Challenges",
+        "research_interest_terms": "Computer vision, Machine learning, Neuroscience and cognitive science",
+        "short_biography": "I work as a Research Associate at the School of Biosciences, exploring deep learning-based approaches for extracting and analysing colour pattern information from biological images. My work aims to empower researchers by enabling the characterisation of colour pattern phenotypes from diverse image datasets, bridging the gap between computational techniques and biological understanding. I studied Computer Science and gained a PhD in Computer Vision from the University of Sheffield.",
+        "research_interest_summary": "My expertise lies at the intersection of computer vision, computer graphics, and image processing with a growing interest for their application in biology. ",
+        "homepage": "https://ioannoue.github.io/",
+        "linkedin": "#",
+        "google_scholar": "https://scholar.google.com/citations?user=hpD-688AAAAJ",
+        "github": "https://github.com/ioannouE/",
+        "id": "895e58cb-1cfd-4418-801e-be5720675591",
+        "shef_ai_link": "eleftherios-ioannou"
+    },
+    {
         "title": "Mr",
         "name": "Eytan Canzini",
         "position": "PhD Student in Automatic Control",
