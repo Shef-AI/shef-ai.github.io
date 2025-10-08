@@ -1059,6 +1059,22 @@
         "shef_ai_link": "michael-farnsworth"
     },
     {
+        "title": "Dr",
+        "name": "Midhun Parakkal Unni",
+        "position": "Academic Fellow",
+        "affiliation": "University of Sheffield - CMI",
+        "research_areas": "Health and Medical Sciences, Data-centric Engineering, Science",
+        "research_interest_terms": "Machine learning, Mathematical modelling",
+        "research_interest_summary": "AI for Health and Physiology\nDynamical Systems & Mathematical Modelling\nWearable Technologies & Time-Series Analysis\nUncertainty-Aware & Robust Machine Learning",
+        "homepage": "https://sheffield.ac.uk/cs/people/academic/midhun-parakkal-unni",
+        "linkedin": "https://www.linkedin.com/in/midhunpunni/?originalSubdomain=uk",
+        "google_scholar": "#",
+        "github": "#",
+        "photo": "13KlDJi4CsIqfvEOpHDC44h1q8FApcaXG.jpeg",
+        "id": "13KlDJi4CsIqfvEOpHDC44h1q8FApcaXG",
+        "shef_ai_link": "midhun-parakkal-unni"
+    },
+    {
         "title": "Professor",
         "name": "Mike Thelwall",
         "position": "Professor of Data Science",
