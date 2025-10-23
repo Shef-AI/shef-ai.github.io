@@ -537,6 +537,23 @@
         "shef_ai_link": "guy-brown"
     },
     {
+        "title": "Dr",
+        "name": "Guy Solomon",
+        "position": "Lecturer in AI and Digital Humanities",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Humanities and Social Sciences, Cross-cutting Challenges",
+        "research_interest_terms": "Computer vision, Data structures and algorithms, Human computer interface, Machine learning, Mathematical modelling, Natural language processing, Social data science, Visualisation",
+        "short_biography": "Guy is a Lecturer in AI and Digital Humanities in the Digital Humanities Institute (DHI). His research is interdisciplinary in nature, combining elements of digital humanities, economic and social history, geography, and urban studies.",
+        "research_interest_summary": "Guy is generally interested in the application of Artificial Intelligence, machine learning, and computational methods to research in the humanities, particularly (although not exclusively) in relation to geospatial data. His broader research interests concern the dynamics of urban systems, long term economic and social development, and the role of ‘missingness’ and uncertainty in data analysis.",
+        "homepage": "https://guy-sol.github.io/",
+        "linkedin": "#",
+        "google_scholar": "#",
+        "github": "#",
+        "photo": "1UqvT7ro3YquOBh_6cwGuO9DcC_5_77jC.jpg",
+        "id": "1UqvT7ro3YquOBh_6cwGuO9DcC_5_77jC",
+        "shef_ai_link": "guy-solomon"
+    },
+    {
         "title": "Professor",
         "name": "Haiping Lu",
         "position": "Professor of Machine Learning",
