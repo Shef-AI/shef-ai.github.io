@@ -684,6 +684,22 @@
         "shef_ai_link": "iñaki-esnaola"
     },
     {
+        "title": "Mr",
+        "name": "JIABANG CHEN",
+        "position": "PhD Candidate",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Health and Medical Sciences, Data-centric Engineering, Cross-cutting Challenges",
+        "research_interest_terms": "Computer vision, Machine learning",
+        "research_interest_summary": "Explainable AI, Cancer Diagnosis, Image Classification, Deep Learning",
+        "homepage": "#",
+        "linkedin": "#",
+        "google_scholar": "#",
+        "github": "#",
+        "photo": "1wc_7vc1tVMiqGbT0TtjIbXx9oC99GiVk.jpg",
+        "id": "1wc_7vc1tVMiqGbT0TtjIbXx9oC99GiVk",
+        "shef_ai_link": "jiabang-chen"
+    },
+    {
         "title": "Dr",
         "name": "Jacob Macdonald",
         "position": "Lecturer in GIS and Spatial Analysis",
@@ -1003,6 +1019,23 @@
         "photo": "1-pIes3g4K4nKMYnfMZ6cjOSUoBRlKgR_.jpg",
         "id": "1-pIes3g4K4nKMYnfMZ6cjOSUoBRlKgR_",
         "shef_ai_link": "mahnaz-arvaneh"
+    },
+    {
+        "title": "Dr",
+        "name": "Marco Valentino",
+        "position": "Lecturer in AI and Applications",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Health and Medical Sciences, Science, Cross-cutting Challenges",
+        "research_interest_terms": "Information retrieval, Knowledge representation, Machine learning, Natural language processing",
+        "short_biography": "Marco is a Lecturer in Artificial Intelligence and Applications of AI in the Natural Language Processing (NLP) group at the University of Sheffield.\n\nPrior to Sheffield, he was a member of the Neuro-Symbolic AI Group at the Idiap Research Institute. Marco holds a PhD in Computer Science from the University of Manchester.",
+        "research_interest_summary": "His research focuses on developing the next generation of AI systems that can use explanation as a core mechanism for learning and reasoning, particularly in complex domains such as science, mathematics, and healthcare.\n\nHe investigates the integration of neural and symbolic AI methods to enhance the robustness and faithfulness of AI-generated explanations and, ultimately, to understand the principles governing explanatory inference in humans.\n\nMoreover, he is interested in developing methodologies to interpret, control, and evaluate Large Language Models (LLMs), with a focus on disentangling knowledge acquisition from abstract logical reasoning, and enabling out-of-distribution, out-of-domain generalisation.",
+        "homepage": "https://sheffield.ac.uk/cs/people/academic/marco-valentino",
+        "linkedin": "https://www.linkedin.com/in/marco-valentino-844a5ab1",
+        "google_scholar": "https://scholar.google.com/citations?user=nnaBYcIAAAAJ",
+        "github": "https://github.com/mValentino91",
+        "photo": "1T7t_HYFYRGIPXcvjpMjYVxTg4Hlzy74U.png",
+        "id": "1T7t_HYFYRGIPXcvjpMjYVxTg4Hlzy74U",
+        "shef_ai_link": "marco-valentino"
     },
     {
         "title": "Dr",
