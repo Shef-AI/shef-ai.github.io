@@ -1203,6 +1203,23 @@
         "shef_ai_link": "min-tao"
     },
     {
+        "title": "Dr",
+        "name": "Mirre Simons",
+        "position": "Senior Lecturer",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Science",
+        "research_interest_terms": "Machine learning, Mathematical modelling, Statistical methods and theory",
+        "short_biography": "Mirre Simons (Sir Henry Dale Fellow, University of Sheffield) studies the biology of ageing from an evolutionary and biomedical perspective. Despite ageing being central and universal to all life, our understanding of why and how we and other organisms age is limited. One treatment that increased health and extends lifespan across organisms is dietary restriction. Currently, his lab uses a combination of genetic and diet experiments in the fruit fly to ultimately understand and treat ageing.",
+        "research_interest_summary": "My main interest is the biology of aging. In this context I have an interest in predicting the underlying biology of phenotypes from transcriptomics/proteomics/genomics using AI. I further have an interest in control theory.",
+        "homepage": "https://sheffield.ac.uk/biosciences/people/academic-staff/mirre-simons",
+        "linkedin": "https://www.linkedin.com/in/mirre-simons-5580887b/?originalSubdomain=uk",
+        "google_scholar": "https://scholar.google.com/citations?user=ILJxQLQAAAAJ&hl=en",
+        "github": "#",
+        "photo": "1_zMB46fpOc2zfadiiZbBEVohVoHLR-Tl.jpeg",
+        "id": "1_zMB46fpOc2zfadiiZbBEVohVoHLR-Tl",
+        "shef_ai_link": "mirre-simons"
+    },
+    {
         "title": "Mr",
         "name": "Mohammod Naimul Islam Suvon",
         "position": "Research Support Engineer",
