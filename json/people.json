@@ -2009,6 +2009,21 @@
     },
     {
         "title": "Mr",
+        "name": "Yicheng Wang",
+        "position": "PhD Student",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Health and Medical Sciences, Data-centric Engineering, Science",
+        "research_interest_terms": "Information retrieval, Information theory, Knowledge representation, Machine learning, Mathematical modelling, Natural language processing, Neuroscience and cognitive science, Optimisation, Speech recognition, Statistical methods and theory",
+        "short_biography": "PhD student working on meta learning and adaptation",
+        "homepage": "#",
+        "linkedin": "https://LinkedIn.com/in/yicheng-wang-b2a963251/",
+        "google_scholar": "#",
+        "github": "#",
+        "id": "383c5413-8c2e-40e1-942e-e3456cf97787",
+        "shef_ai_link": "yicheng-wang"
+    },
+    {
+        "title": "Mr",
         "name": "Yue Yao",
         "position": "Research Assistant",
         "affiliation": "University of Sheffield",
