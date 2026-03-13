@@ -483,6 +483,23 @@
     },
     {
         "title": "Dr",
+        "name": "Farhad Allian",
+        "position": "Research Software Engineer",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Data-centric Engineering, Science, Cross-cutting Challenges",
+        "research_interest_terms": "Data structures and algorithms, Machine learning, Mathematical modelling, Natural language processing, Parallel computing, Statistical methods and theory, Visualisation",
+        "short_biography": "I work in the Research & Innovation IT team within IT Services as a Research Software Engineer, collaborating with researchers to design and develop software and computational solutions for their research projects. I also provide consultations and training to support researchers in adopting effective tools, workflows, and best practices for scientific software development and data visualisation.",
+        "research_interest_summary": "My work focuses on research software engineering, data science, and AI for scientific research. I develop reproducible computational workflows, data pipelines, and scalable systems that enable data-driven research across a range of academic disciplines. My work often involves machine and deep learning, data science and visualisation, and software development. I also contribute to reproducible research practices, open-source software, and the technical upskilling of researchers through training and collaborative development.",
+        "homepage": "https://www.farhadallian.co.uk",
+        "linkedin": "https://www.linkedin.com/in/farhad-allian/",
+        "google_scholar": "https://scholar.google.co.uk/citations?user=SXnqZeoAAAAJ&hl=en",
+        "github": "https://github.com/f-allian",
+        "photo": "1zHrVPQXi16wLMdi9gDQyGUdy0jfLpsWf.png",
+        "id": "1zHrVPQXi16wLMdi9gDQyGUdy0jfLpsWf",
+        "shef_ai_link": "farhad-allian"
+    },
+    {
+        "title": "Dr",
         "name": "Gavin Boyce",
         "position": "Head of Faculty & Research Partnership",
         "affiliation": "University of Sheffield Library",
