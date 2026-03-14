@@ -568,6 +568,23 @@
     },
     {
         "title": "Dr",
+        "name": "Grace Feehan",
+        "position": "Research Assistant",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Health and Medical Sciences, Science, Humanities and Social Sciences, Security and Business and Public Policy",
+        "research_interest_terms": "Computer systems and architectures, Human computer interface, Knowledge representation, Machine learning, Multi-agent reasoning, Natural language processing, Neuroscience and cognitive science, Robotics, Safety and ethics, Social data science, Social media",
+        "short_biography": "I am an interdisciplinary early-career researcher with a background in psychology, robotics, neuroscience and AI. My PhD looked at creating emotional reinforcement learning models in game-playing multi-agent networks, and I used Python for my work. I've done a small amount of consulting for private companies on AI safety and ethics, and I'm also a small business owner and illustrator in my spare time. ",
+        "research_interest_summary": "I love both the human and the artificial side of AI and robotics technologies - skills for people interacting with them, social consequences of their use, skills for AI/robots to interact socially, and so forth. Looking to grow my career in human-AI interaction and social aspects of these technologies. I love philosophy, ethics and humanities/arts research as well as technical research also!",
+        "homepage": "https://feehan.carrd.co/#papers",
+        "linkedin": "https://www.linkedin.com/in/grace-feehan-95528093",
+        "google_scholar": "https://scholar.google.com/citations?user=yLuhoHAAAAAJ&hl=en",
+        "github": "#",
+        "photo": "1Yfn4YXha2FMeRvDKFvhY7hYNXzDExHib.png",
+        "id": "1Yfn4YXha2FMeRvDKFvhY7hYNXzDExHib",
+        "shef_ai_link": "grace-feehan"
+    },
+    {
+        "title": "Dr",
         "name": "Grant Hill",
         "position": "Senior Lecturer in Theoretical Chemistry",
         "affiliation": "University of Sheffield",
