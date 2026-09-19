@@ -568,6 +568,23 @@
     },
     {
         "title": "Dr",
+        "name": "Ghada Sasi",
+        "position": "Visiting Researcher",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Science",
+        "research_interest_terms": "Machine learning, Visualisation",
+        "short_biography": "I am a plant scientist with a PhD from the University of Sheffield, specialising in plant–pathogen interactions, optical imaging, and computational analysis. My research focuses on developing Optical Coherence Tomography (OCT) as a non-invasive, real-time tool for studying early plant responses to microbial infection. I combine advanced imaging with machine learning to improve plant disease detection and phenotyping. My work has resulted in peer-reviewed publications and ongoing collaborations aimed at advancing sustainable crop health and precision agriculture.",
+        "research_interest_summary": "My research interests focus on plant science, plant–pathogen interactions, bioimaging and biophotonics, image segmentation, sustainable food systems, and deep learning applied to biological imaging.",
+        "homepage": "https://sheffield.ac.uk/sustainable-food/people/ghada-sasi",
+        "linkedin": "https://www.linkedin.com/in/ghada-sasi-ph-d-4a410b94",
+        "google_scholar": "https://scholar.google.com/citations?hl=en&user=IgJzkpIAAAAJ",
+        "github": "#",
+        "photo": "1GSZx4LiF2qb6qQSEhELXG80zRM4kTi4X.png",
+        "id": "1GSZx4LiF2qb6qQSEhELXG80zRM4kTi4X",
+        "shef_ai_link": "ghada-sasi"
+    },
+    {
+        "title": "Dr",
         "name": "Giuliano Punzo",
         "position": "The University of Sheffield",
         "affiliation": "The University of Sheffield",
