@@ -1945,6 +1945,23 @@
     },
     {
         "title": "Dr",
+        "name": "Tom Webb",
+        "position": "Senior Lecturer in Marine Ecology and Conservation",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Science, Cross-cutting Challenges",
+        "research_interest_terms": "Machine learning, Statistical methods and theory, Visualisation",
+        "short_biography": "I am a senior lecturer in Marine Ecology and Conservation, within the Ecology and Evolutionary Biology cluster in the School of Biosciences, University of Sheffield. I have a longstanding interest in using existing data to understand how marine biodiversity varies in space and time. I have pursued this interest via funding routes including UKRI, the Royal Society, the European Commission, and the Leverhulme Trust. I have trained over a dozen PhD students, and many masters students, and I teach a wide range of conservation biology and data handling analysis across undergraduate and MSc programmes, inlcuding the MSc Biodiversity and Conservation that I run.",
+        "research_interest_summary": "I am a marine biodiversity data scientist. I leverage the power of large datasets to understand the dynamics of marine biodiversity in space and time, with a particular focus on the past and predicted future impacts of environmental change. I’m interested in developing methods that allow us to use existing data to forecast the exposure of marine species to extreme events, such as marine heatwaves. Work in my group has also focused on documenting gaps and biases in these large databases, enabling us to prioritise efforts to fill them, either via novel sampling methods (e.g. environmental DNA) or by mining the literature to turn qualitative descriptions of natural history into quantitative data.",
+        "homepage": "https://sheffield.ac.uk/biosciences/people/academic-staff/tom-webb",
+        "linkedin": "https://www.linkedin.com/in/tom-webb-1193011a2/",
+        "google_scholar": "https://scholar.google.co.uk/citations?user=uSAvVq8AAAAJ&hl=en",
+        "github": "https://github.com/tomjwebb",
+        "photo": "1ZOJueWtFsCbeapkNDmJ5PJZxZA2bIqbR.jpg",
+        "id": "1ZOJueWtFsCbeapkNDmJ5PJZxZA2bIqbR",
+        "shef_ai_link": "tom-webb"
+    },
+    {
+        "title": "Dr",
         "name": "Venet Osmani",
         "position": "Senior Lecturer in Data Science for Health",
         "affiliation": "University of Sheffield",
