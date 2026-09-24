@@ -585,6 +585,23 @@
     },
     {
         "title": "Dr",
+        "name": "Ghada Sasi",
+        "position": "Visiting Researcher",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Science",
+        "research_interest_terms": "Machine learning, Visualisation",
+        "short_biography": "I am a plant scientist with a PhD from the University of Sheffield, specialising in plant Physiology, optical imaging, and computational analysis. My research focuses on developing Optical Coherence Tomography (OCT) as a non-invasive, real-time tool for studying early plant responses to microbial infection. I combine advanced imaging with machine learning to improve plant disease detection and phenotyping. My work has resulted in peer-reviewed publications and ongoing collaborations aimed at advancing sustainable crop health and precision agriculture.",
+        "research_interest_summary": "My research interests focus on plant Physiology, Bioimaging and Biophotonics, image segmentation, sustainable food systems, and deep learning applied to biological imaging.",
+        "homepage": "https://sheffield.ac.uk/sustainable-food/people/ghada-sasi",
+        "linkedin": "https://www.linkedin.com/in/ghada-sasi-ph-d-4a410b94",
+        "google_scholar": "#",
+        "github": "#",
+        "photo": "1QnK1oU7ngUEzstvqGgDlMns4379AJqtn.jpg",
+        "id": "1QnK1oU7ngUEzstvqGgDlMns4379AJqtn",
+        "shef_ai_link": "ghada-sasi"
+    },
+    {
+        "title": "Dr",
         "name": "Giuliano Punzo",
         "position": "The University of Sheffield",
         "affiliation": "The University of Sheffield",
@@ -2123,6 +2140,20 @@
         "github": "#",
         "id": "383c5413-8c2e-40e1-942e-e3456cf97787",
         "shef_ai_link": "yicheng-wang"
+    },
+    {
+        "title": "Mr",
+        "name": "Youngwoong Cho",
+        "position": "Researcher (pgr)",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Data-centric Engineering",
+        "research_interest_terms": "Computer systems and architectures, Computer vision, Data structures and algorithms, Information retrieval, Knowledge representation, Machine learning, Mathematical modelling, Multi-agent reasoning, Natural language processing, Parallel computing, Robotics",
+        "homepage": "#",
+        "linkedin": "#",
+        "google_scholar": "#",
+        "github": "#",
+        "id": "e7139c97-0360-4598-b627-0ffd531a714f",
+        "shef_ai_link": "youngwoong-cho"
     },
     {
         "title": "Mr",
