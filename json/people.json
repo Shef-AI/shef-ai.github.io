@@ -285,6 +285,23 @@
     },
     {
         "title": "Dr",
+        "name": "Chris Cooney",
+        "position": "Lecturer in Ecology and Evolutionary Biology",
+        "affiliation": "University of Sheffield",
+        "research_areas": "Science",
+        "research_interest_terms": "Computer vision, Data structures and algorithms, Knowledge representation, Machine learning, Natural language processing, Neuroscience and cognitive science, Speech recognition, Statistical methods and theory, Visualisation",
+        "short_biography": "I am a Lecturer in Ecology and Evolution in the School of Biosciences and the University of Sheffield. I have previously held Leverhulme (2018-20) and NERC (2021-26) Independent Research Fellowships.",
+        "research_interest_summary": "I have research interests spanning animal behaviour, ecology, evolution, biodiversity and human-nature interactions. I am particularly interested in the ecology and evolution of animal communication systems, and how natural and artificial models of sensory perception, processing and cognition can help to inform our understanding of these systems.",
+        "homepage": "https://www.cooneylab.co.uk/",
+        "linkedin": "#",
+        "google_scholar": "https://scholar.google.com/citations?user=177bOfMAAAAJ&hl=en&inst=12733411405069140160",
+        "github": "https://github.com/christophercooney",
+        "photo": "1g75ocSwzF56-bmfITM41UBoL7WSRnrjb.jpg",
+        "id": "1g75ocSwzF56-bmfITM41UBoL7WSRnrjb",
+        "shef_ai_link": "chris-cooney"
+    },
+    {
+        "title": "Dr",
         "name": "Claire Burdfield",
         "position": "University Teacher in Marketing & CCI",
         "affiliation": "University of Sheffield",
