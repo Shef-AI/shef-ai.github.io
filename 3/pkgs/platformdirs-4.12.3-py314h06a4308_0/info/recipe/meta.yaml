@@ -1,0 +1,101 @@
+# This file created by conda-build 26.7.1
+# meta.yaml template originally from:
+# /home/task_179120564681614/platformdirs-feedstock/recipe, last modified Mon Oct  5 13:07:48 2026
+# ------------------------------------------------
+
+package:
+  name: platformdirs
+  version: 4.12.3
+source:
+  url: https://pypi.org/packages/source/p/platformdirs/platformdirs-4.12.3.tar.gz
+  sha256: 427fc0bb321ae0c5b037fa03238ca74820437be162e78b4848c4d4055b9b766c
+build:
+  number: '0'
+  script: /home/task_179120564681614/croot/platformdirs_1791205695985/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol/bin/python
+    -m pip install . --no-deps --no-build-isolation -vv
+  string: py314h06a4308_0
+requirements:
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 52_gnu
+    - bzip2 1.0.8 h5eee18b_6
+    - ca-certificates 2026.9.25 h06a4308_0
+    - hatch-vcs 0.5.0 py314h06a4308_1
+    - hatchling 1.31.0 py314h06a4308_0
+    - ld_impl_linux-64 2.44 h9e0c5a2_3
+    - libexpat 2.8.5 h7354ed3_1
+    - libffi 3.4.8 h06d3fd0_3
+    - libgcc 15.2.0 h69a1729_8
+    - libgcc-ng 15.2.0 h166f726_8
+    - libmpdec 4.0.1 h47b2149_0
+    - libstdcxx 15.2.0 h39759b7_8
+    - libstdcxx-ng 15.2.0 hc03a8fd_8
+    - libuuid 1.41.5 h5eee18b_0
+    - libxcb 1.17.0 h9b100fa_0
+    - libzlib 1.3.2 h47b2149_0
+    - lz4-c 1.9.4 h7354ed3_5
+    - ncurses 6.6 hfaaeb4e_0
+    - openssl 3.5.9 h1b28b03_0
+    - packaging 26.3 py314h06a4308_0
+    - pathspec 1.1.1 py314h06a4308_0
+    - pip 26.2.1 pyh0d26453_0
+    - pluggy 1.6.0 py314h06a4308_0
+    - pthread-stubs 0.3 h47b2149_2
+    - python 3.14.8 h4c9324e_101_cp314
+    - python_abi 3.14 5_cp314
+    - readline 8.3 hc2a1206_0
+    - setuptools 83.0.0 py314h06a4308_0
+    - setuptools-scm 10.2.3 py314h06a4308_0
+    - sqlite 3.53.4 h795bf6d_0
+    - tk 9.0.4 h3840b71_1
+    - trove-classifiers 2026.6.1.19 py314h06a4308_0
+    - tzdata 2026c he532380_0
+    - vcs-versioning 2.3.4 py314h06a4308_0
+    - xorg-libx11 1.8.13 h65de747_0
+    - xorg-libxau 1.0.12 h9b100fa_0
+    - xorg-libxdmcp 1.1.5 h9b100fa_0
+    - xorg-xorgproto 2025.1 h47b2149_0
+    - xz 5.8.4 h140a991_0
+    - zlib 1.3.2 h47b2149_0
+    - zstd 1.5.7 h11fc155_0
+  run:
+    - python >=3.14,<3.15.0a0
+    - python_abi 3.14.* *_cp314
+test:
+  source_files:
+    - tests
+  imports:
+    - platformdirs
+  requires:
+    - appdirs >=1.4.4
+    - pip
+    - pytest >=9.0.2
+    - pytest-mock >=3.15.1
+  commands:
+    - pip check
+    - pytest tests -vv
+about:
+  home: https://github.com/platformdirs/platformdirs
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  description: 'About A small Python module for determining appropriate
+
+    platform-specific dirs, e.g. a "user data dir".
+
+    '
+  summary: A small Python module for determining appropriate platform-specific dirs,
+    e.g. a "user data dir".
+  dev_url: https://github.com/platformdirs/platformdirs
+  doc_url: https://platformdirs.readthedocs.io
+extra:
+  recipe-maintainers:
+    - adament
+    - gaborbernat
+  final: true
+  copy_test_source_files: true
+  remote_url: https://github.com/AnacondaRecipes/platformdirs-feedstock
+  sha: 7308ec500972302d3e1bed0b92cc55ad67d7ec27
+  task_id: LaM5CO7BSGyTTlFoieum-Q
+  task_run_id: '0'
+  pbp_graph_uuid: 08e431e4-14f0-4199-846b-6328c4a1cb00

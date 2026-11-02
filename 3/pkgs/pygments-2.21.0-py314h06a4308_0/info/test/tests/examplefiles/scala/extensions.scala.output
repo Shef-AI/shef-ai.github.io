@@ -1,0 +1,388 @@
+'extension'   Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'x'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'String'      Name.Class
+')'           Punctuation
+'\n   '       Text.Whitespace
+'def'         Keyword
+' '           Text.Whitespace
+'<'           Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'y'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'String'      Name.Class
+')'           Punctuation
+':'           Punctuation
+' '           Text.Whitespace
+'Boolean'     Name.Class
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'.'           Punctuation
+'.'           Punctuation
+'.'           Punctuation
+'\n'          Text.Whitespace
+
+'extension'   Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'x'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'Elem'        Name.Class
+')'           Punctuation
+'\n   '       Text.Whitespace
+'def'         Keyword
+' '           Text.Whitespace
+'+:'          Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'xs'          Name
+':'           Punctuation
+' '           Text.Whitespace
+'Seq'         Name.Class
+'['           Punctuation
+'Elem'        Name.Class
+']'           Punctuation
+')'           Punctuation
+':'           Punctuation
+' '           Text.Whitespace
+'Seq'         Name.Class
+'['           Punctuation
+'Elem'        Name.Class
+']'           Punctuation
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'.'           Punctuation
+'.'           Punctuation
+'.'           Punctuation
+'\n'          Text.Whitespace
+
+'extension'   Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'x'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'Number'      Name.Class
+')'           Punctuation
+'\n   '       Text.Whitespace
+'infix'       Keyword
+' '           Text.Whitespace
+'def'         Keyword
+' '           Text.Whitespace
+'min'         Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'y'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'Number'      Name.Class
+')'           Punctuation
+':'           Punctuation
+' '           Text.Whitespace
+'Number'      Name.Class
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'.'           Punctuation
+'.'           Punctuation
+'.'           Punctuation
+'\n'          Text.Whitespace
+
+'extension'   Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'ss'          Name
+':'           Punctuation
+' '           Text.Whitespace
+'Seq'         Name.Class
+'['           Punctuation
+'String'      Name.Class
+']'           Punctuation
+')'           Punctuation
+'\n   '       Text.Whitespace
+'def'         Keyword
+' '           Text.Whitespace
+'longestStrings' Name.Function
+':'           Punctuation
+' '           Text.Whitespace
+'Seq'         Name.Class
+'['           Punctuation
+'String'      Name.Class
+']'           Punctuation
+' '           Text.Whitespace
+'='           Operator
+'\n      '    Text.Whitespace
+'val'         Keyword.Declaration
+' '           Text.Whitespace
+'maxLength'   Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'ss'          Name
+'.'           Punctuation
+'map'         Name
+'('           Punctuation
+'_'           Name
+'.'           Punctuation
+'length'      Name
+')'           Punctuation
+'.'           Punctuation
+'max'         Name
+'\n      '    Text.Whitespace
+'ss'          Name
+'.'           Punctuation
+'filter'      Name
+'('           Punctuation
+'_'           Name
+'.'           Punctuation
+'length'      Name
+' '           Text.Whitespace
+'=='          Operator
+' '           Text.Whitespace
+'maxLength'   Name
+')'           Punctuation
+'\n   '       Text.Whitespace
+'def'         Keyword
+' '           Text.Whitespace
+'longestString' Name.Function
+':'           Punctuation
+' '           Text.Whitespace
+'String'      Name.Class
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'longestStrings' Name
+'.'           Punctuation
+'head'        Name
+'\n'          Text.Whitespace
+
+'extension'   Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'ss'          Name
+':'           Punctuation
+' '           Text.Whitespace
+'Seq'         Name.Class
+'['           Punctuation
+'String'      Name.Class
+']'           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n   '       Text.Whitespace
+'def'         Keyword
+' '           Text.Whitespace
+'longestStrings' Name.Function
+':'           Punctuation
+' '           Text.Whitespace
+'Seq'         Name.Class
+'['           Punctuation
+'String'      Name.Class
+']'           Punctuation
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'{'           Punctuation
+'\n      '    Text.Whitespace
+'val'         Keyword.Declaration
+' '           Text.Whitespace
+'maxLength'   Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'ss'          Name
+'.'           Punctuation
+'map'         Name
+'('           Punctuation
+'_'           Name
+'.'           Punctuation
+'length'      Name
+')'           Punctuation
+'.'           Punctuation
+'max'         Name
+'\n      '    Text.Whitespace
+'ss'          Name
+'.'           Punctuation
+'filter'      Name
+'('           Punctuation
+'_'           Name
+'.'           Punctuation
+'length'      Name
+' '           Text.Whitespace
+'=='          Operator
+' '           Text.Whitespace
+'maxLength'   Name
+')'           Punctuation
+'\n   '       Text.Whitespace
+'}'           Punctuation
+'\n  '        Text.Whitespace
+'def'         Keyword
+' '           Text.Whitespace
+'longestString' Name.Function
+':'           Punctuation
+' '           Text.Whitespace
+'String'      Name.Class
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'longestStrings' Name
+'.'           Punctuation
+'head'        Name
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'extension'   Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'i'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'Int'         Name.Class
+')'           Punctuation
+' '           Text.Whitespace
+'def'         Keyword
+' '           Text.Whitespace
+'isZero'      Name.Function
+':'           Punctuation
+' '           Text.Whitespace
+'Boolean'     Name.Class
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'i'           Name
+' '           Text.Whitespace
+'=='          Operator
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+'\n'          Text.Whitespace
+
+'extension'   Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'i'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'Int'         Name.Class
+')'           Punctuation
+' '           Text.Whitespace
+'def'         Keyword
+' '           Text.Whitespace
+'divide'      Name.Function
+'('           Punctuation
+'d'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'Int'         Name.Class
+')'           Punctuation
+':'           Punctuation
+' '           Text.Whitespace
+'Option'      Name.Class
+'['           Punctuation
+'('           Punctuation
+'Int'         Name.Class
+','           Punctuation
+' '           Text.Whitespace
+'Int'         Name.Class
+')'           Punctuation
+']'           Punctuation
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'???'         Operator
+'\n'          Text.Whitespace
+
+'extension'   Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'x'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'Rational'    Name.Class
+')'           Punctuation
+'\n  '        Text.Whitespace
+'infix'       Keyword
+' '           Text.Whitespace
+'def'         Keyword
+' '           Text.Whitespace
+'min'         Name.Function
+'('           Punctuation
+'that'        Name
+' '           Text.Whitespace
+'Rational'    Name.Class
+')'           Punctuation
+':'           Punctuation
+' '           Text.Whitespace
+'Rational'    Name.Class
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'.'           Punctuation
+'.'           Punctuation
+'.'           Punctuation
+'\n'          Text.Whitespace
+
+'given'       Keyword
+' '           Text.Whitespace
+'['           Punctuation
+'T'           Name.Class
+':'           Punctuation
+' '           Text.Whitespace
+'Ordering'    Name.Class
+']'           Punctuation
+':'           Punctuation
+' '           Text.Whitespace
+'Ordering'    Name.Class
+'['           Punctuation
+'List'        Name.Class
+'['           Punctuation
+'T'           Name.Class
+']'           Punctuation
+']'           Punctuation
+' '           Text.Whitespace
+'with'        Keyword
+'\n  '        Text.Whitespace
+'extension'   Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'xs'          Name
+':'           Punctuation
+' '           Text.Whitespace
+'List'        Name.Class
+'['           Punctuation
+'T'           Name.Class
+']'           Punctuation
+')'           Punctuation
+'\n      '    Text.Whitespace
+'def'         Keyword
+' '           Text.Whitespace
+'<'           Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'ys'          Name
+':'           Punctuation
+' '           Text.Whitespace
+'List'        Name.Class
+'['           Punctuation
+'T'           Name.Class
+']'           Punctuation
+')'           Punctuation
+':'           Punctuation
+' '           Text.Whitespace
+'Boolean'     Name.Class
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'.'           Punctuation
+'.'           Punctuation
+'.'           Punctuation
+'\n'          Text.Whitespace

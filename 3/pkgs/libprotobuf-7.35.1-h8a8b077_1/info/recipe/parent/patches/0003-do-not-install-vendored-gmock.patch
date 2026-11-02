@@ -1,0 +1,24 @@
+From e4e078547db44ccfa80948fe136895061faa6661 Mon Sep 17 00:00:00 2001
+From: "H. Vetinari" <h.vetinari@gmx.com>
+Date: Wed, 9 Aug 2023 14:06:35 +1100
+Subject: [PATCH 3/9] do not install vendored gmock
+
+---
+ cmake/install.cmake | 7 -------
+ 1 file changed, 7 deletions(-)
+
+diff --git a/cmake/install.cmake b/cmake/install.cmake
+index 0a31eade06..e20ea4e32a 100644
+--- a/cmake/install.cmake
++++ b/cmake/install.cmake
+@@ -183,10 +183,3 @@ if(protobuf_INSTALL_EXAMPLES)
+     DESTINATION "${CMAKE_INSTALL_EXAMPLEDIR}"
+     COMPONENT protobuf-examples)
+ endif()
+-
+-if (protobuf_INSTALL_TESTS)
+-  install(TARGETS gmock EXPORT protobuf-targets
+-    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+-    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+-    ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR})
+-endif()

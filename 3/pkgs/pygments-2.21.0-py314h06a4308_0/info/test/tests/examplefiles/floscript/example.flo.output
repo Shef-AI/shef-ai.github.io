@@ -1,0 +1,240 @@
+'#example mission box1.flo' Comment.Single
+'\n'          Text.Whitespace
+
+'#from: https://github.com/ioflo/ioflo' Comment.Single
+'\n\n'        Text.Whitespace
+
+'house'       Keyword
+' '           Text.Whitespace
+'box1'        Name
+'\n\n   '     Text.Whitespace
+'framer'      Keyword
+' '           Text.Whitespace
+'vehiclesim'  Name
+' '           Text.Whitespace
+'be'          Operator.Word
+' '           Text.Whitespace
+'active'      Name
+' '           Text.Whitespace
+'first'       Name.Builtin
+' '           Text.Whitespace
+'vehicle_run' Name
+'\n      '    Text.Whitespace
+'frame'       Keyword
+' '           Text.Whitespace
+'vehicle_run' Name
+'\n         ' Text.Whitespace
+'do'          Name.Builtin
+' '           Text.Whitespace
+'simulator'   Name
+' '           Text.Whitespace
+'motion'      Name
+' '           Text.Whitespace
+'uuv'         Name
+'\n\n   '     Text.Whitespace
+'framer'      Keyword
+' '           Text.Whitespace
+'mission'     Name
+' '           Text.Whitespace
+'be'          Operator.Word
+' '           Text.Whitespace
+'active'      Name
+' '           Text.Whitespace
+'first'       Name.Builtin
+' '           Text.Whitespace
+'northleg'    Name
+'\n      '    Text.Whitespace
+'frame'       Keyword
+' '           Text.Whitespace
+'northleg'    Name
+'\n         ' Text.Whitespace
+'set'         Name.Builtin
+' '           Text.Whitespace
+'elapsed'     Name
+' '           Text.Whitespace
+'with'        Operator.Word
+' '           Text.Whitespace
+'20.0'        Literal.Number.Float
+'\n         ' Text.Whitespace
+'set'         Name.Builtin
+' '           Text.Whitespace
+'heading'     Name
+' '           Text.Whitespace
+'with'        Operator.Word
+' '           Text.Whitespace
+'0.0'         Literal.Number.Float
+'\n         ' Text.Whitespace
+'set'         Name.Builtin
+' '           Text.Whitespace
+'depth'       Name
+' '           Text.Whitespace
+'with'        Operator.Word
+' '           Text.Whitespace
+'5.0'         Literal.Number.Float
+'\n         ' Text.Whitespace
+'set'         Name.Builtin
+' '           Text.Whitespace
+'speed'       Name
+' '           Text.Whitespace
+'with'        Operator.Word
+' '           Text.Whitespace
+'2.5'         Literal.Number.Float
+'\n         ' Text.Whitespace
+'go'          Name.Builtin
+' '           Text.Whitespace
+'next'        Name.Builtin
+' '           Text.Whitespace
+'if'          Operator.Word
+' '           Text.Whitespace
+'elapsed'     Name
+' '           Text.Whitespace
+'>'           Operator
+'='           Operator
+' '           Text.Whitespace
+'goal'        Name
+'\n\n      '  Text.Whitespace
+'frame'       Keyword
+' '           Text.Whitespace
+'eastleg'     Name
+'\n         ' Text.Whitespace
+'set'         Name.Builtin
+' '           Text.Whitespace
+'heading'     Name
+' '           Text.Whitespace
+'with'        Operator.Word
+' '           Text.Whitespace
+'90.0'        Literal.Number.Float
+'\n         ' Text.Whitespace
+'go'          Name.Builtin
+' '           Text.Whitespace
+'next'        Name.Builtin
+' '           Text.Whitespace
+'if'          Operator.Word
+' '           Text.Whitespace
+'elapsed'     Name
+' '           Text.Whitespace
+'>'           Operator
+'='           Operator
+' '           Text.Whitespace
+'goal'        Name
+'\n\n      '  Text.Whitespace
+'frame'       Keyword
+' '           Text.Whitespace
+'southleg'    Name
+'\n         ' Text.Whitespace
+'set'         Name.Builtin
+' '           Text.Whitespace
+'heading'     Name
+' '           Text.Whitespace
+'with'        Operator.Word
+' '           Text.Whitespace
+'180.0'       Literal.Number.Float
+'\n         ' Text.Whitespace
+'go'          Name.Builtin
+' '           Text.Whitespace
+'next'        Name.Builtin
+' '           Text.Whitespace
+'if'          Operator.Word
+' '           Text.Whitespace
+'elapsed'     Name
+' '           Text.Whitespace
+'>'           Operator
+'='           Operator
+' '           Text.Whitespace
+'goal'        Name
+'\n\n      '  Text.Whitespace
+'frame'       Keyword
+' '           Text.Whitespace
+'westleg'     Name
+'\n         ' Text.Whitespace
+'set'         Name.Builtin
+' '           Text.Whitespace
+'heading'     Name
+' '           Text.Whitespace
+'with'        Operator.Word
+' '           Text.Whitespace
+'270.0'       Literal.Number.Float
+'\n         ' Text.Whitespace
+'go'          Name.Builtin
+' '           Text.Whitespace
+'next'        Name.Builtin
+' '           Text.Whitespace
+'if'          Operator.Word
+' '           Text.Whitespace
+'elapsed'     Name
+' '           Text.Whitespace
+'>'           Operator
+'='           Operator
+' '           Text.Whitespace
+'goal'        Name
+'\n\n      '  Text.Whitespace
+'frame'       Keyword
+' '           Text.Whitespace
+'mission_stop' Name
+'\n         ' Text.Whitespace
+'bid'         Name.Builtin
+' '           Text.Whitespace
+'stop'        Name.Builtin
+' '           Text.Whitespace
+'vehiclesim'  Name
+'\n         ' Text.Whitespace
+'bid'         Name.Builtin
+' '           Text.Whitespace
+'stop'        Name.Builtin
+' '           Text.Whitespace
+'autopilot'   Name
+'\n         ' Text.Whitespace
+'bid'         Name.Builtin
+' '           Text.Whitespace
+'stop'        Name.Builtin
+' '           Text.Whitespace
+'me'          Name
+'\n\n   '     Text.Whitespace
+'framer'      Keyword
+' '           Text.Whitespace
+'autopilot'   Name
+' '           Text.Whitespace
+'be'          Operator.Word
+' '           Text.Whitespace
+'active'      Name
+' '           Text.Whitespace
+'first'       Name.Builtin
+' '           Text.Whitespace
+'autopilot_run' Name
+'\n      '    Text.Whitespace
+'frame'       Keyword
+' '           Text.Whitespace
+'autopilot_run' Name
+'\n         ' Text.Whitespace
+'do'          Name.Builtin
+' '           Text.Whitespace
+'controller'  Name
+' '           Text.Whitespace
+'pid'         Name
+' '           Text.Whitespace
+'speed'       Name
+'\n         ' Text.Whitespace
+'do'          Name.Builtin
+' '           Text.Whitespace
+'controller'  Name
+' '           Text.Whitespace
+'pid'         Name
+' '           Text.Whitespace
+'heading'     Name
+'\n         ' Text.Whitespace
+'do'          Name.Builtin
+' '           Text.Whitespace
+'controller'  Name
+' '           Text.Whitespace
+'pid'         Name
+' '           Text.Whitespace
+'depth'       Name
+'\n         ' Text.Whitespace
+'do'          Name.Builtin
+' '           Text.Whitespace
+'controller'  Name
+' '           Text.Whitespace
+'pid'         Name
+' '           Text.Whitespace
+'pitch'       Name
+'\n'          Text.Whitespace

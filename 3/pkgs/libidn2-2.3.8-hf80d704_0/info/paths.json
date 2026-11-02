@@ -1,0 +1,43 @@
+{
+  "paths": [
+    {
+      "_path": "bin/idn2",
+      "path_type": "hardlink",
+      "sha256": "8dad18c13017cac13ebf653f1e593cd1ec8f9837b37fab59257950ef798e3900",
+      "size_in_bytes": 32904
+    },
+    {
+      "_path": "include/idn2.h",
+      "path_type": "hardlink",
+      "sha256": "1f55fc1e02b0c4436c41ad7bb8977c64cf3bb61075a4cc412d996878fac93127",
+      "size_in_bytes": 14191
+    },
+    {
+      "_path": "lib/libidn2.so",
+      "path_type": "softlink",
+      "sha256": "22b858a36168b46b4eda136e6ff9806ee177d21db0911d11f26aab6420a4ddb2",
+      "size_in_bytes": 138688
+    },
+    {
+      "_path": "lib/libidn2.so.0",
+      "path_type": "softlink",
+      "sha256": "22b858a36168b46b4eda136e6ff9806ee177d21db0911d11f26aab6420a4ddb2",
+      "size_in_bytes": 138688
+    },
+    {
+      "_path": "lib/libidn2.so.0.4.0",
+      "path_type": "hardlink",
+      "sha256": "22b858a36168b46b4eda136e6ff9806ee177d21db0911d11f26aab6420a4ddb2",
+      "size_in_bytes": 138688
+    },
+    {
+      "_path": "lib/pkgconfig/libidn2.pc",
+      "file_mode": "text",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/home/task_176036377076491/conda-bld/libidn2_1760364297213/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
+      "sha256": "55ebabecb04b26ebde8963555c8b1bf97499f0a49504e38c8c7d1762927b2722",
+      "size_in_bytes": 1553
+    }
+  ],
+  "paths_version": 1
+}

@@ -1,0 +1,11 @@
+prefix=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: XCB Xv
+Description: XCB Xv Extension
+Version: 1.17.0
+Requires.private: xcb xcb-shm
+Libs: -L${libdir} -lxcb-xv
+Cflags: -I${includedir}

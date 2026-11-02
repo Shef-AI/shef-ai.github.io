@@ -1,0 +1,532 @@
+'\\name'      Keyword
+'{'           Name.Builtin
+'foo'         Text
+'}'           Name.Builtin
+'\n'          Text.Whitespace
+
+'\\alias'     Keyword
+'{'           Name.Builtin
+'foo'         Text
+'}'           Name.Builtin
+'\n'          Text.Whitespace
+
+"% I'm a comment" Comment
+'\n'          Text.Whitespace
+
+'\\title'     Keyword
+'{'           Name.Builtin
+'The foo function' Text
+'}'           Name.Builtin
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'\\description' Keyword
+'{'           Name.Builtin
+"It doesn't do much" Text
+'}'           Name.Builtin
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'\\usage'     Keyword
+'{'           Name.Builtin
+'\n'          Text.Whitespace
+
+'foo(x, y)'   Text
+'\n'          Text.Whitespace
+
+'}'           Name.Builtin
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'\\arguments' Keyword
+'{'           Name.Builtin
+'\n'          Text.Whitespace
+
+'  '          Text
+'\\item'      Keyword
+'{'           Name.Builtin
+'x'           Text
+'}'           Name.Builtin
+'{'           Name.Builtin
+'A number'    Text
+'}'           Name.Builtin
+'\n'          Text.Whitespace
+
+'  '          Text
+'\\item'      Keyword
+'{'           Name.Builtin
+'y'           Text
+'}'           Name.Builtin
+'{'           Name.Builtin
+'Another number' Text
+'}'           Name.Builtin
+'\n'          Text.Whitespace
+
+'}'           Name.Builtin
+'\n'          Text.Whitespace
+
+'\\details'   Keyword
+'{'           Name.Builtin
+'\n'          Text.Whitespace
+
+'  I just adds ' Text
+'\\code'      Keyword
+'{'           Name.Builtin
+'x'           Text
+'}'           Name.Builtin
+' and '       Text
+'\\code'      Keyword
+'{'           Name.Builtin
+'y'           Text
+'}'           Name.Builtin
+', '          Text
+'\n'          Text.Whitespace
+
+'}'           Name.Builtin
+'\n'          Text.Whitespace
+
+'\\value'     Keyword
+'{'           Name.Builtin
+'\\code'      Keyword
+'{'           Name.Builtin
+'numeric'     Text
+'}'           Name.Builtin
+'. The sum of ' Text
+'\\code'      Keyword
+'{'           Name.Builtin
+'x'           Text
+'}'           Name.Builtin
+' and '       Text
+'\\code'      Keyword
+'{'           Name.Builtin
+'y'           Text
+'}'           Name.Builtin
+'.'           Text
+'}'           Name.Builtin
+'\n'          Text.Whitespace
+
+'\\references' Keyword
+'{'           Name.Builtin
+'\n'          Text.Whitespace
+
+'  '          Text
+'\\href'      Keyword
+'{'           Name.Builtin
+'http://en.wikipedia.org/wiki/Sum' Text
+'}'           Name.Builtin
+'{'           Name.Builtin
+'Sum'         Text
+'}'           Name.Builtin
+'\n'          Text.Whitespace
+
+'}'           Name.Builtin
+'\n'          Text.Whitespace
+
+'\\author'    Keyword
+'{'           Name.Builtin
+'\n'          Text.Whitespace
+
+'  Anonymous' Text
+'\n'          Text.Whitespace
+
+'}'           Name.Builtin
+'\n'          Text.Whitespace
+
+'\\note'      Keyword
+'{'           Name.Builtin
+'\n'          Text.Whitespace
+
+'  Lorem ipsum ' Text
+'\\dots'      Keyword.Constant
+' '           Text
+'\\R'         Keyword.Constant
+' '           Text
+'\\emph'      Keyword
+'{'           Name.Builtin
+'emp'         Text
+'}'           Name.Builtin
+', '          Text
+'\\strong'    Keyword
+'{'           Name.Builtin
+'strong'      Text
+'}'           Name.Builtin
+', '          Text
+'\\bold'      Keyword
+'{'           Name.Builtin
+'bold'        Text
+'}'           Name.Builtin
+','           Text
+'\n'          Text.Whitespace
+
+'  '          Text
+'\\sQuote'    Keyword
+'{'           Name.Builtin
+'single quotes' Text
+'}'           Name.Builtin
+', '          Text
+'\\dQuote'    Keyword
+'{'           Name.Builtin
+'double quotes' Text
+'}'           Name.Builtin
+', '          Text
+'\\code'      Keyword
+'{'           Name.Builtin
+'code'        Text
+'}'           Name.Builtin
+','           Text
+'\n'          Text.Whitespace
+
+'  '          Text
+'\\preformatted' Keyword
+'{'           Name.Builtin
+'x <- 2 + 2'  Text
+'}'           Name.Builtin
+', '          Text
+'\\kbd'       Keyword
+'{'           Name.Builtin
+'type this'   Text
+'}'           Name.Builtin
+', '          Text
+'\\samp'      Keyword
+'{'           Name.Builtin
+'literal seq' Text
+'}'           Name.Builtin
+','           Text
+'\n'          Text.Whitespace
+
+'  '          Text
+'\\pkg'       Keyword
+'{'           Name.Builtin
+'base'        Text
+'}'           Name.Builtin
+', '          Text
+'\\file'      Keyword
+'{'           Name.Builtin
+'foo.txt'     Text
+'}'           Name.Builtin
+', '          Text
+'\\email'     Keyword
+'{'           Name.Builtin
+'email@hostname' Text
+'}'           Name.Builtin
+','           Text
+'\n'          Text.Whitespace
+
+'  '          Text
+'\\url'       Keyword
+'{'           Name.Builtin
+'http://cran.r-project.org/' Text
+'}'           Name.Builtin
+', '          Text
+'\\var'       Keyword
+'{'           Name.Builtin
+'foo'         Text
+'}'           Name.Builtin
+', '          Text
+'\\env'       Keyword
+'{'           Name.Builtin
+'HOME'        Text
+'}'           Name.Builtin
+','           Text
+'\n'          Text.Whitespace
+
+'  '          Text
+'\\option'    Keyword
+'{'           Name.Builtin
+'-d'          Text
+'}'           Name.Builtin
+', '          Text
+'\\dfn'       Keyword
+'{'           Name.Builtin
+'something new' Text
+'}'           Name.Builtin
+', '          Text
+'\\acronym'   Keyword
+'{'           Name.Builtin
+'GNU'         Text
+'}'           Name.Builtin
+'.'           Text
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'  Escaped symbols: ' Text
+'\\\\'        Literal.String.Escape
+' '           Text
+'\\{'         Literal.String.Escape
+' '           Text
+'\\}'         Literal.String.Escape
+' '           Text
+'\\%'         Literal.String.Escape
+' not comment. ' Text
+'\\\\'        Literal.String.Escape
+'NotAMacro.'  Text
+'\n'          Text.Whitespace
+
+'  '          Text
+'\n'          Text.Whitespace
+
+'   '         Text
+'\\tabular'   Keyword
+'{'           Name.Builtin
+'rlll'        Text
+'}'           Name.Builtin
+'{'           Name.Builtin
+'\n'          Text.Whitespace
+
+'         [,1] ' Text
+'\\tab'       Keyword.Constant
+' alpha   '   Text
+'\\tab'       Keyword.Constant
+' numeric '   Text
+'\\tab'       Keyword.Constant
+' A (ppb)'    Text
+'\\cr'        Keyword.Constant
+'\n'          Text.Whitespace
+
+'         [,2] ' Text
+'\\tab'       Keyword.Constant
+' bravo '     Text
+'\\tab'       Keyword.Constant
+' integer '   Text
+'\\tab'       Keyword.Constant
+' B '         Text
+'\\cr'        Keyword.Constant
+'\n'          Text.Whitespace
+
+'         [,3] ' Text
+'\\tab'       Keyword.Constant
+' charlie    ' Text
+'\\tab'       Keyword.Constant
+' character ' Text
+'\\tab'       Keyword.Constant
+' C '         Text
+'\\cr'        Keyword.Constant
+'\n'          Text.Whitespace
+
+'       '     Text
+'}'           Name.Builtin
+'\n'          Text.Whitespace
+
+'   '         Text
+'\\enumerate' Keyword
+'{'           Name.Builtin
+'\n'          Text.Whitespace
+
+'         '   Text
+'\\item'      Keyword
+' delta'      Text
+'\n'          Text.Whitespace
+
+'         '   Text
+'\\item'      Keyword
+' echo'       Text
+'\n'          Text.Whitespace
+
+'       '     Text
+'}'           Name.Builtin
+'\n'          Text.Whitespace
+
+'   '         Text
+'\\itemize'   Keyword
+'{'           Name.Builtin
+'\n'          Text.Whitespace
+
+'         '   Text
+'\\item'      Keyword
+' foxtrot'    Text
+'\n'          Text.Whitespace
+
+'         '   Text
+'\\item'      Keyword
+' golf'       Text
+'\n'          Text.Whitespace
+
+'       '     Text
+'}'           Name.Builtin
+'\n'          Text.Whitespace
+
+'  '          Text
+'\n'          Text.Whitespace
+
+'  '          Text
+'\\deqn'      Keyword
+'{'           Name.Builtin
+'p(x; '       Text
+'\\mu'        Keyword
+', '          Text
+'\\sigma'     Keyword
+'^2) = '      Text
+'\\frac'      Keyword
+'{'           Name.Builtin
+'1'           Text
+'}'           Name.Builtin
+'{'           Name.Builtin
+'\\sigma'     Keyword
+' '           Text
+'\\sqrt'      Keyword
+'{'           Name.Builtin
+'2 '          Text
+'\\pi'        Keyword
+'}'           Name.Builtin
+'}'           Name.Builtin
+' '           Text
+'\\exp'       Keyword
+' '           Text
+'\\frac'      Keyword
+'{'           Name.Builtin
+'-(x - '      Text
+'\\mu'        Keyword
+')^2'         Text
+'}'           Name.Builtin
+'{'           Name.Builtin
+'2 '          Text
+'\\sigma'     Keyword
+'}'           Name.Builtin
+'{'           Name.Builtin
+'%'           Comment
+'\n'          Text.Whitespace
+
+'             p(' Text
+'\\mu'        Keyword
+'; x) = 1/'   Text
+'\\sigma'     Keyword
+' (2 '        Text
+'\\pi'        Keyword
+')^(-1/2)  exp( -(x - ' Text
+'\\mu'        Keyword
+')^2 / (2 '   Text
+'\\sigma'     Keyword
+')) '         Text
+'}'           Name.Builtin
+'\n'          Text.Whitespace
+
+'       for ' Text
+'\\eqn'       Keyword
+'{'           Name.Builtin
+'x = 0, 1, 2, ' Text
+'\\ldots'     Keyword.Constant
+'}'           Name.Builtin
+'.'           Text
+'\n'          Text.Whitespace
+
+'  '          Text
+'\n'          Text.Whitespace
+
+'  '          Text
+'\\if'        Keyword
+'{'           Name.Builtin
+'latex'       Text
+'}'           Name.Builtin
+'{'           Name.Builtin
+'\\out'       Keyword
+'{'           Name.Builtin
+'\\beta'      Keyword
+'}'           Name.Builtin
+'}'           Name.Builtin
+'\\ifelse'    Keyword
+'{'           Name.Builtin
+'html'        Text
+'}'           Name.Builtin
+'{'           Name.Builtin
+'\\out'       Keyword
+'{'           Name.Builtin
+'&beta;'      Text
+'}'           Name.Builtin
+'}'           Name.Builtin
+'{'           Name.Builtin
+'beta'        Text
+'}'           Name.Builtin
+'\n'          Text.Whitespace
+
+'\n#ifdef unix' Comment.Preproc
+'\n'          Text.Whitespace
+
+'Now windows' Text
+'\n'          Text.Whitespace
+
+'#endif'      Comment.Preproc
+'\n'          Text.Whitespace
+
+'#ifndef windows' Comment.Preproc
+'\n'          Text.Whitespace
+
+'Using windows' Text
+'\n'          Text.Whitespace
+
+'#endif'      Comment.Preproc
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'}'           Name.Builtin
+'\n'          Text.Whitespace
+
+'\\section'   Keyword
+'{'           Name.Builtin
+'Misc'        Text
+'}'           Name.Builtin
+'{'           Name.Builtin
+'\n'          Text.Whitespace
+
+'  Stuff.'    Text
+'\n'          Text.Whitespace
+
+'}'           Name.Builtin
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'\\seealso'   Keyword
+'{'           Name.Builtin
+'\n'          Text.Whitespace
+
+'  '          Text
+'\\code'      Keyword
+'{'           Name.Builtin
+'\\link'      Keyword
+'{'           Name.Builtin
+'sum'         Text
+'}'           Name.Builtin
+'}'           Name.Builtin
+'\n'          Text.Whitespace
+
+'}'           Name.Builtin
+'\n'          Text.Whitespace
+
+'\\examples'  Keyword
+'{'           Name.Builtin
+'\n'          Text.Whitespace
+
+'x <- 1'      Text
+'\n'          Text.Whitespace
+
+'y <- 2'      Text
+'\n'          Text.Whitespace
+
+'z <- foo(x, y)' Text
+'\n'          Text.Whitespace
+
+'\\dontrun'   Keyword
+'{'           Name.Builtin
+'plot(z)'     Text
+'}'           Name.Builtin
+'\n'          Text.Whitespace
+
+'\\dontshow'  Keyword
+'{'           Name.Builtin
+'log(x)'      Text
+'}'           Name.Builtin
+'\n'          Text.Whitespace
+
+'}'           Name.Builtin
+'\n'          Text.Whitespace
+
+'\\keyword'   Keyword
+'{'           Name.Builtin
+'arith'       Text
+'}'           Name.Builtin
+'\n'          Text.Whitespace

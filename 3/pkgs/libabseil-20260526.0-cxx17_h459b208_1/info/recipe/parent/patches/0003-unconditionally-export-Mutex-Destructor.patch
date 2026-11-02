@@ -1,0 +1,43 @@
+From 0195301e0dbfe7fb5a570e3261273f4133757766 Mon Sep 17 00:00:00 2001
+From: "H. Vetinari" <h.vetinari@gmx.com>
+Date: Tue, 13 Feb 2024 08:43:06 +0100
+Subject: [PATCH 3/3] unconditionally export Mutex Destructor
+
+---
+ absl/synchronization/mutex.cc | 2 --
+ absl/synchronization/mutex.h  | 5 -----
+ 2 files changed, 7 deletions(-)
+
+diff --git a/absl/synchronization/mutex.cc b/absl/synchronization/mutex.cc
+index 52ed27f..e07dc6e 100644
+--- a/absl/synchronization/mutex.cc
++++ b/absl/synchronization/mutex.cc
+@@ -738,12 +738,10 @@ static unsigned TsanFlags(Mutex::MuHow how) {
+ }
+ #endif
+ 
+-#if defined(__APPLE__) || defined(ABSL_BUILD_DLL)
+ // When building a dll symbol export lists may reference the destructor
+ // and want it to be an exported symbol rather than an inline function.
+ // Some apple builds also do dynamic library build but don't say it explicitly.
+ Mutex::~Mutex() { Dtor(); }
+-#endif
+ 
+ #if !defined(NDEBUG) || defined(ABSL_HAVE_THREAD_SANITIZER)
+ void Mutex::Dtor() {
+diff --git a/absl/synchronization/mutex.h b/absl/synchronization/mutex.h
+index be3f1f5..a1a0f2e 100644
+--- a/absl/synchronization/mutex.h
++++ b/absl/synchronization/mutex.h
+@@ -1065,11 +1065,6 @@ inline Mutex::Mutex() : mu_(0) {
+ 
+ inline constexpr Mutex::Mutex(absl::ConstInitType) : mu_(0) {}
+ 
+-#if !defined(__APPLE__) && !defined(ABSL_BUILD_DLL)
+-ABSL_ATTRIBUTE_ALWAYS_INLINE
+-inline Mutex::~Mutex() { Dtor(); }
+-#endif
+-
+ #if defined(NDEBUG) && !defined(ABSL_HAVE_THREAD_SANITIZER)
+ // Use default (empty) destructor in release build for performance reasons.
+ // We need to mark both Dtor and ~Mutex as always inline for inconsistent

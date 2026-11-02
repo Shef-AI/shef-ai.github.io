@@ -1,0 +1,208 @@
+'\t'          Text.Whitespace
+'--'          Comment
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'-- Example fragment of an openEHR Archetype, written in cADL, a subsyntax of the Archetype Definition Language (ADL)' Comment
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'-- definition available here: http://www.openehr.org/releases/trunk/architecture/am/adl2.pdf' Comment
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'--\tAuthor: Thomas Beale' Comment
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'--'          Comment
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'EVALUATION'  Name.Class
+'['           Punctuation
+'id1'         Name.Decorator
+']'           Punctuation
+' '           Text.Whitespace
+'matches '    Operator
+'{'           Punctuation
+'\t'          Text.Whitespace
+'-- Adverse Reaction' Comment
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'data'        Name.Class
+' '           Text.Whitespace
+'matches '    Operator
+'{'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t'      Text.Whitespace
+'ITEM_TREE'   Name.Class
+'['           Punctuation
+'id2'         Name.Decorator
+']'           Punctuation
+' '           Text.Whitespace
+'matches '    Operator
+'{'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t\t'    Text.Whitespace
+'items'       Name.Class
+' '           Text.Whitespace
+'cardinality ' Keyword.Type
+'matches '    Operator
+'{'           Punctuation
+'1..*'        Literal.Number
+'; unordered' Literal.Number
+'}'           Punctuation
+' '           Text.Whitespace
+'matches '    Operator
+'{'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t\t\t'  Text.Whitespace
+'ELEMENT'     Name.Class
+'['           Punctuation
+'id3'         Name.Decorator
+']'           Punctuation
+' '           Text.Whitespace
+'matches '    Operator
+'{'           Punctuation
+'\t'          Text.Whitespace
+'-- Substance/Agent' Comment
+'\n'          Text.Whitespace
+
+'\t\t\t\t\t\t' Text.Whitespace
+'value'       Name.Class
+' '           Text.Whitespace
+'matches '    Operator
+'{'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t\t\t\t\t' Text.Whitespace
+'DV_TEXT'     Name.Class
+'['           Punctuation
+'id51'        Name.Decorator
+']'           Punctuation
+' \n\t\t\t\t\t\t' Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t\t\t'  Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t\t\t'  Text.Whitespace
+'ELEMENT'     Name.Class
+'['           Punctuation
+'id50'        Name.Decorator
+']'           Punctuation
+' '           Text.Whitespace
+'occurrences ' Keyword.Type
+'matches '    Operator
+'{'           Punctuation
+'0..1'        Literal.Number
+'}'           Punctuation
+' '           Text.Whitespace
+'matches '    Operator
+'{'           Punctuation
+'\t'          Text.Whitespace
+'-- Future Use' Comment
+'\n'          Text.Whitespace
+
+'\t\t\t\t\t\t' Text.Whitespace
+'value'       Name.Class
+' '           Text.Whitespace
+'matches '    Operator
+'{'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t\t\t\t\t' Text.Whitespace
+'DV_TEXT'     Name.Class
+'['           Punctuation
+'id53'        Name.Decorator
+']'           Punctuation
+' \n\t\t\t\t\t\t' Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t\t\t'  Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t\t\t'  Text.Whitespace
+'CLUSTER'     Name.Class
+'['           Punctuation
+'id10'        Name.Decorator
+']'           Punctuation
+' '           Text.Whitespace
+'matches '    Operator
+'{'           Punctuation
+'\t'          Text.Whitespace
+'-- Reaction Event' Comment
+'\n'          Text.Whitespace
+
+'\t\t\t\t\t\t' Text.Whitespace
+'items'       Name.Class
+' '           Text.Whitespace
+'matches '    Operator
+'{'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t\t\t\t\t' Text.Whitespace
+'allow_archetype ' Keyword.Type
+'CLUSTER'     Name.Class
+'['           Punctuation
+'id30'        Name.Decorator
+']'           Punctuation
+' '           Text.Whitespace
+'matches '    Operator
+'{'           Punctuation
+'\t'          Text.Whitespace
+'-- Additional Reaction Detail' Comment
+'\n'          Text.Whitespace
+
+'\t\t\t\t\t\t\t\t' Text.Whitespace
+'include\n'   Keyword.Type
+
+'\t\t\t\t\t\t\t\t\t' Text.Whitespace
+'archetype_id' Name.Class
+'/'           Punctuation
+'value'       Name.Class
+' '           Punctuation
+'matches '    Operator
+'{'           Punctuation
+'/openEHR-EHR-CLUSTER\\.anatomical_location(-a-zA-Z0-9_]+)*\\.v1/' Literal.String.Regex
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t\t\t\t\t' Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t\t\t\t' Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t\t\t'  Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t\t'    Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t'      Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace

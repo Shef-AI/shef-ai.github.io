@@ -1,0 +1,83 @@
+# This file created by conda-build 26.7.1
+# meta.yaml template originally from:
+# C:\Users\task_179192277176128\conda-anaconda-telemetry-feedstock\recipe, last modified Tue Oct 13 20:34:51 2026
+# ------------------------------------------------
+
+package:
+  name: conda-anaconda-telemetry
+  version: 0.4.0
+source:
+  url: https://github.com/anaconda/conda-anaconda-telemetry/archive/0.4.0.tar.gz
+  sha256: ebae0a126c513542c8500e0d35abee3ea3486eacfc48ce0866fcfd81411b6fbc
+build:
+  noarch: python
+  number: '0'
+  script: C:\\Users\\task_179192277176128\\croot\\conda-anaconda-telemetry_1791923818356\\_h_env\\python.exe
+    -m pip install . --no-deps --no-build-isolation -vv
+  string: pyhd3eb1b0_0
+requirements:
+  build: []
+  host:
+    - bzip2 1.0.8 hdc1c6e0_7
+    - ca-certificates 2026.9.25 h46a1fef_0
+    - hatch-vcs 0.5.0 py314h46a1fef_1
+    - hatchling 1.31.0 py314h46a1fef_0
+    - libexpat 2.9.0 hf89bd2f_0
+    - libffi 3.4.8 h743b201_3
+    - libmpdec 4.0.1 h145397d_0
+    - libzlib 1.3.2 h145397d_0
+    - lz4-c 1.9.4 h145397d_5
+    - openssl 3.5.9 hda708c7_0
+    - packaging 26.3 py314h46a1fef_0
+    - pathspec 1.1.1 py314h46a1fef_0
+    - pip 26.2.1 pyh0d26453_0
+    - pluggy 1.6.0 py314h46a1fef_2
+    - python 3.14.8 h837f2b8_101_cp314
+    - python_abi 3.14 5_cp314
+    - setuptools 84.0.0 py314h46a1fef_0
+    - setuptools-scm 10.2.3 py314h46a1fef_0
+    - sqlite 3.53.4 hbc61892_0
+    - tk 9.0.4 h0c6d16c_1
+    - trove-classifiers 2026.6.1.19 py314h46a1fef_0
+    - tzdata 2026c he532380_0
+    - vc 14.3 h3a979f7_12
+    - vc14_runtime 14.44.35208 h9ac6d92_12
+    - vcs-versioning 2.3.4 py314h46a1fef_0
+    - xz 5.8.4 h2eec818_0
+    - zlib 1.3.2 h145397d_0
+    - zstd 1.5.7 h72fc226_0
+  run:
+    - anaconda-opentelemetry >=1.2.5
+    - conda >=26.5
+    - python >=3.10
+    - requests
+test:
+  imports:
+    - conda_anaconda_telemetry
+    - conda_anaconda_telemetry.hooks
+  requires:
+    - pip
+  commands:
+    - pip check
+    - python -m conda --version
+about:
+  home: https://github.com/anaconda/conda-anaconda-telemetry
+  summary: Anaconda Telemetry conda plugin
+  description: Anaconda Telemetry for conda helps us understand how conda is being
+    used.
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
+  doc_source_url: https://github.com/anaconda/conda-anaconda-telemetry/blob/0.4.0/README.md
+  dev_url: https://github.com/anaconda/conda-anaconda-telemetry
+extra:
+  recipe-maintainers:
+    - jezdez
+    - travishathaway
+  final: true
+  copy_test_source_files: true
+  remote_url: https://github.com/AnacondaRecipes/conda-anaconda-telemetry-feedstock
+  sha: 91b1626701fc2fa58d7aeb4eff658a650e3a880c
+  task_id: YHyqEyKmR_OLmRqLaSPjSg
+  task_run_id: '0'
+  pbp_graph_uuid: 00ab8634-c39a-48e0-9ff4-abb9372fd525

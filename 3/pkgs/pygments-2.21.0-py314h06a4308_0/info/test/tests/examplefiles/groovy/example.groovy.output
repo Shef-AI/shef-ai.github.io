@@ -1,0 +1,7 @@
+'#!/usr/bin/env groovy' Comment.Preproc
+'\n'          Text.Whitespace
+
+'println'     Name
+' '           Text.Whitespace
+'"Hello World"' Literal.String.Double
+'\n'          Text.Whitespace

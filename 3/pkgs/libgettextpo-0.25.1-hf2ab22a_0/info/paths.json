@@ -1,0 +1,17 @@
+{
+  "paths": [
+    {
+      "_path": "lib/libgettextpo.so.0",
+      "path_type": "hardlink",
+      "sha256": "995efd5ce5775d2b12912aeb485d7c628a3aeb044101b5c3c54f59554cf4feaf",
+      "size_in_bytes": 466024
+    },
+    {
+      "_path": "lib/libgettextpo.so.0.5.14",
+      "path_type": "hardlink",
+      "sha256": "995efd5ce5775d2b12912aeb485d7c628a3aeb044101b5c3c54f59554cf4feaf",
+      "size_in_bytes": 466024
+    }
+  ],
+  "paths_version": 1
+}

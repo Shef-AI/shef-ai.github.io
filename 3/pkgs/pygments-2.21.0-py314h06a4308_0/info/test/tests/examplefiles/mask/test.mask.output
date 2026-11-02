@@ -1,0 +1,328 @@
+'// comment'  Comment.Single
+'\n'          Text.Whitespace
+
+'h4'          Name.Tag
+'.'           Name.Variable.Class
+'class-1'     Name.Variable.Class
+'#'           Name.Function
+'id'          Name.Function
+'.'           Name.Variable.Class
+'class-2'     Name.Variable.Class
+'.'           Name.Variable.Class
+'other'       Name.Variable.Class
+' '           Text.Whitespace
+'checked'     Name.Attribute
+'='           Operator
+"'"           Literal.String
+'t'           Literal.String.Single
+'r'           Literal.String.Single
+'u'           Literal.String.Single
+'e'           Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'disabled'    Name.Attribute
+' '           Text.Whitespace
+'name'        Name.Attribute
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'x'           Name.Variable
+' '           Text.Whitespace
+'param'       Name.Attribute
+' '           Text.Whitespace
+'>'           Punctuation
+' '           Text.Whitespace
+"'"           Literal.String
+'E'           Literal.String.Single
+'n'           Literal.String.Single
+'t'           Literal.String.Single
+'e'           Literal.String.Single
+'r'           Literal.String.Single
+' '           Literal.String.Single
+' '           Literal.String.Single
+'.'           Literal.String.Single
+'.'           Literal.String.Single
+"'"           Literal.String.Single
+'\n'          Text.Whitespace
+
+'input'       Name.Tag
+' '           Text.Whitespace
+'placeholder' Name.Attribute
+'='           Operator
+'Password'    Name.Variable
+' '           Text.Whitespace
+'type'        Name.Attribute
+'='           Operator
+'password'    Name.Variable
+' '           Text.Whitespace
+'>'           Punctuation
+'\n    '      Text.Whitespace
+':dualbind'   Name.Class
+' '           Text.Whitespace
+'x-signal'    Name.Attribute
+'='           Operator
+"'"           Literal.String
+'d'           Literal.String.Single
+'o'           Literal.String.Single
+'m'           Literal.String.Single
+':'           Literal.String.Single
+'c'           Literal.String.Single
+'r'           Literal.String.Single
+'e'           Literal.String.Single
+'a'           Literal.String.Single
+'t'           Literal.String.Single
+'e'           Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'value'       Name.Attribute
+'='           Operator
+'user'        Name.Variable
+'.'           Name.Variable.Class
+'passord'     Name.Variable.Class
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'%'           Name.Class
+' '           Text.Whitespace
+'each'        Name.Attribute
+'='           Operator
+"'"           Literal.String
+'f'           Literal.String.Single
+'l'           Literal.String.Single
+'o'           Literal.String.Single
+'w'           Literal.String.Single
+'e'           Literal.String.Single
+'r'           Literal.String.Single
+'s'           Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'>'           Punctuation
+' \n    '     Text.Whitespace
+'div'         Name.Tag
+' '           Text.Whitespace
+'style'       Name.Attribute
+'='           Operator
+"'"           Literal.String.Single
+'\n        '  Text.Whitespace
+'position:'   Name.Builtin
+' '           Text.Whitespace
+'absolute'    Name.Entity
+';'           Punctuation
+'\n        '  Text.Whitespace
+'display:'    Name.Builtin
+' '           Text.Whitespace
+'inline-block' Name.Entity
+';'           Punctuation
+'\n        '  Text.Whitespace
+'background:' Name.Builtin
+' '           Text.Whitespace
+'url("image.png") center center no-repeat' Name.Entity
+';'           Punctuation
+'\n    '      Text.Whitespace
+"'"           Literal.String.Single
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'#skippedDiv' Name.Function
+'.'           Name.Variable.Class
+'other'       Name.Variable.Class
+' '           Text.Whitespace
+'{'           Punctuation
+'\n    '      Text.Whitespace
+'img'         Name.Tag
+' '           Text.Whitespace
+'src'         Name.Attribute
+'='           Operator
+"'"           Literal.String
+'~['          Literal.String.Interpol
+'url'         Literal.String.Interpol
+']'           Literal.String.Interpol
+"'"           Literal.String.Single
+';'           Punctuation
+'\n    '      Text.Whitespace
+'div'         Name.Tag
+' '           Text.Whitespace
+'style'       Name.Attribute
+'='           Operator
+'"'           Literal.String.Single
+'text-align:' Name.Builtin
+'center'      Name.Entity
+';'           Punctuation
+'"'           Literal.String.Single
+' '           Text.Whitespace
+'{'           Punctuation
+'\n        '  Text.Whitespace
+"'"           Literal.String
+'~['          Literal.String.Interpol
+':'           Literal.String.Interpol
+''            Text
+' '           Text.Whitespace
+'$obj'        Name.Other
+'.'           Punctuation
+'foo'         Name.Other
+'('           Punctuation
+'"username"'  Literal.String.Double
+','           Punctuation
+' '           Text.Whitespace
+'name'        Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+'2'           Literal.Number.Float
+']'           Literal.String.Interpol
+"'"           Literal.String.Single
+'\n        '  Text.Whitespace
+'"'           Literal.String
+'~['          Literal.String.Interpol
+'Localize'    Name.Other
+':'           Punctuation
+' stringId'   Literal.String.Interpol
+']'           Literal.String.Interpol
+'"'           Literal.String.Single
+'\n    '      Text.Whitespace
+'}'           Punctuation
+'\n\n    '    Text.Whitespace
+'p'           Name.Tag
+' '           Text.Whitespace
+'>'           Punctuation
+' '           Text.Whitespace
+'"""'         Literal.String
+'\n'          Literal.String.Single
+
+'\n'          Literal.String.Single
+
+' '           Literal.String.Single
+' '           Literal.String.Single
+' '           Literal.String.Single
+' '           Literal.String.Single
+' '           Literal.String.Single
+' '           Literal.String.Single
+' '           Literal.String.Single
+' '           Literal.String.Single
+'H'           Literal.String.Single
+'e'           Literal.String.Single
+'l'           Literal.String.Single
+'l'           Literal.String.Single
+'o'           Literal.String.Single
+' '           Literal.String.Single
+'"'           Literal.String.Single
+'w'           Literal.String.Single
+'o'           Literal.String.Single
+'r'           Literal.String.Single
+'l'           Literal.String.Single
+'d'           Literal.String.Single
+'"'           Literal.String.Single
+'\n'          Literal.String.Single
+
+' '           Literal.String.Single
+' '           Literal.String.Single
+' '           Literal.String.Single
+' '           Literal.String.Single
+'"""'         Literal.String.Single
+'\n\n    '    Text.Whitespace
+'p'           Name.Tag
+' '           Text.Whitespace
+'>'           Punctuation
+' '           Text.Whitespace
+"'"           Literal.String
+'\n'          Literal.String.Single
+
+' '           Literal.String.Single
+' '           Literal.String.Single
+' '           Literal.String.Single
+' '           Literal.String.Single
+' '           Literal.String.Single
+' '           Literal.String.Single
+' '           Literal.String.Single
+' '           Literal.String.Single
+'H'           Literal.String.Single
+'e'           Literal.String.Single
+'l'           Literal.String.Single
+'l'           Literal.String.Single
+'o'           Literal.String.Single
+' '           Literal.String.Single
+'"'           Literal.String.Single
+'w'           Literal.String.Single
+'o'           Literal.String.Single
+'r'           Literal.String.Single
+'l'           Literal.String.Single
+'d'           Literal.String.Single
+'"'           Literal.String.Single
+'\n'          Literal.String.Single
+
+' '           Literal.String.Single
+' '           Literal.String.Single
+' '           Literal.String.Single
+' '           Literal.String.Single
+"'"           Literal.String.Single
+'\n\n    '    Text.Whitespace
+'p'           Name.Tag
+' '           Text.Whitespace
+'>'           Punctuation
+' '           Text.Whitespace
+'"'           Literal.String
+'H'           Literal.String.Single
+'e'           Literal.String.Single
+'l'           Literal.String.Single
+'l'           Literal.String.Single
+'o'           Literal.String.Single
+' '           Literal.String.Single
+"'"           Literal.String.Single
+'w'           Literal.String.Single
+'o'           Literal.String.Single
+'r'           Literal.String.Single
+'l'           Literal.String.Single
+'d'           Literal.String.Single
+"'"           Literal.String.Single
+'"'           Literal.String.Single
+'\n\n    '    Text.Whitespace
+':customComponent' Name.Class
+' '           Text.Whitespace
+'x-value'     Name.Attribute
+'='           Operator
+"'"           Literal.String
+'t'           Literal.String.Single
+'t'           Literal.String.Single
+"'"           Literal.String.Single
+';'           Punctuation
+'\n    '      Text.Whitespace
+"/* footer > '(c) 2014' */" Comment.Multiline
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n\n'        Text.Whitespace
+
+'.skippedDiv' Name.Variable.Class
+' '           Text.Whitespace
+'>'           Punctuation
+'\n    '      Text.Whitespace
+'span'        Name.Tag
+' '           Text.Whitespace
+'>'           Punctuation
+'\n        '  Text.Whitespace
+'#skipped'    Name.Function
+' '           Text.Whitespace
+'>'           Punctuation
+'\n            ' Text.Whitespace
+'table'       Name.Tag
+' '           Text.Whitespace
+'>'           Punctuation
+'\n                ' Text.Whitespace
+'td'          Name.Tag
+' '           Text.Whitespace
+'>'           Punctuation
+'\n                    ' Text.Whitespace
+'tr'          Name.Tag
+' '           Text.Whitespace
+'>'           Punctuation
+' '           Text.Whitespace
+"'"           Literal.String
+';'           Literal.String.Single
+')'           Literal.String.Single
+"'"           Literal.String.Single
+'\n\n'        Text.Whitespace
+
+'br'          Name.Tag
+';'           Punctuation
+'\n'          Text.Whitespace

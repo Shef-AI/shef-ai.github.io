@@ -1,0 +1,143 @@
+{
+  "paths": [
+    {
+      "_path": "lib/python3.14/site-packages/shellingham-1.5.4.dist-info/INSTALLER",
+      "path_type": "hardlink",
+      "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+      "size_in_bytes": 5
+    },
+    {
+      "_path": "lib/python3.14/site-packages/shellingham-1.5.4.dist-info/METADATA",
+      "path_type": "hardlink",
+      "sha256": "3e928a057f03dd33e435522f1ddc20a574822d663b5af7bfb6ab6feb9015e873",
+      "size_in_bytes": 3483
+    },
+    {
+      "_path": "lib/python3.14/site-packages/shellingham-1.5.4.dist-info/RECORD",
+      "path_type": "hardlink",
+      "sha256": "82e2020322909c0b9e98de5add2112580a49c59431dbc4530f06f246cb978453",
+      "size_in_bytes": 1726
+    },
+    {
+      "_path": "lib/python3.14/site-packages/shellingham-1.5.4.dist-info/REQUESTED",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "lib/python3.14/site-packages/shellingham-1.5.4.dist-info/WHEEL",
+      "path_type": "hardlink",
+      "sha256": "ef001b648f00d548cdfa3e3e6987faeaa071399d08a32d1037292463935c189a",
+      "size_in_bytes": 109
+    },
+    {
+      "_path": "lib/python3.14/site-packages/shellingham-1.5.4.dist-info/direct_url.json",
+      "path_type": "hardlink",
+      "sha256": "169145c0725d8cdd09d42522794f08dc5e8d970d79a58276ce6a30c8a345d00f",
+      "size_in_bytes": 101
+    },
+    {
+      "_path": "lib/python3.14/site-packages/shellingham-1.5.4.dist-info/licenses/LICENSE",
+      "path_type": "hardlink",
+      "sha256": "f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d",
+      "size_in_bytes": 751
+    },
+    {
+      "_path": "lib/python3.14/site-packages/shellingham-1.5.4.dist-info/top_level.txt",
+      "path_type": "hardlink",
+      "sha256": "b8a3102f900ac4f8b83bdfd16ddf37f10784b38226a4640a35b103658aa00609",
+      "size_in_bytes": 12
+    },
+    {
+      "_path": "lib/python3.14/site-packages/shellingham-1.5.4.dist-info/zip-safe",
+      "path_type": "hardlink",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "size_in_bytes": 1
+    },
+    {
+      "_path": "lib/python3.14/site-packages/shellingham/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "a4029750f294770c84ac2d198d2fb9c3e7d17526e675c7ef9e9b7fc75c96aad0",
+      "size_in_bytes": 635
+    },
+    {
+      "_path": "lib/python3.14/site-packages/shellingham/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "6d3655e5dcb39cde6d4ba3fd5ccb2800f4fc619583e50affe7cf94de8cde71cd",
+      "size_in_bytes": 1195
+    },
+    {
+      "_path": "lib/python3.14/site-packages/shellingham/__pycache__/_core.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "06c51897f87ae2cd2c7b06d03b6e8121b6c216c4dad45149733ff14a52e3c693",
+      "size_in_bytes": 665
+    },
+    {
+      "_path": "lib/python3.14/site-packages/shellingham/__pycache__/nt.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "bbfbfe63e54c4bac0cfcab88faa22df209eec6dc655c056faae04aea1bea2df6",
+      "size_in_bytes": 6525
+    },
+    {
+      "_path": "lib/python3.14/site-packages/shellingham/_core.py",
+      "path_type": "hardlink",
+      "sha256": "bfe093affec5edc240b4d9f3a5ad4dfc797c69f918e728830388e81a6b1406ed",
+      "size_in_bytes": 300
+    },
+    {
+      "_path": "lib/python3.14/site-packages/shellingham/nt.py",
+      "path_type": "hardlink",
+      "sha256": "9ba27a4aec32a95565c574fd05cfbd17fd71f93e6ed2008516b4401762c891e8",
+      "size_in_bytes": 4516
+    },
+    {
+      "_path": "lib/python3.14/site-packages/shellingham/posix/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "a41ebdaadbd927fc887f8f27978f997d2df02f0c2e5ee9275ce6610670b64f5a",
+      "size_in_bytes": 3129
+    },
+    {
+      "_path": "lib/python3.14/site-packages/shellingham/posix/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "73b7e73bb9d1ac63c7067775f9bbfe1c3deb88a27dc05b4cd8bf8a2fe10c3fa8",
+      "size_in_bytes": 4261
+    },
+    {
+      "_path": "lib/python3.14/site-packages/shellingham/posix/__pycache__/_core.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "a14203a1aa7cfab17e7525e1157d09f3eff52f93c4e86ec315835294074df8b9",
+      "size_in_bytes": 277
+    },
+    {
+      "_path": "lib/python3.14/site-packages/shellingham/posix/__pycache__/proc.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "862702b202995974755210d96dfce1a069df1a152eb7f4a84b7ee971a2b6db9e",
+      "size_in_bytes": 3962
+    },
+    {
+      "_path": "lib/python3.14/site-packages/shellingham/posix/__pycache__/ps.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "cb28d337e2cf23db47343aa38395764ed680b83906e2ec89ce051103ee74b8aa",
+      "size_in_bytes": 2777
+    },
+    {
+      "_path": "lib/python3.14/site-packages/shellingham/posix/_core.py",
+      "path_type": "hardlink",
+      "sha256": "fefd7c51a5dbcebe26b8d86bdfe987d4575276367f74e5d0aed532a2621b2984",
+      "size_in_bytes": 81
+    },
+    {
+      "_path": "lib/python3.14/site-packages/shellingham/posix/proc.py",
+      "path_type": "hardlink",
+      "sha256": "9d253122e412a2dbda0d6efa8b4a1340033d699f4f5c12c500492d5a58d2282a",
+      "size_in_bytes": 2659
+    },
+    {
+      "_path": "lib/python3.14/site-packages/shellingham/posix/ps.py",
+      "path_type": "hardlink",
+      "sha256": "346983282ba484da7495a87060268c5e984161a55b85b891f41b44d0e913f2a5",
+      "size_in_bytes": 1770
+    }
+  ],
+  "paths_version": 1
+}

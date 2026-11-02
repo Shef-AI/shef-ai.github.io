@@ -1,0 +1,25 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch/",
+  "constrains": [],
+  "depends": [
+    "anaconda-opentelemetry >=1.2.5",
+    "conda >=26.5",
+    "python >=3.10",
+    "requests"
+  ],
+  "fn": "conda-anaconda-telemetry-0.4.0-pyhd3eb1b0_0.conda",
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "md5": "31a22cb0d8f6a41172866dc9f7e318b0",
+  "name": "conda-anaconda-telemetry",
+  "noarch": "python",
+  "package_type": "noarch_python",
+  "sha256": "368cb5004a045a2fe422df8e3567fff8c95077b19c4cef8ce0148a94b3fc4a32",
+  "size": 19095,
+  "subdir": "noarch",
+  "timestamp": 1791923906000,
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/conda-anaconda-telemetry-0.4.0-pyhd3eb1b0_0.conda",
+  "version": "0.4.0"
+}

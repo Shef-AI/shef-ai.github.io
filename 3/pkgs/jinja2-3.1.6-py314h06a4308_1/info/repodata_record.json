@@ -1,0 +1,26 @@
+{
+  "arch": "x86_64",
+  "build": "py314h06a4308_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64/",
+  "constrains": [
+    "babel >=2.7"
+  ],
+  "depends": [
+    "markupsafe >=2.0",
+    "python >=3.14,<3.15.0a0",
+    "python_abi 3.14.* *_cp314"
+  ],
+  "fn": "jinja2-3.1.6-py314h06a4308_1.conda",
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "md5": "e50f8887abeb3e0ad20fdd168b1fc347",
+  "name": "jinja2",
+  "platform": "linux",
+  "sha256": "b469641af84048b35df81889d825421fb495fd8e2dcc402c9aab84e3fdc79ea4",
+  "size": 372090,
+  "subdir": "linux-64",
+  "timestamp": 1787826229000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/jinja2-3.1.6-py314h06a4308_1.conda",
+  "version": "3.1.6"
+}

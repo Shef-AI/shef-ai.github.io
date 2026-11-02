@@ -1,0 +1,42 @@
+'exec'        Keyword
+' '           Text.Whitespace
+'{'           Punctuation
+' '           Text.Whitespace
+"'grep'"      Literal.String
+':'           Punctuation
+'\n    '      Text.Whitespace
+'command'     Name.Attribute
+' '           Text.Whitespace
+'=>'          Operator
+' '           Text.Whitespace
+'\'grep "\\\'" -rI *\'' Literal.String
+','           Punctuation
+'\n    '      Text.Whitespace
+'path'        Name.Attribute
+'    '        Text.Whitespace
+'=>'          Operator
+' '           Text.Whitespace
+"'/bin:/usr/bin'" Literal.String
+','           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n\n'        Text.Whitespace
+
+'node'        Keyword
+' '           Text.Whitespace
+'default'     Keyword
+' '           Text.Whitespace
+'{'           Punctuation
+'\n    '      Text.Whitespace
+'notify'      Keyword
+' '           Text.Whitespace
+'{'           Punctuation
+'"Hello World"' Literal.String
+':'           Punctuation
+';'           Punctuation
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n'          Text.Whitespace

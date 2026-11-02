@@ -1,0 +1,5 @@
+{
+  "libmambapy": "2.3",
+  "channel_targets": "defaults",
+  "libmamba": "2.3"
+}

@@ -1,0 +1,95 @@
+# keep this without major version to let the bot pick it up
+{% set version = "35.1" %}
+# protobuf doesn't add the major version in the tag, it's defined per language in
+# https://github.com/protocolbuffers/protobuf/blob/main/version.json
+{% set major = "7" %}
+# libprotobuf can have a different major version than protobuf
+{% set lib_major = "7" %}
+
+package:
+  name: protobuf
+  version: {{ major ~ "." ~ version }}
+
+source:
+  - url: https://github.com/protocolbuffers/protobuf/archive/refs/tags/v{{ version }}.tar.gz
+    sha256: 22775f9376938295efa2d59a59bde4cd075a42df5a9b4d27aa9b99fa6a413bd2
+    patches:
+      # backport https://github.com/protocolbuffers/protobuf/pull/17207 to avoid upb leakage
+      - patches/0001-Make-our-Python-source-wheel-use-the-version-script-.patch
+      - patches/0002-don-t-link-statically-on-windows.patch
+      - patches/0003-enable-windows-as-a-target-for-python-bindings.patch
+      - patches/0004-Support-more-architectures-for-Python-bindings.patch
+      - patches/0005-Compatible-windows-changes.patch
+      - patches/0006-Hacky-windows-workarounds.patch                                # [win]
+      - patches/0007-Add-osx-64-and-linux-ppc64le-as-supported-wheel-tags.patch
+      - patches/0008-Add-ppc64le-to-python-dist-ABI-suffix-map.patch
+      - patches/0009-dont-build-rust.patch
+      - patches/0010-pin-rules-cc-0.0.17.patch
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - bazel 8
+    - bazel-toolchain       # [unix]
+    - openjdk 21.*          # [unix]
+    - sed                   # [unix]
+    - msys2-posix           # [not unix]
+    - msys2-sed             # [not unix]
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - {{ stdlib('c') }}
+  host:
+    - python
+    - pip
+    - setuptools
+    # UPB implementation doesn't need libabseil or zlib
+    # - libabseil {{ libabseil }}  # [unix]
+    # - zlib {{ zlib }}       # [unix]
+    # - libprotobuf {{ lib_major ~ "." ~ version }}
+  run:
+    - python
+  run_constrained:
+    - libprotobuf {{ lib_major ~ "." ~ version }}
+
+test:
+  requires:
+    - pip
+  imports:
+    - google
+    - google.protobuf
+    - google.protobuf.descriptor
+    - google.protobuf.internal
+    - google.protobuf.pyext
+    - google.protobuf.util
+    - google.protobuf.compiler
+    - google._upb._message
+  commands:
+    - python -c "from google.protobuf.internal import api_implementation; print(api_implementation.Type())"
+    - python -c "from google.protobuf.internal import api_implementation; assert api_implementation.Type() == 'upb'"
+    - pip check
+
+about:
+  home: https://developers.google.com/protocol-buffers
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
+  summary: Protocol Buffers - Google's data interchange format.
+  description: |
+    Protocol buffers are Google's language-neutral, platform-neutral, extensible
+    mechanism for serializing structured data,think XML, but smaller, faster, and simpler.
+  dev_url: https://github.com/protocolbuffers/protobuf
+  doc_url: https://developers.google.com/protocol-buffers/docs/tutorials
+
+extra:
+  recipe-maintainers:
+    - jjerphan
+    - JohanMabille
+    - xylar
+    - dopplershift
+    - jakirkham
+    - ocefpaf
+    - hajapy
+    - xhochy
+    - conda-forge/libprotobuf

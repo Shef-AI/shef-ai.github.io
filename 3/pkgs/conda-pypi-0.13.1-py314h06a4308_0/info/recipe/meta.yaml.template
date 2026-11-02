@@ -1,0 +1,70 @@
+{% set name = "conda-pypi" %}
+{% set version = "0.13.1" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/conda_pypi-{{ version }}.tar.gz
+  sha256: e82817d8295d535aa22f09e3c9bc38ddaf7c73c082daffdb6325898b131dd0ba
+
+build:
+  skip: true  # [py<310]
+  # can't be noarch because we can't place EXTERNALLY-MANAGED in stdlib (first level is site-packages)
+  # However, EXTERNALLY-MANAGED is temporarily disabled
+  number: 0
+  script:
+    - set -x      # [unix]
+    - "@ECHO ON"  # [win]
+    - {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
+
+requirements:
+  host:
+    - python
+    - pip
+    - hatchling >=1.26
+    - hatch-vcs >=0.2.0
+    - python-build
+  run:
+    - python
+    - conda >=26.1.0
+    - packaging
+    - unearth
+    - python-build
+    - python-installer >=1.0
+    - platformdirs
+    - conda-index >=0.13.0
+    - conda-package-streaming >=0.11
+  run_constrained:
+    # eMudhra certificate compromise
+    - certifi >=2026.10.19
+
+test:
+  imports:
+    - conda_pypi
+    - conda_pypi.main
+  requires:
+    - pip
+  commands:
+    - python -m conda pypi --help  # Using 'conda pypi' directly on Windows fails due to the actual 'base' conda being found earlier than test-env's conda
+    - pip check
+
+about:
+  home: https://github.com/conda/conda-pypi
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: Better PyPI interoperability for the conda ecosystem
+  dev_url: https://github.com/conda/conda-pypi
+  doc_url: https://conda.github.io/conda-pypi
+
+extra:
+  recipe-maintainers:
+    - danyeaw
+    - ryanskeith
+    - jaimergp
+    - jezdez
+  skip-lints:
+    # python-build and python-installer are used at runtime.
+    - python_build_tools_in_host

@@ -1,0 +1,102 @@
+# Typer feedstock (single output)
+#
+# This recipe used to build a multi-output "typer-split" package from three PyPI
+# sdists: typer-slim, typer-cli, and typer. Upstream deprecated that split starting
+# in 0.22.x: typer-slim is now a migration shim toward the full typer package, and
+# current releases (e.g. 0.25.x) no longer publish separate typer-slim / typer-cli
+# source distributions. The installable project is the single PyPI package "typer"
+# (repo: https://github.com/fastapi/typer) with runtime deps declared in pyproject.
+#
+# Conda users who previously installed typer-slim, typer-slim-standard, or typer-cli
+# should depend on typer instead; those subpackage names are no longer produced here.
+{% set name = "typer" %}
+{% set version = "0.27.3" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.org/packages/source/t/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: d0396f770a560ab1b0a8504e13b5f254b728cedb05c61cf0359e944e50ce8901
+
+build:
+  number: 0
+  skip: true  # [py<310]
+  entry_points:
+    - typer = typer.cli:main
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - pip
+    - python
+    - python-build
+    - pdm-backend
+  run:
+    - python
+    - shellingham >=1.3.0
+    - rich >=13.8.0
+    - annotated-doc >=0.0.2
+    - colorama  # [win]
+
+# TypeError: argument of type 'NoneType' is not iterable
+# Rich layout / print() expectations differ when tests run under conda-build + coverage
+# Windows: Rich wraps the invalid-path error across panel lines, so the substring "does not exist"
+# is not contiguous in stdout; upstream test_not_exists assumes it is (test_path/test_tutorial002.py).
+
+{% set deselect_tests = "" %}
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_tutorial/test_exceptions/test_tutorial003.py::test_traceback_rich_pretty_short_disable" %}  # [win]
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_tracebacks.py::test_rich_exceptions_dont_truncate_code_on_wide_terminal" %}
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_tutorial/test_printing/test_tutorial001.py::test_cli" %}
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_tutorial/test_printing/test_tutorial002.py::test_cli" %}
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_tutorial/test_parameter_types/test_path/test_tutorial002.py::test_not_exists[tutorial002_py310]" %}  # [win]
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_tutorial/test_parameter_types/test_path/test_tutorial002.py::test_not_exists[tutorial002_an_py310]" %}  # [win]
+
+{% set tests_to_skip = " or completion" %}
+{% set tests_to_skip = tests_to_skip + " or invalid_score" %}
+# assert 'cannot-open.txt' in "\u256d\u2500 Error 
+{% set tests_to_skip = tests_to_skip + " or test_file_error" %}
+
+test:
+  source_files:
+    - tests
+    - docs_src
+    - typer
+    - scripts
+  imports:
+    - typer
+  requires:
+    - pip
+    - pytest
+    - coverage
+  commands:
+    - pip check
+    - typer --version
+    - typer --help
+    - PYTHONPATH=. coverage run --source=typer --branch -m pytest tests -vv --color=yes --tb=long -k "not ((multiple_values and main){{ tests_to_skip }})" {{ deselect_tests }}
+
+about:
+  home: https://github.com/fastapi/typer
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: A library for building CLI applications
+  description: |
+    Typer is library for building CLI applications that users will love using and developers will love creating. Based on Python type hints.
+
+    The key features are:
+
+    Intuitive to write: Great editor support. Completion everywhere. Less time debugging. Designed to be easy to use and learn. Less time reading docs.
+    Easy to use: It's easy to use for the final users. Automatic help, and automatic completion for all shells.
+    Short: Minimize code duplication. Multiple features from each parameter declaration. Fewer bugs.
+    Start simple: The simplest example adds only 2 lines of code to your app: 1 import, 1 function call.
+    Grow large: Grow in complexity as much as you want, create arbitrarily complex trees of commands and groups of subcommands, with options and arguments.
+
+  doc_url: https://typer.tiangolo.com
+  dev_url: https://github.com/fastapi/typer
+
+extra:
+  recipe-maintainers:
+    - dfornika
+    - bollwyvl

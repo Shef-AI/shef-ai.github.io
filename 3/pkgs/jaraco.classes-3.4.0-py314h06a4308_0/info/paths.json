@@ -1,0 +1,107 @@
+{
+  "paths": [
+    {
+      "_path": "lib/python3.14/site-packages/jaraco/classes/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "lib/python3.14/site-packages/jaraco/classes/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "6d12448a95c2b9725fd1098f35da3b9f67c35eb84271d6cfee049a05a80db9b8",
+      "size_in_bytes": 154
+    },
+    {
+      "_path": "lib/python3.14/site-packages/jaraco/classes/__pycache__/ancestry.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "70316f3fd80eeeaea83fc990d1b3fee2f5673eefacb7b3e4b08980d32fbb5594",
+      "size_in_bytes": 2852
+    },
+    {
+      "_path": "lib/python3.14/site-packages/jaraco/classes/__pycache__/meta.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "9939a4c7ef8855a0ac15d20d9d5f9a2f19c77f49f76b5653836e0fe459138be9",
+      "size_in_bytes": 3392
+    },
+    {
+      "_path": "lib/python3.14/site-packages/jaraco/classes/__pycache__/properties.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "d0fedcb09625b9fae8005042b07a821a1cf22108c480f996a387f53474c289c0",
+      "size_in_bytes": 10698
+    },
+    {
+      "_path": "lib/python3.14/site-packages/jaraco/classes/ancestry.py",
+      "path_type": "hardlink",
+      "sha256": "16453b93238ef9338c830477a1b729a81f771edf9fd32c631a74f172f7c12c1d",
+      "size_in_bytes": 1787
+    },
+    {
+      "_path": "lib/python3.14/site-packages/jaraco/classes/meta.py",
+      "path_type": "hardlink",
+      "sha256": "bb3d739adb1eff49fb72cd8cda17f3f2222aa1edbfdaf648fbf26216f42e0f01",
+      "size_in_bytes": 2198
+    },
+    {
+      "_path": "lib/python3.14/site-packages/jaraco/classes/properties.py",
+      "path_type": "hardlink",
+      "sha256": "7fef3c28248179e0a58b0c5f5cec1eed4aa4f7f7a51268bd652c0e87aff206ae",
+      "size_in_bytes": 6191
+    },
+    {
+      "_path": "lib/python3.14/site-packages/jaraco/classes/py.typed",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "lib/python3.14/site-packages/jaraco_classes-3.4.0.dist-info/INSTALLER",
+      "path_type": "hardlink",
+      "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+      "size_in_bytes": 5
+    },
+    {
+      "_path": "lib/python3.14/site-packages/jaraco_classes-3.4.0.dist-info/METADATA",
+      "path_type": "hardlink",
+      "sha256": "7fab25d0e22cd246eb73c5ae35c4524ab5df2adc6c68b4a05a0d86cdb666bc24",
+      "size_in_bytes": 2625
+    },
+    {
+      "_path": "lib/python3.14/site-packages/jaraco_classes-3.4.0.dist-info/RECORD",
+      "path_type": "hardlink",
+      "sha256": "9c418c011e5d811d006a2e05cba345783dac0f9461f35d3a3426adc1b7c526a2",
+      "size_in_bytes": 1353
+    },
+    {
+      "_path": "lib/python3.14/site-packages/jaraco_classes-3.4.0.dist-info/REQUESTED",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "lib/python3.14/site-packages/jaraco_classes-3.4.0.dist-info/WHEEL",
+      "path_type": "hardlink",
+      "sha256": "95353a07a7887d8a224094d935cf9fc9a47a0692fa7a14f3537c466319f69fc9",
+      "size_in_bytes": 91
+    },
+    {
+      "_path": "lib/python3.14/site-packages/jaraco_classes-3.4.0.dist-info/direct_url.json",
+      "path_type": "hardlink",
+      "sha256": "e46f2783ce6336f11b287a0151370fabbeddddacfb49079f0db67ccc6daf2eca",
+      "size_in_bytes": 88
+    },
+    {
+      "_path": "lib/python3.14/site-packages/jaraco_classes-3.4.0.dist-info/licenses/LICENSE",
+      "path_type": "hardlink",
+      "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+      "size_in_bytes": 1023
+    },
+    {
+      "_path": "lib/python3.14/site-packages/jaraco_classes-3.4.0.dist-info/top_level.txt",
+      "path_type": "hardlink",
+      "sha256": "d099cddcb7d71f82c845f5cbf9014e18227341664edc42f1e11d5dfe5a2ea103",
+      "size_in_bytes": 7
+    }
+  ],
+  "paths_version": 1
+}

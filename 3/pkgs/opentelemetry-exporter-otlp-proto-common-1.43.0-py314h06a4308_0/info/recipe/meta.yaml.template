@@ -1,0 +1,58 @@
+{% set name = "opentelemetry-exporter-otlp-proto-common" %}
+{% set version = "1.43.0" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_')}}-{{ version }}.tar.gz
+  sha256: c4e32ba6d6b13bdb2b8f6764c4fd28d00192826561aa04f6d14eedfce7ac076f
+
+build:
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  skip: true  # [py<310]
+
+requirements:
+  host:
+    - pip
+    - python
+    - hatchling
+  run:
+    - python
+    - opentelemetry-proto =={{ version }}
+
+# E   ModuleNotFoundError: No module named 'opentelemetry.test'
+# https://pypi.org/project/opentelemetry-test-utils, not in the main channel.
+{% set ignore_tests = " --ignore=tests/test_metrics_encoder.py" %}
+
+test:
+  source_files:
+    - tests
+  imports:
+    - opentelemetry.exporter.otlp.proto.common
+  commands:
+    - pip check
+    - pytest -v tests {{ ignore_tests }}
+  requires:
+    - pip
+    - pytest >=7.4.4
+    - opentelemetry-api =={{ version }}
+    - opentelemetry-sdk =={{ version }}
+    - opentelemetry-semantic-conventions ==0.64b0
+
+about:
+  home: https://opentelemetry.io
+  license: Apache-2.0
+  license_file: LICENSE
+  license_family: Apache
+  summary: OpenTelemetry Protobuf encoding
+  description: This library is provided as a convenience to encode to Protobuf. 
+  doc_url: https://opentelemetry.io/docs
+  dev_url: https://github.com/open-telemetry/opentelemetry-python/tree/main/exporter/opentelemetry-exporter-otlp-proto-common
+
+extra:
+  recipe-maintainers:
+    - rxm7706
+    - mariusvniekerk

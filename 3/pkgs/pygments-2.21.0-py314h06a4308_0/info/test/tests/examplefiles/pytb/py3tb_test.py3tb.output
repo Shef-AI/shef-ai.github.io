@@ -1,0 +1,20 @@
+''            Generic.Traceback
+'  File '     Text
+'"<stdin>"'   Name.Builtin
+', line '     Text
+'1'           Literal.Number
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'1'           Literal.Number.Integer
+'+'           Operator
+'\n'          Text.Whitespace
+
+'     '       Text.Whitespace
+'^'           Punctuation.Marker
+'\n'          Text.Whitespace
+
+'SyntaxError' Generic.Error
+': '          Text
+'invalid syntax' Name
+'\n'          Text.Whitespace

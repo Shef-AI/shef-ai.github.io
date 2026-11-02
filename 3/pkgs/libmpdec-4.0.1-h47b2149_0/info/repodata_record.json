@@ -1,0 +1,23 @@
+{
+  "arch": "x86_64",
+  "build": "h47b2149_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.28,<3.0.a0",
+    "libgcc >=14"
+  ],
+  "fn": "libmpdec-4.0.1-h47b2149_0.conda",
+  "license": "BSD-2-Clause",
+  "license_family": "BSD",
+  "md5": "6c61b97b64a27eacbd3bb9df0a16a7f9",
+  "name": "libmpdec",
+  "platform": "linux",
+  "sha256": "3ae6cd8965057a5ad2102bb7f598f4fc3cf1c8cdda5abf5d27793dfd17acbb06",
+  "size": 90621,
+  "subdir": "linux-64",
+  "timestamp": 1781726017000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/libmpdec-4.0.1-h47b2149_0.conda",
+  "version": "4.0.1"
+}

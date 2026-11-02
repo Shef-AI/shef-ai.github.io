@@ -1,0 +1,65 @@
+'{'           Punctuation
+' '           Text.Whitespace
+':old_syntax' Literal.String.Symbol
+' '           Text.Whitespace
+'='           Operator
+'>'           Operator
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'ok'          Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'{'           Punctuation
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'stings as key' Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'='           Operator
+'>'           Operator
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'should be ok' Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'{'           Punctuation
+' '           Text.Whitespace
+'new_syntax'  Literal.String.Symbol
+':'           Punctuation
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'broken until now' Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'{'           Punctuation
+' '           Text.Whitespace
+'withoutunderscore' Literal.String.Symbol
+':'           Punctuation
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'should be ok' Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'{'           Punctuation
+' '           Text.Whitespace
+'_underscoreinfront' Literal.String.Symbol
+':'           Punctuation
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'might be ok, if I understand the pygments code correct' Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace

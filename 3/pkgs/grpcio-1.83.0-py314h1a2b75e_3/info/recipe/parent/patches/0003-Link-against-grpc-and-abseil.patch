@@ -1,0 +1,64 @@
+From 052c25e71a78bbac932126284bf34bfce051dfb0 Mon Sep 17 00:00:00 2001
+From: Marius van Niekerk <marius.v.niekerk@gmail.com>
+Date: Mon, 13 Jun 2022 17:13:07 -0400
+Subject: [PATCH 03/18] Link against grpc and abseil
+
+Co-Authored-By: H. Vetinari <h.vetinari@gmx.com>
+---
+
+diff --git c/setup.py i/setup.py
+index 888e684..f6e1716 100644
+--- c/setup.py
++++ i/setup.py
+@@ -172,6 +172,8 @@ BUILD_WITH_STATIC_LIBSTDCXX = _env_bool_value(
+     "GRPC_PYTHON_BUILD_WITH_STATIC_LIBSTDCXX", "False"
+ )
+ 
++BUILD_WITH_SYSTEM_GRPC_CORE = _env_bool_value('GRPC_PYTHON_BUILD_SYSTEM_GRPC_CORE', 'False')
++
+ # For local development use only: This skips building gRPC Core and its
+ # dependencies, including protobuf and boringssl. This allows "incremental"
+ # compilation by first building gRPC Core using make, then building only the
+@@ -401,10 +403,20 @@ if BUILD_WITH_SYSTEM_CARES:
+ if BUILD_WITH_SYSTEM_RE2:
+     EXTENSION_LIBRARIES += ("re2",)
+ if BUILD_WITH_SYSTEM_ABSL:
+-    EXTENSION_LIBRARIES += tuple(
+-        lib.stem[3:]
+-        for lib in sorted(pathlib.Path("/usr").glob("lib*/libabsl_*.so"))
+-    )
++    if "win32" in sys.platform:
++        absl_libs = (
++            'abseil_dll', 'absl_log_flags', 'absl_flags_commandlineflag', 'absl_flags_commandlineflag_internal',
++            'absl_flags_config', 'absl_flags_internal', 'absl_flags_marshalling', 'absl_flags_parse',
++            'absl_flags_private_handle_accessor', 'absl_flags_program_name', 'absl_flags_reflection',
++            'absl_flags_usage', 'absl_flags_usage_internal',
++        )
++    else:
++        shlext = "so" if sys.platform == "linux" else "dylib"
++        absl_glob = pathlib.Path(os.environ["PREFIX"]).glob(f"lib/libabsl_*.{shlext}")
++        absl_libs = tuple(lib.stem[3:] for lib in absl_glob)
++    EXTENSION_LIBRARIES += absl_libs
++if BUILD_WITH_SYSTEM_GRPC_CORE:
++    EXTENSION_LIBRARIES += ('gpr', 'grpc', )
+ 
+ DEFINE_MACROS = (("_WIN32_WINNT", 0x600),)
+ asm_files = []
+@@ -512,6 +524,9 @@ def cython_extensions_and_necessity():
+             prefix + "libgrpc.a",
+         ]
+         core_c_files = []
++    elif BUILD_WITH_SYSTEM_GRPC_CORE:
++        core_c_files = []
++        extra_objects = []
+     else:
+         core_c_files = list(CORE_C_FILES)
+         extra_objects = []
+@@ -523,7 +538,6 @@ def cython_extensions_and_necessity():
+                 + list(GRPCIO_CC_SRCS)
+                 + core_c_files
+                 + asm_files
+-                + ["third_party/abseil-cpp/absl/log/initialize.cc"]
+             ),
+             include_dirs=list(EXTENSION_INCLUDE_DIRECTORIES),
+             libraries=list(EXTENSION_LIBRARIES),

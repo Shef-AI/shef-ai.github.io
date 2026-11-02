@@ -1,0 +1,140 @@
+import pytest
+
+from pydantic import BaseModel, PydanticUserError, computed_field
+from pydantic._internal._decorators import inspect_annotated_serializer, inspect_field_serializer, inspect_validator
+
+
+def _two_pos_required_args(a, b):
+    pass
+
+
+def _two_pos_required_args_extra_optional(a, b, c=1, d=2, *, e=3):
+    pass
+
+
+def _three_pos_required_args(a, b, c):
+    pass
+
+
+def _one_pos_required_arg_one_optional(a, b=1):
+    pass
+
+
+@pytest.mark.parametrize(
+    [
+        'obj',
+        'mode',
+        'expected',
+    ],
+    [
+        (str, 'plain', False),
+        (float, 'plain', False),
+        (int, 'plain', False),
+        pytest.param(lambda a: str(a), 'plain', False, id='lambda_str-plain-False'),
+        pytest.param(lambda a='': str(a), 'plain', False, id='lambda_default_str-plain-False'),
+        (_two_pos_required_args, 'plain', True),
+        (_two_pos_required_args, 'wrap', False),
+        (_two_pos_required_args_extra_optional, 'plain', True),
+        (_two_pos_required_args_extra_optional, 'wrap', False),
+        (_three_pos_required_args, 'wrap', True),
+        (_one_pos_required_arg_one_optional, 'plain', False),
+    ],
+)
+def test_inspect_validator(obj, mode, expected):
+    assert inspect_validator(obj, mode=mode, type='field') == expected
+
+
+def test_inspect_validator_error_wrap():
+    def validator1(arg1):
+        pass
+
+    def validator4(arg1, arg2, arg3, arg4):
+        pass
+
+    with pytest.raises(PydanticUserError, check=lambda e: e.code == 'validator-signature'):
+        inspect_validator(validator1, mode='wrap', type='field')
+
+    with pytest.raises(PydanticUserError, check=lambda e: e.code == 'validator-signature'):
+        inspect_validator(validator4, mode='wrap', type='field')
+
+
+@pytest.mark.parametrize('mode', ['before', 'after', 'plain'])
+def test_inspect_validator_error(mode):
+    def validator():
+        pass
+
+    def validator3(arg1, arg2, arg3):
+        pass
+
+    with pytest.raises(PydanticUserError, check=lambda e: e.code == 'validator-signature'):
+        inspect_validator(validator, mode=mode, type='field')
+
+    with pytest.raises(PydanticUserError, check=lambda e: e.code == 'validator-signature'):
+        inspect_validator(validator3, mode=mode, type='field')
+
+
+def test_inspect_field_serializer_no_signature() -> None:
+    assert inspect_field_serializer(int, mode='plain') == (False, False)
+
+
+@pytest.mark.parametrize(
+    [
+        'obj',
+        'mode',
+        'expected',
+    ],
+    [
+        (str, 'plain', False),
+        (float, 'plain', False),
+        (int, 'plain', False),
+        pytest.param(lambda a: str(a), 'plain', False, id='lambda_str-plain-False'),
+        pytest.param(lambda a='': str(a), 'plain', False, id='lambda_default_str-plain-False'),
+        (_two_pos_required_args, 'plain', True),
+        (_two_pos_required_args, 'wrap', False),
+        (_two_pos_required_args_extra_optional, 'plain', True),
+        (_two_pos_required_args_extra_optional, 'wrap', False),
+        (_three_pos_required_args, 'wrap', True),
+        (_one_pos_required_arg_one_optional, 'plain', False),
+    ],
+)
+def test_inspect_annotated_serializer(obj, mode, expected):
+    assert inspect_annotated_serializer(obj, mode=mode) == expected
+
+
+@pytest.mark.parametrize('mode', ['plain', 'wrap'])
+def test_inspect_annotated_serializer_invalid_number_of_arguments(mode):
+    # TODO: add more erroneous cases
+    def serializer():
+        pass
+
+    with pytest.raises(PydanticUserError, check=lambda e: e.code == 'field-serializer-signature'):
+        inspect_annotated_serializer(serializer, mode=mode)
+
+
+def test_plain_class_not_mutated() -> None:
+    class A:
+        @computed_field
+        def func(self) -> int:
+            return 1
+
+    class B(A, BaseModel):
+        pass
+
+    assert B.__pydantic_decorators__.computed_fields['func'].cls_var_name == 'func'
+
+    assert '__pydantic_decorators__' not in A.__dict__
+
+
+def test_decorator_info_not_mutated() -> None:
+    class A(BaseModel):
+        @computed_field
+        def func(self) -> int:
+            return 1
+
+    assert A.__pydantic_decorators__.computed_fields['func'].info.title is None
+
+    class B(A, field_title_generator=lambda _, __: 'test'):
+        pass
+
+    assert A.__pydantic_decorators__.computed_fields['func'].info.title is None
+    assert B.__pydantic_decorators__.computed_fields['func'].info.title == 'test'

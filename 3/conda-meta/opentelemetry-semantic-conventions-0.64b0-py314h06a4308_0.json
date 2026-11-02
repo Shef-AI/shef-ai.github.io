@@ -1,0 +1,2106 @@
+{
+  "name": "opentelemetry-semantic-conventions",
+  "version": "0.64b0",
+  "build": "py314h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "subdir": "linux-64",
+  "fn": "opentelemetry-semantic-conventions-0.64b0-py314h06a4308_0.conda",
+  "md5": "49d7f67c5647bab9c03080accc2be4f1",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/opentelemetry-semantic-conventions-0.64b0-py314h06a4308_0.conda",
+  "sha256": "12bbd79145e463bfe1cef865f5a255ed4b3b395a244c42031c41c1118dfc5515",
+  "arch": "x86_64",
+  "platform": "linux",
+  "depends": [
+    "opentelemetry-api 1.43.0",
+    "python >=3.14,<3.15.0a0",
+    "python_abi 3.14.* *_cp314",
+    "typing-extensions >=4.5.0"
+  ],
+  "constrains": [],
+  "license": "Apache-2.0",
+  "license_family": "Apache",
+  "timestamp": 1787033180000,
+  "size": 225828,
+  "requested_spec": "https://repo.anaconda.com/pkgs/main/linux-64::opentelemetry-semantic-conventions==0.64b0=py314h06a4308_0",
+  "package_tarball_full_path": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/opentelemetry-semantic-conventions-0.64b0-py314h06a4308_0.conda",
+  "extracted_package_dir": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/opentelemetry-semantic-conventions-0.64b0-py314h06a4308_0",
+  "files": [
+    "lib/python3.14/site-packages/opentelemetry/semconv/__init__.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/__pycache__/schemas.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/app_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/artifact_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/aws_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/az_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/azure_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/browser_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/cassandra_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/cicd_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/client_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/cloud_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/cloudevents_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/cloudfoundry_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/code_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/container_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/cpu_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/cpython_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/db_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/deployment_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/destination_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/device_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/disk_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/dns_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/elasticsearch_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/enduser_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/error_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/event_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/exception_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/faas_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/feature_flag_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/file_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/gcp_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/gen_ai_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/geo_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/graphql_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/heroku_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/host_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/http_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/hw_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/jsonrpc_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/k8s_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/linux_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/log_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/mainframe_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/mcp_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/message_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/messaging_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/net_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/network_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/nfs_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/oci_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/onc_rpc_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/openai_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/openshift_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/opentracing_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/oracle_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/oracle_cloud_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/os_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/otel_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/other_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/peer_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/pool_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/pprof_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/process_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/profile_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/rpc_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/security_rule_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/server_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/service_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/session_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/source_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/system_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/telemetry_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/test_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/thread_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/tls_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/url_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/user_agent_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/user_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/vcs_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/webengine_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/zos_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/app_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/artifact_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/aws_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/az_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/azure_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/browser_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/cassandra_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/cicd_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/client_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/cloud_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/cloudevents_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/cloudfoundry_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/code_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/container_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/cpu_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/cpython_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/db_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/deployment_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/destination_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/device_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/disk_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/dns_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/elasticsearch_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/enduser_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/error_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/event_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/exception_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/faas_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/feature_flag_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/file_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/gcp_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/gen_ai_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/geo_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/graphql_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/heroku_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/host_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/http_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/hw_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/jsonrpc_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/k8s_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/linux_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/log_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/mainframe_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/mcp_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/message_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/messaging_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/net_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/network_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/nfs_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/oci_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/onc_rpc_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/openai_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/openshift_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/opentracing_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/oracle_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/oracle_cloud_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/os_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/otel_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/other_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/peer_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/pool_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/pprof_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/process_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/profile_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/rpc_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/security_rule_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/server_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/service_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/session_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/source_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/system_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/telemetry_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/test_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/thread_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/tls_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/url_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/user_agent_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/user_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/vcs_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/webengine_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/zos_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/azure_metrics.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/cicd_metrics.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/container_metrics.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/cpu_metrics.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/cpython_metrics.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/db_metrics.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/dns_metrics.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/faas_metrics.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/gen_ai_metrics.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/http_metrics.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/hw_metrics.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/k8s_metrics.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/mcp_metrics.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/messaging_metrics.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/nfs_metrics.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/openshift_metrics.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/otel_metrics.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/process_metrics.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/rpc_metrics.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/system_metrics.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/vcs_metrics.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/azure_metrics.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/cicd_metrics.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/container_metrics.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/cpu_metrics.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/cpython_metrics.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/db_metrics.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/dns_metrics.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/faas_metrics.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/gen_ai_metrics.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/http_metrics.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/hw_metrics.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/k8s_metrics.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/mcp_metrics.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/messaging_metrics.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/nfs_metrics.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/openshift_metrics.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/otel_metrics.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/process_metrics.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/rpc_metrics.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/system_metrics.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/vcs_metrics.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/attributes/__init__.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/attributes/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/attributes/__pycache__/client_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/attributes/__pycache__/code_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/attributes/__pycache__/db_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/attributes/__pycache__/deployment_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/attributes/__pycache__/error_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/attributes/__pycache__/exception_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/attributes/__pycache__/http_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/attributes/__pycache__/network_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/attributes/__pycache__/otel_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/attributes/__pycache__/server_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/attributes/__pycache__/service_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/attributes/__pycache__/telemetry_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/attributes/__pycache__/url_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/attributes/__pycache__/user_agent_attributes.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/attributes/client_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/attributes/code_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/attributes/db_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/attributes/deployment_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/attributes/error_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/attributes/exception_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/attributes/http_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/attributes/network_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/attributes/otel_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/attributes/server_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/attributes/service_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/attributes/telemetry_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/attributes/url_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/attributes/user_agent_attributes.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/metrics/__init__.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/metrics/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/metrics/__pycache__/db_metrics.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/metrics/__pycache__/http_metrics.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/metrics/db_metrics.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/metrics/http_metrics.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/py.typed",
+    "lib/python3.14/site-packages/opentelemetry/semconv/resource/__init__.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/resource/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/schemas.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/trace/__init__.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/trace/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/semconv/version/__init__.py",
+    "lib/python3.14/site-packages/opentelemetry/semconv/version/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry_semantic_conventions-0.64b0.dist-info/INSTALLER",
+    "lib/python3.14/site-packages/opentelemetry_semantic_conventions-0.64b0.dist-info/METADATA",
+    "lib/python3.14/site-packages/opentelemetry_semantic_conventions-0.64b0.dist-info/RECORD",
+    "lib/python3.14/site-packages/opentelemetry_semantic_conventions-0.64b0.dist-info/REQUESTED",
+    "lib/python3.14/site-packages/opentelemetry_semantic_conventions-0.64b0.dist-info/WHEEL",
+    "lib/python3.14/site-packages/opentelemetry_semantic_conventions-0.64b0.dist-info/direct_url.json",
+    "lib/python3.14/site-packages/opentelemetry_semantic_conventions-0.64b0.dist-info/licenses/LICENSE"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "a5d674d63fdf4b887a2d6c5bd0e7b005bf71f99ef3b8fb37c104f7b72e8fd7dd",
+        "size_in_bytes": 161,
+        "sha256_in_prefix": "a5d674d63fdf4b887a2d6c5bd0e7b005bf71f99ef3b8fb37c104f7b72e8fd7dd"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/__pycache__/schemas.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "69348702a538dbabb181798bc6f65110ec7e6e9f56f0e60cd09da79df3233df3",
+        "size_in_bytes": 1716,
+        "sha256_in_prefix": "69348702a538dbabb181798bc6f65110ec7e6e9f56f0e60cd09da79df3233df3"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/app_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "ce5c95e115b3663a0c197b984fc1f95c229300fb0e38e085c414d176e464f4b1",
+        "size_in_bytes": 1861,
+        "sha256_in_prefix": "ce5c95e115b3663a0c197b984fc1f95c229300fb0e38e085c414d176e464f4b1"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/artifact_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "b87fa91479a58972d954f5da4b38d87be366a4a4a07042050a71d2016deed692",
+        "size_in_bytes": 1370,
+        "sha256_in_prefix": "b87fa91479a58972d954f5da4b38d87be366a4a4a07042050a71d2016deed692"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/aws_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "a7cb07f3daf7aabe078a89549f6d8a3d5ca9123a29758d8c3630694dfca661b4",
+        "size_in_bytes": 8448,
+        "sha256_in_prefix": "a7cb07f3daf7aabe078a89549f6d8a3d5ca9123a29758d8c3630694dfca661b4"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/az_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "17b6c6609ff4c5a5959bec895dec15b61ac2261ea7c70185fab50858741a01aa",
+        "size_in_bytes": 670,
+        "sha256_in_prefix": "17b6c6609ff4c5a5959bec895dec15b61ac2261ea7c70185fab50858741a01aa"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/azure_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "2ee7c97057e66677f1a88c87c53eab080836a3ebe360820f31fa28f6cab8812c",
+        "size_in_bytes": 2650,
+        "sha256_in_prefix": "2ee7c97057e66677f1a88c87c53eab080836a3ebe360820f31fa28f6cab8812c"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/browser_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "28ca94fefc1f1216fbc64aced3fa8520d7e7cf290fe955281a65369edd8a15d3",
+        "size_in_bytes": 922,
+        "sha256_in_prefix": "28ca94fefc1f1216fbc64aced3fa8520d7e7cf290fe955281a65369edd8a15d3"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/cassandra_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "c382e274639c592bff8d7de03abfe09e202f49501c3ee4ea0928084a878f4fe1",
+        "size_in_bytes": 1954,
+        "sha256_in_prefix": "c382e274639c592bff8d7de03abfe09e202f49501c3ee4ea0928084a878f4fe1"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/cicd_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "55bed257579c28e26196f93ea947f8554f0680875d2349c73c9e3796e6626b7a",
+        "size_in_bytes": 4603,
+        "sha256_in_prefix": "55bed257579c28e26196f93ea947f8554f0680875d2349c73c9e3796e6626b7a"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/client_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "7019b999f13955b0bb4202c2d641ee2a12c3f45581a20b3e07f3e4d8214516d5",
+        "size_in_bytes": 657,
+        "sha256_in_prefix": "7019b999f13955b0bb4202c2d641ee2a12c3f45581a20b3e07f3e4d8214516d5"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/cloud_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "083294cb9f0a74d5eaa0291907e10509177a58c3972ca160dbc17d2a02d8474f",
+        "size_in_bytes": 3747,
+        "sha256_in_prefix": "083294cb9f0a74d5eaa0291907e10509177a58c3972ca160dbc17d2a02d8474f"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/cloudevents_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "372b8807e11e06adc5b84c819f7c566d62e6adf6b4c15d7bd07d05c9d341cd8d",
+        "size_in_bytes": 1149,
+        "sha256_in_prefix": "372b8807e11e06adc5b84c819f7c566d62e6adf6b4c15d7bd07d05c9d341cd8d"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/cloudfoundry_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "042c6251032d2bf6849db418a227c1845ec577c325eae4ec874fdd11b825a966",
+        "size_in_bytes": 2012,
+        "sha256_in_prefix": "042c6251032d2bf6849db418a227c1845ec577c325eae4ec874fdd11b825a966"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/code_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "6d10e258c58f2a36186f9409867e85e2ac06123a89024a87f721258b8a7c0529",
+        "size_in_bytes": 1670,
+        "sha256_in_prefix": "6d10e258c58f2a36186f9409867e85e2ac06123a89024a87f721258b8a7c0529"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/container_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "000a79b33d3587529c5d480e4cbf4702ef8a792113642c73f5a9ce0a5fe14a43",
+        "size_in_bytes": 3478,
+        "sha256_in_prefix": "000a79b33d3587529c5d480e4cbf4702ef8a792113642c73f5a9ce0a5fe14a43"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/cpu_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "54abb00135685e68a78644ca48fda376928382efece7dd404ae8fa9aee5954e6",
+        "size_in_bytes": 1156,
+        "sha256_in_prefix": "54abb00135685e68a78644ca48fda376928382efece7dd404ae8fa9aee5954e6"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/cpython_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "f3d2e6f18e86866657a094b3aa5754a11b3d150f9dca6e91849fdd0c8c6cfb8f",
+        "size_in_bytes": 918,
+        "sha256_in_prefix": "f3d2e6f18e86866657a094b3aa5754a11b3d150f9dca6e91849fdd0c8c6cfb8f"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/db_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "bc0d01c19a56bb9d2257958099a2edffd814c22906ea7c00bb9a43c1f3e95110",
+        "size_in_bytes": 14303,
+        "sha256_in_prefix": "bc0d01c19a56bb9d2257958099a2edffd814c22906ea7c00bb9a43c1f3e95110"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/deployment_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "1409d0b88551e35d360f7091a5fdbbde136708c6eea04e5c9962dc7516f0593b",
+        "size_in_bytes": 2018,
+        "sha256_in_prefix": "1409d0b88551e35d360f7091a5fdbbde136708c6eea04e5c9962dc7516f0593b"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/destination_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "132eeb958e999cacbd888260b59c2f35fb0eee924f836cb65ce72b567fa7a822",
+        "size_in_bytes": 684,
+        "sha256_in_prefix": "132eeb958e999cacbd888260b59c2f35fb0eee924f836cb65ce72b567fa7a822"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/device_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "319e65b90185fa45fee98234a4145f29e2c2ca73f360c0c6aa56e77a1d9dda3d",
+        "size_in_bytes": 940,
+        "sha256_in_prefix": "319e65b90185fa45fee98234a4145f29e2c2ca73f360c0c6aa56e77a1d9dda3d"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/disk_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "bdd177e3ede7416b49ca7a9cb39a95229d4f9e43d1c18e624e4d95b2c47a4dd7",
+        "size_in_bytes": 873,
+        "sha256_in_prefix": "bdd177e3ede7416b49ca7a9cb39a95229d4f9e43d1c18e624e4d95b2c47a4dd7"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/dns_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "2f00650dc7c3366620534aa2760d084982563eb5f0bfbd112c1310e23c6724cc",
+        "size_in_bytes": 661,
+        "sha256_in_prefix": "2f00650dc7c3366620534aa2760d084982563eb5f0bfbd112c1310e23c6724cc"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/elasticsearch_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "ff1791d27ebdd56b79496863e0b28e57e09082478abda8f83b27107d644715f1",
+        "size_in_bytes": 565,
+        "sha256_in_prefix": "ff1791d27ebdd56b79496863e0b28e57e09082478abda8f83b27107d644715f1"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/enduser_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "4864c70e71d8a45eef09b150186fc8634a7008e5f961f8a283e7b3e1641f90d7",
+        "size_in_bytes": 905,
+        "sha256_in_prefix": "4864c70e71d8a45eef09b150186fc8634a7008e5f961f8a283e7b3e1641f90d7"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/error_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "50d2cdb4407cd416604b461fe90ea78da448f7093e6095b04f807bdc339de167",
+        "size_in_bytes": 1163,
+        "sha256_in_prefix": "50d2cdb4407cd416604b461fe90ea78da448f7093e6095b04f807bdc339de167"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/event_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "e2a04e4e860cf18519b193dc5ad2b290b785789c6d98935e377e6d5102d07150",
+        "size_in_bytes": 530,
+        "sha256_in_prefix": "e2a04e4e860cf18519b193dc5ad2b290b785789c6d98935e377e6d5102d07150"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/exception_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "3a37844bea6c4d249a0f4af0aca9012dfb2e67e140b339fa5ad23242a31af235",
+        "size_in_bytes": 941,
+        "sha256_in_prefix": "3a37844bea6c4d249a0f4af0aca9012dfb2e67e140b339fa5ad23242a31af235"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/faas_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "e07190334f7043241565ec861c80d5ecf29f989615198ce0fe742d9686a5f8c7",
+        "size_in_bytes": 3538,
+        "sha256_in_prefix": "e07190334f7043241565ec861c80d5ecf29f989615198ce0fe742d9686a5f8c7"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/feature_flag_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "af8a48b84eed14ed4aa6a5292694a0c13c3d010c07aa2ee9ee9bbd40bb53dfd6",
+        "size_in_bytes": 3339,
+        "sha256_in_prefix": "af8a48b84eed14ed4aa6a5292694a0c13c3d010c07aa2ee9ee9bbd40bb53dfd6"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/file_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "7506dc15f96b5b48912131bf15b3514ffaef9a7f81bd596ed389984438fa52d6",
+        "size_in_bytes": 2646,
+        "sha256_in_prefix": "7506dc15f96b5b48912131bf15b3514ffaef9a7f81bd596ed389984438fa52d6"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/gcp_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "b76fcc53663d0b75ac91e0e78c31cc8da33911fcc9a204f47c16db3ee5e41f45",
+        "size_in_bytes": 6989,
+        "sha256_in_prefix": "b76fcc53663d0b75ac91e0e78c31cc8da33911fcc9a204f47c16db3ee5e41f45"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/gen_ai_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "abc4b0b9d1974e783d2e69f574fb2f852e2a77532c6b3b6aa3f5f8461ddc9f8b",
+        "size_in_bytes": 13194,
+        "sha256_in_prefix": "abc4b0b9d1974e783d2e69f574fb2f852e2a77532c6b3b6aa3f5f8461ddc9f8b"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/geo_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "d23dc8e44bccc2e79ed1865b677c1a00c1bf30ae7b6a84e80e2acf845ae9240f",
+        "size_in_bytes": 1771,
+        "sha256_in_prefix": "d23dc8e44bccc2e79ed1865b677c1a00c1bf30ae7b6a84e80e2acf845ae9240f"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/graphql_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "cb4bc63cc5c709f37cb49fe6e0f6414039a82193e501f1108acb95d03fc39170",
+        "size_in_bytes": 1211,
+        "sha256_in_prefix": "cb4bc63cc5c709f37cb49fe6e0f6414039a82193e501f1108acb95d03fc39170"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/heroku_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "feb1c2612904a1f05bf7fa03f947e689cd22bdec98fbc3b560a7b5b21b774480",
+        "size_in_bytes": 841,
+        "sha256_in_prefix": "feb1c2612904a1f05bf7fa03f947e689cd22bdec98fbc3b560a7b5b21b774480"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/host_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "3aa7626eddc72449d37ce60223f5caf54b56f04622152b8e2b00fb6bd6893736",
+        "size_in_bytes": 2769,
+        "sha256_in_prefix": "3aa7626eddc72449d37ce60223f5caf54b56f04622152b8e2b00fb6bd6893736"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/http_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "c2cdde27bdbba2f8e6d3f2daa45a2c588b171385ba94bb01c1120c9f12bfe2bc",
+        "size_in_bytes": 5586,
+        "sha256_in_prefix": "c2cdde27bdbba2f8e6d3f2daa45a2c588b171385ba94bb01c1120c9f12bfe2bc"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/hw_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "f493766fb43c00e2ace7afe70fcd35bb996aa06d77f22018de65fd1f4b1538b7",
+        "size_in_bytes": 6900,
+        "sha256_in_prefix": "f493766fb43c00e2ace7afe70fcd35bb996aa06d77f22018de65fd1f4b1538b7"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/jsonrpc_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "e30cb4f557bdd0b05ff09d75475955d28c00a602f903fd962f19ea31e5f4aea0",
+        "size_in_bytes": 694,
+        "sha256_in_prefix": "e30cb4f557bdd0b05ff09d75475955d28c00a602f903fd962f19ea31e5f4aea0"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/k8s_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "5a8b78dc1b80d0a743ed6e59da7a0bb78f34cfc84e76c951dd307b73b1e64012",
+        "size_in_bytes": 18526,
+        "sha256_in_prefix": "5a8b78dc1b80d0a743ed6e59da7a0bb78f34cfc84e76c951dd307b73b1e64012"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/linux_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "3734d870c5293cac4d0b0217674ccd2c36a32ba06ff53e36965719b4ce5b868f",
+        "size_in_bytes": 1121,
+        "sha256_in_prefix": "3734d870c5293cac4d0b0217674ccd2c36a32ba06ff53e36965719b4ce5b868f"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/log_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "0c9e9eb09c38d3f1061cef7f2de76c6c1c6309a636ee9222ca702be2269051a5",
+        "size_in_bytes": 1650,
+        "sha256_in_prefix": "0c9e9eb09c38d3f1061cef7f2de76c6c1c6309a636ee9222ca702be2269051a5"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/mainframe_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "a1f2367487af3941f82f8834e97aa9a867a6168cc0ab7a242e0659a780e2ee17",
+        "size_in_bytes": 553,
+        "sha256_in_prefix": "a1f2367487af3941f82f8834e97aa9a867a6168cc0ab7a242e0659a780e2ee17"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/mcp_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "898a8e223b8ef163d5e01451a6a74863d7d87de9438ac00e4df56cf664b8e155",
+        "size_in_bytes": 2656,
+        "sha256_in_prefix": "898a8e223b8ef163d5e01451a6a74863d7d87de9438ac00e4df56cf664b8e155"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/message_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "34d996fa17d66069b1be49ed797cf40ed88c7970a6cdebfdb9f816fc3021508b",
+        "size_in_bytes": 1451,
+        "sha256_in_prefix": "34d996fa17d66069b1be49ed797cf40ed88c7970a6cdebfdb9f816fc3021508b"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/messaging_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "6aecddf299dfce5f5fc2a532e352dddbf492a78e388222c808233b46ea7f8225",
+        "size_in_bytes": 10257,
+        "sha256_in_prefix": "6aecddf299dfce5f5fc2a532e352dddbf492a78e388222c808233b46ea7f8225"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/net_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "e4a7a83d768eb4a602a8c00119f564b7c73d421cd0a074bbbbbef0ef1932a7d8",
+        "size_in_bytes": 3337,
+        "sha256_in_prefix": "e4a7a83d768eb4a602a8c00119f564b7c73d421cd0a074bbbbbef0ef1932a7d8"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/network_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "f547a5a0dd8b4402cd98d56171cb151ea389d60378038db1de1c151dca2824a1",
+        "size_in_bytes": 5798,
+        "sha256_in_prefix": "f547a5a0dd8b4402cd98d56171cb151ea389d60378038db1de1c151dca2824a1"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/nfs_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "0610e47f411a4451c2f8275567826317a4630cfe0946a89371fa1998be516c15",
+        "size_in_bytes": 696,
+        "sha256_in_prefix": "0610e47f411a4451c2f8275567826317a4630cfe0946a89371fa1998be516c15"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/oci_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "5d609aa1df01309a7234a5f2458d39d54a1d5cdf8c58e78dd163519b97391a25",
+        "size_in_bytes": 547,
+        "sha256_in_prefix": "5d609aa1df01309a7234a5f2458d39d54a1d5cdf8c58e78dd163519b97391a25"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/onc_rpc_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "19234a66b26ef2a37df9c669630b5c2d892ab15d90614a77a2bdcb68369402b7",
+        "size_in_bytes": 965,
+        "sha256_in_prefix": "19234a66b26ef2a37df9c669630b5c2d892ab15d90614a77a2bdcb68369402b7"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/openai_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "8c60d012ea4eff1554e2b100fbe0e1c17d2d40e359e8d594ccbffbe3317f475b",
+        "size_in_bytes": 1640,
+        "sha256_in_prefix": "8c60d012ea4eff1554e2b100fbe0e1c17d2d40e359e8d594ccbffbe3317f475b"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/openshift_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "32a707b5f9858bb7e1d06d571d9bc61c06c31323b8d3e6f087104f51625e53c3",
+        "size_in_bytes": 720,
+        "sha256_in_prefix": "32a707b5f9858bb7e1d06d571d9bc61c06c31323b8d3e6f087104f51625e53c3"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/opentracing_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "436c0386b42d0b6821d76552473e135aaecb7efa0d44b84ac407c4000f725884",
+        "size_in_bytes": 913,
+        "sha256_in_prefix": "436c0386b42d0b6821d76552473e135aaecb7efa0d44b84ac407c4000f725884"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/oracle_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "a49a92eeeaf82f1694d06cadea686cc407282b9cc5e0bd53ed73609236a54d4b",
+        "size_in_bytes": 1066,
+        "sha256_in_prefix": "a49a92eeeaf82f1694d06cadea686cc407282b9cc5e0bd53ed73609236a54d4b"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/oracle_cloud_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "3f18fe16747c893b15fc63eba17bdc17c27816a8a72a430b3cc5a183cf422907",
+        "size_in_bytes": 554,
+        "sha256_in_prefix": "3f18fe16747c893b15fc63eba17bdc17c27816a8a72a430b3cc5a183cf422907"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/os_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "8b26eed16ad9d77631b21ba4eabc0fc1a033e4d9b640c47bf15eb2cb5aa60fc3",
+        "size_in_bytes": 1613,
+        "sha256_in_prefix": "8b26eed16ad9d77631b21ba4eabc0fc1a033e4d9b640c47bf15eb2cb5aa60fc3"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/otel_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "9bdc942a53c36e1c2fd207c944199b54d9de8c2bc81a785b847093c05b2fef8f",
+        "size_in_bytes": 4467,
+        "sha256_in_prefix": "9bdc942a53c36e1c2fd207c944199b54d9de8c2bc81a785b847093c05b2fef8f"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/other_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "c76bd08557272ca108c90871d6a48033d061edfbe7f31c2ed16827073608cd92",
+        "size_in_bytes": 1015,
+        "sha256_in_prefix": "c76bd08557272ca108c90871d6a48033d061edfbe7f31c2ed16827073608cd92"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/peer_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "9f6db5fc9380e0dcfb000bff858a5869187d566f199d5313dfa94b76e10fc102",
+        "size_in_bytes": 533,
+        "sha256_in_prefix": "9f6db5fc9380e0dcfb000bff858a5869187d566f199d5313dfa94b76e10fc102"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/pool_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "350313c246da1ea225c0a64a0e6f8a2996a6d6606009e8b865e16a251f04705b",
+        "size_in_bytes": 527,
+        "sha256_in_prefix": "350313c246da1ea225c0a64a0e6f8a2996a6d6606009e8b865e16a251f04705b"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/pprof_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "5402add9e51eab68e9177bb7b745e918775b84b4955cdd439725626d5c5a796e",
+        "size_in_bytes": 2085,
+        "sha256_in_prefix": "5402add9e51eab68e9177bb7b745e918775b84b4955cdd439725626d5c5a796e"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/process_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "dcbde60d9a7838f17d7c01ab0b5ad8fb2208c7633f99d6744422d6850655ccfa",
+        "size_in_bytes": 7183,
+        "sha256_in_prefix": "dcbde60d9a7838f17d7c01ab0b5ad8fb2208c7633f99d6744422d6850655ccfa"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/profile_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "7b4eddaa7517e82d65b17a4990eb7db37bcd6466505e160ffb6383851f21bd02",
+        "size_in_bytes": 1152,
+        "sha256_in_prefix": "7b4eddaa7517e82d65b17a4990eb7db37bcd6466505e160ffb6383851f21bd02"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/rpc_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "9bafcb0c6ec7008aefa7ef4a784b01a22766b1df6dbb838379ad2cd4ea476a4c",
+        "size_in_bytes": 6707,
+        "sha256_in_prefix": "9bafcb0c6ec7008aefa7ef4a784b01a22766b1df6dbb838379ad2cd4ea476a4c"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/security_rule_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "18f7f4155ba3e85e1a852245a0505e353dab99ea96751f2a291cc17c5d4742d3",
+        "size_in_bytes": 1552,
+        "sha256_in_prefix": "18f7f4155ba3e85e1a852245a0505e353dab99ea96751f2a291cc17c5d4742d3"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/server_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "7c340601e2688f56cdf78d86011eff0b65d5ebaf2c0481aa7931b8d103285994",
+        "size_in_bytes": 657,
+        "sha256_in_prefix": "7c340601e2688f56cdf78d86011eff0b65d5ebaf2c0481aa7931b8d103285994"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/service_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "28bf45c02db8fb860ca4ccb8fd14adc66b212f8d803d28288f4fc9f1b5139fe7",
+        "size_in_bytes": 1731,
+        "sha256_in_prefix": "28bf45c02db8fb860ca4ccb8fd14adc66b212f8d803d28288f4fc9f1b5139fe7"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/session_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "2f91cd65170994680ba228c878cbf529d6b1d835fb6a97f91232042aa132c9dd",
+        "size_in_bytes": 667,
+        "sha256_in_prefix": "2f91cd65170994680ba228c878cbf529d6b1d835fb6a97f91232042aa132c9dd"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/source_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "5ed398433cf85d9aac72b4b466a0c5c160158996aa59335988a6c9bb888b1731",
+        "size_in_bytes": 657,
+        "sha256_in_prefix": "5ed398433cf85d9aac72b4b466a0c5c160158996aa59335988a6c9bb888b1731"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/system_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "5a3ee5dc5bb6926527c4bd17ef5377d2923a1eeeccbdf32f8e6102e69ba79004",
+        "size_in_bytes": 7606,
+        "sha256_in_prefix": "5a3ee5dc5bb6926527c4bd17ef5377d2923a1eeeccbdf32f8e6102e69ba79004"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/telemetry_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "f14ad4381baf9cfdddee2d4016205474a74ccc64595c44a1ea531f82af0469e6",
+        "size_in_bytes": 1986,
+        "sha256_in_prefix": "f14ad4381baf9cfdddee2d4016205474a74ccc64595c44a1ea531f82af0469e6"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/test_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "30c4be6f9d882fecf9764ff3c7796bd086849760c05860a2b81e363bb7d28022",
+        "size_in_bytes": 1673,
+        "sha256_in_prefix": "30c4be6f9d882fecf9764ff3c7796bd086849760c05860a2b81e363bb7d28022"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/thread_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "d1191b2e33211fa7bbc507d5f240ae6754e945284c8e030c9ee05b7cb7fcd068",
+        "size_in_bytes": 647,
+        "sha256_in_prefix": "d1191b2e33211fa7bbc507d5f240ae6754e945284c8e030c9ee05b7cb7fcd068"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/tls_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "9c4300ad8fd0bce59811e297e7be837aaa2202c74b85187699657af8b874aedb",
+        "size_in_bytes": 4698,
+        "sha256_in_prefix": "9c4300ad8fd0bce59811e297e7be837aaa2202c74b85187699657af8b874aedb"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/url_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "bab5e537a5197f51669aa32ea2f911fba1f354e5e86b911ba3a8e182fc0b8059",
+        "size_in_bytes": 1988,
+        "sha256_in_prefix": "bab5e537a5197f51669aa32ea2f911fba1f354e5e86b911ba3a8e182fc0b8059"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/user_agent_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "cf38511ae62023d1924612f1d2a1cc6da468ca84e8ac313ca930c6f299bb740c",
+        "size_in_bytes": 1566,
+        "sha256_in_prefix": "cf38511ae62023d1924612f1d2a1cc6da468ca84e8ac313ca930c6f299bb740c"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/user_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "6f6618b613747ae6b53a29c66bade3876873dfcce7d389a35ba083b725045b74",
+        "size_in_bytes": 1107,
+        "sha256_in_prefix": "6f6618b613747ae6b53a29c66bade3876873dfcce7d389a35ba083b725045b74"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/vcs_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "6ef5d490c4e532794d7c6302df57a3c69f18088580b9c51362ebbf1779d02fb3",
+        "size_in_bytes": 5570,
+        "sha256_in_prefix": "6ef5d490c4e532794d7c6302df57a3c69f18088580b9c51362ebbf1779d02fb3"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/webengine_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "9e8034690c2de6737b2088b5395053b68dc18850888214aa2e58a17a8a60e54c",
+        "size_in_bytes": 812,
+        "sha256_in_prefix": "9e8034690c2de6737b2088b5395053b68dc18850888214aa2e58a17a8a60e54c"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/__pycache__/zos_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "5187cb1c0bbcef684cd5a4901a950d4d95727643d5f330cd944ef2bce878f771",
+        "size_in_bytes": 657,
+        "sha256_in_prefix": "5187cb1c0bbcef684cd5a4901a950d4d95727643d5f330cd944ef2bce878f771"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/app_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "bb48348d1416dc8dc2ed83c558abeedb7703b27be72487f74ddb4324864ebb2f",
+        "size_in_bytes": 3755,
+        "sha256_in_prefix": "bb48348d1416dc8dc2ed83c558abeedb7703b27be72487f74ddb4324864ebb2f"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/artifact_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "6753ac62b62160130a328f40115d7e2aee5e50800abda0e56546a4fae0379190",
+        "size_in_bytes": 2600,
+        "sha256_in_prefix": "6753ac62b62160130a328f40115d7e2aee5e50800abda0e56546a4fae0379190"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/aws_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "811c5c997cb6a54eb6e35d42a84530714aec3b5a0a420f3c2b63007973dc2aaf",
+        "size_in_bytes": 13635,
+        "sha256_in_prefix": "811c5c997cb6a54eb6e35d42a84530714aec3b5a0a420f3c2b63007973dc2aaf"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/az_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "3f5611b667b61a5c724b26a15d6a1b0f43727190e5c35a1afea15259db26236f",
+        "size_in_bytes": 325,
+        "sha256_in_prefix": "3f5611b667b61a5c724b26a15d6a1b0f43727190e5c35a1afea15259db26236f"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/azure_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "075fef0d62fcd07c3ed532ba430b2cb42f475a66c8dda3ae7d86da6459ee2375",
+        "size_in_bytes": 2350,
+        "sha256_in_prefix": "075fef0d62fcd07c3ed532ba430b2cb42f475a66c8dda3ae7d86da6459ee2375"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/browser_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "52370e75d7471efc8077c78c883e94c66f3d993558081a5c2324d53a43d1664f",
+        "size_in_bytes": 1716,
+        "sha256_in_prefix": "52370e75d7471efc8077c78c883e94c66f3d993558081a5c2324d53a43d1664f"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/cassandra_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "e7053714dce92df22497e48abf409e0566b8c5033243e9183188a10a5ebacedf",
+        "size_in_bytes": 1582,
+        "sha256_in_prefix": "e7053714dce92df22497e48abf409e0566b8c5033243e9183188a10a5ebacedf"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/cicd_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "7d12d22ba9fad9645b8fe4a54ce2a4d968a5e219ae2f574de134993a80c08ff6",
+        "size_in_bytes": 5552,
+        "sha256_in_prefix": "7d12d22ba9fad9645b8fe4a54ce2a4d968a5e219ae2f574de134993a80c08ff6"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/client_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "ef9f1337945888e55ad1b7c7a12ef8bff3d38abf962d1240ec43e097c3a448ea",
+        "size_in_bytes": 411,
+        "sha256_in_prefix": "ef9f1337945888e55ad1b7c7a12ef8bff3d38abf962d1240ec43e097c3a448ea"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/cloud_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "a96c832f5b8dfd0394f66af44570b2497ab9b171ccd8bcb2fad2a9fd42dd38c5",
+        "size_in_bytes": 6736,
+        "sha256_in_prefix": "a96c832f5b8dfd0394f66af44570b2497ab9b171ccd8bcb2fad2a9fd42dd38c5"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/cloudevents_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "0a1e11d9397a4f67688a5a77ea415f417c2adb36b6ed4c294485537c45cac9e6",
+        "size_in_bytes": 1205,
+        "sha256_in_prefix": "0a1e11d9397a4f67688a5a77ea415f417c2adb36b6ed4c294485537c45cac9e6"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/cloudfoundry_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "1ded1e1a90208aa5742175ef685dfb51aff379ba7149c167c61e9f27587c985b",
+        "size_in_bytes": 4210,
+        "sha256_in_prefix": "1ded1e1a90208aa5742175ef685dfb51aff379ba7149c167c61e9f27587c985b"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/code_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "010e652c9a8b22a79a15c1af37dc68e6fd667d6c3e6de4520ae178c8cab9c61c",
+        "size_in_bytes": 1504,
+        "sha256_in_prefix": "010e652c9a8b22a79a15c1af37dc68e6fd667d6c3e6de4520ae178c8cab9c61c"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/container_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "757bdbc39c1bdb428f0b5194ca59d63b14f57f89017656f26412aad42d1c7cd5",
+        "size_in_bytes": 5009,
+        "sha256_in_prefix": "757bdbc39c1bdb428f0b5194ca59d63b14f57f89017656f26412aad42d1c7cd5"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/cpu_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "82277bea89d557b47cba50520f44e65edf88cab25535caf7ff2ab54c60db226c",
+        "size_in_bytes": 612,
+        "sha256_in_prefix": "82277bea89d557b47cba50520f44e65edf88cab25535caf7ff2ab54c60db226c"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/cpython_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "0d4f33907b70d3bbd2fa5ca4e58ae979dcb78f4fed1503687215d86b710b432c",
+        "size_in_bytes": 418,
+        "sha256_in_prefix": "0d4f33907b70d3bbd2fa5ca4e58ae979dcb78f4fed1503687215d86b710b432c"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/db_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "c4c239bfc6219a2627ab7c886acca6e9b2e5de8d18cb6d447c0740ed08fbe0e4",
+        "size_in_bytes": 17456,
+        "sha256_in_prefix": "c4c239bfc6219a2627ab7c886acca6e9b2e5de8d18cb6d447c0740ed08fbe0e4"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/deployment_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "1fe37241606ce449c88e696ff69d4b6cd3f8ecc6065cbee8b1602abf9f9cc3f5",
+        "size_in_bytes": 1754,
+        "sha256_in_prefix": "1fe37241606ce449c88e696ff69d4b6cd3f8ecc6065cbee8b1602abf9f9cc3f5"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/destination_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "b8a46e4b8aaeb3b4540648af6a1dc6e10e5f1b314f781040a7997d8998228f23",
+        "size_in_bytes": 586,
+        "sha256_in_prefix": "b8a46e4b8aaeb3b4540648af6a1dc6e10e5f1b314f781040a7997d8998228f23"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/device_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "7f384d6707087978157946f467d0000cff1a62bc1668c4147a84fa4adc98c710",
+        "size_in_bytes": 2196,
+        "sha256_in_prefix": "7f384d6707087978157946f467d0000cff1a62bc1668c4147a84fa4adc98c710"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/disk_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "0ed1e3313669be0ac5f004823f56c6f0e943573950092b208a7902a4a6345e7a",
+        "size_in_bytes": 321,
+        "sha256_in_prefix": "0ed1e3313669be0ac5f004823f56c6f0e943573950092b208a7902a4a6345e7a"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/dns_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "98def360f8bcf0ab717e47362128fc244acf73f5a8c09f6027e43c598cdb0c13",
+        "size_in_bytes": 408,
+        "sha256_in_prefix": "98def360f8bcf0ab717e47362128fc244acf73f5a8c09f6027e43c598cdb0c13"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/elasticsearch_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "4f8d69b5b4b809685d8f51bdee2ee0821f55c59f3a5e4167d75efeea51e4414f",
+        "size_in_bytes": 263,
+        "sha256_in_prefix": "4f8d69b5b4b809685d8f51bdee2ee0821f55c59f3a5e4167d75efeea51e4414f"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/enduser_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "c5de6506eead91355639dc56f96c32375cb7889b6cb207964bc5b3ff29159bfc",
+        "size_in_bytes": 886,
+        "sha256_in_prefix": "c5de6506eead91355639dc56f96c32375cb7889b6cb207964bc5b3ff29159bfc"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/error_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "7574882776c8621c86ec2cae662535f03deba15f33fb01fbdf60d864c1d7b012",
+        "size_in_bytes": 795,
+        "sha256_in_prefix": "7574882776c8621c86ec2cae662535f03deba15f33fb01fbdf60d864c1d7b012"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/event_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "14e847b0f018ad44bff665e9eadf0fbfe85b756ac16bac7a7b7851541f3c86c0",
+        "size_in_bytes": 305,
+        "sha256_in_prefix": "14e847b0f018ad44bff665e9eadf0fbfe85b756ac16bac7a7b7851541f3c86c0"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/exception_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "9330a84112124d8b98b552f823a6134accac19e1313cb85c0a389fa0354fdfcc",
+        "size_in_bytes": 787,
+        "sha256_in_prefix": "9330a84112124d8b98b552f823a6134accac19e1313cb85c0a389fa0354fdfcc"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/faas_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "86f9b6e00cdaa972adf17f325cd5fd0efb3cd15425b37f95ea280501db9015b6",
+        "size_in_bytes": 5669,
+        "sha256_in_prefix": "86f9b6e00cdaa972adf17f325cd5fd0efb3cd15425b37f95ea280501db9015b6"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/feature_flag_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "ad51c4e516b32bd0520e0eb7cf4fb12ed78f3516f5b5e5eed2f6e54f1360c065",
+        "size_in_bytes": 4789,
+        "sha256_in_prefix": "ad51c4e516b32bd0520e0eb7cf4fb12ed78f3516f5b5e5eed2f6e54f1360c065"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/file_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "6470ca246867e27d52c0c88a8f711cfc572cf73fdfc3c73d6c661c61fccc8c7b",
+        "size_in_bytes": 3536,
+        "sha256_in_prefix": "6470ca246867e27d52c0c88a8f711cfc572cf73fdfc3c73d6c661c61fccc8c7b"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/gcp_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "1a30d136b9eee448cb30485bb65435d4656e0b97aa60c924c5309dd15a4ee514",
+        "size_in_bytes": 8409,
+        "sha256_in_prefix": "1a30d136b9eee448cb30485bb65435d4656e0b97aa60c924c5309dd15a4ee514"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/gen_ai_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "14d96cb88ee69cbb396d0e73ebfb2cd989c977b41f16f183c41e891dab06386a",
+        "size_in_bytes": 21481,
+        "sha256_in_prefix": "14d96cb88ee69cbb396d0e73ebfb2cd989c977b41f16f183c41e891dab06386a"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/geo_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "52d02893339a4098d16026606e578da6b2c82079abb80a92b2bed06f08cfaa7c",
+        "size_in_bytes": 1465,
+        "sha256_in_prefix": "52d02893339a4098d16026606e578da6b2c82079abb80a92b2bed06f08cfaa7c"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/graphql_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "9fb79fa1c9df2a581d486053c832d5a0a4ef02a10f5b0a2a84ab1fb59f49565f",
+        "size_in_bytes": 735,
+        "sha256_in_prefix": "9fb79fa1c9df2a581d486053c832d5a0a4ef02a10f5b0a2a84ab1fb59f49565f"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/heroku_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "5a8e50317c35cdd2b2ed4e205b56eeb1ce7f417a61da257d8d5e60fe3e83dc22",
+        "size_in_bytes": 417,
+        "sha256_in_prefix": "5a8e50317c35cdd2b2ed4e205b56eeb1ce7f417a61da257d8d5e60fe3e83dc22"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/host_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "6f58d0751ac36a411500a9008090634f1467db8dd997ab96a7946e41203e5520",
+        "size_in_bytes": 3101,
+        "sha256_in_prefix": "6f58d0751ac36a411500a9008090634f1467db8dd997ab96a7946e41203e5520"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/http_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "57c9ac4bfd3bc10cda7b7124c6c1123106a25cd6ce22d67e8be62141b1526cc8",
+        "size_in_bytes": 6760,
+        "sha256_in_prefix": "57c9ac4bfd3bc10cda7b7124c6c1123106a25cd6ce22d67e8be62141b1526cc8"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/hw_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "5986a279a79a431f0cf8f5532827f641a2c80d4d50088936a0e00f0d23f5adca",
+        "size_in_bytes": 5376,
+        "sha256_in_prefix": "5986a279a79a431f0cf8f5532827f641a2c80d4d50088936a0e00f0d23f5adca"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/jsonrpc_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "f09b524f0e939c64e310cdd82fc4cc122d5f7dbbcdfa6df58881db472ffe04c1",
+        "size_in_bytes": 796,
+        "sha256_in_prefix": "f09b524f0e939c64e310cdd82fc4cc122d5f7dbbcdfa6df58881db472ffe04c1"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/k8s_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "77cbd6adfbed97d8a620dd59f1d71f78464be40ce5871a510046735559d367a4",
+        "size_in_bytes": 34127,
+        "sha256_in_prefix": "77cbd6adfbed97d8a620dd59f1d71f78464be40ce5871a510046735559d367a4"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/linux_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "d4007cda0dc4a700706073f14bd9b3b073a5dae7524e43d232cd5802371bdc29",
+        "size_in_bytes": 570,
+        "sha256_in_prefix": "d4007cda0dc4a700706073f14bd9b3b073a5dae7524e43d232cd5802371bdc29"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/log_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "f50d1e6c32409a04e4541776477dfe4fa444476130e4d4635657dfe7992735e0",
+        "size_in_bytes": 1581,
+        "sha256_in_prefix": "f50d1e6c32409a04e4541776477dfe4fa444476130e4d4635657dfe7992735e0"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/mainframe_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "78cc4e789c0e798fcc3290cff3818fba47adfdfb9a7f383703e143dbc71d2f5a",
+        "size_in_bytes": 248,
+        "sha256_in_prefix": "78cc4e789c0e798fcc3290cff3818fba47adfdfb9a7f383703e143dbc71d2f5a"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/mcp_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "a90eb86955980f843867214965799e2e35b5f27fd1cc7a9b95f85e54f5df2ec1",
+        "size_in_bytes": 3597,
+        "sha256_in_prefix": "a90eb86955980f843867214965799e2e35b5f27fd1cc7a9b95f85e54f5df2ec1"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/message_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "f41c89c506d15531f8c23232a46b0bd327a951a0529d2425c4b35a1aa678d3f2",
+        "size_in_bytes": 823,
+        "sha256_in_prefix": "f41c89c506d15531f8c23232a46b0bd327a951a0529d2425c4b35a1aa678d3f2"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/messaging_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "cae5b61ad3f96aad5fe1a974a992b69b820739a6fbdba9f700a55193c8dcde3a",
+        "size_in_bytes": 12236,
+        "sha256_in_prefix": "cae5b61ad3f96aad5fe1a974a992b69b820739a6fbdba9f700a55193c8dcde3a"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/net_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "04aa4886798bf988e0190b82845d37d7eef83938c220feebdc66c21ff439bb7f",
+        "size_in_bytes": 2433,
+        "sha256_in_prefix": "04aa4886798bf988e0190b82845d37d7eef83938c220feebdc66c21ff439bb7f"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/network_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "3cdae36105e4722f1f97805be669f05e6fec714f17ddd19fac58b4bc7ada8446",
+        "size_in_bytes": 5989,
+        "sha256_in_prefix": "3cdae36105e4722f1f97805be669f05e6fec714f17ddd19fac58b4bc7ada8446"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/nfs_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "695e928984bfe689c684cf7886ffa266a9f18af4a01381e4c4f405702671fede",
+        "size_in_bytes": 383,
+        "sha256_in_prefix": "695e928984bfe689c684cf7886ffa266a9f18af4a01381e4c4f405702671fede"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/oci_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "fdc8c2560584f0463ff2dd7b00cb42d80381285295231b57f2917c84438b706b",
+        "size_in_bytes": 667,
+        "sha256_in_prefix": "fdc8c2560584f0463ff2dd7b00cb42d80381285295231b57f2917c84438b706b"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/onc_rpc_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "1d714d69c43c3793b98188a8fe171802208f91f5ef197bcdbc8aa368a091fa1d",
+        "size_in_bytes": 465,
+        "sha256_in_prefix": "1d714d69c43c3793b98188a8fe171802208f91f5ef197bcdbc8aa368a091fa1d"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/openai_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "c46fbaa32ad54528821a3d06a246564e59f411ca361f23f2d61134da3b143656",
+        "size_in_bytes": 1198,
+        "sha256_in_prefix": "c46fbaa32ad54528821a3d06a246564e59f411ca361f23f2d61134da3b143656"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/openshift_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "4d6fd0e2439bf7a24f911ad1413f01ccdf371367de5c7e2f0cb61e83cbb70277",
+        "size_in_bytes": 313,
+        "sha256_in_prefix": "4d6fd0e2439bf7a24f911ad1413f01ccdf371367de5c7e2f0cb61e83cbb70277"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/opentracing_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "5c9d33e05bdb44174fb6202f97540bb9da60c7e28f8ce5fac3fde8b285aa55bf",
+        "size_in_bytes": 540,
+        "sha256_in_prefix": "5c9d33e05bdb44174fb6202f97540bb9da60c7e28f8ce5fac3fde8b285aa55bf"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/oracle_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "b083b13407274d3649b71e8d473a1bc2a5e9c68cf80b8ccc5c33635e3ec6abf8",
+        "size_in_bytes": 2149,
+        "sha256_in_prefix": "b083b13407274d3649b71e8d473a1bc2a5e9c68cf80b8ccc5c33635e3ec6abf8"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/oracle_cloud_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "3779d60c0f7775dbb32e8a1f7fa5d4e0dac07f339a0013c0491dab662f11b36f",
+        "size_in_bytes": 378,
+        "sha256_in_prefix": "3779d60c0f7775dbb32e8a1f7fa5d4e0dac07f339a0013c0491dab662f11b36f"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/os_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "4d6969020cba24cfbbb803044bd1d726d85a54d94a1f38f8d0f279f4fd8b8556",
+        "size_in_bytes": 1350,
+        "sha256_in_prefix": "4d6969020cba24cfbbb803044bd1d726d85a54d94a1f38f8d0f279f4fd8b8556"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/otel_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "bd82c08d0a9f88fd7997420e47e9222bc639bdeb1e0dda90baa9a7eda32fd8cd",
+        "size_in_bytes": 6401,
+        "sha256_in_prefix": "bd82c08d0a9f88fd7997420e47e9222bc639bdeb1e0dda90baa9a7eda32fd8cd"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/other_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "c6f2983bb5a09484eb269658aa6236e8ff8c2251ec1725019c1828e15bf054f7",
+        "size_in_bytes": 445,
+        "sha256_in_prefix": "c6f2983bb5a09484eb269658aa6236e8ff8c2251ec1725019c1828e15bf054f7"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/peer_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "c4ff667e5d565969768fa0958eda0853b53c8cb74c51f2b694e71df7b1a64e13",
+        "size_in_bytes": 193,
+        "sha256_in_prefix": "c4ff667e5d565969768fa0958eda0853b53c8cb74c51f2b694e71df7b1a64e13"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/pool_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "791d7ca639111aa471c239d538ddfd3a39b176f556fd63bf848f857c61218070",
+        "size_in_bytes": 200,
+        "sha256_in_prefix": "791d7ca639111aa471c239d538ddfd3a39b176f556fd63bf848f857c61218070"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/pprof_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "7977b1ecebcfc4560fd44e2a69aff18a3cad757cd65bc5a52166ca9457bc9238",
+        "size_in_bytes": 2434,
+        "sha256_in_prefix": "7977b1ecebcfc4560fd44e2a69aff18a3cad757cd65bc5a52166ca9457bc9238"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/process_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "db54d94061c990016edf7dd6b758f11085322419b95efb5ca6cedeae312ae708",
+        "size_in_bytes": 8404,
+        "sha256_in_prefix": "db54d94061c990016edf7dd6b758f11085322419b95efb5ca6cedeae312ae708"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/profile_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "45ad066040bcc16e703ac7be9ee028fd1df56588a9a4d9e11b3563470d7d42c0",
+        "size_in_bytes": 1559,
+        "sha256_in_prefix": "45ad066040bcc16e703ac7be9ee028fd1df56588a9a4d9e11b3563470d7d42c0"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/rpc_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "4ae3ca27eb6fe8d4ef9fce887848ebdfe4bee00851a204765fbd080a5ae47fc2",
+        "size_in_bytes": 8842,
+        "sha256_in_prefix": "4ae3ca27eb6fe8d4ef9fce887848ebdfe4bee00851a204765fbd080a5ae47fc2"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/security_rule_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "0b419bbe500698a139275b52df2506c1e4cf127333d868a1683223ac1719587a",
+        "size_in_bytes": 1491,
+        "sha256_in_prefix": "0b419bbe500698a139275b52df2506c1e4cf127333d868a1683223ac1719587a"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/server_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "3f3ead12f98c6a578bea1c3e56bcaa9efd5e68fba1fc62f4864b5fe190a85a3b",
+        "size_in_bytes": 411,
+        "sha256_in_prefix": "3f3ead12f98c6a578bea1c3e56bcaa9efd5e68fba1fc62f4864b5fe190a85a3b"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/service_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "e187b321438b54033c2c508096fba621194fd62fae73c9c8f6cf5cdcd2faedbe",
+        "size_in_bytes": 2160,
+        "sha256_in_prefix": "e187b321438b54033c2c508096fba621194fd62fae73c9c8f6cf5cdcd2faedbe"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/session_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "19685435fa86c668931d6dbb76e623ac5f862a7ce088819ab4aec23cc271363a",
+        "size_in_bytes": 292,
+        "sha256_in_prefix": "19685435fa86c668931d6dbb76e623ac5f862a7ce088819ab4aec23cc271363a"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/source_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "a8731950cd84f6bf3001b3468a4ee085c8349ed4e9379e772402b12797ecefaf",
+        "size_in_bytes": 551,
+        "sha256_in_prefix": "a8731950cd84f6bf3001b3468a4ee085c8349ed4e9379e772402b12797ecefaf"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/system_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "eec5fa0bc6afd2f42b1d3a8459a30c2fa3bd968b7e7335039e3c42424e3e3e2d",
+        "size_in_bytes": 5192,
+        "sha256_in_prefix": "eec5fa0bc6afd2f42b1d3a8459a30c2fa3bd968b7e7335039e3c42424e3e3e2d"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/telemetry_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "5d2589ac4c0727d45b22b45b2e0e9454bd4894558a361e48d3a73f96a3579ed0",
+        "size_in_bytes": 3173,
+        "sha256_in_prefix": "5d2589ac4c0727d45b22b45b2e0e9454bd4894558a361e48d3a73f96a3579ed0"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/test_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "f0c98d30ea1fd2a4932792accaf7a4ba6f15d1621b1df091806de89970e416d1",
+        "size_in_bytes": 1061,
+        "sha256_in_prefix": "f0c98d30ea1fd2a4932792accaf7a4ba6f15d1621b1df091806de89970e416d1"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/thread_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "063ecfeb787122e825fd47dd79b7cb9c74b042fe7aa3983088a530909601c0db",
+        "size_in_bytes": 953,
+        "sha256_in_prefix": "063ecfeb787122e825fd47dd79b7cb9c74b042fe7aa3983088a530909601c0db"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/tls_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "148f180822c3011b361df1cc4299a75919dfa9b679f45b57f475fd1e731b605a",
+        "size_in_bytes": 6148,
+        "sha256_in_prefix": "148f180822c3011b361df1cc4299a75919dfa9b679f45b57f475fd1e731b605a"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/url_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "cdbaeda5d3594dd8c7185b50b6a83cf83154f10ccadbcac1a06cac3dc1ff5c69",
+        "size_in_bytes": 3672,
+        "sha256_in_prefix": "cdbaeda5d3594dd8c7185b50b6a83cf83154f10ccadbcac1a06cac3dc1ff5c69"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/user_agent_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "e3a7eca872bf0db8d795abacf40cbd77b124a5a6a258d222bc713df1ead6900a",
+        "size_in_bytes": 2593,
+        "sha256_in_prefix": "e3a7eca872bf0db8d795abacf40cbd77b124a5a6a258d222bc713df1ead6900a"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/user_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "b541d2d94cf82bcce0a7f2713b63013602e51e5760758ed1df7b82b5a0568cb7",
+        "size_in_bytes": 676,
+        "sha256_in_prefix": "b541d2d94cf82bcce0a7f2713b63013602e51e5760758ed1df7b82b5a0568cb7"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/vcs_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "f172598bec714296645bccb491a8362dcf9933720a3d6e43a9f340eb8dbcff80",
+        "size_in_bytes": 8714,
+        "sha256_in_prefix": "f172598bec714296645bccb491a8362dcf9933720a3d6e43a9f340eb8dbcff80"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/webengine_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "fa22435f270ba92f15f87301d68bc87fa0e1402e00e67e623e5a808a2de8af1c",
+        "size_in_bytes": 421,
+        "sha256_in_prefix": "fa22435f270ba92f15f87301d68bc87fa0e1402e00e67e623e5a808a2de8af1c"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/attributes/zos_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "b2dddd6931b25829a03516af3c7e0eee181556a16ad800404b4aae25d94d91f6",
+        "size_in_bytes": 433,
+        "sha256_in_prefix": "b2dddd6931b25829a03516af3c7e0eee181556a16ad800404b4aae25d94d91f6"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/azure_metrics.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "4832b91c5f5bd132630116c17f9433cc4ac22be7d2414c657bdd1ba8ae19dadd",
+        "size_in_bytes": 2085,
+        "sha256_in_prefix": "4832b91c5f5bd132630116c17f9433cc4ac22be7d2414c657bdd1ba8ae19dadd"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/cicd_metrics.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "a99af2094ac642b776c711cc5948ccd1da9f24cd0f4c7d57401e1666d3649583",
+        "size_in_bytes": 3945,
+        "sha256_in_prefix": "a99af2094ac642b776c711cc5948ccd1da9f24cd0f4c7d57401e1666d3649583"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/container_metrics.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "ea56886dbf0614d40a7aba60a3eff92753d353029342ce58d0df455619825dc2",
+        "size_in_bytes": 8803,
+        "sha256_in_prefix": "ea56886dbf0614d40a7aba60a3eff92753d353029342ce58d0df455619825dc2"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/cpu_metrics.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "52c60dad92bad8e7deff50545189f29c668c869759b24450c42bbd18a998d79d",
+        "size_in_bytes": 2818,
+        "sha256_in_prefix": "52c60dad92bad8e7deff50545189f29c668c869759b24450c42bbd18a998d79d"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/cpython_metrics.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "8c942e15f5a79d1470f504e92789604083ef0083de999a52a237ec583efd5ea1",
+        "size_in_bytes": 2694,
+        "sha256_in_prefix": "8c942e15f5a79d1470f504e92789604083ef0083de999a52a237ec583efd5ea1"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/db_metrics.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "7ff3be82648f6353b37befb538b57ba338222d41c4a74ca9de2370a16c4d111a",
+        "size_in_bytes": 15498,
+        "sha256_in_prefix": "7ff3be82648f6353b37befb538b57ba338222d41c4a74ca9de2370a16c4d111a"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/dns_metrics.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "24aa53be8b9bcba70567f86e9701afbd21c1a3e53149fb5acb3f0023e5d4778b",
+        "size_in_bytes": 1147,
+        "sha256_in_prefix": "24aa53be8b9bcba70567f86e9701afbd21c1a3e53149fb5acb3f0023e5d4778b"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/faas_metrics.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "1d70b4dbf0b6f45452a8ea75837ae394a03c7159a0fa778455321987a35318ee",
+        "size_in_bytes": 5844,
+        "sha256_in_prefix": "1d70b4dbf0b6f45452a8ea75837ae394a03c7159a0fa778455321987a35318ee"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/gen_ai_metrics.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "8bd7f6b4cc02a05dfe33d942e18d7eb6dfe5816c44653e563548581c6a3090bb",
+        "size_in_bytes": 5687,
+        "sha256_in_prefix": "8bd7f6b4cc02a05dfe33d942e18d7eb6dfe5816c44653e563548581c6a3090bb"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/http_metrics.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "7d0a1ec7a408affd90856d4570ed7205a92d7e55f6e8da5f6d895609ae07620d",
+        "size_in_bytes": 6690,
+        "sha256_in_prefix": "7d0a1ec7a408affd90856d4570ed7205a92d7e55f6e8da5f6d895609ae07620d"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/hw_metrics.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "325861b8c5eb3af48eaa415365321535f5797a8cc73fe2b3f095667b2381b21d",
+        "size_in_bytes": 26829,
+        "sha256_in_prefix": "325861b8c5eb3af48eaa415365321535f5797a8cc73fe2b3f095667b2381b21d"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/k8s_metrics.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "4a5a5abd2bd7567cf01c5399aee2332985a3f29b673d8d513f0008f5ff5d356a",
+        "size_in_bytes": 101218,
+        "sha256_in_prefix": "4a5a5abd2bd7567cf01c5399aee2332985a3f29b673d8d513f0008f5ff5d356a"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/mcp_metrics.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "1e4fd7f2135531cb4263882d22afe3e5045e32d6140dfd4abea4f273a0427a45",
+        "size_in_bytes": 3397,
+        "sha256_in_prefix": "1e4fd7f2135531cb4263882d22afe3e5045e32d6140dfd4abea4f273a0427a45"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/messaging_metrics.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "b3c2497ca359aac500e876dee48892a0224114dd5eee5a824d5d477f1f4415d9",
+        "size_in_bytes": 6656,
+        "sha256_in_prefix": "b3c2497ca359aac500e876dee48892a0224114dd5eee5a824d5d477f1f4415d9"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/nfs_metrics.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "37e8b007eec6ef41d317645848638b1a7e36fed44d402deeed1343c3956c8106",
+        "size_in_bytes": 11018,
+        "sha256_in_prefix": "37e8b007eec6ef41d317645848638b1a7e36fed44d402deeed1343c3956c8106"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/openshift_metrics.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "51a51bdfac4fcc5214c59dce32e4c8c87b1e98eaaeafd3089f7d171b7469c396",
+        "size_in_bytes": 12305,
+        "sha256_in_prefix": "51a51bdfac4fcc5214c59dce32e4c8c87b1e98eaaeafd3089f7d171b7469c396"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/otel_metrics.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "414e9e3f81cc5994f2a196234a85a71eb5a2a7002156bf9b1a6b5a1a08860052",
+        "size_in_bytes": 16843,
+        "sha256_in_prefix": "414e9e3f81cc5994f2a196234a85a71eb5a2a7002156bf9b1a6b5a1a08860052"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/process_metrics.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "63cccc11cc77c8e2c4a193cdc8dc85f7504737e58faf5601847824aeb3c37cae",
+        "size_in_bytes": 9162,
+        "sha256_in_prefix": "63cccc11cc77c8e2c4a193cdc8dc85f7504737e58faf5601847824aeb3c37cae"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/rpc_metrics.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "019bbad7ea35696dc0372f759fc7f2ec6cd7061e462580edc1ae2bb424c36dd4",
+        "size_in_bytes": 7511,
+        "sha256_in_prefix": "019bbad7ea35696dc0372f759fc7f2ec6cd7061e462580edc1ae2bb424c36dd4"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/system_metrics.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "d06fcb75eb882a1be2c94e821c06ceadf20ea83cdd70bb7d5e3c6aaec9a723eb",
+        "size_in_bytes": 28225,
+        "sha256_in_prefix": "d06fcb75eb882a1be2c94e821c06ceadf20ea83cdd70bb7d5e3c6aaec9a723eb"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/__pycache__/vcs_metrics.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "4318a39747bcd8b9c42c5290108fbf294237210b59c4043edbbb35fcee771f35",
+        "size_in_bytes": 8392,
+        "sha256_in_prefix": "4318a39747bcd8b9c42c5290108fbf294237210b59c4043edbbb35fcee771f35"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/azure_metrics.py",
+        "path_type": "hardlink",
+        "sha256": "f4781c86062d0a2033a075e03047334ee507a7589d02822c9dca72ba6a6b2276",
+        "size_in_bytes": 1424,
+        "sha256_in_prefix": "f4781c86062d0a2033a075e03047334ee507a7589d02822c9dca72ba6a6b2276"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/cicd_metrics.py",
+        "path_type": "hardlink",
+        "sha256": "90332edc12f9c7653acce63fe26738bf2c78e456e6f8fe4c89bd365d19dfec96",
+        "size_in_bytes": 3148,
+        "sha256_in_prefix": "90332edc12f9c7653acce63fe26738bf2c78e456e6f8fe4c89bd365d19dfec96"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/container_metrics.py",
+        "path_type": "hardlink",
+        "sha256": "f662b0d7b2a18dfa2c3f6a7baebae7c41e3ca678dfcadc6e068eb557f3d5d5a8",
+        "size_in_bytes": 9920,
+        "sha256_in_prefix": "f662b0d7b2a18dfa2c3f6a7baebae7c41e3ca678dfcadc6e068eb557f3d5d5a8"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/cpu_metrics.py",
+        "path_type": "hardlink",
+        "sha256": "ad898816e4b16263e2c88945ef58c194a62f4a0f90283c1501ca224620122597",
+        "size_in_bytes": 1711,
+        "sha256_in_prefix": "ad898816e4b16263e2c88945ef58c194a62f4a0f90283c1501ca224620122597"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/cpython_metrics.py",
+        "path_type": "hardlink",
+        "sha256": "2202a1455f2d2cdd3e5558fb0851d75112a4bc318e5dcbdd17bf687e7dc51d34",
+        "size_in_bytes": 2231,
+        "sha256_in_prefix": "2202a1455f2d2cdd3e5558fb0851d75112a4bc318e5dcbdd17bf687e7dc51d34"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/db_metrics.py",
+        "path_type": "hardlink",
+        "sha256": "ed27492574e82ceace750a70f23512a68088d8445f97b9f823e7efc51d52cbde",
+        "size_in_bytes": 11786,
+        "sha256_in_prefix": "ed27492574e82ceace750a70f23512a68088d8445f97b9f823e7efc51d52cbde"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/dns_metrics.py",
+        "path_type": "hardlink",
+        "sha256": "4b9d28010d904cf2c5b6bbaee54831845979f728dbd4d13653cc83e5e81b58dc",
+        "size_in_bytes": 577,
+        "sha256_in_prefix": "4b9d28010d904cf2c5b6bbaee54831845979f728dbd4d13653cc83e5e81b58dc"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/faas_metrics.py",
+        "path_type": "hardlink",
+        "sha256": "551695a70348797104dd250c97f9127e6fd761d397946bfbd64f084a3936ae19",
+        "size_in_bytes": 3741,
+        "sha256_in_prefix": "551695a70348797104dd250c97f9127e6fd761d397946bfbd64f084a3936ae19"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/gen_ai_metrics.py",
+        "path_type": "hardlink",
+        "sha256": "eee9727c824244aed535acc7f657711d567f8bbfc01b07c098306f1cc7e81bc9",
+        "size_in_bytes": 4610,
+        "sha256_in_prefix": "eee9727c824244aed535acc7f657711d567f8bbfc01b07c098306f1cc7e81bc9"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/http_metrics.py",
+        "path_type": "hardlink",
+        "sha256": "cf23b5d10342088cf5da31fb10b4db0822bd8bef51854f23d809b100022297fd",
+        "size_in_bytes": 6141,
+        "sha256_in_prefix": "cf23b5d10342088cf5da31fb10b4db0822bd8bef51854f23d809b100022297fd"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/hw_metrics.py",
+        "path_type": "hardlink",
+        "sha256": "4fffe63b3d7f56c7d408de91bebc72991132f1dec7c7d9ea3f360eadd59e8102",
+        "size_in_bytes": 21104,
+        "sha256_in_prefix": "4fffe63b3d7f56c7d408de91bebc72991132f1dec7c7d9ea3f360eadd59e8102"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/k8s_metrics.py",
+        "path_type": "hardlink",
+        "sha256": "495a235bcdcbe18541d716763944284b10cebf76fac888daf474a67901a0f64d",
+        "size_in_bytes": 111515,
+        "sha256_in_prefix": "495a235bcdcbe18541d716763944284b10cebf76fac888daf474a67901a0f64d"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/mcp_metrics.py",
+        "path_type": "hardlink",
+        "sha256": "4a142a703da705e1d823f102a9321aab2d1499728e680ad3b1bcbe3e73a4b482",
+        "size_in_bytes": 2581,
+        "sha256_in_prefix": "4a142a703da705e1d823f102a9321aab2d1499728e680ad3b1bcbe3e73a4b482"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/messaging_metrics.py",
+        "path_type": "hardlink",
+        "sha256": "2a70b64bbcb8a7fcd83bb2671f316782f828b819c47748d4ad885f1be92241da",
+        "size_in_bytes": 5726,
+        "sha256_in_prefix": "2a70b64bbcb8a7fcd83bb2671f316782f828b819c47748d4ad885f1be92241da"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/nfs_metrics.py",
+        "path_type": "hardlink",
+        "sha256": "e1f6bb2729249c9343bb336d0c8fc2da644ba093de10b2ee88e954879fcf374b",
+        "size_in_bytes": 9630,
+        "sha256_in_prefix": "e1f6bb2729249c9343bb336d0c8fc2da644ba093de10b2ee88e954879fcf374b"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/openshift_metrics.py",
+        "path_type": "hardlink",
+        "sha256": "2764d0055a33b05814094a8f801737683dd920599dc4225a54cab1d8552244af",
+        "size_in_bytes": 20696,
+        "sha256_in_prefix": "2764d0055a33b05814094a8f801737683dd920599dc4225a54cab1d8552244af"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/otel_metrics.py",
+        "path_type": "hardlink",
+        "sha256": "2d525bd423378b5a24174c096e81a69271029d277848d8e3adc4766615d033a6",
+        "size_in_bytes": 17116,
+        "sha256_in_prefix": "2d525bd423378b5a24174c096e81a69271029d277848d8e3adc4766615d033a6"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/process_metrics.py",
+        "path_type": "hardlink",
+        "sha256": "bec0333bf19fde2a24746bab9f1cf14a2e25f8666906804aca3ae89173f4f78a",
+        "size_in_bytes": 6692,
+        "sha256_in_prefix": "bec0333bf19fde2a24746bab9f1cf14a2e25f8666906804aca3ae89173f4f78a"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/rpc_metrics.py",
+        "path_type": "hardlink",
+        "sha256": "21703252b1e0803557499b81c4bc13688b531e76953f180aa9c159dc14ec546b",
+        "size_in_bytes": 5894,
+        "sha256_in_prefix": "21703252b1e0803557499b81c4bc13688b531e76953f180aa9c159dc14ec546b"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/system_metrics.py",
+        "path_type": "hardlink",
+        "sha256": "01cc457774bd8213bdf04cd6d334ece365d023a01d828bfd07099537d1e2f649",
+        "size_in_bytes": 25147,
+        "sha256_in_prefix": "01cc457774bd8213bdf04cd6d334ece365d023a01d828bfd07099537d1e2f649"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/_incubating/metrics/vcs_metrics.py",
+        "path_type": "hardlink",
+        "sha256": "907f77b058c257e7f06db9da4bd07042ef0f0097c8911cc395534302e55feba7",
+        "size_in_bytes": 7567,
+        "sha256_in_prefix": "907f77b058c257e7f06db9da4bd07042ef0f0097c8911cc395534302e55feba7"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/attributes/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/attributes/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "9d31d13212d3a0b834f1a3e40f416b08760a0553a2730b55f6db08fe994c4d8f",
+        "size_in_bytes": 172,
+        "sha256_in_prefix": "9d31d13212d3a0b834f1a3e40f416b08760a0553a2730b55f6db08fe994c4d8f"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/attributes/__pycache__/client_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "a4127eb31bdd5c4e9abe946f731041b31cc39521a9a3980cebde05c95c93fd50",
+        "size_in_bytes": 645,
+        "sha256_in_prefix": "a4127eb31bdd5c4e9abe946f731041b31cc39521a9a3980cebde05c95c93fd50"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/attributes/__pycache__/code_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "c58847d03b149fceb669b238daf083302a2df2a08a751ef3f0cc555e10224d5d",
+        "size_in_bytes": 1050,
+        "sha256_in_prefix": "c58847d03b149fceb669b238daf083302a2df2a08a751ef3f0cc555e10224d5d"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/attributes/__pycache__/db_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "44314d369fb395f250acfaa2787a2c42172762a023aa3520da0eb7f61d8bc5e6",
+        "size_in_bytes": 2028,
+        "sha256_in_prefix": "44314d369fb395f250acfaa2787a2c42172762a023aa3520da0eb7f61d8bc5e6"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/attributes/__pycache__/deployment_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "125cc7c74d0ca0530de7157ff16d7a5d8be02e23f78caa19713bea0644be05d0",
+        "size_in_bytes": 980,
+        "sha256_in_prefix": "125cc7c74d0ca0530de7157ff16d7a5d8be02e23f78caa19713bea0644be05d0"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/attributes/__pycache__/error_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "8f65524c77226a58ae4bb7e15479d2c273fed1bb4daf2610ae3eef079cade6ad",
+        "size_in_bytes": 818,
+        "sha256_in_prefix": "8f65524c77226a58ae4bb7e15479d2c273fed1bb4daf2610ae3eef079cade6ad"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/attributes/__pycache__/exception_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "9ec561bf7b774656155e2af6749c320e217d907433a24bb8d024e574dbdf1429",
+        "size_in_bytes": 929,
+        "sha256_in_prefix": "9ec561bf7b774656155e2af6749c320e217d907433a24bb8d024e574dbdf1429"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/attributes/__pycache__/http_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "e679538dcc9b478710c4247a2b89904fb7651551c09a76843639cd6518a16374",
+        "size_in_bytes": 1942,
+        "sha256_in_prefix": "e679538dcc9b478710c4247a2b89904fb7651551c09a76843639cd6518a16374"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/attributes/__pycache__/network_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "d006ffea5d4b1fb9147d722b5ee0fdbd6500045e5620ddcfc0bf300662d68e67",
+        "size_in_bytes": 2122,
+        "sha256_in_prefix": "d006ffea5d4b1fb9147d722b5ee0fdbd6500045e5620ddcfc0bf300662d68e67"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/attributes/__pycache__/otel_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "277b6b6a2002b46f67a85e49ee16a6971946542318d092e4fb95cc5e8f22e73d",
+        "size_in_bytes": 1381,
+        "sha256_in_prefix": "277b6b6a2002b46f67a85e49ee16a6971946542318d092e4fb95cc5e8f22e73d"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/attributes/__pycache__/server_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "87105a2414d079e8f1cc3315d27a9e87d9082628648c5b2403c2f82a836d74ed",
+        "size_in_bytes": 645,
+        "sha256_in_prefix": "87105a2414d079e8f1cc3315d27a9e87d9082628648c5b2403c2f82a836d74ed"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/attributes/__pycache__/service_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "6fc6483d7be029f5791485dcf1b7b2f0b278a6fefe77e563e21a97ca30caa54a",
+        "size_in_bytes": 922,
+        "sha256_in_prefix": "6fc6483d7be029f5791485dcf1b7b2f0b278a6fefe77e563e21a97ca30caa54a"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/attributes/__pycache__/telemetry_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "773b105fd696e00ee3203f3235259a0189a08441f5ae5b65d52814480731b52f",
+        "size_in_bytes": 1707,
+        "sha256_in_prefix": "773b105fd696e00ee3203f3235259a0189a08441f5ae5b65d52814480731b52f"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/attributes/__pycache__/url_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "58e2691ca68c5fa1fdc08171c977820a7a653065956766e1c9cf942c183c139b",
+        "size_in_bytes": 981,
+        "sha256_in_prefix": "58e2691ca68c5fa1fdc08171c977820a7a653065956766e1c9cf942c183c139b"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/attributes/__pycache__/user_agent_attributes.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "32bb9efe932af45bce62999711f7996b161925be739746531ca60c10e1ae980f",
+        "size_in_bytes": 542,
+        "sha256_in_prefix": "32bb9efe932af45bce62999711f7996b161925be739746531ca60c10e1ae980f"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/attributes/client_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "ebccdf3cd78958df36e26666722d443af0f6728e25cc0fede53ba0a89cc619c2",
+        "size_in_bytes": 752,
+        "sha256_in_prefix": "ebccdf3cd78958df36e26666722d443af0f6728e25cc0fede53ba0a89cc619c2"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/attributes/code_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "d77955a0229fd5524986598d9f0b8c6a0c1e6f555022a672727fdb6cc6e44c60",
+        "size_in_bytes": 2857,
+        "sha256_in_prefix": "d77955a0229fd5524986598d9f0b8c6a0c1e6f555022a672727fdb6cc6e44c60"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/attributes/db_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "ae95e6cad0c857d76be1f99e171733569aff7080bca5e674580226d48ffa5ac1",
+        "size_in_bytes": 5624,
+        "sha256_in_prefix": "ae95e6cad0c857d76be1f99e171733569aff7080bca5e674580226d48ffa5ac1"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/attributes/deployment_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "00d2c85bf5476463072a11e868e290a7cf7ef36a5e9a98e433c45e9ace26fed0",
+        "size_in_bytes": 1039,
+        "sha256_in_prefix": "00d2c85bf5476463072a11e868e290a7cf7ef36a5e9a98e433c45e9ace26fed0"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/attributes/error_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "fd27de40c710296f2fef3c6bc3869010c80917149395b5b7bd5f14b29a26d0df",
+        "size_in_bytes": 1615,
+        "sha256_in_prefix": "fd27de40c710296f2fef3c6bc3869010c80917149395b5b7bd5f14b29a26d0df"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/attributes/exception_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "59f4fad84c4d5237ac39df52054dc07a6738acc54a542ab17d6929ed19421786",
+        "size_in_bytes": 1180,
+        "sha256_in_prefix": "59f4fad84c4d5237ac39df52054dc07a6738acc54a542ab17d6929ed19421786"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/attributes/http_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "a7d1f3a0692e5ddac06ffe3cba0a37e8addfc739898e1d5f01e68c0530c7e1b5",
+        "size_in_bytes": 6735,
+        "sha256_in_prefix": "a7d1f3a0692e5ddac06ffe3cba0a37e8addfc739898e1d5f01e68c0530c7e1b5"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/attributes/network_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "771802d622e07dce40fbf27a3238f8e91a655ffade388dd2a9fe54716005a0c4",
+        "size_in_bytes": 2227,
+        "sha256_in_prefix": "771802d622e07dce40fbf27a3238f8e91a655ffade388dd2a9fe54716005a0c4"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/attributes/otel_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "a27034fa8a8d9575e78de4d534ee15d135dfd6ced73901764f52ed1d6fc38c6f",
+        "size_in_bytes": 1274,
+        "sha256_in_prefix": "a27034fa8a8d9575e78de4d534ee15d135dfd6ced73901764f52ed1d6fc38c6f"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/attributes/server_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "a351182ca0e8921a2ed7c4eebc0527062ce05b6655df8a787da63f3067a3a014",
+        "size_in_bytes": 740,
+        "sha256_in_prefix": "a351182ca0e8921a2ed7c4eebc0527062ce05b6655df8a787da63f3067a3a014"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/attributes/service_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "3852728bf1b8f514b2489038d42267bb862eea17044b0ade4c55c6527852e0b8",
+        "size_in_bytes": 3482,
+        "sha256_in_prefix": "3852728bf1b8f514b2489038d42267bb862eea17044b0ade4c55c6527852e0b8"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/attributes/telemetry_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "733005525ae712bfe3f750ebe29f2e37627a8aceeddc8a868e4dcb4854812418",
+        "size_in_bytes": 1901,
+        "sha256_in_prefix": "733005525ae712bfe3f750ebe29f2e37627a8aceeddc8a868e4dcb4854812418"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/attributes/url_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "71bb26ec6b994d80620338f471daa1f6a0bf7b6e1c4685e0228b01a1e561b804",
+        "size_in_bytes": 4251,
+        "sha256_in_prefix": "71bb26ec6b994d80620338f471daa1f6a0bf7b6e1c4685e0228b01a1e561b804"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/attributes/user_agent_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "dfccc485775f921340df044d05de86da5bed3c893c34ac1aef5c7664cbff95e7",
+        "size_in_bytes": 282,
+        "sha256_in_prefix": "dfccc485775f921340df044d05de86da5bed3c893c34ac1aef5c7664cbff95e7"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/metrics/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "c0aae4c77e74c1ab7d6ec1ee5e3d60c73eb19d8f419b5321dad89c71bf0ba28c",
+        "size_in_bytes": 5300,
+        "sha256_in_prefix": "c0aae4c77e74c1ab7d6ec1ee5e3d60c73eb19d8f419b5321dad89c71bf0ba28c"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/metrics/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "d1bda963166be52a0de749f74160ce0d3a5f9e8f3e17e628a3417965d9f53273",
+        "size_in_bytes": 2941,
+        "sha256_in_prefix": "d1bda963166be52a0de749f74160ce0d3a5f9e8f3e17e628a3417965d9f53273"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/metrics/__pycache__/db_metrics.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "f37ab629cef18bb17e3d40c647dfd3876ce759fe8f5d36ec1b0dc1c82b63756d",
+        "size_in_bytes": 546,
+        "sha256_in_prefix": "f37ab629cef18bb17e3d40c647dfd3876ce759fe8f5d36ec1b0dc1c82b63756d"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/metrics/__pycache__/http_metrics.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "323dcabcf511f592949fcde7adc57d47aaa40fb60abc238f3b57d53908eecc29",
+        "size_in_bytes": 703,
+        "sha256_in_prefix": "323dcabcf511f592949fcde7adc57d47aaa40fb60abc238f3b57d53908eecc29"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/metrics/db_metrics.py",
+        "path_type": "hardlink",
+        "sha256": "e7bf12e84ea215bc16bbb1bcddd698697e7399f50ad7515957ccd4f0aff8cb0c",
+        "size_in_bytes": 315,
+        "sha256_in_prefix": "e7bf12e84ea215bc16bbb1bcddd698697e7399f50ad7515957ccd4f0aff8cb0c"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/metrics/http_metrics.py",
+        "path_type": "hardlink",
+        "sha256": "8cd64377c87b9f4288da09572b4e413431e98e145f77dae6e41607a01183aaa9",
+        "size_in_bytes": 386,
+        "sha256_in_prefix": "8cd64377c87b9f4288da09572b4e413431e98e145f77dae6e41607a01183aaa9"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/resource/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "0d8c844d173296f1fd6ced92d3a76ef4173e3bfcebcfec54e420fb5cbfa62115",
+        "size_in_bytes": 32470,
+        "sha256_in_prefix": "0d8c844d173296f1fd6ced92d3a76ef4173e3bfcebcfec54e420fb5cbfa62115"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/resource/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "fec37939652f25c82abd13d77fca314580afa397269c5f6c042576eff46c8792",
+        "size_in_bytes": 11480,
+        "sha256_in_prefix": "fec37939652f25c82abd13d77fca314580afa397269c5f6c042576eff46c8792"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/schemas.py",
+        "path_type": "hardlink",
+        "sha256": "b780c0b0ab866bea28d3b62de0a18ef55a19cc3eee2ec1016b41ddd34dc37629",
+        "size_in_bytes": 2670,
+        "sha256_in_prefix": "b780c0b0ab866bea28d3b62de0a18ef55a19cc3eee2ec1016b41ddd34dc37629"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/trace/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "535eb20aed6fa4f922396326fb147482b581ad7a83b79aa4f057fb54232b9a28",
+        "size_in_bytes": 68882,
+        "sha256_in_prefix": "535eb20aed6fa4f922396326fb147482b581ad7a83b79aa4f057fb54232b9a28"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/trace/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "522207682da2c06037efa6b39a7cb5d2b67f09704c29ae34747ed1823a173cac",
+        "size_in_bytes": 30577,
+        "sha256_in_prefix": "522207682da2c06037efa6b39a7cb5d2b67f09704c29ae34747ed1823a173cac"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/version/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "c2bc1766a5438ad0906dac6878ae90b8f566127f4e60391f2508ba8c34eedcab",
+        "size_in_bytes": 100,
+        "sha256_in_prefix": "c2bc1766a5438ad0906dac6878ae90b8f566127f4e60391f2508ba8c34eedcab"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/semconv/version/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "4911c191a1c3eaef8e2c3ba0d35d87a9215ea2d61bbd7acb161c4a134525e123",
+        "size_in_bytes": 198,
+        "sha256_in_prefix": "4911c191a1c3eaef8e2c3ba0d35d87a9215ea2d61bbd7acb161c4a134525e123"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry_semantic_conventions-0.64b0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5,
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry_semantic_conventions-0.64b0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "dc000da542b39535993fff9650fb3da33c4deb2e1bb31ebad98170ab5ec85b28",
+        "size_in_bytes": 2408,
+        "sha256_in_prefix": "dc000da542b39535993fff9650fb3da33c4deb2e1bb31ebad98170ab5ec85b28"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry_semantic_conventions-0.64b0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "0f575f806e5f27de1fcc831cc5b88bb1dc0656ce7e16cdee2b55302b31c84924",
+        "size_in_bytes": 26855,
+        "sha256_in_prefix": "0f575f806e5f27de1fcc831cc5b88bb1dc0656ce7e16cdee2b55302b31c84924"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry_semantic_conventions-0.64b0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry_semantic_conventions-0.64b0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "942926c567d0b1273d09f20295879abd37507845f6b683eab9f87d808df91100",
+        "size_in_bytes": 87,
+        "sha256_in_prefix": "942926c567d0b1273d09f20295879abd37507845f6b683eab9f87d808df91100"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry_semantic_conventions-0.64b0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "3f2ace9e366a2d7113bf676198d9551c29e367ab07ba03fe7ca8c17957fbc8ed",
+        "size_in_bytes": 120,
+        "sha256_in_prefix": "3f2ace9e366a2d7113bf676198d9551c29e367ab07ba03fe7ca8c17957fbc8ed"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry_semantic_conventions-0.64b0.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "size_in_bytes": 11357,
+        "sha256_in_prefix": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      }
+    ]
+  },
+  "link": {
+    "source": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/opentelemetry-semantic-conventions-0.64b0-py314h06a4308_0",
+    "type": 1
+  },
+  "requested_specs": [
+    "https://repo.anaconda.com/pkgs/main/linux-64::opentelemetry-semantic-conventions==0.64b0=py314h06a4308_0"
+  ]
+}

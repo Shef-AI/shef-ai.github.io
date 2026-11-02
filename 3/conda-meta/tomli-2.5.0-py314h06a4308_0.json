@@ -1,0 +1,168 @@
+{
+  "name": "tomli",
+  "version": "2.5.0",
+  "build": "py314h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "subdir": "linux-64",
+  "fn": "tomli-2.5.0-py314h06a4308_0.conda",
+  "md5": "c24b095c7ac96ae42fd80e6669d05069",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/tomli-2.5.0-py314h06a4308_0.conda",
+  "sha256": "f08a54e237e52ccc77570cecc8c15bdaa3ead43964d9b86a9a6a429fdafc6d31",
+  "arch": "x86_64",
+  "platform": "linux",
+  "depends": [
+    "python >=3.14,<3.15.0a0",
+    "python_abi 3.14.* *_cp314"
+  ],
+  "constrains": [],
+  "license": "MIT",
+  "license_family": "MIT",
+  "timestamp": 1792662833000,
+  "size": 84970,
+  "requested_spec": "https://repo.anaconda.com/pkgs/main/linux-64::tomli==2.5.0=py314h06a4308_0",
+  "package_tarball_full_path": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/tomli-2.5.0-py314h06a4308_0.conda",
+  "extracted_package_dir": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/tomli-2.5.0-py314h06a4308_0",
+  "files": [
+    "lib/python3.14/site-packages/tomli-2.5.0.dist-info/INSTALLER",
+    "lib/python3.14/site-packages/tomli-2.5.0.dist-info/METADATA",
+    "lib/python3.14/site-packages/tomli-2.5.0.dist-info/RECORD",
+    "lib/python3.14/site-packages/tomli-2.5.0.dist-info/REQUESTED",
+    "lib/python3.14/site-packages/tomli-2.5.0.dist-info/WHEEL",
+    "lib/python3.14/site-packages/tomli-2.5.0.dist-info/direct_url.json",
+    "lib/python3.14/site-packages/tomli-2.5.0.dist-info/licenses/LICENSE",
+    "lib/python3.14/site-packages/tomli/__init__.py",
+    "lib/python3.14/site-packages/tomli/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/tomli/__pycache__/_parser.cpython-314.pyc",
+    "lib/python3.14/site-packages/tomli/__pycache__/_re.cpython-314.pyc",
+    "lib/python3.14/site-packages/tomli/__pycache__/_types.cpython-314.pyc",
+    "lib/python3.14/site-packages/tomli/_parser.py",
+    "lib/python3.14/site-packages/tomli/_re.py",
+    "lib/python3.14/site-packages/tomli/_types.py",
+    "lib/python3.14/site-packages/tomli/py.typed"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/python3.14/site-packages/tomli-2.5.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5,
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/tomli-2.5.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "7ae7343a504cfc3ad27c3efff560515696ad2bf43900fe10f4aad3026bd4c688",
+        "size_in_bytes": 10329,
+        "sha256_in_prefix": "7ae7343a504cfc3ad27c3efff560515696ad2bf43900fe10f4aad3026bd4c688"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/tomli-2.5.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "3ab469c876709bab98a308b710455b97e729134984cd1a070ee95867a48ffc53",
+        "size_in_bytes": 1102,
+        "sha256_in_prefix": "3ab469c876709bab98a308b710455b97e729134984cd1a070ee95867a48ffc53"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/tomli-2.5.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/tomli-2.5.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "1b68144734c4b66791f27add5d425f3620775585718a03d0f9b110ba3a4d88db",
+        "size_in_bytes": 82,
+        "sha256_in_prefix": "1b68144734c4b66791f27add5d425f3620775585718a03d0f9b110ba3a4d88db"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/tomli-2.5.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "8259d655dfe3ea72047790e94e05369abd039cd05b28a529f196880a9c0ebccd",
+        "size_in_bytes": 91,
+        "sha256_in_prefix": "8259d655dfe3ea72047790e94e05369abd039cd05b28a529f196880a9c0ebccd"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/tomli-2.5.0.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe",
+        "size_in_bytes": 1072,
+        "sha256_in_prefix": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/tomli/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "7182927b251660b7d649eec79e0dcaf03a59973793400990a693d9f6f8b73eca",
+        "size_in_bytes": 314,
+        "sha256_in_prefix": "7182927b251660b7d649eec79e0dcaf03a59973793400990a693d9f6f8b73eca"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/tomli/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "716adbeb5d7c27153607a85f812f4661c1689d2e1b17744573f0263796cad38e",
+        "size_in_bytes": 295,
+        "sha256_in_prefix": "716adbeb5d7c27153607a85f812f4661c1689d2e1b17744573f0263796cad38e"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/tomli/__pycache__/_parser.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "e2b9d3395fae6df55674183838854bada4481de6cb286e1ac25a1681c64e8753",
+        "size_in_bytes": 36365,
+        "sha256_in_prefix": "e2b9d3395fae6df55674183838854bada4481de6cb286e1ac25a1681c64e8753"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/tomli/__pycache__/_re.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "b92145638d836969a24f53d13c7cce6be5f18a9594a546ab5dde2fa16b23946f",
+        "size_in_bytes": 4911,
+        "sha256_in_prefix": "b92145638d836969a24f53d13c7cce6be5f18a9594a546ab5dde2fa16b23946f"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/tomli/__pycache__/_types.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "287eaa5fe09efd725a421ddafe19015fc2ed1ad6318c79b9e598c54890ff52c6",
+        "size_in_bytes": 339,
+        "sha256_in_prefix": "287eaa5fe09efd725a421ddafe19015fc2ed1ad6318c79b9e598c54890ff52c6"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/tomli/_parser.py",
+        "path_type": "hardlink",
+        "sha256": "3e782f1bc85639ecef630ae686df3d849f2bedd2e9c987d8f5109a5a154df131",
+        "size_in_bytes": 26727,
+        "sha256_in_prefix": "3e782f1bc85639ecef630ae686df3d849f2bedd2e9c987d8f5109a5a154df131"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/tomli/_re.py",
+        "path_type": "hardlink",
+        "sha256": "a12359fe294523a72112e434d58452a14c9d050affa2417f9927474e4166bfdd",
+        "size_in_bytes": 3396,
+        "sha256_in_prefix": "a12359fe294523a72112e434d58452a14c9d050affa2417f9927474e4166bfdd"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/tomli/_types.py",
+        "path_type": "hardlink",
+        "sha256": "f864c6d9552a929c7032ace654ee05ef26ca75d21b027b801d77e65907138b74",
+        "size_in_bytes": 254,
+        "sha256_in_prefix": "f864c6d9552a929c7032ace654ee05ef26ca75d21b027b801d77e65907138b74"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/tomli/py.typed",
+        "path_type": "hardlink",
+        "sha256": "f0f8f2675695a10a5156fb7bd66bafbaae6a13e8d315990af862c792175e6e67",
+        "size_in_bytes": 26,
+        "sha256_in_prefix": "f0f8f2675695a10a5156fb7bd66bafbaae6a13e8d315990af862c792175e6e67"
+      }
+    ]
+  },
+  "link": {
+    "source": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/tomli-2.5.0-py314h06a4308_0",
+    "type": 1
+  },
+  "requested_specs": [
+    "https://repo.anaconda.com/pkgs/main/linux-64::tomli==2.5.0=py314h06a4308_0"
+  ]
+}

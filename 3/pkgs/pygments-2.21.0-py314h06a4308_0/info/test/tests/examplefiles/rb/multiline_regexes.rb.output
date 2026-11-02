@@ -1,0 +1,120 @@
+'/'           Literal.String.Regex
+'\nthis is a\nmultiline\nregex\n' Literal.String.Regex
+
+'/'           Literal.String.Regex
+'\n\n'        Text.Whitespace
+
+'this'        Name
+' '           Text.Whitespace
+'/'           Literal.String.Regex
+'is a\nmultiline regex too' Literal.String.Regex
+'/'           Literal.String.Regex
+'\n\n'        Text.Whitespace
+
+'foo'         Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text
+'/'           Literal.String.Regex
+'is also\none' Literal.String.Regex
+'/'           Literal.String.Regex
+'\n\n'        Text.Whitespace
+
+'also'        Name
+' '           Text.Whitespace
+'/'           Literal.String.Regex
+'4\nis one'   Literal.String.Regex
+'/'           Literal.String.Regex
+'\n\n'        Text.Whitespace
+
+'this'        Name
+'('           Punctuation
+'/'           Literal.String.Regex
+'\ntoo\n'     Literal.String.Regex
+
+'/'           Literal.String.Regex
+')'           Punctuation
+'\n\n'        Text.Whitespace
+
+'# this not'  Comment.Single
+'\n'          Text.Whitespace
+
+'2'           Literal.Number.Integer
+' '           Text.Whitespace
+'/'           Operator
+'4'           Literal.Number.Integer
+'\n'          Text.Whitespace
+
+'asfsadf'     Name
+'/'           Operator
+'\n\n'        Text.Whitespace
+
+'# this is also not one' Comment.Single
+'\n'          Text.Whitespace
+
+'0x4d'        Literal.Number.Hex
+' '           Text.Whitespace
+'/'           Operator
+'25'          Literal.Number.Integer
+'\n'          Text.Whitespace
+
+'foo'         Name
+'/'           Operator
+'\n\n'        Text.Whitespace
+
+'42'          Literal.Number.Integer
+' '           Text.Whitespace
+'and'         Operator.Word
+' '           Text.Whitespace
+'/'           Literal.String.Regex
+'this\nis also a multiline\nregex' Literal.String.Regex
+'/'           Literal.String.Regex
+'\n\n\n'      Text.Whitespace
+
+'# And here some special string cases' Comment.Single
+'\n'          Text.Whitespace
+
+'foo'         Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'% blah '     Literal.String.Other
+'           ' Text.Whitespace
+'# comment here to ensure whitespace' Comment.Single
+'\n'          Text.Whitespace
+
+'foo'         Name
+'('           Punctuation
+'% blah '     Literal.String.Other
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'foo'         Name
+' '           Text.Whitespace
+'<<'          Operator
+' '           Text.Whitespace
+'% blah '     Literal.String.Other
+'          '  Text.Whitespace
+'# stupid but has to work' Comment.Single
+'\n'          Text.Whitespace
+
+'foo'         Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'% blah '     Literal.String.Other
+'+'           Operator
+' '           Text.Whitespace
+'% blub '     Literal.String.Other
+'  '          Text.Whitespace
+'# wicked'    Comment.Single
+'\n'          Text.Whitespace
+
+'foo'         Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'%q wicked '  Literal.String.Other
+'        '    Text.Whitespace
+'# works too' Comment.Single
+'\n'          Text.Whitespace

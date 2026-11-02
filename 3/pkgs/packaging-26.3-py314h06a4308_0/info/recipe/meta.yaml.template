@@ -1,0 +1,83 @@
+{% set name = "packaging" %}
+{% set version = "26.3" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 94edc256424af38762eb31306eed28beb9f0efc50a8837492c9d6fd6004aed79
+
+build:
+  number: 0
+  skip: true  # [py<39]
+  script:
+    # Use flit-core and python-installer to build the wheel instead of pip, to avoid circular dependencies
+    - {{ PYTHON }} -m flit_core.wheel
+    - {{ PYTHON }} -m installer --prefix="$PREFIX" dist/*.whl  # [unix]
+    - for %%f in (dist\*.whl) do {{ PYTHON }} -m installer --prefix="%PREFIX%" "%%f"  # [win]
+
+requirements:
+  host:
+    - python
+    - flit-core >=3.12
+    - python-installer
+  run:
+    - python
+
+test:
+  source_files:
+    - tests
+  imports:
+    - packaging
+    - packaging._elffile
+    - packaging._manylinux
+    - packaging._musllinux
+    - packaging._parser
+    - packaging.licenses._spdx
+    - packaging.markers
+    - packaging.metadata
+    - packaging.requirements
+    - packaging.specifiers
+    - packaging.tags
+    - packaging.utils
+    - packaging.version
+  requires:
+    - pip >=21.1
+    - pytest >=6.2.0
+    - hypothesis >=6.0.0
+    - pretend
+    - tomli  # [py<311]
+    - tomli-w
+    - hypothesis >=6.0.0
+  commands:
+    - pip check
+    - pytest -vv tests
+  # This package affects the following packages:
+  # downstreams:
+  #   - deepspeed
+  #   - setuptools-git-versioning
+  #   - vllm
+
+about:
+  home: https://github.com/pypa/packaging
+  license: Apache-2.0 or BSD-2-Clause
+  license_file: LICENSE
+  license_family: Apache
+  summary: Core utilities for Python packages
+  description: |
+    Reusable core utilities for various Python Packaging interoperability specifications.
+    This library provides utilities that implement the interoperability specifications
+    which have clearly one correct behaviour (eg: PEP 440) or benefit greatly from having
+    a single shared implementation (eg: PEP 425).
+  doc_url: https://packaging.pypa.io
+  dev_url: https://github.com/pypa/packaging
+
+extra:
+  recipe-maintainers:
+    - jakirkham
+    - nicoddemus
+    - mingwandroid
+  skip-lints:
+    - missing_test_requirement_pip

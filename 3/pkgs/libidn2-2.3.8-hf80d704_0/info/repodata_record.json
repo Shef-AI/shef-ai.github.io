@@ -1,0 +1,26 @@
+{
+  "arch": "x86_64",
+  "build": "hf80d704_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.28,<3.0.a0",
+    "gettext >=0.21.0,<1.0a0",
+    "libgcc-ng >=11.2.0",
+    "libiconv >=1.16,<2.0a0",
+    "libunistring >=1,<2.0a0"
+  ],
+  "fn": "libidn2-2.3.8-hf80d704_0.conda",
+  "license": "LGPL-2.0 AND LGPL-3.0-or-later AND GPL-3.0-or-later",
+  "license_family": "OTHER",
+  "md5": "7ab70b332bb2df9ce90a1567126b5d2a",
+  "name": "libidn2",
+  "platform": "linux",
+  "sha256": "675beb2f9d9c876b87601b043d7e9e3b87cbec6b2172453932602db74e0099d7",
+  "size": 82352,
+  "subdir": "linux-64",
+  "timestamp": 1760364378000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/libidn2-2.3.8-hf80d704_0.conda",
+  "version": "2.3.8"
+}

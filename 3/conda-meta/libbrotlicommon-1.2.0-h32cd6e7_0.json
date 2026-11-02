@@ -1,0 +1,112 @@
+{
+  "name": "libbrotlicommon",
+  "version": "1.2.0",
+  "build": "h32cd6e7_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "subdir": "linux-64",
+  "fn": "libbrotlicommon-1.2.0-h32cd6e7_0.conda",
+  "md5": "cdc0bbfec0c99b30d435b22341a716b0",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/libbrotlicommon-1.2.0-h32cd6e7_0.conda",
+  "sha256": "a389948434028846cd8a844a0fda48e2dbff9d639563c8cee643f754d30a90cd",
+  "arch": "x86_64",
+  "platform": "linux",
+  "depends": [
+    "__glibc >=2.28,<3.0.a0",
+    "libgcc-ng >=11.2.0"
+  ],
+  "constrains": [],
+  "license": "MIT",
+  "license_family": "MIT",
+  "timestamp": 1762363571000,
+  "size": 78282,
+  "requested_spec": "https://repo.anaconda.com/pkgs/main/linux-64::libbrotlicommon==1.2.0=h32cd6e7_0",
+  "package_tarball_full_path": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/libbrotlicommon-1.2.0-h32cd6e7_0.conda",
+  "extracted_package_dir": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/libbrotlicommon-1.2.0-h32cd6e7_0",
+  "files": [
+    "lib/libbrotlicommon.so",
+    "lib/libbrotlicommon.so.1",
+    "lib/libbrotlicommon.so.1.2.0",
+    "lib/pkgconfig/libbrotlicommon.pc",
+    "share/man/man1/brotli.1",
+    "share/man/man3/constants.h.3",
+    "share/man/man3/decode.h.3",
+    "share/man/man3/encode.h.3",
+    "share/man/man3/types.h.3"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/libbrotlicommon.so",
+        "path_type": "softlink",
+        "sha256": "fe36e92852cd870bb772e834b0791197612a0aa92a2dc484b3c5b53248757c28",
+        "size_in_bytes": 143800
+      },
+      {
+        "_path": "lib/libbrotlicommon.so.1",
+        "path_type": "softlink",
+        "sha256": "fe36e92852cd870bb772e834b0791197612a0aa92a2dc484b3c5b53248757c28",
+        "size_in_bytes": 143800
+      },
+      {
+        "_path": "lib/libbrotlicommon.so.1.2.0",
+        "path_type": "hardlink",
+        "sha256": "fe36e92852cd870bb772e834b0791197612a0aa92a2dc484b3c5b53248757c28",
+        "size_in_bytes": 143800,
+        "sha256_in_prefix": "fe36e92852cd870bb772e834b0791197612a0aa92a2dc484b3c5b53248757c28"
+      },
+      {
+        "_path": "lib/pkgconfig/libbrotlicommon.pc",
+        "prefix_placeholder": "/home/task_176236350079666/conda-bld/brotli-split_1762363540655/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "sha256": "e9fc16d081f6e4bee50d5f44681224a7751fa58233a7bfd5f72c23f96036dc7b",
+        "size_in_bytes": 761,
+        "sha256_in_prefix": "f4796974f14149a6e4fbeae1779635f033dd78cfe47a451e69094212ce40755a"
+      },
+      {
+        "_path": "share/man/man1/brotli.1",
+        "path_type": "hardlink",
+        "sha256": "5592e0207f942e1b7be075bacd948ad20b76792845626a21592f5b9742c7af93",
+        "size_in_bytes": 5130,
+        "sha256_in_prefix": "5592e0207f942e1b7be075bacd948ad20b76792845626a21592f5b9742c7af93"
+      },
+      {
+        "_path": "share/man/man3/constants.h.3",
+        "path_type": "hardlink",
+        "sha256": "2ac99f4d97a57a170877fed3ff93251612850f43598ba4eaf234e246787c978d",
+        "size_in_bytes": 1767,
+        "sha256_in_prefix": "2ac99f4d97a57a170877fed3ff93251612850f43598ba4eaf234e246787c978d"
+      },
+      {
+        "_path": "share/man/man3/decode.h.3",
+        "path_type": "hardlink",
+        "sha256": "be0a93be98e80f00d075bf43dc6a0bb84cb4028ce0082211e958d1ef18112d8f",
+        "size_in_bytes": 17452,
+        "sha256_in_prefix": "be0a93be98e80f00d075bf43dc6a0bb84cb4028ce0082211e958d1ef18112d8f"
+      },
+      {
+        "_path": "share/man/man3/encode.h.3",
+        "path_type": "hardlink",
+        "sha256": "893ebea4d0d29ff3f2b83004c6bcb4d3610ced41f7cb04f72c1710ff339f5a90",
+        "size_in_bytes": 24310,
+        "sha256_in_prefix": "893ebea4d0d29ff3f2b83004c6bcb4d3610ced41f7cb04f72c1710ff339f5a90"
+      },
+      {
+        "_path": "share/man/man3/types.h.3",
+        "path_type": "hardlink",
+        "sha256": "c9afc281d042e84df6ba5ef4ac4a39f7e1ad8cae4d98adc702055b99c38b2267",
+        "size_in_bytes": 3081,
+        "sha256_in_prefix": "c9afc281d042e84df6ba5ef4ac4a39f7e1ad8cae4d98adc702055b99c38b2267"
+      }
+    ]
+  },
+  "link": {
+    "source": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/libbrotlicommon-1.2.0-h32cd6e7_0",
+    "type": 1
+  },
+  "requested_specs": [
+    "https://repo.anaconda.com/pkgs/main/linux-64::libbrotlicommon==1.2.0=h32cd6e7_0"
+  ]
+}

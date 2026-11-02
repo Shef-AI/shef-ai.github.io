@@ -1,0 +1,131 @@
+'" A comment' Comment
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+':'           Punctuation
+'py'          Keyword
+' '           Text
+'print'       Name.Builtin
+' '           Text
+'"'           Literal.String.Double
+'py'          Literal.String.Double
+'"'           Literal.String.Double
+'\n'          Text.Whitespace
+
+':'           Punctuation
+':'           Text
+'pyt'         Keyword
+' '           Text
+'print'       Name.Builtin
+' '           Text
+"'"           Literal.String.Single
+'pyt'         Literal.String.Single
+"'"           Literal.String.Single
+'\n'          Text.Whitespace
+
+'  '          Text
+'pyth'        Keyword
+'\t'          Text
+'print'       Name.Builtin
+' '           Text
+"'''"         Literal.String.Single
+'pyth'        Literal.String.Single
+"'''"         Literal.String.Single
+'\n'          Text.Whitespace
+
+' '           Text
+':'           Text
+' '           Text
+'pytho'       Keyword
+' '           Text
+'print'       Name.Builtin
+' '           Text
+'"'           Literal.String.Double
+'pytho'       Literal.String.Double
+'"'           Literal.String.Double
+'\n'          Text.Whitespace
+
+'python'      Keyword
+' '           Text
+'print'       Name.Builtin
+' '           Text
+'"""'         Literal.String.Double
+'python'      Literal.String.Double
+'"""'         Literal.String.Double
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'  '          Text
+':'           Text
+' '           Text
+':'           Text
+' '           Text
+'python'      Keyword
+'<<'          Operator
+'E OF'        Text
+'\n'          Text.Whitespace
+
+'print'       Name.Builtin
+' '           Text
+'"""'         Literal.String.Double
+'my script'   Literal.String.Double
+'"""'         Literal.String.Double
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'def'         Keyword
+' '           Text.Whitespace
+'MyFunc'      Name.Function
+'('           Punctuation
+'str'         Name.Builtin
+')'           Punctuation
+':'           Punctuation
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'""" My Function """' Literal.String.Doc
+'\n'          Text.Whitespace
+
+'  '          Text
+'print'       Name.Builtin
+' '           Text
+'str'         Name.Builtin
+'\n'          Text.Whitespace
+
+'E OF'        Text
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'let'         Keyword
+' '           Text
+'py'          Text
+' '           Text
+'='           Punctuation
+' '           Text
+'42'          Literal.Number
+'\n'          Text.Whitespace
+
+'echo'        Keyword
+' '           Text
+'py'          Text
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'let'         Keyword
+' '           Text
+'foo'         Text
+' '           Text
+'='           Punctuation
+' '           Text
+'42'          Literal.Number
+'\n'          Text.Whitespace
+
+'echo'        Keyword
+' '           Text
+'foo'         Text
+'\n'          Text.Whitespace

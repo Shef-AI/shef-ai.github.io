@@ -1,0 +1,118 @@
+# This file created by conda-build 26.1.0
+# meta.yaml template originally from:
+# /home/task_177263987360664/fmt-feedstock/recipe, last modified Wed Mar  4 15:58:00 2026
+# ------------------------------------------------
+
+package:
+  name: fmt
+  version: 12.1.0
+source:
+  url: https://github.com/fmtlib/fmt/archive/12.1.0.tar.gz
+  sha256: ea7de4299689e12b6dddd392f9896f08fb0777ac7168897a244a6d6085043fea
+  patches: null
+build:
+  number: '0'
+  run_exports:
+    - fmt >=12.1.0,<13.0a0
+  string: h44f220b_0
+requirements:
+  build:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - binutils_impl_linux-64 2.44 h4b9a079_2
+    - binutils_linux-64 2.44 hc03a8fd_2
+    - bzip2 1.0.8 h5eee18b_6
+    - c-ares 1.34.6 hd44998d_0
+    - ca-certificates 2025.12.2 h06a4308_0
+    - cmake 4.2.3 h8f6b806_0
+    - expat 2.7.4 h7354ed3_0
+    - gcc_impl_linux-64 14.3.0 h4943218_4
+    - gcc_linux-64 14.3.0 hda73cce_12
+    - gettext 0.25.1 h92eb808_0
+    - gettext-tools 0.25.1 h6a67909_0
+    - gxx_impl_linux-64 14.3.0 he634eba_4
+    - gxx_linux-64 14.3.0 hca8765c_12
+    - icu 73.1 h6a678d5_0
+    - jansson 2.14 h5eee18b_1
+    - kernel-headers_linux-64 4.18.0 h3108a97_1
+    - ld_impl_linux-64 2.44 h153f514_2
+    - libasprintf 0.25.1 hf2ab22a_0
+    - libasprintf-devel 0.25.1 hf2ab22a_0
+    - libbrotlicommon 1.2.0 h32cd6e7_0
+    - libbrotlidec 1.2.0 ha2c5f68_0
+    - libbrotlienc 1.2.0 h2e96acb_0
+    - libcurl 8.18.0 h3506a8c_0
+    - libev 4.33 h7f8727e_1
+    - libexpat 2.7.4 h7354ed3_0
+    - libgcc 15.2.0 h69a1729_7
+    - libgcc-devel_linux-64 14.3.0 he7458c1_104
+    - libgcc-ng 15.2.0 h166f726_7
+    - libgettextpo 0.25.1 hf2ab22a_0
+    - libgettextpo-devel 0.25.1 hf2ab22a_0
+    - libgomp 15.2.0 h4751f2c_7
+    - libiconv 1.18 h75a1612_0
+    - libidn2 2.3.8 hf80d704_0
+    - libkrb5 1.22.1 h6d2bf13_0
+    - libnghttp2 1.67.1 h697f920_0
+    - libsanitizer 14.3.0 hd4faa28_4
+    - libssh2 1.11.1 h251f7ec_0
+    - libstdcxx 15.2.0 h39759b7_7
+    - libstdcxx-devel_linux-64 14.3.0 he7458c1_104
+    - libstdcxx-ng 15.2.0 hc03a8fd_7
+    - libunistring 1.3 hb25bd0a_0
+    - libuv 1.48.0 h5eee18b_0
+    - libxml2 2.13.9 h2c43086_0
+    - libzlib 1.3.1 hb25bd0a_0
+    - lmdb 0.9.31 hb25bd0a_0
+    - lz4-c 1.9.4 h6a678d5_1
+    - ncurses 6.5 h7934f7d_0
+    - ninja-base 1.13.1 h0f57076_0
+    - openssl 3.5.5 h1b28b03_0
+    - rhash 1.4.6 hd199180_1
+    - sysroot_linux-64 2.28 h3108a97_1
+    - tzdata 2025c he532380_0
+    - xz 5.8.2 h448239c_0
+    - zlib 1.3.1 hb25bd0a_0
+    - zstd 1.5.7 h11fc155_0
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - libgcc 15.2.0 h69a1729_7
+    - libgomp 15.2.0 h4751f2c_7
+    - libstdcxx 15.2.0 h39759b7_7
+  run:
+    - __glibc >=2.28,<3.0.a0
+    - libgcc >=14
+    - libstdcxx >=14
+test:
+  commands:
+    - test -d ${PREFIX}/include/fmt
+    - test -f ${PREFIX}/include/fmt/core.h
+    - test -f ${PREFIX}/include/fmt/format.h
+    - test -f ${PREFIX}/lib/cmake/fmt/fmt-config.cmake
+    - test -f ${PREFIX}/lib/libfmt${SHLIB_EXT}
+about:
+  home: https://fmt.dev/latest
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: fmt is an open-source formatting library for C++
+  description: 'fmt is an open-source formatting library for C++.
+
+    It can be used as a safe and fast alternative to (s)printf and iostreams.
+
+    '
+  dev_url: https://github.com/fmtlib/fmt
+  doc_url: https://fmt.dev/latest
+extra:
+  recipe-maintainers:
+    - saraedum
+    - tdegeus
+    - vitaut
+  final: true
+  copy_test_source_files: true
+  remote_url: https://github.com/AnacondaRecipes/fmt-feedstock
+  sha: 7137feb724da0611ac01b26f27385974ad3e77e3
+  task_id: HTW8h_KjTWi6LLTTa57Ttg
+  task_run_id: '0'
+  pbp_graph_uuid: 484c3d2f-5e3a-465c-87e0-cf58e480ed3d

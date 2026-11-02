@@ -1,0 +1,230 @@
+commit 570fcf9e57a2533e6ee73ceb595c612884a26f59
+Author: Serhii Kupriienko <skupriienko@anaconda.com>
+Date:   Wed Nov 17 17:31:40 2021 +0000
+
+    Fix toml
+
+commit 9e98e14a629ad1e0bfff47d5c060b5b0dac05bc1
+Author: Serhii Kupriienko <skupriienko@anaconda.com>
+Date:   Wed Nov 17 17:29:58 2021 +0000
+
+    Add license_family, dev, doc urls
+
+commit f046e0eb47ccccad0a9b2d7c95b0c38f3ea25868
+Author: Serhii Kupriienko <skupriienko@anaconda.com>
+Date:   Wed Nov 17 17:24:39 2021 +0000
+
+    Update dependencies, fix python
+
+commit 990fb286885fb2e7298907beca55bbf1332b19b1
+Merge: afd09f5 16ba12c
+Author: Filipe <ocefpaf@gmail.com>
+Date:   Thu Sep 16 22:19:21 2021 -0300
+
+    Merge pull request #12 from regro-cf-autotick-bot/0.7.0_he7a0fd
+    
+    python-build v0.7.0
+
+commit 16ba12c50703e16b4cf2b7c6f1b07648fb547f20
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Fri Sep 17 00:09:13 2021 +0000
+
+    updated v0.7.0
+
+commit afd09f50c78d4560ce96b243f64121aa78ae94db
+Merge: 26d3803 891041e
+Author: Filipe <ocefpaf@gmail.com>
+Date:   Fri Aug 6 15:16:03 2021 -0300
+
+    Merge pull request #11 from regro-cf-autotick-bot/0.6.0.post1_h3df82d
+    
+    python-build v0.6.0.post1
+
+commit 891041ef38839dbba436bf6f221a6cc3a6b3132d
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Fri Aug 6 11:45:05 2021 +0000
+
+    updated v0.6.0.post1
+
+commit 26d380339adf2d83b29043a99e834c58c42d454d
+Merge: aa12ce7 d2ab639
+Author: Filipe <ocefpaf@gmail.com>
+Date:   Mon Aug 2 20:25:12 2021 -0300
+
+    Merge pull request #10 from regro-cf-autotick-bot/0.6.0_h35b397
+    
+    python-build v0.6.0
+
+commit d2ab6396ce373bc5a601c476410f24199bb9a1a2
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Mon Aug 2 22:39:36 2021 +0000
+
+    updated v0.6.0
+
+commit aa12ce740e0766137d11a3407ccdea7d8556a7d0
+Merge: 3ab9411 1295e8f
+Author: Filipe <ocefpaf@gmail.com>
+Date:   Wed Jun 23 15:46:35 2021 -0300
+
+    Merge pull request #9 from regro-cf-autotick-bot/0.5.1_h625af1
+    
+    python-build v0.5.1
+
+commit 1295e8f53b02d6bccb410c1d14c73a842d5df593
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Tue Jun 22 19:54:49 2021 +0000
+
+    updated v0.5.1
+
+commit 3ab941150a0b115d23761cf9157089c26b84b72b
+Merge: f20999c c5c9ef6
+Author: Filipe <ocefpaf@gmail.com>
+Date:   Mon Jun 21 16:24:36 2021 -0300
+
+    Merge pull request #8 from regro-cf-autotick-bot/0.5.0_h19f22c
+    
+    python-build v0.5.0
+
+commit c5c9ef69ca367d705756f8532998d81b5723901c
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Sat Jun 19 19:36:51 2021 +0000
+
+    MNT: Re-rendered with conda-build 3.21.4, conda-smithy 3.10.3, and conda-forge-pinning 2021.06.18.08.15.47
+
+commit acd6555f406a76e67a1837f47c092d97888a1afb
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Sat Jun 19 19:36:47 2021 +0000
+
+    updated v0.5.0
+
+commit f20999c96cf2802525513ed30c60d0ff6733a588
+Merge: e3c7995 211da50
+Author: Filipe <ocefpaf@gmail.com>
+Date:   Mon May 24 16:22:14 2021 -0300
+
+    Merge pull request #7 from regro-cf-autotick-bot/0.4.0_h2e8be9
+    
+    python-build v0.4.0
+
+commit 211da50454cd6acd7c2751369e9c536439109535
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Sun May 23 23:58:37 2021 +0000
+
+    MNT: Re-rendered with conda-build 3.21.4, conda-smithy 3.10.1, and conda-forge-pinning 2021.05.23.19.32.25
+
+commit c9d23858d23a62e99439f61e3f93e7a648b3ecc0
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Sun May 23 23:58:32 2021 +0000
+
+    updated v0.4.0
+
+commit e3c79958eb08e5480c2e2c872e79aa9c1131a18a
+Merge: f4d7d4c f0e8591
+Author: Filipe <ocefpaf@gmail.com>
+Date:   Wed Mar 10 16:32:10 2021 -0300
+
+    Merge pull request #5 from regro-cf-autotick-bot/0.3.1_hfb06a6
+
+commit f0e859122b05e6c79523cf60622585ee66577b38
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Wed Mar 10 06:30:55 2021 +0000
+
+    MNT: Re-rendered with conda-build 3.21.4, conda-smithy 3.9.0, and conda-forge-pinning 2021.03.09.22.39.45
+
+commit 0a081922cc92387bbb3366f589ff6dedefd040f2
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Wed Mar 10 06:30:50 2021 +0000
+
+    updated v0.3.1
+
+commit f4d7d4c61ad342342f1754d90063903595b235e6
+Merge: b7595e5 97463f0
+Author: Filipe <ocefpaf@gmail.com>
+Date:   Fri Feb 19 15:45:41 2021 -0300
+
+    Merge pull request #4 from regro-cf-autotick-bot/0.3.0_h76fe5b
+    
+    python-build v0.3.0
+
+commit 97463f0329c4a70ffe008fc61309e120afae7e3a
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Fri Feb 19 16:55:52 2021 +0000
+
+    updated v0.3.0
+
+commit b7595e55cc927f6edf6380a05ce8097f8ff4e200
+Merge: d1c9f41 24e3fe4
+Author: Filipe <ocefpaf@gmail.com>
+Date:   Tue Feb 9 15:20:23 2021 -0300
+
+    Merge pull request #3 from regro-cf-autotick-bot/0.2.1_hd8a36a
+    
+    python-build v0.2.1
+
+commit 24e3fe4072920f06ce5db02e7156c16db01a3156
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Tue Feb 9 16:57:54 2021 +0000
+
+    updated v0.2.1
+
+commit d1c9f41cbfbf9a98e0d7871816196fe2ab300d90
+Merge: bf7bf27 63532ba
+Author: Filipe <ocefpaf@gmail.com>
+Date:   Mon Feb 8 17:27:22 2021 -0300
+
+    Merge pull request #2 from regro-cf-autotick-bot/0.2.0_h29d5d5
+
+commit 63532ba8451cbafa4fa0ac9470a3d4e11279b9d0
+Author: Filipe Fernandes <ocefpaf@gmail.com>
+Date:   Mon Feb 8 17:22:23 2021 -0300
+
+    update with grayskull
+
+commit 14320f775ef914aa16d32f431704a65737f94e12
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Sun Feb 7 16:29:18 2021 +0000
+
+    MNT: Re-rendered with conda-build 3.21.4, conda-smithy 3.8.6, and conda-forge-pinning 2021.02.07.11.21.33
+
+commit 3cc94ea15dbfe363648fc2ea54a477c779d2cd24
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Sun Feb 7 16:29:12 2021 +0000
+
+    updated v0.2.0
+
+commit bf7bf2713e52d00bf37f3ea164608a45fd5f40b7
+Merge: e65b131 fd8efa1
+Author: Filipe <ocefpaf@gmail.com>
+Date:   Thu Oct 29 14:42:17 2020 -0300
+
+    Merge pull request #1 from regro-cf-autotick-bot/0.1.0_h281dca
+
+commit fd8efa1fdac4a59e3495886210028cf5054ac438
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Thu Oct 29 17:35:41 2020 +0000
+
+    MNT: Re-rendered with conda-build 3.20.5, conda-smithy 3.8.4, and conda-forge-pinning 2020.10.29.11.45.42
+
+commit 4e3cfac1d8514a5cafba64d904ed69e65cb5a1b9
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Thu Oct 29 17:35:35 2020 +0000
+
+    updated v0.1.0
+
+commit e65b131c0b9c2476cc000360dd78821769808cbb
+Author: cf-blacksmithy <41433396+cf-blacksmithy@users.noreply.github.com>
+Date:   Fri Oct 16 21:20:23 2020 +0000
+
+    [ci skip] [skip ci] [cf admin skip] ***NO_CI*** admin migration CFEP13TokenCleanup
+
+commit 56551a9888a813577674cbf3b08ffcfde6d3400d
+Author: Travis-CI on github.com/conda-forge/staged-recipes <conda-forge@googlegroups.com>
+Date:   Fri Oct 16 18:32:28 2020 +0000
+
+    Re-render the feedstock after CI registration.
+
+commit 8ab27eb892df75868f06f3a2d2c01b65ea2b0192
+Author: Travis-CI on github.com/conda-forge/staged-recipes <conda-forge@googlegroups.com>
+Date:   Fri Oct 16 18:27:59 2020 +0000
+
+    Initial feedstock commit with conda-smithy 3.8.2.

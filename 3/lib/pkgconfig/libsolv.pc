@@ -1,0 +1,8 @@
+libdir=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/lib
+includedir=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/include
+
+Name: libsolv
+Description: Library for solving packages
+Version: 0.7.39
+Libs: -L${libdir} -lsolv
+Cflags: -I${includedir}

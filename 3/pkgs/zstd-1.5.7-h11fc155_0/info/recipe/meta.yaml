@@ -1,0 +1,95 @@
+# This file created by conda-build 25.1.2
+# meta.yaml template originally from:
+# /home/task_175803855979044/zstd-feedstock/recipe, last modified Tue Sep 16 16:12:06 2025
+# ------------------------------------------------
+
+package:
+  name: zstd
+  version: 1.5.7
+source:
+  sha256: 37d7284556b20954e56e1ca85b80226768902e2edabd3b649e9e72c0c9012ee3
+  url: https://github.com/facebook/zstd/archive/v1.5.7.tar.gz
+build:
+  number: '0'
+  run_exports:
+    - zstd >=1.5.7,<1.6.0a0
+  string: h11fc155_0
+requirements:
+  build:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - binutils_impl_linux-64 2.40 h5293946_0
+    - binutils_linux-64 2.40.0 hc2dff05_2
+    - cmake-no-system 3.25.3 h6a678d5_0
+    - gcc_impl_linux-64 11.2.0 h1234567_1
+    - gcc_linux-64 11.2.0 h5c386dc_2
+    - gxx_impl_linux-64 11.2.0 h1234567_1
+    - gxx_linux-64 11.2.0 hc2dff05_2
+    - kernel-headers_linux-64 4.18.0 h528b178_0
+    - ld_impl_linux-64 2.40 h12ee557_0
+    - libgcc-devel_linux-64 11.2.0 h1234567_1
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libstdcxx-devel_linux-64 11.2.0 h1234567_1
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - make 4.2.1 h1bed415_1
+    - ninja-base 1.12.1 hdb19cb5_0
+    - sysroot_linux-64 2.28 h528b178_0
+    - tzdata 2025b h04d1e81_0
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - libzlib 1.3.1 hb25bd0a_0
+    - lz4-c 1.9.4 h6a678d5_1
+    - xz 5.6.4 h5eee18b_1
+    - zlib 1.3.1 hb25bd0a_0
+  run:
+    - __glibc >=2.28,<3.0.a0
+    - libgcc-ng >=11.2.0
+    - libstdcxx-ng >=11.2.0
+    - libzlib >=1.3.1,<2.0a0
+    - lz4-c >=1.9.4,<1.10.0a0
+    - xz >=5.6.4,<6.0a0
+test:
+  commands:
+    - zstd -be -i5
+    - test -f ${PREFIX}/include/zstd.h
+    - test -f ${PREFIX}/lib/libzstd.a
+    - test -f ${PREFIX}/lib/libzstd.so
+    - export PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig
+    - test -f ${PREFIX}/lib/pkgconfig/libzstd.pc
+    - pkg-config --cflags libzstd
+  requires:
+    - pkg-config
+about:
+  description: 'Zstandard is a real-time compression algorithm, providing high compression
+
+    ratios. It offers a very wide range of compression / speed trade-off, while
+
+    being backed by a very fast decoder. It also offers a special mode for
+
+    small data, called dictionary compression, and can create dictionaries from
+
+    any sample set. Zstandard library is provided as open source software using
+
+    a BSD license.
+
+    '
+  dev_url: https://github.com/facebook/zstd
+  doc_url: https://facebook.github.io/zstd/zstd_manual.html
+  home: https://facebook.github.io/zstd/
+  license: BSD-3-Clause AND GPL-2.0-or-later
+  license_family: BSD
+  license_file: LICENSE
+  summary: Zstandard - Fast real-time compression algorithm
+extra:
+  copy_test_source_files: true
+  final: true
+  recipe-maintainers:
+    - chenghlee
+    - msarahan
+    - rmax
+    - xhochy

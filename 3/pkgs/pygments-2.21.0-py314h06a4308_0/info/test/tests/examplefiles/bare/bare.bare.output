@@ -1,0 +1,239 @@
+'type'        Keyword
+' '           Text.Whitespace
+'PublicRSAKey' Name
+' '           Text.Whitespace
+'data'        Keyword
+'<'           Text
+'128'         Literal
+'>'           Text
+'\n'          Text
+
+'type'        Keyword
+' '           Text.Whitespace
+'PublicED25519Key' Name
+' '           Text.Whitespace
+'data'        Keyword
+'<'           Text
+'32'          Literal
+'>'           Text
+'\n'          Text
+
+'type'        Keyword
+' '           Text.Whitespace
+'Time'        Name
+' '           Text.Whitespace
+'string'      Keyword
+' '           Text.Whitespace
+'# ISO 8601'  Comment
+'\n\n'        Text.Whitespace
+
+'enum'        Keyword
+' '           Text.Whitespace
+'Department'  Name.Class
+' {'          Text.Whitespace
+'\n  '        Text.Whitespace
+'ACCOUNTING'  Name.Attribute
+'\n  '        Text.Whitespace
+'ADMINISTRATION' Name.Attribute
+'\n  '        Text.Whitespace
+'CUSTOMER_SERVICE' Name.Attribute
+'\n  '        Text.Whitespace
+'DEVELOPMENT' Name.Attribute
+' '           Text.Whitespace
+'# IMPORTANT' Comment
+'\n\n  '      Text.Whitespace
+'# Reserved for the CEO' Comment
+'\n  '        Text.Whitespace
+'JSMITH'      Name.Attribute
+' = '         Text
+'99'          Literal
+'\n'          Text.Whitespace
+
+'}'           Text
+'\n\n'        Text.Whitespace
+
+'type'        Keyword
+' '           Text.Whitespace
+'Customer'    Name.Class
+' '           Text.Whitespace
+'{'           Text
+'\n  '        Text.Whitespace
+'name'        Name.Attribute
+':'           Text
+' '           Text.Whitespace
+'string'      Keyword
+'\n'          Text
+
+'  '          Text.Whitespace
+'email'       Name.Attribute
+':'           Text
+' '           Text.Whitespace
+'string'      Keyword
+'\n'          Text
+
+'  '          Text.Whitespace
+'address'     Name.Attribute
+':'           Text
+' '           Text.Whitespace
+'Address'     Name.Class
+'\n'          Text
+
+'  '          Text.Whitespace
+'orders'      Name.Attribute
+':'           Text
+' '           Text.Whitespace
+'[]'          Text
+'{'           Text
+'\n    '      Text.Whitespace
+'orderId'     Name.Attribute
+':'           Text
+' '           Text.Whitespace
+'i64'         Keyword
+'\n'          Text
+
+'    '        Text.Whitespace
+'quantity'    Name.Attribute
+':'           Text
+' '           Text.Whitespace
+'i32'         Keyword
+'\n'          Text
+
+'  '          Text.Whitespace
+'}'           Text
+'\n'          Text
+
+'  '          Text.Whitespace
+'metadata'    Name.Attribute
+':'           Text
+' '           Text.Whitespace
+'map'         Keyword
+'['           Text
+'string'      Keyword
+']'           Text
+'data'        Keyword
+'\n'          Text
+
+'}'           Text
+'\n\n'        Text.Whitespace
+
+'type'        Keyword
+' '           Text.Whitespace
+'Employee'    Name.Class
+' '           Text.Whitespace
+'{'           Text
+'\n  '        Text.Whitespace
+'name'        Name.Attribute
+':'           Text
+' '           Text.Whitespace
+'string'      Keyword
+'\n'          Text
+
+'  '          Text.Whitespace
+'email'       Name.Attribute
+':'           Text
+' '           Text.Whitespace
+'string'      Keyword
+'\n'          Text
+
+'  '          Text.Whitespace
+'address'     Name.Attribute
+':'           Text
+' '           Text.Whitespace
+'Address'     Name.Class
+'\n'          Text
+
+'  '          Text.Whitespace
+'department'  Name.Attribute
+':'           Text
+' '           Text.Whitespace
+'Department'  Name.Class
+'\n'          Text
+
+'  '          Text.Whitespace
+'hireDate'    Name.Attribute
+':'           Text
+' '           Text.Whitespace
+'Time'        Name.Class
+'\n'          Text
+
+'  '          Text.Whitespace
+'publicKey'   Name.Attribute
+':'           Text
+' '           Text.Whitespace
+'optional'    Keyword
+'<'           Text
+'('           Text
+'PublicRSAKey' Name.Class
+' '           Text.Whitespace
+'|'           Text
+' '           Text.Whitespace
+'PublicED25519Key' Name.Class
+')'           Text
+'>'           Text
+'\n'          Text
+
+'  '          Text.Whitespace
+'metadata'    Name.Attribute
+':'           Text
+' '           Text.Whitespace
+'map'         Keyword
+'['           Text
+'string'      Keyword
+']'           Text
+'data'        Keyword
+'\n'          Text
+
+'}'           Text
+'\n\n'        Text.Whitespace
+
+'type'        Keyword
+' '           Text.Whitespace
+'Person'      Name.Class
+' '           Text.Whitespace
+'('           Text
+'Customer'    Name.Class
+' '           Text.Whitespace
+'|'           Text
+' '           Text.Whitespace
+'Employee'    Name.Class
+')'           Text
+'\n\n'        Text.Whitespace
+
+'type'        Keyword
+' '           Text.Whitespace
+'Address'     Name.Class
+' '           Text.Whitespace
+'{'           Text
+'\n  '        Text.Whitespace
+'address'     Name.Attribute
+':'           Text
+' '           Text.Whitespace
+'['           Text
+'4'           Literal
+']'           Text
+'string'      Keyword
+'\n'          Text
+
+'  '          Text.Whitespace
+'city'        Name.Attribute
+':'           Text
+' '           Text.Whitespace
+'string'      Keyword
+'\n'          Text
+
+'  '          Text.Whitespace
+'state'       Name.Attribute
+':'           Text
+' '           Text.Whitespace
+'string'      Keyword
+'\n'          Text
+
+'  '          Text.Whitespace
+'country'     Name.Attribute
+':'           Text
+' '           Text.Whitespace
+'string'      Keyword
+'\n'          Text
+
+'}'           Text
+'\n'          Text.Whitespace

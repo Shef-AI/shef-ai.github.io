@@ -1,0 +1,66 @@
+'/*\n * comment\n */' Comment.Multiline
+'\n'          Text
+
+'; comment'   Comment.Single
+'\n'          Text
+
+'// comment'  Comment.Single
+'\n'          Text
+
+'/'           Text
+'\n'          Text
+
+'<CsoundSynthesizer' Name.Tag
+'>'           Name.Tag
+'\n'          Text
+
+'<CsInstruments' Name.Tag
+'>'           Name.Tag
+'\n'          Text.Whitespace
+
+'0dbfs'       Name.Variable.Global
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'1'           Literal.Number.Integer
+'\n'          Text.Whitespace
+
+'prints'      Name.Builtin
+' '           Text.Whitespace
+'"'           Literal.String
+'hello, world' Literal.String
+'\\n'         Literal.String.Escape
+'"'           Literal.String
+'\n'          Text.Whitespace
+
+'</CsInstruments>' Name.Tag
+'\n'          Text
+
+'<CsScore'    Name.Tag
+'>'           Name.Tag
+'\n'          Text.Whitespace
+
+'i'           Keyword
+' '           Text.Whitespace
+'1'           Literal.Number.Integer
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+'\n'          Text.Whitespace
+
+'</CsScore>'  Name.Tag
+'\n'          Text
+
+'<html'       Name.Tag
+'>'           Name.Tag
+'\n'          Text
+
+'<!DOCTYPE html>' Comment.Preproc
+'\n'          Text
+
+'</html>'     Name.Tag
+'\n'          Text
+
+'</CsoundSynthesizer>' Name.Tag
+'\n'          Text

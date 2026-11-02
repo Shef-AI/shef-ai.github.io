@@ -1,0 +1,97 @@
+'module'      Keyword
+' '           Text.Whitespace
+'toplevel'    Name
+'('           Punctuation
+'clock'       Name
+','           Punctuation
+'reset'       Name
+')'           Punctuation
+';'           Punctuation
+'\n '         Text.Whitespace
+'input'       Keyword
+' '           Text.Whitespace
+'clock'       Name
+';'           Punctuation
+'\n '         Text.Whitespace
+'input'       Keyword
+' '           Text.Whitespace
+'reset'       Name
+';'           Punctuation
+'\n \n '      Text.Whitespace
+'reg'         Keyword.Type
+' '           Text.Whitespace
+'flop1'       Name
+';'           Punctuation
+'\n '         Text.Whitespace
+'reg'         Keyword.Type
+' '           Text.Whitespace
+'flop2'       Name
+';'           Punctuation
+'\n \n '      Text.Whitespace
+'always'      Keyword
+' '           Text.Whitespace
+'@'           Punctuation
+' '           Text.Whitespace
+'('           Punctuation
+'posedge'     Keyword
+' '           Text.Whitespace
+'reset'       Name
+' '           Text.Whitespace
+'or'          Keyword
+' '           Text.Whitespace
+'posedge'     Keyword
+' '           Text.Whitespace
+'clock'       Name
+')'           Punctuation
+'\n '         Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'reset'       Name
+')'           Punctuation
+'\n   '       Text.Whitespace
+'begin'       Keyword
+'\n     '     Text.Whitespace
+'flop1'       Name
+' '           Text.Whitespace
+'<'           Operator
+'='           Operator
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+';'           Punctuation
+'\n     '     Text.Whitespace
+'flop2'       Name
+' '           Text.Whitespace
+'<'           Operator
+'='           Operator
+' '           Text.Whitespace
+'1'           Literal.Number.Integer
+';'           Punctuation
+'\n   '       Text.Whitespace
+'end'         Keyword
+'\n '         Text.Whitespace
+'else'        Keyword
+'\n   '       Text.Whitespace
+'begin'       Keyword
+'\n     '     Text.Whitespace
+'flop1'       Name
+' '           Text.Whitespace
+'<'           Operator
+'='           Operator
+' '           Text.Whitespace
+'flop2'       Name
+';'           Punctuation
+'\n     '     Text.Whitespace
+'flop2'       Name
+' '           Text.Whitespace
+'<'           Operator
+'='           Operator
+' '           Text.Whitespace
+'flop1'       Name
+';'           Punctuation
+'\n   '       Text.Whitespace
+'end'         Keyword
+'\n'          Text.Whitespace
+
+'endmodule'   Keyword
+'\n'          Text.Whitespace

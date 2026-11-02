@@ -1,0 +1,1110 @@
+'package'     Keyword.Namespace
+' '           Text.Whitespace
+'example'     Name
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'uses'        Keyword.Namespace
+' '           Text.Whitespace
+'java.util.*' Name.Namespace
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'uses'        Keyword.Namespace
+' '           Text.Whitespace
+'java.io.File' Name.Namespace
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'class'       Keyword.Declaration
+' '           Text.Whitespace
+'Person'      Name.Class
+' '           Text.Whitespace
+'extends'     Keyword.Declaration
+' '           Text.Whitespace
+'Contact'     Name
+' '           Text.Whitespace
+'implements'  Keyword.Declaration
+' '           Text.Whitespace
+'IEmailable'  Name
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'var'         Keyword.Declaration
+' '           Text.Whitespace
+'_name'       Name
+' '           Text.Whitespace
+':'           Operator
+' '           Text.Whitespace
+'String'      Name
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'var'         Keyword.Declaration
+' '           Text.Whitespace
+'_age'        Name
+' '           Text.Whitespace
+':'           Operator
+' '           Text.Whitespace
+'Integer'     Name
+' '           Text.Whitespace
+'as'          Keyword
+' '           Text.Whitespace
+'Age'         Name
+' '           Text.Whitespace
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'var'         Keyword.Declaration
+' '           Text.Whitespace
+'_relationship' Name
+' '           Text.Whitespace
+':'           Operator
+' '           Text.Whitespace
+'Relationship' Name
+' '           Text.Whitespace
+'as'          Keyword
+' '           Text.Whitespace
+'readonly'    Keyword.Declaration
+' '           Text.Whitespace
+'RelationshipOfPerson' Name
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'delegate'    Keyword.Declaration
+' '           Text.Whitespace
+'_emailHelper' Name
+' '           Text.Whitespace
+'represents'  Keyword.Declaration
+' '           Text.Whitespace
+'IEmailable'  Name
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'enum'        Keyword.Declaration
+' '           Text.Whitespace
+'Relationship' Name.Class
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'FRIEND'      Name
+','           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'FAMILY'      Name
+','           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'BUSINESS_CONTACT' Name
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'// Map of names to people\n' Comment.Single
+
+'  '          Text.Whitespace
+'static'      Keyword.Declaration
+' '           Text.Whitespace
+'var'         Keyword.Declaration
+' '           Text.Whitespace
+'ALL_PEOPLE'  Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'new'         Keyword
+' '           Text.Whitespace
+'HashMap'     Name
+'<'           Operator
+'String'      Name
+','           Operator
+' '           Text.Whitespace
+'Person'      Name
+'>'           Operator
+'('           Operator
+')'           Operator
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'/* Constructs a new Person */' Comment.Multiline
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'construct'   Keyword.Declaration
+'('           Operator
+' '           Text.Whitespace
+'name'        Name
+' '           Text.Whitespace
+':'           Operator
+' '           Text.Whitespace
+'String'      Name
+','           Operator
+' '           Text.Whitespace
+'age'         Name
+' '           Text.Whitespace
+':'           Operator
+' '           Text.Whitespace
+'Integer'     Name
+','           Operator
+' '           Text.Whitespace
+'relationship' Name
+' '           Text.Whitespace
+':'           Operator
+' '           Text.Whitespace
+'Relationship' Name
+' '           Text.Whitespace
+')'           Operator
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'_name'       Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'name'        Name
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'_age'        Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'age'         Name
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'_relationship' Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'relationship' Name
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'_emailHelper' Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'new'         Keyword
+' '           Text.Whitespace
+'EmailHelper' Name
+'('           Operator
+' '           Text.Whitespace
+'this'        Keyword
+' '           Text.Whitespace
+')'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'property'    Keyword.Declaration
+' '           Text.Whitespace
+'get'         Keyword.Declaration
+' '           Text.Whitespace
+'Name'        Name.Function
+'('           Operator
+')'           Operator
+':'           Operator
+'String'      Name.Attribute
+'{'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'_name'       Name
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'property'    Keyword.Declaration
+' '           Text.Whitespace
+'set'         Keyword.Declaration
+' '           Text.Whitespace
+'Name'        Name.Function
+'('           Operator
+'name'        Name
+' '           Text.Whitespace
+':'           Operator
+' '           Text.Whitespace
+'String'      Name
+')'           Operator
+'{'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'_name'       Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'name'        Name
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'/* Implement IEmailable#getEmailName() */' Comment.Multiline
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'override'    Keyword.Declaration
+' '           Text.Whitespace
+'function'    Keyword.Declaration
+' '           Text.Whitespace
+'getEmailName' Name.Function
+'('           Operator
+')'           Operator
+':'           Operator
+'String'      Name.Attribute
+'{'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'Name'        Name
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'function'    Keyword.Declaration
+' '           Text.Whitespace
+'incrementAge' Name.Function
+'('           Operator
+')'           Operator
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'_age'        Name
+'+'           Operator
+'+'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'@Deprecated' Name.Decorator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'function'    Keyword.Declaration
+' '           Text.Whitespace
+'printPersonInfo' Name.Function
+'('           Operator
+')'           Operator
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'print'       Name
+'('           Operator
+' '           Text.Whitespace
+'"'           Literal.String
+'P'           Literal.String
+'e'           Literal.String
+'r'           Literal.String
+'s'           Literal.String
+'o'           Literal.String
+'n'           Literal.String
+' '           Literal.String
+'{'           Literal.String
+' '           Literal.String
+'N'           Literal.String
+'a'           Literal.String
+'m'           Literal.String
+'e'           Literal.String
+' '           Literal.String
+':'           Literal.String
+' '           Literal.String
+'${'          Operator
+'Name'        Name
+'}'           Operator
+','           Literal.String
+' '           Literal.String
+'A'           Literal.String
+'g'           Literal.String
+'e'           Literal.String
+' '           Literal.String
+':'           Literal.String
+' '           Literal.String
+'${'          Operator
+'Age'         Name
+'}'           Operator
+','           Literal.String
+' '           Literal.String
+'R'           Literal.String
+'e'           Literal.String
+'l'           Literal.String
+'a'           Literal.String
+'t'           Literal.String
+'i'           Literal.String
+'o'           Literal.String
+'n'           Literal.String
+'s'           Literal.String
+'h'           Literal.String
+'i'           Literal.String
+'p'           Literal.String
+' '           Literal.String
+':'           Literal.String
+' '           Literal.String
+'${'          Operator
+'RelationshipOfPerson' Name
+'}'           Operator
+' '           Literal.String
+'}'           Literal.String
+'"'           Literal.String
+' '           Text.Whitespace
+')'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'static'      Keyword.Declaration
+' '           Text.Whitespace
+'function'    Keyword.Declaration
+' '           Text.Whitespace
+'addPerson'   Name.Function
+'('           Operator
+'p'           Name
+' '           Text.Whitespace
+':'           Operator
+' '           Text.Whitespace
+'Person'      Name
+')'           Operator
+'{'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'if'          Keyword
+'('           Operator
+'ALL_PEOPLE'  Name
+'.'           Operator
+'containsKey' Name.Attribute
+'('           Operator
+'p'           Name
+'?.'          Operator
+'Name'        Name.Attribute
+')'           Operator
+')'           Operator
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'      '      Text.Whitespace
+'throw'       Keyword
+' '           Text.Whitespace
+'new'         Keyword
+' '           Text.Whitespace
+'IllegalArgumentException' Name.Function
+'('           Operator
+' '           Text.Whitespace
+'"'           Literal.String
+'T'           Literal.String
+'h'           Literal.String
+'e'           Literal.String
+'r'           Literal.String
+'e'           Literal.String
+' '           Literal.String
+'i'           Literal.String
+'s'           Literal.String
+' '           Literal.String
+'a'           Literal.String
+'l'           Literal.String
+'r'           Literal.String
+'e'           Literal.String
+'a'           Literal.String
+'d'           Literal.String
+'y'           Literal.String
+' '           Literal.String
+'s'           Literal.String
+'o'           Literal.String
+'m'           Literal.String
+'e'           Literal.String
+'o'           Literal.String
+'n'           Literal.String
+'e'           Literal.String
+' '           Literal.String
+'n'           Literal.String
+'a'           Literal.String
+'m'           Literal.String
+'e'           Literal.String
+'d'           Literal.String
+' '           Literal.String
+"'"           Literal.String
+'${'          Operator
+'p'           Name
+'.'           Operator
+'Name'        Name.Attribute
+'}'           Operator
+"'"           Literal.String
+'.'           Literal.String
+'"'           Literal.String
+' '           Text.Whitespace
+')'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'ALL_PEOPLE'  Name
+'['           Operator
+'p'           Name
+'.'           Operator
+'Name'        Name.Attribute
+']'           Operator
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'p'           Name
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'static'      Keyword.Declaration
+' '           Text.Whitespace
+'function'    Keyword.Declaration
+' '           Text.Whitespace
+'addAllPeople' Name.Function
+'('           Operator
+' '           Text.Whitespace
+'contacts'    Name
+' '           Text.Whitespace
+':'           Operator
+' '           Text.Whitespace
+'List'        Name
+'<'           Operator
+'Contact'     Name
+'>'           Operator
+' '           Text.Whitespace
+')'           Operator
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'for'         Keyword
+'('           Operator
+' '           Text.Whitespace
+'contact'     Name
+' '           Text.Whitespace
+'in'          Keyword
+' '           Text.Whitespace
+'contacts'    Name
+' '           Text.Whitespace
+')'           Operator
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'      '      Text.Whitespace
+'if'          Keyword
+'('           Operator
+' '           Text.Whitespace
+'contact'     Name
+' '           Text.Whitespace
+'typeis'      Keyword
+' '           Text.Whitespace
+'Person'      Name
+' '           Text.Whitespace
+'and'         Name
+' '           Text.Whitespace
+'not'         Name
+' '           Text.Whitespace
+'ALL_PEOPLE'  Name
+'.'           Operator
+'containsKey' Name.Attribute
+'('           Operator
+' '           Text.Whitespace
+'contact'     Name
+'.'           Operator
+'Name'        Name.Attribute
+' '           Text.Whitespace
+')'           Operator
+')'           Operator
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'addPerson'   Name
+'('           Operator
+' '           Text.Whitespace
+'contact'     Name
+' '           Text.Whitespace
+')'           Operator
+'\n'          Text.Whitespace
+
+'      '      Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'static'      Keyword.Declaration
+' '           Text.Whitespace
+'function'    Keyword.Declaration
+' '           Text.Whitespace
+'getAllPeopleOlderThanNOrderedByName' Name.Function
+'('           Operator
+' '           Text.Whitespace
+'age'         Name
+' '           Text.Whitespace
+':'           Operator
+' '           Text.Whitespace
+'int'         Keyword.Type
+' '           Text.Whitespace
+')'           Operator
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'var'         Keyword.Declaration
+' '           Text.Whitespace
+'allPeople'   Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'ALL_PEOPLE'  Name
+'.'           Operator
+'Values'      Name.Attribute
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'allPeople'   Name
+'.'           Operator
+'where'       Name.Attribute
+'('           Operator
+' '           Text.Whitespace
+'\\'          Operator
+' '           Text.Whitespace
+'p'           Name
+' '           Text.Whitespace
+'-'           Operator
+'>'           Operator
+' '           Text.Whitespace
+'p'           Name
+'.'           Operator
+'Age'         Name.Attribute
+' '           Text.Whitespace
+'>'           Operator
+' '           Text.Whitespace
+'age'         Name
+' '           Text.Whitespace
+')'           Operator
+'.'           Operator
+'orderBy'     Name.Attribute
+'('           Operator
+' '           Text.Whitespace
+'\\'          Operator
+' '           Text.Whitespace
+'p'           Name
+' '           Text.Whitespace
+'-'           Operator
+'>'           Operator
+' '           Text.Whitespace
+'p'           Name
+'.'           Operator
+'Name'        Name.Attribute
+' '           Text.Whitespace
+')'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'static'      Keyword.Declaration
+' '           Text.Whitespace
+'function'    Keyword.Declaration
+' '           Text.Whitespace
+'loadPersonFromDB' Name.Function
+'('           Operator
+' '           Text.Whitespace
+'id'          Name
+' '           Text.Whitespace
+':'           Operator
+' '           Text.Whitespace
+'Integer'     Name
+' '           Text.Whitespace
+')'           Operator
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'using'       Keyword
+'('           Operator
+' '           Text.Whitespace
+'var'         Keyword.Declaration
+' '           Text.Whitespace
+'conn'        Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'DBConnectionManager' Name
+'.'           Operator
+'getConnection' Name.Attribute
+'('           Operator
+')'           Operator
+','           Operator
+'\n'          Text.Whitespace
+
+'      '      Text.Whitespace
+'var'         Keyword.Declaration
+' '           Text.Whitespace
+'stmt'        Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'conn'        Name
+'.'           Operator
+'prepareStatement' Name.Attribute
+'('           Operator
+' '           Text.Whitespace
+'"'           Literal.String
+'S'           Literal.String
+'E'           Literal.String
+'L'           Literal.String
+'E'           Literal.String
+'C'           Literal.String
+'T'           Literal.String
+' '           Literal.String
+'n'           Literal.String
+'a'           Literal.String
+'m'           Literal.String
+'e'           Literal.String
+','           Literal.String
+' '           Literal.String
+'a'           Literal.String
+'g'           Literal.String
+'e'           Literal.String
+','           Literal.String
+' '           Literal.String
+'r'           Literal.String
+'e'           Literal.String
+'l'           Literal.String
+'a'           Literal.String
+'t'           Literal.String
+'i'           Literal.String
+'o'           Literal.String
+'n'           Literal.String
+'s'           Literal.String
+'h'           Literal.String
+'i'           Literal.String
+'p'           Literal.String
+' '           Literal.String
+'F'           Literal.String
+'R'           Literal.String
+'O'           Literal.String
+'M'           Literal.String
+' '           Literal.String
+'P'           Literal.String
+'E'           Literal.String
+'O'           Literal.String
+'P'           Literal.String
+'L'           Literal.String
+'E'           Literal.String
+' '           Literal.String
+'W'           Literal.String
+'H'           Literal.String
+'E'           Literal.String
+'R'           Literal.String
+'E'           Literal.String
+' '           Literal.String
+'I'           Literal.String
+'D'           Literal.String
+'='           Literal.String
+'?'           Literal.String
+'"'           Literal.String
+')'           Operator
+' '           Text.Whitespace
+')'           Operator
+'{'           Operator
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'      '      Text.Whitespace
+'stmt'        Name
+'.'           Operator
+'setInt'      Name.Attribute
+'('           Operator
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+','           Operator
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+' '           Text.Whitespace
+')'           Operator
+'\n'          Text.Whitespace
+
+'      '      Text.Whitespace
+'var'         Keyword.Declaration
+' '           Text.Whitespace
+'result'      Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'stmt'        Name
+'.'           Operator
+'executeQuery' Name.Attribute
+'('           Operator
+')'           Operator
+'\n'          Text.Whitespace
+
+'      '      Text.Whitespace
+'if'          Keyword
+'('           Operator
+' '           Text.Whitespace
+'result'      Name
+'.'           Operator
+'next'        Name.Attribute
+'('           Operator
+')'           Operator
+' '           Text.Whitespace
+')'           Operator
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'         '   Text.Whitespace
+'addPerson'   Name
+'('           Operator
+' '           Text.Whitespace
+'new'         Keyword
+' '           Text.Whitespace
+'Person'      Name
+'('           Operator
+' '           Text.Whitespace
+'result'      Name
+'.'           Operator
+'getString'   Name.Attribute
+'('           Operator
+' '           Text.Whitespace
+'"'           Literal.String
+'n'           Literal.String
+'a'           Literal.String
+'m'           Literal.String
+'e'           Literal.String
+'"'           Literal.String
+' '           Text.Whitespace
+')'           Operator
+','           Operator
+'\n'          Text.Whitespace
+
+'                    ' Text.Whitespace
+'result'      Name
+'.'           Operator
+'getInt'      Name.Attribute
+'('           Operator
+' '           Text.Whitespace
+'"'           Literal.String
+'a'           Literal.String
+'g'           Literal.String
+'e'           Literal.String
+'"'           Literal.String
+' '           Text.Whitespace
+')'           Operator
+','           Operator
+'\n'          Text.Whitespace
+
+'                    ' Text.Whitespace
+'Relationship' Name
+'.'           Operator
+'valueOf'     Name.Attribute
+'('           Operator
+' '           Text.Whitespace
+'result'      Name
+'.'           Operator
+'getString'   Name.Attribute
+'('           Operator
+' '           Text.Whitespace
+'"'           Literal.String
+'r'           Literal.String
+'e'           Literal.String
+'l'           Literal.String
+'a'           Literal.String
+'t'           Literal.String
+'i'           Literal.String
+'o'           Literal.String
+'n'           Literal.String
+'s'           Literal.String
+'h'           Literal.String
+'i'           Literal.String
+'p'           Literal.String
+'"'           Literal.String
+' '           Text.Whitespace
+')'           Operator
+' '           Text.Whitespace
+')'           Operator
+' '           Text.Whitespace
+')'           Operator
+' '           Text.Whitespace
+')'           Operator
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'      '      Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'/* Loads in people from a CSV */' Comment.Multiline
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'static'      Keyword.Declaration
+' '           Text.Whitespace
+'function'    Keyword.Declaration
+' '           Text.Whitespace
+'loadFromFile' Name.Function
+'('           Operator
+' '           Text.Whitespace
+'file'        Name
+' '           Text.Whitespace
+':'           Operator
+' '           Text.Whitespace
+'File'        Name
+' '           Text.Whitespace
+')'           Operator
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'file'        Name
+'.'           Operator
+'eachLine'    Name.Attribute
+'('           Operator
+' '           Text.Whitespace
+'\\'          Operator
+' '           Text.Whitespace
+'line'        Name
+' '           Text.Whitespace
+'-'           Operator
+'>'           Operator
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'      '      Text.Whitespace
+'if'          Keyword
+'('           Operator
+' '           Text.Whitespace
+'line'        Name
+'.'           Operator
+'HasContent'  Name.Attribute
+' '           Text.Whitespace
+')'           Operator
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'addPerson'   Name
+'('           Operator
+' '           Text.Whitespace
+'line'        Name
+'.'           Operator
+'toPerson'    Name.Attribute
+'('           Operator
+')'           Operator
+' '           Text.Whitespace
+')'           Operator
+'\n'          Text.Whitespace
+
+'      '      Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'}'           Operator
+')'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'/* Save people to a CSV */' Comment.Multiline
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'static'      Keyword.Declaration
+' '           Text.Whitespace
+'function'    Keyword.Declaration
+' '           Text.Whitespace
+'saveToFile'  Name.Function
+'('           Operator
+' '           Text.Whitespace
+'file'        Name
+' '           Text.Whitespace
+':'           Operator
+' '           Text.Whitespace
+'File'        Name
+' '           Text.Whitespace
+')'           Operator
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'using'       Keyword
+'('           Operator
+' '           Text.Whitespace
+'var'         Keyword.Declaration
+' '           Text.Whitespace
+'writer'      Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'new'         Keyword
+' '           Text.Whitespace
+'FileWriter'  Name
+'('           Operator
+' '           Text.Whitespace
+'file'        Name
+' '           Text.Whitespace
+')'           Operator
+' '           Text.Whitespace
+')'           Operator
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'      '      Text.Whitespace
+'print'       Name
+'('           Operator
+' '           Text.Whitespace
+'PersonCSVTemplate' Name
+'.'           Operator
+'renderToString' Name.Attribute
+'('           Operator
+' '           Text.Whitespace
+'ALL_PEOPLE'  Name
+'.'           Operator
+'Values'      Name.Attribute
+' '           Text.Whitespace
+')'           Operator
+' '           Text.Whitespace
+')'           Operator
+'\n'          Text.Whitespace
+
+'      '      Text.Whitespace
+'PersonCSVTemplate' Name
+'.'           Operator
+'render'      Name.Attribute
+'('           Operator
+' '           Text.Whitespace
+'writer'      Name
+','           Operator
+' '           Text.Whitespace
+'ALL_PEOPLE'  Name
+'.'           Operator
+'Values'      Name.Attribute
+' '           Text.Whitespace
+')'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'}'           Operator
+'\n'          Text.Whitespace

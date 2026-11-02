@@ -1,0 +1,7 @@
+prefix=/home/task_178784343179487/croot/xorg-xorgproto_1787843457862/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh
+includedir=${prefix}/include
+
+Name: DRI2Proto
+Description: DRI2 extension headers
+Version: 2.8
+Cflags: -I${includedir}

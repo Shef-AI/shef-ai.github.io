@@ -1,0 +1,97 @@
+'class'       Keyword.Declaration
+' '           Text
+'_PostUnico$deClassá' Name.Class
+'\n'          Text.Whitespace
+
+'{'           Punctuation
+'void'        Keyword.Type
+' '           Text.Whitespace
+'fo$o'        Name.Function
+'('           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'void'        Keyword.Type
+' '           Text.Whitespace
+'PostUnicodeFunctioná' Name.Function
+'('           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'láb$el'      Name
+':'           Punctuation
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'break'       Keyword
+' '           Text.Whitespace
+'láb$el'      Name
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'class'       Keyword.Declaration
+' '           Text
+'áPreUnicode$Class' Name.Class
+'\n'          Text.Whitespace
+
+'{'           Punctuation
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'public'      Keyword.Declaration
+'\u2008'      Text.Whitespace
+'int'         Keyword.Type
+' '           Text.Whitespace
+'$foo'        Name
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'public'      Keyword.Declaration
+' '           Text.Whitespace
+'int'         Keyword.Type
+' '           Text.Whitespace
+'á$foo'       Name
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_PostUnico$deClassá' Name
+' '           Text.Whitespace
+'áPreUnicodeFunction' Name.Function
+'('           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+' '           Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'null'        Keyword.Constant
+';'           Punctuation
+' '           Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n'          Text.Whitespace

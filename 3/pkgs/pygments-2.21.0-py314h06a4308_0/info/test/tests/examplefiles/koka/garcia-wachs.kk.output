@@ -1,0 +1,1372 @@
+'// Koka language test module' Comment.Single
+'\n\n'        Text.Whitespace
+
+'// This module implements the GarsiaWachs algorithm.' Comment.Single
+'\n'          Text.Whitespace
+
+'// It is an adaptation of the algorithm in ML as described by JeanChristophe Filli�tre:' Comment.Single
+'\n'          Text.Whitespace
+
+"// in ''A functional implementation of the GarsiaWachs algorithm. (functional pearl). ML workshop 2008, pages 91--96''." Comment.Single
+'\n'          Text.Whitespace
+
+'// See: http://www.lri.fr/~filliatr/publis/gwWml08.pdf' Comment.Single
+'\n'          Text.Whitespace
+
+'//'          Comment.Single
+'\n'          Text.Whitespace
+
+'// The algorithm is interesting since it uses mutable references shared between a list and tree but the' Comment.Single
+'\n'          Text.Whitespace
+
+'// side effects are not observable from outside. Koka automatically infers that the final algorithm is pure.' Comment.Single
+'\n'          Text.Whitespace
+
+'// Note: due to a current limitation in the divergence analysis, koka cannot yet infer that mutually recursive' Comment.Single
+'\n'          Text.Whitespace
+
+'// definitions in "insert" and "extract" are terminating and the final algorithm still has a divergence effect.' Comment.Single
+'\n'          Text.Whitespace
+
+'// However, koka does infer that no other effect (i.e. an exception due to a partial match) can occur.' Comment.Single
+'\n'          Text.Whitespace
+
+'module'      Keyword
+' '           Text.Whitespace
+'garcsiaWachs' Name.Namespace
+'\n\n'        Text.Whitespace
+
+'import'      Keyword
+' '           Text.Whitespace
+'test'        Name.Namespace
+' '           Text.Whitespace
+'='           Keyword
+' '           Text.Whitespace
+'qualified'   Keyword
+' '           Text.Whitespace
+'std/flags'   Name.Namespace
+'\n\n'        Text.Whitespace
+
+'# pre processor test' Comment.Preproc
+'\n\n'        Text.Whitespace
+
+'public'      Keyword
+' '           Text.Whitespace
+'function'    Keyword
+' '           Text.Whitespace
+'main'        Name.Function
+'('           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n  '        Text.Whitespace
+'wlist'       Name
+' '           Text.Whitespace
+'='           Keyword
+' '           Text.Whitespace
+'Cons1'       Generic.Emph
+'('           Punctuation
+'('           Punctuation
+"'"           Literal.String.Char
+'a'           Literal.String.Char
+"'"           Literal.String.Char
+','           Punctuation
+'3'           Literal.Number.Integer
+')'           Punctuation
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'('           Punctuation
+"'"           Literal.String.Char
+'b'           Literal.String.Char
+"'"           Literal.String.Char
+','           Punctuation
+'2'           Literal.Number.Integer
+')'           Punctuation
+','           Punctuation
+'('           Punctuation
+"'"           Literal.String.Char
+'c'           Literal.String.Char
+"'"           Literal.String.Char
+','           Punctuation
+'1'           Literal.Number.Integer
+')'           Punctuation
+','           Punctuation
+'('           Punctuation
+"'"           Literal.String.Char
+'d'           Literal.String.Char
+"'"           Literal.String.Char
+','           Punctuation
+'4'           Literal.Number.Integer
+')'           Punctuation
+','           Punctuation
+'('           Punctuation
+"'"           Literal.String.Char
+'e'           Literal.String.Char
+"'"           Literal.String.Char
+','           Punctuation
+'5'           Literal.Number.Integer
+')'           Punctuation
+']'           Punctuation
+')'           Punctuation
+'\n  '        Text.Whitespace
+'tree'        Name
+'  '          Text.Whitespace
+'='           Keyword
+' '           Text.Whitespace
+'wlist'       Name
+'.'           Keyword
+'garsiaWachs' Name
+'('           Punctuation
+')'           Punctuation
+'\n  '        Text.Whitespace
+'tree'        Name
+'.'           Keyword
+'show'        Name
+'.'           Keyword
+'println'     Name
+'('           Punctuation
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n\n'        Text.Whitespace
+
+'//----------------------------------------------------' Comment.Single
+'\n'          Text.Whitespace
+
+'// Trees'    Comment.Single
+'\n'          Text.Whitespace
+
+'//----------------------------------------------------' Comment.Single
+'\n'          Text.Whitespace
+
+'public'      Keyword
+' '           Text.Whitespace
+'type'        Keyword
+' '           Text.Whitespace
+'tree'        Name.Class
+'<'           Name.Attribute
+'a'           Name.Attribute
+'>'           Name.Attribute
+' '           Text.Whitespace
+'{'           Punctuation
+'\n  '        Text.Whitespace
+'con'         Keyword
+' '           Text.Whitespace
+'Leaf'        Generic.Emph
+'('           Punctuation
+'value'       Name
+' '           Text.Whitespace
+':'           Name.Attribute
+'a'           Name.Attribute
+')'           Punctuation
+'\n  '        Text.Whitespace
+'con'         Keyword
+' '           Text.Whitespace
+'Node'        Generic.Emph
+'('           Punctuation
+'left'        Name
+' '           Text.Whitespace
+':'           Name.Attribute
+'tree'        Name.Attribute
+'<'           Name.Attribute
+'a'           Name.Attribute
+'>'           Name.Attribute
+','           Punctuation
+' '           Text.Whitespace
+'right'       Name
+' '           Text.Whitespace
+':'           Name.Attribute
+'tree'        Name.Attribute
+'<'           Name.Attribute
+'a'           Name.Attribute
+'>'           Name.Attribute
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n\n'        Text.Whitespace
+
+'function'    Keyword
+' '           Text.Whitespace
+'show'        Name.Function
+'('           Punctuation
+' '           Text.Whitespace
+'t'           Name
+' '           Text.Whitespace
+':'           Name.Attribute
+' '           Text.Whitespace
+'tree'        Name.Attribute
+'<'           Name.Attribute
+'char'        Name.Attribute
+'>'           Name.Attribute
+' '           Text.Whitespace
+')'           Punctuation
+' '           Text.Whitespace
+':'           Name.Attribute
+' '           Text.Whitespace
+'string'      Name.Attribute
+' '           Text.Whitespace
+'{'           Punctuation
+'\n  '        Text.Whitespace
+'match'       Keyword
+'('           Punctuation
+'t'           Name
+')'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n    '      Text.Whitespace
+'Leaf'        Generic.Emph
+'('           Punctuation
+'c'           Name
+')'           Punctuation
+' '           Text.Whitespace
+'->'          Keyword
+' '           Text.Whitespace
+'core/'       Name.Namespace
+'show'        Name
+'('           Punctuation
+'c'           Name
+')'           Punctuation
+'  \n    '    Text.Whitespace
+'Node'        Generic.Emph
+'('           Punctuation
+'l'           Name
+','           Punctuation
+'r'           Name
+')'           Punctuation
+' '           Text.Whitespace
+'->'          Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'Node('       Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+'show'        Name
+'('           Punctuation
+'l'           Name
+')'           Punctuation
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+'"'           Literal.String.Double
+','           Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+'show'        Name
+'('           Punctuation
+'r'           Name
+')'           Punctuation
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+'"'           Literal.String.Double
+')'           Literal.String.Double
+'"'           Literal.String.Double
+'\n  '        Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n\n\n'      Text.Whitespace
+
+'//----------------------------------------------------' Comment.Single
+'\n'          Text.Whitespace
+
+'// Non empty lists' Comment.Single
+'\n'          Text.Whitespace
+
+'//----------------------------------------------------' Comment.Single
+'\n'          Text.Whitespace
+
+'public'      Keyword
+' '           Text.Whitespace
+'type'        Keyword
+' '           Text.Whitespace
+'list1'       Name.Class
+'<'           Name.Attribute
+'a'           Name.Attribute
+'>'           Name.Attribute
+' '           Text.Whitespace
+'{'           Punctuation
+'\n  '        Text.Whitespace
+'Cons1'       Generic.Emph
+'('           Punctuation
+' '           Text.Whitespace
+'head'        Name
+' '           Text.Whitespace
+':'           Name.Attribute
+' '           Text.Whitespace
+'a'           Name.Attribute
+','           Punctuation
+' '           Text.Whitespace
+'tail'        Name
+' '           Text.Whitespace
+':'           Name.Attribute
+' '           Text.Whitespace
+'list'        Name.Attribute
+'<'           Name.Attribute
+'a'           Name.Attribute
+'>'           Name.Attribute
+' '           Text.Whitespace
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n\n'        Text.Whitespace
+
+'function'    Keyword
+' '           Text.Whitespace
+'map'         Name.Function
+'('           Punctuation
+' '           Text.Whitespace
+'xs'          Name
+','           Punctuation
+' '           Text.Whitespace
+'f'           Name
+' '           Text.Whitespace
+')'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n  '        Text.Whitespace
+'val'         Keyword
+' '           Text.Whitespace
+'Cons1'       Generic.Emph
+'('           Punctuation
+'y'           Name
+','           Punctuation
+'ys'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'='           Keyword
+' '           Text.Whitespace
+'xs'          Name
+'\n  '        Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'Cons1'       Generic.Emph
+'('           Punctuation
+'f'           Name
+'('           Punctuation
+'y'           Name
+')'           Punctuation
+','           Punctuation
+' '           Text.Whitespace
+'core/'       Name.Namespace
+'map'         Name
+'('           Punctuation
+'ys'          Name
+','           Punctuation
+'f'           Name
+')'           Punctuation
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n\n'        Text.Whitespace
+
+'function'    Keyword
+' '           Text.Whitespace
+'zip'         Name.Function
+'('           Punctuation
+' '           Text.Whitespace
+'xs'          Name
+' '           Text.Whitespace
+':'           Name.Attribute
+'list1'       Name.Attribute
+'<'           Name.Attribute
+'a'           Name.Attribute
+'>'           Name.Attribute
+','           Punctuation
+' '           Text.Whitespace
+'ys'          Name
+' '           Text.Whitespace
+':'           Name.Attribute
+'list1'       Name.Attribute
+'<'           Name.Attribute
+'b'           Name.Attribute
+'>'           Name.Attribute
+' '           Text.Whitespace
+')'           Punctuation
+' '           Text.Whitespace
+':'           Name.Attribute
+' '           Text.Whitespace
+'list1'       Name.Attribute
+'<'           Name.Attribute
+'('           Name.Attribute
+'a'           Name.Attribute
+','           Name.Attribute
+'b'           Name.Attribute
+')'           Name.Attribute
+'>'           Name.Attribute
+' '           Text.Whitespace
+'{'           Punctuation
+'\n  '        Text.Whitespace
+'Cons1'       Generic.Emph
+'('           Punctuation
+' '           Text.Whitespace
+'('           Punctuation
+'xs'          Name
+'.'           Keyword
+'head'        Name
+','           Punctuation
+' '           Text.Whitespace
+'ys'          Name
+'.'           Keyword
+'head'        Name
+')'           Punctuation
+','           Punctuation
+' '           Text.Whitespace
+'zip'         Name
+'('           Punctuation
+'xs'          Name
+'.'           Keyword
+'tail'        Name
+','           Punctuation
+' '           Text.Whitespace
+'ys'          Name
+'.'           Keyword
+'tail'        Name
+')'           Punctuation
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n\n\n'      Text.Whitespace
+
+'//----------------------------------------------------' Comment.Single
+'\n'          Text.Whitespace
+
+'// Phase 1'  Comment.Single
+'\n'          Text.Whitespace
+
+'//----------------------------------------------------' Comment.Single
+'\n\n'        Text.Whitespace
+
+'function'    Keyword
+' '           Text.Whitespace
+'insert'      Name.Function
+'('           Punctuation
+' '           Text.Whitespace
+'after'       Name
+' '           Text.Whitespace
+':'           Name.Attribute
+' '           Text.Whitespace
+'list'        Name.Attribute
+'<'           Name.Attribute
+'('           Name.Attribute
+'tree'        Name.Attribute
+'<'           Name.Attribute
+'a'           Name.Attribute
+'>'           Name.Attribute
+','           Name.Attribute
+'int'         Name.Attribute
+')'           Name.Attribute
+'>'           Name.Attribute
+','           Punctuation
+' '           Text.Whitespace
+'t'           Name
+' '           Text.Whitespace
+':'           Name.Attribute
+' '           Text.Whitespace
+'('           Name.Attribute
+'tree'        Name.Attribute
+'<'           Name.Attribute
+'a'           Name.Attribute
+'>'           Name.Attribute
+','           Name.Attribute
+'int'         Name.Attribute
+')'           Name.Attribute
+','           Punctuation
+' '           Text.Whitespace
+'before'      Name
+' '           Text.Whitespace
+':'           Name.Attribute
+' '           Text.Whitespace
+'list'        Name.Attribute
+'<'           Name.Attribute
+'('           Name.Attribute
+'tree'        Name.Attribute
+'<'           Name.Attribute
+'a'           Name.Attribute
+'>'           Name.Attribute
+','           Name.Attribute
+'int'         Name.Attribute
+')'           Name.Attribute
+'>'           Name.Attribute
+' '           Text.Whitespace
+')'           Punctuation
+' '           Text.Whitespace
+':'           Name.Attribute
+' '           Text.Whitespace
+'div'         Name.Attribute
+' '           Text.Whitespace
+'tree'        Name.Attribute
+'<'           Name.Attribute
+'a'           Name.Attribute
+'>'           Name.Attribute
+'\n'          Text.Whitespace
+
+'{'           Punctuation
+'\n  '        Text.Whitespace
+'match'       Keyword
+'('           Punctuation
+'before'      Name
+')'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n    '      Text.Whitespace
+'Nil'         Generic.Emph
+' '           Text.Whitespace
+'->'          Keyword
+' '           Text.Whitespace
+'extract'     Name
+'('           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+']'           Punctuation
+','           Punctuation
+' '           Text.Whitespace
+'Cons1'       Generic.Emph
+'('           Punctuation
+'t'           Name
+','           Punctuation
+'after'       Name
+')'           Punctuation
+' '           Text.Whitespace
+')'           Punctuation
+'\n    '      Text.Whitespace
+'Cons'        Generic.Emph
+'('           Punctuation
+'x'           Name
+','           Punctuation
+'xs'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'->'          Keyword
+' '           Text.Whitespace
+'{'           Punctuation
+'\n      '    Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'x'           Name
+'.'           Keyword
+'snd'         Name
+' '           Text.Whitespace
+'<'           Operator
+' '           Text.Whitespace
+'t'           Name
+'.'           Keyword
+'snd'         Name
+')'           Punctuation
+' '           Text.Whitespace
+'then'        Keyword
+' '           Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'insert'      Name
+'('           Punctuation
+' '           Text.Whitespace
+'Cons'        Generic.Emph
+'('           Punctuation
+'x'           Name
+','           Punctuation
+'after'       Name
+')'           Punctuation
+','           Punctuation
+' '           Text.Whitespace
+'t'           Name
+','           Punctuation
+' '           Text.Whitespace
+'xs'          Name
+' '           Text.Whitespace
+')'           Punctuation
+'\n      '    Text.Whitespace
+'match'       Keyword
+'('           Punctuation
+'xs'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n        '  Text.Whitespace
+'Nil'         Generic.Emph
+'        '    Text.Whitespace
+'->'          Keyword
+' '           Text.Whitespace
+'extract'     Name
+'('           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+']'           Punctuation
+','           Punctuation
+' '           Text.Whitespace
+'Cons1'       Generic.Emph
+'('           Punctuation
+'x'           Name
+','           Punctuation
+'Cons'        Generic.Emph
+'('           Punctuation
+'t'           Name
+','           Punctuation
+'after'       Name
+')'           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+')'           Punctuation
+'\n        '  Text.Whitespace
+'Cons'        Generic.Emph
+'('           Punctuation
+'y'           Name
+','           Punctuation
+'ys'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'->'          Keyword
+' '           Text.Whitespace
+'extract'     Name
+'('           Punctuation
+' '           Text.Whitespace
+'ys'          Name
+','           Punctuation
+' '           Text.Whitespace
+'Cons1'       Generic.Emph
+'('           Punctuation
+'y'           Name
+','           Punctuation
+'Cons'        Generic.Emph
+'('           Punctuation
+'x'           Name
+','           Punctuation
+'Cons'        Generic.Emph
+'('           Punctuation
+'t'           Name
+','           Punctuation
+'after'       Name
+')'           Punctuation
+')'           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+')'           Punctuation
+'\n      '    Text.Whitespace
+'}'           Punctuation
+'\n    '      Text.Whitespace
+'}'           Punctuation
+'\n  '        Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n\n'        Text.Whitespace
+
+'function'    Keyword
+' '           Text.Whitespace
+'extract'     Name.Function
+'('           Punctuation
+' '           Text.Whitespace
+'before'      Name
+' '           Text.Whitespace
+':'           Name.Attribute
+' '           Text.Whitespace
+'list'        Name.Attribute
+'<'           Name.Attribute
+'('           Name.Attribute
+'tree'        Name.Attribute
+'<'           Name.Attribute
+'a'           Name.Attribute
+'>'           Name.Attribute
+','           Name.Attribute
+'int'         Name.Attribute
+')'           Name.Attribute
+'>'           Name.Attribute
+','           Punctuation
+' '           Text.Whitespace
+'after'       Name
+' '           Text.Whitespace
+':'           Name.Attribute
+' '           Text.Whitespace
+'list1'       Name.Attribute
+'<'           Name.Attribute
+'('           Name.Attribute
+'tree'        Name.Attribute
+'<'           Name.Attribute
+'a'           Name.Attribute
+'>'           Name.Attribute
+','           Name.Attribute
+'int'         Name.Attribute
+')'           Name.Attribute
+'>'           Name.Attribute
+' '           Text.Whitespace
+')'           Punctuation
+' '           Text.Whitespace
+':'           Name.Attribute
+' '           Text.Whitespace
+'div'         Name.Attribute
+' '           Text.Whitespace
+'tree'        Name.Attribute
+'<'           Name.Attribute
+'a'           Name.Attribute
+'>'           Name.Attribute
+'\n'          Text.Whitespace
+
+'{'           Punctuation
+'\n  '        Text.Whitespace
+'val'         Keyword
+' '           Text.Whitespace
+'Cons1'       Generic.Emph
+'('           Punctuation
+'('           Punctuation
+'t1'          Name
+','           Punctuation
+'w1'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'as'          Keyword
+' '           Text.Whitespace
+'x'           Name
+','           Punctuation
+' '           Text.Whitespace
+'xs'          Name
+' '           Text.Whitespace
+')'           Punctuation
+' '           Text.Whitespace
+'='           Keyword
+' '           Text.Whitespace
+'after'       Name
+'\n  '        Text.Whitespace
+'match'       Keyword
+'('           Punctuation
+'xs'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n    '      Text.Whitespace
+'Nil'         Generic.Emph
+' '           Text.Whitespace
+'->'          Keyword
+' '           Text.Whitespace
+'t1'          Name
+'\n    '      Text.Whitespace
+'Cons'        Generic.Emph
+'('           Punctuation
+'('           Punctuation
+'t2'          Name
+','           Punctuation
+'w2'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'as'          Keyword
+' '           Text.Whitespace
+'y'           Name
+','           Punctuation
+' '           Text.Whitespace
+'ys'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'->'          Keyword
+' '           Text.Whitespace
+'match'       Keyword
+'('           Punctuation
+'ys'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n      '    Text.Whitespace
+'Nil'         Generic.Emph
+' '           Text.Whitespace
+'->'          Keyword
+' '           Text.Whitespace
+'insert'      Name
+'('           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+']'           Punctuation
+','           Punctuation
+' '           Text.Whitespace
+'('           Punctuation
+'Node'        Generic.Emph
+'('           Punctuation
+'t1'          Name
+','           Punctuation
+'t2'          Name
+')'           Punctuation
+','           Punctuation
+' '           Text.Whitespace
+'w1'          Name
+'+'           Operator
+'w2'          Name
+')'           Punctuation
+','           Punctuation
+' '           Text.Whitespace
+'before'      Name
+' '           Text.Whitespace
+')'           Punctuation
+'\n      '    Text.Whitespace
+'Cons'        Generic.Emph
+'('           Punctuation
+'('           Punctuation
+'_'           Name.Variable
+','           Punctuation
+'w3'          Name
+')'           Punctuation
+','           Punctuation
+'_zs'         Name.Variable
+')'           Punctuation
+' '           Text.Whitespace
+'->'          Keyword
+'\n        '  Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'w1'          Name
+' '           Text.Whitespace
+'<='          Operator
+' '           Text.Whitespace
+'w3'          Name
+')'           Punctuation
+'\n         ' Text.Whitespace
+'then'        Keyword
+' '           Text.Whitespace
+'insert'      Name
+'('           Punctuation
+'ys'          Name
+','           Punctuation
+' '           Text.Whitespace
+'('           Punctuation
+'Node'        Generic.Emph
+'('           Punctuation
+'t1'          Name
+','           Punctuation
+'t2'          Name
+')'           Punctuation
+','           Punctuation
+' '           Text.Whitespace
+'w1'          Name
+'+'           Operator
+'w2'          Name
+')'           Punctuation
+','           Punctuation
+' '           Text.Whitespace
+'before'      Name
+')'           Punctuation
+'\n         ' Text.Whitespace
+'else'        Keyword
+' '           Text.Whitespace
+'extract'     Name
+'('           Punctuation
+'Cons'        Generic.Emph
+'('           Punctuation
+'x'           Name
+','           Punctuation
+'before'      Name
+')'           Punctuation
+','           Punctuation
+' '           Text.Whitespace
+'Cons1'       Generic.Emph
+'('           Punctuation
+'y'           Name
+','           Punctuation
+'ys'          Name
+')'           Punctuation
+')'           Punctuation
+'\n    '      Text.Whitespace
+'}'           Punctuation
+'\n  '        Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n\n'        Text.Whitespace
+
+'function'    Keyword
+' '           Text.Whitespace
+'balance'     Name.Function
+'('           Punctuation
+' '           Text.Whitespace
+'xs'          Name
+' '           Text.Whitespace
+':'           Name.Attribute
+' '           Text.Whitespace
+'list1'       Name.Attribute
+'<'           Name.Attribute
+'('           Name.Attribute
+'tree'        Name.Attribute
+'<'           Name.Attribute
+'a'           Name.Attribute
+'>'           Name.Attribute
+','           Name.Attribute
+'int'         Name.Attribute
+')'           Name.Attribute
+'>'           Name.Attribute
+' '           Text.Whitespace
+')'           Punctuation
+' '           Text.Whitespace
+':'           Name.Attribute
+' '           Text.Whitespace
+'div'         Name.Attribute
+' '           Text.Whitespace
+'tree'        Name.Attribute
+'<'           Name.Attribute
+'a'           Name.Attribute
+'>'           Name.Attribute
+' '           Text.Whitespace
+'{'           Punctuation
+'\n  '        Text.Whitespace
+'extract'     Name
+'('           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+']'           Punctuation
+','           Punctuation
+' '           Text.Whitespace
+'xs'          Name
+' '           Text.Whitespace
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n\n'        Text.Whitespace
+
+'//----------------------------------------------------' Comment.Single
+'\n'          Text.Whitespace
+
+'// Phase 2'  Comment.Single
+'\n'          Text.Whitespace
+
+'//----------------------------------------------------' Comment.Single
+'\n\n'        Text.Whitespace
+
+'function'    Keyword
+' '           Text.Whitespace
+'mark'        Name.Function
+'('           Punctuation
+' '           Text.Whitespace
+'depth'       Name
+' '           Text.Whitespace
+':'           Name.Attribute
+'int'         Name.Attribute
+','           Punctuation
+' '           Text.Whitespace
+'t'           Name
+' '           Text.Whitespace
+':'           Name.Attribute
+'tree'        Name.Attribute
+'<'           Name.Attribute
+'('           Name.Attribute
+'a'           Name.Attribute
+','           Name.Attribute
+'ref'         Name.Attribute
+'<'           Name.Attribute
+'h'           Name.Attribute
+','           Name.Attribute
+'int'         Name.Attribute
+'>'           Name.Attribute
+')'           Name.Attribute
+'>'           Name.Attribute
+' '           Text.Whitespace
+')'           Punctuation
+' '           Text.Whitespace
+':'           Name.Attribute
+' '           Text.Whitespace
+'<'           Name.Attribute
+'write'       Name.Attribute
+'<'           Name.Attribute
+'h'           Name.Attribute
+'>'           Name.Attribute
+'>'           Name.Attribute
+' '           Text.Whitespace
+'('           Name.Attribute
+')'           Name.Attribute
+' '           Text.Whitespace
+'{'           Punctuation
+'\n  '        Text.Whitespace
+'match'       Keyword
+'('           Punctuation
+'t'           Name
+')'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n    '      Text.Whitespace
+'Leaf'        Generic.Emph
+'('           Punctuation
+'('           Punctuation
+'_'           Name.Variable
+','           Punctuation
+'d'           Name
+')'           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'->'          Keyword
+' '           Text.Whitespace
+'d'           Name
+' '           Text.Whitespace
+':'           Keyword
+'='           Keyword
+' '           Text.Whitespace
+'depth'       Name
+'\n    '      Text.Whitespace
+'Node'        Generic.Emph
+'('           Punctuation
+'l'           Name
+','           Punctuation
+'r'           Name
+')'           Punctuation
+'   '         Text.Whitespace
+'->'          Keyword
+' '           Text.Whitespace
+'{'           Punctuation
+' '           Text.Whitespace
+'mark'        Name
+'('           Punctuation
+'depth'       Name
+'+'           Operator
+'1'           Literal.Number.Integer
+','           Punctuation
+'l'           Name
+')'           Punctuation
+';'           Punctuation
+' '           Text.Whitespace
+'mark'        Name
+'('           Punctuation
+'depth'       Name
+'+'           Operator
+'1'           Literal.Number.Integer
+','           Punctuation
+'r'           Name
+')'           Punctuation
+' '           Text.Whitespace
+'}'           Punctuation
+'\n  '        Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n\n'        Text.Whitespace
+
+'function'    Keyword
+' '           Text.Whitespace
+'build'       Name.Function
+'('           Punctuation
+' '           Text.Whitespace
+'depth'       Name
+' '           Text.Whitespace
+':'           Name.Attribute
+'int'         Name.Attribute
+','           Punctuation
+' '           Text.Whitespace
+'xs'          Name
+' '           Text.Whitespace
+':'           Name.Attribute
+'list1'       Name.Attribute
+'<'           Name.Attribute
+'('           Name.Attribute
+'a'           Name.Attribute
+','           Name.Attribute
+'ref'         Name.Attribute
+'<'           Name.Attribute
+'h'           Name.Attribute
+','           Name.Attribute
+'int'         Name.Attribute
+'>'           Name.Attribute
+')'           Name.Attribute
+'>'           Name.Attribute
+' '           Text.Whitespace
+')'           Punctuation
+' '           Text.Whitespace
+':'           Name.Attribute
+' '           Text.Whitespace
+'<'           Name.Attribute
+'read'        Name.Attribute
+'<'           Name.Attribute
+'h'           Name.Attribute
+'>'           Name.Attribute
+','           Name.Attribute
+'div'         Name.Attribute
+'>'           Name.Attribute
+' '           Text.Whitespace
+'('           Name.Attribute
+'tree'        Name.Attribute
+'<'           Name.Attribute
+'a'           Name.Attribute
+'>'           Name.Attribute
+','           Name.Attribute
+'list'        Name.Attribute
+'<'           Name.Attribute
+'('           Name.Attribute
+'a'           Name.Attribute
+','           Name.Attribute
+'ref'         Name.Attribute
+'<'           Name.Attribute
+'h'           Name.Attribute
+','           Name.Attribute
+'int'         Name.Attribute
+'>'           Name.Attribute
+')'           Name.Attribute
+'>'           Name.Attribute
+')'           Name.Attribute
+'\n'          Text.Whitespace
+
+'{'           Punctuation
+'\n  '        Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'!'           Operator
+'('           Punctuation
+'xs'          Name
+'.'           Keyword
+'head'        Name
+'.'           Keyword
+'snd'         Name
+')'           Punctuation
+' '           Text.Whitespace
+'=='          Operator
+' '           Text.Whitespace
+'depth'       Name
+')'           Punctuation
+' '           Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'Leaf'        Generic.Emph
+'('           Punctuation
+'xs'          Name
+'.'           Keyword
+'head'        Name
+'.'           Keyword
+'fst'         Name
+')'           Punctuation
+','           Punctuation
+' '           Text.Whitespace
+'xs'          Name
+'.'           Keyword
+'tail'        Name
+')'           Punctuation
+'\n\n  '      Text.Whitespace
+'l'           Name
+' '           Text.Whitespace
+'='           Keyword
+' '           Text.Whitespace
+'build'       Name
+'('           Punctuation
+'depth'       Name
+'+'           Operator
+'1'           Literal.Number.Integer
+','           Punctuation
+' '           Text.Whitespace
+'xs'          Name
+')'           Punctuation
+'\n  '        Text.Whitespace
+'match'       Keyword
+'('           Punctuation
+'l'           Name
+'.'           Keyword
+'snd'         Name
+')'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n    '      Text.Whitespace
+'Nil'         Generic.Emph
+' '           Text.Whitespace
+'->'          Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'l'           Name
+'.'           Keyword
+'fst'         Name
+','           Punctuation
+' '           Text.Whitespace
+'Nil'         Generic.Emph
+')'           Punctuation
+'\n    '      Text.Whitespace
+'Cons'        Generic.Emph
+'('           Punctuation
+'y'           Name
+','           Punctuation
+'ys'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'->'          Keyword
+' '           Text.Whitespace
+'{'           Punctuation
+'\n      '    Text.Whitespace
+'r'           Name
+' '           Text.Whitespace
+'='           Keyword
+' '           Text.Whitespace
+'build'       Name
+'('           Punctuation
+'depth'       Name
+'+'           Operator
+'1'           Literal.Number.Integer
+','           Punctuation
+' '           Text.Whitespace
+'Cons1'       Generic.Emph
+'('           Punctuation
+'y'           Name
+','           Punctuation
+'ys'          Name
+')'           Punctuation
+')'           Punctuation
+'\n      '    Text.Whitespace
+'('           Punctuation
+'Node'        Generic.Emph
+'('           Punctuation
+'l'           Name
+'.'           Keyword
+'fst'         Name
+','           Punctuation
+'r'           Name
+'.'           Keyword
+'fst'         Name
+')'           Punctuation
+','           Punctuation
+' '           Text.Whitespace
+'r'           Name
+'.'           Keyword
+'snd'         Name
+')'           Punctuation
+'\n    '      Text.Whitespace
+'}'           Punctuation
+'\n  '        Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n\n'        Text.Whitespace
+
+'//----------------------------------------------------' Comment.Single
+'\n'          Text.Whitespace
+
+'// Main'     Comment.Single
+'\n'          Text.Whitespace
+
+'//----------------------------------------------------' Comment.Single
+'\n\n'        Text.Whitespace
+
+'public'      Keyword
+' '           Text.Whitespace
+'function'    Keyword
+' '           Text.Whitespace
+'garsiaWachs' Name.Function
+'('           Punctuation
+' '           Text.Whitespace
+'xs'          Name
+' '           Text.Whitespace
+':'           Name.Attribute
+' '           Text.Whitespace
+'list1'       Name.Attribute
+'<'           Name.Attribute
+'('           Name.Attribute
+'a'           Name.Attribute
+','           Name.Attribute
+'int'         Name.Attribute
+')'           Name.Attribute
+'>'           Name.Attribute
+' '           Text.Whitespace
+')'           Punctuation
+' '           Text.Whitespace
+':'           Name.Attribute
+' '           Text.Whitespace
+'div'         Name.Attribute
+' '           Text.Whitespace
+'tree'        Name.Attribute
+'<'           Name.Attribute
+'a'           Name.Attribute
+'>'           Name.Attribute
+'\n'          Text.Whitespace
+
+'{'           Punctuation
+'\n  '        Text.Whitespace
+'refs'        Name
+'   '         Text.Whitespace
+'='           Keyword
+' '           Text.Whitespace
+'xs'          Name
+'.'           Keyword
+'map'         Name
+'('           Punctuation
+'fst'         Name
+')'           Punctuation
+'.'           Keyword
+'map'         Name
+'('           Punctuation
+' '           Text.Whitespace
+'fun'         Keyword
+'('           Punctuation
+'x'           Name
+')'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+' '           Text.Whitespace
+'('           Punctuation
+'x'           Name
+','           Punctuation
+' '           Text.Whitespace
+'ref'         Keyword.Pseudo
+'('           Punctuation
+'0'           Literal.Number.Integer
+')'           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'}'           Punctuation
+' '           Text.Whitespace
+')'           Punctuation
+'\n  '        Text.Whitespace
+'wleafs'      Name
+' '           Text.Whitespace
+'='           Keyword
+' '           Text.Whitespace
+'zip'         Name
+'('           Punctuation
+' '           Text.Whitespace
+'refs'        Name
+'.'           Keyword
+'map'         Name
+'('           Punctuation
+'Leaf'        Generic.Emph
+')'           Punctuation
+','           Punctuation
+' '           Text.Whitespace
+'xs'          Name
+'.'           Keyword
+'map'         Name
+'('           Punctuation
+'snd'         Name
+')'           Punctuation
+' '           Text.Whitespace
+')'           Punctuation
+'\n\n  '      Text.Whitespace
+'tree'        Name
+' '           Text.Whitespace
+'='           Keyword
+' '           Text.Whitespace
+'balance'     Name
+'('           Punctuation
+'wleafs'      Name
+')'           Punctuation
+'\n  '        Text.Whitespace
+'mark'        Name
+'('           Punctuation
+'0'           Literal.Number.Integer
+','           Punctuation
+'tree'        Name
+')'           Punctuation
+'\n  '        Text.Whitespace
+'build'       Name
+'('           Punctuation
+'0'           Literal.Number.Integer
+','           Punctuation
+'refs'        Name
+')'           Punctuation
+'.'           Keyword
+'fst'         Name
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n'          Text.Whitespace

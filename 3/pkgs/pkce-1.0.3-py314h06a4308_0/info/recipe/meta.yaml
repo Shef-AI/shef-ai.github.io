@@ -1,0 +1,78 @@
+# This file created by conda-build 25.5.0
+# meta.yaml template originally from:
+# /work/buildout/aggregate/pkce-feedstock/recipe, last modified Tue Oct  7 21:55:00 2025
+# ------------------------------------------------
+
+package:
+  name: pkce
+  version: 1.0.3
+source:
+  url: https://pypi.io/packages/source/p/pkce/pkce-1.0.3.tar.gz
+  sha256: 9775fd76d8a743d39b87df38af1cd04a58c9b5a5242d5a6350ef343d06814ab6
+build:
+  script: /work/buildout/croot/pkce_1759959950455/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol/bin/python
+    -m pip install . -vv --no-deps --no-build-isolation
+  number: '0'
+  string: py314h06a4308_0
+requirements:
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - bzip2 1.0.8 h5eee18b_6
+    - ca-certificates 2025.9.9 h06a4308_0
+    - expat 2.7.1 h6a678d5_0
+    - ld_impl_linux-64 2.44 h153f514_2
+    - libffi 3.4.4 h6a678d5_1
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libmpdec 4.0.0 h5eee18b_0
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - libuuid 1.41.5 h5eee18b_0
+    - libxcb 1.17.0 h9b100fa_0
+    - libzlib 1.3.1 hb25bd0a_0
+    - lz4-c 1.9.4 h6a678d5_1
+    - ncurses 6.5 h7934f7d_0
+    - openssl 3.0.18 hd6dcaed_0
+    - pip 25.1 pyh0d26453_1
+    - pthread-stubs 0.3 h0ce48e5_1
+    - python 3.14.0 h3fc5862_100_cp314
+    - python_abi 3.14 1_cp314
+    - readline 8.3 hc2a1206_0
+    - setuptools 78.1.1 py314h06a4308_0
+    - sqlite 3.50.2 hb25bd0a_1
+    - tk 8.6.15 h54e0aa7_0
+    - tzdata 2025b h04d1e81_0
+    - wheel 0.45.1 py314h06a4308_0
+    - xorg-libx11 1.8.12 h9b100fa_1
+    - xorg-libxau 1.0.12 h9b100fa_0
+    - xorg-libxdmcp 1.1.5 h9b100fa_0
+    - xorg-xorgproto 2024.1 h5eee18b_1
+    - xz 5.6.4 h5eee18b_1
+    - zlib 1.3.1 hb25bd0a_0
+    - zstd 1.5.7 h11fc155_0
+  run:
+    - python >=3.14,<3.15.0a0
+    - python_abi 3.14.* *_cp314
+test:
+  imports:
+    - pkce
+  commands:
+    - pip check
+  requires:
+    - pip
+about:
+  home: https://github.com/RomeoDespres/pkce
+  summary: PKCE Python generator.
+  description: A simple Python module to generate PKCE code verifier and code challenge
+  license: MIT
+  license_file: LICENSE
+  license_family: MIT
+  dev_url: https://github.com/RomeoDespres/pkce
+  doc_url: https://github.com/RomeoDespres/pkce
+extra:
+  recipe-maintainers:
+    - AlbertDeFusco
+    - mattkram
+  final: true
+  copy_test_source_files: true
+  tool: perseverence-python-buildout

@@ -1,0 +1,23 @@
+{
+  "arch": "x86_64",
+  "build": "h34b0ebb_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.28,<3.0.a0",
+    "libgcc >=14"
+  ],
+  "fn": "libunistring-1.4.2-h34b0ebb_0.conda",
+  "license": "LGPL-3.0-only",
+  "license_family": "LGPL",
+  "md5": "e79c628574f0ed3b60bd63e6d78501a1",
+  "name": "libunistring",
+  "platform": "linux",
+  "sha256": "5d93f88055782e98e7026632aa161bd46ebef47067811e25ba19ee0c4f4bad13",
+  "size": 671850,
+  "subdir": "linux-64",
+  "timestamp": 1777465777000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/libunistring-1.4.2-h34b0ebb_0.conda",
+  "version": "1.4.2"
+}

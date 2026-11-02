@@ -1,0 +1,12 @@
+prefix=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3
+exec_prefix=${prefix}
+libdir=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/lib
+includedir=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/include
+
+Name: absl_flags_commandlineflag_internal
+Description: Abseil flags_commandlineflag_internal library
+URL: https://abseil.io/
+Version: 20260526
+Requires: absl_config = 20260526, absl_dynamic_annotations = 20260526, absl_fast_type_id = 20260526
+Libs: -L${libdir}  -labsl_flags_commandlineflag_internal 
+Cflags: -I${includedir} -DNOMINMAX

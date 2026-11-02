@@ -1,0 +1,272 @@
+# This file is dual licensed under the terms of the Apache License, Version
+# 2.0, and the BSD License. See the LICENSE file in the root of this repository
+# for complete details.
+
+
+import binascii
+import sys
+import typing
+
+import pytest
+
+from cryptography.exceptions import AlreadyFinalized, _Reasons
+from cryptography.hazmat.primitives import hashes
+
+from ...doubles import DummyHashAlgorithm
+from ...utils import raises_unsupported_algorithm
+from .utils import generate_base_hash_test
+
+
+class TestHashContext:
+    def test_hash_reject_unicode(self):
+        m = hashes.Hash(hashes.SHA1())
+        with pytest.raises(TypeError):
+            m.update(typing.cast(typing.Any, "\u00fc"))
+
+    def test_hash_algorithm_instance(self):
+        with pytest.raises(TypeError):
+            hashes.Hash(typing.cast(typing.Any, hashes.SHA1))
+
+    def test_raises_after_finalize(self):
+        h = hashes.Hash(hashes.SHA1())
+        h.finalize()
+
+        with pytest.raises(AlreadyFinalized):
+            h.update(b"foo")
+
+        with pytest.raises(AlreadyFinalized):
+            h.copy()
+
+        with pytest.raises(AlreadyFinalized):
+            h.finalize()
+
+    def test_unsupported_hash(self):
+        with raises_unsupported_algorithm(_Reasons.UNSUPPORTED_HASH):
+            hashes.Hash(DummyHashAlgorithm())
+
+
+@pytest.mark.supported(
+    only_if=lambda backend: backend.hash_supported(hashes.SHA1()),
+    skip_message="Does not support SHA1",
+)
+class TestSHA1:
+    test_sha1 = generate_base_hash_test(
+        hashes.SHA1(),
+        digest_size=20,
+    )
+
+
+class TestSHA224:
+    test_sha224 = generate_base_hash_test(
+        hashes.SHA224(),
+        digest_size=28,
+    )
+
+
+class TestSHA256:
+    test_sha256 = generate_base_hash_test(
+        hashes.SHA256(),
+        digest_size=32,
+    )
+
+
+class TestSHA384:
+    test_sha384 = generate_base_hash_test(
+        hashes.SHA384(),
+        digest_size=48,
+    )
+
+
+class TestSHA512:
+    test_sha512 = generate_base_hash_test(
+        hashes.SHA512(),
+        digest_size=64,
+    )
+
+
+@pytest.mark.supported(
+    only_if=lambda backend: backend.hash_supported(hashes.MD5()),
+    skip_message="Does not support MD5",
+)
+class TestMD5:
+    test_md5 = generate_base_hash_test(
+        hashes.MD5(),
+        digest_size=16,
+    )
+
+
+@pytest.mark.supported(
+    only_if=lambda backend: backend.hash_supported(
+        hashes.BLAKE2b(digest_size=64)
+    ),
+    skip_message="Does not support BLAKE2b",
+)
+class TestBLAKE2b:
+    test_blake2b = generate_base_hash_test(
+        hashes.BLAKE2b(digest_size=64),
+        digest_size=64,
+    )
+
+    def test_invalid_digest_size(self):
+        with pytest.raises(ValueError):
+            hashes.BLAKE2b(digest_size=65)
+
+        with pytest.raises(ValueError):
+            hashes.BLAKE2b(digest_size=0)
+
+        with pytest.raises(ValueError):
+            hashes.BLAKE2b(digest_size=-1)
+
+
+@pytest.mark.supported(
+    only_if=lambda backend: backend.hash_supported(
+        hashes.BLAKE2s(digest_size=32)
+    ),
+    skip_message="Does not support BLAKE2s",
+)
+class TestBLAKE2s:
+    test_blake2s = generate_base_hash_test(
+        hashes.BLAKE2s(digest_size=32),
+        digest_size=32,
+    )
+
+    def test_invalid_digest_size(self):
+        with pytest.raises(ValueError):
+            hashes.BLAKE2s(digest_size=33)
+
+        with pytest.raises(ValueError):
+            hashes.BLAKE2s(digest_size=0)
+
+        with pytest.raises(ValueError):
+            hashes.BLAKE2s(digest_size=-1)
+
+
+def test_non_contiguous_buffer_rejected():
+    h = hashes.Hash(hashes.SHA256())
+    with pytest.raises((TypeError, BufferError)):
+        h.update(memoryview(bytearray(10))[::-1])
+
+
+def test_buffer_protocol_hash():
+    data = binascii.unhexlify(b"b4190e")
+    h = hashes.Hash(hashes.SHA256())
+    h.update(bytearray(data))
+    assert h.finalize() == binascii.unhexlify(
+        b"dff2e73091f6c05e528896c4c831b9448653dc2ff043528f6769437bc7b975c2"
+    )
+
+
+class TestHashHash:
+    def test_hash(self):
+        digest = hashes.Hash.hash(hashes.SHA256(), b"hello world")
+        assert digest == (
+            b"\xb9M'\xb9\x93M>\x08\xa5.R\xd7\xda}\xab\xfa\xc4\x84\xef\xe3zS"
+            b"\x80\xee\x90\x88\xf7\xac\xe2\xef\xcd\xe9"
+        )
+
+    def test_hash_algorithm_instance(self):
+        with pytest.raises(TypeError):
+            hashes.Hash.hash(typing.cast(typing.Any, hashes.SHA1), b"data")
+
+    def test_hash_reject_unicode(self):
+        with pytest.raises(TypeError):
+            hashes.Hash.hash(
+                hashes.SHA256(), typing.cast(typing.Any, "\u00fc")
+            )
+
+    def test_hash_unsupported_algorithm(self):
+        with raises_unsupported_algorithm(_Reasons.UNSUPPORTED_HASH):
+            hashes.Hash.hash(DummyHashAlgorithm(), b"data")
+
+    @pytest.mark.supported(
+        only_if=lambda backend: backend.hash_supported(
+            hashes.SHAKE256(digest_size=32)
+        ),
+        skip_message="Requires backend with XOF support",
+    )
+    def test_hash_xof(self):
+        digest = hashes.Hash.hash(hashes.SHAKE256(32), b"data")
+        assert digest == (
+            b"\xc7=\xbe\xd8R\x7fZ\xe0V\x86y\xf3\x0e\xcc\\\xb6\x97\x8b!\x08"
+            b"\xe9\\\x86\x08\x84\xa6\\\x13\x1f\x99\xb9\xb9"
+        )
+
+
+class TestHashAlgorithmEquality:
+    @pytest.mark.parametrize(
+        "algorithm_cls",
+        [
+            hashes.SHA1,
+            hashes.SHA512_224,
+            hashes.SHA512_256,
+            hashes.SHA224,
+            hashes.SHA256,
+            hashes.SHA384,
+            hashes.SHA512,
+            hashes.SHA3_224,
+            hashes.SHA3_256,
+            hashes.SHA3_384,
+            hashes.SHA3_512,
+            hashes.MD5,
+            hashes.SM3,
+        ],
+    )
+    def test_eq(self, algorithm_cls):
+        assert algorithm_cls() == algorithm_cls()
+        assert algorithm_cls() != DummyHashAlgorithm()
+        assert DummyHashAlgorithm() != algorithm_cls()
+        assert algorithm_cls() != object()
+
+    def test_ne_different_algorithm(self):
+        assert hashes.SHA256() != hashes.SHA384()
+
+    @pytest.mark.parametrize(
+        ("algorithm_cls", "digest_size"),
+        [
+            (hashes.SHAKE128, 32),
+            (hashes.SHAKE256, 32),
+            (hashes.BLAKE2b, 64),
+            (hashes.BLAKE2s, 32),
+        ],
+    )
+    def test_eq_digest_size(self, algorithm_cls, digest_size):
+        assert algorithm_cls(digest_size) == algorithm_cls(digest_size)
+        assert algorithm_cls(digest_size) != DummyHashAlgorithm(digest_size)
+        assert DummyHashAlgorithm(digest_size) != algorithm_cls(digest_size)
+        assert algorithm_cls(digest_size) != object()
+
+    @pytest.mark.parametrize("xof", [hashes.SHAKE128, hashes.SHAKE256])
+    def test_ne_different_digest_size(self, xof):
+        assert xof(digest_size=32) != xof(digest_size=64)
+
+
+class TestSHAKE:
+    @pytest.mark.parametrize("xof", [hashes.SHAKE128, hashes.SHAKE256])
+    def test_invalid_digest_type(self, xof):
+        with pytest.raises(TypeError):
+            xof(digest_size=object())
+
+    @pytest.mark.parametrize("xof", [hashes.SHAKE128, hashes.SHAKE256])
+    def test_invalid_digest_size(self, xof):
+        with pytest.raises(ValueError):
+            xof(digest_size=-5)
+
+        with pytest.raises(ValueError):
+            xof(digest_size=0)
+
+    @pytest.mark.parametrize("xof", [hashes.SHAKE128, hashes.SHAKE256])
+    def test_xof(self, xof):
+        algorithm = xof.xof()
+        assert isinstance(algorithm, xof)
+        assert algorithm.digest_size == sys.maxsize
+
+
+@pytest.mark.supported(
+    only_if=lambda backend: backend.hash_supported(hashes.SM3()),
+    skip_message="Does not support SM3",
+)
+class TestSM3:
+    test_sm3 = generate_base_hash_test(
+        hashes.SM3(),
+        digest_size=32,
+    )

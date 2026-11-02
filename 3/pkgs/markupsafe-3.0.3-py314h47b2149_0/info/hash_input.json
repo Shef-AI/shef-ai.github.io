@@ -1,0 +1,9 @@
+{
+  "c_stdlib_version": "2.28",
+  "c_compiler_version": "14.3.0",
+  "c_stdlib": "sysroot",
+  "c_compiler": "gcc",
+  "channel_targets": "defaults",
+  "target_platform": "linux-64",
+  "__glibc": "__glibc >=2.28,<3.0.a0"
+}

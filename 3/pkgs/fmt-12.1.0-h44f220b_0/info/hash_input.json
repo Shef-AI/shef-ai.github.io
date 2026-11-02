@@ -1,0 +1,11 @@
+{
+  "target_platform": "linux-64",
+  "channel_targets": "defaults",
+  "c_stdlib_version": "2.28",
+  "c_stdlib": "sysroot",
+  "cxx_compiler_version": "14.3.0",
+  "fmt": "11",
+  "cxx_compiler": "gxx",
+  "vc": "14",
+  "__glibc": "__glibc >=2.28,<3.0.a0"
+}

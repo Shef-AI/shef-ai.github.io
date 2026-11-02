@@ -1,0 +1,246 @@
+'class'       Keyword.Declaration
+' '           Text.Whitespace
+'Animal'      Name.Other
+' '           Text.Whitespace
+'{'           Punctuation
+'\n    '      Text.Whitespace
+'constructor' Keyword.Reserved
+'('           Punctuation
+'public'      Keyword
+' '           Text.Whitespace
+'name'        Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+' '           Text.Whitespace
+'}'           Punctuation
+'\n    '      Text.Whitespace
+'move'        Name.Other
+'('           Punctuation
+'meters'      Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n        '  Text.Whitespace
+'alert'       Name.Other
+'('           Punctuation
+'this'        Keyword
+'.'           Punctuation
+'name'        Name.Other
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+'" moved "'   Literal.String.Double
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+'meters'      Name.Other
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+'"m."'        Literal.String.Double
+')'           Punctuation
+';'           Punctuation
+'\n    '      Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n\n'        Text.Whitespace
+
+'class'       Keyword.Declaration
+' '           Text.Whitespace
+'Snake'       Name.Other
+' '           Text.Whitespace
+'extends'     Keyword
+' '           Text.Whitespace
+'Animal'      Name.Other
+' '           Text.Whitespace
+'{'           Punctuation
+'\n    '      Text.Whitespace
+'constructor' Keyword.Reserved
+'('           Punctuation
+'name'        Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+' '           Text.Whitespace
+'super'       Keyword
+'('           Punctuation
+'name'        Name.Other
+')'           Punctuation
+';'           Punctuation
+' '           Text.Whitespace
+'}'           Punctuation
+'\n    '      Text.Whitespace
+'move'        Name.Other
+'('           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n        '  Text.Whitespace
+'alert'       Name.Other
+'('           Punctuation
+'"Slithering..."' Literal.String.Double
+')'           Punctuation
+';'           Punctuation
+'\n        '  Text.Whitespace
+'super'       Keyword
+'.'           Punctuation
+'move'        Name.Other
+'('           Punctuation
+'5'           Literal.Number.Float
+')'           Punctuation
+';'           Punctuation
+'\n    '      Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n\n'        Text.Whitespace
+
+'class'       Keyword.Declaration
+' '           Text.Whitespace
+'Horse'       Name.Other
+' '           Text.Whitespace
+'extends'     Keyword
+' '           Text.Whitespace
+'Animal'      Name.Other
+' '           Text.Whitespace
+'{'           Punctuation
+'\n    '      Text.Whitespace
+'constructor' Keyword.Reserved
+'('           Punctuation
+'name'        Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+' '           Text.Whitespace
+'super'       Keyword
+'('           Punctuation
+'name'        Name.Other
+')'           Punctuation
+';'           Punctuation
+' '           Text.Whitespace
+'}'           Punctuation
+'\n    '      Text.Whitespace
+'move'        Name.Other
+'('           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n        '  Text.Whitespace
+'alert'       Name.Other
+'('           Punctuation
+'"Galloping..."' Literal.String.Double
+')'           Punctuation
+';'           Punctuation
+'\n        '  Text.Whitespace
+'super'       Keyword
+'.'           Punctuation
+'move'        Name.Other
+'('           Punctuation
+'45'          Literal.Number.Float
+')'           Punctuation
+';'           Punctuation
+'\n    '      Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n\n'        Text.Whitespace
+
+'@View'       Keyword.Declaration
+'('           Punctuation
+'{'           Punctuation
+'\n    '      Text.Whitespace
+'templateUrl' Name.Other
+':'           Operator
+' '           Text.Whitespace
+'"app/components/LoginForm.html"' Literal.String.Double
+','           Punctuation
+'\n    '      Text.Whitespace
+'directives'  Name.Other
+':'           Operator
+' '           Text.Whitespace
+'['           Punctuation
+'FORM_DIRECTIVES' Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'NgIf'        Name.Other
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'@Component'  Keyword.Declaration
+'('           Punctuation
+'{'           Punctuation
+'\n    '      Text.Whitespace
+'selector'    Name.Other
+':'           Operator
+' '           Text.Whitespace
+'"login-form"' Literal.String.Double
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'class'       Keyword.Declaration
+' '           Text.Whitespace
+'LoginForm'   Name.Other
+' '           Text.Whitespace
+'{'           Punctuation
+'\n\n'        Text.Whitespace
+
+'}'           Punctuation
+'\n\n'        Text.Whitespace
+
+'var'         Keyword.Declaration
+' '           Text.Whitespace
+'sam'         Name.Other
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'new'         Operator.Word
+' '           Text.Whitespace
+'Snake'       Name.Other
+'('           Punctuation
+'"Sammy the Python"' Literal.String.Double
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'var'         Keyword.Declaration
+' '           Text.Whitespace
+'tom'         Name.Other
+':'           Operator
+' '           Text.Whitespace
+'Animal'      Keyword.Type
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'new'         Operator.Word
+' '           Text.Whitespace
+'Horse'       Name.Other
+'('           Punctuation
+'"Tommy the Palomino"' Literal.String.Double
+')'           Punctuation
+'\n\n'        Text.Whitespace
+
+'sam'         Name.Other
+'.'           Punctuation
+'move'        Name.Other
+'('           Punctuation
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'tom'         Name.Other
+'.'           Punctuation
+'move'        Name.Other
+'('           Punctuation
+'34'          Literal.Number.Float
+')'           Punctuation
+'\n'          Text.Whitespace

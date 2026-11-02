@@ -1,0 +1,358 @@
+"""
+Tests for internal things that are complex enough to warrant their own unit tests.
+"""
+
+import sys
+from copy import deepcopy
+from dataclasses import dataclass
+from decimal import Decimal
+from typing import Any
+
+import pytest
+from dirty_equals import Contains, IsPartialDict
+from pydantic_core import CoreSchema, PydanticUndefined
+from pydantic_core import core_schema as cs
+
+from pydantic import BaseModel, TypeAdapter
+from pydantic._internal._config import ConfigWrapper
+from pydantic._internal._core_metadata import update_core_metadata
+from pydantic._internal._core_utils import as_ser_schema
+from pydantic._internal._fields import resolve_default_value
+from pydantic._internal._generate_schema import GenerateSchema
+from pydantic._internal._repr import Representation
+from pydantic._internal._validators import _extract_decimal_digits_info
+from pydantic.config import JsonDict
+from pydantic.json_schema import GetJsonSchemaHandler, JsonSchemaValue, PydanticJsonSchemaWarning
+
+
+def init_schema_and_cleaned_schema(type_: Any) -> tuple[CoreSchema, CoreSchema]:
+    gen = GenerateSchema(ConfigWrapper(None))
+    schema = gen.generate_schema(type_)
+    cleaned_schema = deepcopy(schema)
+    cleaned_schema = gen.clean_schema(cleaned_schema)
+    assert TypeAdapter(type_).pydantic_complete  # Just to make sure it works and test setup is sane
+    return schema, cleaned_schema
+
+
+def test_simple_core_schema_with_no_references() -> None:
+    init, cleaned = init_schema_and_cleaned_schema(list[int])
+    assert init == cs.list_schema(cs.int_schema())
+    assert cleaned == cs.list_schema(cs.int_schema())
+
+
+@pytest.mark.parametrize('nested_ref', [False, True])
+def test_core_schema_with_different_reference_depths_gets_inlined(nested_ref: bool) -> None:
+    class M1(BaseModel):
+        a: int
+
+    class M2(BaseModel):
+        b: M1
+
+    init, cleaned = init_schema_and_cleaned_schema(list[M2] if nested_ref else M2)
+
+    inner = IsPartialDict(type='definition-ref', schema_ref=Contains('M2'))
+    assert init == (IsPartialDict(type='list', items_schema=inner) if nested_ref else inner)
+
+    inner = IsPartialDict(
+        type='model',
+        cls=M2,
+        schema=IsPartialDict(fields={'b': IsPartialDict(schema=IsPartialDict(type='model', cls=M1))}),
+    )
+    assert cleaned == (IsPartialDict(type='list', items_schema=inner) if nested_ref else inner)
+
+
+@pytest.mark.parametrize('nested_ref', [False, True])
+@pytest.mark.xfail(
+    reason=(
+        "While the cleaned schema is of type 'definitions', the inner schema is inlined. This is not an "
+        'issue, but the test is kept so that we notice the change when tweaking core schema generation.'
+    )
+)
+def test_core_schema_simple_recursive_schema_uses_refs(nested_ref: bool) -> None:
+    class M1(BaseModel):
+        a: 'M2'
+
+    class M2(BaseModel):
+        b: M1
+
+    init, cleaned = init_schema_and_cleaned_schema(list[M1] if nested_ref else M1)
+
+    inner = IsPartialDict(type='definition-ref', schema_ref=Contains('M1'))
+    assert init == (IsPartialDict(type='list', items_schema=inner) if nested_ref else inner)
+
+    inner = IsPartialDict(type='definition-ref', schema_ref=Contains('M1'))
+    assert cleaned == IsPartialDict(
+        type='definitions',
+        schema=IsPartialDict(type='list', items_schema=inner) if nested_ref else inner,
+        definitions=[IsPartialDict(type='model', ref=Contains('M1')), IsPartialDict(type='model', ref=Contains('M2'))],
+    )
+
+
+@pytest.mark.parametrize('nested_ref', [False, True])
+def test_core_schema_with_deeply_nested_schema_with_multiple_references_gets_inlined(nested_ref: bool) -> None:
+    class M1(BaseModel):
+        a: int
+
+    class M2(BaseModel):
+        b: M1
+
+    class M3(BaseModel):
+        c: M2
+        d: M1
+
+    init, cleaned = init_schema_and_cleaned_schema(list[M3] if nested_ref else M3)
+
+    inner = IsPartialDict(type='definition-ref', schema_ref=Contains('M3'))
+    assert init == (IsPartialDict(type='list', items_schema=inner) if nested_ref else inner)
+
+    inner = IsPartialDict(
+        type='model',
+        cls=M3,
+        schema=IsPartialDict(
+            fields={
+                'c': IsPartialDict(schema=IsPartialDict(type='model', cls=M2)),
+                'd': IsPartialDict(schema=IsPartialDict(type='model', cls=M1)),
+            }
+        ),
+    )
+    assert cleaned == (IsPartialDict(type='list', items_schema=inner) if nested_ref else inner)
+
+
+@pytest.mark.parametrize('nested_ref', [False, True])
+def test_core_schema_with_model_used_in_multiple_places(nested_ref: bool) -> None:
+    class M1(BaseModel):
+        a: int
+
+    class M2(BaseModel):
+        b: M1
+
+    class M3(BaseModel):
+        c: M2 | M1
+        d: M1
+
+    init, cleaned = init_schema_and_cleaned_schema(list[M3] if nested_ref else M3)
+
+    inner = IsPartialDict(type='definition-ref', schema_ref=Contains('M3'))
+    assert init == (IsPartialDict(type='list', items_schema=inner) if nested_ref else inner)
+
+    inner = IsPartialDict(type='model', cls=M3)
+    assert cleaned == IsPartialDict(
+        type='definitions',
+        schema=(IsPartialDict(type='list', items_schema=inner) if nested_ref else inner),
+        definitions=[IsPartialDict(type='model', cls=M1)],  # This was used in multiple places
+    )
+
+
+def test_representation_integrations():
+    devtools = pytest.importorskip('devtools')
+
+    @dataclass
+    class Obj(Representation):
+        int_attr: int = 42
+        str_attr: str = 'Marvin'
+
+    obj = Obj()
+
+    if sys.version_info < (3, 11) or sys.implementation.name == 'pypy':
+        assert str(devtools.debug.format(obj)).split('\n')[1:] == [
+            '    Obj(',
+            '        int_attr=42,',
+            "        str_attr='Marvin',",
+            '    ) (Obj)',
+        ]
+    else:
+        assert str(devtools.debug.format(obj)).split('\n')[1:] == [
+            '    obj: Obj(',
+            '        int_attr=42,',
+            "        str_attr='Marvin',",
+            '    ) (Obj)',
+        ]
+    assert list(obj.__rich_repr__()) == [('int_attr', 42), ('str_attr', 'Marvin')]
+
+
+@pytest.mark.parametrize(
+    'decimal,decimal_places,digits,normalized_decimal_places,normalized_digits',
+    [
+        (Decimal('0.0'), 1, 1, 0, 1),
+        (Decimal('0.'), 0, 1, 0, 1),
+        (Decimal('0.000'), 3, 3, 0, 1),
+        (Decimal('0E+5'), 0, 6, 0, 1),
+        (Decimal('0.0001'), 4, 4, 4, 4),
+        (Decimal('.0001'), 4, 4, 4, 4),
+        (Decimal('100'), 0, 3, 0, 3),
+        (Decimal('1E+2'), 0, 3, 0, 3),
+        (Decimal('1.00'), 2, 3, 0, 1),
+        (Decimal('100.00'), 2, 5, 0, 3),
+        (Decimal('123.123'), 3, 6, 3, 6),
+        (Decimal('123.1230'), 4, 7, 3, 6),
+        # More significant digits than the precision of the (default) decimal context, no rounding should happen:
+        (Decimal('1234567890123456789012345678.910'), 3, 31, 2, 30),
+    ],
+)
+def test_decimal_digits_calculation(
+    decimal: Decimal, decimal_places: int, digits: int, normalized_decimal_places: int, normalized_digits: int
+) -> None:
+    assert _extract_decimal_digits_info(decimal) == (
+        (decimal_places, digits),
+        (normalized_decimal_places, normalized_digits),
+    )
+
+
+@pytest.mark.parametrize(
+    'value',
+    [Decimal.from_float(float('nan')), 1.0],
+)
+def test_decimal_digits_calculation_type_error(value) -> None:
+    with pytest.raises(TypeError, match=f'Unable to extract decimal digits info from supplied value {value}'):
+        _extract_decimal_digits_info(value)
+
+
+def test_update_js_extra_as_callable_when_existing_js_extra_is_dict_type():
+    """
+    It should ignore the callable with a warning.
+    """
+    metadata: dict[str, Any] = {}
+
+    extra_dict: JsonDict = {'testKey': 'testValue'}
+
+    def extra_func(schema: JsonDict) -> None:
+        schema['testKey'] = 'testValue'
+
+    update_core_metadata(metadata, pydantic_js_extra=extra_dict)
+
+    with pytest.warns(PydanticJsonSchemaWarning):
+        update_core_metadata(metadata, pydantic_js_extra=extra_func)
+    assert metadata['pydantic_js_extra'] is extra_dict
+
+
+def test_update_js_extra_as_callable_when_existing_js_extra_is_callable_type():
+    """
+    It should overwrite existing js_extra with the new callable.
+    """
+    metadata: dict[str, Any] = {}
+
+    def extra_func1(schema: JsonDict) -> None:
+        schema['testKey1'] = 'testValue1'
+
+    def extra_func2(schema: JsonDict) -> None:
+        schema['testKey2'] = 'testValue2'
+
+    update_core_metadata(metadata, pydantic_js_extra=extra_func1)
+    update_core_metadata(metadata, pydantic_js_extra=extra_func2)
+    assert metadata['pydantic_js_extra'] is extra_func2
+
+
+def test_pydantic_js_functions():
+    metadata: dict[str, Any] = {}
+
+    def func(schema: CoreSchema, handler: GetJsonSchemaHandler) -> JsonSchemaValue:
+        return {'type': 'string'}
+
+    update_core_metadata(
+        metadata,
+        pydantic_js_functions=[func],
+    )
+
+    assert metadata['pydantic_js_functions'] == [func]
+
+
+@pytest.mark.parametrize(
+    [
+        'default',
+        'default_factory',
+        'default_factory_takes_validated_data_argument',
+        'validated_data',
+        'call_default_factory',
+        'expected',
+    ],
+    [
+        ('foo', None, False, None, True, 'foo'),
+        ('foo', None, False, None, False, 'foo'),
+        ('foo-unused', lambda: 'foo', False, None, False, PydanticUndefined),
+        ('foo-unused', lambda: 'foo', False, None, True, 'foo'),
+        ('foo-unused', lambda data: data['foo'], True, {'foo': 'bar'}, True, 'bar'),
+    ],
+)
+def test_resolve_default_value(
+    default,
+    default_factory,
+    default_factory_takes_validated_data_argument,
+    validated_data,
+    call_default_factory,
+    expected,
+):
+    result = resolve_default_value(
+        default=default,
+        default_factory=default_factory,
+        default_factory_takes_validated_data_argument=default_factory_takes_validated_data_argument,
+        validated_data=validated_data,
+        call_default_factory=call_default_factory,
+    )
+    assert result == expected
+
+
+def test_resolve_default_value_missing_validated_data():
+    # When factory requires validated_data but none is provided, a ValueError should be raised.
+    with pytest.raises(ValueError):
+        resolve_default_value(
+            default='foo',
+            default_factory=lambda data: data['foo'],
+            default_factory_takes_validated_data_argument=True,
+            validated_data=None,
+            call_default_factory=True,
+        )
+
+
+def _identity(v: Any) -> Any:
+    return v
+
+
+def _wrap_identity(v: Any, handler: Any) -> Any:
+    return handler(v)
+
+
+@pytest.mark.parametrize(
+    ['schema', 'expected'],
+    [
+        # Any non-function schema is returned as is:
+        (cs.int_schema(), cs.int_schema()),
+        (
+            cs.no_info_after_validator_function(_identity, cs.int_schema()),
+            cs.no_info_after_validator_function(_identity, cs.int_schema()),
+        ),
+        # The `'serialization'` schema of a plain/wrap function schema takes precedence:
+        (
+            cs.no_info_plain_validator_function(_identity, serialization=cs.simple_ser_schema('str')),
+            cs.simple_ser_schema('str'),
+        ),
+        (
+            cs.no_info_wrap_validator_function(
+                _wrap_identity, cs.int_schema(), serialization=cs.simple_ser_schema('str')
+            ),
+            cs.simple_ser_schema('str'),
+        ),
+        # Otherwise, plain function schemas are serialized as `'any'`, wrap function schemas using the inner schema:
+        (cs.no_info_plain_validator_function(_identity), cs.any_schema()),
+        (cs.no_info_wrap_validator_function(_wrap_identity, cs.int_schema()), cs.int_schema()),
+        # Nested plain/wrap function schemas are unwrapped:
+        (
+            cs.no_info_wrap_validator_function(
+                _wrap_identity, cs.no_info_wrap_validator_function(_wrap_identity, cs.int_schema())
+            ),
+            cs.int_schema(),
+        ),
+        (
+            cs.no_info_wrap_validator_function(_wrap_identity, cs.no_info_plain_validator_function(_identity)),
+            cs.any_schema(),
+        ),
+        (
+            cs.no_info_wrap_validator_function(
+                _wrap_identity,
+                cs.no_info_plain_validator_function(_identity, serialization=cs.simple_ser_schema('str')),
+            ),
+            cs.simple_ser_schema('str'),
+        ),
+    ],
+)
+def test_as_ser_schema(schema: CoreSchema, expected: cs.SerSchema) -> None:
+    assert as_ser_schema(schema) == expected

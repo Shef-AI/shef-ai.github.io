@@ -1,0 +1,1311 @@
+{
+  "paths": [
+    {
+      "_path": "include/X11/ImUtil.h",
+      "path_type": "hardlink",
+      "sha256": "6bca9278c649cf1c3613f0f71842c18961db5630b7cc3289c27ed9a1985dc452",
+      "size_in_bytes": 405
+    },
+    {
+      "_path": "include/X11/XKBlib.h",
+      "path_type": "hardlink",
+      "sha256": "cbe504dea1d417d4998337f094cf195b839d3f2f8fe5db0e2a1e348aed9abd41",
+      "size_in_bytes": 30994
+    },
+    {
+      "_path": "include/X11/Xcms.h",
+      "path_type": "hardlink",
+      "sha256": "d9befc6d194ee322c3dec61649c94130b44a725dd000f089b2721447541eb04d",
+      "size_in_bytes": 21346
+    },
+    {
+      "_path": "include/X11/Xlib-xcb.h",
+      "path_type": "hardlink",
+      "sha256": "8682b048aa73c7448845b90b92de2cda848c09348a9c9342b5fe7ea15d37152b",
+      "size_in_bytes": 506
+    },
+    {
+      "_path": "include/X11/Xlib.h",
+      "path_type": "hardlink",
+      "sha256": "7430c535c4e2b0a31d002d5f9d8f21c6b9f7232e9aad2e297662b90c2591f64d",
+      "size_in_bytes": 99801
+    },
+    {
+      "_path": "include/X11/XlibConf.h",
+      "path_type": "hardlink",
+      "sha256": "2456e8ad48c1f0efe1e95432fe86f1dabbde89a6b0b1fd1c526ebb44c1a31b81",
+      "size_in_bytes": 1567
+    },
+    {
+      "_path": "include/X11/Xlibint.h",
+      "path_type": "hardlink",
+      "sha256": "3069fa30bbc6954dc912ba49766ac24e546472ab6552e81529afcc4b48a8f5e2",
+      "size_in_bytes": 40596
+    },
+    {
+      "_path": "include/X11/Xlocale.h",
+      "path_type": "hardlink",
+      "sha256": "495af37793404fc1f8e6635e851f9084acbe19a0c84cb1bbfcb76c626a0c578e",
+      "size_in_bytes": 1297
+    },
+    {
+      "_path": "include/X11/Xregion.h",
+      "path_type": "hardlink",
+      "sha256": "a99673530fb4f7d063b4acb03be8acdb79e11eb9d2e37cc310788f32a292c7c2",
+      "size_in_bytes": 5949
+    },
+    {
+      "_path": "include/X11/Xresource.h",
+      "path_type": "hardlink",
+      "sha256": "b752bc271822119a3cdea3227d2567c30a433bbaa8e34a9342c6207e6f2cbb68",
+      "size_in_bytes": 10628
+    },
+    {
+      "_path": "include/X11/Xutil.h",
+      "path_type": "hardlink",
+      "sha256": "64fa95ab8e74d7d82a8863f0d8e3be9f1a740c25f6166b4172215a3823dac216",
+      "size_in_bytes": 21319
+    },
+    {
+      "_path": "include/X11/cursorfont.h",
+      "path_type": "hardlink",
+      "sha256": "aaf570a10ee79c3ab9df5c5b611d98d1c08dd7c6584e4491b03bc802c05a1a77",
+      "size_in_bytes": 3118
+    },
+    {
+      "_path": "include/X11/extensions/XKBgeom.h",
+      "path_type": "hardlink",
+      "sha256": "420d8335306aad84fde239eba310e7da5ffaecb572111ce78e42736fba77828f",
+      "size_in_bytes": 13758
+    },
+    {
+      "_path": "lib/libX11-xcb.so",
+      "path_type": "softlink",
+      "sha256": "c43cbae653d996155deaf0d4ad66e6df68badacf946e60883e914a3e717e95ec",
+      "size_in_bytes": 15272
+    },
+    {
+      "_path": "lib/libX11-xcb.so.1",
+      "path_type": "softlink",
+      "sha256": "c43cbae653d996155deaf0d4ad66e6df68badacf946e60883e914a3e717e95ec",
+      "size_in_bytes": 15272
+    },
+    {
+      "_path": "lib/libX11-xcb.so.1.0.0",
+      "path_type": "hardlink",
+      "sha256": "c43cbae653d996155deaf0d4ad66e6df68badacf946e60883e914a3e717e95ec",
+      "size_in_bytes": 15272
+    },
+    {
+      "_path": "lib/libX11.so",
+      "path_type": "softlink",
+      "sha256": "e0ef868bd47e35c6eaa736774bc28c60f2addb60c5484993ec45a5322663a6b8",
+      "size_in_bytes": 1470264
+    },
+    {
+      "_path": "lib/libX11.so.6",
+      "path_type": "softlink",
+      "sha256": "e0ef868bd47e35c6eaa736774bc28c60f2addb60c5484993ec45a5322663a6b8",
+      "size_in_bytes": 1470264
+    },
+    {
+      "_path": "lib/libX11.so.6.4.0",
+      "file_mode": "binary",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/home/task_179257413337710/croot/xorg-libx11_1792574177389/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
+      "sha256": "e0ef868bd47e35c6eaa736774bc28c60f2addb60c5484993ec45a5322663a6b8",
+      "size_in_bytes": 1470264
+    },
+    {
+      "_path": "lib/pkgconfig/x11-xcb.pc",
+      "file_mode": "text",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/home/task_179257413337710/croot/xorg-libx11_1792574177389/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
+      "sha256": "da1e4814ee786d983144fa7dc176cd1110f65b6709d28ae42bf4e5741f54e84d",
+      "size_in_bytes": 478
+    },
+    {
+      "_path": "lib/pkgconfig/x11.pc",
+      "file_mode": "text",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/home/task_179257413337710/croot/xorg-libx11_1792574177389/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
+      "sha256": "857594bd043401c960f3ff4c558d5aa63541f8e1c026addd1e5f404d624d8f8b",
+      "size_in_bytes": 595
+    },
+    {
+      "_path": "share/X11/XErrorDB",
+      "path_type": "hardlink",
+      "sha256": "f60aa514daf168e46d92770dbe76d8e0929dd0045a0237402f332d651a7cae2d",
+      "size_in_bytes": 42060
+    },
+    {
+      "_path": "share/X11/Xcms.txt",
+      "path_type": "hardlink",
+      "sha256": "7a3f9b068488408d8a3422013209db1b32e5cc57d500c0f069c06490c1f41c29",
+      "size_in_bytes": 1723
+    },
+    {
+      "_path": "share/X11/locale/C/Compose",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "share/X11/locale/C/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "1ef6cef5b0dfb176c5dcb79701eebcded31af8bf51b6918e7d7b71a6c90757bb",
+      "size_in_bytes": 340
+    },
+    {
+      "_path": "share/X11/locale/C/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "2f887d10a39389560edfbb984ac9249ff9486c0ce94393897d11493a07a788a8",
+      "size_in_bytes": 627
+    },
+    {
+      "_path": "share/X11/locale/am_ET.UTF-8/Compose",
+      "file_mode": "text",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/home/task_179257413337710/croot/xorg-libx11_1792574177389/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
+      "sha256": "fc4d7ef6a77abd427926333f55b8ed01fcda556093ea953b65a100b790ab5043",
+      "size_in_bytes": 17671
+    },
+    {
+      "_path": "share/X11/locale/am_ET.UTF-8/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "share/X11/locale/am_ET.UTF-8/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "share/X11/locale/armscii-8/Compose",
+      "path_type": "hardlink",
+      "sha256": "db08a669163eff3d66983674e4a76c73c583f57146b88d0c2c9a39a203380c56",
+      "size_in_bytes": 306
+    },
+    {
+      "_path": "share/X11/locale/armscii-8/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "765790804af149586c7e16a43c8fa222c0e4130b869bb95542ca1eaba5419cde",
+      "size_in_bytes": 341
+    },
+    {
+      "_path": "share/X11/locale/armscii-8/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "a653f19afd6b5172e9605964c2ebce34d6a6f06f8322f5aff5571d5e1b6f7e79",
+      "size_in_bytes": 901
+    },
+    {
+      "_path": "share/X11/locale/compose.dir",
+      "path_type": "hardlink",
+      "sha256": "cd5b9ff8a8c153b55cf30dabc1c50f8e8ea9b847d33c22f0efa0197cf7cbcb6b",
+      "size_in_bytes": 32062
+    },
+    {
+      "_path": "share/X11/locale/cs_CZ.UTF-8/Compose",
+      "file_mode": "text",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/home/task_179257413337710/croot/xorg-libx11_1792574177389/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
+      "sha256": "fa95a63b87faf5f9af7a6f692053f504045ec27c230bf7c3b574a2f67c1542ee",
+      "size_in_bytes": 763
+    },
+    {
+      "_path": "share/X11/locale/cs_CZ.UTF-8/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "share/X11/locale/cs_CZ.UTF-8/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "share/X11/locale/el_GR.UTF-8/Compose",
+      "path_type": "hardlink",
+      "sha256": "cd39eff9261eeb8580d3256b647917a21a7833194ac4d9652753c8f1726ef380",
+      "size_in_bytes": 124875
+    },
+    {
+      "_path": "share/X11/locale/el_GR.UTF-8/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "share/X11/locale/el_GR.UTF-8/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "share/X11/locale/en_US.UTF-8/Compose",
+      "path_type": "hardlink",
+      "sha256": "a3077ce7fdae43776b9a485d8a9689c0bfeb0cd17348a87b7a06818e59554ea1",
+      "size_in_bytes": 456061
+    },
+    {
+      "_path": "share/X11/locale/en_US.UTF-8/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "ced92075d6db441663139fa39079da39bca242ec651459038b693faee91d1e29",
+      "size_in_bytes": 346
+    },
+    {
+      "_path": "share/X11/locale/en_US.UTF-8/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "0067217168fa6507dde39089676e65e16a44f8f28d1cdf0aa65ddfe6cfd06cac",
+      "size_in_bytes": 4043
+    },
+    {
+      "_path": "share/X11/locale/fi_FI.UTF-8/Compose",
+      "file_mode": "text",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/home/task_179257413337710/croot/xorg-libx11_1792574177389/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
+      "sha256": "b58c5b6e4e2eed323fc97c5f866cb5ed7ec0595c0a43c21456da3d72a9e3e594",
+      "size_in_bytes": 36478
+    },
+    {
+      "_path": "share/X11/locale/fi_FI.UTF-8/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "share/X11/locale/fi_FI.UTF-8/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "share/X11/locale/georgian-academy/Compose",
+      "path_type": "hardlink",
+      "sha256": "c1e69bbfdc84372324bbeaf17ad9d03572a456446a37459e0ef1435d9a654da3",
+      "size_in_bytes": 313
+    },
+    {
+      "_path": "share/X11/locale/georgian-academy/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "a7cb7e2f84444951109778015156b408d73edb77a15ff694a4fb03f087997a98",
+      "size_in_bytes": 348
+    },
+    {
+      "_path": "share/X11/locale/georgian-academy/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "52039d40e562fe4922ac1d68448322733dda6fe87cafaeee21dec88b78cde7ee",
+      "size_in_bytes": 956
+    },
+    {
+      "_path": "share/X11/locale/georgian-ps/Compose",
+      "path_type": "hardlink",
+      "sha256": "76326759d9e6437facbb79af3a2206be69ce735cd000a6c03ad33c3d58496251",
+      "size_in_bytes": 308
+    },
+    {
+      "_path": "share/X11/locale/georgian-ps/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "758810fd49affe9ec5a9ee518710f72468003c8116bd08617b5ddd08c2c05035",
+      "size_in_bytes": 343
+    },
+    {
+      "_path": "share/X11/locale/georgian-ps/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "eeacc1db550ce27215839aa5dbb1809add76901abd713e3f0971674f49c6cf65",
+      "size_in_bytes": 916
+    },
+    {
+      "_path": "share/X11/locale/ibm-cp1133/Compose",
+      "path_type": "hardlink",
+      "sha256": "70bc9147a80c6f90aab84b3d77122c82c92b134885e1096341ee60950a7a0190",
+      "size_in_bytes": 307
+    },
+    {
+      "_path": "share/X11/locale/ibm-cp1133/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "17cb7407f673541a8c5e93ce1c8f36fabdf28e02bac54cfe89c853db9d4d106b",
+      "size_in_bytes": 342
+    },
+    {
+      "_path": "share/X11/locale/ibm-cp1133/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "91b56b1452bd2b801d65d6219fe2e7565b4de07c0a06f9988f934b542c09bdc7",
+      "size_in_bytes": 909
+    },
+    {
+      "_path": "share/X11/locale/iscii-dev/Compose",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "share/X11/locale/iscii-dev/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "d97e0c9cb64ddc529b35683fa358662ca6a3faf34d218f2578c6fe753b1474a3",
+      "size_in_bytes": 341
+    },
+    {
+      "_path": "share/X11/locale/iscii-dev/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "1f24533d41cf3419ff5e0decd969bfa91d60908d440aeb52b00630e1787df0e5",
+      "size_in_bytes": 901
+    },
+    {
+      "_path": "share/X11/locale/isiri-3342/Compose",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "share/X11/locale/isiri-3342/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "68eaf6a031b4ac739b85bc5330d813ba60bf47ff1eaf69050fc5e999a038f2f0",
+      "size_in_bytes": 342
+    },
+    {
+      "_path": "share/X11/locale/isiri-3342/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "6713ac34873a2712936fb642307fa25f7b62653702470d2b37f42599e90cc2d8",
+      "size_in_bytes": 908
+    },
+    {
+      "_path": "share/X11/locale/iso8859-1/Compose",
+      "path_type": "hardlink",
+      "sha256": "1af5494aa0b35e94bc3f9f5765f74f6cc59057985b26957b6442ae419284bd72",
+      "size_in_bytes": 20458
+    },
+    {
+      "_path": "share/X11/locale/iso8859-1/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "1ef6cef5b0dfb176c5dcb79701eebcded31af8bf51b6918e7d7b71a6c90757bb",
+      "size_in_bytes": 340
+    },
+    {
+      "_path": "share/X11/locale/iso8859-1/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "9333af62e83249ac69bf53f2f58729d5e177a4aca9e86192b68cac033a64f6c6",
+      "size_in_bytes": 713
+    },
+    {
+      "_path": "share/X11/locale/iso8859-10/Compose",
+      "path_type": "hardlink",
+      "sha256": "0a94af8f380ed056a63fe3c4bbebf70a3f03aae95434770e7c4879f74bcbd988",
+      "size_in_bytes": 308
+    },
+    {
+      "_path": "share/X11/locale/iso8859-10/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "891ee42949b619ae44e1afc9d0a18d98bea6a4ce3b22759aa4bb3ad725ec7408",
+      "size_in_bytes": 342
+    },
+    {
+      "_path": "share/X11/locale/iso8859-10/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "93cb43f1f536fdc4cdaf8c6c9d897fcac79cfe622ea9a12e681b429366d4c599",
+      "size_in_bytes": 762
+    },
+    {
+      "_path": "share/X11/locale/iso8859-11/Compose",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "share/X11/locale/iso8859-11/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "acbac0e9bafec77d3581caf193c893efac58d1a623b61a98169a8505d2812660",
+      "size_in_bytes": 344
+    },
+    {
+      "_path": "share/X11/locale/iso8859-11/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "905f4c8e0e10fd99e246b6d2abc741fe129d87063bd21d608e147eef0812a72c",
+      "size_in_bytes": 763
+    },
+    {
+      "_path": "share/X11/locale/iso8859-13/Compose",
+      "path_type": "hardlink",
+      "sha256": "3b9f39fa0d4b2295a15ee8c8a0eeed65c2c49e27e3e3c94062e2770affe13a15",
+      "size_in_bytes": 21247
+    },
+    {
+      "_path": "share/X11/locale/iso8859-13/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "a8a0e42aaf0bc6365ec936da183f3ab58784166f0155f8135265f926fe29a60d",
+      "size_in_bytes": 248
+    },
+    {
+      "_path": "share/X11/locale/iso8859-13/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "d30fd6feb0f576d5a0d66881ab050334f013223bae2f90cf010f1ea4c57f67f8",
+      "size_in_bytes": 763
+    },
+    {
+      "_path": "share/X11/locale/iso8859-14/Compose",
+      "path_type": "hardlink",
+      "sha256": "e955a741c57afff0bb1e6b224ae3c767b160ea24d910ad7ad9301cc196889388",
+      "size_in_bytes": 21014
+    },
+    {
+      "_path": "share/X11/locale/iso8859-14/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "4c127cd114bc17c16afd9f8641c472253123db88b7105afe0cd574dd6c887c48",
+      "size_in_bytes": 342
+    },
+    {
+      "_path": "share/X11/locale/iso8859-14/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "9205fed7df6b9f17fc4508fc5101b55cd6913a99a0648dc4a733cce1c23030ec",
+      "size_in_bytes": 763
+    },
+    {
+      "_path": "share/X11/locale/iso8859-15/Compose",
+      "path_type": "hardlink",
+      "sha256": "fc11f9e7d3cb7545a7f0a4e78874fc00818425f36e413d8ae25d46e1a1ed2d5e",
+      "size_in_bytes": 20625
+    },
+    {
+      "_path": "share/X11/locale/iso8859-15/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "66989c577117c61f02495d621781cf711392314c8eb0707e7e8bd9cb796602a2",
+      "size_in_bytes": 342
+    },
+    {
+      "_path": "share/X11/locale/iso8859-15/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "ac80dc3ae7abe0adf9016fd077bac428873229cad21042b4768a7fd69749513c",
+      "size_in_bytes": 1046
+    },
+    {
+      "_path": "share/X11/locale/iso8859-2/Compose",
+      "path_type": "hardlink",
+      "sha256": "c2740efa5464bb380cd96418cf3b750ba84b52afa1fdaf9108968ae9e989ff2c",
+      "size_in_bytes": 23642
+    },
+    {
+      "_path": "share/X11/locale/iso8859-2/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "a8a0e42aaf0bc6365ec936da183f3ab58784166f0155f8135265f926fe29a60d",
+      "size_in_bytes": 248
+    },
+    {
+      "_path": "share/X11/locale/iso8859-2/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "fdb1b831d4c4e88d1b7d51a0fd6f6bc9fdf201c44af6011480d22ba966d72eac",
+      "size_in_bytes": 756
+    },
+    {
+      "_path": "share/X11/locale/iso8859-3/Compose",
+      "path_type": "hardlink",
+      "sha256": "2844e64f02de5bfbde68e24026898472903f5b04427d0bdd66a777be387e776e",
+      "size_in_bytes": 22797
+    },
+    {
+      "_path": "share/X11/locale/iso8859-3/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "155d1b62f3a7cf781cdfa461323b0ec52b69160413871b8f9a6693c87ee86a67",
+      "size_in_bytes": 341
+    },
+    {
+      "_path": "share/X11/locale/iso8859-3/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "70735950637013e59d1f596e2e4c35d664e18636d1328666cccc2c271a01e99b",
+      "size_in_bytes": 756
+    },
+    {
+      "_path": "share/X11/locale/iso8859-4/Compose",
+      "path_type": "hardlink",
+      "sha256": "ad66ad0317bc5076ab6b60ec5650989816421e837735acc7fdf0ef4c8cd5fc2e",
+      "size_in_bytes": 16009
+    },
+    {
+      "_path": "share/X11/locale/iso8859-4/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "6b37571c38a1e90e879c920db9fd7c3c2309e3f40553a09db94b62a3f45fff5f",
+      "size_in_bytes": 341
+    },
+    {
+      "_path": "share/X11/locale/iso8859-4/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "3c50f2128c89044c36837eda91d2d5ddbeaec81cd01a5e21a0ad206acadd87c2",
+      "size_in_bytes": 756
+    },
+    {
+      "_path": "share/X11/locale/iso8859-5/Compose",
+      "path_type": "hardlink",
+      "sha256": "6915476f03b77396033e4e5ead6eaf27f2a6ad6b7631954b96e1c3b92bdce5cc",
+      "size_in_bytes": 307
+    },
+    {
+      "_path": "share/X11/locale/iso8859-5/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "a8a0e42aaf0bc6365ec936da183f3ab58784166f0155f8135265f926fe29a60d",
+      "size_in_bytes": 248
+    },
+    {
+      "_path": "share/X11/locale/iso8859-5/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "fc27ed3d21ec984360f6a680d39e7bb19dab3d50a85ae590760e53dcb83bbc34",
+      "size_in_bytes": 756
+    },
+    {
+      "_path": "share/X11/locale/iso8859-6/Compose",
+      "path_type": "hardlink",
+      "sha256": "1881a296792c42f47da59a8030e3a09a27832834182f99c3f349d7e0c2c6c956",
+      "size_in_bytes": 307
+    },
+    {
+      "_path": "share/X11/locale/iso8859-6/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "9a0e7916f30c06b7cce0ec60f8bf3a7d80fb24ccb048a9ee161079a5df2d160e",
+      "size_in_bytes": 341
+    },
+    {
+      "_path": "share/X11/locale/iso8859-6/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "7ac41d46af4336146d70dd9a55dc3b36984434ff41dddf629cad5e182bb32ff8",
+      "size_in_bytes": 756
+    },
+    {
+      "_path": "share/X11/locale/iso8859-7/Compose",
+      "path_type": "hardlink",
+      "sha256": "dc1b55370699544394817047ff498bcb78589506d6861737b21edf661d49f803",
+      "size_in_bytes": 10660
+    },
+    {
+      "_path": "share/X11/locale/iso8859-7/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "a8a0e42aaf0bc6365ec936da183f3ab58784166f0155f8135265f926fe29a60d",
+      "size_in_bytes": 248
+    },
+    {
+      "_path": "share/X11/locale/iso8859-7/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "c145b3492defb8257c993334e31298c5959f5afe0499777ba9e7570508d93b07",
+      "size_in_bytes": 756
+    },
+    {
+      "_path": "share/X11/locale/iso8859-8/Compose",
+      "path_type": "hardlink",
+      "sha256": "d213a33e3951aa96f0f7d8fc6a76426fb833a1a9205597910b3d66d6902df86e",
+      "size_in_bytes": 307
+    },
+    {
+      "_path": "share/X11/locale/iso8859-8/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "0ce8f2b39e65030f2cf072ce9a4276f3b4f563d65f638bae43a4efcd3ed169e3",
+      "size_in_bytes": 341
+    },
+    {
+      "_path": "share/X11/locale/iso8859-8/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "8cf37cce8148c232402392b5c7cff87d114e9c5b65e4953c232aea80b52c029f",
+      "size_in_bytes": 756
+    },
+    {
+      "_path": "share/X11/locale/iso8859-9/Compose",
+      "path_type": "hardlink",
+      "sha256": "9375264a5b8a080b511fa5d720eb25c021b06f0afbe12574ef99675d95b6f722",
+      "size_in_bytes": 21703
+    },
+    {
+      "_path": "share/X11/locale/iso8859-9/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "a8a0e42aaf0bc6365ec936da183f3ab58784166f0155f8135265f926fe29a60d",
+      "size_in_bytes": 248
+    },
+    {
+      "_path": "share/X11/locale/iso8859-9/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "58f6762a987f87ec069eab1fc58d4d6c91f699e13586c4d06aa5e77b492d135f",
+      "size_in_bytes": 756
+    },
+    {
+      "_path": "share/X11/locale/iso8859-9e/Compose",
+      "path_type": "hardlink",
+      "sha256": "b9edd9f66ad87347746f5bf9cbeb14c184d4ad758cbcc7f009f2f1f5a7fae5aa",
+      "size_in_bytes": 22291
+    },
+    {
+      "_path": "share/X11/locale/iso8859-9e/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "60d666759d2b03246d52e5d4df2ae3dd018e8de6be4ca8240f9adaff1cb695aa",
+      "size_in_bytes": 342
+    },
+    {
+      "_path": "share/X11/locale/iso8859-9e/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "d92257cc7b59d16bad448dddb4e7d528c6586b047006ef10bf6ff31a0a4b7262",
+      "size_in_bytes": 935
+    },
+    {
+      "_path": "share/X11/locale/ja.JIS/Compose",
+      "path_type": "hardlink",
+      "sha256": "ce3a4bf8b3666b0509ffe53a0e9151b18531e7db8d6cd8d7b64564182c4d4689",
+      "size_in_bytes": 303
+    },
+    {
+      "_path": "share/X11/locale/ja.JIS/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "f4be662f6dd770ea360a6cde97af797f44da2bdffe83c644edda9a9891ee53ad",
+      "size_in_bytes": 340
+    },
+    {
+      "_path": "share/X11/locale/ja.JIS/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "18ddc33cebd993c3dae342353d6e1ee0e1dccbbdfd5e6891410dea7e181b36f3",
+      "size_in_bytes": 1675
+    },
+    {
+      "_path": "share/X11/locale/ja.SJIS/Compose",
+      "path_type": "hardlink",
+      "sha256": "9bd2b9276c34d78c6a5e9ce5ffbdb5838eeded8f979a524fe853647acf4fcd3d",
+      "size_in_bytes": 304
+    },
+    {
+      "_path": "share/X11/locale/ja.SJIS/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "bbfdd2a67876afd2ebf9fb7f1d89a7f5840380bdb3b78fda27356ce6617c3f51",
+      "size_in_bytes": 481
+    },
+    {
+      "_path": "share/X11/locale/ja.SJIS/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "cbdaf0d6a3f97987decdc3d612b4fe288cd2a04c22168aebee4848d512871256",
+      "size_in_bytes": 5132
+    },
+    {
+      "_path": "share/X11/locale/ja/Compose",
+      "path_type": "hardlink",
+      "sha256": "1881640f93410f9b7c8ac8368326f7206709bece16a76d33b5c2f1232a1483fb",
+      "size_in_bytes": 299
+    },
+    {
+      "_path": "share/X11/locale/ja/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "3e4fc429ec1d173058186aa5b443bf8efc675de48c5446538d3707d7c35ea37b",
+      "size_in_bytes": 611
+    },
+    {
+      "_path": "share/X11/locale/ja/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "e7f0a7d3cbeffcd06e75ce10010c5211692bd71139ecf749200248f4b4f38cd7",
+      "size_in_bytes": 1607
+    },
+    {
+      "_path": "share/X11/locale/ja_JP.UTF-8/Compose",
+      "file_mode": "text",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/home/task_179257413337710/croot/xorg-libx11_1792574177389/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
+      "sha256": "25f4e3b2a635645f6bf3dfc4eaaa1af10d27b77eb7574aac61340689516f7ede",
+      "size_in_bytes": 303
+    },
+    {
+      "_path": "share/X11/locale/ja_JP.UTF-8/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "85023cec5e57823e91c22fd0cc8e0562e1b357dea2fb46e3978ebf01ed960d83",
+      "size_in_bytes": 347
+    },
+    {
+      "_path": "share/X11/locale/ja_JP.UTF-8/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "f2f928ca9d068e634bfdaca9dede542f2b3eb825a1480b96e45940369a23fe63",
+      "size_in_bytes": 2152
+    },
+    {
+      "_path": "share/X11/locale/km_KH.UTF-8/Compose",
+      "file_mode": "text",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/home/task_179257413337710/croot/xorg-libx11_1792574177389/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
+      "sha256": "25f4e3b2a635645f6bf3dfc4eaaa1af10d27b77eb7574aac61340689516f7ede",
+      "size_in_bytes": 303
+    },
+    {
+      "_path": "share/X11/locale/km_KH.UTF-8/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "df4a3bcf39efef842ef9b8b855f9ec29da85613eb5133b0d764da535f0c32f1a",
+      "size_in_bytes": 299
+    },
+    {
+      "_path": "share/X11/locale/km_KH.UTF-8/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "share/X11/locale/ko/Compose",
+      "path_type": "hardlink",
+      "sha256": "5b01d7b9d4e4d66563785cdefe578e857440f27fbb5523ebc6055f981c0d0b78",
+      "size_in_bytes": 299
+    },
+    {
+      "_path": "share/X11/locale/ko/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "3061fe8262e058cf26c775dfb14197038e6d938b74b338538eaa9feb07e7740a",
+      "size_in_bytes": 240
+    },
+    {
+      "_path": "share/X11/locale/ko/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "49f3fd8671a397e9ce13f9e4a4e5d02922d8be4e312739d35d140b1566a1dab2",
+      "size_in_bytes": 783
+    },
+    {
+      "_path": "share/X11/locale/ko_KR.UTF-8/Compose",
+      "file_mode": "text",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/home/task_179257413337710/croot/xorg-libx11_1792574177389/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
+      "sha256": "25f4e3b2a635645f6bf3dfc4eaaa1af10d27b77eb7574aac61340689516f7ede",
+      "size_in_bytes": 303
+    },
+    {
+      "_path": "share/X11/locale/ko_KR.UTF-8/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "d5ac844df91eb872b5a9d06960dfdc727b9d910a0c36cd303c9595447616a2ec",
+      "size_in_bytes": 347
+    },
+    {
+      "_path": "share/X11/locale/ko_KR.UTF-8/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "346554a5f535b6cd76df1b5be3a73b9a88c0868efcc4f63466d9ff95c0886142",
+      "size_in_bytes": 2150
+    },
+    {
+      "_path": "share/X11/locale/koi8-c/Compose",
+      "path_type": "hardlink",
+      "sha256": "fe7bc516195a7078bc63a6c61485a6e1fd839f6f6856697efce295836816937f",
+      "size_in_bytes": 6257
+    },
+    {
+      "_path": "share/X11/locale/koi8-c/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "608dae8d74e5bdb0cd7d048192e1584229fb78e10764d4b5fd4a09b027a0af8d",
+      "size_in_bytes": 338
+    },
+    {
+      "_path": "share/X11/locale/koi8-c/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "2c1f25d023b24dc2db936b52ae1e6d4302538f872a7642b4b9e00e12d6042b34",
+      "size_in_bytes": 877
+    },
+    {
+      "_path": "share/X11/locale/koi8-r/Compose",
+      "path_type": "hardlink",
+      "sha256": "dad63662a9174ebd0fd17735741ed48cf08b5e92aa1e5709e7d30ccafd64b1cf",
+      "size_in_bytes": 303
+    },
+    {
+      "_path": "share/X11/locale/koi8-r/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "4aaaba59bb8712b563c55f4f48ca580bdf26900eab8ccc4903d5a27a34fa51ec",
+      "size_in_bytes": 338
+    },
+    {
+      "_path": "share/X11/locale/koi8-r/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "243013ef786d063acc4922e46228dba83b2d9591e9e26efec76a26fbb687a60d",
+      "size_in_bytes": 879
+    },
+    {
+      "_path": "share/X11/locale/koi8-u/Compose",
+      "path_type": "hardlink",
+      "sha256": "64570cfb67e26c2f07bf71fa91452b5e89200a2eae92d748f85223c0d2baeba8",
+      "size_in_bytes": 303
+    },
+    {
+      "_path": "share/X11/locale/koi8-u/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "259e1f568bd6dc198c6a296a1d551ee8014f1e469eb6047f00c96f506eda4fc2",
+      "size_in_bytes": 338
+    },
+    {
+      "_path": "share/X11/locale/koi8-u/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "e0d8a466a98209a3d58a637c60079318942bddf173aaf183d36cb9e0187512f0",
+      "size_in_bytes": 877
+    },
+    {
+      "_path": "share/X11/locale/locale.alias",
+      "path_type": "hardlink",
+      "sha256": "0a38697633b994e98d9c60d4669b3b22009c60516b91a4c702c00777e8991613",
+      "size_in_bytes": 76475
+    },
+    {
+      "_path": "share/X11/locale/locale.dir",
+      "path_type": "hardlink",
+      "sha256": "41b4866f8d5520778de26e9eea137f783bb9f067e8379eae7c592ccb9135c37a",
+      "size_in_bytes": 35812
+    },
+    {
+      "_path": "share/X11/locale/microsoft-cp1251/Compose",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "share/X11/locale/microsoft-cp1251/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "9b904cfe01db751706807fe3818c7515386ae258df3e764880b1d909c84574e3",
+      "size_in_bytes": 348
+    },
+    {
+      "_path": "share/X11/locale/microsoft-cp1251/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "da7228f937cc88065b77e29d993d50ea18b0bca4f757cae1971d264045241896",
+      "size_in_bytes": 983
+    },
+    {
+      "_path": "share/X11/locale/microsoft-cp1255/Compose",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "share/X11/locale/microsoft-cp1255/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "57d3f7e62775f0b90379342d5c2473266fdfbbc68cba6465fd8361d6cf673ef6",
+      "size_in_bytes": 348
+    },
+    {
+      "_path": "share/X11/locale/microsoft-cp1255/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "adde2cff5a43e4b4a2bb0be4130fff6ad39b8064323d478de08e6274ebbcec15",
+      "size_in_bytes": 983
+    },
+    {
+      "_path": "share/X11/locale/microsoft-cp1256/Compose",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "share/X11/locale/microsoft-cp1256/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "aa677177937f7a7099d7e4fb3956fa225709e9e94c8a5a44bc636f7d093832ef",
+      "size_in_bytes": 348
+    },
+    {
+      "_path": "share/X11/locale/microsoft-cp1256/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "d9a486a8e210f19172225fb153d63ddd39274fc214a4eb792ec6d074d962a3f5",
+      "size_in_bytes": 983
+    },
+    {
+      "_path": "share/X11/locale/mulelao-1/Compose",
+      "path_type": "hardlink",
+      "sha256": "ebb7c61e7c7386b0be0289ffd9fcfb609bc52ea85162cfa78752869adb1f16a2",
+      "size_in_bytes": 306
+    },
+    {
+      "_path": "share/X11/locale/mulelao-1/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "b64a7aa29787f97bd50b6a9494812466d7704ec1ec5c698a7f5f38996543c558",
+      "size_in_bytes": 341
+    },
+    {
+      "_path": "share/X11/locale/mulelao-1/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "cf3712339286b6e4d7848d630ffdfeca24b952f5401a8ac63e876cc21548ef90",
+      "size_in_bytes": 901
+    },
+    {
+      "_path": "share/X11/locale/nokhchi-1/Compose",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "share/X11/locale/nokhchi-1/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "b849f1c3fd5c6c98700c3e11202c5bf37c63e5956532678e45336779bab75137",
+      "size_in_bytes": 341
+    },
+    {
+      "_path": "share/X11/locale/nokhchi-1/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "bac023d7695b90eaa71990a5675148012eb4e6073f9d338cae9f3d81fa2ed213",
+      "size_in_bytes": 901
+    },
+    {
+      "_path": "share/X11/locale/pt_BR.UTF-8/Compose",
+      "file_mode": "text",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/home/task_179257413337710/croot/xorg-libx11_1792574177389/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
+      "sha256": "8812a346b140037fd2a43f81f005867515a153ed2399193d099bca221501fcb8",
+      "size_in_bytes": 1656
+    },
+    {
+      "_path": "share/X11/locale/pt_BR.UTF-8/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "084a4789668816bf0c9154fe3bd9d4d1bb303d355611d14e29f02d6e1d4cbb10",
+      "size_in_bytes": 345
+    },
+    {
+      "_path": "share/X11/locale/pt_BR.UTF-8/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "52f44bc94b9ce3584a20e02137845ed041eb097b9e89e16ff718cb9bf460e0b6",
+      "size_in_bytes": 1995
+    },
+    {
+      "_path": "share/X11/locale/pt_PT.UTF-8/Compose",
+      "file_mode": "text",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/home/task_179257413337710/croot/xorg-libx11_1792574177389/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
+      "sha256": "c54b7f32133122c23d54a78e74241cfc219b6acf539904c4644129e2238856bd",
+      "size_in_bytes": 443
+    },
+    {
+      "_path": "share/X11/locale/pt_PT.UTF-8/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "1b7661866efdf754de97baa070e1079a233f1abb11f91721528e0d268bac41c8",
+      "size_in_bytes": 345
+    },
+    {
+      "_path": "share/X11/locale/pt_PT.UTF-8/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "9c4cf5795c6bdaf2ee333526bdbadec64d2a5ecb9701b8bf2962c428d724f7a9",
+      "size_in_bytes": 1995
+    },
+    {
+      "_path": "share/X11/locale/ru_RU.UTF-8/Compose",
+      "file_mode": "text",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/home/task_179257413337710/croot/xorg-libx11_1792574177389/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
+      "sha256": "25f4e3b2a635645f6bf3dfc4eaaa1af10d27b77eb7574aac61340689516f7ede",
+      "size_in_bytes": 303
+    },
+    {
+      "_path": "share/X11/locale/ru_RU.UTF-8/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "c7f2ddfe768b88bd83527aa17bfc359be01cf5e77a46731ea7f1031917669ade",
+      "size_in_bytes": 345
+    },
+    {
+      "_path": "share/X11/locale/ru_RU.UTF-8/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "9c79a5307f23b94392455fd29e1d38b9fb1fed98d650377f346e2ff75ee055a8",
+      "size_in_bytes": 2266
+    },
+    {
+      "_path": "share/X11/locale/sr_RS.UTF-8/Compose",
+      "file_mode": "text",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/home/task_179257413337710/croot/xorg-libx11_1792574177389/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
+      "sha256": "857ac1e4f1833246699836d9eddc2407e4aac43bc991d578e2481a5abf649bbe",
+      "size_in_bytes": 5129
+    },
+    {
+      "_path": "share/X11/locale/sr_RS.UTF-8/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "df4a3bcf39efef842ef9b8b855f9ec29da85613eb5133b0d764da535f0c32f1a",
+      "size_in_bytes": 299
+    },
+    {
+      "_path": "share/X11/locale/sr_RS.UTF-8/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "share/X11/locale/tatar-cyr/Compose",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "share/X11/locale/tatar-cyr/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "84c9f63886c9e1516e60c5e350c82db46013c10648c62a51a5601f724e418368",
+      "size_in_bytes": 341
+    },
+    {
+      "_path": "share/X11/locale/tatar-cyr/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "fcbbdd38b4641357d5940247eaa670cae7c12a210957c06de5e877d826a237e0",
+      "size_in_bytes": 927
+    },
+    {
+      "_path": "share/X11/locale/th_TH.UTF-8/Compose",
+      "file_mode": "text",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/home/task_179257413337710/croot/xorg-libx11_1792574177389/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
+      "sha256": "25f4e3b2a635645f6bf3dfc4eaaa1af10d27b77eb7574aac61340689516f7ede",
+      "size_in_bytes": 303
+    },
+    {
+      "_path": "share/X11/locale/th_TH.UTF-8/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "2c125f8e32f5a1fafd00b88320d74c66ffec12dd267fa2fcac5baec5e14e3e3f",
+      "size_in_bytes": 347
+    },
+    {
+      "_path": "share/X11/locale/th_TH.UTF-8/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "ccd9e45ecaa71057fc6b000378e4f5bd039fa65b8a521a2215ae0ed5e2f0018f",
+      "size_in_bytes": 1002
+    },
+    {
+      "_path": "share/X11/locale/th_TH/Compose",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "share/X11/locale/th_TH/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "76a0383f411132d9709b6a0f610944cba07c2bcb113a0181d32bff1b38a6aea4",
+      "size_in_bytes": 337
+    },
+    {
+      "_path": "share/X11/locale/th_TH/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "6838a5c51ba1dd6994f807542a7de9445528db255e9f0058d81f387e08340c98",
+      "size_in_bytes": 753
+    },
+    {
+      "_path": "share/X11/locale/tscii-0/Compose",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "share/X11/locale/tscii-0/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "4d90d27f18aebae0b6f6d5ed716c6b6bfda493ab95dc7f3f06f71270fe1fb28c",
+      "size_in_bytes": 339
+    },
+    {
+      "_path": "share/X11/locale/tscii-0/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "13475f4d19e656f6e0625a84ff127db86fe862cd02d1c91fdbf88059ea37c4de",
+      "size_in_bytes": 887
+    },
+    {
+      "_path": "share/X11/locale/vi_VN.tcvn/Compose",
+      "path_type": "hardlink",
+      "sha256": "3d5ba2554b7acb06de0d5a607bcc0b3b29105021baef012c35f5f653116e7b58",
+      "size_in_bytes": 5509
+    },
+    {
+      "_path": "share/X11/locale/vi_VN.tcvn/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "3fd427902101c0859d1190d5803f2df5ffde718796e3f5990c653df6a38cd1b6",
+      "size_in_bytes": 342
+    },
+    {
+      "_path": "share/X11/locale/vi_VN.tcvn/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "fc8fbcbe3e557ee9014c4ee47538035aa31389c87f8f523555113167d94995bf",
+      "size_in_bytes": 901
+    },
+    {
+      "_path": "share/X11/locale/vi_VN.viscii/Compose",
+      "path_type": "hardlink",
+      "sha256": "7f108ea2bea94584dcc12c106c2ce229e666731d38b6438ad859cab8f2173a16",
+      "size_in_bytes": 5509
+    },
+    {
+      "_path": "share/X11/locale/vi_VN.viscii/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "b0d1f14af33f7d6990fcc08594cfb52e76e0077560d74d848b69f5ad51b59003",
+      "size_in_bytes": 344
+    },
+    {
+      "_path": "share/X11/locale/vi_VN.viscii/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "589bdfe648ac1744f770a722fab1f886a2e87469e847ffc1fb3bfff47df2cc93",
+      "size_in_bytes": 917
+    },
+    {
+      "_path": "share/X11/locale/zh_CN.UTF-8/Compose",
+      "file_mode": "text",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/home/task_179257413337710/croot/xorg-libx11_1792574177389/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
+      "sha256": "25f4e3b2a635645f6bf3dfc4eaaa1af10d27b77eb7574aac61340689516f7ede",
+      "size_in_bytes": 303
+    },
+    {
+      "_path": "share/X11/locale/zh_CN.UTF-8/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "16f3baef683a4a2cbbd48574eb4e25537bdce2348ce6913b3e13e3bf7459ca97",
+      "size_in_bytes": 347
+    },
+    {
+      "_path": "share/X11/locale/zh_CN.UTF-8/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "20c82018a878b372b198d2b1edb1fcf51721ec16f55ed47413a166ff7cbec71a",
+      "size_in_bytes": 1895
+    },
+    {
+      "_path": "share/X11/locale/zh_CN.gb18030/Compose",
+      "path_type": "hardlink",
+      "sha256": "c75c61c93d9f65b6517f01d7407afb8d5135c68b0912878d1a0978999be1d95a",
+      "size_in_bytes": 310
+    },
+    {
+      "_path": "share/X11/locale/zh_CN.gb18030/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "bd1b6a4bf44cd2cb41063ef3f2b93fda728f232d55cbe77ad13a964a135e327d",
+      "size_in_bytes": 347
+    },
+    {
+      "_path": "share/X11/locale/zh_CN.gb18030/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "8a61e310b0abc4a48ef76426cc2c32d6f3a4514f8ef031cbc0c26e739746d9dc",
+      "size_in_bytes": 1407
+    },
+    {
+      "_path": "share/X11/locale/zh_CN.gbk/Compose",
+      "path_type": "hardlink",
+      "sha256": "0c0bbcaa2747600218f820bf8d74dcbcdba0546f095eee45a6ceda373dc4b2bd",
+      "size_in_bytes": 306
+    },
+    {
+      "_path": "share/X11/locale/zh_CN.gbk/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "be9a55d0efc5433d09668feea32119b46347030ed8a77bfb037e3187465026fb",
+      "size_in_bytes": 343
+    },
+    {
+      "_path": "share/X11/locale/zh_CN.gbk/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "e1543de77c2c34cde16b35758443e68dbcf3799a98bcade97eeb4977c8d1023d",
+      "size_in_bytes": 1159
+    },
+    {
+      "_path": "share/X11/locale/zh_CN/Compose",
+      "path_type": "hardlink",
+      "sha256": "44b03d1fe026503f6b2338a8ce42713acb07c831e2e583cb35bfdbeaaaa6a2a1",
+      "size_in_bytes": 299
+    },
+    {
+      "_path": "share/X11/locale/zh_CN/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "a6e6dc413c4bd168cd26ab8b0cace5e464212f03aef6d1994fcbd4351815da5e",
+      "size_in_bytes": 338
+    },
+    {
+      "_path": "share/X11/locale/zh_CN/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "dcfd7043b9285b310749a25c196a866ec887e8a5f1fffd42a655caa05a89b2d6",
+      "size_in_bytes": 787
+    },
+    {
+      "_path": "share/X11/locale/zh_HK.UTF-8/Compose",
+      "file_mode": "text",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/home/task_179257413337710/croot/xorg-libx11_1792574177389/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
+      "sha256": "25f4e3b2a635645f6bf3dfc4eaaa1af10d27b77eb7574aac61340689516f7ede",
+      "size_in_bytes": 303
+    },
+    {
+      "_path": "share/X11/locale/zh_HK.UTF-8/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "95fcb72dd3ae5e8d34183f3a068a7042434a82ac23801cadb22dfbf8ace8a432",
+      "size_in_bytes": 345
+    },
+    {
+      "_path": "share/X11/locale/zh_HK.UTF-8/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "0ec0532f7cc08027abd8cf65f9e63ffb2e444c40ff4482940e629a6a5cbf8bb0",
+      "size_in_bytes": 1662
+    },
+    {
+      "_path": "share/X11/locale/zh_HK.big5/Compose",
+      "path_type": "hardlink",
+      "sha256": "9043c936195bf61f498f168c9446e6310ee5db91310436b4b4dcc4932ff0bd98",
+      "size_in_bytes": 305
+    },
+    {
+      "_path": "share/X11/locale/zh_HK.big5/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "106b13ec77c4ee6be2e731694fe7b55767bcdde240c5ed031a2ce63681e37d67",
+      "size_in_bytes": 344
+    },
+    {
+      "_path": "share/X11/locale/zh_HK.big5/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "1caf8a04aa0ce08ece6ed2c4639dae9e91984bec498866d0d67a82cf365d0b12",
+      "size_in_bytes": 1047
+    },
+    {
+      "_path": "share/X11/locale/zh_HK.big5hkscs/Compose",
+      "path_type": "hardlink",
+      "sha256": "40e4234500ef02f31f8dcd95caebb40b6b2adb0f59ff2b7ad0b901b2fe45cf4e",
+      "size_in_bytes": 310
+    },
+    {
+      "_path": "share/X11/locale/zh_HK.big5hkscs/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "f9e3ec1ce066da306f6edee42764c9cb8e586d900fd9341a9774a63c1d1ecf22",
+      "size_in_bytes": 349
+    },
+    {
+      "_path": "share/X11/locale/zh_HK.big5hkscs/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "5f8b97be9c6cc4f20929cc89ca0478189ab298ca13b59cbca45636681a8fcd5d",
+      "size_in_bytes": 1096
+    },
+    {
+      "_path": "share/X11/locale/zh_TW.UTF-8/Compose",
+      "file_mode": "text",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/home/task_179257413337710/croot/xorg-libx11_1792574177389/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
+      "sha256": "25f4e3b2a635645f6bf3dfc4eaaa1af10d27b77eb7574aac61340689516f7ede",
+      "size_in_bytes": 303
+    },
+    {
+      "_path": "share/X11/locale/zh_TW.UTF-8/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "e67615cebce31ef62695e4b4f3603ee88c099c4ce66c2320fc3ee14eb9bd5910",
+      "size_in_bytes": 345
+    },
+    {
+      "_path": "share/X11/locale/zh_TW.UTF-8/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "c73e42057a8b2ea920119ac3d3148a22ea7b61ec79ed9c1729f2f8ad61948a4a",
+      "size_in_bytes": 1221
+    },
+    {
+      "_path": "share/X11/locale/zh_TW.big5/Compose",
+      "path_type": "hardlink",
+      "sha256": "806bad5419a8e6daea8e1e50d9e8d7e7373cbff41608f2d213e06b91ed449a1f",
+      "size_in_bytes": 307
+    },
+    {
+      "_path": "share/X11/locale/zh_TW.big5/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "675460866b5990e87bf9e967d1b8623d45cc70625839c57f113b030e214500ca",
+      "size_in_bytes": 344
+    },
+    {
+      "_path": "share/X11/locale/zh_TW.big5/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "37ec838903461a720be5093b281f23872c2deb9609693f0ebfd03cb9f8a24fa4",
+      "size_in_bytes": 9519
+    },
+    {
+      "_path": "share/X11/locale/zh_TW/Compose",
+      "path_type": "hardlink",
+      "sha256": "35e56e33bb1caf9819741f39069cc986e01502294d941e6c10292ed004570088",
+      "size_in_bytes": 302
+    },
+    {
+      "_path": "share/X11/locale/zh_TW/XI18N_OBJS",
+      "path_type": "hardlink",
+      "sha256": "40deb13f5d81187a233d543da4509610d5647af4c74b202a530923aa9946449c",
+      "size_in_bytes": 244
+    },
+    {
+      "_path": "share/X11/locale/zh_TW/XLC_LOCALE",
+      "path_type": "hardlink",
+      "sha256": "adab4c126433bf991e2ac8803709e1b13f6ba3b8883308adf3bad4f496a283d4",
+      "size_in_bytes": 2275
+    }
+  ],
+  "paths_version": 1
+}

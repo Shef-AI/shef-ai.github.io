@@ -1,0 +1,2493 @@
+'@load notice' Comment.Preproc
+'\n'          Text.Whitespace
+
+'@load utils/thresholds' Comment.Preproc
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'module'      Keyword.Namespace
+' '           Text.Whitespace
+'SSH'         Name.Namespace
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'export'      Keyword
+' '           Text.Whitespace
+'{'           Punctuation
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'redef'       Keyword
+' '           Text.Whitespace
+'enum'        Keyword.Type
+' '           Text.Whitespace
+'Log::ID'     Name.Class
+' '           Text.Whitespace
+'+'           Operator
+'='           Operator
+' '           Text.Whitespace
+'{'           Punctuation
+' '           Text.Whitespace
+'SSH'         Name
+' '           Text.Whitespace
+'}'           Punctuation
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'redef'       Keyword
+' '           Text.Whitespace
+'enum'        Keyword.Type
+' '           Text.Whitespace
+'Notice::Type' Name.Class
+' '           Text.Whitespace
+'+'           Operator
+'='           Operator
+' '           Text.Whitespace
+'{'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'Login'       Name
+','           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'Password_Guessing' Name
+','           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'Login_By_Password_Guesser' Name
+','           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'Login_From_Interesting_Hostname' Name
+','           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'Bytecount_Inconsistency' Name
+','           Punctuation
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'}'           Punctuation
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'type'        Keyword
+' '           Text.Whitespace
+'Info'        Name.Class
+':'           Operator
+' '           Text.Whitespace
+'record'      Keyword.Type
+' '           Text.Whitespace
+'{'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'ts'          Name
+':'           Punctuation
+'              ' Text.Whitespace
+'time'        Keyword.Type
+'         '   Text.Whitespace
+'&log'        Keyword.Pseudo
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'uid'         Name
+':'           Punctuation
+'             ' Text.Whitespace
+'string'      Keyword.Type
+'       '     Text.Whitespace
+'&log'        Keyword.Pseudo
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'id'          Name
+':'           Punctuation
+'              ' Text.Whitespace
+'conn_id'     Name
+'      '      Text.Whitespace
+'&log'        Keyword.Pseudo
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'status'      Name
+':'           Punctuation
+'          '  Text.Whitespace
+'string'      Keyword.Type
+'       '     Text.Whitespace
+'&log'        Keyword.Pseudo
+' '           Text.Whitespace
+'&optional'   Keyword.Pseudo
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'direction'   Name
+':'           Punctuation
+'       '     Text.Whitespace
+'string'      Keyword.Type
+'       '     Text.Whitespace
+'&log'        Keyword.Pseudo
+' '           Text.Whitespace
+'&optional'   Keyword.Pseudo
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'remote_location' Name
+':'           Punctuation
+' '           Text.Whitespace
+'geo_location' Name
+' '           Text.Whitespace
+'&log'        Keyword.Pseudo
+' '           Text.Whitespace
+'&optional'   Keyword.Pseudo
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'client'      Name
+':'           Punctuation
+'          '  Text.Whitespace
+'string'      Keyword.Type
+'       '     Text.Whitespace
+'&log'        Keyword.Pseudo
+' '           Text.Whitespace
+'&optional'   Keyword.Pseudo
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'server'      Name
+':'           Punctuation
+'          '  Text.Whitespace
+'string'      Keyword.Type
+'       '     Text.Whitespace
+'&log'        Keyword.Pseudo
+' '           Text.Whitespace
+'&optional'   Keyword.Pseudo
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'resp_size'   Name
+':'           Punctuation
+'       '     Text.Whitespace
+'count'       Keyword.Type
+'        '    Text.Whitespace
+'&log'        Keyword.Pseudo
+' '           Text.Whitespace
+'&default'    Keyword.Pseudo
+'='           Operator
+'0'           Literal.Number.Float
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\n\t\t'  Text.Whitespace
+'## Indicate if the SSH session is done being watched.' Comment
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'done'        Name
+':'           Punctuation
+'            ' Text.Whitespace
+'bool'        Keyword.Type
+'         '   Text.Whitespace
+'&default'    Keyword.Pseudo
+'='           Operator
+'F'           Keyword.Constant
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'}'           Punctuation
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'const'       Keyword.Declaration
+' '           Text.Whitespace
+'password_guesses_limit' Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'30'          Literal.Number.Float
+' '           Text.Whitespace
+'&redef'      Keyword.Pseudo
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\n\t'      Text.Whitespace
+'# The size in bytes at which the SSH connection is presumed to be' Comment
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'# successful.' Comment
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'const'       Keyword.Declaration
+' '           Text.Whitespace
+'authentication_data_size' Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'5500'        Literal.Number.Float
+' '           Text.Whitespace
+'&redef'      Keyword.Pseudo
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\n\t'      Text.Whitespace
+'# The amount of time to remember presumed non-successful logins to build' Comment
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'# model of a password guesser.' Comment
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'const'       Keyword.Declaration
+' '           Text.Whitespace
+'guessing_timeout' Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'30 mins'     Literal.Number.Float
+' '           Text.Whitespace
+'&redef'      Keyword.Pseudo
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+"# The set of countries for which you'd like to throw notices upon successful login" Comment
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'#   requires Bro compiled with libGeoIP support' Comment
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'const'       Keyword.Declaration
+' '           Text.Whitespace
+'watched_countries' Name
+':'           Punctuation
+' '           Text.Whitespace
+'set'         Keyword.Type
+'['           Punctuation
+'string'      Keyword.Type
+']'           Punctuation
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'{'           Punctuation
+'"'           Literal.String
+'R'           Literal.String
+'O'           Literal.String
+'"'           Literal.String
+'}'           Punctuation
+' '           Text.Whitespace
+'&redef'      Keyword.Pseudo
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'# Strange/bad host names to originate successful SSH logins' Comment
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'const'       Keyword.Declaration
+' '           Text.Whitespace
+'interesting_hostnames' Name
+' '           Text.Whitespace
+'='           Operator
+'\n'          Text.Whitespace
+
+'\t\t\t'      Text.Whitespace
+'/'           Literal.String.Regex
+'^'           Literal.String.Regex
+'d'           Literal.String.Regex
+'?'           Literal.String.Regex
+'n'           Literal.String.Regex
+'s'           Literal.String.Regex
+'['           Literal.String.Regex
+'0'           Literal.String.Regex
+'-'           Literal.String.Regex
+'9'           Literal.String.Regex
+']'           Literal.String.Regex
+'*'           Literal.String.Regex
+'\\.'         Literal.String.Escape
+'/'           Literal.String.Regex
+' '           Text.Whitespace
+'|'           Operator
+'\n'          Text.Whitespace
+
+'\t\t\t'      Text.Whitespace
+'/'           Literal.String.Regex
+'^'           Literal.String.Regex
+'s'           Literal.String.Regex
+'m'           Literal.String.Regex
+'t'           Literal.String.Regex
+'p'           Literal.String.Regex
+'['           Literal.String.Regex
+'0'           Literal.String.Regex
+'-'           Literal.String.Regex
+'9'           Literal.String.Regex
+']'           Literal.String.Regex
+'*'           Literal.String.Regex
+'\\.'         Literal.String.Escape
+'/'           Literal.String.Regex
+' '           Text.Whitespace
+'|'           Operator
+'\n'          Text.Whitespace
+
+'\t\t\t'      Text.Whitespace
+'/'           Literal.String.Regex
+'^'           Literal.String.Regex
+'m'           Literal.String.Regex
+'a'           Literal.String.Regex
+'i'           Literal.String.Regex
+'l'           Literal.String.Regex
+'['           Literal.String.Regex
+'0'           Literal.String.Regex
+'-'           Literal.String.Regex
+'9'           Literal.String.Regex
+']'           Literal.String.Regex
+'*'           Literal.String.Regex
+'\\.'         Literal.String.Escape
+'/'           Literal.String.Regex
+' '           Text.Whitespace
+'|'           Operator
+'\n'          Text.Whitespace
+
+'\t\t\t'      Text.Whitespace
+'/'           Literal.String.Regex
+'^'           Literal.String.Regex
+'p'           Literal.String.Regex
+'o'           Literal.String.Regex
+'p'           Literal.String.Regex
+'['           Literal.String.Regex
+'0'           Literal.String.Regex
+'-'           Literal.String.Regex
+'9'           Literal.String.Regex
+']'           Literal.String.Regex
+'*'           Literal.String.Regex
+'\\.'         Literal.String.Escape
+'/'           Literal.String.Regex
+'  '          Text.Whitespace
+'|'           Operator
+'\n'          Text.Whitespace
+
+'\t\t\t'      Text.Whitespace
+'/'           Literal.String.Regex
+'^'           Literal.String.Regex
+'i'           Literal.String.Regex
+'m'           Literal.String.Regex
+'a'           Literal.String.Regex
+'p'           Literal.String.Regex
+'['           Literal.String.Regex
+'0'           Literal.String.Regex
+'-'           Literal.String.Regex
+'9'           Literal.String.Regex
+']'           Literal.String.Regex
+'*'           Literal.String.Regex
+'\\.'         Literal.String.Escape
+'/'           Literal.String.Regex
+' '           Text.Whitespace
+'|'           Operator
+'\n'          Text.Whitespace
+
+'\t\t\t'      Text.Whitespace
+'/'           Literal.String.Regex
+'^'           Literal.String.Regex
+'w'           Literal.String.Regex
+'w'           Literal.String.Regex
+'w'           Literal.String.Regex
+'['           Literal.String.Regex
+'0'           Literal.String.Regex
+'-'           Literal.String.Regex
+'9'           Literal.String.Regex
+']'           Literal.String.Regex
+'*'           Literal.String.Regex
+'\\.'         Literal.String.Escape
+'/'           Literal.String.Regex
+'  '          Text.Whitespace
+'|'           Operator
+'\n'          Text.Whitespace
+
+'\t\t\t'      Text.Whitespace
+'/'           Literal.String.Regex
+'^'           Literal.String.Regex
+'f'           Literal.String.Regex
+'t'           Literal.String.Regex
+'p'           Literal.String.Regex
+'['           Literal.String.Regex
+'0'           Literal.String.Regex
+'-'           Literal.String.Regex
+'9'           Literal.String.Regex
+']'           Literal.String.Regex
+'*'           Literal.String.Regex
+'\\.'         Literal.String.Escape
+'/'           Literal.String.Regex
+'  '          Text.Whitespace
+'&redef'      Keyword.Pseudo
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'# This is a table with orig subnet as the key, and subnet as the value.' Comment
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'const'       Keyword.Declaration
+' '           Text.Whitespace
+'ignore_guessers' Name
+':'           Punctuation
+' '           Text.Whitespace
+'table'       Keyword.Type
+'['           Punctuation
+'subnet'      Keyword.Type
+']'           Punctuation
+' '           Text.Whitespace
+'of'          Operator.Word
+' '           Text.Whitespace
+'subnet'      Keyword.Type
+' '           Text.Whitespace
+'&redef'      Keyword.Pseudo
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\n\t'      Text.Whitespace
+'# If true, we tell the event engine to not look at further data' Comment
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'# packets after the initial SSH handshake. Helps with performance' Comment
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'# (especially with large file transfers) but precludes some' Comment
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'# kinds of analyses (e.g., tracking connection size).' Comment
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'const'       Keyword.Declaration
+' '           Text.Whitespace
+'skip_processing_after_detection' Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'F'           Keyword.Constant
+' '           Text.Whitespace
+'&redef'      Keyword.Pseudo
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\n\t'      Text.Whitespace
+'# Keeps count of how many rejections a host has had' Comment
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'global'      Keyword.Declaration
+' '           Text.Whitespace
+'password_rejections' Name
+':'           Punctuation
+' '           Text.Whitespace
+'table'       Keyword.Type
+'['           Punctuation
+'addr'        Keyword.Type
+']'           Punctuation
+' '           Text.Whitespace
+'of'          Operator.Word
+' '           Text.Whitespace
+'TrackCount'  Name
+' \n\t\t'     Text.Whitespace
+'&write_expire' Keyword.Pseudo
+'='           Operator
+'guessing_timeout' Name
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'&synchronized' Keyword.Pseudo
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'# Keeps track of hosts identified as guessing passwords' Comment
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+"# TODO: guessing_timeout doesn't work correctly here.  If a user redefs" Comment
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+"#       the variable, it won't take effect." Comment
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'global'      Keyword.Declaration
+' '           Text.Whitespace
+'password_guessers' Name
+':'           Punctuation
+' '           Text.Whitespace
+'set'         Keyword.Type
+'['           Punctuation
+'addr'        Keyword.Type
+']'           Punctuation
+' '           Text.Whitespace
+'&read_expire' Keyword.Pseudo
+'='           Operator
+'guessing_timeout' Name
+'+'           Operator
+'1hr'         Literal.Number.Float
+' '           Text.Whitespace
+'&synchronized' Keyword.Pseudo
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\n\t'      Text.Whitespace
+'global'      Keyword.Declaration
+' '           Text.Whitespace
+'log_ssh'     Name
+':'           Punctuation
+' '           Text.Whitespace
+'event'       Keyword.Type
+'('           Punctuation
+'rec'         Name
+':'           Punctuation
+' '           Text.Whitespace
+'Info'        Name
+')'           Punctuation
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'# Configure DPD and the packet filter' Comment
+'\n'          Text.Whitespace
+
+'redef'       Keyword
+' '           Text.Whitespace
+'capture_filters' Name
+' '           Text.Whitespace
+'+'           Operator
+'='           Operator
+' '           Text.Whitespace
+'{'           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'"'           Literal.String
+'s'           Literal.String
+'s'           Literal.String
+'h'           Literal.String
+'"'           Literal.String
+']'           Punctuation
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'"'           Literal.String
+'t'           Literal.String
+'c'           Literal.String
+'p'           Literal.String
+' '           Literal.String
+'p'           Literal.String
+'o'           Literal.String
+'r'           Literal.String
+'t'           Literal.String
+' '           Literal.String
+'2'           Literal.String
+'2'           Literal.String
+'"'           Literal.String
+' '           Text.Whitespace
+'}'           Punctuation
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'redef'       Keyword
+' '           Text.Whitespace
+'dpd_config'  Name
+' '           Text.Whitespace
+'+'           Operator
+'='           Operator
+' '           Text.Whitespace
+'{'           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'ANALYZER_SSH' Name
+']'           Punctuation
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'['           Punctuation
+'$'           Operator
+'ports'       Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'set'         Keyword.Type
+'('           Punctuation
+'22/tcp'      Literal.Number
+')'           Punctuation
+']'           Punctuation
+' '           Text.Whitespace
+'}'           Punctuation
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'redef'       Keyword
+' '           Text.Whitespace
+'record'      Keyword.Type
+' '           Text.Whitespace
+'connection'  Name.Class
+' '           Text.Whitespace
+'+'           Operator
+'='           Operator
+' '           Text.Whitespace
+'{'           Punctuation
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'ssh'         Name
+':'           Punctuation
+' '           Text.Whitespace
+'Info'        Name
+' '           Text.Whitespace
+'&optional'   Keyword.Pseudo
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'event'       Keyword.Type
+' '           Text.Whitespace
+'bro_init'    Name.Function
+'('           Punctuation
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'{'           Punctuation
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'Log::create_stream' Name.Function
+'('           Punctuation
+'SSH'         Name
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'$'           Operator
+'columns'     Name
+'='           Operator
+'Info'        Name
+','           Punctuation
+' '           Text.Whitespace
+'$'           Operator
+'ev'          Name
+'='           Operator
+'log_ssh'     Name
+']'           Punctuation
+')'           Punctuation
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'function'    Keyword.Type
+' '           Text.Whitespace
+'set_session' Name.Function
+'('           Punctuation
+'c'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'connection'  Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'{'           Punctuation
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'('           Punctuation
+' '           Text.Whitespace
+'!'           Operator
+' '           Text.Whitespace
+'c'           Name
+'?$'          Operator
+'ssh'         Name
+' '           Text.Whitespace
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'{'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'local'       Keyword.Declaration
+' '           Text.Whitespace
+'info'        Name
+':'           Punctuation
+' '           Text.Whitespace
+'Info'        Name
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'info'        Name
+'$'           Operator
+'ts'          Name
+'='           Operator
+'network_time' Name.Function
+'('           Punctuation
+')'           Punctuation
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'info'        Name
+'$'           Operator
+'uid'         Name
+'='           Operator
+'c'           Name
+'$'           Operator
+'uid'         Name
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'info'        Name
+'$'           Operator
+'id'          Name
+'='           Operator
+'c'           Name
+'$'           Operator
+'id'          Name
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'c'           Name
+'$'           Operator
+'ssh'         Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'info'        Name
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'function'    Keyword.Type
+' '           Text.Whitespace
+'check_ssh_connection' Name.Function
+'('           Punctuation
+'c'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'connection'  Name
+','           Punctuation
+' '           Text.Whitespace
+'done'        Name
+':'           Punctuation
+' '           Text.Whitespace
+'bool'        Keyword.Type
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'{'           Punctuation
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'# If done watching this connection, just return.' Comment
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'('           Punctuation
+' '           Text.Whitespace
+'c'           Name
+'$'           Operator
+'ssh'         Name
+'$'           Operator
+'done'        Name
+' '           Text.Whitespace
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'return'      Keyword
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\n\t'      Text.Whitespace
+'# If this is still a live connection and the byte count has not' Comment
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'# crossed the threshold, just return and let the resheduled check happen later.' Comment
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'('           Punctuation
+' '           Text.Whitespace
+'!'           Operator
+'done'        Name
+' '           Text.Whitespace
+'&'           Operator
+'&'           Operator
+' '           Text.Whitespace
+'c'           Name
+'$'           Operator
+'resp'        Name
+'$'           Operator
+'size'        Name
+' '           Text.Whitespace
+'<'           Operator
+' '           Text.Whitespace
+'authentication_data_size' Name
+' '           Text.Whitespace
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'return'      Keyword
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'# Make sure the server has sent back more than 50 bytes to filter out' Comment
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'# hosts that are just port scanning.  Nothing is ever logged if the server' Comment
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+"# doesn't send back at least 50 bytes." Comment
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'('           Punctuation
+' '           Text.Whitespace
+'c'           Name
+'$'           Operator
+'resp'        Name
+'$'           Operator
+'size'        Name
+' '           Text.Whitespace
+'<'           Operator
+' '           Text.Whitespace
+'50'          Literal.Number.Float
+' '           Text.Whitespace
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'return'      Keyword
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'local'       Keyword.Declaration
+' '           Text.Whitespace
+'status'      Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'"'           Literal.String
+'f'           Literal.String
+'a'           Literal.String
+'i'           Literal.String
+'l'           Literal.String
+'u'           Literal.String
+'r'           Literal.String
+'e'           Literal.String
+'"'           Literal.String
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'local'       Keyword.Declaration
+' '           Text.Whitespace
+'direction'   Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'Site::is_local_addr' Name.Function
+'('           Punctuation
+'c'           Name
+'$'           Operator
+'id'          Name
+'$'           Operator
+'orig_h'      Name
+')'           Punctuation
+' '           Text.Whitespace
+'?'           Punctuation
+' '           Text.Whitespace
+'"'           Literal.String
+'t'           Literal.String
+'o'           Literal.String
+'"'           Literal.String
+' '           Text.Whitespace
+':'           Punctuation
+' '           Text.Whitespace
+'"'           Literal.String
+'f'           Literal.String
+'r'           Literal.String
+'o'           Literal.String
+'m'           Literal.String
+'"'           Literal.String
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'local'       Keyword.Declaration
+' '           Text.Whitespace
+'location'    Name
+':'           Punctuation
+' '           Text.Whitespace
+'geo_location' Name
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'location'    Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'('           Punctuation
+'direction'   Name
+' '           Text.Whitespace
+'='           Operator
+'='           Operator
+' '           Text.Whitespace
+'"'           Literal.String
+'t'           Literal.String
+'o'           Literal.String
+'"'           Literal.String
+')'           Punctuation
+' '           Text.Whitespace
+'?'           Punctuation
+' '           Text.Whitespace
+'lookup_location' Name.Function
+'('           Punctuation
+'c'           Name
+'$'           Operator
+'id'          Name
+'$'           Operator
+'resp_h'      Name
+')'           Punctuation
+' '           Text.Whitespace
+':'           Punctuation
+' '           Text.Whitespace
+'lookup_location' Name.Function
+'('           Punctuation
+'c'           Name
+'$'           Operator
+'id'          Name
+'$'           Operator
+'orig_h'      Name
+')'           Punctuation
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\n\t'      Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'('           Punctuation
+' '           Text.Whitespace
+'done'        Name
+' '           Text.Whitespace
+'&'           Operator
+'&'           Operator
+' '           Text.Whitespace
+'c'           Name
+'$'           Operator
+'resp'        Name
+'$'           Operator
+'size'        Name
+' '           Text.Whitespace
+'<'           Operator
+' '           Text.Whitespace
+'authentication_data_size' Name
+' '           Text.Whitespace
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'{'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'# presumed failure' Comment
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'('           Punctuation
+' '           Text.Whitespace
+'c'           Name
+'$'           Operator
+'id'          Name
+'$'           Operator
+'orig_h'      Name
+' '           Text.Whitespace
+'!'           Operator
+'in'          Operator.Word
+' '           Text.Whitespace
+'password_rejections' Name
+' '           Text.Whitespace
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t'      Text.Whitespace
+'password_rejections' Name
+'['           Punctuation
+'c'           Name
+'$'           Operator
+'id'          Name
+'$'           Operator
+'orig_h'      Name
+']'           Punctuation
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'new_track_count' Name.Function
+'('           Punctuation
+')'           Punctuation
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t\n\t\t' Text.Whitespace
+'# Track the number of rejections' Comment
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'('           Punctuation
+' '           Text.Whitespace
+'!'           Operator
+'('           Punctuation
+'c'           Name
+'$'           Operator
+'id'          Name
+'$'           Operator
+'orig_h'      Name
+' '           Text.Whitespace
+'in'          Operator.Word
+' '           Text.Whitespace
+'ignore_guessers' Name
+' '           Text.Whitespace
+'&'           Operator
+'&'           Operator
+'\n'          Text.Whitespace
+
+'\t\t       ' Text.Whitespace
+'c'           Name
+'$'           Operator
+'id'          Name
+'$'           Operator
+'resp_h'      Name
+' '           Text.Whitespace
+'in'          Operator.Word
+' '           Text.Whitespace
+'ignore_guessers' Name
+'['           Punctuation
+'c'           Name
+'$'           Operator
+'id'          Name
+'$'           Operator
+'orig_h'      Name
+']'           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t'      Text.Whitespace
+'+'           Operator
+'+'           Operator
+'password_rejections' Name
+'['           Punctuation
+'c'           Name
+'$'           Operator
+'id'          Name
+'$'           Operator
+'orig_h'      Name
+']'           Punctuation
+'$'           Operator
+'n'           Name
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t\n\t\t' Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'('           Punctuation
+' '           Text.Whitespace
+'default_check_threshold' Name.Function
+'('           Punctuation
+'password_rejections' Name
+'['           Punctuation
+'c'           Name
+'$'           Operator
+'id'          Name
+'$'           Operator
+'orig_h'      Name
+']'           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t'      Text.Whitespace
+'{'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t'      Text.Whitespace
+'add'         Keyword
+' '           Text.Whitespace
+'password_guessers' Name
+'['           Punctuation
+'c'           Name
+'$'           Operator
+'id'          Name
+'$'           Operator
+'orig_h'      Name
+']'           Punctuation
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t'      Text.Whitespace
+'NOTICE'      Name.Function
+'('           Punctuation
+'['           Punctuation
+'$'           Operator
+'note'        Name
+'='           Operator
+'Password_Guessing' Name
+','           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t        ' Text.Whitespace
+'$'           Operator
+'conn'        Name
+'='           Operator
+'c'           Name
+','           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t        ' Text.Whitespace
+'$'           Operator
+'msg'         Name
+'='           Operator
+'fmt'         Name.Function
+'('           Punctuation
+'"'           Literal.String
+'S'           Literal.String
+'S'           Literal.String
+'H'           Literal.String
+' '           Literal.String
+'p'           Literal.String
+'a'           Literal.String
+'s'           Literal.String
+'s'           Literal.String
+'w'           Literal.String
+'o'           Literal.String
+'r'           Literal.String
+'d'           Literal.String
+' '           Literal.String
+'g'           Literal.String
+'u'           Literal.String
+'e'           Literal.String
+'s'           Literal.String
+'s'           Literal.String
+'i'           Literal.String
+'n'           Literal.String
+'g'           Literal.String
+' '           Literal.String
+'b'           Literal.String
+'y'           Literal.String
+' '           Literal.String
+'%s'          Literal.String.Escape
+'"'           Literal.String
+','           Punctuation
+' '           Text.Whitespace
+'c'           Name
+'$'           Operator
+'id'          Name
+'$'           Operator
+'orig_h'      Name
+')'           Punctuation
+','           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t        ' Text.Whitespace
+'$'           Operator
+'sub'         Name
+'='           Operator
+'fmt'         Name.Function
+'('           Punctuation
+'"'           Literal.String
+'%d'          Literal.String.Escape
+' '           Literal.String
+'f'           Literal.String
+'a'           Literal.String
+'i'           Literal.String
+'l'           Literal.String
+'e'           Literal.String
+'d'           Literal.String
+' '           Literal.String
+'l'           Literal.String
+'o'           Literal.String
+'g'           Literal.String
+'i'           Literal.String
+'n'           Literal.String
+'s'           Literal.String
+'"'           Literal.String
+','           Punctuation
+' '           Text.Whitespace
+'password_rejections' Name
+'['           Punctuation
+'c'           Name
+'$'           Operator
+'id'          Name
+'$'           Operator
+'orig_h'      Name
+']'           Punctuation
+'$'           Operator
+'n'           Name
+')'           Punctuation
+','           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t        ' Text.Whitespace
+'$'           Operator
+'n'           Name
+'='           Operator
+'password_rejections' Name
+'['           Punctuation
+'c'           Name
+'$'           Operator
+'id'          Name
+'$'           Operator
+'orig_h'      Name
+']'           Punctuation
+'$'           Operator
+'n'           Name
+']'           Punctuation
+')'           Punctuation
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t'      Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'}'           Punctuation
+' \n\t'       Text.Whitespace
+'# TODO: This is to work around a quasi-bug in Bro which occasionally ' Comment
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'#       causes the byte count to be oversized.' Comment
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'#   Watch for Gregors work that adds an actual counter of bytes transferred.' Comment
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'else'        Keyword
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'('           Punctuation
+' '           Text.Whitespace
+'c'           Name
+'$'           Operator
+'resp'        Name
+'$'           Operator
+'size'        Name
+' '           Text.Whitespace
+'<'           Operator
+' '           Text.Whitespace
+'20000000'    Literal.Number
+' '           Text.Whitespace
+')'           Punctuation
+' \n\t\t'     Text.Whitespace
+'{'           Punctuation
+' \n\t\t'     Text.Whitespace
+'# presumed successful login' Comment
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'status'      Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'"'           Literal.String
+'s'           Literal.String
+'u'           Literal.String
+'c'           Literal.String
+'c'           Literal.String
+'e'           Literal.String
+'s'           Literal.String
+'s'           Literal.String
+'"'           Literal.String
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'c'           Name
+'$'           Operator
+'ssh'         Name
+'$'           Operator
+'done'        Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'T'           Keyword.Constant
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'('           Punctuation
+' '           Text.Whitespace
+'c'           Name
+'$'           Operator
+'id'          Name
+'$'           Operator
+'orig_h'      Name
+' '           Text.Whitespace
+'in'          Operator.Word
+' '           Text.Whitespace
+'password_rejections' Name
+' '           Text.Whitespace
+'&'           Operator
+'&'           Operator
+'\n'          Text.Whitespace
+
+'\t\t     '   Text.Whitespace
+'password_rejections' Name
+'['           Punctuation
+'c'           Name
+'$'           Operator
+'id'          Name
+'$'           Operator
+'orig_h'      Name
+']'           Punctuation
+'$'           Operator
+'n'           Name
+' '           Text.Whitespace
+'>'           Operator
+' '           Text.Whitespace
+'password_guesses_limit' Name
+' '           Text.Whitespace
+'&'           Operator
+'&'           Operator
+'\n'          Text.Whitespace
+
+'\t\t     '   Text.Whitespace
+'c'           Name
+'$'           Operator
+'id'          Name
+'$'           Operator
+'orig_h'      Name
+' '           Text.Whitespace
+'!'           Operator
+'in'          Operator.Word
+' '           Text.Whitespace
+'password_guessers' Name
+' '           Text.Whitespace
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t'      Text.Whitespace
+'{'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t'      Text.Whitespace
+'add'         Keyword
+' '           Text.Whitespace
+'password_guessers' Name
+'['           Punctuation
+'c'           Name
+'$'           Operator
+'id'          Name
+'$'           Operator
+'orig_h'      Name
+']'           Punctuation
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t'      Text.Whitespace
+'NOTICE'      Name.Function
+'('           Punctuation
+'['           Punctuation
+'$'           Operator
+'note'        Name
+'='           Operator
+'Login_By_Password_Guesser' Name
+','           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t        ' Text.Whitespace
+'$'           Operator
+'conn'        Name
+'='           Operator
+'c'           Name
+','           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t        ' Text.Whitespace
+'$'           Operator
+'n'           Name
+'='           Operator
+'password_rejections' Name
+'['           Punctuation
+'c'           Name
+'$'           Operator
+'id'          Name
+'$'           Operator
+'orig_h'      Name
+']'           Punctuation
+'$'           Operator
+'n'           Name
+','           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t        ' Text.Whitespace
+'$'           Operator
+'msg'         Name
+'='           Operator
+'fmt'         Name.Function
+'('           Punctuation
+'"'           Literal.String
+'S'           Literal.String
+'u'           Literal.String
+'c'           Literal.String
+'c'           Literal.String
+'e'           Literal.String
+'s'           Literal.String
+'s'           Literal.String
+'f'           Literal.String
+'u'           Literal.String
+'l'           Literal.String
+' '           Literal.String
+'S'           Literal.String
+'S'           Literal.String
+'H'           Literal.String
+' '           Literal.String
+'l'           Literal.String
+'o'           Literal.String
+'g'           Literal.String
+'i'           Literal.String
+'n'           Literal.String
+' '           Literal.String
+'b'           Literal.String
+'y'           Literal.String
+' '           Literal.String
+'p'           Literal.String
+'a'           Literal.String
+'s'           Literal.String
+'s'           Literal.String
+'w'           Literal.String
+'o'           Literal.String
+'r'           Literal.String
+'d'           Literal.String
+' '           Literal.String
+'g'           Literal.String
+'u'           Literal.String
+'e'           Literal.String
+'s'           Literal.String
+'s'           Literal.String
+'e'           Literal.String
+'r'           Literal.String
+' '           Literal.String
+'%s'          Literal.String.Escape
+'"'           Literal.String
+','           Punctuation
+' '           Text.Whitespace
+'c'           Name
+'$'           Operator
+'id'          Name
+'$'           Operator
+'orig_h'      Name
+')'           Punctuation
+','           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t        ' Text.Whitespace
+'$'           Operator
+'sub'         Name
+'='           Operator
+'fmt'         Name.Function
+'('           Punctuation
+'"'           Literal.String
+'%d'          Literal.String.Escape
+' '           Literal.String
+'f'           Literal.String
+'a'           Literal.String
+'i'           Literal.String
+'l'           Literal.String
+'e'           Literal.String
+'d'           Literal.String
+' '           Literal.String
+'l'           Literal.String
+'o'           Literal.String
+'g'           Literal.String
+'i'           Literal.String
+'n'           Literal.String
+'s'           Literal.String
+'"'           Literal.String
+','           Punctuation
+' '           Text.Whitespace
+'password_rejections' Name
+'['           Punctuation
+'c'           Name
+'$'           Operator
+'id'          Name
+'$'           Operator
+'orig_h'      Name
+']'           Punctuation
+'$'           Operator
+'n'           Name
+')'           Punctuation
+']'           Punctuation
+')'           Punctuation
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t'      Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\n\t\t'  Text.Whitespace
+'local'       Keyword.Declaration
+' '           Text.Whitespace
+'message'     Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'fmt'         Name.Function
+'('           Punctuation
+'"'           Literal.String
+'S'           Literal.String
+'S'           Literal.String
+'H'           Literal.String
+' '           Literal.String
+'l'           Literal.String
+'o'           Literal.String
+'g'           Literal.String
+'i'           Literal.String
+'n'           Literal.String
+' '           Literal.String
+'%s'          Literal.String.Escape
+' '           Literal.String
+'%s'          Literal.String.Escape
+' '           Literal.String
+'\\"'         Literal.String.Escape
+'%s'          Literal.String.Escape
+'\\"'         Literal.String.Escape
+' '           Literal.String
+'\\"'         Literal.String.Escape
+'%s'          Literal.String.Escape
+'\\"'         Literal.String.Escape
+' '           Literal.String
+'%f'          Literal.String.Escape
+' '           Literal.String
+'%f'          Literal.String.Escape
+' '           Literal.String
+'%s'          Literal.String.Escape
+' '           Literal.String
+'('           Literal.String
+'t'           Literal.String
+'r'           Literal.String
+'i'           Literal.String
+'g'           Literal.String
+'g'           Literal.String
+'e'           Literal.String
+'r'           Literal.String
+'e'           Literal.String
+'d'           Literal.String
+' '           Literal.String
+'w'           Literal.String
+'i'           Literal.String
+'t'           Literal.String
+'h'           Literal.String
+' '           Literal.String
+'%d'          Literal.String.Escape
+' '           Literal.String
+'b'           Literal.String
+'y'           Literal.String
+'t'           Literal.String
+'e'           Literal.String
+'s'           Literal.String
+')'           Literal.String
+'"'           Literal.String
+','           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t              ' Text.Whitespace
+'direction'   Name
+','           Punctuation
+' '           Text.Whitespace
+'location'    Name
+'$'           Operator
+'country_code' Name
+','           Punctuation
+' '           Text.Whitespace
+'location'    Name
+'$'           Operator
+'region'      Name
+','           Punctuation
+' '           Text.Whitespace
+'location'    Name
+'$'           Operator
+'city'        Name
+','           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t              ' Text.Whitespace
+'location'    Name
+'$'           Operator
+'latitude'    Name
+','           Punctuation
+' '           Text.Whitespace
+'location'    Name
+'$'           Operator
+'longitude'   Name
+','           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t              ' Text.Whitespace
+'id_string'   Name.Function
+'('           Punctuation
+'c'           Name
+'$'           Operator
+'id'          Name
+')'           Punctuation
+','           Punctuation
+' '           Text.Whitespace
+'c'           Name
+'$'           Operator
+'resp'        Name
+'$'           Operator
+'size'        Name
+')'           Punctuation
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'NOTICE'      Name.Function
+'('           Punctuation
+'['           Punctuation
+'$'           Operator
+'note'        Name
+'='           Operator
+'Login'       Name
+','           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t        ' Text.Whitespace
+'$'           Operator
+'conn'        Name
+'='           Operator
+'c'           Name
+','           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t        ' Text.Whitespace
+'$'           Operator
+'msg'         Name
+'='           Operator
+'message'     Name
+','           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t        ' Text.Whitespace
+'$'           Operator
+'sub'         Name
+'='           Operator
+'location'    Name
+'$'           Operator
+'country_code' Name
+']'           Punctuation
+')'           Punctuation
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\n\t\t'  Text.Whitespace
+'# Check to see if this login came from an interesting hostname' Comment
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'when'        Keyword
+' '           Text.Whitespace
+'('           Punctuation
+' '           Text.Whitespace
+'local'       Keyword.Declaration
+' '           Text.Whitespace
+'hostname'    Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'lookup_addr' Name.Function
+'('           Punctuation
+'c'           Name
+'$'           Operator
+'id'          Name
+'$'           Operator
+'orig_h'      Name
+')'           Punctuation
+' '           Text.Whitespace
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t'      Text.Whitespace
+'{'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t'      Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'('           Punctuation
+' '           Text.Whitespace
+'interesting_hostnames' Name
+' '           Text.Whitespace
+'in'          Operator.Word
+' '           Text.Whitespace
+'hostname'    Name
+' '           Text.Whitespace
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t\t'    Text.Whitespace
+'{'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t\t'    Text.Whitespace
+'NOTICE'      Name.Function
+'('           Punctuation
+'['           Punctuation
+'$'           Operator
+'note'        Name
+'='           Operator
+'Login_From_Interesting_Hostname' Name
+','           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t\t        ' Text.Whitespace
+'$'           Operator
+'conn'        Name
+'='           Operator
+'c'           Name
+','           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t\t        ' Text.Whitespace
+'$'           Operator
+'msg'         Name
+'='           Operator
+'fmt'         Name.Function
+'('           Punctuation
+'"'           Literal.String
+'S'           Literal.String
+'t'           Literal.String
+'r'           Literal.String
+'a'           Literal.String
+'n'           Literal.String
+'g'           Literal.String
+'e'           Literal.String
+' '           Literal.String
+'l'           Literal.String
+'o'           Literal.String
+'g'           Literal.String
+'i'           Literal.String
+'n'           Literal.String
+' '           Literal.String
+'f'           Literal.String
+'r'           Literal.String
+'o'           Literal.String
+'m'           Literal.String
+' '           Literal.String
+'%s'          Literal.String.Escape
+'"'           Literal.String
+','           Punctuation
+' '           Text.Whitespace
+'hostname'    Name
+')'           Punctuation
+','           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t\t        ' Text.Whitespace
+'$'           Operator
+'sub'         Name
+'='           Operator
+'hostname'    Name
+']'           Punctuation
+')'           Punctuation
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t\t'    Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t'      Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t\n\t\t' Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'('           Punctuation
+' '           Text.Whitespace
+'location'    Name
+'$'           Operator
+'country_code' Name
+' '           Text.Whitespace
+'in'          Operator.Word
+' '           Text.Whitespace
+'watched_countries' Name
+' '           Text.Whitespace
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t'      Text.Whitespace
+'{'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t\n\t\t\t' Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t\t\n\t\t' Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'else'        Keyword
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'('           Punctuation
+' '           Text.Whitespace
+'c'           Name
+'$'           Operator
+'resp'        Name
+'$'           Operator
+'size'        Name
+' '           Text.Whitespace
+'>'           Operator
+'='           Operator
+' '           Text.Whitespace
+'200000000'   Literal.Number
+' '           Text.Whitespace
+')'           Punctuation
+' \n\t\t'     Text.Whitespace
+'{'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'NOTICE'      Name.Function
+'('           Punctuation
+'['           Punctuation
+'$'           Operator
+'note'        Name
+'='           Operator
+'Bytecount_Inconsistency' Name
+','           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t        ' Text.Whitespace
+'$'           Operator
+'conn'        Name
+'='           Operator
+'c'           Name
+','           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t        ' Text.Whitespace
+'$'           Operator
+'msg'         Name
+'='           Operator
+'"'           Literal.String
+'D'           Literal.String
+'u'           Literal.String
+'r'           Literal.String
+'i'           Literal.String
+'n'           Literal.String
+'g'           Literal.String
+' '           Literal.String
+'b'           Literal.String
+'y'           Literal.String
+'t'           Literal.String
+'e'           Literal.String
+' '           Literal.String
+'c'           Literal.String
+'o'           Literal.String
+'u'           Literal.String
+'n'           Literal.String
+'t'           Literal.String
+'i'           Literal.String
+'n'           Literal.String
+'g'           Literal.String
+' '           Literal.String
+'i'           Literal.String
+'n'           Literal.String
+' '           Literal.String
+'S'           Literal.String
+'S'           Literal.String
+'H'           Literal.String
+' '           Literal.String
+'a'           Literal.String
+'n'           Literal.String
+'a'           Literal.String
+'l'           Literal.String
+'y'           Literal.String
+'s'           Literal.String
+'i'           Literal.String
+'s'           Literal.String
+','           Literal.String
+' '           Literal.String
+'a'           Literal.String
+'n'           Literal.String
+' '           Literal.String
+'o'           Literal.String
+'v'           Literal.String
+'e'           Literal.String
+'r'           Literal.String
+'l'           Literal.String
+'y'           Literal.String
+' '           Literal.String
+'l'           Literal.String
+'a'           Literal.String
+'r'           Literal.String
+'g'           Literal.String
+'e'           Literal.String
+' '           Literal.String
+'v'           Literal.String
+'a'           Literal.String
+'l'           Literal.String
+'u'           Literal.String
+'e'           Literal.String
+' '           Literal.String
+'w'           Literal.String
+'a'           Literal.String
+'s'           Literal.String
+' '           Literal.String
+'s'           Literal.String
+'e'           Literal.String
+'e'           Literal.String
+'n'           Literal.String
+'.'           Literal.String
+'"'           Literal.String
+','           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t        ' Text.Whitespace
+'$'           Operator
+'sub'         Name
+'='           Operator
+'fmt'         Name.Function
+'('           Punctuation
+'"'           Literal.String
+'%d'          Literal.String.Escape
+'"'           Literal.String
+','           Punctuation
+'c'           Name
+'$'           Operator
+'resp'        Name
+'$'           Operator
+'size'        Name
+')'           Punctuation
+']'           Punctuation
+')'           Punctuation
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'c'           Name
+'$'           Operator
+'ssh'         Name
+'$'           Operator
+'remote_location' Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'location'    Name
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'c'           Name
+'$'           Operator
+'ssh'         Name
+'$'           Operator
+'status'      Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'status'      Name
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'c'           Name
+'$'           Operator
+'ssh'         Name
+'$'           Operator
+'direction'   Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'direction'   Name
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'c'           Name
+'$'           Operator
+'ssh'         Name
+'$'           Operator
+'resp_size'   Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'c'           Name
+'$'           Operator
+'resp'        Name
+'$'           Operator
+'size'        Name
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\n\t'      Text.Whitespace
+'Log::write'  Name.Function
+'('           Punctuation
+'SSH'         Name
+','           Punctuation
+' '           Text.Whitespace
+'c'           Name
+'$'           Operator
+'ssh'         Name
+')'           Punctuation
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\n\t'      Text.Whitespace
+'# Set the "done" flag to prevent the watching event from rescheduling' Comment
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'# after detection is done.' Comment
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'c'           Name
+'$'           Operator
+'ssh'         Name
+'$'           Operator
+'done'        Name
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\n\t'      Text.Whitespace
+"# Stop watching this connection, we don't care about it anymore." Comment
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'('           Punctuation
+' '           Text.Whitespace
+'skip_processing_after_detection' Name
+' '           Text.Whitespace
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'{'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'skip_further_processing' Name.Function
+'('           Punctuation
+'c'           Name
+'$'           Operator
+'id'          Name
+')'           Punctuation
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'set_record_packets' Name.Function
+'('           Punctuation
+'c'           Name
+'$'           Operator
+'id'          Name
+','           Punctuation
+' '           Text.Whitespace
+'F'           Keyword.Constant
+')'           Punctuation
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'event'       Keyword.Type
+' '           Text.Whitespace
+'connection_state_remove' Name.Function
+'('           Punctuation
+'c'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'connection'  Name
+')'           Punctuation
+' '           Text.Whitespace
+'&priority'   Keyword.Pseudo
+'='           Operator
+'-'           Operator
+'5'           Literal.Number.Float
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'{'           Punctuation
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'('           Punctuation
+' '           Text.Whitespace
+'c'           Name
+'?$'          Operator
+'ssh'         Name
+' '           Text.Whitespace
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'check_ssh_connection' Name.Function
+'('           Punctuation
+'c'           Name
+','           Punctuation
+' '           Text.Whitespace
+'T'           Keyword.Constant
+')'           Punctuation
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'event'       Keyword.Type
+' '           Text.Whitespace
+'ssh_watcher' Name.Function
+'('           Punctuation
+'c'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'connection'  Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'{'           Punctuation
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'local'       Keyword.Declaration
+' '           Text.Whitespace
+'id'          Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'c'           Name
+'$'           Operator
+'id'          Name
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+"# don't go any further if this connection is gone already!" Comment
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'('           Punctuation
+' '           Text.Whitespace
+'!'           Operator
+'connection_exists' Name.Function
+'('           Punctuation
+'id'          Name
+')'           Punctuation
+' '           Text.Whitespace
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'return'      Keyword
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'check_ssh_connection' Name.Function
+'('           Punctuation
+'c'           Name
+','           Punctuation
+' '           Text.Whitespace
+'F'           Keyword.Constant
+')'           Punctuation
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'('           Punctuation
+' '           Text.Whitespace
+'!'           Operator
+' '           Text.Whitespace
+'c'           Name
+'$'           Operator
+'ssh'         Name
+'$'           Operator
+'done'        Name
+' '           Text.Whitespace
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\t'        Text.Whitespace
+'schedule'    Keyword
+' '           Text.Whitespace
+'+'           Operator
+'15secs'      Literal.Number.Float
+' '           Text.Whitespace
+'{'           Punctuation
+' '           Text.Whitespace
+'ssh_watcher' Name.Function
+'('           Punctuation
+'c'           Name
+')'           Punctuation
+' '           Text.Whitespace
+'}'           Punctuation
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'event'       Keyword.Type
+' '           Text.Whitespace
+'ssh_server_version' Name.Function
+'('           Punctuation
+'c'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'connection'  Name
+','           Punctuation
+' '           Text.Whitespace
+'version'     Name
+':'           Punctuation
+' '           Text.Whitespace
+'string'      Keyword.Type
+')'           Punctuation
+' '           Text.Whitespace
+'&priority'   Keyword.Pseudo
+'='           Operator
+'5'           Literal.Number.Float
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'{'           Punctuation
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'set_session' Name.Function
+'('           Punctuation
+'c'           Name
+')'           Punctuation
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'c'           Name
+'$'           Operator
+'ssh'         Name
+'$'           Operator
+'server'      Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'version'     Name
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'\t\n'        Text.Whitespace
+
+'event'       Keyword.Type
+' '           Text.Whitespace
+'ssh_client_version' Name.Function
+'('           Punctuation
+'c'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'connection'  Name
+','           Punctuation
+' '           Text.Whitespace
+'version'     Name
+':'           Punctuation
+' '           Text.Whitespace
+'string'      Keyword.Type
+')'           Punctuation
+' '           Text.Whitespace
+'&priority'   Keyword.Pseudo
+'='           Operator
+'5'           Literal.Number.Float
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'{'           Punctuation
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'set_session' Name.Function
+'('           Punctuation
+'c'           Name
+')'           Punctuation
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'c'           Name
+'$'           Operator
+'ssh'         Name
+'$'           Operator
+'client'      Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'version'     Name
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'schedule'    Keyword
+' '           Text.Whitespace
+'+'           Operator
+'15secs'      Literal.Number.Float
+' '           Text.Whitespace
+'{'           Punctuation
+' '           Text.Whitespace
+'ssh_watcher' Name.Function
+'('           Punctuation
+'c'           Name
+')'           Punctuation
+' '           Text.Whitespace
+'}'           Punctuation
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace

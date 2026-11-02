@@ -1,0 +1,12 @@
+prefix=/home/task_176236350079666/conda-bld/brotli-split_1762363540655/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac
+exec_prefix=/home/task_176236350079666/conda-bld/brotli-split_1762363540655/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libbrotlidec
+URL: https://github.com/google/brotli
+Description: Brotli decoder library
+Version: 1.2.0
+Libs: -L${libdir} -lbrotlidec
+Requires.private: libbrotlicommon >= 1.2.0
+Cflags: -I${includedir}

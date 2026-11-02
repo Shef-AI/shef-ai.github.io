@@ -1,0 +1,16 @@
+{
+  "arch": "x86_64",
+  "build": "h32cd6e7_0",
+  "build_number": 0,
+  "depends": [
+    "__glibc >=2.28,<3.0.a0",
+    "libgcc-ng >=11.2.0"
+  ],
+  "license": "MIT",
+  "license_family": "MIT",
+  "name": "libbrotlicommon",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1762363571278,
+  "version": "1.2.0"
+}

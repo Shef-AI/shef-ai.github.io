@@ -1,0 +1,233 @@
+import json
+
+import pytest
+from typing_extensions import TypedDict
+
+from pydantic import BaseModel, ConfigDict, RootModel, SecretStr, SerializeAsAny, TypeAdapter
+
+from .utils import dataclass_decorators
+
+
+class User(BaseModel):
+    name: str
+
+
+class UserLogin(User):
+    password: SecretStr
+
+
+user = User(name='pydantic')
+user_login = UserLogin(name='pydantic', password='password')
+
+
+def test_serialize_as_any_annotation() -> None:
+    class OuterModel(BaseModel):
+        maybe_as_any: SerializeAsAny[User] | None = None
+        as_any: SerializeAsAny[User]
+        without: User
+
+    # insert_assert(json.loads(OuterModel(as_any=user, without=user).model_dump_json()))
+    assert json.loads(OuterModel(maybe_as_any=user_login, as_any=user_login, without=user_login).model_dump_json()) == {
+        'maybe_as_any': {'name': 'pydantic', 'password': '**********'},
+        'as_any': {'name': 'pydantic', 'password': '**********'},
+        'without': {'name': 'pydantic'},
+    }
+
+
+def test_serialize_as_any_runtime() -> None:
+    class OuterModel(BaseModel):
+        user: User
+
+    assert json.loads(OuterModel(user=user_login).model_dump_json(serialize_as_any=False)) == {
+        'user': {'name': 'pydantic'}
+    }
+    assert json.loads(OuterModel(user=user_login).model_dump_json(serialize_as_any=True)) == {
+        'user': {'name': 'pydantic', 'password': '**********'}
+    }
+
+
+def test_serialize_as_any_runtime_recursive() -> None:
+    class User(BaseModel):
+        name: str
+        friends: list['User']
+
+    class UserLogin(User):
+        password: SecretStr
+
+    class OuterModel(BaseModel):
+        user: User
+
+    user = UserLogin(
+        name='pydantic', password='password', friends=[UserLogin(name='pydantic', password='password', friends=[])]
+    )
+
+    assert json.loads(OuterModel(user=user).model_dump_json(serialize_as_any=False)) == {
+        'user': {
+            'name': 'pydantic',
+            'friends': [{'name': 'pydantic', 'friends': []}],
+        },
+    }
+    assert json.loads(OuterModel(user=user).model_dump_json(serialize_as_any=True)) == {
+        'user': {
+            'name': 'pydantic',
+            'password': '**********',
+            'friends': [{'name': 'pydantic', 'password': '**********', 'friends': []}],
+        },
+    }
+
+
+def test_serialize_as_any_with_rootmodel() -> None:
+    UserRoot = RootModel[User]
+    assert json.loads(UserRoot(root=user_login).model_dump_json(serialize_as_any=False)) == {'name': 'pydantic'}
+    assert json.loads(UserRoot(root=user_login).model_dump_json(serialize_as_any=True)) == {
+        'name': 'pydantic',
+        'password': '**********',
+    }
+
+
+def test_serialize_as_any_type_adapter() -> None:
+    ta = TypeAdapter(User)
+    assert json.loads(ta.dump_json(user_login, serialize_as_any=False)) == {'name': 'pydantic'}
+    assert json.loads(ta.dump_json(user_login, serialize_as_any=True)) == {'name': 'pydantic', 'password': '**********'}
+
+
+@pytest.mark.parametrize('dataclass_constructor', **dataclass_decorators(include_combined=False))
+def test_serialize_as_any_with_dataclasses(dataclass_constructor) -> None:
+    @dataclass_constructor
+    class User:
+        name: str
+
+    @dataclass_constructor
+    class UserLogin(User):
+        password: str
+
+    user_login = UserLogin(name='pydantic', password='password')
+
+    ta = TypeAdapter(User)
+    assert json.loads(ta.dump_json(user_login, serialize_as_any=False, warnings=False)) == {'name': 'pydantic'}
+    assert json.loads(ta.dump_json(user_login, serialize_as_any=True, warnings=False)) == {
+        'name': 'pydantic',
+        'password': 'password',
+    }
+
+
+def test_serialize_as_any_with_typed_dict() -> None:
+    class User(TypedDict):
+        name: str
+
+    class UserLogin(User):
+        password: str
+
+    user_login = UserLogin(name='pydantic', password='password')
+
+    ta = TypeAdapter(User)
+    assert json.loads(ta.dump_json(user_login, serialize_as_any=False, warnings=False)) == {'name': 'pydantic'}
+    assert json.loads(ta.dump_json(user_login, serialize_as_any=True, warnings=False)) == {
+        'name': 'pydantic',
+        'password': 'password',
+    }
+
+
+def test_serialize_as_any_flag_on_unrelated_models() -> None:
+    class Parent(BaseModel):
+        x: int
+
+    class Other(BaseModel):
+        y: str
+
+        model_config = ConfigDict(extra='allow')
+
+    ta = TypeAdapter(Parent)
+    other = Other(x=1, y='hello')
+    assert ta.dump_python(other, serialize_as_any=False) == {}
+    assert ta.dump_python(other, serialize_as_any=True) == {'y': 'hello', 'x': 1}
+
+
+def test_serialize_as_any_annotation_on_unrelated_models() -> None:
+    class Parent(BaseModel):
+        x: int
+
+    class Other(BaseModel):
+        y: str
+
+        model_config = ConfigDict(extra='allow')
+
+    ta = TypeAdapter(Parent)
+    other = Other(x=1, y='hello')
+    assert ta.dump_python(other) == {}
+
+    ta_any = TypeAdapter(SerializeAsAny[Parent])
+    assert ta_any.dump_python(other) == {'y': 'hello', 'x': 1}
+
+
+def test_serialize_as_any_with_inner_models() -> None:
+    """As with other serialization flags, serialize_as_any affects nested models as well."""
+
+    class Inner(BaseModel):
+        x: int
+
+    class Outer(BaseModel):
+        inner: Inner
+
+    class InnerChild(Inner):
+        y: int
+
+    ta = TypeAdapter(Outer)
+    inner_child = InnerChild(x=1, y=2)
+    outer = Outer(inner=inner_child)
+
+    assert ta.dump_python(outer, serialize_as_any=False) == {'inner': {'x': 1}}
+    assert ta.dump_python(outer, serialize_as_any=True) == {'inner': {'x': 1, 'y': 2}}
+
+
+def test_serialize_as_any_annotation_with_inner_models() -> None:
+    """The SerializeAsAny annotation does not affect nested models."""
+
+    class Inner(BaseModel):
+        x: int
+
+    class Outer(BaseModel):
+        inner: Inner
+
+    class InnerChild(Inner):
+        y: int
+
+    ta = TypeAdapter(SerializeAsAny[Outer])
+    inner_child = InnerChild(x=1, y=2)
+    outer = Outer(inner=inner_child)
+    assert ta.dump_python(outer) == {'inner': {'x': 1}}
+
+
+def test_serialize_as_any_flag_with_incorrect_list_el_type() -> None:
+    # a warning is raised when using the `serialize_as_any` flag
+    ta = TypeAdapter(list[int])
+    with pytest.warns(UserWarning, match='Expected `int` - serialized value may not be as expected'):
+        assert ta.dump_python(['a', 'b', 'c'], serialize_as_any=False) == ['a', 'b', 'c']
+
+
+def test_serialize_as_any_annotation_with_incorrect_list_el_type() -> None:
+    # notably, the warning is not raised when using the SerializeAsAny annotation
+    ta = TypeAdapter(SerializeAsAny[list[int]])
+    assert ta.dump_python(['a', 'b', 'c']) == ['a', 'b', 'c']
+
+
+@pytest.mark.parametrize('kwargs', [{'serialize_as_any': True}, {'polymorphic_serialization': True}])
+def test_serialize_as_any_deferred_subclass(kwargs) -> None:
+    """https://github.com/pydantic/pydantic/issues/13647"""
+
+    class Base(BaseModel):
+        x: int = 1
+
+    class Sub(Base):
+        model_config = ConfigDict(defer_build=True)
+        y: int = 2
+
+    class Model(BaseModel):
+        b: Base
+
+    # `model_construct()` currently doesn't trigger a rebuild of `Sub`:
+    m = Model(b=Sub.model_construct(x=1, y=2))
+    assert Sub.__pydantic_complete__ is False
+
+    assert m.model_dump(**kwargs) == {'b': {'x': 1, 'y': 2}}
+    assert Sub.__pydantic_complete__ is True

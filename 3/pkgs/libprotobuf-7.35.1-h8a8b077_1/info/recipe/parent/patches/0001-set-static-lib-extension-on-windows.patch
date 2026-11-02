@@ -1,0 +1,26 @@
+From a8cd599b8cac8e21163bc55832c473af33c7f3ec Mon Sep 17 00:00:00 2001
+From: "H. Vetinari" <h.vetinari@gmx.com>
+Date: Sun, 4 Sep 2022 10:57:08 +0200
+Subject: [PATCH 1/9] set static lib extension on windows
+
+---
+ CMakeLists.txt | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index f4a4883739..c28d331366 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -314,6 +314,12 @@ else ()
+   endif ()
+ endif ()
+ 
++if (MSVC AND NOT protobuf_BUILD_SHARED_LIBS)
++  set_target_properties(libprotoc PROPERTIES SUFFIX "-static.lib")
++  set_target_properties(libprotobuf PROPERTIES SUFFIX "-static.lib")
++  set_target_properties(libprotobuf-lite PROPERTIES SUFFIX "-static.lib")
++endif (MSVC AND NOT protobuf_BUILD_SHARED_LIBS)
++
+ # Ensure we have a protoc executable and protobuf libraries if we need one
+ if (protobuf_BUILD_TESTS OR protobuf_BUILD_CONFORMANCE OR protobuf_BUILD_EXAMPLES)
+   if (NOT DEFINED protobuf_PROTOC_EXE)

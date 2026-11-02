@@ -1,0 +1,19 @@
+{
+  "arch": null,
+  "build": "pyhb46e38b_100",
+  "build_number": 100,
+  "constrains": [
+    "conda >=23.7"
+  ],
+  "depends": [
+    "python >=3.8"
+  ],
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "name": "anaconda-anon-usage",
+  "noarch": "python",
+  "platform": null,
+  "subdir": "noarch",
+  "timestamp": 1780561479213,
+  "version": "0.8.1"
+}

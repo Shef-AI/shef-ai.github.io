@@ -1,0 +1,77 @@
+'inline'      Keyword
+' '           Text.Whitespace
+'def'         Keyword
+' '           Text.Whitespace
+'inline'      Name.Function
+'('           Punctuation
+'inline'      Keyword
+' '           Text.Whitespace
+'x'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'Int'         Name.Class
+')'           Punctuation
+':'           Punctuation
+' '           Text.Whitespace
+'Double'      Name.Class
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'???'         Operator
+'\n'          Text.Whitespace
+
+'inline'      Keyword
+' '           Text.Whitespace
+'def'         Keyword
+' '           Text.Whitespace
+'power'       Name.Function
+'('           Punctuation
+'x'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'Double'      Name.Class
+','           Punctuation
+' '           Text.Whitespace
+'inline'      Keyword
+' '           Text.Whitespace
+'n'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'Int'         Name.Class
+')'           Punctuation
+':'           Punctuation
+' '           Text.Whitespace
+'Double'      Name.Class
+' '           Text.Whitespace
+'='           Operator
+'\n'          Text.Whitespace
+
+'inline'      Keyword
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'n'           Name
+' '           Text.Whitespace
+'=='          Operator
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+')'           Punctuation
+' '           Text.Whitespace
+'1'           Literal.Number.Integer
+' '           Text.Whitespace
+'else'        Keyword
+' '           Text.Whitespace
+'2'           Literal.Number.Integer
+'\n'          Text.Whitespace
+
+'inline'      Keyword
+' '           Text.Whitespace
+'val'         Keyword.Declaration
+' '           Text.Whitespace
+'c'           Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+'\n'          Text.Whitespace

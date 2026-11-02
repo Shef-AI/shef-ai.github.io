@@ -1,0 +1,228 @@
+From 80ab9b9932a13c5aecf2ab6a3cee1fed1bfd9dc4 Mon Sep 17 00:00:00 2001
+From: Isuru Fernando <isuruf@gmail.com>
+Date: Wed, 29 Mar 2023 23:07:10 -0500
+Subject: [PATCH 18/25] Unvendor expat
+
+---
+ PCbuild/_elementtree.vcxproj         | 29 ++----------
+ PCbuild/_elementtree.vcxproj.filters | 68 ----------------------------
+ PCbuild/pyexpat.vcxproj              | 17 ++-----
+ PCbuild/pyexpat.vcxproj.filters      | 32 -------------
+ 4 files changed, 8 insertions(+), 138 deletions(-)
+
+diff --git a/PCbuild/_elementtree.vcxproj b/PCbuild/_elementtree.vcxproj
+index a991b2a..045b7c6 100644
+--- a/PCbuild/_elementtree.vcxproj
++++ b/PCbuild/_elementtree.vcxproj
+@@ -93,40 +93,19 @@
+   </PropertyGroup>
+   <ItemDefinitionGroup>
+     <ClCompile>
+-      <AdditionalIncludeDirectories>..\Modules\expat;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
++      <AdditionalIncludeDirectories>$(condaDir)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;USE_PYEXPAT_CAPI;XML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/d1trimfile:%SRC_DIR%</AdditionalOptions>
+       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">/d1trimfile:%SRC_DIR%</AdditionalOptions>
+       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">/d1trimfile:%SRC_DIR%</AdditionalOptions>
+       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">/d1trimfile:%SRC_DIR%</AdditionalOptions>
+     </ClCompile>
++    <Link>
++      <AdditionalDependencies>$(condaDir)\lib\expat.lib;%(AdditionalDependencies)</AdditionalDependencies>
++    </Link>
+   </ItemDefinitionGroup>
+-  <ItemGroup>
+-    <ClInclude Include="..\Modules\expat\ascii.h" />
+-    <ClInclude Include="..\Modules\expat\asciitab.h" />
+-    <ClInclude Include="..\Modules\expat\expat.h" />
+-    <ClInclude Include="..\Modules\expat\expat_config.h" />
+-    <ClInclude Include="..\Modules\expat\expat_external.h" />
+-    <ClInclude Include="..\Modules\expat\fallthrough.h" />
+-    <ClInclude Include="..\Modules\expat\hash_table.h" />
+-    <ClInclude Include="..\Modules\expat\iasciitab.h" />
+-    <ClInclude Include="..\Modules\expat\internal.h" />
+-    <ClInclude Include="..\Modules\expat\latin1tab.h" />
+-    <ClInclude Include="..\Modules\expat\memory_sanitizer.h" />
+-    <ClInclude Include="..\Modules\expat\nametab.h" />
+-    <ClInclude Include="..\Modules\expat\pyexpatns.h" />
+-    <ClInclude Include="..\Modules\expat\utf8tab.h" />
+-    <ClInclude Include="..\Modules\expat\winconfig.h" />
+-    <ClInclude Include="..\Modules\expat\xcs.h" />
+-    <ClInclude Include="..\Modules\expat\xmlrole.h" />
+-    <ClInclude Include="..\Modules\expat\xmltok.h" />
+-  </ItemGroup>
+   <ItemGroup>
+     <ClCompile Include="..\Modules\_elementtree.c" />
+-    <ClCompile Include="..\Modules\expat\xcs.c" />
+-    <ClCompile Include="..\Modules\expat\xmlparse.c" />
+-    <ClCompile Include="..\Modules\expat\xmlrole.c" />
+-    <ClCompile Include="..\Modules\expat\xmltok.c" />
+   </ItemGroup>
+   <ItemGroup>
+     <ResourceCompile Include="..\PC\python_nt.rc" />
+diff --git a/PCbuild/_elementtree.vcxproj.filters b/PCbuild/_elementtree.vcxproj.filters
+index 54ccfbf..391d266 100644
+--- a/PCbuild/_elementtree.vcxproj.filters
++++ b/PCbuild/_elementtree.vcxproj.filters
+@@ -17,78 +17,10 @@
+       <UniqueIdentifier>{f99990ba-cd06-40cc-8f28-d2d424ec13be}</UniqueIdentifier>
+     </Filter>
+   </ItemGroup>
+-  <ItemGroup>
+-    <ClInclude Include="..\Modules\expat\ascii.h">
+-      <Filter>Header Files\expat</Filter>
+-    </ClInclude>
+-    <ClInclude Include="..\Modules\expat\asciitab.h">
+-      <Filter>Header Files\expat</Filter>
+-    </ClInclude>
+-    <ClInclude Include="..\Modules\expat\expat.h">
+-      <Filter>Header Files\expat</Filter>
+-    </ClInclude>
+-    <ClInclude Include="..\Modules\expat\expat_config.h">
+-      <Filter>Header Files\expat</Filter>
+-    </ClInclude>
+-    <ClInclude Include="..\Modules\expat\expat_external.h">
+-      <Filter>Header Files\expat</Filter>
+-    </ClInclude>
+-    <ClInclude Include="..\Modules\expat\fallthrough.h">
+-      <Filter>Header Files\expat</Filter>
+-    </ClInclude>
+-    <ClInclude Include="..\Modules\expat\hash_table.h">
+-      <Filter>Header Files\expat</Filter>
+-    </ClInclude>
+-    <ClInclude Include="..\Modules\expat\iasciitab.h">
+-      <Filter>Header Files\expat</Filter>
+-    </ClInclude>
+-    <ClInclude Include="..\Modules\expat\internal.h">
+-      <Filter>Header Files\expat</Filter>
+-    </ClInclude>
+-    <ClInclude Include="..\Modules\expat\latin1tab.h">
+-      <Filter>Header Files\expat</Filter>
+-    </ClInclude>
+-    <ClInclude Include="..\Modules\expat\memory_sanitizer.h">
+-      <Filter>Header Files\expat</Filter>
+-    </ClInclude>
+-    <ClInclude Include="..\Modules\expat\nametab.h">
+-      <Filter>Header Files\expat</Filter>
+-    </ClInclude>
+-    <ClInclude Include="..\Modules\expat\pyexpatns.h">
+-      <Filter>Header Files\expat</Filter>
+-    </ClInclude>
+-    <ClInclude Include="..\Modules\expat\utf8tab.h">
+-      <Filter>Header Files\expat</Filter>
+-    </ClInclude>
+-    <ClInclude Include="..\Modules\expat\winconfig.h">
+-      <Filter>Header Files\expat</Filter>
+-    </ClInclude>
+-    <ClInclude Include="..\Modules\expat\xcs.h">
+-      <Filter>Header Files\expat</Filter>
+-    </ClInclude>
+-    <ClInclude Include="..\Modules\expat\xmlrole.h">
+-      <Filter>Header Files\expat</Filter>
+-    </ClInclude>
+-    <ClInclude Include="..\Modules\expat\xmltok.h">
+-      <Filter>Header Files\expat</Filter>
+-    </ClInclude>
+-  </ItemGroup>
+   <ItemGroup>
+     <ClCompile Include="..\Modules\_elementtree.c">
+       <Filter>Source Files</Filter>
+     </ClCompile>
+-    <ClCompile Include="..\Modules\expat\xcs.c">
+-      <Filter>Source Files\expat</Filter>
+-    </ClCompile>
+-    <ClCompile Include="..\Modules\expat\xmlparse.c">
+-      <Filter>Source Files\expat</Filter>
+-    </ClCompile>
+-    <ClCompile Include="..\Modules\expat\xmlrole.c">
+-      <Filter>Source Files\expat</Filter>
+-    </ClCompile>
+-    <ClCompile Include="..\Modules\expat\xmltok.c">
+-      <Filter>Source Files\expat</Filter>
+-    </ClCompile>
+   </ItemGroup>
+   <ItemGroup>
+     <ResourceCompile Include="..\PC\python_nt.rc">
+diff --git a/PCbuild/pyexpat.vcxproj b/PCbuild/pyexpat.vcxproj
+index e617dcf..22f36ef 100644
+--- a/PCbuild/pyexpat.vcxproj
++++ b/PCbuild/pyexpat.vcxproj
+@@ -90,28 +90,19 @@
+   <PropertyGroup Label="UserMacros" />
+   <ItemDefinitionGroup>
+     <ClCompile>
+-      <AdditionalIncludeDirectories>$(PySourcePath)Modules\expat;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
++      <AdditionalIncludeDirectories>$(condaDir)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;PYEXPAT_EXPORTS;XML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/d1trimfile:%SRC_DIR%</AdditionalOptions>
+       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='PGInstrument|Win32'">/d1trimfile:%SRC_DIR%</AdditionalOptions>
+       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='PGUpdate|Win32'">/d1trimfile:%SRC_DIR%</AdditionalOptions>
+       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">/d1trimfile:%SRC_DIR%</AdditionalOptions>
+     </ClCompile>
++    <Link>
++      <AdditionalDependencies>$(condaDir)\lib\expat.lib;%(AdditionalDependencies)</AdditionalDependencies>
++    </Link>
+   </ItemDefinitionGroup>
+-  <ItemGroup>
+-    <ClInclude Include="..\Modules\expat\fallthrough.h" />
+-    <ClInclude Include="..\Modules\expat\hash_table.h" />
+-    <ClInclude Include="..\Modules\expat\memory_sanitizer.h" />
+-    <ClInclude Include="..\Modules\expat\xcs.h" />
+-    <ClInclude Include="..\Modules\expat\xmlrole.h" />
+-    <ClInclude Include="..\Modules\expat\xmltok.h" />
+-  </ItemGroup>
+   <ItemGroup>
+     <ClCompile Include="..\Modules\pyexpat.c" />
+-    <ClCompile Include="..\Modules\expat\xcs.c" />
+-    <ClCompile Include="..\Modules\expat\xmlparse.c" />
+-    <ClCompile Include="..\Modules\expat\xmlrole.c" />
+-    <ClCompile Include="..\Modules\expat\xmltok.c" />
+   </ItemGroup>
+   <ItemGroup>
+     <ResourceCompile Include="..\PC\python_nt.rc" />
+diff --git a/PCbuild/pyexpat.vcxproj.filters b/PCbuild/pyexpat.vcxproj.filters
+index 6685e91..c60ee93 100644
+--- a/PCbuild/pyexpat.vcxproj.filters
++++ b/PCbuild/pyexpat.vcxproj.filters
+@@ -11,42 +11,10 @@
+       <UniqueIdentifier>{f1dbbdb5-41e5-4a88-bf8e-13da010c0ce4}</UniqueIdentifier>
+     </Filter>
+   </ItemGroup>
+-  <ItemGroup>
+-    <ClInclude Include="..\Modules\expat\fallthrough.h">
+-      <Filter>Header Files</Filter>
+-    </ClInclude>
+-    <ClInclude Include="..\Modules\expat\hash_table.h">
+-      <Filter>Header Files</Filter>
+-    </ClInclude>
+-    <ClInclude Include="..\Modules\expat\memory_sanitizer.h">
+-      <Filter>Header Files</Filter>
+-    </ClInclude>
+-    <ClInclude Include="..\Modules\expat\xcs.h">
+-      <Filter>Header Files</Filter>
+-    </ClInclude>
+-    <ClInclude Include="..\Modules\expat\xmlrole.h">
+-      <Filter>Header Files</Filter>
+-    </ClInclude>
+-    <ClInclude Include="..\Modules\expat\xmltok.h">
+-      <Filter>Header Files</Filter>
+-    </ClInclude>
+-  </ItemGroup>
+   <ItemGroup>
+     <ClCompile Include="..\Modules\pyexpat.c">
+       <Filter>Source Files</Filter>
+     </ClCompile>
+-    <ClCompile Include="..\Modules\expat\xcs.c">
+-      <Filter>Source Files</Filter>
+-    </ClCompile>
+-    <ClCompile Include="..\Modules\expat\xmlparse.c">
+-      <Filter>Source Files</Filter>
+-    </ClCompile>
+-    <ClCompile Include="..\Modules\expat\xmlrole.c">
+-      <Filter>Source Files</Filter>
+-    </ClCompile>
+-    <ClCompile Include="..\Modules\expat\xmltok.c">
+-      <Filter>Source Files</Filter>
+-    </ClCompile>
+   </ItemGroup>
+   <ItemGroup>
+     <ResourceCompile Include="..\PC\python_nt.rc">

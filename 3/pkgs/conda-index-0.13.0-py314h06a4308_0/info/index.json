@@ -1,0 +1,24 @@
+{
+  "arch": "x86_64",
+  "build": "py314h06a4308_0",
+  "build_number": 0,
+  "constrains": [
+    "conda-package-handling >=1.9.0"
+  ],
+  "depends": [
+    "conda >=25",
+    "conda-package-streaming >=0.12.0",
+    "jinja2",
+    "msgpack-python >=1.1.1",
+    "python >=3.14,<3.15.0a0",
+    "python_abi 3.14.* *_cp314",
+    "ruamel.yaml"
+  ],
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "name": "conda-index",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1788446659496,
+  "version": "0.13.0"
+}

@@ -1,0 +1,24 @@
+{
+  "arch": "x86_64",
+  "build": "h7354ed3_5",
+  "build_number": 5,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.28,<3.0.a0",
+    "libgcc >=14",
+    "libstdcxx >=14"
+  ],
+  "fn": "lz4-c-1.9.4-h7354ed3_5.conda",
+  "license": "BSD-2-Clause",
+  "license_family": "BSD",
+  "md5": "66a8a9e87baa7d1c8c7ceb77d0c3908e",
+  "name": "lz4-c",
+  "platform": "linux",
+  "sha256": "1dbe45752d84df4b5bf0d565667b25af47b2e5f71dac48a94005b01685e675ef",
+  "size": 147630,
+  "subdir": "linux-64",
+  "timestamp": 1782922294000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/lz4-c-1.9.4-h7354ed3_5.conda",
+  "version": "1.9.4"
+}

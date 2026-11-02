@@ -1,0 +1,107 @@
+'vpath  %.c src\n' Comment.Preproc
+
+'vpath  %.h header\n' Comment.Preproc
+
+'EXEC'        Name.Variable
+'='           Operator
+'hello'       Text
+'\n'          Text.Whitespace
+
+'SRC'         Name.Variable
+'='           Operator
+' '           Text.Whitespace
+'hello.c'     Text
+' '           Text.Whitespace
+'main.c'      Text
+'\n'          Text.Whitespace
+
+'OBJ'         Name.Variable
+'='           Operator
+' '           Text.Whitespace
+'$('          Keyword
+'SRC:.c'      Text
+'='           Operator
+'.o'          Text
+')'           Keyword
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'all'         Name.Function
+':'           Operator
+' '           Text.Whitespace
+'$('          Keyword
+'EXEC'        Name.Variable
+')'           Keyword
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'hello'       Name.Function
+':'           Operator
+' '           Text.Whitespace
+'$('          Keyword
+'OBJ'         Name.Variable
+')'           Keyword
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'$('          Keyword
+'CC'          Text
+')'           Keyword
+' '           Text.Whitespace
+'-o'          Text
+' '           Text.Whitespace
+'$@'          Name.Variable
+' '           Text.Whitespace
+'$'           Text
+'^'           Text
+' '           Text.Whitespace
+'$('          Keyword
+'LDFLAGS'     Text
+')'           Keyword
+'\n\n'        Text.Whitespace
+
+'main.o'      Name.Function
+':'           Operator
+' '           Text.Whitespace
+'hello'       Name
+'.'           Text
+'h'           Name
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'%.o'         Name.Function
+':'           Operator
+' '           Text.Whitespace
+'%'           Text
+'.'           Text
+'c'           Name
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'$('          Keyword
+'CC'          Text
+')'           Keyword
+' '           Text.Whitespace
+'-I'          Text
+' '           Text.Whitespace
+'header'      Text
+' '           Text.Whitespace
+'-o'          Text
+' '           Text.Whitespace
+'$@'          Name.Variable
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'        '    Text.Whitespace
+'-c'          Text
+' '           Text.Whitespace
+'$'           Text
+'<'           Text
+' '           Text.Whitespace
+'$('          Keyword
+'CFLAGS'      Text
+')'           Keyword
+'\n'          Text.Whitespace

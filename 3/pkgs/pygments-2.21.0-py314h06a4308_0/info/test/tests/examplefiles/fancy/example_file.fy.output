@@ -1,0 +1,795 @@
+'class'       Keyword
+' '           Text.Whitespace
+'Person'      Name.Constant
+' '           Text.Whitespace
+'{'           Punctuation
+'\n  '        Text.Whitespace
+'def'         Keyword
+' '           Text.Whitespace
+'initialize:' Name.Function
+' '           Text.Whitespace
+'@name'       Name.Variable.Instance
+' '           Text.Whitespace
+'age:'        Name.Function
+' '           Text.Whitespace
+'@age'        Name.Variable.Instance
+' '           Text.Whitespace
+'{'           Punctuation
+'\n    '      Text.Whitespace
+'"""\n    This is a docstring for the Person constructor method.\n    Docstrings usually are multi-line, like this one.\n    """' Literal.String
+'\n  '        Text.Whitespace
+'}'           Punctuation
+'\n\n  '      Text.Whitespace
+'def'         Keyword
+' '           Text.Whitespace
+'to_s'        Name
+' '           Text.Whitespace
+'{'           Punctuation
+'\n    '      Text.Whitespace
+'# return is optional in this case, but we use it nontheless\n' Comment.Single
+
+'    '        Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'"Person with name: #{@name inspect} and age: #{@age}"' Literal.String
+'\n  '        Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n\n'        Text.Whitespace
+
+'class'       Keyword
+' '           Text.Whitespace
+'PersonWithCity' Name.Constant
+' '           Text.Whitespace
+':'           Punctuation
+' '           Text.Whitespace
+'Person'      Name.Constant
+' '           Text.Whitespace
+'{'           Punctuation
+'\n  '        Text.Whitespace
+'def'         Keyword
+' '           Text.Whitespace
+'initialize:' Name.Function
+' '           Text.Whitespace
+'@name'       Name.Variable.Instance
+' '           Text.Whitespace
+'age:'        Name.Function
+' '           Text.Whitespace
+'@age'        Name.Variable.Instance
+' '           Text.Whitespace
+'city:'       Name.Function
+' '           Text.Whitespace
+'@city'       Name.Variable.Instance
+' '           Text.Whitespace
+'{'           Punctuation
+'\n  '        Text.Whitespace
+'}'           Punctuation
+'\n\n  '      Text.Whitespace
+'def'         Keyword
+' '           Text.Whitespace
+'to_s'        Name
+' '           Text.Whitespace
+'{'           Punctuation
+'\n    '      Text.Whitespace
+'super'       Name.Constant
+' '           Text.Whitespace
+'to_s'        Name
+' '           Text.Whitespace
+'++'          Operator
+' '           Text.Whitespace
+'" living in: #{@city inspect}"' Literal.String
+'\n  '        Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n\n'        Text.Whitespace
+
+'p1'          Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'Person'      Name.Constant
+' '           Text.Whitespace
+'new:'        Name.Function
+' '           Text.Whitespace
+'"Johnny Jackson"' Literal.String
+' '           Text.Whitespace
+'age:'        Name.Function
+' '           Text.Whitespace
+'42'          Literal.Number.Integer
+'\n'          Text.Whitespace
+
+'p1'          Name
+' '           Text.Whitespace
+'println'     Name
+' '           Text.Whitespace
+'# prints: Person with name: "Johnny Jackson" and age: 42\n' Comment.Single
+
+'\n'          Text.Whitespace
+
+'p2'          Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'PersonWithCity' Name.Constant
+' '           Text.Whitespace
+'new:'        Name.Function
+' '           Text.Whitespace
+'"John Appleseed"' Literal.String
+' '           Text.Whitespace
+'age:'        Name.Function
+' '           Text.Whitespace
+'55'          Literal.Number.Integer
+' '           Text.Whitespace
+'city:'       Name.Function
+' '           Text.Whitespace
+'"New York"'  Literal.String
+'\n'          Text.Whitespace
+
+'p2'          Name
+' '           Text.Whitespace
+'println'     Name
+' '           Text.Whitespace
+'# prints: Person with name: "John Appleseed" age: 55 living in: "New York"\n' Comment.Single
+
+'\n'          Text.Whitespace
+
+'array'       Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'['           Operator
+'1'           Literal.Number.Integer
+','           Punctuation
+'2'           Literal.Number.Integer
+','           Punctuation
+'3'           Literal.Number.Integer
+','           Punctuation
+' '           Text.Whitespace
+'"foo"'       Literal.String
+','           Punctuation
+' '           Text.Whitespace
+"'bar"        Literal.String.Symbol
+']'           Operator
+'\n'          Text.Whitespace
+
+'hash'        Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'<['          Operator
+"'foo"        Literal.String.Symbol
+' '           Text.Whitespace
+'=>'          Operator
+' '           Text.Whitespace
+'"bar"'       Literal.String
+','           Punctuation
+' '           Text.Whitespace
+"'bar"        Literal.String.Symbol
+' '           Text.Whitespace
+'=>'          Operator
+' '           Text.Whitespace
+'42'          Literal.Number.Integer
+']>'          Operator
+'\n'          Text.Whitespace
+
+'tuple'       Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'('           Punctuation
+'1'           Literal.Number.Integer
+','           Punctuation
+'2'           Literal.Number.Integer
+','           Punctuation
+'"hello"'     Literal.String
+','           Punctuation
+'"world"'     Literal.String
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'block'       Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'|'           Punctuation
+'x'           Name
+','           Punctuation
+' '           Text.Whitespace
+'y'           Name
+'|'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n  '        Text.Whitespace
+'x'           Name
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+'y'           Name
+' '           Text.Whitespace
+'println'     Name
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'block'       Name
+' '           Text.Whitespace
+'call:'       Name.Function
+' '           Text.Whitespace
+'['           Operator
+'4'           Literal.Number.Integer
+','           Punctuation
+'2'           Literal.Number.Integer
+']'           Operator
+'\n\n'        Text.Whitespace
+
+'0b010101'    Literal.Number.Bin
+' '           Text.Whitespace
+'&'           Operator
+' '           Text.Whitespace
+'0b00101'     Literal.Number.Bin
+' '           Text.Whitespace
+'to_s:'       Name.Function
+' '           Text.Whitespace
+'2'           Literal.Number.Integer
+' '           Text.Whitespace
+'.'           Operator
+' '           Text.Whitespace
+'println'     Name
+'\n'          Text.Whitespace
+
+'0xFF'        Literal.Number.Hex
+' '           Text.Whitespace
+'&'           Operator
+' '           Text.Whitespace
+'0xAB'        Literal.Number.Hex
+' '           Text.Whitespace
+'to_s:'       Name.Function
+' '           Text.Whitespace
+'16'          Literal.Number.Integer
+' '           Text.Whitespace
+'.'           Operator
+' '           Text.Whitespace
+'println'     Name
+'\n'          Text.Whitespace
+
+'0o77'        Literal.Number.Oct
+' '           Text.Whitespace
+'>'           Operator
+' '           Text.Whitespace
+'0o76'        Literal.Number.Oct
+' '           Text.Whitespace
+'println'     Name
+'\n'          Text.Whitespace
+
+'123'         Literal.Number.Integer
+'.'           Operator
+'123'         Literal.Number.Integer
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+'.'           Operator
+'222'         Literal.Number.Integer
+' '           Text.Whitespace
+'println'     Name
+'\n\n'        Text.Whitespace
+
+'x'           Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+'\n'          Text.Whitespace
+
+'try'         Keyword
+' '           Text.Whitespace
+'{'           Punctuation
+'\n  '        Text.Whitespace
+'10'          Literal.Number.Integer
+' '           Text.Whitespace
+'/'           Operator
+' '           Text.Whitespace
+'x'           Name
+' '           Text.Whitespace
+'println'     Name
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+' '           Text.Whitespace
+'catch'       Keyword
+' '           Text.Whitespace
+'ZeroDivisionError' Name.Constant
+' '           Text.Whitespace
+'=>'          Operator
+' '           Text.Whitespace
+'e'           Name
+' '           Text.Whitespace
+'{'           Punctuation
+'\n  '        Text.Whitespace
+'x'           Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'3'           Literal.Number.Integer
+'\n  '        Text.Whitespace
+'retry'       Keyword
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+' '           Text.Whitespace
+'finally'     Keyword
+' '           Text.Whitespace
+'{'           Punctuation
+'\n  '        Text.Whitespace
+'"Finally, done!"' Literal.String
+' '           Text.Whitespace
+'println'     Name
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n\n'        Text.Whitespace
+
+'def'         Keyword
+' '           Text.Whitespace
+'a_method:'   Name.Function
+' '           Text.Whitespace
+'arg1'        Name
+' '           Text.Whitespace
+'with_default_arg:' Name.Function
+' '           Text.Whitespace
+'arg2'        Name
+' '           Text.Whitespace
+'('           Punctuation
+'42'          Literal.Number.Integer
+')'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n  '        Text.Whitespace
+'arg1'        Name
+' '           Text.Whitespace
+'*'           Operator
+' '           Text.Whitespace
+'arg2'        Name
+' '           Text.Whitespace
+'println'     Name
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n\n'        Text.Whitespace
+
+'a_method:'   Name.Function
+' '           Text.Whitespace
+'42'          Literal.Number.Integer
+'\n'          Text.Whitespace
+
+'a_method:'   Name.Function
+' '           Text.Whitespace
+'42'          Literal.Number.Integer
+' '           Text.Whitespace
+'with_default_arg:' Name.Function
+' '           Text.Whitespace
+'85'          Literal.Number.Integer
+'\n\n'        Text.Whitespace
+
+'class'       Keyword
+' '           Text.Whitespace
+'ClassWithClassMethod' Name.Constant
+' '           Text.Whitespace
+'{'           Punctuation
+'\n  '        Text.Whitespace
+'def'         Keyword
+' '           Text.Whitespace
+'self'        Name.Constant
+' '           Text.Whitespace
+'class_method1' Name
+' '           Text.Whitespace
+'{'           Punctuation
+'\n    '      Text.Whitespace
+"'works"      Literal.String.Symbol
+'\n  '        Text.Whitespace
+'}'           Punctuation
+'\n\n  '      Text.Whitespace
+'def'         Keyword
+' '           Text.Whitespace
+'ClassWithClassMethod' Name.Constant
+' '           Text.Whitespace
+'class_method2' Name
+' '           Text.Whitespace
+'{'           Punctuation
+'\n    '      Text.Whitespace
+"'this_as_well" Literal.String.Symbol
+'\n  '        Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n\n'        Text.Whitespace
+
+'ClassWithClassMethod' Name.Constant
+' '           Text.Whitespace
+'class_method1' Name
+' '           Text.Whitespace
+'println'     Name
+'\n'          Text.Whitespace
+
+'ClassWithClassMethod' Name.Constant
+' '           Text.Whitespace
+'class_method2' Name
+' '           Text.Whitespace
+'println'     Name
+'\n\n'        Text.Whitespace
+
+'def'         Keyword
+' '           Text.Whitespace
+'another_method:' Name.Function
+' '           Text.Whitespace
+'block'       Name
+' '           Text.Whitespace
+'{'           Punctuation
+'\n  '        Text.Whitespace
+'1'           Literal.Number.Integer
+' '           Text.Whitespace
+'upto:'       Name.Function
+' '           Text.Whitespace
+'10'          Literal.Number.Integer
+' '           Text.Whitespace
+'.'           Operator
+' '           Text.Whitespace
+'map:'        Name.Function
+' '           Text.Whitespace
+'block'       Name
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n\n'        Text.Whitespace
+
+'# local returns\n' Comment.Single
+
+'another_method:' Name.Function
+' '           Text.Whitespace
+'|'           Punctuation
+'x'           Name
+'|'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+' '           Text.Whitespace
+'return_local' Keyword
+' '           Text.Whitespace
+'x'           Name
+' '           Text.Whitespace
+'*'           Operator
+' '           Text.Whitespace
+'2'           Literal.Number.Integer
+' '           Text.Whitespace
+'}'           Punctuation
+' '           Text.Whitespace
+'.'           Operator
+' '           Text.Whitespace
+'inspect'     Name
+' '           Text.Whitespace
+'println'     Name
+'\n\n\n'      Text.Whitespace
+
+'# pattern matching:\n' Comment.Single
+
+'class'       Keyword
+' '           Text.Whitespace
+'PatternMatching' Name.Constant
+' '           Text.Whitespace
+'{'           Punctuation
+'\n  '        Text.Whitespace
+'def'         Keyword
+' '           Text.Whitespace
+'match_it:'   Name.Function
+' '           Text.Whitespace
+'obj'         Name
+' '           Text.Whitespace
+'{'           Punctuation
+'\n    '      Text.Whitespace
+'match'       Keyword
+' '           Text.Whitespace
+'obj'         Name
+' '           Text.Whitespace
+'{'           Punctuation
+'\n      '    Text.Whitespace
+'case'        Keyword
+' '           Text.Whitespace
+'String'      Name.Builtin
+' '           Text.Whitespace
+'->'          Operator
+' '           Text.Whitespace
+'"It\'s a String!"' Literal.String
+' '           Text.Whitespace
+'println'     Name
+'\n      '    Text.Whitespace
+'case'        Keyword
+' '           Text.Whitespace
+'Fixnum'      Name.Constant
+' '           Text.Whitespace
+'->'          Operator
+' '           Text.Whitespace
+'"It\'s a Number!"' Literal.String
+' '           Text.Whitespace
+'println'     Name
+'\n      '    Text.Whitespace
+'case'        Keyword
+' '           Text.Whitespace
+'_'           Name
+' '           Text.Whitespace
+'->'          Operator
+' '           Text.Whitespace
+'"Aything else!"' Literal.String
+' '           Text.Whitespace
+'println'     Name
+'\n    '      Text.Whitespace
+'}'           Punctuation
+'\n  '        Text.Whitespace
+'}'           Punctuation
+'\n\n  '      Text.Whitespace
+'def'         Keyword
+' '           Text.Whitespace
+'match_with_extract:' Name.Function
+' '           Text.Whitespace
+'str'         Name
+' '           Text.Whitespace
+'{'           Punctuation
+'\n    '      Text.Whitespace
+'match'       Keyword
+' '           Text.Whitespace
+'str'         Name
+' '           Text.Whitespace
+'{'           Punctuation
+'\n      '    Text.Whitespace
+'# m holds the MatchData object, m1 & m2 the first and second matches\n' Comment.Single
+
+'      '      Text.Whitespace
+'case'        Keyword
+' '           Text.Whitespace
+'/^(.*) : (.*)$/' Literal.String.Regex
+' '           Text.Whitespace
+'->'          Operator
+' '           Text.Whitespace
+'|'           Punctuation
+'m'           Name
+','           Punctuation
+' '           Text.Whitespace
+'m1'          Name
+','           Punctuation
+' '           Text.Whitespace
+'m2'          Name
+'|'           Punctuation
+'\n        '  Text.Whitespace
+'"First match: #{m1}"' Literal.String
+' '           Text.Whitespace
+'println'     Name
+'\n        '  Text.Whitespace
+'"Second match: #{m2}"' Literal.String
+' '           Text.Whitespace
+'println'     Name
+'\n    '      Text.Whitespace
+'}'           Punctuation
+'\n  '        Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n\n'        Text.Whitespace
+
+'pm'          Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'PatternMatching' Name.Constant
+' '           Text.Whitespace
+'new'         Name
+'\n'          Text.Whitespace
+
+'pm'          Name
+' '           Text.Whitespace
+'match_it:'   Name.Function
+' '           Text.Whitespace
+'"foo"'       Literal.String
+'\n'          Text.Whitespace
+
+'pm'          Name
+' '           Text.Whitespace
+'match_it:'   Name.Function
+' '           Text.Whitespace
+'42'          Literal.Number.Integer
+'\n'          Text.Whitespace
+
+'pm'          Name
+' '           Text.Whitespace
+'match_it:'   Name.Function
+' '           Text.Whitespace
+"'foo"        Literal.String.Symbol
+'\n\n'        Text.Whitespace
+
+'pm'          Name
+' '           Text.Whitespace
+'match_with_extract:' Name.Function
+' '           Text.Whitespace
+'"Hello : World!"' Literal.String
+'\n\n\n'      Text.Whitespace
+
+'# calling ruby methods:\n' Comment.Single
+
+'['           Operator
+'3'           Literal.Number.Integer
+','           Punctuation
+' '           Text.Whitespace
+'2'           Literal.Number.Integer
+','           Punctuation
+' '           Text.Whitespace
+'1'           Literal.Number.Integer
+']'           Operator
+' '           Text.Whitespace
+'reverse'     Name
+'('           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'each'        Name
+'('           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'|'           Punctuation
+'a'           Name
+'|'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+' '           Text.Whitespace
+'puts'        Name
+'('           Punctuation
+'a'           Name
+')'           Punctuation
+' '           Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'"Hello"'     Literal.String
+' '           Text.Whitespace
+'sub'         Name
+'('           Punctuation
+'"ll"'        Literal.String
+','           Punctuation
+' '           Text.Whitespace
+'"y"'         Literal.String
+')'           Punctuation
+' '           Text.Whitespace
+'println'     Name
+'\n'          Text.Whitespace
+
+'['           Operator
+'3'           Literal.Number.Integer
+','           Punctuation
+' '           Text.Whitespace
+'2'           Literal.Number.Integer
+','           Punctuation
+' '           Text.Whitespace
+'1'           Literal.Number.Integer
+']'           Operator
+' '           Text.Whitespace
+'map'         Name
+'('           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'|'           Punctuation
+'a'           Name
+'|'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+' '           Text.Whitespace
+'a'           Name
+' '           Text.Whitespace
+'*'           Operator
+' '           Text.Whitespace
+'2'           Literal.Number.Integer
+' '           Text.Whitespace
+'}'           Punctuation
+' '           Text.Whitespace
+'inject'      Name
+'('           Punctuation
+'0'           Literal.Number.Integer
+')'           Punctuation
+' '           Text.Whitespace
+'|'           Punctuation
+'s'           Name
+' '           Text.Whitespace
+'i'           Name
+'|'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+' '           Text.Whitespace
+'s'           Name
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+'i'           Name
+' '           Text.Whitespace
+'}'           Punctuation
+' '           Text.Whitespace
+'println'     Name
+'\n\n'        Text.Whitespace
+
+'# test symbol highlighting\n' Comment.Single
+
+'['           Operator
+"'foo"        Literal.String.Symbol
+']'           Operator
+'\n'          Text.Whitespace
+
+'['           Operator
+"'foo?!"      Literal.String.Symbol
+']'           Operator
+'\n'          Text.Whitespace
+
+'{'           Punctuation
+"'foo"        Literal.String.Symbol
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'{'           Punctuation
+"'foo!?"      Literal.String.Symbol
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'{'           Punctuation
+"'foo:bar?!=&/:" Literal.String.Symbol
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'('           Punctuation
+"'foo"        Literal.String.Symbol
+')'           Punctuation
+'\n\n'        Text.Whitespace
+
+'# future sends\n' Comment.Single
+
+'42'          Literal.Number.Integer
+' '           Text.Whitespace
+'@'           Operator
+' '           Text.Whitespace
+'to_s'        Name
+' '           Text.Whitespace
+'class'       Keyword
+' '           Text.Whitespace
+'println'     Name
+'\n'          Text.Whitespace
+
+'42'          Literal.Number.Integer
+' '           Text.Whitespace
+'@'           Operator
+' '           Text.Whitespace
+'to_s:'       Name.Function
+' '           Text.Whitespace
+'16'          Literal.Number.Integer
+' '           Text.Whitespace
+'.'           Operator
+' '           Text.Whitespace
+'value'       Name
+' '           Text.Whitespace
+'println'     Name
+'\n\n'        Text.Whitespace
+
+'# async sends\n' Comment.Single
+
+'42'          Literal.Number.Integer
+' '           Text.Whitespace
+'@@'          Operator
+' '           Text.Whitespace
+'println'     Name
+'\n'          Text.Whitespace
+
+'42'          Literal.Number.Integer
+' '           Text.Whitespace
+'@@'          Operator
+' '           Text.Whitespace
+'upto:'       Name.Function
+' '           Text.Whitespace
+'100'         Literal.Number.Integer
+'\n'          Text.Whitespace

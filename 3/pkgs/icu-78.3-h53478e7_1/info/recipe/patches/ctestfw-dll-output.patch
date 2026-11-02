@@ -1,0 +1,20 @@
+--- source/tools/ctestfw/ctestfw.vcxproj
++++ source/tools/ctestfw/ctestfw.vcxproj
+@@ -51,7 +51,7 @@
+       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+     </ClCompile>
+     <Link>
+-      <OutputFile>..\..\..\$(IcuBinOutputDir)\icutest$(IcuMajorVersion)d.exe</OutputFile>
++      <OutputFile>..\..\..\$(IcuBinOutputDir)\icutest$(IcuMajorVersion)d.dll</OutputFile>
+       <ProgramDatabaseFile>.\..\..\..\$(IcuLibOutputDir)\icutestd.pdb</ProgramDatabaseFile>
+       <ImportLibrary>.\..\..\..\$(IcuLibOutputDir)\icutestd.lib</ImportLibrary>
+       <AdditionalDependencies>icuucd.lib;icutud.lib;%(AdditionalDependencies)</AdditionalDependencies>
+@@ -64,7 +64,7 @@
+       <FunctionLevelLinking>true</FunctionLevelLinking>
+     </ClCompile>
+     <Link>
+-      <OutputFile>..\..\..\$(IcuBinOutputDir)\icutest$(IcuMajorVersion).exe</OutputFile>
++      <OutputFile>..\..\..\$(IcuBinOutputDir)\icutest$(IcuMajorVersion).dll</OutputFile>
+       <ProgramDatabaseFile>.\..\..\..\$(IcuLibOutputDir)\icutest.pdb</ProgramDatabaseFile>
+       <ImportLibrary>.\..\..\..\$(IcuLibOutputDir)\icutest.lib</ImportLibrary>
+       <AdditionalDependencies>icuuc.lib;icutu.lib;%(AdditionalDependencies)</AdditionalDependencies>

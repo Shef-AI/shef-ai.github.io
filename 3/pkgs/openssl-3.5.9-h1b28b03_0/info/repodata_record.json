@@ -1,0 +1,24 @@
+{
+  "arch": "x86_64",
+  "build": "h1b28b03_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.28,<3.0.a0",
+    "ca-certificates",
+    "libgcc >=14"
+  ],
+  "fn": "openssl-3.5.9-h1b28b03_0.conda",
+  "license": "Apache-2.0",
+  "license_family": "Apache",
+  "md5": "32b8e1dff76a46d4ace2ca1fd6305c9e",
+  "name": "openssl",
+  "platform": "linux",
+  "sha256": "c4d0c888fd0ead06e36b940e8a784b03b827586995d5b18db9996c70f30a0705",
+  "size": 5972059,
+  "subdir": "linux-64",
+  "timestamp": 1790776262000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/openssl-3.5.9-h1b28b03_0.conda",
+  "version": "3.5.9"
+}

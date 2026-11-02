@@ -1,0 +1,73 @@
+{
+  "name": "libbrotlienc",
+  "version": "1.2.0",
+  "build": "h2e96acb_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "subdir": "linux-64",
+  "fn": "libbrotlienc-1.2.0-h2e96acb_0.conda",
+  "md5": "854af1d6af8b3565fa8c7edb2141a2de",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/libbrotlienc-1.2.0-h2e96acb_0.conda",
+  "sha256": "31c153a8165bef6673fb460b9dd4cb6ed4904585cc455ab827282044fcfcce95",
+  "arch": "x86_64",
+  "platform": "linux",
+  "depends": [
+    "__glibc >=2.28,<3.0.a0",
+    "libbrotlicommon 1.2.0 h32cd6e7_0",
+    "libgcc-ng >=11.2.0"
+  ],
+  "constrains": [],
+  "license": "MIT",
+  "license_family": "MIT",
+  "timestamp": 1762363583000,
+  "size": 279951,
+  "requested_spec": "https://repo.anaconda.com/pkgs/main/linux-64::libbrotlienc==1.2.0=h2e96acb_0",
+  "package_tarball_full_path": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/libbrotlienc-1.2.0-h2e96acb_0.conda",
+  "extracted_package_dir": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/libbrotlienc-1.2.0-h2e96acb_0",
+  "files": [
+    "lib/libbrotlienc.so",
+    "lib/libbrotlienc.so.1",
+    "lib/libbrotlienc.so.1.2.0",
+    "lib/pkgconfig/libbrotlienc.pc"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/libbrotlienc.so",
+        "path_type": "softlink",
+        "sha256": "3a903f270718009980297088f0c8af4203b8f1eb2f60b0a2f4df1a5ad31d4ff2",
+        "size_in_bytes": 744528
+      },
+      {
+        "_path": "lib/libbrotlienc.so.1",
+        "path_type": "softlink",
+        "sha256": "3a903f270718009980297088f0c8af4203b8f1eb2f60b0a2f4df1a5ad31d4ff2",
+        "size_in_bytes": 744528
+      },
+      {
+        "_path": "lib/libbrotlienc.so.1.2.0",
+        "path_type": "hardlink",
+        "sha256": "3a903f270718009980297088f0c8af4203b8f1eb2f60b0a2f4df1a5ad31d4ff2",
+        "size_in_bytes": 744528,
+        "sha256_in_prefix": "3a903f270718009980297088f0c8af4203b8f1eb2f60b0a2f4df1a5ad31d4ff2"
+      },
+      {
+        "_path": "lib/pkgconfig/libbrotlienc.pc",
+        "prefix_placeholder": "/home/task_176236350079666/conda-bld/brotli-split_1762363540655/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "sha256": "b1f077cc875134b7ec011544201d746962f122a5d326ddf1c5045bd1bea55f3e",
+        "size_in_bytes": 787,
+        "sha256_in_prefix": "257f6dc2091744cba6abb3bfe98ce9ea935913d66e8ff7f35a9a024cad08e6c1"
+      }
+    ]
+  },
+  "link": {
+    "source": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/libbrotlienc-1.2.0-h2e96acb_0",
+    "type": 1
+  },
+  "requested_specs": [
+    "https://repo.anaconda.com/pkgs/main/linux-64::libbrotlienc==1.2.0=h2e96acb_0"
+  ]
+}

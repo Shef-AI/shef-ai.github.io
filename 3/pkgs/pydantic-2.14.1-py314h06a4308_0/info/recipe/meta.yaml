@@ -1,0 +1,147 @@
+# This file created by conda-build 26.7.1
+# meta.yaml template originally from:
+# /home/task_179250568021164/pydantic-feedstock/recipe, last modified Tue Oct 20 14:14:59 2026
+# ------------------------------------------------
+
+package:
+  name: pydantic
+  version: 2.14.1
+source:
+  url: https://pypi.org/packages/source/p/pydantic/pydantic-2.14.1.tar.gz
+  sha256: 94f478203dd03404682a1ada216965651dd74b1d2d5ffd62e00e0837caab5c26
+build:
+  number: '0'
+  script: /home/task_179250568021164/croot/pydantic_1792505727393/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl/bin/python
+    -m pip install . --no-deps --no-build-isolation --ignore-installed --no-cache-dir
+    -vvv
+  string: py314h06a4308_0
+requirements:
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 52_gnu
+    - bzip2 1.0.8 h5eee18b_6
+    - ca-certificates 2026.9.25 h06a4308_0
+    - hatch-fancy-pypi-readme 25.1.0 py314h06a4308_0
+    - hatchling 1.31.0 py314h06a4308_0
+    - ld_impl_linux-64 2.44 h9e0c5a2_3
+    - libexpat 2.9.0 h7354ed3_0
+    - libffi 3.4.8 h06d3fd0_3
+    - libgcc 15.2.0 h69a1729_8
+    - libgcc-ng 15.2.0 h166f726_8
+    - libmpdec 4.0.1 h47b2149_0
+    - libstdcxx 15.2.0 h39759b7_8
+    - libstdcxx-ng 15.2.0 hc03a8fd_8
+    - libuuid 1.41.5 h5eee18b_0
+    - libxcb 1.17.0 h9b100fa_0
+    - libzlib 1.3.2 h47b2149_0
+    - lz4-c 1.9.4 h7354ed3_5
+    - ncurses 6.6 hfaaeb4e_0
+    - openssl 3.5.9 h1b28b03_0
+    - packaging 26.3 py314h06a4308_0
+    - pathspec 1.1.1 py314h06a4308_0
+    - pip 26.2.1 pyh0d26453_0
+    - pluggy 1.6.0 py314h06a4308_0
+    - pthread-stubs 0.3 h47b2149_2
+    - python 3.14.8 h4c9324e_101_cp314
+    - python_abi 3.14 5_cp314
+    - readline 8.3 hc2a1206_0
+    - sqlite 3.53.4 h795bf6d_0
+    - tk 9.0.4 h3840b71_1
+    - trove-classifiers 2026.6.1.19 py314h06a4308_0
+    - tzdata 2026c he532380_0
+    - xorg-libx11 1.8.13 h65de747_0
+    - xorg-libxau 1.0.12 h9b100fa_0
+    - xorg-libxdmcp 1.1.5 h9b100fa_0
+    - xorg-xorgproto 2025.1 h47b2149_0
+    - xz 5.8.4 h140a991_0
+    - zlib 1.3.2 h47b2149_0
+    - zstd 1.5.7 h11fc155_0
+  run:
+    - annotated-types >=0.6.0
+    - pydantic-core ==2.50.1
+    - python >=3.14,<3.15.0a0
+    - python_abi 3.14.* *_cp314
+    - typing-inspection >=0.4.4
+    - typing_extensions >=4.16.0
+  run_constrained:
+    - email-validator >=2.0.0
+test:
+  source_files:
+    - tests
+  imports:
+    - pydantic
+    - pydantic._internal
+    - pydantic._internal._config
+    - pydantic._internal._decorators
+    - pydantic._internal._discriminated_union
+    - pydantic._internal._generate_schema
+    - pydantic._internal._generics
+    - pydantic._internal._import_utils
+    - pydantic._internal._mock_val_ser
+    - pydantic._internal._model_construction
+    - pydantic._internal._repr
+    - pydantic._internal._typing_extra
+    - pydantic._internal._utils
+    - pydantic._internal._validators
+    - pydantic._migration
+    - pydantic.alias_generators
+    - pydantic.color
+    - pydantic.config
+    - pydantic.dataclasses
+    - pydantic.deprecated.decorator
+    - pydantic.deprecated.json
+    - pydantic.deprecated.parse
+    - pydantic.deprecated.tools
+    - pydantic.errors
+    - pydantic.experimental.arguments_schema
+    - pydantic.experimental.pipeline
+    - pydantic.fields
+    - pydantic.functional_serializers
+    - pydantic.functional_validators
+    - pydantic.json_schema
+    - pydantic.main
+    - pydantic.networks
+    - pydantic.plugin
+    - pydantic.plugin._loader
+    - pydantic.type_adapter
+    - pydantic.types
+  requires:
+    - dirty-equals
+    - faker
+    - jsonschema
+    - pip
+    - pytest
+    - pytest-benchmark
+    - pytest-mock
+    - pytz
+  commands:
+    - pip check
+    - python -c "from importlib.metadata import version; assert(version('pydantic')=='2.14.1')"
+    - pytest -ra -vv --tb=short tests  --ignore=tests/test_docs.py  --deselect=tests/test_types_typeddict.py::test_readonly_qualifier_warning
+      --deselect=tests/test_deprecated_fields.py::test_deprecated_fields --deselect=tests/test_deprecated_fields.py::test_deprecated_fields_deprecated_class
+      --deselect=tests/test_deprecated_fields.py::test_computed_field_deprecated --deselect=tests/test_deprecated_fields.py::test_deprecated_with_boolean
+      --deselect=tests/test_deprecated_fields.py::test_deprecated_field_forward_annotation
+about:
+  home: https://github.com/pydantic/pydantic
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: Data validation and settings management using python type hinting
+  description: 'Data validation and settings management using python type hinting.
+
+    See documentation doc_url for more details.
+
+    '
+  doc_url: https://pydantic.dev/docs
+  dev_url: https://github.com/pydantic/pydantic
+extra:
+  recipe-maintainers:
+    - dgasmith
+    - samuelcolvin
+  final: true
+  copy_test_source_files: true
+  remote_url: https://github.com/AnacondaRecipes/pydantic-feedstock
+  sha: 48973ee7492cb6c12730f63ba25d6f3ac9f8397e
+  task_id: IGx5QE3-Qji29famTogE9g
+  task_run_id: '0'
+  pbp_graph_uuid: 1a83d3f8-c178-446e-9b20-269826fe1a96

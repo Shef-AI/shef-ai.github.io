@@ -1,0 +1,1677 @@
+'# New ports collection makefile for:    python25\n' Comment
+
+'# Date created:         3 July 2003\n' Comment
+
+'# Whom:                 Hye-Shik Chang <perky@FreeBSD.org>\n' Comment
+
+'#\n'         Comment
+
+'# $FreeBSD: ports/lang/python25/Makefile,v 1.145 2007/10/03 23:22:04 edwin Exp $\n' Comment
+
+'\n'          Text.Whitespace
+
+'PORTNAME'    Name.Variable
+'='           Operator
+'\t'          Text.Whitespace
+'python25'    Text
+'\n'          Text.Whitespace
+
+'PORTVERSION' Name.Variable
+'='           Operator
+'\t'          Text.Whitespace
+'2'           Literal.Number
+'.5.1'        Text
+'\n'          Text.Whitespace
+
+'CATEGORIES'  Name.Variable
+'='           Operator
+'\t'          Text.Whitespace
+'lang'        Text
+' '           Text.Whitespace
+'python'      Text
+' '           Text.Whitespace
+'ipv6'        Text
+'\n'          Text.Whitespace
+
+'MASTER_SITES' Name.Variable
+'='           Operator
+'\t'          Text.Whitespace
+'${'          Literal.String.Interpol
+'PYTHON_MASTER_SITES' Name.Variable
+'}'           Literal.String.Interpol
+'\n'          Text.Whitespace
+
+'MASTER_SITE_SUBDIR' Name.Variable
+'='           Operator
+'\t'          Text.Whitespace
+'${'          Literal.String.Interpol
+'PYTHON_MASTER_SITE_SUBDIR' Name.Variable
+'}'           Literal.String.Interpol
+'\n'          Text.Whitespace
+
+'DISTFILES'   Name.Variable
+'='           Operator
+'\t'          Text.Whitespace
+'${'          Literal.String.Interpol
+'PYTHON_DISTFILE' Name.Variable
+'}'           Literal.String.Interpol
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'MAINTAINER'  Name.Variable
+'='           Operator
+'\t'          Text.Whitespace
+'python@FreeBSD.org' Text
+'\n'          Text.Whitespace
+
+'COMMENT'     Name.Variable
+'?='          Operator
+'\t'          Text.Whitespace
+'An'          Text
+' '           Text.Whitespace
+'interpreted' Text
+' '           Text.Whitespace
+'object-oriented' Text
+' '           Text.Whitespace
+'programming' Text
+' '           Text.Whitespace
+'language'    Text
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'DIST_SUBDIR' Name.Variable
+'='           Operator
+'\t'          Text.Whitespace
+'python'      Text
+'\n'          Text.Whitespace
+
+'WRKSRC'      Name.Variable
+'='           Operator
+'\t\t'        Text.Whitespace
+'${'          Literal.String.Interpol
+'PYTHON_WRKSRC' Name.Variable
+'}'           Literal.String.Interpol
+'/portbld.static' Text
+'\n'          Text.Whitespace
+
+'PATCH_WRKSRC' Name.Variable
+'='           Operator
+'\t'          Text.Whitespace
+'${'          Literal.String.Interpol
+'PYTHON_WRKSRC' Name.Variable
+'}'           Literal.String.Interpol
+'\n'          Text.Whitespace
+
+'GNU_CONFIGURE' Name.Variable
+'='           Operator
+'\t'          Text.Whitespace
+'yes'         Text
+'\n'          Text.Whitespace
+
+'CONFIGURE_TARGET' Name.Variable
+'='           Operator
+'\t'          Text.Whitespace
+'--build'     Text
+'='           Operator
+'${'          Literal.String.Interpol
+'MACHINE_ARCH' Name.Variable
+'}'           Literal.String.Interpol
+'-portbld-freebsd' Text
+'${'          Literal.String.Interpol
+'OSREL'       Name.Variable
+'}'           Literal.String.Interpol
+'\n'          Text.Whitespace
+
+'CONFIGURE_SCRIPT' Name.Variable
+'='           Operator
+'\t'          Text.Whitespace
+'../configure' Text
+' '           Text.Whitespace
+'# must be relative\n' Comment.Single
+
+'CONFIGURE_ENV' Name.Variable
+'='           Operator
+'\t'          Text.Whitespace
+'OPT'         Name.Variable
+'='           Operator
+'"'           Literal.String.Double
+'${'          Literal.String.Interpol
+'CFLAGS'      Name.Variable
+'}'           Literal.String.Interpol
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'SVNVERSION'  Name.Variable
+'='           Operator
+'"echo freebsd"' Literal.String.Double
+'\n'          Text.Whitespace
+
+'MAKE_ENV'    Name.Variable
+'='           Operator
+'\t'          Text.Whitespace
+'VPATH'       Name.Variable
+'='           Operator
+'"'           Literal.String.Double
+'${'          Literal.String.Interpol
+'PYTHON_WRKSRC' Name.Variable
+'}'           Literal.String.Interpol
+'"'           Literal.String.Double
+'\n'          Text.Whitespace
+
+'INSTALLS_SHLIB' Name.Variable
+'='           Operator
+'\t'          Text.Whitespace
+'yes'         Text
+'\n'          Text.Whitespace
+
+'INSTALL_TARGET' Name.Variable
+'='           Operator
+'\t'          Text.Whitespace
+'altinstall'  Text
+'\n'          Text.Whitespace
+
+'MAN1'        Name.Variable
+'='           Operator
+'\t\t'        Text.Whitespace
+'${'          Literal.String.Interpol
+'PYTHON_VERSION' Name.Variable
+'}'           Literal.String.Interpol
+'.1'          Text
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'USE_PYTHON'  Name.Variable
+'='           Operator
+'\t'          Text.Whitespace
+'yes'         Text
+'\n'          Text.Whitespace
+
+'PYTHON_VERSION' Name.Variable
+'='           Operator
+'\t'          Text.Whitespace
+'python2.5'   Text
+'\n'          Text.Whitespace
+
+'PYTHON_NO_DEPENDS' Name.Variable
+'='           Operator
+'\t'          Text.Whitespace
+'yes'         Text
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'SHARED_WRKSRC' Name.Variable
+'='           Operator
+'\t'          Text.Whitespace
+'${'          Literal.String.Interpol
+'PYTHON_WRKSRC' Name.Variable
+'}'           Literal.String.Interpol
+'/portbld.shared' Text
+'\n'          Text.Whitespace
+
+'PLIST'       Name.Variable
+'='           Operator
+'\t\t'        Text.Whitespace
+'${'          Literal.String.Interpol
+'WRKDIR'      Name.Variable
+'}'           Literal.String.Interpol
+'/PLIST'      Text
+'\n'          Text.Whitespace
+
+'PLIST_TEMPLATE' Name.Variable
+'?='          Operator
+'${'          Literal.String.Interpol
+'PKGDIR'      Name.Variable
+'}'           Literal.String.Interpol
+'/pkg-plist'  Text
+'\n'          Text.Whitespace
+
+'PLIST_SUB'   Name.Variable
+'='           Operator
+'\t'          Text.Whitespace
+'PYVER'       Name.Variable
+'='           Operator
+'${'          Literal.String.Interpol
+'PYTHON_VERSION' Name.Variable
+':'           Punctuation
+'S'           Name.Variable
+'/python//'   Punctuation
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+'PYVER_WITHPAT' Name.Variable
+'='           Operator
+'${'          Literal.String.Interpol
+'PORTVERSION' Name.Variable
+':'           Punctuation
+'S'           Name.Variable
+'/.c/c/'      Punctuation
+'}'           Literal.String.Interpol
+'\n'          Text.Whitespace
+
+'DEMODIR'     Name.Variable
+'='           Operator
+'\t'          Text.Whitespace
+'${'          Literal.String.Interpol
+'PREFIX'      Name.Variable
+'}'           Literal.String.Interpol
+'/share/examples/' Text
+'${'          Literal.String.Interpol
+'PYTHON_VERSION' Name.Variable
+'}'           Literal.String.Interpol
+'\n'          Text.Whitespace
+
+'TOOLSDIR'    Name.Variable
+'='           Operator
+'\t'          Text.Whitespace
+'${'          Literal.String.Interpol
+'PREFIX'      Name.Variable
+'}'           Literal.String.Interpol
+'/share/'     Text
+'${'          Literal.String.Interpol
+'PYTHON_VERSION' Name.Variable
+'}'           Literal.String.Interpol
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'BIN_SCRIPTS' Name.Variable
+'='           Operator
+'\t'          Text.Whitespace
+'idle'        Text
+' '           Text.Whitespace
+'pydoc'       Text
+' '           Text.Whitespace
+'python'      Text
+' '           Text.Whitespace
+'python-shared' Text
+' '           Text.Whitespace
+'smtpd.py'    Text
+' '           Text.Whitespace
+'python-config' Text
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+'python-shared-config' Text
+'\n'          Text.Whitespace
+
+'BINLINKS_SUB' Name.Variable
+'='           Operator
+'\t'          Text.Whitespace
+'-e'          Text
+' '           Text.Whitespace
+"'s,smtpd,smtpd${PYTHON_VER},'" Literal.String.Single
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+'-e'          Text
+' '           Text.Whitespace
+"'s,(idle|pydoc|python-shared|python),\\1${PYTHON_VER},'" Literal.String.Single
+'\n\n'        Text.Whitespace
+
+'OPTIONS'     Name.Variable
+'='           Operator
+'\t'          Text.Whitespace
+'THREADS'     Text
+' '           Text.Whitespace
+'"Enable thread support"' Literal.String.Double
+' '           Text.Whitespace
+'on'          Text
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+'HUGE_STACK_SIZE' Text
+' '           Text.Whitespace
+'"Use a larger thread stack"' Literal.String.Double
+' '           Text.Whitespace
+'off'         Text
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+'UCS4'        Text
+' '           Text.Whitespace
+'"Use UCS4 for unicode support"' Literal.String.Double
+' '           Text.Whitespace
+'on'          Text
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+'PYMALLOC'    Text
+' '           Text.Whitespace
+'"Use python\'s internal malloc"' Literal.String.Double
+' '           Text.Whitespace
+'on'          Text
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+'IPV6'        Text
+' '           Text.Whitespace
+'"Enable IPv6 support"' Literal.String.Double
+' '           Text.Whitespace
+'on'          Text
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+'FPECTL'      Text
+' '           Text.Whitespace
+'"Enable floating point exception handling"' Literal.String.Double
+' '           Text.Whitespace
+'off'         Text
+'\n\n'        Text.Whitespace
+
+'.include <bsd.port.pre.mk>\n' Comment.Preproc
+
+'\n'          Text.Whitespace
+
+'.if ${PYTHON_VERSION} == ${PYTHON_DEFAULT_VERSION}\n' Comment.Preproc
+
+'MLINKS'      Name.Variable
+'='           Operator
+'\t\t'        Text.Whitespace
+'${'          Literal.String.Interpol
+'PYTHON_VERSION' Name.Variable
+'}'           Literal.String.Interpol
+'.1'          Text
+' '           Text.Whitespace
+'python.1'    Text
+'\n'          Text.Whitespace
+
+'PLIST_SUB'   Name.Variable
+'+='          Operator
+'\t'          Text.Whitespace
+'IF_DEFAULT'  Name.Variable
+'='           Operator
+'""'          Literal.String.Double
+'\n'          Text.Whitespace
+
+'.else\n'     Comment.Preproc
+
+'PLIST_SUB'   Name.Variable
+'+='          Operator
+'\t'          Text.Whitespace
+'IF_DEFAULT'  Name.Variable
+'='           Operator
+'"@comment "' Literal.String.Double
+'\n'          Text.Whitespace
+
+'.endif\n'    Comment.Preproc
+
+'\n'          Text.Whitespace
+
+'# workaround for a bug in base curses.h.\n' Comment
+
+'CFLAGS'      Name.Variable
+'+='          Operator
+'\t'          Text.Whitespace
+'-D__wchar_t' Text
+'='           Operator
+'wchar_t'     Text
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'.if !defined(WITHOUT_THREADS)\n' Comment.Preproc
+
+'CONFIGURE_ARGS' Name.Variable
+'+='          Operator
+'\t'          Text.Whitespace
+'--with-threads' Text
+'\n'          Text.Whitespace
+
+'CFLAGS'      Name.Variable
+'+='          Operator
+'\t\t'        Text.Whitespace
+'${'          Literal.String.Interpol
+'PTHREAD_CFLAGS' Name.Variable
+'}'           Literal.String.Interpol
+'\n'          Text.Whitespace
+
+'.if defined(WITHOUT_HUGE_STACK_SIZE)\n' Comment.Preproc
+
+'CFLAGS'      Name.Variable
+'+='          Operator
+'\t\t'        Text.Whitespace
+'-DTHREAD_STACK_SIZE' Text
+'='           Operator
+'0x20000'     Text
+'\n'          Text.Whitespace
+
+'.else\n'     Comment.Preproc
+
+'CFLAGS'      Name.Variable
+'+='          Operator
+'\t\t'        Text.Whitespace
+'-DTHREAD_STACK_SIZE' Text
+'='           Operator
+'0x100000'    Text
+'\n'          Text.Whitespace
+
+'.endif # defined(WITHOUT_HUGE_STACK_SIZE)\n' Comment.Preproc
+
+'CONFIGURE_ENV' Name.Variable
+'+='          Operator
+'\t\t'        Text.Whitespace
+'LDFLAGS'     Name.Variable
+'='           Operator
+'"'           Literal.String.Double
+'${'          Literal.String.Interpol
+'PTHREAD_LIBS' Name.Variable
+'}'           Literal.String.Interpol
+' '           Literal.String.Double
+'${'          Literal.String.Interpol
+'LDFLAGS'     Name.Variable
+'}'           Literal.String.Interpol
+'"'           Literal.String.Double
+'\n'          Text.Whitespace
+
+'.else\n'     Comment.Preproc
+
+'CONFIGURE_ARGS' Name.Variable
+'+='          Operator
+'\t'          Text.Whitespace
+'--without-threads' Text
+'\n'          Text.Whitespace
+
+'.if defined(LDFLAGS)\n' Comment.Preproc
+
+'CONFIGURE_ENV' Name.Variable
+'+='          Operator
+'\t\t'        Text.Whitespace
+'LDFLAGS'     Name.Variable
+'='           Operator
+'"'           Literal.String.Double
+'${'          Literal.String.Interpol
+'LDFLAGS'     Name.Variable
+'}'           Literal.String.Interpol
+'"'           Literal.String.Double
+'\n'          Text.Whitespace
+
+'.endif # defined(LDFLAGS)\n' Comment.Preproc
+
+'.endif # !defined(WITHOUT_THREADS)\n' Comment.Preproc
+
+'\n'          Text.Whitespace
+
+'.if !defined(WITHOUT_UCS4) && !defined(WITH_UCS2)\n' Comment.Preproc
+
+'CONFIGURE_ARGS' Name.Variable
+'+='          Operator
+'\t'          Text.Whitespace
+'--enable-unicode' Text
+'='           Operator
+'ucs4'        Text
+'\n'          Text.Whitespace
+
+'.endif\n'    Comment.Preproc
+
+'\n'          Text.Whitespace
+
+'.if defined(WITHOUT_PYMALLOC)\n' Comment.Preproc
+
+'CONFIGURE_ARGS' Name.Variable
+'+='          Operator
+'        '    Text.Whitespace
+'--without-pymalloc' Text
+'\n'          Text.Whitespace
+
+'.endif\n'    Comment.Preproc
+
+'\n'          Text.Whitespace
+
+'.if ${ARCH} == i386\n' Comment.Preproc
+
+'PLIST_SUB'   Name.Variable
+'+='          Operator
+'\t'          Text.Whitespace
+'X86_ONLY'    Name.Variable
+'='           Operator
+'""'          Literal.String.Double
+'\n'          Text.Whitespace
+
+'.else\n'     Comment.Preproc
+
+'PLIST_SUB'   Name.Variable
+'+='          Operator
+'\t'          Text.Whitespace
+'X86_ONLY'    Name.Variable
+'='           Operator
+'"@comment "' Literal.String.Double
+'\n'          Text.Whitespace
+
+'.endif\n'    Comment.Preproc
+
+'.if ${ARCH} == amd64 || ${ARCH} == ia64 || ${ARCH} == sparc64 || ${ARCH} == alpha\n' Comment.Preproc
+
+'PLIST_SUB'   Name.Variable
+'+='          Operator
+'     '       Text.Whitespace
+'32BIT_ONLY'  Name.Variable
+'='           Operator
+'"@comment "' Literal.String.Double
+'\n'          Text.Whitespace
+
+'.else\n'     Comment.Preproc
+
+'PLIST_SUB'   Name.Variable
+'+='          Operator
+'     '       Text.Whitespace
+'32BIT_ONLY'  Name.Variable
+'='           Operator
+'""'          Literal.String.Double
+'\n'          Text.Whitespace
+
+'.endif\n'    Comment.Preproc
+
+'.if ${ARCH} == sparc64\n' Comment.Preproc
+
+'CFLAGS'      Name.Variable
+'+='          Operator
+'        '    Text.Whitespace
+'-DPYTHON_DEFAULT_RECURSION_LIMIT' Text
+'='           Operator
+'900'         Literal.Number
+'\n'          Text.Whitespace
+
+'.endif\n'    Comment.Preproc
+
+'\n'          Text.Whitespace
+
+'.if !exists(/usr/bin/ypcat) # the world with NO_NIS\n' Comment.Preproc
+
+'PLIST_SUB'   Name.Variable
+'+='          Operator
+'\t'          Text.Whitespace
+'NO_NIS'      Name.Variable
+'='           Operator
+'"@comment "' Literal.String.Double
+'\n'          Text.Whitespace
+
+'.else\n'     Comment.Preproc
+
+'PLIST_SUB'   Name.Variable
+'+='          Operator
+'\t'          Text.Whitespace
+'NO_NIS'      Name.Variable
+'='           Operator
+'""'          Literal.String.Double
+'\n'          Text.Whitespace
+
+'.endif\n'    Comment.Preproc
+
+'\n'          Text.Whitespace
+
+'.if !defined(WITHOUT_IPV6)\n' Comment.Preproc
+
+'CONFIGURE_ARGS' Name.Variable
+'+='          Operator
+' '           Text.Whitespace
+'--enable-ipv6' Text
+'\n'          Text.Whitespace
+
+'.else\n'     Comment.Preproc
+
+'CONFIGURE_ARGS' Name.Variable
+'+='          Operator
+' '           Text.Whitespace
+'--disable-ipv6' Text
+'\n'          Text.Whitespace
+
+'.endif\n'    Comment.Preproc
+
+'\n'          Text.Whitespace
+
+'.if defined(WITH_FPECTL)\n' Comment.Preproc
+
+'CONFIGURE_ARGS' Name.Variable
+'+='          Operator
+' '           Text.Whitespace
+'--with-fpectl' Text
+'\n'          Text.Whitespace
+
+'.endif\n'    Comment.Preproc
+
+'\n'          Text.Whitespace
+
+'.if ${OSVERSION} >= 700000\n' Comment.Preproc
+
+'PLATFORMS'   Name.Variable
+'='           Operator
+'plat-freebsd4' Text
+' '           Text.Whitespace
+'plat-freebsd5' Text
+' '           Text.Whitespace
+'plat-freebsd6' Text
+'\n'          Text.Whitespace
+
+'.elif ${OSVERSION} >= 600000\n' Comment.Preproc
+
+'PLATFORMS'   Name.Variable
+'='           Operator
+'plat-freebsd4' Text
+' '           Text.Whitespace
+'plat-freebsd5' Text
+' '           Text.Whitespace
+'plat-freebsd7' Text
+'\n'          Text.Whitespace
+
+'.else\n'     Comment.Preproc
+
+'PLATFORMS'   Name.Variable
+'='           Operator
+'plat-freebsd4' Text
+' '           Text.Whitespace
+'plat-freebsd6' Text
+' '           Text.Whitespace
+'plat-freebsd7' Text
+'\n'          Text.Whitespace
+
+'.endif\n'    Comment.Preproc
+
+'\n'          Text.Whitespace
+
+'pre-patch'   Name.Function
+':'           Operator
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'${'          Literal.String.Interpol
+'MKDIR'       Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'WRKSRC'      Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'SHARED_WRKSRC' Name.Variable
+'}'           Literal.String.Interpol
+'/Modules'    Text
+'\n\t'        Text.Whitespace
+'${'          Literal.String.Interpol
+'SED'         Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'-e'          Text
+' '           Text.Whitespace
+"'1s,^.*$$,#!${PREFIX}/bin/${PYTHON_VERSION},'" Literal.String.Single
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+'${'          Literal.String.Interpol
+'PATCH_WRKSRC' Name.Variable
+'}'           Literal.String.Interpol
+'/Tools/scripts/pydoc' Text
+' '           Text.Whitespace
+'>'           Text
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'WRKDIR'      Name.Variable
+'}'           Literal.String.Interpol
+'/pydoc2.5'   Text
+'\n\t'        Text.Whitespace
+'${'          Literal.String.Interpol
+'SED'         Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'-e'          Text
+' '           Text.Whitespace
+"'1s,^.*$$,#!${PREFIX}/bin/${PYTHON_VERSION},'" Literal.String.Single
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+'${'          Literal.String.Interpol
+'PATCH_WRKSRC' Name.Variable
+'}'           Literal.String.Interpol
+'/Tools/scripts/idle' Text
+' '           Text.Whitespace
+'>'           Text
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'WRKDIR'      Name.Variable
+'}'           Literal.String.Interpol
+'/idle2.5'    Text
+'\n\t'        Text.Whitespace
+'${'          Literal.String.Interpol
+'SED'         Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'-e'          Text
+' '           Text.Whitespace
+"'1s,^.*$$,#!${PREFIX}/bin/${PYTHON_VERSION},'" Literal.String.Single
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+'${'          Literal.String.Interpol
+'PATCH_WRKSRC' Name.Variable
+'}'           Literal.String.Interpol
+'/Lib/smtpd.py' Text
+' '           Text.Whitespace
+'>'           Text
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'WRKDIR'      Name.Variable
+'}'           Literal.String.Interpol
+'/smtpd2.5.py' Text
+'\n\t'        Text.Whitespace
+'${'          Literal.String.Interpol
+'REINPLACE_CMD' Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'-e'          Text
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+"'s,/usr/doc/python-docs-,${PREFIX}/share/doc/python,g'" Literal.String.Single
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+'${'          Literal.String.Interpol
+'PATCH_WRKSRC' Name.Variable
+'}'           Literal.String.Interpol
+'/Lib/pydoc.py' Text
+'\n\t'        Text.Whitespace
+'${'          Literal.String.Interpol
+'REINPLACE_CMD' Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'-e'          Text
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+'\'s|^\\( *prefixes = .*\\)\\]$$|\\1, "${X11BASE}"]|g\'' Literal.String.Single
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+'${'          Literal.String.Interpol
+'PATCH_WRKSRC' Name.Variable
+'}'           Literal.String.Interpol
+'/Lib/site.py' Text
+'\n\t'        Text.Whitespace
+'${'          Literal.String.Interpol
+'REINPLACE_CMD' Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'-e'          Text
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+"'s|^\t\\(..ASDLGEN.*\\)$$|\t${TRUE}|g'" Literal.String.Single
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+'${'          Literal.String.Interpol
+'PATCH_WRKSRC' Name.Variable
+'}'           Literal.String.Interpol
+'/Makefile.pre.in' Text
+'\n\n\t'      Text.Whitespace
+'${'          Literal.String.Interpol
+'REINPLACE_CMD' Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'-e'          Text
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+"'s|*\\(..INSTALL_SCRIPT.*\\)python-config$$|#port \\1|'" Literal.String.Single
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+'${'          Literal.String.Interpol
+'PATCH_WRKSRC' Name.Variable
+'}'           Literal.String.Interpol
+'/Makefile.pre.in' Text
+'\n\n\t'      Text.Whitespace
+'${'          Literal.String.Interpol
+'SED'         Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'-e'          Text
+' '           Text.Whitespace
+"'s|^#!.*|#!${PREFIX}/bin/${PYTHON_VERSION}|'" Literal.String.Single
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+'${'          Literal.String.Interpol
+'PATCH_WRKSRC' Name.Variable
+'}'           Literal.String.Interpol
+'/Misc/python-config.in' Text
+' '           Text.Whitespace
+'>'           Text
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'WRKDIR'      Name.Variable
+'}'           Literal.String.Interpol
+'/'           Text
+'${'          Literal.String.Interpol
+'PYTHON_VERSION' Name.Variable
+'}'           Literal.String.Interpol
+'-config'     Text
+'\n\t'        Text.Whitespace
+'${'          Literal.String.Interpol
+'SED'         Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'-e'          Text
+' '           Text.Whitespace
+"'s|^#!.*|#!${PREFIX}/bin/${PYTHON_VERSION:S/thon/thon-shared/}|'" Literal.String.Single
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+'${'          Literal.String.Interpol
+'PATCH_WRKSRC' Name.Variable
+'}'           Literal.String.Interpol
+'/Misc/python-config.in' Text
+' '           Text.Whitespace
+'>'           Text
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'WRKDIR'      Name.Variable
+'}'           Literal.String.Interpol
+'/'           Text
+'${'          Literal.String.Interpol
+'PYTHON_VERSION' Name.Variable
+':'           Punctuation
+'S'           Name.Variable
+'/thon/thon-shared/' Punctuation
+'}'           Literal.String.Interpol
+'-config'     Text
+'\n\n'        Text.Whitespace
+
+'.if defined(WITH_FPECTL) && ${ARCH} == i386\n' Comment.Preproc
+
+'\t'          Text.Whitespace
+'${'          Literal.String.Interpol
+'MKDIR'       Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'WRKSRC'      Name.Variable
+'}'           Literal.String.Interpol
+'/Modules'    Text
+'\n\t'        Text.Whitespace
+'${'          Literal.String.Interpol
+'ECHO'        Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'"fpectl fpectlmodule.c"' Literal.String.Double
+' '           Text.Whitespace
+'>>'          Text
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'WRKSRC'      Name.Variable
+'}'           Literal.String.Interpol
+'/Modules/Setup.dist' Text
+'\n'          Text.Whitespace
+
+'.endif\n'    Comment.Preproc
+
+'\n'          Text.Whitespace
+
+'post-configure' Name.Function
+':'           Operator
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'${'          Literal.String.Interpol
+'TAR'         Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'-C'          Text
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'WRKSRC'      Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'-cf'         Text
+' '           Text.Whitespace
+'-'           Text
+' '           Text.Whitespace
+'.'           Text
+' '           Text.Whitespace
+'|'           Punctuation
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'TAR'         Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'-C'          Text
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'SHARED_WRKSRC' Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'-xf'         Text
+' '           Text.Whitespace
+'-'           Text
+'\n\t'        Text.Whitespace
+'${'          Literal.String.Interpol
+'LN'          Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'-sf'         Text
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'PYTHON_WRKSRC' Name.Variable
+'}'           Literal.String.Interpol
+'/Lib'        Text
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'WRKSRC'      Name.Variable
+'}'           Literal.String.Interpol
+'/Lib'        Text
+'\n\t'        Text.Whitespace
+'${'          Literal.String.Interpol
+'SED'         Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'-e'          Text
+' '           Text.Whitespace
+"'s,^\\(LDLIBRARY=\\).*$$,\\1libpython$$(VERSION).so,'" Literal.String.Single
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+'-e'          Text
+' '           Text.Whitespace
+"'s,^\\(BLDLIBRARY=\\).*$$,\\1-L. -lpython$$(VERSION),'" Literal.String.Single
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+'-e'          Text
+' '           Text.Whitespace
+"'s,^\\(CFLAGSFORSHARED=\\).*$$,\\1$$(CCSHARED),'" Literal.String.Single
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+'-e'          Text
+' '           Text.Whitespace
+"'s,^\\(Makefile Modules/config.c:.*\\)Makefile.pre,\\1,'" Literal.String.Single
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+'-e'          Text
+' '           Text.Whitespace
+"'s,^\\(.(BUILDPYTHON)\\: .*\\).(LIBRARY),\\1,'" Literal.String.Single
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+'-e'          Text
+' '           Text.Whitespace
+"'s,^\\(.(BUILDPYTHON):.*\\).(LIBRARY),\\1,'" Literal.String.Single
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+'${'          Literal.String.Interpol
+'WRKSRC'      Name.Variable
+'}'           Literal.String.Interpol
+'/Makefile'   Text
+' '           Text.Whitespace
+'>'           Text
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'SHARED_WRKSRC' Name.Variable
+'}'           Literal.String.Interpol
+'/Makefile'   Text
+'\n\n'        Text.Whitespace
+
+'pre-build'   Name.Function
+':'           Operator
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'cd'          Name.Builtin
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'SHARED_WRKSRC' Name.Variable
+'}'           Literal.String.Interpol
+';'           Punctuation
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t'          Text.Whitespace
+'${'          Literal.String.Interpol
+'SETENV'      Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'MAKE_ENV'    Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'MAKE'        Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'lib'         Text
+'${'          Literal.String.Interpol
+'PYTHON_VERSION' Name.Variable
+'}'           Literal.String.Interpol
+'.so'         Text
+' '           Text.Whitespace
+'python'      Text
+';'           Punctuation
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t'          Text.Whitespace
+'${'          Literal.String.Interpol
+'LN'          Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'-f'          Text
+' '           Text.Whitespace
+'lib'         Text
+'${'          Literal.String.Interpol
+'PYTHON_VERSION' Name.Variable
+'}'           Literal.String.Interpol
+'.so'         Text
+' '           Text.Whitespace
+'lib'         Text
+'${'          Literal.String.Interpol
+'PYTHON_VERSION' Name.Variable
+'}'           Literal.String.Interpol
+'.so.1'       Text
+';'           Punctuation
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t'          Text.Whitespace
+'${'          Literal.String.Interpol
+'LN'          Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'-f'          Text
+' '           Text.Whitespace
+'python'      Text
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'PYTHON_VERSION' Name.Variable
+':'           Punctuation
+'S'           Name.Variable
+'/thon/thon-shared/' Punctuation
+'}'           Literal.String.Interpol
+'\n\n'        Text.Whitespace
+
+'pre-su-install' Name.Function
+':'           Operator
+'\n'          Text.Whitespace
+
+'.for platform in ${PLATFORMS}\n' Comment.Preproc
+
+'\t'          Text.Whitespace
+'${'          Literal.String.Interpol
+'MKDIR'       Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'PYTHONPREFIX_LIBDIR' Name.Variable
+'}'           Literal.String.Interpol
+'/'           Text
+'${'          Literal.String.Interpol
+'platform'    Name.Variable
+'}'           Literal.String.Interpol
+'\n'          Text.Whitespace
+
+'.for file in IN.py regen\n' Comment.Preproc
+
+'\t'          Text.Whitespace
+'${'          Literal.String.Interpol
+'INSTALL_DATA' Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'WRKSRC'      Name.Variable
+'}'           Literal.String.Interpol
+'/Lib/'       Text
+'${'          Literal.String.Interpol
+'platform'    Name.Variable
+'}'           Literal.String.Interpol
+'/'           Text
+'${'          Literal.String.Interpol
+'file'        Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+'${'          Literal.String.Interpol
+'PYTHONPREFIX_LIBDIR' Name.Variable
+'}'           Literal.String.Interpol
+'/'           Text
+'${'          Literal.String.Interpol
+'platform'    Name.Variable
+'}'           Literal.String.Interpol
+'/'           Text
+'\n'          Text.Whitespace
+
+'.endfor\n'   Comment.Preproc
+
+'.endfor\n'   Comment.Preproc
+
+'\n'          Text.Whitespace
+
+'pre-install' Name.Function
+':'           Operator
+'\n'          Text.Whitespace
+
+'\t'          Text.Whitespace
+'${'          Literal.String.Interpol
+'CAT'         Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'PLIST_TEMPLATE' Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'|'           Punctuation
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'AWK'         Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'\'{ print $$0; } \\\n\t/LIBDIR.*\\.py$$/ && !/\\/bad/ { print $$0 "o"; print $$0 "c"; }\'' Literal.String.Single
+'\t'          Text.Whitespace
+'>'           Text
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'PLIST'       Name.Variable
+'}'           Literal.String.Interpol
+'\n\n'        Text.Whitespace
+
+"\t@# if openssl 0.9.8 is detected, _sha{256,512} module won't be installed\n" Comment
+
+'\t'          Text.Whitespace
+'('           Operator
+'['           Operator
+' '           Text.Whitespace
+'-f'          Text
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'WRKSRC'      Name.Variable
+'}'           Literal.String.Interpol
+'/.without_own_sha' Text
+' '           Text.Whitespace
+']'           Operator
+' '           Text.Whitespace
+'&&'          Operator
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+'${'          Literal.String.Interpol
+'GREP'        Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'-v'          Text
+' '           Text.Whitespace
+"'lib-dynload/_sha'" Literal.String.Single
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'PLIST'       Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'>'           Text
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'PLIST'       Name.Variable
+'}'           Literal.String.Interpol
+'.tmp'        Text
+' '           Text.Whitespace
+'&&'          Operator
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+'${'          Literal.String.Interpol
+'CAT'         Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'PLIST'       Name.Variable
+'}'           Literal.String.Interpol
+'.tmp'        Text
+' '           Text.Whitespace
+'>'           Text
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'PLIST'       Name.Variable
+'}'           Literal.String.Interpol
+')'           Operator
+' '           Text.Whitespace
+'||'          Operator
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'TRUE'        Name.Variable
+'}'           Literal.String.Interpol
+'\n\n'        Text.Whitespace
+
+'post-install' Name.Function
+':'           Operator
+'\n'          Text.Whitespace
+
+'\t@# install config providers\n' Comment
+
+'\t'          Text.Whitespace
+'${'          Literal.String.Interpol
+'INSTALL_SCRIPT' Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'WRKDIR'      Name.Variable
+'}'           Literal.String.Interpol
+'/'           Text
+'${'          Literal.String.Interpol
+'PYTHON_VERSION' Name.Variable
+'}'           Literal.String.Interpol
+'-config'     Text
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'PREFIX'      Name.Variable
+'}'           Literal.String.Interpol
+'/bin'        Text
+'\n\t'        Text.Whitespace
+'${'          Literal.String.Interpol
+'INSTALL_SCRIPT' Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'WRKDIR'      Name.Variable
+'}'           Literal.String.Interpol
+'/'           Text
+'${'          Literal.String.Interpol
+'PYTHON_VERSION' Name.Variable
+':'           Punctuation
+'S'           Name.Variable
+'/thon/thon-shared/' Punctuation
+'}'           Literal.String.Interpol
+'-config'     Text
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'PREFIX'      Name.Variable
+'}'           Literal.String.Interpol
+'/bin'        Text
+'\n\n'        Text.Whitespace
+
+'\t@# shared version of executable and library\n' Comment
+
+'\t'          Text.Whitespace
+'${'          Literal.String.Interpol
+'INSTALL_PROGRAM' Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'SHARED_WRKSRC' Name.Variable
+'}'           Literal.String.Interpol
+'/lib'        Text
+'${'          Literal.String.Interpol
+'PYTHON_VERSION' Name.Variable
+'}'           Literal.String.Interpol
+'.so.1'       Text
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+'${'          Literal.String.Interpol
+'PREFIX'      Name.Variable
+'}'           Literal.String.Interpol
+'/lib'        Text
+'\n\t'        Text.Whitespace
+'cd'          Name.Builtin
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'PREFIX'      Name.Variable
+'}'           Literal.String.Interpol
+'/lib'        Text
+';'           Punctuation
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'LN'          Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'-sf'         Text
+' '           Text.Whitespace
+'lib'         Text
+'${'          Literal.String.Interpol
+'PYTHON_VERSION' Name.Variable
+'}'           Literal.String.Interpol
+'.so.1'       Text
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+'lib'         Text
+'${'          Literal.String.Interpol
+'PYTHON_VERSION' Name.Variable
+'}'           Literal.String.Interpol
+'.so'         Text
+'\n\t'        Text.Whitespace
+'${'          Literal.String.Interpol
+'LN'          Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'-sf'         Text
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'PREFIX'      Name.Variable
+'}'           Literal.String.Interpol
+'/lib/lib'    Text
+'${'          Literal.String.Interpol
+'PYTHON_VERSION' Name.Variable
+'}'           Literal.String.Interpol
+'.so'         Text
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'PYTHONPREFIX_LIBDIR' Name.Variable
+'}'           Literal.String.Interpol
+'/config'     Text
+'\n\t'        Text.Whitespace
+'${'          Literal.String.Interpol
+'INSTALL_PROGRAM' Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+'${'          Literal.String.Interpol
+'SHARED_WRKSRC' Name.Variable
+'}'           Literal.String.Interpol
+'/'           Text
+'${'          Literal.String.Interpol
+'PYTHON_VERSION' Name.Variable
+':'           Punctuation
+'S'           Name.Variable
+'/thon/thon-shared/' Punctuation
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+'${'          Literal.String.Interpol
+'PREFIX'      Name.Variable
+'}'           Literal.String.Interpol
+'/bin'        Text
+'\n\n'        Text.Whitespace
+
+'\t@# additional files installing by ports\n' Comment
+
+'\t'          Text.Whitespace
+'${'          Literal.String.Interpol
+'INSTALL_SCRIPT' Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'WRKDIR'      Name.Variable
+'}'           Literal.String.Interpol
+'/pydoc2.5'   Text
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'WRKDIR'      Name.Variable
+'}'           Literal.String.Interpol
+'/idle2.5'    Text
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+'${'          Literal.String.Interpol
+'WRKDIR'      Name.Variable
+'}'           Literal.String.Interpol
+'/smtpd2.5.py' Text
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'PREFIX'      Name.Variable
+'}'           Literal.String.Interpol
+'/bin'        Text
+'\n\t'        Text.Whitespace
+'@'           Text
+'${'          Literal.String.Interpol
+'MKDIR'       Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'MANPREFIX'   Name.Variable
+'}'           Literal.String.Interpol
+'/man/man1'   Text
+'\n\t'        Text.Whitespace
+'${'          Literal.String.Interpol
+'INSTALL_MAN' Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'PYTHON_WRKSRC' Name.Variable
+'}'           Literal.String.Interpol
+'/Misc/python.man' Text
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+'${'          Literal.String.Interpol
+'MANPREFIX'   Name.Variable
+'}'           Literal.String.Interpol
+'/man/man1/'  Text
+'${'          Literal.String.Interpol
+'PYTHON_VERSION' Name.Variable
+'}'           Literal.String.Interpol
+'.1'          Text
+'\n\n'        Text.Whitespace
+
+'.if ${PYTHON_VERSION} == ${PYTHON_DEFAULT_VERSION}\n' Comment.Preproc
+
+'\t'          Text.Whitespace
+'for'         Keyword
+' '           Text.Whitespace
+'f'           Text
+' '           Text.Whitespace
+'in'          Keyword
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'BIN_SCRIPTS' Name.Variable
+'}'           Literal.String.Interpol
+';'           Punctuation
+' '           Text.Whitespace
+'do'          Keyword
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+'TARGET'      Name.Variable
+'='           Operator
+'`'           Literal.String.Backtick
+'${'          Literal.String.Interpol
+'ECHO_CMD'    Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'$$'          Name.Variable
+'f'           Text
+' '           Text.Whitespace
+'|'           Punctuation
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'SED'         Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'-E'          Text
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'BINLINKS_SUB' Name.Variable
+'}'           Literal.String.Interpol
+'`'           Literal.String.Backtick
+';'           Punctuation
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+'cd'          Name.Builtin
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'PREFIX'      Name.Variable
+'}'           Literal.String.Interpol
+'/bin'        Text
+' '           Text.Whitespace
+'&&'          Operator
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'LN'          Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'-f'          Text
+' '           Text.Whitespace
+'$$'          Name.Variable
+'TARGET'      Text
+' '           Text.Whitespace
+'$$'          Name.Variable
+'f'           Text
+';'           Punctuation
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t'          Text.Whitespace
+'done'        Keyword
+'\n'          Text.Whitespace
+
+'.endif\n'    Comment.Preproc
+
+'\n'          Text.Whitespace
+
+'.if !defined(NOPORTDOCS)\n' Comment.Preproc
+
+'\t'          Text.Whitespace
+'@'           Text
+'${'          Literal.String.Interpol
+'MKDIR'       Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'TOOLSDIR'    Name.Variable
+'}'           Literal.String.Interpol
+'\n\t'        Text.Whitespace
+'@cd'         Text
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'PYTHON_WRKSRC' Name.Variable
+'}'           Literal.String.Interpol
+';'           Punctuation
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'TAR'         Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'-cf'         Text
+' '           Text.Whitespace
+'-'           Text
+' '           Text.Whitespace
+'Tools'       Text
+' '           Text.Whitespace
+'|'           Punctuation
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+'('           Operator
+'cd'          Name.Builtin
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'TOOLSDIR'    Name.Variable
+'}'           Literal.String.Interpol
+';'           Punctuation
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'TAR'         Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'-xf'         Text
+' '           Text.Whitespace
+'-'           Text
+')'           Operator
+'\n\t'        Text.Whitespace
+'@'           Text
+'${'          Literal.String.Interpol
+'MKDIR'       Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'DEMODIR'     Name.Variable
+'}'           Literal.String.Interpol
+'\n\t'        Text.Whitespace
+'@cd'         Text
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'PYTHON_WRKSRC' Name.Variable
+'}'           Literal.String.Interpol
+'/Demo'       Text
+';'           Punctuation
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'TAR'         Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'-cf'         Text
+' '           Text.Whitespace
+'-'           Text
+' '           Text.Whitespace
+'*'           Text
+' '           Text.Whitespace
+'|'           Punctuation
+' '           Text.Whitespace
+'\\\n'        Literal.String.Escape
+
+'\t\t'        Text.Whitespace
+'('           Operator
+'cd'          Name.Builtin
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'DEMODIR'     Name.Variable
+'}'           Literal.String.Interpol
+';'           Punctuation
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'TAR'         Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'-xf'         Text
+' '           Text.Whitespace
+'-'           Text
+')'           Operator
+'\n'          Text.Whitespace
+
+'.endif\n'    Comment.Preproc
+
+'\n\t'        Text.Whitespace
+'@'           Text
+'${'          Literal.String.Interpol
+'CAT'         Name.Variable
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'PKGMESSAGE'  Name.Variable
+'}'           Literal.String.Interpol
+'\n\n'        Text.Whitespace
+
+'.include <bsd.port.post.mk>\n' Comment.Preproc

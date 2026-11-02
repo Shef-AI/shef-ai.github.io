@@ -1,0 +1,13 @@
+prefix=/home/task_179271241499486/croot/grpc-split_1792712462139/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_
+exec_prefix=${prefix}
+includedir=${prefix}/include
+libdir=${exec_prefix}/lib
+
+Name: gRPC
+Description: high performance general RPC framework
+Version: 56.0.0
+Cflags: -I${includedir}
+Requires: absl_algorithm_container absl_any_invocable absl_base absl_bind_front absl_bits absl_btree absl_check absl_cleanup absl_config absl_cord absl_core_headers absl_flags absl_flags_marshalling absl_flat_hash_map absl_flat_hash_set absl_function_ref absl_hash absl_inlined_vector absl_log absl_log_globals absl_log_severity absl_memory absl_no_destructor absl_node_hash_map absl_optional absl_random_bit_gen_ref absl_random_distributions absl_random_random absl_span absl_status absl_statusor absl_str_format absl_string_view absl_strings absl_synchronization absl_time absl_type_traits absl_utility gpr
+Requires.private: libcares openssl re2 zlib
+Libs: -L${libdir} -lgrpc -lupb
+Libs.private: -laddress_sorting

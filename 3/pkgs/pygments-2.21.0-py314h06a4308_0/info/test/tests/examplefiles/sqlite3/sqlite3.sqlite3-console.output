@@ -1,0 +1,107 @@
+'SQLite version 3.4.2\n' Generic.Output
+
+'Enter ".help" for instructions\n' Generic.Output
+
+'sqlite>'     Generic.Prompt
+' '           Text.Whitespace
+'.'           Punctuation
+'schema'      Keyword
+'\n'          Text.Whitespace
+
+'CREATE TABLE paste (paste_id integer, code text, parsed_code text, pub_date\n' Generic.Output
+
+'varchar(24), language varchar(64), parent_id integer, url varchar(128));\n' Generic.Output
+
+'CREATE TABLE vars (key varchar(24), value varchar(128));\n' Generic.Output
+
+'sqlite>'     Generic.Prompt
+' '           Text.Whitespace
+'a'           Name
+' '           Text.Whitespace
+"'\n"         Literal.String.Single
+
+'   ...>'     Generic.Prompt
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'\n'          Text.Whitespace
+
+'   ...>'     Generic.Prompt
+' '           Text.Whitespace
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'SQL error: near "a": syntax error\n' Generic.Traceback
+
+'sqlite>'     Generic.Prompt
+' '           Text.Whitespace
+'%'           Operator
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'SQL error: near "%": syntax error\n' Generic.Traceback
+
+'sqlite>'     Generic.Prompt
+' '           Text.Whitespace
+'select'      Keyword
+' '           Text.Whitespace
+'count'       Keyword
+'('           Punctuation
+'language'    Keyword
+')'           Punctuation
+','           Punctuation
+' '           Text.Whitespace
+'language'    Keyword
+' '           Text.Whitespace
+'from'        Keyword
+' '           Text.Whitespace
+'paste'       Name
+' '           Text.Whitespace
+'group'       Keyword
+' '           Text.Whitespace
+'by'          Keyword
+' '           Text.Whitespace
+'language'    Keyword
+' '           Text.Whitespace
+'order'       Keyword
+'\n'          Text.Whitespace
+
+'   ...>'     Generic.Prompt
+' '           Text.Whitespace
+'by'          Keyword
+' '           Text.Whitespace
+'count'       Keyword
+'('           Punctuation
+'language'    Keyword
+')'           Punctuation
+' '           Text.Whitespace
+'desc'        Keyword
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'144|python\n' Generic.Output
+
+'76|text\n'   Generic.Output
+
+'22|pycon\n'  Generic.Output
+
+'9|ruby\n'    Generic.Output
+
+'7|c\n'       Generic.Output
+
+'7|js\n'      Generic.Output
+
+'6|html+django\n' Generic.Output
+
+'4|html\n'    Generic.Output
+
+'4|tex\n'     Generic.Output
+
+'2|html+php\n' Generic.Output
+
+'1|cpp\n'     Generic.Output
+
+'1|scheme\n'  Generic.Output
+
+'sqlite>'     Generic.Prompt
+' '           Text.Whitespace
+'\n'          Text.Whitespace

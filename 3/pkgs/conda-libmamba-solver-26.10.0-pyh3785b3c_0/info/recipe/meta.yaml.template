@@ -1,0 +1,66 @@
+{% set name = "conda-libmamba-solver" %}
+{% set version = "26.10.0" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  url: https://github.com/conda/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
+  sha256: 21f5f82d3ff2735aed7c1c676222017f85efa186c803abf66e8d38c6e1e5d788
+  folder: src/
+
+build:
+  number: 0
+  # build as noarch to avoid circular dependency issues in conda when
+  # adding support for new Python versions
+  noarch: python
+  script: {{ PYTHON }} -m pip install src/ -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python >=3.10
+    - pip
+    - hatchling
+    - hatch-vcs
+    - libmambapy {{ libmambapy }}
+  run:
+    - python >=3.10
+    - conda >=26.7.1
+    # present in the conda-libmamba-solver recipe file at recipe/meta.yaml but dropped in pyproject.toml because libmambapy is not available on PyPI.
+    - libmambapy >=2.3.2,!=2.6.2
+    - boltons >=23.0.0
+  run_constrained:
+    - certifi >=2026.10.19
+    - ca-certificates >=2026.10.20
+
+test:
+  imports:
+    - conda_libmamba_solver
+  commands:
+    - python -c "from importlib.metadata import version; assert(version('{{ name }}')=='{{ version }}')"
+    - CONDA_SOLVER=libmamba conda create -n test --dry-run scipy  # [not win]  Not cross-platform.
+    - conda create --solver libmamba -n test --dry-run scipy
+
+about:
+  home: https://github.com/conda/conda-libmamba-solver
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: src/LICENSE
+  summary: The fast mamba solver, now in conda!
+  description: |
+    The conda-libmamba-solver is a new solver for the conda package manager
+    which uses the solver from the mamba project behind the scenes,
+    while carefully implementing conda's functionality and expected behaviors on top.
+    The library used by mamba to do the heavy-lifting is called libsolv.
+  dev_url: https://github.com/conda/conda-libmamba-solver
+  doc_url: https://conda.github.io/conda-libmamba-solver/
+
+extra:
+  recipe-maintainers:
+    - jaimergp
+    - jezdez
+    - wolfv
+  skip-lints:
+    - avoid_noarch
+    - missing_pip_check

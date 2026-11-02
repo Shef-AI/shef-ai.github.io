@@ -1,0 +1,7 @@
+prefix=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/envs/test
+includedir=${prefix}/include
+
+Name: RenderProto
+Description: Render extension headers
+Version: 0.11.1
+Cflags: -I${includedir}

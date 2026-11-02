@@ -1,0 +1,61 @@
+{% set name = "idna" %}
+{% set version = "3.20" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: a7db850025b95ded1eae8a46181a1a6c56c92c96f0e2b005d9ff8dc0210cab44
+
+build:
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation --ignore-installed --no-cache-dir -vv
+  entry_points:
+    - idna = idna.cli:main
+  skip: true  # [py<39]
+
+requirements:
+  host:
+    - pip
+    - python
+    - flit-core >=3.11,<5
+  run:
+    - python
+
+test:
+  source_files:
+    - tests
+  imports:
+    - idna
+    - idna.codec
+    - idna.compat
+    - idna.core
+  requires:
+    - pip
+    - pytest >=8.3.2
+    - hypothesis >=6.141.1
+  commands:
+    - pip check
+    - python -c "from importlib.metadata import version; assert(version('{{ name }}')=='{{ version }}')"
+    - idna --help
+    - pytest -v tests
+
+about:
+  home: https://github.com/kjd/idna
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE.md
+  summary: Internationalized Domain Names in Applications (IDNA).
+  description: |
+    A library to support the Internationalised Domain Names in Applications
+    (IDNA) protocol as specified in RFC 5891. This version of the protocol
+    is often referred to as "IDNA2008".
+  dev_url: https://github.com/kjd/idna
+  doc_url: https://github.com/kjd/idna/blob/master/README.rst
+
+extra:
+  recipe-maintainers:
+    - goanpeca
+    - jschueller

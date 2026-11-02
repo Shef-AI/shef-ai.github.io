@@ -1,0 +1,15 @@
+'M '          Generic.Inserted
+'LICENSE'     Text
+'\n'          Text.Whitespace
+
+'M '          Generic.Inserted
+'setup.py'    Text
+'\n'          Text.Whitespace
+
+'! '          Comment.Preproc
+'setup.cfg'   Text
+'\n'          Text.Whitespace
+
+'? '          Comment.Preproc
+'vctreestatus_hg' Text
+'\n'          Text.Whitespace

@@ -1,0 +1,231 @@
+'<%'          Keyword
+' '           Text.Whitespace
+'template'    Keyword.Declaration
+' '           Text.Whitespace
+'example'     Name.Function
+'('           Operator
+')'           Operator
+' '           Text.Whitespace
+'{'           Operator
+'...'         Operator
+'}'           Operator
+'\n'          Text.Whitespace
+
+'a'           Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'123'         Literal.Number.Integer
+'\n'          Text.Whitespace
+
+'b'           Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'"test"'      Literal.String.Double
+';'           Operator
+'\n'          Text.Whitespace
+
+'c'           Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'4.5'         Literal.Number.Float
+'\n'          Text.Whitespace
+
+'d'           Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'call'        Keyword.Declaration
+' '           Text.Whitespace
+'other'       Name
+'('           Operator
+')'           Operator
+'\n'          Text.Whitespace
+
+'f'           Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'other2'      Name
+'('           Operator
+')'           Operator
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'define'      Keyword.Declaration
+' '           Text.Whitespace
+'g'           Name
+' '           Text.Whitespace
+'as'          Keyword.Declaration
+' '           Text.Whitespace
+'String'      Name
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'h'           Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'true'        Keyword.Constant
+'\n'          Text.Whitespace
+
+'i'           Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'false'       Keyword.Constant
+'\n'          Text.Whitespace
+
+'j'           Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'null'        Keyword.Constant
+'\n'          Text.Whitespace
+
+'%>'          Keyword
+'\n'          Text.Whitespace
+
+'<html'       Name.Tag
+'>'           Name.Tag
+'\n'          Text.Whitespace
+
+'<head'       Name.Tag
+'>'           Name.Tag
+'\n'          Text.Whitespace
+
+'<title'      Name.Tag
+'>'           Name.Tag
+'Example'     Text
+'<title'      Name.Tag
+'>'           Name.Tag
+'\n'          Text.Whitespace
+
+'<body'       Name.Tag
+'>'           Name.Tag
+'\n'          Text.Whitespace
+
+'<a'          Name.Tag
+' '           Text.Whitespace
+'href='       Name.Attribute
+'"http://example.com"' Literal.String
+'>'           Name.Tag
+'Test'        Text
+' '           Text.Whitespace
+'link'        Text
+'</a>'        Name.Tag
+'\n'          Text.Whitespace
+
+'<%'          Keyword
+' '           Text.Whitespace
+'// Second block' Comment.Single
+'\n'          Text.Whitespace
+
+'if'          Keyword
+'('           Operator
+'a'           Name
+' '           Text.Whitespace
+'='           Operator
+'='           Operator
+' '           Text.Whitespace
+'123'         Literal.Number.Integer
+' '           Text.Whitespace
+'and'         Keyword
+' '           Text.Whitespace
+'b'           Name
+' '           Text.Whitespace
+'='           Operator
+'='           Operator
+' '           Text.Whitespace
+'"test"'      Literal.String.Double
+')'           Operator
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+"'yes'"       Literal.String.Single
+'\n'          Text.Whitespace
+
+'}'           Operator
+' '           Text.Whitespace
+'else'        Keyword
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+"'no'"        Literal.String.Single
+'\n'          Text.Whitespace
+
+'}'           Operator
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'foreach'     Keyword
+'('           Operator
+'i'           Name
+' '           Text.Whitespace
+'in'          Keyword
+' '           Text.Whitespace
+'1'           Literal.Number.Integer
+'..'          Operator
+'10'          Literal.Number.Integer
+')'           Operator
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'i'           Name
+' '           Text.Whitespace
+'&'           Operator
+' '           Text.Whitespace
+'","'         Literal.String.Double
+'\n'          Text.Whitespace
+
+'}'           Operator
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'foreach'     Keyword
+'('           Operator
+'i'           Name
+' '           Text.Whitespace
+'in'          Keyword
+' '           Text.Whitespace
+'#'           Operator
+'('           Operator
+'1'           Literal.Number.Integer
+','           Operator
+'2'           Literal.Number.Integer
+','           Operator
+'3'           Literal.Number.Integer
+')'           Operator
+' '           Text.Whitespace
+'reverse'     Keyword
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'i'           Name
+' '           Text.Whitespace
+'&'           Operator
+' '           Text.Whitespace
+'";"'         Literal.String.Double
+'\n'          Text.Whitespace
+
+'}'           Operator
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'%>'          Keyword
+'\n'          Text.Whitespace

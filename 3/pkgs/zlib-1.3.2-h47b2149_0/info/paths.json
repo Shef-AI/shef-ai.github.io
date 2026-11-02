@@ -1,0 +1,37 @@
+{
+  "paths": [
+    {
+      "_path": "include/zconf.h",
+      "path_type": "hardlink",
+      "sha256": "0718a11beb3295b345fb29a63b44b654b282d82c4cd0513f6225587f2b29b8bb",
+      "size_in_bytes": 16921
+    },
+    {
+      "_path": "include/zlib.h",
+      "path_type": "hardlink",
+      "sha256": "818667d6ab6a37fe7469cb06a7f0cb2c2cb2f2c948a03e5accf1a4a74bf3020a",
+      "size_in_bytes": 103848
+    },
+    {
+      "_path": "lib/libz.a",
+      "path_type": "hardlink",
+      "sha256": "df5384aa96180a5033658297580f6721665630bd57951d9b4ababb12e7430c54",
+      "size_in_bytes": 160686
+    },
+    {
+      "_path": "lib/libz.so",
+      "path_type": "softlink",
+      "sha256": "d1e842e199a902992c7b778b8482f4777ccd3cbe9c26f8a44c783d9e6601da79",
+      "size_in_bytes": 117416
+    },
+    {
+      "_path": "lib/pkgconfig/zlib.pc",
+      "file_mode": "text",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/home/task_178096261861637/croot/zlib-split_1780962669166/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_",
+      "sha256": "511d69615f76ebf4d011d068eead2c50e7f3be4e10fb4cebe12b0c4eaae93429",
+      "size_in_bytes": 517
+    }
+  ],
+  "paths_version": 1
+}

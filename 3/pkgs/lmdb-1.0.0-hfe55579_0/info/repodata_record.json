@@ -1,0 +1,23 @@
+{
+  "arch": "x86_64",
+  "build": "hfe55579_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.28,<3.0.a0",
+    "libgcc >=14"
+  ],
+  "fn": "lmdb-1.0.0-hfe55579_0.conda",
+  "license": "OLDAP-2.8",
+  "license_family": "other",
+  "md5": "e5100439622e5e44d07cb223066645d6",
+  "name": "lmdb",
+  "platform": "linux",
+  "sha256": "73d63d65df87adf4ebea0a32681262ebfcd6ffe27332d78aa14580764572cd76",
+  "size": 530468,
+  "subdir": "linux-64",
+  "timestamp": 1784793852000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/lmdb-1.0.0-hfe55579_0.conda",
+  "version": "1.0.0"
+}

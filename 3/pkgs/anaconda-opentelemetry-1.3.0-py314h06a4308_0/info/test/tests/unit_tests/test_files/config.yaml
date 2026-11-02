@@ -1,0 +1,16 @@
+configs:
+  default_endpoint: http://localhost:4317
+  metrics_endpoint: http://localhost:4318
+  trace_endpoint: http://localhost:4319
+  logging_endpoint: http://localhost:4320
+  telemetry_export_interval_ms: 300000
+  use_console_exporters: true
+  logging_level: info
+  secure_connection: false
+attributes:
+  organization_id: org-1234567890
+  sub_organization_id: sub-org-1234567890
+  user_id: user123
+  client_id: client-1234567890
+  config_version: '1.0'
+  environment_type: test

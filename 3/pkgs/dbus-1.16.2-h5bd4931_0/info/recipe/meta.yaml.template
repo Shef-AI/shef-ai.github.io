@@ -1,0 +1,67 @@
+{% set version = "1.16.2" %}
+
+package:
+  name: dbus
+  version: {{ version }}
+
+source:
+  url: https://dbus.freedesktop.org/releases/dbus/dbus-{{ version }}.tar.xz
+  sha256: 0ba2a1a4b16afe7bceb2c07e9ce99a8c2c3508e5dec290dbb643384bd6beb7e2
+  patches:
+    - patches/0001-Add-var-lib-dbus-machine-id-as-a-fallback.patch  # [linux]
+    - patches/0002-Use-proc-sys-kernel-random-boot_id-as-last-resort-fa.patch  # [linux]
+    - patches/0003-disable-fd-limit-tests-not-supported-in-docker.patch  # [linux]
+
+build:
+  skip: true  # [win]
+  number: 0
+  run_exports:
+    # Has maintained compatibility basically forever.
+    #    https://abi-laboratory.pro/tracker/timeline/dbus/
+    - {{ pin_subpackage('dbus') }}
+  ignore_run_exports:
+    - libglib # libglib is only needed for test binaries.
+
+requirements:
+  build:
+    - {{ stdlib('c') }}
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - pkg-config
+    - meson >=0.56
+  host:
+    - glib {{ glib }}
+    - expat {{ expat }}
+    - xorg-libx11 {{ xorg_libx11 }} # [linux]
+  run:
+    - expat
+    - xorg-libx11 # [linux]
+
+test:
+  commands:
+    - dbus-daemon --version
+    - dbus-uuidgen
+
+about:
+  home: https://www.freedesktop.org/wiki/Software/dbus
+  license: GPL-2.0-or-later
+  license_family: GPL
+  license_file:
+    - COPYING
+    - LICENSES/GPL-2.0-or-later.txt
+  summary: "Simple message bus system for applications to talk to one another"
+  description: |
+    D-Bus is a message bus system, a simple way for applications
+    to talk to one another. In addition to interprocess communication, D-Bus helps
+    coordinate process lifecycle; it makes it simple and reliable to code a "single
+    instance" application or daemon, and to launch applications and daemons on
+    demand when their services are needed.
+  dev_url: https://gitlab.freedesktop.org/dbus/dbus
+  doc_url: https://www.freedesktop.org/wiki/IntroductionToDBus
+
+extra:
+  recipe-maintainers:
+    - mingwandroid
+    - ccordoba12
+    - nehaljwani
+    - ocefpaf
