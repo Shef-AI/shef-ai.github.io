@@ -27,7 +27,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python using Miniconda
-        uses: conda-incubator/setup-miniconda@v2
+        uses: conda-incubator/setup-miniconda@v4
         with:
           miniconda-version: "latest"
           installation-dir: /home/runner/miniconda3
@@ -47,6 +47,10 @@ jobs:
         run: |
           python tools/download_from_drive.py --token "$TOKEN" --refresh_token "$REFRESH_TOKEN" --client_id "$CLIENT_ID" --client_secret "$CLIENT_SECRET" --folder_id "$FOLDER_ID" --output_path "people"
         shell: bash -l {0}
+      - name: Check generated files
+        run: |
+          git status --short
+          ls -ld 3 || true
       - name: Create Pull Request
         id: cpr
         uses: peter-evans/create-pull-request@v4
