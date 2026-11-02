@@ -1,0 +1,553 @@
+{
+  "paths": [
+    {
+      "_path": "bin/archspec",
+      "file_mode": "text",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/home/task_178169990293130/croot/archspec_1781703373809/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl",
+      "sha256": "f1d597e65e020fc65781dd54b24ccd564cee77ba7b5ccbc1fd57bcdc8e749d5a",
+      "size_in_bytes": 465
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec-0.2.6.dist-info/INSTALLER",
+      "path_type": "hardlink",
+      "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+      "size_in_bytes": 5
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec-0.2.6.dist-info/METADATA",
+      "path_type": "hardlink",
+      "sha256": "916fdc80da9e10c1536d8e4b977e98d969ab4cb8291480ae3756d9362544af88",
+      "size_in_bytes": 4565
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec-0.2.6.dist-info/RECORD",
+      "path_type": "hardlink",
+      "sha256": "dab724d9f034e3edf0cb1cd1ab7c066b0c04ee37363404bdc1265a744ee82b8a",
+      "size_in_bytes": 8537
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec-0.2.6.dist-info/REQUESTED",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec-0.2.6.dist-info/WHEEL",
+      "path_type": "hardlink",
+      "sha256": "3396ac9a20252fa1c470eab9d988b99a693d2a64d58d8d910cfb4ee29f4332b7",
+      "size_in_bytes": 88
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec-0.2.6.dist-info/direct_url.json",
+      "path_type": "hardlink",
+      "sha256": "76051444aacea2be861830b79b54c97ac7bb345c92d0c35efd7c551b7765bc0f",
+      "size_in_bytes": 94
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec-0.2.6.dist-info/entry_points.txt",
+      "path_type": "hardlink",
+      "sha256": "bfaba68aee5e4120fad3cf158b2be48e573559548728ad0b00331aeeb329366e",
+      "size_in_bytes": 46
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec-0.2.6.dist-info/licenses/LICENSE-APACHE",
+      "path_type": "hardlink",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "size_in_bytes": 11358
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec-0.2.6.dist-info/licenses/LICENSE-MIT",
+      "path_type": "hardlink",
+      "sha256": "9001ad99a662075a0e5a6a9a539fc75040d8063c3f7251d6839ca40b5234054e",
+      "size_in_bytes": 1171
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec-0.2.6.dist-info/licenses/NOTICE",
+      "path_type": "hardlink",
+      "sha256": "f4247dde07952a5ff866b24e45b5cdd1fce410cdb2e038255a1635867f59c10c",
+      "size_in_bytes": 1167
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "4bf2a6572d0d38646b461ee3778f62a7bbfc592db1e368c0699b4ea5b1be7441",
+      "size_in_bytes": 67
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/__main__.py",
+      "path_type": "hardlink",
+      "sha256": "959bb70b63fd15b3a51391817a8493aa074fc9cbdc41c2fb37c8a1b1d6465d83",
+      "size_in_bytes": 97
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "903772c56ee3d4a9983722d823df447bbb068962822cdbdaf029f825684c5910",
+      "size_in_bytes": 229
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/__pycache__/__main__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "e09c08bf091eebd7540fee669a26496b350fb5e4c29e754cf66d9bbfd7275c26",
+      "size_in_bytes": 319
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/__pycache__/cli.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "7732f0fe0dc82f29e5d2c3efbe7450fb71be6f975a5a32ca405c424026c7961c",
+      "size_in_bytes": 3230
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/cli.py",
+      "path_type": "hardlink",
+      "sha256": "5991aa32a35fef3a1348ad26fd7d9eed064d9a99217c36718582a10869f02ce1",
+      "size_in_bytes": 2022
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/cpu/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "910baf73b5039e4e117502d7d113378a7bd96536133f743938d508f1ed6792c7",
+      "size_in_bytes": 751
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/cpu/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "46add5914860a06f2c29442ea07c4a9a50d7acbdff051a693a269baf53559f2c",
+      "size_in_bytes": 625
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/cpu/__pycache__/alias.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "100fa4619a48a9246faff3e4957c9eb0d69c613c23364767fffab0d49e8a692a",
+      "size_in_bytes": 4659
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/cpu/__pycache__/detect.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "34d0ec15d8f2c10c318b59679d82837a7fe3a5ee53d937380c4ece35a40b5538",
+      "size_in_bytes": 32576
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/cpu/__pycache__/microarchitecture.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "0d1a79b53a6712f077185376dbc2c61745e7206f5a7f45870c82fcd27529a731",
+      "size_in_bytes": 24486
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/cpu/__pycache__/schema.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "9a36b821b6bb74e245646250bd348c2b992a71c7d64d09b7a5bce94eb0318d54",
+      "size_in_bytes": 5750
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/cpu/alias.py",
+      "path_type": "hardlink",
+      "sha256": "bed96f7850d11677e08c3e84270648031b45d0764bfc3015834f97c0b51497bd",
+      "size_in_bytes": 2562
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/cpu/detect.py",
+      "path_type": "hardlink",
+      "sha256": "fd4bb5a5cb3c950fbdf36929a16125d458d5192699a0c68a895796aab3fb10e2",
+      "size_in_bytes": 23260
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/cpu/microarchitecture.py",
+      "path_type": "hardlink",
+      "sha256": "49a6328875e902151849619eecd303adaf25d9ae928f83c3b4b486d7dcdb6203",
+      "size_in_bytes": 16538
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/cpu/schema.py",
+      "path_type": "hardlink",
+      "sha256": "5b29f97d14d5b9b4fc6032fb761bd29d503c884051ea4e270cb475da75a1a36e",
+      "size_in_bytes": 3710
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/COPYRIGHT",
+      "path_type": "hardlink",
+      "sha256": "9d70c5a837efa62df7ee37df1c70ddffc0bb38e38df29ddfdcfa01462407cdfb",
+      "size_in_bytes": 805
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/LICENSE-APACHE",
+      "path_type": "hardlink",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "size_in_bytes": 11358
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/LICENSE-MIT",
+      "path_type": "hardlink",
+      "sha256": "9001ad99a662075a0e5a6a9a539fc75040d8063c3f7251d6839ca40b5234054e",
+      "size_in_bytes": 1171
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/NOTICE",
+      "path_type": "hardlink",
+      "sha256": "f4247dde07952a5ff866b24e45b5cdd1fce410cdb2e038255a1635867f59c10c",
+      "size_in_bytes": 1167
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/README.md",
+      "path_type": "hardlink",
+      "sha256": "8b31bb4ce98f6fbeb47019956b09cfb33c54b41972caf1e62a8c45adfddf2be8",
+      "size_in_bytes": 1531
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/cpu/cpuid.json",
+      "path_type": "hardlink",
+      "sha256": "800591e7b1a881a9c7ba97595f9eefd82c172d5a214a4c768719052ffaf4f8ed",
+      "size_in_bytes": 20572
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/cpu/cpuid_schema.json",
+      "path_type": "hardlink",
+      "sha256": "ff70a987f945e307be391250c0ffe1cc6fe037b9f79c585e9d9c9d64e92e2ba7",
+      "size_in_bytes": 3130
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/cpu/microarchitectures.json",
+      "path_type": "hardlink",
+      "sha256": "432297677c199b82f218bc87a82d8f0ec123548c0e23bda7ee8dce8bc92545e5",
+      "size_in_bytes": 96329
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/cpu/microarchitectures_schema.json",
+      "path_type": "hardlink",
+      "sha256": "7f8e717246f8b41c25710e317bbab14cf9b6ca04a2d0775c336eb18afa108a56",
+      "size_in_bytes": 3026
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/bgq-rhel6-power7",
+      "path_type": "hardlink",
+      "sha256": "efc8296d50ed99a7a1c66f88e77fc90fdfed62bf2690325f503f5d03de5a9058",
+      "size_in_bytes": 116
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/darwin-bigsur-m1",
+      "path_type": "hardlink",
+      "sha256": "71c5c33f8a0635b3ad4c0d7a665f67b6e87947926a9c196f6504fa9b7538e13c",
+      "size_in_bytes": 534
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/darwin-mojave-haswell",
+      "path_type": "hardlink",
+      "sha256": "bae6ec1ec3877c82ce250eb56e6d0d2b0e352b6709e5efd11c87988ffb7a3407",
+      "size_in_bytes": 618
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/darwin-mojave-ivybridge",
+      "path_type": "hardlink",
+      "sha256": "6045156b145266635ad8da790e98c059d170146fa8f369e354a9b040329595dc",
+      "size_in_bytes": 2356
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/darwin-mojave-skylake",
+      "path_type": "hardlink",
+      "sha256": "e31cc9fed55fb6d1a154636808decd559e9bb22f4cc9adc05c8949303ff711c3",
+      "size_in_bytes": 663
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/darwin-monterey-m1",
+      "path_type": "hardlink",
+      "sha256": "5921bd3b8e3a43f4920fdbc7b988f549a236cc0e83846b45dd4536d316e767db",
+      "size_in_bytes": 3307
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/darwin-monterey-m2",
+      "path_type": "hardlink",
+      "sha256": "1310acde662c01bdcbb7a6570cb235a5a9bd5ab11f0cd561a1da617d503b2bac",
+      "size_in_bytes": 3307
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/darwin-sequoia-m3",
+      "path_type": "hardlink",
+      "sha256": "7a0bcde172e580a101a1af2595d0cb01dedfe472ecbd5075218a8ab9ac1ebc31",
+      "size_in_bytes": 4106
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/darwin-sequoia-m4",
+      "path_type": "hardlink",
+      "sha256": "6c21aacd4d0daf0a88adf143e4dd85d593d1b1c5f9c24157180554e5c559e27b",
+      "size_in_bytes": 4105
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/linux-amazon-cortex_a72",
+      "path_type": "hardlink",
+      "sha256": "3fb6008a9bee765a365353ef51ad357434761ca41444f781d8f1cdbbb90745eb",
+      "size_in_bytes": 221
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/linux-amazon-neoverse_n1",
+      "path_type": "hardlink",
+      "sha256": "cef1c93aa2f31dfe1c4ec7259689815f689264d2b8e4c899d33da327d01e0ea9",
+      "size_in_bytes": 276
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/linux-amazon-neoverse_v1",
+      "path_type": "hardlink",
+      "sha256": "d91b16bca108c87c5542e9c1460fd7ef5addbead9d84f29184a72c61d59bf36e",
+      "size_in_bytes": 361
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/linux-asahi-m1",
+      "path_type": "hardlink",
+      "sha256": "84a10e95ba66915e35ff5f03f9732283c4d95761626492e706363066da4dac84",
+      "size_in_bytes": 363
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/linux-asahi-m2",
+      "path_type": "hardlink",
+      "sha256": "48a12dbf702133e673cf2afde06162aeb1795092894ce399a8adf72ae95a0622",
+      "size_in_bytes": 381
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/linux-centos7-cascadelake",
+      "path_type": "hardlink",
+      "sha256": "618768f06d1b3fce5b9f874675678f343b6112d0218632954525ecdcced88e0f",
+      "size_in_bytes": 1408
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/linux-centos7-power8le",
+      "path_type": "hardlink",
+      "sha256": "2a09064a41cba64daf3f88f45b79bb8877b9e7d7fea716b6ae25ad02420c471a",
+      "size_in_bytes": 111
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/linux-centos7-thunderx2",
+      "path_type": "hardlink",
+      "sha256": "2bcc6c9eadd6ec40be3d7bf98f732c1ab6aea3038044638a8f7ffbfa83ac3492",
+      "size_in_bytes": 238
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/linux-debian13-x60",
+      "path_type": "hardlink",
+      "sha256": "b5be5d6fd3b387e188df565c0e989a54f8dfd597229e3b127e12bbe53b52d26e",
+      "size_in_bytes": 351
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/linux-rhel6-piledriver",
+      "path_type": "hardlink",
+      "sha256": "dd89d0a53060062ec566d482ac98c0831f438c57bddbeb18a15240a6b3012bfa",
+      "size_in_bytes": 1411
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/linux-rhel7-broadwell",
+      "path_type": "hardlink",
+      "sha256": "1c15848b2136b8a0d8452dc2d2b2aca486ffe50ca96397ecf7834710349a3cbd",
+      "size_in_bytes": 1187
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/linux-rhel7-haswell",
+      "path_type": "hardlink",
+      "sha256": "92adaa92ee78a8f89cfeaf829cec3e4548f59d74c6eac6470540cc84cc99cfd8",
+      "size_in_bytes": 1095
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/linux-rhel7-ivybridge",
+      "path_type": "hardlink",
+      "sha256": "3c2d4d2f0f404c1ac237bcc742ccf16ef1d5bcc1cbd71505a55d689fde1433a4",
+      "size_in_bytes": 1009
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/linux-rhel7-skylake_avx512",
+      "path_type": "hardlink",
+      "sha256": "dc523c693fba3b0056135e452a8443cd38b3e415ea5d84799c5353060ed8f50c",
+      "size_in_bytes": 1286
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/linux-rhel7-x86_64_v3",
+      "path_type": "hardlink",
+      "sha256": "0fa88a864f4a4256fda987ad3dd50198354d015afe846576f7bbc31cbc1ed853",
+      "size_in_bytes": 1172
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/linux-rhel7-zen",
+      "path_type": "hardlink",
+      "sha256": "89cc9b64203e6d7b9ab272474bfaa7534b41a50823cbafa30d18ad482db42751",
+      "size_in_bytes": 1319
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/linux-rhel8-neoverse_v1",
+      "path_type": "hardlink",
+      "sha256": "82d0bee8c360a4f4e15ff1d86181c48af86ab62ac1df62253ec71523b917dc3d",
+      "size_in_bytes": 351
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/linux-rhel8-power9",
+      "path_type": "hardlink",
+      "sha256": "2f2d25d3092ef3408c762cefd5408a131d928a9f52ff405dd0f4c27d03d81cb7",
+      "size_in_bytes": 135
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/linux-rhel9-neoverse_n2",
+      "path_type": "hardlink",
+      "sha256": "b6943d786ef68827a6c1accc316fdf19e982813692be7dc92147c95bbe30c89c",
+      "size_in_bytes": 429
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/linux-rhel9-neoverse_v2",
+      "path_type": "hardlink",
+      "sha256": "5c357df05bc0a3b45d988f91a52fda87ca5d31601c98efec9e22798f58952070",
+      "size_in_bytes": 444
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/linux-rocky8-a64fx",
+      "path_type": "hardlink",
+      "sha256": "ad5a3ebaa6042679603d70216edf8b6b55b6e4247fc5f6f4deb874b79db4ff53",
+      "size_in_bytes": 256
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/linux-rocky8.5-zen4",
+      "path_type": "hardlink",
+      "sha256": "cb850341d3b1b20d07978eb55e5043fed3dbfd35fc11c5d5edbc221d09facc53",
+      "size_in_bytes": 1750
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/linux-rocky9-zen5",
+      "path_type": "hardlink",
+      "sha256": "fc770d91f4f942360e976ff9e71240fa07760c5be68421ce6712b7abadeb179a",
+      "size_in_bytes": 1882
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/linux-scientific7-k10",
+      "path_type": "hardlink",
+      "sha256": "c4485009ce4222a0563a87b6f2bbeb5be0678d94a438406fd205cb40ce720271",
+      "size_in_bytes": 1111
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/linux-scientific7-piledriver",
+      "path_type": "hardlink",
+      "sha256": "90a0aca60ea06a65a031ef61f4cc7984fe4ed435e05ce23a887d81d817f08c38",
+      "size_in_bytes": 1149
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/linux-scientificfermi6-bulldozer",
+      "path_type": "hardlink",
+      "sha256": "6666e836acd912c596c0ec0157fbe6acd222eb1d44dc4efa533e048f5e45bb6b",
+      "size_in_bytes": 1201
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/linux-scientificfermi6-piledriver",
+      "path_type": "hardlink",
+      "sha256": "e69559a553d7b4a9aa28ad4fb362e661a8025a15936e3239728ff54236236712",
+      "size_in_bytes": 1099
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/linux-sifive-u74mc",
+      "path_type": "hardlink",
+      "sha256": "3469efadc2b754fe2a99693b7993480203440facafc9f70405ab0c4e6b0781c9",
+      "size_in_bytes": 124
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/linux-spacemit-x60",
+      "path_type": "hardlink",
+      "sha256": "0e3c470876b8a754965bd72dc562a9a237717f80eaf86b08653640a72febd7f7",
+      "size_in_bytes": 447
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/linux-ubuntu18.04-broadwell",
+      "path_type": "hardlink",
+      "sha256": "0336f7c5cf56be0c41bd044d0b99bcdd2269aabef788bac6489549e6ce3fccd2",
+      "size_in_bytes": 1190
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/linux-ubuntu20.04-zen3",
+      "path_type": "hardlink",
+      "sha256": "63b0b0b38930cc194dba94211a5ff6c2803fd7f496c51ab08339fd35a4f7fe48",
+      "size_in_bytes": 1531
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/linux-ubuntu22.04-ampere1",
+      "path_type": "hardlink",
+      "sha256": "2c4574a37ba49d3acd3db69cbdd0bcab3ce4bf79df5da54caa2a8fd945b91567",
+      "size_in_bytes": 385
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/linux-ubuntu22.04-ampere1a",
+      "path_type": "hardlink",
+      "sha256": "c8eeb59f979837056e3cc2c45a303b29f00361c76933e13ec44bd56a4111f157",
+      "size_in_bytes": 395
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/linux-ubuntu22.04-neoverse_n2",
+      "path_type": "hardlink",
+      "sha256": "4d1e82e075f6411722500c3368949f4f12fb2b8dbb3670bf4a57e7513ab115ee",
+      "size_in_bytes": 396
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/linux-ubuntu22.04-neoverse_v2",
+      "path_type": "hardlink",
+      "sha256": "16b9041b19dffa29dd0f3521bb2c6830b894440b82fb659d939f8561fd293928",
+      "size_in_bytes": 458
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/linux-unknown-neoverse_v2",
+      "path_type": "hardlink",
+      "sha256": "8507c39b6b5cc917f7fa4c21313528c36699ba3c6a6d5967cd412335ac500b78",
+      "size_in_bytes": 447
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/linux-unknown-power10",
+      "path_type": "hardlink",
+      "sha256": "ee7b425a65c60932647d930c074988024edf7b627b3653b5d63d248ca91a4943",
+      "size_in_bytes": 83
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/linux-unknown-sapphirerapids",
+      "path_type": "hardlink",
+      "sha256": "f000242685da2e436199c32a529ef6e53fcc2167b2c646ab538a688bf65bd181",
+      "size_in_bytes": 2187
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/windows-cpuid-broadwell",
+      "path_type": "hardlink",
+      "sha256": "a61d13450a2bd6cdf78fd2158ed6c4e990f8fb0abb8a296dcb6be755be141c39",
+      "size_in_bytes": 395
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/json/tests/targets/windows-cpuid-icelake",
+      "path_type": "hardlink",
+      "sha256": "6f62659a73e2505e49065de31c29a444fbe89fdbc213bfece4d8cfa61e441ab2",
+      "size_in_bytes": 432
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/vendor/cpuid/LICENSE",
+      "path_type": "hardlink",
+      "sha256": "0df811360326d9f455ddf102055348fda0c0318c5cd3abcaafe2aad2bb6db2ee",
+      "size_in_bytes": 1079
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/vendor/cpuid/README.md",
+      "path_type": "hardlink",
+      "sha256": "50f2aa1a7563b25b22191d8681726ffadc2761d9c59e6085dffb7908b5e66344",
+      "size_in_bytes": 2400
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/vendor/cpuid/__pycache__/cpuid.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "e3d99f610ea82543b39d60daacf9af59216a8dfc58e0958f3ba7831bd33c8ff2",
+      "size_in_bytes": 7112
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/vendor/cpuid/__pycache__/example.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "cd2c05e3ad8f8a9381fe4012484c7025f0e4c8433cc730be806a095451561eb0",
+      "size_in_bytes": 3407
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/vendor/cpuid/cpuid.py",
+      "path_type": "hardlink",
+      "sha256": "872c252864cab4f5f24b2272ebb77838ba5a40b7f07ec3e052f48f75ac5a9d14",
+      "size_in_bytes": 6037
+    },
+    {
+      "_path": "lib/python3.14/site-packages/archspec/vendor/cpuid/example.py",
+      "path_type": "hardlink",
+      "sha256": "83711400d1aece1bbad65e99fb988b79d3c47bfbdf39b2b1cacf91e6a9c8e8c6",
+      "size_in_bytes": 1855
+    }
+  ],
+  "paths_version": 1
+}

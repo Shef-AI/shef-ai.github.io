@@ -1,0 +1,17 @@
+{
+  "arch": "x86_64",
+  "build": "hd44998d_0",
+  "build_number": 0,
+  "depends": [
+    "__glibc >=2.28,<3.0.a0",
+    "libgcc >=14",
+    "libstdcxx >=14"
+  ],
+  "license": "MIT",
+  "license_family": "MIT",
+  "name": "c-ares",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1790098480088,
+  "version": "1.34.8"
+}

@@ -1,0 +1,3477 @@
+';----------------------------------------------------------------------------;' Comment.Single
+'\n'          Text.Whitespace
+
+'; Does A* pathfinding for rockraiders and vehicles' Comment.Single
+'\n'          Text.Whitespace
+
+';'           Comment.Single
+'\n'          Text.Whitespace
+
+'; Copyright 2015 Ruben De Smet' Comment.Single
+'\n'          Text.Whitespace
+
+';'           Comment.Single
+'\n'          Text.Whitespace
+
+'; Redistribution and use in source and binary forms, with or without' Comment.Single
+'\n'          Text.Whitespace
+
+'; modification, are permitted provided that the following conditions are' Comment.Single
+'\n'          Text.Whitespace
+
+'; met:'      Comment.Single
+'\n'          Text.Whitespace
+
+'; '          Comment.Single
+'\n'          Text.Whitespace
+
+';     (1) Redistributions of source code must retain the above copyright' Comment.Single
+'\n'          Text.Whitespace
+
+';         notice, this list of conditions and the following disclaimer. ' Comment.Single
+'\n'          Text.Whitespace
+
+'; '          Comment.Single
+'\n'          Text.Whitespace
+
+';     (2) Redistributions in binary form must reproduce the above copyright' Comment.Single
+'\n'          Text.Whitespace
+
+';         notice, this list of conditions and the following disclaimer in' Comment.Single
+'\n'          Text.Whitespace
+
+';         the documentation and/or other materials provided with the' Comment.Single
+'\n'          Text.Whitespace
+
+';         distribution.  ' Comment.Single
+'\n'          Text.Whitespace
+
+';         '  Comment.Single
+'\n'          Text.Whitespace
+
+';     (3) The name of the author may not be used to' Comment.Single
+'\n'          Text.Whitespace
+
+';         endorse or promote products derived from this software without' Comment.Single
+'\n'          Text.Whitespace
+
+';         specific prior written permission.' Comment.Single
+'\n'          Text.Whitespace
+
+'; '          Comment.Single
+'\n'          Text.Whitespace
+
+"; THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR" Comment.Single
+'\n'          Text.Whitespace
+
+'; IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED' Comment.Single
+'\n'          Text.Whitespace
+
+'; WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE' Comment.Single
+'\n'          Text.Whitespace
+
+'; DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT,' Comment.Single
+'\n'          Text.Whitespace
+
+'; INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES' Comment.Single
+'\n'          Text.Whitespace
+
+'; (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR' Comment.Single
+'\n'          Text.Whitespace
+
+'; SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)' Comment.Single
+'\n'          Text.Whitespace
+
+'; HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,' Comment.Single
+'\n'          Text.Whitespace
+
+'; STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING' Comment.Single
+'\n'          Text.Whitespace
+
+'; IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE' Comment.Single
+'\n'          Text.Whitespace
+
+'; POSSIBILITY OF SUCH DAMAGE.' Comment.Single
+'\n'          Text.Whitespace
+
+';'           Comment.Single
+'\n'          Text.Whitespace
+
+';----------------------------------------------------------------------------;' Comment.Single
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'IDEAL'       Keyword
+'\n'          Text.Whitespace
+
+'P386'        Keyword
+'\n'          Text.Whitespace
+
+'MODEL'       Keyword
+' '           Text.Whitespace
+'FLAT'        Name.Variable
+','           Punctuation
+' '           Text.Whitespace
+'C'           Name.Variable
+'\n'          Text.Whitespace
+
+'ASSUME'      Keyword
+' '           Text.Whitespace
+'cs'          Name.Builtin
+':'           Punctuation
+'_TEXT'       Name.Variable
+','           Punctuation
+'ds'          Name.Builtin
+':'           Punctuation
+'FLAT'        Name.Variable
+','           Punctuation
+'es'          Name.Builtin
+':'           Punctuation
+'FLAT'        Name.Variable
+','           Punctuation
+'fs'          Name.Builtin
+':'           Punctuation
+'FLAT'        Name.Variable
+','           Punctuation
+'gs'          Name.Builtin
+':'           Punctuation
+'FLAT'        Name.Variable
+'\n\n'        Text.Whitespace
+
+'INCLUDE'     Keyword
+' '           Text.Whitespace
+'"ASTAR.INC"' Literal.String
+'\n'          Text.Whitespace
+
+'INCLUDE'     Keyword
+' '           Text.Whitespace
+'"READLVL.INC"' Literal.String
+'\n'          Text.Whitespace
+
+'INCLUDE'     Keyword
+' '           Text.Whitespace
+'"DEBUG.INC"' Literal.String
+'\n\n'        Text.Whitespace
+
+'STRUC'       Keyword
+' '           Text.Whitespace
+'TPriorityField' Name.Variable
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'heuristic'   Name.Constant
+' '           Text.Whitespace
+'dd'          Keyword.Declaration
+' '           Text.Whitespace
+'?'           Name.Variable
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'distance'    Name.Constant
+' '           Text.Whitespace
+'dd'          Keyword.Declaration
+' '           Text.Whitespace
+'?'           Name.Variable
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'x'           Name.Constant
+' '           Text.Whitespace
+'db'          Keyword.Declaration
+' '           Text.Whitespace
+'?'           Name.Variable
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'y'           Name.Constant
+' '           Text.Whitespace
+'db'          Keyword.Declaration
+' '           Text.Whitespace
+'?'           Name.Variable
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'fromx'       Name.Constant
+' '           Text.Whitespace
+'db'          Keyword.Declaration
+' '           Text.Whitespace
+'?'           Name.Variable
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'fromy'       Name.Constant
+' '           Text.Whitespace
+'db'          Keyword.Declaration
+' '           Text.Whitespace
+'?'           Name.Variable
+'\n'          Text.Whitespace
+
+'ENDS'        Keyword
+'\n\n'        Text.Whitespace
+
+'STRUC'       Keyword
+' '           Text.Whitespace
+'TField'      Name.Variable
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'distance'    Name.Constant
+' '           Text.Whitespace
+'dd'          Keyword.Declaration
+' '           Text.Whitespace
+'?'           Name.Variable
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'x'           Name.Constant
+' '           Text.Whitespace
+'db'          Keyword.Declaration
+' '           Text.Whitespace
+'?'           Name.Variable
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'y'           Name.Constant
+' '           Text.Whitespace
+'db'          Keyword.Declaration
+' '           Text.Whitespace
+'?'           Name.Variable
+'\n'          Text.Whitespace
+
+'ENDS'        Keyword
+'\n\n'        Text.Whitespace
+
+'CODESEG'     Keyword
+' '           Text.Whitespace
+'\n\n'        Text.Whitespace
+
+'PROC'        Keyword
+' '           Text.Whitespace
+'getPath'     Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'USES'        Keyword
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'ARG'         Keyword
+' '           Text.Whitespace
+'@@tgtx'      Name.Variable
+':'           Punctuation
+'dword'       Keyword.Type
+','           Punctuation
+' '           Text.Whitespace
+'\\'          Text
+'\n'          Text.Whitespace
+
+'            ' Text.Whitespace
+'@@tgty'      Name.Variable
+':'           Punctuation
+'dword'       Keyword.Type
+' '           Text.Whitespace
+'\\'          Text
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'RETURNS'     Name.Variable
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+' '           Text.Whitespace
+'; eax contains x, ebx contains y' Comment.Single
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'call'        Name.Function
+' '           Text.Whitespace
+'getLevelWidth' Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'imul'        Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'@@tgty'      Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'add'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'@@tgtx'      Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'imul'        Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'SIZE'        Name.Variable
+' '           Text.Whitespace
+'TField'      Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'add'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'offset'      Name.Variable
+' '           Text.Whitespace
+'backtraceGraph' Name.Variable
+'        '    Text.Whitespace
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'eax'         Name.Builtin
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'xor'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'eax'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'xor'         Name.Function
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'al'          Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'[('          Punctuation
+'TField'      Name.Variable
+' '           Text.Whitespace
+'ptr'         Name.Variable
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+')'           Punctuation
+'.x'          Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'bl'          Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'[('          Punctuation
+'TField'      Name.Variable
+' '           Text.Whitespace
+'ptr'         Name.Variable
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+')'           Punctuation
+'.y'          Name.Variable
+']'           Punctuation
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'ret'         Name.Function
+'\n'          Text.Whitespace
+
+'ENDP'        Keyword
+' '           Text.Whitespace
+'getPath'     Name.Variable
+'\n\n'        Text.Whitespace
+
+'PROC'        Keyword
+' '           Text.Whitespace
+'findPath'    Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'; eax will contain a 1 when a path has been found' Comment.Single
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+';                    0 otherwise.' Comment.Single
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'ARG'         Keyword
+' '           Text.Whitespace
+'@@srcx'      Name.Variable
+':'           Punctuation
+'dword'       Keyword.Type
+','           Punctuation
+' '           Text.Whitespace
+'\\'          Text
+'\n'          Text.Whitespace
+
+'            ' Text.Whitespace
+'@@srcy'      Name.Variable
+':'           Punctuation
+'dword'       Keyword.Type
+','           Punctuation
+' '           Text.Whitespace
+'\\'          Text
+'\n'          Text.Whitespace
+
+'            ' Text.Whitespace
+'@@tgtx'      Name.Variable
+':'           Punctuation
+'dword'       Keyword.Type
+','           Punctuation
+' '           Text.Whitespace
+'\\'          Text
+'\n'          Text.Whitespace
+
+'            ' Text.Whitespace
+'@@tgty'      Name.Variable
+':'           Punctuation
+'dword'       Keyword.Type
+','           Punctuation
+' '           Text.Whitespace
+'\\'          Text
+'\n'          Text.Whitespace
+
+'            ' Text.Whitespace
+'@@type'      Name.Variable
+':'           Punctuation
+'dword'       Keyword.Type
+' '           Text.Whitespace
+'\\'          Text
+'\n'          Text.Whitespace
+
+'            ' Text.Whitespace
+'RETURNS'     Name.Variable
+' '           Text.Whitespace
+'eax'         Name.Builtin
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'; Check whether the target field is "allowed" for' Comment.Single
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'; the selected vehicle or rock raider' Comment.Single
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'call'        Name.Function
+' '           Text.Whitespace
+'getField'    Name.Variable
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'@@tgtx'      Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'@@tgty'      Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'al'          Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'byte'        Keyword.Type
+' '           Text.Whitespace
+'ptr'         Name.Variable
+' '           Text.Whitespace
+'eax'         Name.Builtin
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'and'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'0FFh'        Literal.Number.Hex
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'add'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'offset'      Name.Variable
+' '           Text.Whitespace
+'actionTable' Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'eax'         Name.Builtin
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'and'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'@@type'      Name.Variable
+']'           Punctuation
+'               ' Text.Whitespace
+'; TODO: for now, rock raider is hard coded' Comment.Single
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'jnz'         Name.Function
+' '           Text.Whitespace
+'@canGoToTarget' Name.Variable
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'ret'         Name.Function
+'\n'          Text.Whitespace
+
+'@canGoToTarget:' Name.Label
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'call'        Name.Function
+' '           Text.Whitespace
+'cleanData'   Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'@@type'      Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'['           Punctuation
+'currentType' Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'eax'         Name.Builtin
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'@@srcx'      Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'['           Punctuation
+'currentOpen.x' Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'al'          Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'@@srcy'      Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'['           Punctuation
+'currentOpen.y' Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'al'          Name.Builtin
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'call'        Name.Function
+' '           Text.Whitespace
+'distance'    Name.Variable
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'@@srcx'      Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'@@srcy'      Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'@@tgtx'      Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'@@tgty'      Name.Variable
+']'           Punctuation
+' '           Text.Whitespace
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'; eax <- distance' Comment.Single
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'call'        Name.Function
+' '           Text.Whitespace
+'addOpen'     Name.Variable
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'@@srcx'      Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'@@srcy'      Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+'\n\n'        Text.Whitespace
+
+'@openListNotEmpty:' Name.Label
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'call'        Name.Function
+' '           Text.Whitespace
+'popOpen'     Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'cmp'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'je'          Name.Function
+' '           Text.Whitespace
+'@openListEmpty' Name.Variable
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'call'        Name.Function
+' '           Text.Whitespace
+'addToMap'    Name.Variable
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'call'        Name.Function
+' '           Text.Whitespace
+'addClosed'   Name.Variable
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'@@tgtx'      Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'cmp'         Name.Function
+' '           Text.Whitespace
+'['           Punctuation
+'currentOpen.x' Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'al'          Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'jne'         Name.Function
+' '           Text.Whitespace
+'@nextOpen'   Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'@@tgty'      Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'cmp'         Name.Function
+' '           Text.Whitespace
+'['           Punctuation
+'currentOpen.y' Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'al'          Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'jne'         Name.Function
+' '           Text.Whitespace
+'@nextOpen'   Name.Variable
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'jmp'         Name.Function
+' '           Text.Whitespace
+'@routeFound' Name.Variable
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'@nextOpen:'  Name.Label
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'call'        Name.Function
+' '           Text.Whitespace
+'addNeighbours' Name.Variable
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'@@tgtx'      Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'@@tgty'      Name.Variable
+']'           Punctuation
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'jmp'         Name.Function
+' '           Text.Whitespace
+'@openListNotEmpty' Name.Variable
+'\n\n'        Text.Whitespace
+
+'@openListEmpty:' Name.Label
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'ret'         Name.Function
+'\n\n'        Text.Whitespace
+
+'@routeFound:' Name.Label
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'1'           Literal.Number.Integer
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'ret'         Name.Function
+'\n'          Text.Whitespace
+
+'ENDP'        Keyword
+' '           Text.Whitespace
+'findPath'    Name.Variable
+'\n\n'        Text.Whitespace
+
+'PROC'        Keyword
+' '           Text.Whitespace
+'addToMap'    Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'USES'        Keyword
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'call'        Name.Function
+' '           Text.Whitespace
+'getLevelWidth' Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'xor'         Name.Function
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'cl'          Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'currentOpen.y' Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'imul'        Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'cl'          Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'currentOpen.x' Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'add'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'imul'        Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'SIZE'        Name.Variable
+' '           Text.Whitespace
+'TField'      Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'add'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'offset'      Name.Variable
+' '           Text.Whitespace
+'backtraceGraph' Name.Variable
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'currentOpen.distance' Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'cmp'         Name.Function
+' '           Text.Whitespace
+'[('          Punctuation
+'TField'      Name.Variable
+' '           Text.Whitespace
+'ptr'         Name.Variable
+' '           Text.Whitespace
+'eax'         Name.Builtin
+')'           Punctuation
+'.distance'   Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'jbe'         Name.Function
+' '           Text.Whitespace
+'@dontAdd'    Name.Variable
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'[('          Punctuation
+'TField'      Name.Variable
+' '           Text.Whitespace
+'ptr'         Name.Variable
+' '           Text.Whitespace
+'eax'         Name.Builtin
+')'           Punctuation
+'.distance'   Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'cl'          Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'currentOpen.fromx' Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'[('          Punctuation
+'TField'      Name.Variable
+' '           Text.Whitespace
+'ptr'         Name.Variable
+' '           Text.Whitespace
+'eax'         Name.Builtin
+')'           Punctuation
+'.x'          Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'cl'          Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'cl'          Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'currentOpen.fromy' Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'[('          Punctuation
+'TField'      Name.Variable
+' '           Text.Whitespace
+'ptr'         Name.Variable
+' '           Text.Whitespace
+'eax'         Name.Builtin
+')'           Punctuation
+'.y'          Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'cl'          Name.Builtin
+'\n\n'        Text.Whitespace
+
+'@dontAdd:'   Name.Label
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'ret'         Name.Function
+'\n'          Text.Whitespace
+
+'ENDP'        Keyword
+' '           Text.Whitespace
+'addToMap'    Name.Variable
+'\n\n'        Text.Whitespace
+
+'; Is closed checks whether the field considered is "closed" for being added to the open list.' Comment.Single
+'\n'          Text.Whitespace
+
+'; So, it also checks whether we can go on the selected field.' Comment.Single
+'\n'          Text.Whitespace
+
+'PROC'        Keyword
+' '           Text.Whitespace
+'isClosed'    Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'USES'        Keyword
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'edx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'ARG'         Keyword
+' '           Text.Whitespace
+'@@x'         Name.Variable
+':'           Punctuation
+'dword'       Keyword.Type
+','           Punctuation
+' '           Text.Whitespace
+'\\'          Text
+'\n'          Text.Whitespace
+
+'            ' Text.Whitespace
+'@@y'         Name.Variable
+':'           Punctuation
+'dword'       Keyword.Type
+' '           Text.Whitespace
+'RETURNS'     Name.Variable
+' '           Text.Whitespace
+'eax'         Name.Builtin
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'; Check bounds first:' Comment.Single
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'call'        Name.Function
+' '           Text.Whitespace
+'getLevelWidth' Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'cmp'         Name.Function
+' '           Text.Whitespace
+'['           Punctuation
+'@@x'         Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'eax'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'ja'          Name.Function
+' '           Text.Whitespace
+'notWithinBounds' Name.Variable
+' '           Text.Whitespace
+'; ja considers -1 > 10' Comment.Single
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'call'        Name.Function
+' '           Text.Whitespace
+'getLevelHeight' Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'cmp'         Name.Function
+' '           Text.Whitespace
+'['           Punctuation
+'@@y'         Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'eax'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'ja'          Name.Function
+' '           Text.Whitespace
+'notWithinBounds' Name.Variable
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'; Check whether this field is "allowed" for' Comment.Single
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'; the selected vehicle or rock raider' Comment.Single
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'call'        Name.Function
+' '           Text.Whitespace
+'getField'    Name.Variable
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'@@x'         Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'@@y'         Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'al'          Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'byte'        Keyword.Type
+' '           Text.Whitespace
+'ptr'         Name.Variable
+' '           Text.Whitespace
+'eax'         Name.Builtin
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'and'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'0FFh'        Literal.Number.Hex
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'add'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'offset'      Name.Variable
+' '           Text.Whitespace
+'actionTable' Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'eax'         Name.Builtin
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'and'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'currentType' Name.Variable
+']'           Punctuation
+'               ' Text.Whitespace
+'; TODO: for now, rock raider is hard coded' Comment.Single
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'jnz'         Name.Function
+' '           Text.Whitespace
+'@canGoHere'  Name.Variable
+'\n\n\n'      Text.Whitespace
+
+'        '    Text.Whitespace
+'inc'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+' '           Text.Whitespace
+'; mov eax, 1' Comment.Single
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'ret'         Name.Function
+'\n\n'        Text.Whitespace
+
+'@canGoHere:' Name.Label
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'; Getting here means the field is okay to walk/fly/whatever on' Comment.Single
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'xor'         Name.Function
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'cx'          Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'closedlistSize' Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'cmp'         Name.Function
+' '           Text.Whitespace
+'cx'          Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+' '           Text.Whitespace
+'; If empty, return 0' Comment.Single
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'jne'         Name.Function
+' '           Text.Whitespace
+'@closedNotEmpty' Name.Variable
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'ret'         Name.Function
+'\n\n'        Text.Whitespace
+
+'@closedNotEmpty:' Name.Label
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'offset'      Name.Variable
+' '           Text.Whitespace
+'closedlist'  Name.Variable
+'\n\n'        Text.Whitespace
+
+'@loopClosed:' Name.Label
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'edx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'@@x'         Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'cmp'         Name.Function
+' '           Text.Whitespace
+'[('          Punctuation
+'TField'      Name.Variable
+' '           Text.Whitespace
+'ptr'         Name.Variable
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+')'           Punctuation
+'.x'          Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'dl'          Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'jne'         Name.Function
+' '           Text.Whitespace
+'@nextClosed' Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'edx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'@@y'         Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'cmp'         Name.Function
+' '           Text.Whitespace
+'[('          Punctuation
+'TField'      Name.Variable
+' '           Text.Whitespace
+'ptr'         Name.Variable
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+')'           Punctuation
+'.y'          Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'dl'          Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'jne'         Name.Function
+' '           Text.Whitespace
+'@nextClosed' Name.Variable
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'; If reached here, yep, contained in closed list' Comment.Single
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'1'           Literal.Number.Integer
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'ret'         Name.Function
+'\n\n'        Text.Whitespace
+
+'    '        Text.Whitespace
+'@nextClosed:' Name.Label
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'add'         Name.Function
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'SIZE'        Name.Variable
+' '           Text.Whitespace
+'TField'      Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'dec'         Name.Function
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'jnz'         Name.Function
+' '           Text.Whitespace
+'@loopClosed' Name.Variable
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'ret'         Name.Function
+'\n\n'        Text.Whitespace
+
+'notWithinBounds:' Name.Label
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'1'           Literal.Number.Integer
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'ret'         Name.Function
+'\n'          Text.Whitespace
+
+'ENDP'        Keyword
+' '           Text.Whitespace
+'isClosed'    Name.Variable
+'\n\n'        Text.Whitespace
+
+'PROC'        Keyword
+' '           Text.Whitespace
+'addNeighbours' Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'USES'        Keyword
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'edx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'ARG'         Keyword
+' '           Text.Whitespace
+'@@tgtx'      Name.Variable
+':'           Punctuation
+'dword'       Keyword.Type
+','           Punctuation
+' '           Text.Whitespace
+'\\'          Text
+'\n'          Text.Whitespace
+
+'            ' Text.Whitespace
+'@@tgty'      Name.Variable
+':'           Punctuation
+'dword'       Keyword.Type
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'; Push all neighbours of currentOpen on openList' Comment.Single
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'xor'         Name.Function
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'xor'         Name.Function
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'bl'          Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'currentOpen.x' Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'cl'          Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'currentOpen.y' Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'edx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'currentOpen.distance' Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'inc'         Name.Function
+' '           Text.Whitespace
+'edx'         Name.Builtin
+' '           Text.Whitespace
+'; Next distance is one more.' Comment.Single
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'; Up'        Comment.Single
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'dec'         Name.Function
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'call'        Name.Function
+' '           Text.Whitespace
+'isClosed'    Name.Variable
+','           Punctuation
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'cmp'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'jne'         Name.Function
+' '           Text.Whitespace
+'@noUp'       Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'call'        Name.Function
+' '           Text.Whitespace
+'distance'    Name.Variable
+','           Punctuation
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'@@tgtx'      Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'@@tgty'      Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'add'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'edx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'call'        Name.Function
+' '           Text.Whitespace
+'addOpen'     Name.Variable
+','           Punctuation
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'edx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'@noUp:'      Name.Label
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'inc'         Name.Function
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'; Right'     Comment.Single
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'inc'         Name.Function
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'call'        Name.Function
+' '           Text.Whitespace
+'isClosed'    Name.Variable
+','           Punctuation
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'cmp'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'jne'         Name.Function
+' '           Text.Whitespace
+'@noRight'    Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'call'        Name.Function
+' '           Text.Whitespace
+'distance'    Name.Variable
+','           Punctuation
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'@@tgtx'      Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'@@tgty'      Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'add'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'edx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'call'        Name.Function
+' '           Text.Whitespace
+'addOpen'     Name.Variable
+','           Punctuation
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'edx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'@noRight:'   Name.Label
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'dec'         Name.Function
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'; Left'      Comment.Single
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'dec'         Name.Function
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'call'        Name.Function
+' '           Text.Whitespace
+'isClosed'    Name.Variable
+','           Punctuation
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'cmp'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'jne'         Name.Function
+' '           Text.Whitespace
+'@noLeft'     Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'call'        Name.Function
+' '           Text.Whitespace
+'distance'    Name.Variable
+','           Punctuation
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'@@tgtx'      Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'@@tgty'      Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'add'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'edx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'call'        Name.Function
+' '           Text.Whitespace
+'addOpen'     Name.Variable
+','           Punctuation
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'edx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'@noLeft:'    Name.Label
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'inc'         Name.Function
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'; Down'      Comment.Single
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'inc'         Name.Function
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'call'        Name.Function
+' '           Text.Whitespace
+'isClosed'    Name.Variable
+','           Punctuation
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'cmp'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'jne'         Name.Function
+' '           Text.Whitespace
+'@noDown'     Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'call'        Name.Function
+' '           Text.Whitespace
+'distance'    Name.Variable
+','           Punctuation
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'@@tgtx'      Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'@@tgty'      Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'add'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'edx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'call'        Name.Function
+' '           Text.Whitespace
+'addOpen'     Name.Variable
+','           Punctuation
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'edx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'@noDown:'    Name.Label
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'dec'         Name.Function
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'ret'         Name.Function
+'\n'          Text.Whitespace
+
+'ENDP'        Keyword
+' '           Text.Whitespace
+'addNeighbours' Name.Variable
+'\n\n'        Text.Whitespace
+
+'PROC'        Keyword
+' '           Text.Whitespace
+'popOpen'     Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'ARG'         Keyword
+' '           Text.Whitespace
+'RETURNS'     Name.Variable
+' '           Text.Whitespace
+'eax'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'USES'        Keyword
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'edx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'esi'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'edi'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'; eax contains the smallest current heuristic' Comment.Single
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'; ebx contains the index of that field' Comment.Single
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'cmp'         Name.Function
+' '           Text.Whitespace
+'['           Punctuation
+'openlistSize' Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+'           ' Text.Whitespace
+'; If empty, return 0' Comment.Single
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'jne'         Name.Function
+' '           Text.Whitespace
+'@goForth'    Name.Variable
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'ret'         Name.Function
+'\n\n'        Text.Whitespace
+
+'@goForth:'   Name.Label
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'0FFFFFFFFh'  Literal.Number.Hex
+'             ' Text.Whitespace
+'; Longest distance possible in 32 bits.' Comment.Single
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'xor'         Name.Function
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'xor'         Name.Function
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+'                    ' Text.Whitespace
+'; ecx contains the current index' Comment.Single
+'\n\n'        Text.Whitespace
+
+'@searchFurther:' Name.Label
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'edx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'imul'        Name.Function
+' '           Text.Whitespace
+'edx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'SIZE'        Name.Variable
+' '           Text.Whitespace
+'TPriorityField' Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'cmp'         Name.Function
+' '           Text.Whitespace
+'[('          Punctuation
+'TPriorityField' Name.Variable
+' '           Text.Whitespace
+'ptr'         Name.Variable
+' '           Text.Whitespace
+'('           Punctuation
+'openlist'    Name.Variable
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+'edx'         Name.Builtin
+'))'          Punctuation
+'.heuristic'  Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'eax'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'ja'          Name.Function
+' '           Text.Whitespace
+'@notBetter'  Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'; Better guess found, put right values in eax and ebx' Comment.Single
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'[('          Punctuation
+'TPriorityField' Name.Variable
+' '           Text.Whitespace
+'ptr'         Name.Variable
+' '           Text.Whitespace
+'('           Punctuation
+'openlist'    Name.Variable
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+'edx'         Name.Builtin
+'))'          Punctuation
+'.heuristic'  Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+'\n\n'        Text.Whitespace
+
+'@notBetter:' Name.Label
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'inc'         Name.Function
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'cmp'         Name.Function
+' '           Text.Whitespace
+'cx'          Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'openlistSize' Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'jne'         Name.Function
+' '           Text.Whitespace
+'@searchFurther' Name.Variable
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'; By now, we have found the right item to pop from the priorityqueue.' Comment.Single
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'; Move the correct item in currentOpen' Comment.Single
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'SIZE'        Name.Variable
+' '           Text.Whitespace
+'TPriorityField' Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'esi'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'imul'        Name.Function
+' '           Text.Whitespace
+'esi'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'add'         Name.Function
+' '           Text.Whitespace
+'esi'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'offset'      Name.Variable
+' '           Text.Whitespace
+'openlist'    Name.Variable
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'edi'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'offset'      Name.Variable
+' '           Text.Whitespace
+'currentOpen' Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'rep'         Name.Function
+' '           Text.Whitespace
+'movsb'       Name.Variable
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'; Now make the remove the thing from the vector' Comment.Single
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'xor'         Name.Function
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'cx'          Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'openlistSize' Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'sub'         Name.Function
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'dec'         Name.Function
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'imul'        Name.Function
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'SIZE'        Name.Variable
+' '           Text.Whitespace
+'TPriorityField' Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'edi'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'esi'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'sub'         Name.Function
+' '           Text.Whitespace
+'edi'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'SIZE'        Name.Variable
+' '           Text.Whitespace
+'TPriorityField' Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'rep'         Name.Function
+' '           Text.Whitespace
+'movsb'       Name.Variable
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'dec'         Name.Function
+' '           Text.Whitespace
+'['           Punctuation
+'openlistSize' Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'1'           Literal.Number.Integer
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'ret'         Name.Function
+'\n'          Text.Whitespace
+
+'ENDP'        Keyword
+' '           Text.Whitespace
+'popOpen'     Name.Variable
+'\n\n'        Text.Whitespace
+
+'PROC'        Keyword
+' '           Text.Whitespace
+'addClosed'   Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'USES'        Keyword
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'xor'         Name.Function
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'xor'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'eax'         Name.Builtin
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'bx'          Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'closedlistSize' Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'imul'        Name.Function
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'SIZE'        Name.Variable
+' '           Text.Whitespace
+'TField'      Name.Variable
+'        '    Text.Whitespace
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'add'         Name.Function
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'offset'      Name.Variable
+' '           Text.Whitespace
+'closedlist'  Name.Variable
+' '           Text.Whitespace
+'; ebx contains the target TField' Comment.Single
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'al'          Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'currentOpen.x' Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'[('          Punctuation
+'TField'      Name.Variable
+' '           Text.Whitespace
+'ptr'         Name.Variable
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+')'           Punctuation
+'.x'          Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'al'          Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'al'          Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'currentOpen.y' Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'[('          Punctuation
+'TField'      Name.Variable
+' '           Text.Whitespace
+'ptr'         Name.Variable
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+')'           Punctuation
+'.y'          Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'al'          Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'currentOpen.distance' Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'[('          Punctuation
+'TField'      Name.Variable
+' '           Text.Whitespace
+'ptr'         Name.Variable
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+')'           Punctuation
+'.distance'   Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'eax'         Name.Builtin
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'inc'         Name.Function
+' '           Text.Whitespace
+'['           Punctuation
+'closedlistSize' Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'cmp'         Name.Function
+' '           Text.Whitespace
+'['           Punctuation
+'closedlistSize' Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'CLOSED_LIST_SIZE_MAX' Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'jne'         Name.Function
+' '           Text.Whitespace
+'@noProblemWithClosedVector' Name.Variable
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'xor'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'eax'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'ax'          Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'closedlistSize' Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'call'        Name.Function
+' '           Text.Whitespace
+'crash'       Name.Variable
+','           Punctuation
+' '           Text.Whitespace
+'offset'      Name.Variable
+' '           Text.Whitespace
+'closedOutOfMemory' Name.Variable
+','           Punctuation
+' '           Text.Whitespace
+'eax'         Name.Builtin
+'\n\n'        Text.Whitespace
+
+'@noProblemWithClosedVector:' Name.Label
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'ret'         Name.Function
+'\n'          Text.Whitespace
+
+'ENDP'        Keyword
+' '           Text.Whitespace
+'addClosed'   Name.Variable
+'\n\n'        Text.Whitespace
+
+'PROC'        Keyword
+' '           Text.Whitespace
+'addOpen'     Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'USES'        Keyword
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'ARG'         Keyword
+' '           Text.Whitespace
+'@@x'         Name.Variable
+':'           Punctuation
+'dword'       Keyword.Type
+','           Punctuation
+' '           Text.Whitespace
+'\\'          Text
+'\n'          Text.Whitespace
+
+'            ' Text.Whitespace
+'@@y'         Name.Variable
+':'           Punctuation
+'dword'       Keyword.Type
+','           Punctuation
+' '           Text.Whitespace
+'\\'          Text
+'\n'          Text.Whitespace
+
+'            ' Text.Whitespace
+'@@priority'  Name.Variable
+':'           Punctuation
+'dword'       Keyword.Type
+','           Punctuation
+' '           Text.Whitespace
+'\\'          Text
+'\n'          Text.Whitespace
+
+'            ' Text.Whitespace
+'@@distance'  Name.Variable
+':'           Punctuation
+'dword'       Keyword.Type
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'xor'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'eax'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'ax'          Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'openlistSize' Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'imul'        Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'SIZE'        Name.Variable
+' '           Text.Whitespace
+'TPriorityField' Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'add'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'offset'      Name.Variable
+' '           Text.Whitespace
+'openlist'    Name.Variable
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'@@x'         Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'[('          Punctuation
+'TPriorityField' Name.Variable
+' '           Text.Whitespace
+'ptr'         Name.Variable
+' '           Text.Whitespace
+'eax'         Name.Builtin
+')'           Punctuation
+'.x'          Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'bl'          Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'@@y'         Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'[('          Punctuation
+'TPriorityField' Name.Variable
+' '           Text.Whitespace
+'ptr'         Name.Variable
+' '           Text.Whitespace
+'eax'         Name.Builtin
+')'           Punctuation
+'.y'          Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'bl'          Name.Builtin
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'bl'          Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'currentOpen.x' Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'[('          Punctuation
+'TPriorityField' Name.Variable
+' '           Text.Whitespace
+'ptr'         Name.Variable
+' '           Text.Whitespace
+'eax'         Name.Builtin
+')'           Punctuation
+'.fromx'      Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'bl'          Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'bl'          Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'currentOpen.y' Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'[('          Punctuation
+'TPriorityField' Name.Variable
+' '           Text.Whitespace
+'ptr'         Name.Variable
+' '           Text.Whitespace
+'eax'         Name.Builtin
+')'           Punctuation
+'.fromy'      Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'bl'          Name.Builtin
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'@@priority'  Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'[('          Punctuation
+'TPriorityField' Name.Variable
+' '           Text.Whitespace
+'ptr'         Name.Variable
+' '           Text.Whitespace
+'eax'         Name.Builtin
+')'           Punctuation
+'.heuristic'  Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'@@distance'  Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'[('          Punctuation
+'TPriorityField' Name.Variable
+' '           Text.Whitespace
+'ptr'         Name.Variable
+' '           Text.Whitespace
+'eax'         Name.Builtin
+')'           Punctuation
+'.distance'   Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'inc'         Name.Function
+' '           Text.Whitespace
+'['           Punctuation
+'openlistSize' Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'cmp'         Name.Function
+' '           Text.Whitespace
+'['           Punctuation
+'openlistSize' Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'OPEN_LIST_SIZE_MAX' Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'jne'         Name.Function
+' '           Text.Whitespace
+'@noProblem'  Name.Variable
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'xor'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'eax'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'ax'          Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'openlistSize' Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'call'        Name.Function
+' '           Text.Whitespace
+'crash'       Name.Variable
+','           Punctuation
+' '           Text.Whitespace
+'offset'      Name.Variable
+' '           Text.Whitespace
+'openOutOfMemory' Name.Variable
+','           Punctuation
+' '           Text.Whitespace
+'eax'         Name.Builtin
+'\n\n'        Text.Whitespace
+
+'@noProblem:' Name.Label
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'ret'         Name.Function
+'\n'          Text.Whitespace
+
+'ENDP'        Keyword
+'\n\n'        Text.Whitespace
+
+'PROC'        Keyword
+' '           Text.Whitespace
+'distance'    Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'USES'        Keyword
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'ARG'         Keyword
+' '           Text.Whitespace
+'@@srcx'      Name.Variable
+':'           Punctuation
+'dword'       Keyword.Type
+','           Punctuation
+' '           Text.Whitespace
+'\\'          Text
+'\n'          Text.Whitespace
+
+'            ' Text.Whitespace
+'@@srcy'      Name.Variable
+':'           Punctuation
+'dword'       Keyword.Type
+','           Punctuation
+' '           Text.Whitespace
+'\\'          Text
+'\n'          Text.Whitespace
+
+'            ' Text.Whitespace
+'@@tgtx'      Name.Variable
+':'           Punctuation
+'dword'       Keyword.Type
+','           Punctuation
+' '           Text.Whitespace
+'\\'          Text
+'\n'          Text.Whitespace
+
+'            ' Text.Whitespace
+'@@tgty'      Name.Variable
+':'           Punctuation
+'dword'       Keyword.Type
+' '           Text.Whitespace
+'\\'          Text
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'RETURNS'     Name.Variable
+' '           Text.Whitespace
+'eax'         Name.Builtin
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'@@srcx'      Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'sub'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'@@tgtx'      Name.Variable
+']'           Punctuation
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'jns'         Name.Function
+' '           Text.Whitespace
+'@noSignChangex' Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'neg'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'@noSignChangex:' Name.Label
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'@@srcy'      Name.Variable
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'sub'         Name.Function
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'@@tgty'      Name.Variable
+']'           Punctuation
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'jns'         Name.Function
+' '           Text.Whitespace
+'@noSignChangey' Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'neg'         Name.Function
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'@noSignChangey:' Name.Label
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'add'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'ebx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'ret'         Name.Function
+'\n'          Text.Whitespace
+
+'ENDP'        Keyword
+' '           Text.Whitespace
+'distance'    Name.Variable
+'\n\n'        Text.Whitespace
+
+'PROC'        Keyword
+' '           Text.Whitespace
+'cleanData'   Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'USES'        Keyword
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'['           Punctuation
+'openlistSize' Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'['           Punctuation
+'closedlistSize' Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'['           Punctuation
+'currentOpen.x' Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'-'           Operator
+'1'           Literal.Number.Integer
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'['           Punctuation
+'currentOpen.y' Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'-'           Operator
+'1'           Literal.Number.Integer
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'['           Punctuation
+'currentOpen.distance' Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'call'        Name.Function
+' '           Text.Whitespace
+'getLevelWidth' Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'eax'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'call'        Name.Function
+' '           Text.Whitespace
+'getLevelHeight' Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'imul'        Name.Function
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'eax'         Name.Builtin
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'offset'      Name.Variable
+' '           Text.Whitespace
+'backtraceGraph' Name.Variable
+'\n'          Text.Whitespace
+
+'@fieldIter:' Name.Label
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'[('          Punctuation
+'TField'      Name.Variable
+' '           Text.Whitespace
+'ptr'         Name.Variable
+' '           Text.Whitespace
+'eax'         Name.Builtin
+')'           Punctuation
+'.distance'   Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'0ffffffffh'  Literal.Number.Hex
+' '           Text.Whitespace
+'; Set to approximately +inf' Comment.Single
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'[('          Punctuation
+'TField'      Name.Variable
+' '           Text.Whitespace
+'ptr'         Name.Variable
+' '           Text.Whitespace
+'eax'         Name.Builtin
+')'           Punctuation
+'.x'          Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'mov'         Name.Function
+' '           Text.Whitespace
+'[('          Punctuation
+'TField'      Name.Variable
+' '           Text.Whitespace
+'ptr'         Name.Variable
+' '           Text.Whitespace
+'eax'         Name.Builtin
+')'           Punctuation
+'.y'          Name.Variable
+'],'          Punctuation
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'add'         Name.Function
+' '           Text.Whitespace
+'eax'         Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'SIZE'        Name.Variable
+' '           Text.Whitespace
+'TField'      Name.Variable
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'dec'         Name.Function
+' '           Text.Whitespace
+'ecx'         Name.Builtin
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'jnz'         Name.Function
+' '           Text.Whitespace
+'@fieldIter'  Name.Variable
+'\n\n'        Text.Whitespace
+
+'        '    Text.Whitespace
+'ret'         Name.Function
+'\n'          Text.Whitespace
+
+'ENDP'        Keyword
+' '           Text.Whitespace
+'cleanData'   Name.Variable
+'\n\n'        Text.Whitespace
+
+'DATASEG'     Keyword
+'\n\n'        Text.Whitespace
+
+'openOutOfMemory' Name.Constant
+'   '         Text.Whitespace
+'db'          Keyword.Declaration
+' '           Text.Whitespace
+'"Out of openlistSize memory. Hi dev: Please increase$"' Literal.String
+'\n'          Text.Whitespace
+
+'closedOutOfMemory' Name.Constant
+' '           Text.Whitespace
+'db'          Keyword.Declaration
+' '           Text.Whitespace
+'"Out of closedlistSize memory. Hi dev: Please increase$"' Literal.String
+'\n\n'        Text.Whitespace
+
+'; power | discover | walking | sailing | flying' Comment.Single
+'\n'          Text.Whitespace
+
+'actionTable' Name.Constant
+' '           Text.Whitespace
+'db'          Keyword.Declaration
+'  '          Text.Whitespace
+'00001101b'   Literal.Number.Bin
+','           Punctuation
+' '           Text.Whitespace
+'\\'          Text
+' '           Text.Whitespace
+';EMPTY'      Comment.Single
+'\n'          Text.Whitespace
+
+'                ' Text.Whitespace
+'00001101b'   Literal.Number.Bin
+','           Punctuation
+' '           Text.Whitespace
+'\\'          Text
+' '           Text.Whitespace
+';RUBBLE'     Comment.Single
+'\n'          Text.Whitespace
+
+'                ' Text.Whitespace
+'00000000b'   Literal.Number.Bin
+','           Punctuation
+' '           Text.Whitespace
+'\\'          Text
+' '           Text.Whitespace
+';GRAVEL'     Comment.Single
+'\n'          Text.Whitespace
+
+'                ' Text.Whitespace
+'00000000b'   Literal.Number.Bin
+','           Punctuation
+' '           Text.Whitespace
+'\\'          Text
+' '           Text.Whitespace
+';LOOSE ROCK' Comment.Single
+'\n'          Text.Whitespace
+
+'                ' Text.Whitespace
+'00000000b'   Literal.Number.Bin
+','           Punctuation
+' '           Text.Whitespace
+'\\'          Text
+' '           Text.Whitespace
+';HARD ROCK'  Comment.Single
+'\n'          Text.Whitespace
+
+'                ' Text.Whitespace
+'00000000b'   Literal.Number.Bin
+','           Punctuation
+' '           Text.Whitespace
+'\\'          Text
+' '           Text.Whitespace
+';MASSIVE ROCK' Comment.Single
+'\n'          Text.Whitespace
+
+'                ' Text.Whitespace
+'00000000b'   Literal.Number.Bin
+','           Punctuation
+' '           Text.Whitespace
+'\\'          Text
+' '           Text.Whitespace
+';KRISTAL SOURCE' Comment.Single
+'\n'          Text.Whitespace
+
+'                ' Text.Whitespace
+'00000000b'   Literal.Number.Bin
+','           Punctuation
+' '           Text.Whitespace
+'\\'          Text
+' '           Text.Whitespace
+';OREROCK'    Comment.Single
+'\n'          Text.Whitespace
+
+'                ' Text.Whitespace
+'00001011b'   Literal.Number.Bin
+','           Punctuation
+' '           Text.Whitespace
+'\\'          Text
+' '           Text.Whitespace
+';WATER'      Comment.Single
+'\n'          Text.Whitespace
+
+'                ' Text.Whitespace
+'00001001b'   Literal.Number.Bin
+','           Punctuation
+' '           Text.Whitespace
+'\\'          Text
+' '           Text.Whitespace
+';LAVA'       Comment.Single
+'\n'          Text.Whitespace
+
+'                ' Text.Whitespace
+'00001101b'   Literal.Number.Bin
+','           Punctuation
+' '           Text.Whitespace
+'\\'          Text
+' '           Text.Whitespace
+';SNAIL HOLE' Comment.Single
+'\n'          Text.Whitespace
+
+'                ' Text.Whitespace
+'00001101b'   Literal.Number.Bin
+','           Punctuation
+' '           Text.Whitespace
+'\\'          Text
+' '           Text.Whitespace
+';EROSION'    Comment.Single
+'\n'          Text.Whitespace
+
+'                ' Text.Whitespace
+'00011101b'   Literal.Number.Bin
+','           Punctuation
+' '           Text.Whitespace
+'\\'          Text
+' '           Text.Whitespace
+';POWER PATH' Comment.Single
+'\n'          Text.Whitespace
+
+'                ' Text.Whitespace
+'00011101b'   Literal.Number.Bin
+','           Punctuation
+' '           Text.Whitespace
+'\\'          Text
+' '           Text.Whitespace
+';BUILDING POWER PATH' Comment.Single
+'\n'          Text.Whitespace
+
+'                ' Text.Whitespace
+'00011000b'   Literal.Number.Bin
+'  '          Text.Whitespace
+'\\'          Text
+' '           Text.Whitespace
+';BUILDING'   Comment.Single
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'UDATASEG'    Keyword
+'\n\n'        Text.Whitespace
+
+'currentType' Name.Constant
+'      '      Text.Whitespace
+'dd'          Keyword.Declaration
+' '           Text.Whitespace
+'?'           Name.Variable
+'\n'          Text.Whitespace
+
+'currentOpen' Name.Constant
+'      '      Text.Whitespace
+'TPriorityField' Keyword.Declaration
+' '           Text.Whitespace
+'?'           Name.Variable
+'\n\n'        Text.Whitespace
+
+'openlist'    Name.Constant
+'         '   Text.Whitespace
+'TPriorityField' Keyword.Declaration
+' '           Text.Whitespace
+'OPEN_LIST_SIZE_MAX' Name.Variable
+' '           Text.Whitespace
+'dup'         Name.Variable
+'('           Punctuation
+'?'           Name.Variable
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'openlistSize' Name.Constant
+'     '       Text.Whitespace
+'dw'          Keyword.Declaration
+' '           Text.Whitespace
+'?'           Name.Variable
+'\n'          Text.Whitespace
+
+'closedlist'  Name.Constant
+'       '     Text.Whitespace
+'TField'      Keyword.Declaration
+' '           Text.Whitespace
+'CLOSED_LIST_SIZE_MAX' Name.Variable
+'       '     Text.Whitespace
+'dup'         Name.Variable
+'('           Punctuation
+'?'           Name.Variable
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'closedlistSize' Name.Constant
+'   '         Text.Whitespace
+'dw'          Keyword.Declaration
+' '           Text.Whitespace
+'?'           Name.Variable
+'\n'          Text.Whitespace
+
+'backtraceGraph' Name.Constant
+'   '         Text.Whitespace
+'TField'      Keyword.Declaration
+' '           Text.Whitespace
+'MAX_LEVEL_SIZE' Name.Variable
+'             ' Text.Whitespace
+'dup'         Name.Variable
+'('           Punctuation
+'?'           Name.Variable
+')'           Punctuation
+'\n\n'        Text.Whitespace
+
+'END'         Keyword
+'\n'          Text.Whitespace

@@ -1,0 +1,107 @@
+# This file created by conda-build 26.3.0
+# meta.yaml template originally from:
+# /home/task_178695475399887/opentelemetry-proto-feedstock/recipe, last modified Mon Aug 17 08:19:19 2026
+# ------------------------------------------------
+
+package:
+  name: opentelemetry-proto
+  version: 1.43.0
+source:
+  url: https://github.com/open-telemetry/opentelemetry-python/archive/refs/tags/v1.43.0.tar.gz
+  sha256: 92b8082f603dbacf2f9175fae57e6c8f07fddb70e6aeff66aeb7a7b310242747
+build:
+  number: '0'
+  script: /home/task_178695475399887/croot/opentelemetry-proto_1786954779556/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/bin/python
+    -m pip install ./opentelemetry-proto -vv --no-deps --no-build-isolation
+  string: py314h06a4308_0
+requirements:
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 52_gnu
+    - bzip2 1.0.8 h5eee18b_6
+    - ca-certificates 2026.7.16 h06a4308_0
+    - hatchling 1.31.0 py314h06a4308_0
+    - ld_impl_linux-64 2.44 h9e0c5a2_3
+    - libexpat 2.8.2 h7354ed3_1
+    - libffi 3.4.8 h06d3fd0_3
+    - libgcc 15.2.0 h69a1729_8
+    - libgcc-ng 15.2.0 h166f726_8
+    - libmpdec 4.0.1 h47b2149_0
+    - libstdcxx 15.2.0 h39759b7_8
+    - libstdcxx-ng 15.2.0 hc03a8fd_8
+    - libuuid 1.41.5 h5eee18b_0
+    - libxcb 1.17.0 h9b100fa_0
+    - libzlib 1.3.2 h47b2149_0
+    - lz4-c 1.9.4 h7354ed3_5
+    - ncurses 6.5 h7934f7d_0
+    - openssl 3.5.7 h1b28b03_0
+    - packaging 26.2 py314h06a4308_0
+    - pathspec 1.1.1 py314h06a4308_0
+    - pip 26.1.2 pyh0d26453_0
+    - pluggy 1.6.0 py314h06a4308_0
+    - pthread-stubs 0.3 h47b2149_2
+    - python 3.14.7 h2bd7c14_101_cp314
+    - python_abi 3.14 4_cp314
+    - readline 8.3 hc2a1206_0
+    - sqlite 3.53.2 h795bf6d_0
+    - tk 9.0.4 h3840b71_1
+    - trove-classifiers 2026.6.1.19 py314h06a4308_0
+    - tzdata 2026c he532380_0
+    - xorg-libx11 1.8.12 h9b100fa_1
+    - xorg-libxau 1.0.12 h9b100fa_0
+    - xorg-libxdmcp 1.1.5 h9b100fa_0
+    - xorg-xorgproto 2024.1 h47b2149_2
+    - xz 5.8.2 h448239c_0
+    - zlib 1.3.2 h47b2149_0
+    - zstd 1.5.7 h11fc155_0
+  run:
+    - protobuf >=5.0,<8.0
+    - python >=3.14,<3.15.0a0
+    - python_abi 3.14.* *_cp314
+test:
+  source_files:
+    - opentelemetry-proto/tests
+  imports:
+    - opentelemetry
+    - opentelemetry.proto
+    - opentelemetry.proto.collector
+    - opentelemetry.proto.common
+    - opentelemetry.proto.logs
+    - opentelemetry.proto.metrics
+    - opentelemetry.proto.profiles
+    - opentelemetry.proto.resource
+    - opentelemetry.proto.trace
+  commands:
+    - pip check
+    - pytest -v opentelemetry-proto/tests
+  requires:
+    - colorama >=0.4.6
+    - iniconfig >=2.0.0
+    - packaging >=24.0
+    - pip
+    - pytest >=7.4.4
+about:
+  home: https://github.com/open-telemetry/opentelemetry-python/tree/main/opentelemetry-proto
+  license: Apache-2.0
+  license_family: Apache
+  license_file: LICENSE
+  summary: OpenTelemetry Python / Proto
+  description: 'OpenTelemetry, also known as OTel for short, is a vendor-neutral open-source
+
+    Observability framework for instrumenting, generating, collecting, and exporting
+
+    telemetry data such as traces, metrics, logs. As an industry-standard
+
+    it is natively supported by a number of vendors.'
+  doc_url: https://opentelemetry-python.readthedocs.io
+  dev_url: https://github.com/open-telemetry/opentelemetry-python
+extra:
+  recipe-maintainers:
+    - mariusvniekerk
+  final: true
+  copy_test_source_files: true
+  remote_url: https://github.com/AnacondaRecipes/opentelemetry-proto-feedstock
+  sha: 49d330a47e25d90773e38949b82c878993778af8
+  task_id: InclonsOQWS91zD4sI8yWw
+  task_run_id: '0'
+  pbp_graph_uuid: b75f0642-3028-4b10-b1aa-76d247d11c92

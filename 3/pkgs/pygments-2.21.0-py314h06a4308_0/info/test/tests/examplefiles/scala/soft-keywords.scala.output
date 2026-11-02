@@ -1,0 +1,45 @@
+'val'         Keyword.Declaration
+' '           Text.Whitespace
+'open'        Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'true'        Keyword.Constant
+'\n'          Text.Whitespace
+
+'val'         Keyword.Declaration
+' '           Text.Whitespace
+'inline'      Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'true'        Keyword.Constant
+'\n'          Text.Whitespace
+
+'inline'      Keyword
+' '           Text.Whitespace
+'xval'        Name
+'\n'          Text.Whitespace
+
+'val'         Keyword.Declaration
+' '           Text.Whitespace
+'x'           Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'inline'      Name
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+'2'           Literal.Number.Integer
+'\n'          Text.Whitespace
+
+'('           Punctuation
+'using'       Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'('           Punctuation
+'usingSomething' Name
+')'           Punctuation
+'\n'          Text.Whitespace

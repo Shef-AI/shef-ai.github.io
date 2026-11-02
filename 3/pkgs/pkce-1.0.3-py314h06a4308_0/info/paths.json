@@ -1,0 +1,71 @@
+{
+  "paths": [
+    {
+      "_path": "lib/python3.14/site-packages/pkce-1.0.3.dist-info/INSTALLER",
+      "path_type": "hardlink",
+      "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+      "size_in_bytes": 5
+    },
+    {
+      "_path": "lib/python3.14/site-packages/pkce-1.0.3.dist-info/METADATA",
+      "path_type": "hardlink",
+      "sha256": "c519699e87efe86434281c06fd7558de1b9501707e8a59906be76b445e3d5a15",
+      "size_in_bytes": 1199
+    },
+    {
+      "_path": "lib/python3.14/site-packages/pkce-1.0.3.dist-info/RECORD",
+      "path_type": "hardlink",
+      "sha256": "93e0d791d7824a8591e66548a43afc52121cbf272f02fc6d799dc8eb761b1581",
+      "size_in_bytes": 833
+    },
+    {
+      "_path": "lib/python3.14/site-packages/pkce-1.0.3.dist-info/REQUESTED",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "lib/python3.14/site-packages/pkce-1.0.3.dist-info/WHEEL",
+      "path_type": "hardlink",
+      "sha256": "95353a07a7887d8a224094d935cf9fc9a47a0692fa7a14f3537c466319f69fc9",
+      "size_in_bytes": 91
+    },
+    {
+      "_path": "lib/python3.14/site-packages/pkce-1.0.3.dist-info/direct_url.json",
+      "path_type": "hardlink",
+      "sha256": "e1636d8727b8b9b1549a892954510e33b219c8b30a894f2ab3fd07cd64ae93ec",
+      "size_in_bytes": 78
+    },
+    {
+      "_path": "lib/python3.14/site-packages/pkce-1.0.3.dist-info/licenses/LICENSE",
+      "path_type": "hardlink",
+      "sha256": "103b5b0eb1f668e32238e43d70529b56782b50ca3fb3c15e22725b692fc707ea",
+      "size_in_bytes": 1093
+    },
+    {
+      "_path": "lib/python3.14/site-packages/pkce-1.0.3.dist-info/top_level.txt",
+      "path_type": "hardlink",
+      "sha256": "5c75817b6ecf59ec4e59e2cd0af1f69217e19c5afaece453b8a998ea33a98c71",
+      "size_in_bytes": 5
+    },
+    {
+      "_path": "lib/python3.14/site-packages/pkce/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "c6274195d91384cc5fe48831b648f2efcd83d371906b018b73a34afd04e92ef5",
+      "size_in_bytes": 2761
+    },
+    {
+      "_path": "lib/python3.14/site-packages/pkce/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "2211b6fdff68b2ac99e7a21bb04254a69dec0c7245f00630acd61cc24382bb58",
+      "size_in_bytes": 3707
+    },
+    {
+      "_path": "lib/python3.14/site-packages/pkce/py.typed",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    }
+  ],
+  "paths_version": 1
+}

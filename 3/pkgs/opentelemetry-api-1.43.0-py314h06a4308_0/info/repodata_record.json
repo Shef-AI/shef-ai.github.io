@@ -1,0 +1,24 @@
+{
+  "arch": "x86_64",
+  "build": "py314h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64/",
+  "constrains": [],
+  "depends": [
+    "python >=3.14,<3.15.0a0",
+    "python_abi 3.14.* *_cp314",
+    "typing-extensions >=4.5.0"
+  ],
+  "fn": "opentelemetry-api-1.43.0-py314h06a4308_0.conda",
+  "license": "Apache-2.0",
+  "license_family": "Apache",
+  "md5": "b4e3c4c12f4cc18b296ca60e1015674d",
+  "name": "opentelemetry-api",
+  "platform": "linux",
+  "sha256": "7a3522665b87bf218a469bd7d72cfe3355483fca323a33fecd066bee20f0573a",
+  "size": 116914,
+  "subdir": "linux-64",
+  "timestamp": 1786954781000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/opentelemetry-api-1.43.0-py314h06a4308_0.conda",
+  "version": "1.43.0"
+}

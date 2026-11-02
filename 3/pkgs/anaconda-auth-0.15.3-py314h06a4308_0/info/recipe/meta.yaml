@@ -1,0 +1,166 @@
+# This file created by conda-build 26.7.1
+# meta.yaml template originally from:
+# /home/task_178940650260633/anaconda-auth-feedstock/recipe, last modified Mon Sep 14 17:30:16 2026
+# ------------------------------------------------
+
+package:
+  name: anaconda-auth
+  version: 0.15.3
+source:
+  git_url: https://github.com/anaconda/anaconda-auth.git
+  git_rev: 95ca19536f37182b0ec0289cc7c6a5b383152a83
+build:
+  entry_points:
+    - conda-token = anaconda_auth._conda.conda_token:cli
+  script:
+    - /home/task_178940650260633/croot/anaconda-auth_1789407038895/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/bin/python
+      -m pip install . -vv --no-deps --no-build-isolation
+    - /home/task_178940650260633/croot/anaconda-auth_1789407038895/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/bin/python
+      ./src/anaconda_auth/_conda/config.py --install
+  number: '0'
+  string: py314h06a4308_0
+requirements:
+  build:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 52_gnu
+    - bzip2 1.0.8 h5eee18b_6
+    - c-ares 1.34.7 hd44998d_0
+    - ca-certificates 2026.8.13 h06a4308_0
+    - expat 2.8.4 h7354ed3_0
+    - gettext 0.25.1 hd8bbc44_2
+    - gettext-tools 0.25.1 hc68a75d_2
+    - git 2.51.0 pl5440ha37b028_3
+    - icu 78.3 h53478e7_1
+    - jansson 2.15.0 hbcba0ee_0
+    - libasprintf 0.25.1 ha6c9436_2
+    - libasprintf-devel 0.25.1 ha6c9436_2
+    - libbrotlicommon 1.2.0 h32cd6e7_0
+    - libbrotlidec 1.2.0 ha2c5f68_0
+    - libbrotlienc 1.2.0 h2e96acb_0
+    - libcurl 8.22.0 hd8fa685_0
+    - libev 4.33 h7f8727e_1
+    - libexpat 2.8.4 h7354ed3_0
+    - libgcc 15.2.0 h69a1729_8
+    - libgcc-ng 15.2.0 h166f726_8
+    - libgettextpo 0.25.1 h64fc44f_2
+    - libgettextpo-devel 0.25.1 h64fc44f_2
+    - libiconv 1.18 h75a1612_0
+    - libidn2 2.3.8 hf80d704_0
+    - libkrb5 1.22.2 hbd13c29_0
+    - libnghttp2 1.69.0 h8214106_1
+    - libssh2 1.11.1 hfbabe93_1
+    - libstdcxx 15.2.0 h39759b7_8
+    - libstdcxx-ng 15.2.0 hc03a8fd_8
+    - libunistring 1.4.2 h34b0ebb_0
+    - libxcb 1.17.0 h9b100fa_0
+    - libxml2 2.15.3 he45aeb6_0
+    - libzlib 1.3.2 h47b2149_0
+    - lmdb 1.0.0 hfe55579_0
+    - lz4-c 1.9.4 h7354ed3_5
+    - ncurses 6.6 hfaaeb4e_0
+    - openssl 3.5.8 h1b28b03_0
+    - pcre2 10.46 hf426167_0
+    - perl 5.44.0 0_h47b2149_perl5
+    - pthread-stubs 0.3 h47b2149_2
+    - tk 9.0.4 h3840b71_1
+    - xorg-libx11 1.8.13 h65de747_0
+    - xorg-libxau 1.0.12 h9b100fa_0
+    - xorg-libxdmcp 1.1.5 h9b100fa_0
+    - xorg-xorgproto 2025.1 h47b2149_0
+    - xz 5.8.2 h448239c_0
+    - zlib 1.3.2 h47b2149_0
+    - zstd 1.5.7 h11fc155_0
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 52_gnu
+    - bzip2 1.0.8 h5eee18b_6
+    - ca-certificates 2026.8.13 h06a4308_0
+    - hatch-vcs 0.5.0 py314h06a4308_1
+    - hatchling 1.31.0 py314h06a4308_0
+    - ld_impl_linux-64 2.44 h9e0c5a2_3
+    - libexpat 2.8.4 h7354ed3_0
+    - libffi 3.4.8 h06d3fd0_3
+    - libgcc 15.2.0 h69a1729_8
+    - libgcc-ng 15.2.0 h166f726_8
+    - libmpdec 4.0.1 h47b2149_0
+    - libstdcxx 15.2.0 h39759b7_8
+    - libstdcxx-ng 15.2.0 hc03a8fd_8
+    - libuuid 1.41.5 h5eee18b_0
+    - libxcb 1.17.0 h9b100fa_0
+    - libzlib 1.3.2 h47b2149_0
+    - lz4-c 1.9.4 h7354ed3_5
+    - ncurses 6.6 hfaaeb4e_0
+    - openssl 3.5.8 h1b28b03_0
+    - packaging 26.3 py314h06a4308_0
+    - pathspec 1.1.1 py314h06a4308_0
+    - pip 26.2.1 pyh0d26453_0
+    - pluggy 1.6.0 py314h06a4308_0
+    - pthread-stubs 0.3 h47b2149_2
+    - python 3.14.7 h2bd7c14_101_cp314
+    - python_abi 3.14 4_cp314
+    - readline 8.3 hc2a1206_0
+    - setuptools 83.0.0 py314h06a4308_0
+    - setuptools-scm 10.2.3 py314h06a4308_0
+    - sqlite 3.53.4 h795bf6d_0
+    - tk 9.0.4 h3840b71_1
+    - trove-classifiers 2026.6.1.19 py314h06a4308_0
+    - tzdata 2026c he532380_0
+    - vcs-versioning 2.3.4 py314h06a4308_0
+    - xorg-libx11 1.8.13 h65de747_0
+    - xorg-libxau 1.0.12 h9b100fa_0
+    - xorg-libxdmcp 1.1.5 h9b100fa_0
+    - xorg-xorgproto 2025.1 h47b2149_0
+    - xz 5.8.2 h448239c_0
+    - zlib 1.3.2 h47b2149_0
+    - zstd 1.5.7 h11fc155_0
+  run:
+    - anaconda-cli-base >=0.8.1
+    - cryptography >=3.4.0
+    - httpx
+    - keyring
+    - pkce
+    - pydantic
+    - pyjwt
+    - python >=3.14,<3.15.0a0
+    - python-dotenv
+    - python_abi 3.14.* *_cp314
+    - requests
+    - semver <4
+  run_constrained:
+    - anaconda-cloud-auth >=0.8
+    - conda >=23.9.0
+    - conda-token >=0.7.0
+test:
+  imports:
+    - anaconda_auth
+  commands:
+    - conda-token --help
+    - anaconda auth --help
+    - python -c "from anaconda_auth import __version__; assert __version__ == \"0.15.3\""
+    - python -m anaconda_auth._conda.config --verify
+    - pip check
+  requires:
+    - conda
+    - pip
+    - python >=3.14,<3.15.0a0
+about:
+  summary: A client auth library for Anaconda APIs
+  description: A client library for Anaconda APIs to authenticate and securely store
+    API keys
+  doc_url: https://anaconda.github.io/anaconda-auth
+  dev_url: https://github.com/anaconda/anaconda-auth
+  home: https://www.anaconda.com
+  license: BSD-3-Clause
+  license_file: LICENSE
+  license_family: BSD
+extra:
+  recipe-maintainers:
+    - AlbertDeFusco
+    - mattkram
+  final: true
+  copy_test_source_files: true
+  remote_url: https://github.com/AnacondaRecipes/anaconda-auth-feedstock
+  sha: 06927ab0275afce55e0560e761e8cf7bc6f64ef9
+  task_id: HEkvT-v8T2WSnjOeFUcNQg
+  task_run_id: '0'
+  pbp_graph_uuid: aa9be1b0-d47a-4e8f-9f03-b24f25876a8d

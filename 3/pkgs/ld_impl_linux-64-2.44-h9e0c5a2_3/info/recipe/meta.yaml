@@ -1,0 +1,75 @@
+# This file created by conda-build 26.1.0
+# ------------------------------------------------
+
+package:
+  name: ld_impl_linux-64
+  version: '2.44'
+source:
+  - url:
+      - https://ftp.gnu.org/gnu/binutils/binutils-2.44.tar.bz2
+      - https://mirrors.ocf.berkeley.edu/gnu/binutils/binutils-2.44.tar.bz2
+    sha256: f66390a661faa117d00fab2e79cf2dc9d097b42cc296bf3f8677d1e7b452dc3a
+    patches:
+      - patches/0001-check_ldrunpath_length.patch
+      - patches/0001-fallback-sysroot.diff
+      - patches/0006-sysroot.patch
+      - patches/0007-poison-system-directories.patch
+      - patches/0009-fix-align-kernel.patch
+build:
+  merge_build_host: false
+  detect_binary_files_with_prefix: true
+  ignore_run_exports_from:
+    - gcc_bootstrap_linux-64 14.3.0.*
+  number: 3
+  string: h9e0c5a2_3
+requirements:
+  build:
+    - gcc_bootstrap_linux-64 14.3.0 hbd8bee2_12
+    - kernel-headers_linux-64 4.18.0 h3108a97_1
+    - sysroot_linux-64 2.28 h3108a97_1
+    - tzdata 2026a he532380_0
+  run_constrained:
+    - binutils_impl_linux-64 2.44
+  host:
+    - __glibc >=2.28,<3.0.a0
+  run:
+    - __glibc >=2.28,<3.0.a0
+test:
+  commands:
+    - x86_64-conda-linux-gnu-ld --help
+    - echo "conda"
+about:
+  home: https://www.gnu.org/software/binutils/
+  dev_url: https://sourceware.org/git/gitweb.cgi?p=binutils-gdb.git
+  doc_url: https://www.gnu.org/software/binutils/
+  license: GPL-3.0-only
+  license_family: GPL
+  license_file:
+    - COPYING
+    - COPYING.LIB
+    - COPYING3
+    - COPYING3.LIB
+  summary: The GNU Binutils are a collection of binary tools.
+  description: 'A set of programming tools for creating and managing binary programs,
+    object files,
+
+    libraries, profile data, and assembly source code. The main ones are ld, as, and
+    gold.
+
+    '
+extra:
+  skip-lints:
+    - invalid_url
+    - stdlib_must_be_in_build
+  recipe-maintainers:
+    - beckermr
+    - frol
+    - isuruf
+    - jjhelmus
+  final: true
+  copy_test_source_files: true
+  remote_url: https://github.com/AnacondaRecipes/binutils-feedstock
+  sha: c328bd02b97ef2e9821af3a275270dd70dc8ca44
+  task_id: M1z5x9s3T0O5cqNYTdr96Q
+  task_run_id: '0'
+  pbp_graph_uuid: 3c43b0ec-7fed-4b0b-84d5-ac2e8497fc9c

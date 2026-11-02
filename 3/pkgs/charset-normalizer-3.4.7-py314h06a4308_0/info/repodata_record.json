@@ -1,0 +1,23 @@
+{
+  "arch": "x86_64",
+  "build": "py314h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64/",
+  "constrains": [],
+  "depends": [
+    "python >=3.14,<3.15.0a0",
+    "python_abi 3.14.* *_cp314"
+  ],
+  "fn": "charset-normalizer-3.4.7-py314h06a4308_0.conda",
+  "license": "MIT",
+  "license_family": "MIT",
+  "md5": "03241735576a4b456442e654ab834bb9",
+  "name": "charset-normalizer",
+  "platform": "linux",
+  "sha256": "7d74157f2be79067bfa35bfd21766ed5cff7310b98d6affa6ea772daf924c2a5",
+  "size": 143135,
+  "subdir": "linux-64",
+  "timestamp": 1782917594000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/charset-normalizer-3.4.7-py314h06a4308_0.conda",
+  "version": "3.4.7"
+}

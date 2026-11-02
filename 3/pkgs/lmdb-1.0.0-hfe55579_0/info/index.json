@@ -1,0 +1,16 @@
+{
+  "arch": "x86_64",
+  "build": "hfe55579_0",
+  "build_number": 0,
+  "depends": [
+    "__glibc >=2.28,<3.0.a0",
+    "libgcc >=14"
+  ],
+  "license": "OLDAP-2.8",
+  "license_family": "other",
+  "name": "lmdb",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1784793852911,
+  "version": "1.0.0"
+}

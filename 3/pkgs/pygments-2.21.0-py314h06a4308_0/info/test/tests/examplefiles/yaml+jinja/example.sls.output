@@ -1,0 +1,401 @@
+'include'     Name.Tag
+':'           Punctuation
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'-'           Punctuation.Indicator
+' '           Text.Whitespace
+'moosefs'     Literal.Scalar.Plain
+'\n\n'        Text.Whitespace
+
+'{%'          Comment.Preproc
+' '           Text
+'for'         Keyword
+' '           Text
+'mnt'         Name.Variable
+' '           Text
+'in'          Keyword
+' '           Text
+'salt'        Name.Variable
+'['           Operator
+"'cmd.run'"   Literal.String.Single
+']'           Operator
+'('           Operator
+"'ls /dev/data/moose*'" Literal.String.Single
+')'           Operator
+'.split'      Name.Variable
+'('           Operator
+')'           Operator
+' '           Text
+'%}'          Comment.Preproc
+'\n'          Text.Whitespace
+
+'/mnt/moose'  Name.Tag
+'{{'          Comment.Preproc
+' '           Text
+'mnt'         Name.Variable
+'['           Operator
+'-'           Operator
+'1'           Literal.Number
+']'           Operator
+' '           Text
+'}}'          Comment.Preproc
+':'           Punctuation
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'mount.mounted' Name.Tag
+':'           Punctuation
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'-'           Punctuation.Indicator
+' '           Text.Whitespace
+'device'      Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'{{'          Comment.Preproc
+' '           Text
+'mnt'         Name.Variable
+' '           Text
+'}}'          Comment.Preproc
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'-'           Punctuation.Indicator
+' '           Text.Whitespace
+'fstype'      Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'xfs'         Literal.Scalar.Plain
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'-'           Punctuation.Indicator
+' '           Text.Whitespace
+'mkmnt'       Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'True'        Literal.Scalar.Plain
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'file.directory' Name.Tag
+':'           Punctuation
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'-'           Punctuation.Indicator
+' '           Text.Whitespace
+'user'        Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'mfs'         Literal.Scalar.Plain
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'-'           Punctuation.Indicator
+' '           Text.Whitespace
+'group'       Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'mfs'         Literal.Scalar.Plain
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'-'           Punctuation.Indicator
+' '           Text.Whitespace
+'require'     Name.Tag
+':'           Punctuation
+'\n'          Text.Whitespace
+
+'      '      Text.Whitespace
+'-'           Punctuation.Indicator
+' '           Text.Whitespace
+'user'        Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'mfs'         Literal.Scalar.Plain
+'\n'          Text.Whitespace
+
+'      '      Text.Whitespace
+'-'           Punctuation.Indicator
+' '           Text.Whitespace
+'group'       Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'mfs'         Literal.Scalar.Plain
+'\n'          Text.Whitespace
+
+'{%'          Comment.Preproc
+' '           Text
+'endfor'      Keyword
+' '           Text
+'%}'          Comment.Preproc
+'\n\n'        Text.Whitespace
+
+'/etc/mfshdd.cfg' Name.Tag
+':'           Punctuation
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'file.managed' Name.Tag
+':'           Punctuation
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'-'           Punctuation.Indicator
+' '           Text.Whitespace
+'source'      Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'salt://moosefs/mfshdd.cfg' Literal.Scalar.Plain
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'-'           Punctuation.Indicator
+' '           Text.Whitespace
+'user'        Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'root'        Literal.Scalar.Plain
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'-'           Punctuation.Indicator
+' '           Text.Whitespace
+'group'       Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'root'        Literal.Scalar.Plain
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'-'           Punctuation.Indicator
+' '           Text.Whitespace
+'mode'        Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'644'         Literal.Scalar.Plain
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'-'           Punctuation.Indicator
+' '           Text.Whitespace
+'template'    Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'jinja'       Literal.Scalar.Plain
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'-'           Punctuation.Indicator
+' '           Text.Whitespace
+'require'     Name.Tag
+':'           Punctuation
+'\n'          Text.Whitespace
+
+'      '      Text.Whitespace
+'-'           Punctuation.Indicator
+' '           Text.Whitespace
+'pkg'         Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'mfs-chunkserver' Literal.Scalar.Plain
+'\n\n'        Text.Whitespace
+
+'/etc/mfschunkserver.cfg' Name.Tag
+':'           Punctuation
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'file.managed' Name.Tag
+':'           Punctuation
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'-'           Punctuation.Indicator
+' '           Text.Whitespace
+'source'      Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'salt://moosefs/mfschunkserver.cfg' Literal.Scalar.Plain
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'-'           Punctuation.Indicator
+' '           Text.Whitespace
+'user'        Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'root'        Literal.Scalar.Plain
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'-'           Punctuation.Indicator
+' '           Text.Whitespace
+'group'       Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'root'        Literal.Scalar.Plain
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'-'           Punctuation.Indicator
+' '           Text.Whitespace
+'mode'        Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'644'         Literal.Scalar.Plain
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'-'           Punctuation.Indicator
+' '           Text.Whitespace
+'template'    Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'jinja'       Literal.Scalar.Plain
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'-'           Punctuation.Indicator
+' '           Text.Whitespace
+'require'     Name.Tag
+':'           Punctuation
+'\n'          Text.Whitespace
+
+'      '      Text.Whitespace
+'-'           Punctuation.Indicator
+' '           Text.Whitespace
+'pkg'         Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'mfs-chunkserver' Literal.Scalar.Plain
+'\n\n'        Text.Whitespace
+
+'mfs-chunkserver' Name.Tag
+':'           Punctuation
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'pkg'         Name.Tag
+':'           Punctuation
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'-'           Punctuation.Indicator
+' '           Text.Whitespace
+'installed'   Literal.Scalar.Plain
+'\n'          Text.Whitespace
+
+'mfschunkserver' Name.Tag
+':'           Punctuation
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'service'     Name.Tag
+':'           Punctuation
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'-'           Punctuation.Indicator
+' '           Text.Whitespace
+'running'     Literal.Scalar.Plain
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'-'           Punctuation.Indicator
+' '           Text.Whitespace
+'require'     Name.Tag
+':'           Punctuation
+'\n'          Text.Whitespace
+
+'{%'          Comment.Preproc
+' '           Text
+'for'         Keyword
+' '           Text
+'mnt'         Name.Variable
+' '           Text
+'in'          Keyword
+' '           Text
+'salt'        Name.Variable
+'['           Operator
+"'cmd.run'"   Literal.String.Single
+']'           Operator
+'('           Operator
+"'ls /dev/data/moose*'" Literal.String.Single
+')'           Operator
+' '           Text
+'%}'          Comment.Preproc
+'\n'          Text.Whitespace
+
+'      '      Text.Whitespace
+'-'           Punctuation.Indicator
+' '           Text.Whitespace
+'mount'       Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'/mnt/moose'  Literal.Scalar.Plain
+'{{'          Comment.Preproc
+' '           Text
+'mnt'         Name.Variable
+'['           Operator
+'-'           Operator
+'1'           Literal.Number
+']'           Operator
+' '           Text
+'}}'          Comment.Preproc
+'\n'          Text.Whitespace
+
+'      '      Text.Whitespace
+'-'           Punctuation.Indicator
+' '           Text.Whitespace
+'file'        Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'/mnt/moose'  Literal.Scalar.Plain
+'{{'          Comment.Preproc
+' '           Text
+'mnt'         Name.Variable
+'['           Operator
+'-'           Operator
+'1'           Literal.Number
+']'           Operator
+' '           Text
+'}}'          Comment.Preproc
+'\n'          Text.Whitespace
+
+'{%'          Comment.Preproc
+' '           Text
+'endfor'      Keyword
+' '           Text
+'%}'          Comment.Preproc
+'\n'          Text.Whitespace
+
+'      '      Text.Whitespace
+'-'           Punctuation.Indicator
+' '           Text.Whitespace
+'file'        Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'/etc/mfschunkserver.cfg' Literal.Scalar.Plain
+'\n'          Text.Whitespace
+
+'      '      Text.Whitespace
+'-'           Punctuation.Indicator
+' '           Text.Whitespace
+'file'        Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'/etc/mfshdd.cfg' Literal.Scalar.Plain
+'\n'          Text.Whitespace
+
+'      '      Text.Whitespace
+'-'           Punctuation.Indicator
+' '           Text.Whitespace
+'file'        Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'/var/lib/mfs' Literal.Scalar.Plain
+'\n'          Text.Whitespace

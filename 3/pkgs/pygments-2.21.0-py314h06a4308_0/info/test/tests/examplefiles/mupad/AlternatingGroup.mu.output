@@ -1,0 +1,493 @@
+'/*'          Comment.Multiline
+'++ $Id: AlternatingGroup.mu,v 1.4 2003' Comment.Multiline
+'/'           Comment.Multiline
+'09'          Comment.Multiline
+'/'           Comment.Multiline
+'08 15:00:47 nthiery Exp $\n\nDom::AlternatingGroup(n) -- the Alternating Group of {1..n}\n\nn\t   - integer >= 1\n\nElements are represented as in Dom::PermutationGroup(n)\n\nAuthor:\t     Nicolas M. Thiéry <nthiery@users.sourceforge.net>\nLicense:     LGPL\nCreated:     August 8th, 1999\nLast update: $Date: 2003' Comment.Multiline
+'/'           Comment.Multiline
+'09'          Comment.Multiline
+'/'           Comment.Multiline
+'08 15:00:47 $\n++' Comment.Multiline
+'*/'          Comment.Multiline
+'\n\n'        Text.Whitespace
+
+'domain'      Keyword
+' '           Text.Whitespace
+'Dom::AlternatingGroup' Name.Function
+'('           Punctuation
+'n'           Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'Type::PosInt' Name.Variable
+')'           Punctuation
+'\n    '      Text.Whitespace
+'inherits'    Keyword
+' '           Text.Whitespace
+'Dom::PermutationGroup' Name.Function
+'('           Punctuation
+'n'           Name.Variable
+','           Operator
+'toBeDefined' Name.Variable
+')'           Punctuation
+';'           Operator
+'\n    '      Text.Whitespace
+'category'    Keyword
+' '           Text.Whitespace
+'Cat::PermutationGroup' Name.Variable
+';'           Operator
+'\n    '      Text.Whitespace
+'axiom'       Keyword
+' '           Text.Whitespace
+'Ax::canonicalRep' Name.Variable
+';'           Operator
+'\n\n'        Text.Whitespace
+
+'/*'          Comment.Multiline
+'--\n    size\n\n    Size of the group.\n--' Comment.Multiline
+'*/'          Comment.Multiline
+'\n\n    '    Text.Whitespace
+'size'        Name.Variable
+' '           Text.Whitespace
+':'           Operator
+'='           Operator
+' '           Text.Whitespace
+'fact'        Name.Function
+'('           Punctuation
+'n'           Name.Variable
+')'           Punctuation
+'/'           Operator
+'2'           Literal.Number
+';'           Operator
+'\n\n'        Text.Whitespace
+
+'/*'          Comment.Multiline
+'--\n    generators\n\n    A list of generators of the group\n\n    The first 3-cycle (1,2,3), and a maximal even cycle (1,...,n) or\n    (2,...,n) depending on the parity of n\n\n--' Comment.Multiline
+'*/'          Comment.Multiline
+'\n\n    '    Text.Whitespace
+'generators'  Name.Variable
+' '           Text.Whitespace
+':'           Operator
+'='           Operator
+'\n    '      Text.Whitespace
+'if'          Keyword
+'\t '         Text.Whitespace
+'n'           Name.Variable
+'<'           Operator
+'='           Operator
+'2'           Literal.Number
+'\t     '     Text.Whitespace
+'then'        Keyword
+' '           Text.Whitespace
+'generators'  Name.Variable
+':'           Operator
+'='           Operator
+'['           Punctuation
+'dom'         Name.Builtin.Pseudo
+'('           Punctuation
+'['           Punctuation
+'['           Punctuation
+'1'           Literal.Number
+']'           Punctuation
+']'           Punctuation
+')'           Punctuation
+']'           Punctuation
+';'           Operator
+'\n    '      Text.Whitespace
+'elif'        Keyword
+' '           Text.Whitespace
+'n'           Name.Variable
+'='           Operator
+'3'           Literal.Number
+'\t     '     Text.Whitespace
+'then'        Keyword
+' '           Text.Whitespace
+'generators'  Name.Variable
+':'           Operator
+'='           Operator
+'['           Punctuation
+'dom'         Name.Builtin.Pseudo
+'('           Punctuation
+'['           Punctuation
+'['           Punctuation
+'1'           Literal.Number
+','           Operator
+'2'           Literal.Number
+','           Operator
+'3'           Literal.Number
+']'           Punctuation
+']'           Punctuation
+')'           Punctuation
+']'           Punctuation
+';'           Operator
+'\n    '      Text.Whitespace
+'elif'        Keyword
+' '           Text.Whitespace
+'n'           Name.Variable
+' '           Text.Whitespace
+'mod'         Operator.Word
+' '           Text.Whitespace
+'2'           Literal.Number
+'='           Operator
+'0'           Literal.Number
+'   '         Text.Whitespace
+'then'        Keyword
+' '           Text.Whitespace
+'generators'  Name.Variable
+':'           Operator
+'='           Operator
+'['           Punctuation
+'dom'         Name.Builtin.Pseudo
+'('           Punctuation
+'['           Punctuation
+'['           Punctuation
+'1'           Literal.Number
+','           Operator
+'2'           Literal.Number
+','           Operator
+'3'           Literal.Number
+']'           Punctuation
+']'           Punctuation
+')'           Punctuation
+','           Operator
+' '           Text.Whitespace
+'dom'         Name.Builtin.Pseudo
+'('           Punctuation
+'['           Punctuation
+'['           Punctuation
+'$'           Operator
+'2.'          Literal.Number
+'.'           Operator
+'n'           Name.Variable
+']'           Punctuation
+']'           Punctuation
+')'           Punctuation
+']'           Punctuation
+';'           Operator
+'\n    '      Text.Whitespace
+'else'        Keyword
+'\t\t  '      Text.Whitespace
+'generators'  Name.Variable
+':'           Operator
+'='           Operator
+'['           Punctuation
+'dom'         Name.Builtin.Pseudo
+'('           Punctuation
+'['           Punctuation
+'['           Punctuation
+'1'           Literal.Number
+','           Operator
+'2'           Literal.Number
+','           Operator
+'3'           Literal.Number
+']'           Punctuation
+']'           Punctuation
+')'           Punctuation
+','           Operator
+' '           Text.Whitespace
+'dom'         Name.Builtin.Pseudo
+'('           Punctuation
+'['           Punctuation
+'['           Punctuation
+'$'           Operator
+'1.'          Literal.Number
+'.'           Operator
+'n'           Name.Variable
+']'           Punctuation
+']'           Punctuation
+')'           Punctuation
+']'           Punctuation
+';'           Operator
+'\n    '      Text.Whitespace
+'end_if'      Keyword
+';'           Operator
+'\n    \n'    Text.Whitespace
+
+'/*'          Comment.Multiline
+'--\n    allElements\n\n    List of all the elements of the group\n--' Comment.Multiline
+'*/'          Comment.Multiline
+'\n\n    '    Text.Whitespace
+'allElements' Name.Variable
+' '           Text.Whitespace
+':'           Operator
+'='           Operator
+'\n    '      Text.Whitespace
+'proc'        Keyword
+'('           Punctuation
+')'           Punctuation
+'\n\t'        Text.Whitespace
+'option'      Keyword
+' '           Text.Whitespace
+'remember'    Name.Variable
+';'           Operator
+'\n\t'        Text.Whitespace
+'local'       Keyword
+' '           Text.Whitespace
+'p'           Name.Variable
+';'           Operator
+'\n    '      Text.Whitespace
+'begin'       Keyword
+'\n\t'        Text.Whitespace
+'['           Punctuation
+'new'         Name.Function
+'('           Punctuation
+'dom'         Name.Builtin.Pseudo
+','           Operator
+'p'           Name.Variable
+')'           Punctuation
+' '           Text.Whitespace
+'$'           Operator
+' '           Text.Whitespace
+'p'           Name.Variable
+' '           Text.Whitespace
+'in'          Operator.Word
+' '           Text.Whitespace
+'select'      Name.Function
+'('           Punctuation
+'combinat::permutations' Name.Function
+'('           Punctuation
+'n'           Name.Variable
+')'           Punctuation
+','           Operator
+'\n\t\t\t\t  ' Text.Whitespace
+'p'           Name.Variable
+'-'           Operator
+'>'           Operator
+'bool'        Name.Function
+'('           Punctuation
+'combinat::permutations::sign' Name.Function
+'('           Punctuation
+'p'           Name.Variable
+')'           Punctuation
+'='           Operator
+'1'           Literal.Number
+')'           Punctuation
+')'           Punctuation
+']'           Punctuation
+';'           Operator
+'\n    '      Text.Whitespace
+'end_proc'    Keyword
+';'           Operator
+'\n\n'        Text.Whitespace
+
+'/*'          Comment.Multiline
+'--\n    cycleTypes:\n\n    Count the elements of the group by cycle type.\n    (Cf Cat::PermutationGroupModule).\n\n    Same algorithm as for Dom::SymmetricGroup, but only even permutations\n    are considered. This is done by disregarding partitions p such\n    that n-length(p) is odd.\n--' Comment.Multiline
+'*/'          Comment.Multiline
+'\n\n    '    Text.Whitespace
+'cycleTypes'  Name.Variable
+' '           Text.Whitespace
+':'           Operator
+'='           Operator
+'\n    '      Text.Whitespace
+'proc'        Keyword
+'('           Punctuation
+')'           Punctuation
+'\n\t'        Text.Whitespace
+'option'      Keyword
+' '           Text.Whitespace
+'remember'    Name.Variable
+';'           Operator
+'\n\t'        Text.Whitespace
+'local'       Keyword
+' '           Text.Whitespace
+'t'           Name.Variable
+','           Operator
+' '           Text.Whitespace
+'p'           Name.Variable
+','           Operator
+' '           Text.Whitespace
+'gen'         Name.Variable
+';'           Operator
+'\n    '      Text.Whitespace
+'begin'       Keyword
+'\n\t'        Text.Whitespace
+'userinfo'    Name.Function
+'('           Punctuation
+'3'           Literal.Number
+','           Operator
+' '           Text.Whitespace
+'"cycleTypes: starting computation"' Literal.String
+')'           Punctuation
+';'           Operator
+'\n\t'        Text.Whitespace
+'t'           Name.Variable
+':'           Operator
+'='           Operator
+'table'       Name.Function
+'('           Punctuation
+')'           Punctuation
+';'           Operator
+'\n\n\t'      Text.Whitespace
+'gen'         Name.Variable
+' '           Text.Whitespace
+':'           Operator
+'='           Operator
+' '           Text.Whitespace
+'combinat::partitions::generator' Name.Function
+'('           Punctuation
+'n'           Name.Variable
+')'           Punctuation
+';'           Operator
+'\n\t'        Text.Whitespace
+'while'       Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'p'           Name.Variable
+':'           Operator
+'='           Operator
+'gen'         Name.Function
+'('           Punctuation
+')'           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'<'           Operator
+'>'           Operator
+' '           Text.Whitespace
+'FAIL'        Name.Constant
+' '           Text.Whitespace
+'do'          Keyword
+'\n\t    '    Text.Whitespace
+'userinfo'    Name.Function
+'('           Punctuation
+'5'           Literal.Number
+','           Operator
+' '           Text.Whitespace
+'"working on partition"' Literal.String
+','           Operator
+' '           Text.Whitespace
+'p'           Name.Variable
+')'           Punctuation
+';'           Operator
+'\n\t    '    Text.Whitespace
+'if'          Keyword
+'('           Punctuation
+'n'           Name.Variable
+'-'           Operator
+'nops'        Name.Function
+'('           Punctuation
+'p'           Name.Variable
+')'           Punctuation
+' '           Text.Whitespace
+'mod'         Operator.Word
+' '           Text.Whitespace
+'2'           Literal.Number
+'='           Operator
+'0'           Literal.Number
+')'           Punctuation
+' '           Text.Whitespace
+'then'        Keyword
+'\n\t\t'      Text.Whitespace
+'// Compute the size of the conjugacy class of Sn indexed by p' Comment.Single
+'\n\t\t'      Text.Whitespace
+'// and the cycle type of a permutation in this conjugacy class' Comment.Single
+'\n                ' Text.Whitespace
+'t'           Name.Variable
+'['           Punctuation
+'combinat::partitions::toExp' Name.Function
+'('           Punctuation
+'p'           Name.Variable
+','           Operator
+'n'           Name.Variable
+')'           Punctuation
+']'           Punctuation
+'\n                  ' Text.Whitespace
+':'           Operator
+'='           Operator
+' '           Text.Whitespace
+'combinat::partitions::conjugacyClassSize' Name.Function
+'('           Punctuation
+'p'           Name.Variable
+')'           Punctuation
+';'           Operator
+'\n\t    '    Text.Whitespace
+'end_if'      Keyword
+';'           Operator
+'\n        '  Text.Whitespace
+'end_while'   Keyword
+';'           Operator
+'\n\t'        Text.Whitespace
+'t'           Name.Variable
+';'           Operator
+'\n    '      Text.Whitespace
+'end_proc'    Keyword
+';'           Operator
+'\n\n'        Text.Whitespace
+
+'begin'       Keyword
+'\n    '      Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'testargs'    Name.Function
+'('           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'then'        Keyword
+'\n\t'        Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'args'        Name.Function
+'('           Punctuation
+'0'           Literal.Number
+')'           Punctuation
+' '           Text.Whitespace
+'<'           Operator
+'>'           Operator
+' '           Text.Whitespace
+'1'           Literal.Number
+' '           Text.Whitespace
+'then'        Keyword
+' '           Text.Whitespace
+'error'       Name.Function
+'('           Punctuation
+'"wrong no of args"' Literal.String
+')'           Punctuation
+';'           Operator
+' '           Text.Whitespace
+'end_if'      Keyword
+';'           Operator
+'\n\t'        Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'not'         Operator.Word
+' '           Text.Whitespace
+'testtype'    Name.Function
+'('           Punctuation
+'n'           Name.Variable
+','           Operator
+'DOM_INT'     Name.Class
+')'           Punctuation
+' '           Text.Whitespace
+'then'        Keyword
+'\n\t    '    Text.Whitespace
+'error'       Name.Function
+'('           Punctuation
+'"argument must be integer"' Literal.String
+')'           Punctuation
+'\n\t'        Text.Whitespace
+'end_if'      Keyword
+';'           Operator
+'\n\t'        Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'n'           Name.Variable
+' '           Text.Whitespace
+'<'           Operator
+' '           Text.Whitespace
+'1'           Literal.Number
+' '           Text.Whitespace
+'then'        Keyword
+'\n\t    '    Text.Whitespace
+'error'       Name.Function
+'('           Punctuation
+'"argument must be positive"' Literal.String
+')'           Punctuation
+'\n\t'        Text.Whitespace
+'end_if'      Keyword
+';'           Operator
+'\n    '      Text.Whitespace
+'end_if'      Keyword
+';'           Operator
+'\n'          Text.Whitespace
+
+'end_domain'  Keyword
+':'           Operator
+'\n'          Text.Whitespace

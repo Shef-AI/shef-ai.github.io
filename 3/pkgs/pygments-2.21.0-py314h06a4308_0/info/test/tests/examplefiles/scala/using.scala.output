@@ -1,0 +1,93 @@
+'def'         Keyword
+' '           Text.Whitespace
+'f'           Name.Function
+'('           Punctuation
+'using'       Keyword
+' '           Text.Whitespace
+'x'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'Int'         Name.Class
+')'           Punctuation
+':'           Punctuation
+' '           Text.Whitespace
+'Unit'        Name.Class
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'('           Punctuation
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'f'           Name
+'('           Punctuation
+'using'       Keyword
+' '           Text.Whitespace
+'2'           Literal.Number.Integer
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'f'           Name
+'('           Punctuation
+'using'       Keyword
+' '           Text.Whitespace
+'.2'          Literal.Number.Float
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'class'       Keyword
+' '           Text.Whitespace
+'A'           Name.Class
+'('           Punctuation
+'using'       Keyword
+' '           Text.Whitespace
+'x'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'Int'         Name.Class
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'new'         Keyword
+' '           Text.Whitespace
+'A'           Name.Class
+'('           Punctuation
+'using'       Keyword
+' '           Text.Whitespace
+'3'           Literal.Number.Integer
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'f'           Name
+'('           Punctuation
+'using'       Keyword
+' '           Text.Whitespace
+'('           Punctuation
+')'           Punctuation
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'f'           Name
+'('           Punctuation
+'using'       Keyword
+' '           Text.Whitespace
+'{'           Punctuation
+'}'           Punctuation
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'f'           Name
+'('           Punctuation
+'using'       Keyword
+' '           Text.Whitespace
+"' '"         Literal.String.Char
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'f'           Name
+'('           Punctuation
+'using'       Keyword
+' '           Text.Whitespace
+'""'          Literal.String
+')'           Punctuation
+'\n'          Text.Whitespace

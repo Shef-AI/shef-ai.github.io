@@ -1,0 +1,71 @@
+# This file created by conda-build 26.3.0
+# meta.yaml template originally from:
+# /home/task_IvKTYlU4Sf-Bz_0/pthread-stubs-feedstock/recipe, last modified Fri Jul 24 12:38:57 2026
+# ------------------------------------------------
+
+package:
+  name: pthread-stubs
+  version: '0.3'
+source:
+  url: https://www.x.org/releases/individual/xcb/libpthread-stubs-0.3.tar.bz2
+  sha256: 35b6d54e3cc6f3ba28061da81af64b9a92b7b757319098172488a660e3d87299
+build:
+  number: '2'
+  detect_binary_files_with_prefix: true
+  string: h47b2149_2
+requirements:
+  build:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 52_gnu
+    - binutils_impl_linux-64 2.44 h78f17ca_3
+    - binutils_linux-64 2.44 hc03a8fd_3
+    - gcc_impl_linux-64 14.3.0 h4943218_4
+    - gcc_linux-64 14.3.0 hda73cce_15
+    - kernel-headers_linux-64 4.18.0 h3108a97_1
+    - ld_impl_linux-64 2.44 h9e0c5a2_3
+    - libgcc 15.2.0 h69a1729_8
+    - libgcc-devel_linux-64 14.3.0 he7458c1_104
+    - libgcc-ng 15.2.0 h166f726_8
+    - libgomp 15.2.0 h4751f2c_8
+    - libltdl 2.6.0 h47b2149_0
+    - libsanitizer 14.3.0 hd4faa28_4
+    - libstdcxx 15.2.0 h39759b7_8
+    - libtool 2.6.0 h7354ed3_0
+    - make 4.2.1 h1bed415_1
+    - pkg-config 0.29.2 h1bed415_8
+    - sysroot_linux-64 2.28 h3108a97_1
+    - tzdata 2026c he532380_0
+  host:
+    - _openmp_mutex 5.1 52_gnu
+    - libgcc 15.2.0 h69a1729_8
+  run:
+    - __glibc >=2.28,<3.0.a0
+    - libgcc >=14
+test:
+  commands:
+    - test -f ${PREFIX}/lib/pkgconfig/pthread-stubs.pc
+about:
+  home: https://xcb.freedesktop.org/
+  license: MIT
+  license_family: MIT
+  license_file: COPYING
+  description: 'This library provides weak aliases for pthread functions not
+
+    provided in libc or otherwise available by default.
+
+    '
+  summary: Stubs missing from libc for standard pthread functions
+  dev_url: https://gitlab.freedesktop.org/xorg/lib/pthread-stubs
+  doc_url: https://gitlab.freedesktop.org/xorg/lib/pthread-stubs
+extra:
+  recipe-maintainers:
+    - ccordoba12
+    - mingwandroid
+    - pkgw
+  final: true
+  copy_test_source_files: true
+  remote_url: https://github.com/AnacondaRecipes/pthread-stubs-feedstock
+  sha: 81edb61a67b0ec12668108dc19acb24d6059d7df
+  task_id: IvKTYlU4Sf-BzUiRCq2YQA
+  task_run_id: '0'
+  pbp_graph_uuid: 028bce18-9a02-4336-ada1-5ab0a6868f4b

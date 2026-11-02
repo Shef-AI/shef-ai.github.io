@@ -1,0 +1,22 @@
+{
+  "arch": "x86_64",
+  "build": "h7354ed3_2",
+  "build_number": 2,
+  "constrains": [
+    "re2 2025-11-05 *_2"
+  ],
+  "depends": [
+    "__glibc >=2.28,<3.0.a0",
+    "libabseil * cxx17*",
+    "libabseil >=20260526.0,<20260527.0a0",
+    "libgcc >=14",
+    "libstdcxx >=14"
+  ],
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "name": "libre2-11",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1784747034757,
+  "version": "2025.11.05"
+}

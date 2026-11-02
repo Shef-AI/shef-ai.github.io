@@ -1,0 +1,122 @@
+# This file created by conda-build 26.7.1
+# meta.yaml template originally from:
+# /home/task_179036649519472/conda-rattler-solver-feedstock/recipe, last modified Fri Sep 25 20:01:47 2026
+# ------------------------------------------------
+
+package:
+  name: conda-rattler-solver
+  version: 0.2.0
+source:
+  url: https://github.com/conda/conda-rattler-solver/archive/0.2.0.tar.gz
+  sha256: 3276b7a8cd63dfa64822c75e99e318b10f7e5a02ffb6c26cf5ab7db2b470562e
+build:
+  number: '0'
+  script: /home/task_179036649519472/croot/conda-rattler-solver_1790366531060/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_/bin/python
+    -m pip install . --no-deps --no-build-isolation -vv
+  string: py314h06a4308_0
+requirements:
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 52_gnu
+    - bzip2 1.0.8 h5eee18b_6
+    - ca-certificates 2026.8.13 h06a4308_0
+    - hatch-vcs 0.5.0 py314h06a4308_1
+    - hatchling 1.31.0 py314h06a4308_0
+    - ld_impl_linux-64 2.44 h9e0c5a2_3
+    - libexpat 2.8.5 h7354ed3_1
+    - libffi 3.4.8 h06d3fd0_3
+    - libgcc 15.2.0 h69a1729_8
+    - libgcc-ng 15.2.0 h166f726_8
+    - libmpdec 4.0.1 h47b2149_0
+    - libstdcxx 15.2.0 h39759b7_8
+    - libstdcxx-ng 15.2.0 hc03a8fd_8
+    - libuuid 1.41.5 h5eee18b_0
+    - libxcb 1.17.0 h9b100fa_0
+    - libzlib 1.3.2 h47b2149_0
+    - lz4-c 1.9.4 h7354ed3_5
+    - ncurses 6.6 hfaaeb4e_0
+    - openssl 3.5.8 h1b28b03_0
+    - packaging 26.3 py314h06a4308_0
+    - pathspec 1.1.1 py314h06a4308_0
+    - pip 26.2.1 pyh0d26453_0
+    - pluggy 1.6.0 py314h06a4308_0
+    - pthread-stubs 0.3 h47b2149_2
+    - python 3.14.7 h2bd7c14_101_cp314
+    - python_abi 3.14 4_cp314
+    - readline 8.3 hc2a1206_0
+    - setuptools 83.0.0 py314h06a4308_0
+    - setuptools-scm 10.2.3 py314h06a4308_0
+    - sqlite 3.53.4 h795bf6d_0
+    - tk 9.0.4 h3840b71_1
+    - trove-classifiers 2026.6.1.19 py314h06a4308_0
+    - tzdata 2026c he532380_0
+    - vcs-versioning 2.3.4 py314h06a4308_0
+    - xorg-libx11 1.8.13 h65de747_0
+    - xorg-libxau 1.0.12 h9b100fa_0
+    - xorg-libxdmcp 1.1.5 h9b100fa_0
+    - xorg-xorgproto 2025.1 h47b2149_0
+    - xz 5.8.4 h140a991_0
+    - zlib 1.3.2 h47b2149_0
+    - zstd 1.5.7 h11fc155_0
+  run:
+    - conda >=26.7.0
+    - py-rattler >=0.26.0,<0.27.0a0
+    - python >=3.14,<3.15.0a0
+    - python_abi 3.14.* *_cp314
+test:
+  source_files:
+    - pyproject.toml
+    - tests
+  imports:
+    - conda_rattler_solver.solver
+  requires:
+    - conda-index
+    - pip
+    - pytest
+    - pytest-benchmark
+    - pytest-xprocess
+  commands:
+    - pip check
+    - python -m conda create --dry-run python --solver=rattler
+    - pytest -vv tests  --deselect=tests/test_channels.py::test_conda_build_with_aliased_channels
+      --deselect=tests/test_downstream.py::test_build_recipe --deselect=tests/test_downstream.py::test_conda_lock
+      --deselect=tests/test_performance.py::test_install_vaex_from_conda_forge_and_defaults
+      --deselect=tests/test_solver_differences.py::test_gpu_cpu_mutexes --deselect=tests/test_solver_differences.py::test_old_panel
+      --deselect=tests/test_solver.py::TestRattlerSolver::test_empty --deselect=tests/test_solver.py::TestRattlerSolver::test_anaconda_nomkl
+      --deselect=tests/test_solver.py::TestRattlerSolver::test_unsat_from_r1 --deselect=tests/test_solver.py::TestRattlerSolver::test_get_dists
+      --deselect=tests/test_solver.py::TestRattlerSolver::test_timestamps_and_deps
+      --deselect=tests/test_solver.py::TestRattlerSolver::test_nonexistent_deps --deselect=tests/test_solver.py::TestRattlerSolver::test_install_package_with_feature
+      --deselect=tests/test_solver.py::TestRattlerSolver::test_circular_dependencies
+      --deselect=tests/test_solver.py::TestRattlerSolver::test_irrational_version
+      --deselect=tests/test_solver.py::test_too_aggressive_update_to_conda_forge_packages
+      --deselect=tests/test_solver.py::test_pinned_with_cli_build_string  --deselect=tests/test_solve_comparison_benchmarks.py::test_solve_update_all_large_lockfile
+about:
+  home: https://github.com/conda/conda-rattler-solver
+  summary: The fast pixi solver, now in conda
+  description: 'If conda-libmamba-solver brought the mamba solver to conda, conda-rattler-solver
+    tries to
+
+    integrate the pixi solver (called resolvo, as provided in rattler) in conda.
+
+    Environments solve meaningfully faster with Rattler, especially large or complex
+    ones, and
+
+    your existing environments and workflows keep working.
+
+    '
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
+  dev_url: https://github.com/conda/conda-rattler-solver
+  doc_url: https://github.com/conda/conda-rattler-solver/blob/main/README.md
+extra:
+  recipe-maintainers:
+    - danyeaw
+    - jaimergp
+  final: true
+  copy_test_source_files: true
+  remote_url: https://github.com/AnacondaRecipes/conda-rattler-solver-feedstock
+  sha: 0e20a829aad4490f939665b165cba74fcc04a01a
+  task_id: BInY6XWnRGy30Qdw-93t-g
+  task_run_id: '0'
+  pbp_graph_uuid: ffa828bb-2f0e-4ac5-9065-28eff5f329d6

@@ -1,0 +1,46 @@
+From 60453cdf4b3f05a56d914546fd2f6853ff6f523c Mon Sep 17 00:00:00 2001
+From: "Uwe L. Korn" <uwe.korn@quantco.com>
+Date: Tue, 17 Sep 2024 22:29:40 +0200
+Subject: [PATCH 05/10] Compatible windows changes
+
+---
+ python/BUILD.bazel      | 7 ++++---
+ python/py_extension.bzl | 5 ++++-
+ 2 files changed, 8 insertions(+), 4 deletions(-)
+
+diff --git a/python/BUILD.bazel b/python/BUILD.bazel
+index d9f34af261..ec9185c636 100644
+--- a/python/BUILD.bazel
++++ b/python/BUILD.bazel
+@@ -108,11 +108,12 @@ exports_files(["version_script.lds"])
+ py_extension(
+     name = "_message",
+     srcs = [":message_srcs"],
+-    copts = UPB_DEFAULT_COPTS + select(LIMITED_API_FLAG_SELECT) + [
++    copts = UPB_DEFAULT_COPTS + select(LIMITED_API_FLAG_SELECT) + select({
++        "@platforms//os:windows": [],
+         # The Python API requires patterns that are ISO C incompatible, like
+         # casts between function pointers and object pointers.
+-        "-Wno-pedantic",
+-    ],
++        "//conditions:default": ["-Wno-pedantic"],
++    }),
+     features = UPB_DEFAULT_FEATURES,
+     target_compatible_with = select(_message_target_compatible_with),
+     deps = [
+diff --git a/python/py_extension.bzl b/python/py_extension.bzl
+index 82d8445e26..8587e2b8ee 100644
+--- a/python/py_extension.bzl
++++ b/python/py_extension.bzl
+@@ -16,7 +16,10 @@ def py_extension(name, srcs, copts, deps = [], **kwargs):
+     cc_binary(
+         name = name + "_binary",
+         srcs = srcs,
+-        copts = copts + ["-fvisibility=hidden"],
++        copts = copts + select({
++            "@platforms//os:windows": [],
++            "//conditions:default": ["-fvisibility=hidden"],
++        }),
+         linkopts = selects.with_or({
+             (
+                 "//python/dist:osx_x86_64",

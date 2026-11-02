@@ -1,0 +1,12 @@
+prefix=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3
+exec_prefix=${prefix}
+libdir=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/lib
+includedir=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/include
+
+Name: absl_cordz_sample_token
+Description: Abseil cordz_sample_token library
+URL: https://abseil.io/
+Version: 20260526
+Requires: absl_config = 20260526, absl_cordz_handle = 20260526, absl_cordz_info = 20260526
+Libs: -L${libdir}  -labsl_cordz_sample_token 
+Cflags: -I${includedir} -DNOMINMAX

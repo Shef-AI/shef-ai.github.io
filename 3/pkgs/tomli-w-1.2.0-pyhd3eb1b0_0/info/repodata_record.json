@@ -1,0 +1,22 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch/",
+  "constrains": [],
+  "depends": [
+    "python >=3.9"
+  ],
+  "fn": "tomli-w-1.2.0-pyhd3eb1b0_0.conda",
+  "license": "MIT",
+  "license_family": "MIT",
+  "md5": "9d377a4c8f6b22530328d0726948c03a",
+  "name": "tomli-w",
+  "noarch": "python",
+  "package_type": "noarch_python",
+  "sha256": "43e13e53025f6b4bd99644b5cd81f72e4778a80bf616aefcecf4391ffb049e8f",
+  "size": 11550,
+  "subdir": "noarch",
+  "timestamp": 1738351336000,
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/tomli-w-1.2.0-pyhd3eb1b0_0.conda",
+  "version": "1.2.0"
+}

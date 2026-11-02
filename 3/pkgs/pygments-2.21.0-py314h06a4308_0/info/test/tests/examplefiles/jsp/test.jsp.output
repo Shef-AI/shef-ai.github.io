@@ -1,0 +1,235 @@
+'<!-- This page was loaded on ' Comment.Multiline
+'<%='         Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'new'         Keyword
+' '           Text.Whitespace
+'java'        Name
+'.'           Punctuation
+'util'        Name.Attribute
+'.'           Punctuation
+'Date'        Name.Attribute
+'('           Punctuation
+')'           Punctuation
+')'           Punctuation
+'.'           Punctuation
+'toLocaleString' Name.Attribute
+'('           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'%>'          Keyword
+' -->'        Comment.Multiline
+'\n'          Text.Whitespace
+
+'<%='         Keyword
+' '           Text.Whitespace
+'var'         Keyword.Declaration
+' '           Text.Whitespace
+'x'           Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'1'           Literal.Number.Integer
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'%>'          Keyword
+'\n'          Text.Whitespace
+
+'<%!'         Keyword
+' '           Text.Whitespace
+'int'         Keyword.Type
+' '           Text.Whitespace
+'i'           Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+';'           Punctuation
+' '           Text.Whitespace
+'%>'          Keyword
+'\n'          Text.Whitespace
+
+'<%!'         Keyword
+' '           Text.Whitespace
+'int'         Keyword.Type
+' '           Text.Whitespace
+'a'           Name
+','           Punctuation
+' '           Text.Whitespace
+'b'           Name
+','           Punctuation
+' '           Text.Whitespace
+'c'           Name
+';'           Punctuation
+' '           Text.Whitespace
+'%>'          Keyword
+'\n'          Text.Whitespace
+
+'<%!'         Keyword
+' '           Text.Whitespace
+'Circle'      Name
+' '           Text.Whitespace
+'a'           Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'new'         Keyword
+' '           Text.Whitespace
+'Circle'      Name
+'('           Punctuation
+'2.0'         Literal.Number.Float
+')'           Punctuation
+';'           Punctuation
+' '           Text.Whitespace
+'%>'          Keyword
+'\n\n'        Text.Whitespace
+
+'<%'          Keyword
+'\n'          Text.Whitespace
+
+'      '      Text.Whitespace
+'String'      Name
+' '           Text.Whitespace
+'name'        Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'null'        Keyword.Constant
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'      '      Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'request'     Name
+'.'           Punctuation
+'getParameter' Name.Attribute
+'('           Punctuation
+'"'           Literal.String
+'name'        Literal.String
+'"'           Literal.String
+')'           Punctuation
+' '           Text.Whitespace
+'='           Operator
+'='           Operator
+' '           Text.Whitespace
+'null'        Keyword.Constant
+')'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n'          Text.Whitespace
+
+'%>'          Keyword
+'\n'          Text.Whitespace
+
+'<%@'         Keyword
+' '           Text.Whitespace
+'include'     Name
+' '           Text.Whitespace
+'file'        Name
+'='           Operator
+'"'           Literal.String
+'error.html'  Literal.String
+'"'           Literal.String
+' '           Text.Whitespace
+'%>'          Keyword
+'\n'          Text.Whitespace
+
+'<%'          Keyword
+'\n'          Text.Whitespace
+
+'      '      Text.Whitespace
+'}'           Punctuation
+' '           Text.Whitespace
+'else'        Keyword
+' '           Text.Whitespace
+'{'           Punctuation
+'\n'          Text.Whitespace
+
+'      '      Text.Whitespace
+'foo'         Name
+'.'           Punctuation
+'setName'     Name.Attribute
+'('           Punctuation
+'request'     Name
+'.'           Punctuation
+'getParameter' Name.Attribute
+'('           Punctuation
+'"'           Literal.String
+'name'        Literal.String
+'"'           Literal.String
+')'           Punctuation
+')'           Punctuation
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'      '      Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'foo'         Name
+'.'           Punctuation
+'getName'     Name.Attribute
+'('           Punctuation
+')'           Punctuation
+'.'           Punctuation
+'equalsIgnoreCase' Name.Attribute
+'('           Punctuation
+'"'           Literal.String
+'integra'     Literal.String
+'"'           Literal.String
+')'           Punctuation
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'      '      Text.Whitespace
+'name'        Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'"'           Literal.String
+'acura'       Literal.String
+'"'           Literal.String
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'      '      Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'name'        Name
+'.'           Punctuation
+'equalsIgnoreCase' Name.Attribute
+'('           Punctuation
+' '           Text.Whitespace
+'"'           Literal.String
+'acura'       Literal.String
+'"'           Literal.String
+' '           Text.Whitespace
+')'           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n'          Text.Whitespace
+
+'%>'          Keyword
+'\n\n'        Text.Whitespace
+
+'<jsp:useBean id="calendar" scope="page" class="employee.Calendar" />' Keyword
+'\n'          Text.Whitespace
+
+'<h2'         Name.Tag
+'>'           Name.Tag
+'\n'          Text.Whitespace
+
+'Calendar'    Text
+' '           Text.Whitespace
+'of'          Text
+' '           Text.Whitespace
+'<jsp:getProperty name="calendar" property="username" />' Keyword
+'\n'          Text.Whitespace
+
+'</h2>'       Name.Tag
+'\n'          Text.Whitespace

@@ -1,0 +1,18 @@
+@echo ON
+mkdir build
+cd build
+
+cmake .. ^
+  -GNinja ^
+  -DCMAKE_BUILD_TYPE=Release ^
+  -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
+  -DENABLE_SHARED_LIB=ON ^
+  -DENABLE_STATIC_LIB=OFF ^
+  -DENABLE_APP=OFF ^
+  -DENABLE_HPACK_TOOLS=OFF ^
+  -DENABLE_EXAMPLES=OFF ^
+  -DWITH_JEMALLOC=OFF ^
+  -DWITH_LIBXML2=OFF ^
+  -DWITH_SPDYLAY=OFF
+
+if %ERRORLEVEL% neq 0 (type CMakeError.log && exit 1)

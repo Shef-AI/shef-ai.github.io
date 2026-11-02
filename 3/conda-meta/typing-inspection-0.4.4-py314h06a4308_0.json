@@ -1,0 +1,161 @@
+{
+  "name": "typing-inspection",
+  "version": "0.4.4",
+  "build": "py314h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "subdir": "linux-64",
+  "fn": "typing-inspection-0.4.4-py314h06a4308_0.conda",
+  "md5": "d65847ee2d86d9c73c9bbfe13bc00fea",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/typing-inspection-0.4.4-py314h06a4308_0.conda",
+  "sha256": "910f89f930ae0e8e7bc3765bbea85374131da08ca2fe2191d873a5b9500f7bf2",
+  "arch": "x86_64",
+  "platform": "linux",
+  "depends": [
+    "python >=3.14,<3.15.0a0",
+    "python_abi 3.14.* *_cp314",
+    "typing_extensions >=4.15.0"
+  ],
+  "constrains": [],
+  "license": "MIT",
+  "license_family": "MIT",
+  "timestamp": 1792427810000,
+  "size": 34170,
+  "requested_spec": "https://repo.anaconda.com/pkgs/main/linux-64::typing-inspection==0.4.4=py314h06a4308_0",
+  "package_tarball_full_path": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/typing-inspection-0.4.4-py314h06a4308_0.conda",
+  "extracted_package_dir": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/typing-inspection-0.4.4-py314h06a4308_0",
+  "files": [
+    "lib/python3.14/site-packages/typing_inspection-0.4.4.dist-info/INSTALLER",
+    "lib/python3.14/site-packages/typing_inspection-0.4.4.dist-info/METADATA",
+    "lib/python3.14/site-packages/typing_inspection-0.4.4.dist-info/RECORD",
+    "lib/python3.14/site-packages/typing_inspection-0.4.4.dist-info/REQUESTED",
+    "lib/python3.14/site-packages/typing_inspection-0.4.4.dist-info/WHEEL",
+    "lib/python3.14/site-packages/typing_inspection-0.4.4.dist-info/direct_url.json",
+    "lib/python3.14/site-packages/typing_inspection-0.4.4.dist-info/licenses/LICENSE",
+    "lib/python3.14/site-packages/typing_inspection/__init__.py",
+    "lib/python3.14/site-packages/typing_inspection/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/typing_inspection/__pycache__/introspection.cpython-314.pyc",
+    "lib/python3.14/site-packages/typing_inspection/__pycache__/typing_objects.cpython-314.pyc",
+    "lib/python3.14/site-packages/typing_inspection/introspection.py",
+    "lib/python3.14/site-packages/typing_inspection/py.typed",
+    "lib/python3.14/site-packages/typing_inspection/typing_objects.py",
+    "lib/python3.14/site-packages/typing_inspection/typing_objects.pyi"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/python3.14/site-packages/typing_inspection-0.4.4.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5,
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/typing_inspection-0.4.4.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "37c1268cf538aa483504d1f5556432ad6d3800d75e74a398cba536a6d8a93d40",
+        "size_in_bytes": 2554,
+        "sha256_in_prefix": "37c1268cf538aa483504d1f5556432ad6d3800d75e74a398cba536a6d8a93d40"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/typing_inspection-0.4.4.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "7f5a38d5dd920786270b3741d354572d096ed8123174058e2f810e3ab47ba7e8",
+        "size_in_bytes": 1280,
+        "sha256_in_prefix": "7f5a38d5dd920786270b3741d354572d096ed8123174058e2f810e3ab47ba7e8"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/typing_inspection-0.4.4.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/typing_inspection-0.4.4.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "942926c567d0b1273d09f20295879abd37507845f6b683eab9f87d808df91100",
+        "size_in_bytes": 87,
+        "sha256_in_prefix": "942926c567d0b1273d09f20295879abd37507845f6b683eab9f87d808df91100"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/typing_inspection-0.4.4.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "ecdfd29978c0008f4e5daeb1e0d034887ecd4937ae1e54cef8433ecd2a861984",
+        "size_in_bytes": 103,
+        "sha256_in_prefix": "ecdfd29978c0008f4e5daeb1e0d034887ecd4937ae1e54cef8433ecd2a861984"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/typing_inspection-0.4.4.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "804b59b25f2c31bd278f9202a19ae49a3945aa2664387e2d0a128c7cacc61ec3",
+        "size_in_bytes": 1090,
+        "sha256_in_prefix": "804b59b25f2c31bd278f9202a19ae49a3945aa2664387e2d0a128c7cacc61ec3"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/typing_inspection/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/typing_inspection/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "cbf9ee0c7eb78987f849422b658478648dc1c7326e56ef044bc83f0fd73d9210",
+        "size_in_bytes": 157,
+        "sha256_in_prefix": "cbf9ee0c7eb78987f849422b658478648dc1c7326e56ef044bc83f0fd73d9210"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/typing_inspection/__pycache__/introspection.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "1042c1951761e5711ccd9d0079e74b1b5a9643eafd59ae04fa2cc9ff2a558188",
+        "size_in_bytes": 19506,
+        "sha256_in_prefix": "1042c1951761e5711ccd9d0079e74b1b5a9643eafd59ae04fa2cc9ff2a558188"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/typing_inspection/__pycache__/typing_objects.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "94b22da1d95a58c20d99163de89fdc1612b5d09bc66b5d5364152a07f84bf4db",
+        "size_in_bytes": 18789,
+        "sha256_in_prefix": "94b22da1d95a58c20d99163de89fdc1612b5d09bc66b5d5364152a07f84bf4db"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/typing_inspection/introspection.py",
+        "path_type": "hardlink",
+        "sha256": "5888c45bd627da692d9527699e3f549adf35651596b1656772310e12181b4396",
+        "size_in_bytes": 22550,
+        "sha256_in_prefix": "5888c45bd627da692d9527699e3f549adf35651596b1656772310e12181b4396"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/typing_inspection/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/typing_inspection/typing_objects.py",
+        "path_type": "hardlink",
+        "sha256": "a778d6290d51581c9c9a23e0263af2a4604c76def5c4d40a7cd1a375b0046ff6",
+        "size_in_bytes": 17838,
+        "sha256_in_prefix": "a778d6290d51581c9c9a23e0263af2a4604c76def5c4d40a7cd1a375b0046ff6"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/typing_inspection/typing_objects.pyi",
+        "path_type": "hardlink",
+        "sha256": "3bd24dd92d0270d31d64fd40abc1ef8693f5322aab9a78aeb3c5b62f992f84be",
+        "size_in_bytes": 9635,
+        "sha256_in_prefix": "3bd24dd92d0270d31d64fd40abc1ef8693f5322aab9a78aeb3c5b62f992f84be"
+      }
+    ]
+  },
+  "link": {
+    "source": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/typing-inspection-0.4.4-py314h06a4308_0",
+    "type": 1
+  },
+  "requested_specs": [
+    "https://repo.anaconda.com/pkgs/main/linux-64::typing-inspection==0.4.4=py314h06a4308_0"
+  ]
+}

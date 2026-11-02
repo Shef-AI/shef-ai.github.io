@@ -1,0 +1,386 @@
+'{'           Comment.Preproc
+'i'           Comment.Preproc
+'n'           Comment.Preproc
+'c'           Comment.Preproc
+'l'           Comment.Preproc
+'u'           Comment.Preproc
+'d'           Comment.Preproc
+'e'           Comment.Preproc
+'.'           Comment.Preproc
+'i'           Comment.Preproc
+'}'           Comment.Preproc
+'\n'          Text.Whitespace
+
+'{'           Comment.Preproc
+'n'           Comment.Preproc
+'e'           Comment.Preproc
+'s'           Comment.Preproc
+'t'           Comment.Preproc
+'e'           Comment.Preproc
+'d'           Comment.Preproc
+'.'           Comment.Preproc
+'i'           Comment.Preproc
+' '           Comment.Preproc
+'{'           Comment.Preproc
+'i'           Comment.Preproc
+'n'           Comment.Preproc
+'c'           Comment.Preproc
+'l'           Comment.Preproc
+'u'           Comment.Preproc
+'d'           Comment.Preproc
+'e'           Comment.Preproc
+'.'           Comment.Preproc
+'i'           Comment.Preproc
+'}'           Comment.Preproc
+'}'           Comment.Preproc
+'\n\n&SCOPED-DEFINE MY_NAME "Abe"' Comment.Preproc
+'\n\n'        Text.Whitespace
+
+'DEF'         Keyword.Declaration
+' '           Text.Whitespace
+'VAR'         Name.Builtin
+' '           Text.Whitespace
+'i'           Name.Variable
+' '           Text.Whitespace
+'AS'          Name.Builtin
+' '           Text.Whitespace
+'INT'         Keyword.Type
+' '           Text.Whitespace
+'NO-UNDO'     Name.Builtin
+'.'           Punctuation
+'\n'          Text.Whitespace
+
+'i'           Name.Variable
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'0xABE'       Literal.Number.Hex
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+'1337'        Literal.Number.Integer
+' '           Text.Whitespace
+'/'           Operator
+' '           Text.Whitespace
+'('           Punctuation
+'1'           Literal.Number.Integer
+' '           Text.Whitespace
+'*'           Operator
+' '           Text.Whitespace
+'1.00'        Literal.Number.Float
+')'           Punctuation
+'\n\n'        Text.Whitespace
+
+'def'         Keyword.Declaration
+' '           Text.Whitespace
+'var'         Name.Builtin
+' '           Text.Whitespace
+'c'           Name.Variable
+'l'           Name.Variable
+'o'           Name.Variable
+'w'           Name.Variable
+'e'           Name.Variable
+'r'           Name.Variable
+'c'           Name.Variable
+'a'           Name.Variable
+'s'           Name.Variable
+'e'           Name.Variable
+'t'           Name.Variable
+'e'           Name.Variable
+'s'           Name.Variable
+'t'           Name.Variable
+' '           Text.Whitespace
+'as'          Name.Builtin
+' '           Text.Whitespace
+'char'        Keyword.Type
+' '           Text.Whitespace
+'no-undo'     Name.Builtin
+'.'           Punctuation
+'\n'          Text.Whitespace
+
+'DEF'         Keyword.Declaration
+' '           Text.Whitespace
+'VAR'         Name.Builtin
+' '           Text.Whitespace
+'v'           Name.Variable
+'a'           Name.Variable
+'r'           Name.Variable
+'d'           Name.Variable
+'a'           Name.Variable
+'s'           Name.Variable
+'h'           Name.Variable
+'t'           Name.Variable
+'e'           Name.Variable
+'s'           Name.Variable
+'t'           Name.Variable
+' '           Text.Whitespace
+'AS'          Name.Builtin
+' '           Text.Whitespace
+'DATETIME-TZ' Keyword.Type
+' '           Text.Whitespace
+'NO-UNDO'     Name.Builtin
+'.'           Punctuation
+'\n\n'        Text.Whitespace
+
+'DEFINE'      Keyword.Declaration
+' '           Text.Whitespace
+'TEMP-TABLE'  Name.Builtin
+' '           Text.Whitespace
+'t'           Name.Variable
+'t'           Name.Variable
+'N'           Name.Variable
+'a'           Name.Variable
+'m'           Name.Variable
+'e'           Name.Variable
+'s'           Name.Variable
+' '           Text.Whitespace
+'NO-UNDO\n '  Name.Builtin
+' '           Text.Whitespace
+'FIELD'       Name.Builtin
+' '           Text.Whitespace
+'c'           Name.Variable
+'N'           Name.Variable
+'a'           Name.Variable
+'m'           Name.Variable
+'e'           Name.Variable
+' '           Text.Whitespace
+'AS'          Name.Builtin
+' '           Text.Whitespace
+'CHAR\n '     Keyword.Type
+' '           Text.Whitespace
+'INDEX'       Name.Builtin
+' '           Text.Whitespace
+'I'           Name.Variable
+'X'           Name.Variable
+'P'           Name.Variable
+'K'           Name.Variable
+'_'           Name.Variable
+'t'           Name.Variable
+'t'           Name.Variable
+'N'           Name.Variable
+'a'           Name.Variable
+'m'           Name.Variable
+'e'           Name.Variable
+'s'           Name.Variable
+' '           Text.Whitespace
+'IS'          Name.Builtin
+' '           Text.Whitespace
+'PRIMARY'     Name.Builtin
+' '           Text.Whitespace
+'UNIQUE'      Name.Builtin
+' '           Text.Whitespace
+'c'           Name.Variable
+'N'           Name.Variable
+'a'           Name.Variable
+'m'           Name.Variable
+'e'           Name.Variable
+'.'           Punctuation
+'\n\n'        Text.Whitespace
+
+'/*'          Comment.Multiline
+' '           Comment.Multiline
+'O'           Comment.Multiline
+'n'           Comment.Multiline
+'e'           Comment.Multiline
+'-'           Comment.Multiline
+'l'           Comment.Multiline
+'i'           Comment.Multiline
+'n'           Comment.Multiline
+'e'           Comment.Multiline
+' '           Comment.Multiline
+'c'           Comment.Multiline
+'o'           Comment.Multiline
+'m'           Comment.Multiline
+'m'           Comment.Multiline
+'e'           Comment.Multiline
+'n'           Comment.Multiline
+'t'           Comment.Multiline
+' '           Comment.Multiline
+'*/'          Comment.Multiline
+'\n'          Text.Whitespace
+
+'/*'          Comment.Multiline
+' '           Comment.Multiline
+'T'           Comment.Multiline
+'w'           Comment.Multiline
+'o'           Comment.Multiline
+'-'           Comment.Multiline
+'l'           Comment.Multiline
+'i'           Comment.Multiline
+'n'           Comment.Multiline
+'e'           Comment.Multiline
+'\n'          Comment.Multiline
+
+' '           Comment.Multiline
+' '           Comment.Multiline
+' '           Comment.Multiline
+'C'           Comment.Multiline
+'o'           Comment.Multiline
+'m'           Comment.Multiline
+'m'           Comment.Multiline
+'e'           Comment.Multiline
+'n'           Comment.Multiline
+'t'           Comment.Multiline
+' '           Comment.Multiline
+' '           Comment.Multiline
+'*/'          Comment.Multiline
+'\n'          Text.Whitespace
+
+'/*'          Comment.Multiline
+'\n'          Comment.Multiline
+
+' '           Comment.Multiline
+' '           Comment.Multiline
+'N'           Comment.Multiline
+'e'           Comment.Multiline
+'s'           Comment.Multiline
+'t'           Comment.Multiline
+'e'           Comment.Multiline
+'d'           Comment.Multiline
+'\n'          Comment.Multiline
+
+' '           Comment.Multiline
+' '           Comment.Multiline
+'/*'          Comment.Multiline
+'\n'          Comment.Multiline
+
+' '           Comment.Multiline
+' '           Comment.Multiline
+' '           Comment.Multiline
+' '           Comment.Multiline
+'M'           Comment.Multiline
+'u'           Comment.Multiline
+'l'           Comment.Multiline
+'t'           Comment.Multiline
+'i'           Comment.Multiline
+'l'           Comment.Multiline
+'i'           Comment.Multiline
+'n'           Comment.Multiline
+'e'           Comment.Multiline
+'\n'          Comment.Multiline
+
+' '           Comment.Multiline
+' '           Comment.Multiline
+' '           Comment.Multiline
+' '           Comment.Multiline
+'/*'          Comment.Multiline
+'\n'          Comment.Multiline
+
+' '           Comment.Multiline
+' '           Comment.Multiline
+' '           Comment.Multiline
+' '           Comment.Multiline
+' '           Comment.Multiline
+' '           Comment.Multiline
+'C'           Comment.Multiline
+'o'           Comment.Multiline
+'m'           Comment.Multiline
+'m'           Comment.Multiline
+'e'           Comment.Multiline
+'n'           Comment.Multiline
+'t'           Comment.Multiline
+'\n'          Comment.Multiline
+
+' '           Comment.Multiline
+' '           Comment.Multiline
+' '           Comment.Multiline
+' '           Comment.Multiline
+'*/'          Comment.Multiline
+'\n'          Comment.Multiline
+
+' '           Comment.Multiline
+' '           Comment.Multiline
+'*/'          Comment.Multiline
+'\n'          Comment.Multiline
+
+'*/'          Comment.Multiline
+'\n\n'        Text.Whitespace
+
+'CREATE'      Name.Builtin
+' '           Text.Whitespace
+'t'           Name.Variable
+'t'           Name.Variable
+'N'           Name.Variable
+'a'           Name.Variable
+'m'           Name.Variable
+'e'           Name.Variable
+'s'           Name.Variable
+'.'           Punctuation
+'\n'          Text.Whitespace
+
+'ASSIGN'      Name.Builtin
+' '           Text.Whitespace
+'t'           Name.Variable
+'t'           Name.Variable
+'N'           Name.Variable
+'a'           Name.Variable
+'m'           Name.Variable
+'e'           Name.Variable
+'s'           Name.Variable
+'.'           Punctuation
+'c'           Name.Variable
+'N'           Name.Variable
+'a'           Name.Variable
+'m'           Name.Variable
+'e'           Name.Variable
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'{'           Comment.Preproc
+'&'           Comment.Preproc
+'M'           Comment.Preproc
+'Y'           Comment.Preproc
+'_'           Comment.Preproc
+'N'           Comment.Preproc
+'A'           Comment.Preproc
+'M'           Comment.Preproc
+'E'           Comment.Preproc
+'}'           Comment.Preproc
+'.'           Punctuation
+'\n\n'        Text.Whitespace
+
+'FOR'         Name.Builtin
+' '           Text.Whitespace
+'EACH'        Name.Builtin
+' '           Text.Whitespace
+'t'           Name.Variable
+'t'           Name.Variable
+'N'           Name.Variable
+'a'           Name.Variable
+'m'           Name.Variable
+'e'           Name.Variable
+'s'           Name.Variable
+':'           Punctuation
+'\n  '        Text.Whitespace
+'MESSAGE '    Name.Builtin
+'"Hello, "'   Literal.String.Double
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+'t'           Name.Variable
+'t'           Name.Variable
+'N'           Name.Variable
+'a'           Name.Variable
+'m'           Name.Variable
+'e'           Name.Variable
+'s'           Name.Variable
+'.'           Punctuation
+'c'           Name.Variable
+'N'           Name.Variable
+'a'           Name.Variable
+'m'           Name.Variable
+'e'           Name.Variable
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+"'!'"         Literal.String.Single
+' '           Text.Whitespace
+'VIEW-AS'     Name.Builtin
+' '           Text.Whitespace
+'ALERT-BOX'   Name.Builtin
+'.'           Punctuation
+'\n'          Text.Whitespace
+
+'END'         Name.Builtin
+'.'           Punctuation
+'\n'          Text.Whitespace

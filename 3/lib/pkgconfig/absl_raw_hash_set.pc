@@ -1,0 +1,12 @@
+prefix=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3
+exec_prefix=${prefix}
+libdir=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/lib
+includedir=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/include
+
+Name: absl_raw_hash_set
+Description: Abseil raw_hash_set library
+URL: https://abseil.io/
+Version: 20260526
+Requires: absl_base = 20260526, absl_bits = 20260526, absl_common_policy_traits = 20260526, absl_compressed_tuple = 20260526, absl_config = 20260526, absl_container_common = 20260526, absl_container_memory = 20260526, absl_core_headers = 20260526, absl_dynamic_annotations = 20260526, absl_endian = 20260526, absl_function_ref = 20260526, absl_hash = 20260526, absl_hash_function_defaults = 20260526, absl_hash_policy_traits = 20260526, absl_hashtable_control_bytes = 20260526, absl_hashtable_debug_hooks = 20260526, absl_hashtablez_sampler = 20260526, absl_iterator_traits_internal = 20260526, absl_memory = 20260526, absl_meta = 20260526, absl_optional = 20260526, absl_prefetch = 20260526, absl_raw_logging_internal = 20260526, absl_utility = 20260526, absl_weakly_mixed_integer = 20260526
+Libs: -L${libdir}  -labsl_raw_hash_set 
+Cflags: -I${includedir} -DNOMINMAX

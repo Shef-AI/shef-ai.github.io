@@ -1,0 +1,47 @@
+'def'         Keyword
+' '           Text.Whitespace
+'me'          Name.Variable
+' '           Text.Whitespace
+':='          Operator
+' '           Text.Whitespace
+'object:'     Name.Builtin
+' '           Text.Whitespace
+'{'           Punctuation
+'\n    '      Text.Whitespace
+'def'         Keyword
+' '           Text.Whitespace
+'name'        Name.Variable
+' '           Text.Whitespace
+':='          Operator
+' '           Text.Whitespace
+'"Kevin"'     Literal.String
+';'           Punctuation
+'\n    '      Text.Whitespace
+'def'         Keyword
+' '           Text.Whitespace
+'sayHello'    Name.Variable
+'('           Punctuation
+'peerName'    Name.Variable
+')'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n        '  Text.Whitespace
+'system'      Name.Variable
+'.'           Operator
+'println'     Name.Variable
+'('           Punctuation
+'peerName'    Name.Variable
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+'" says hello!"' Literal.String
+')'           Punctuation
+';'           Punctuation
+'\n    '      Text.Whitespace
+'}'           Punctuation
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+';'           Punctuation
+'\n'          Text.Whitespace

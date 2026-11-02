@@ -1,0 +1,95 @@
+# This file created by conda-build 26.3.0
+# ------------------------------------------------
+
+package:
+  name: lz4-c
+  version: 1.9.4
+source:
+  url: https://github.com/lz4/lz4/archive/v1.9.4.tar.gz
+  sha256: 0b0e3aa07c8c063ddf40b082bdf7e37a1562bda40a0ff5272957f3e987e0e54b
+  patches: null
+build:
+  run_exports:
+    - lz4-c >=1.9.4,<1.10.0a0
+  number: 5
+  string: h7354ed3_5
+requirements:
+  build:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 52_gnu
+    - binutils_impl_linux-64 2.44 h78f17ca_3
+    - binutils_linux-64 2.44 hc03a8fd_3
+    - gcc_impl_linux-64 14.3.0 h4943218_4
+    - gcc_linux-64 14.3.0 hda73cce_14
+    - gxx_impl_linux-64 14.3.0 he634eba_4
+    - gxx_linux-64 14.3.0 hca8765c_14
+    - kernel-headers_linux-64 4.18.0 h3108a97_1
+    - ld_impl_linux-64 2.44 h9e0c5a2_3
+    - libgcc 15.2.0 h69a1729_8
+    - libgcc-devel_linux-64 14.3.0 he7458c1_104
+    - libgcc-ng 15.2.0 h166f726_8
+    - libgomp 15.2.0 h4751f2c_8
+    - libsanitizer 14.3.0 hd4faa28_4
+    - libstdcxx 15.2.0 h39759b7_8
+    - libstdcxx-devel_linux-64 14.3.0 he7458c1_104
+    - make 4.2.1 h1bed415_1
+    - sysroot_linux-64 2.28 h3108a97_1
+    - tzdata 2026b he532380_0
+  host:
+    - _openmp_mutex 5.1 52_gnu
+    - libgcc 15.2.0 h69a1729_8
+    - libstdcxx 15.2.0 h39759b7_8
+  run:
+    - __glibc >=2.28,<3.0.a0
+    - libgcc >=14
+    - libstdcxx >=14
+test:
+  requires:
+    - pkg-config
+  commands:
+    - lz4 -h
+    - lz4c -h
+    - lz4cat -h
+    - unlz4 -h
+    - test -f ${PREFIX}/include/lz4.h
+    - test -f ${PREFIX}/include/lz4hc.h
+    - test -f ${PREFIX}/include/lz4frame.h
+    - test ! -f ${PREFIX}/lib/liblz4.a
+    - test -f ${PREFIX}/lib/liblz4.so
+    - test -f ${PREFIX}/lib/pkgconfig/liblz4.pc
+    - pkg-config --cflags --libs liblz4
+about:
+  home: https://lz4.org/
+  license: BSD-2-Clause
+  license_family: BSD
+  license_file: lib/LICENSE
+  summary: Extremely Fast Compression algorithm
+  description: 'LZ4 is lossless compression algorithm, providing compression speed
+    at 400
+
+    MB/s per core (0.16 Bytes/cycle). It features an extremely fast decoder,
+
+    with speed in multiple GB/s per core (0.71 Bytes/cycle). A high compression
+
+    derivative, called LZ4_HC, is available, trading customizable CPU time for
+
+    compression ratio. LZ4 library is provided as open source software using a
+
+    BSD license.
+
+    '
+  dev_url: https://github.com/lz4/lz4
+  doc_url: https://github.com/lz4/lz4/blob/dev/README.md
+extra:
+  recipe-maintainers:
+    - mingwandroid
+    - rmax
+    - wesm
+    - xhochy
+  final: true
+  copy_test_source_files: true
+  remote_url: https://github.com/AnacondaRecipes/lz4-c-feedstock
+  sha: 7edec42bed162a245f9d67cdf45f175422c883ed
+  task_id: PdhvA_zvRjS4t5AGDTjE2Q
+  task_run_id: '0'
+  pbp_graph_uuid: 81e37283-6e5c-46c1-af45-893ac68f8141

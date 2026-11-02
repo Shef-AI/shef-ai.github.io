@@ -1,0 +1,327 @@
+'BoOtStRaP'   Keyword
+':'           Text
+' '           Text.Whitespace
+'l'           Text
+'i'           Text
+'b'           Text
+'r'           Text
+'a'           Text
+'r'           Text
+'y'           Text
+'  # pass: headers are case-insensitive\n' Comment
+
+"# pass: do not highlight '%'\n" Comment
+
+'MirrorURL'   Keyword
+':'           Text
+' '           Text.Whitespace
+'h'           Text
+'t'           Text
+'t'           Text
+'p'           Text
+':'           Text
+'/'           Text
+'/'           Text
+'m'           Text
+'i'           Text
+'r'           Text
+'r'           Text
+'o'           Text
+'r'           Text
+'.'           Text
+'c'           Text
+'e'           Text
+'n'           Text
+'t'           Text
+'o'           Text
+'s'           Text
+'.'           Text
+'o'           Text
+'r'           Text
+'g'           Text
+'/'           Text
+'c'           Text
+'e'           Text
+'n'           Text
+'t'           Text
+'o'           Text
+'s'           Text
+'-'           Text
+'%'           Text
+'{'           Text
+'O'           Text
+'S'           Text
+'V'           Text
+'E'           Text
+'R'           Text
+'S'           Text
+'I'           Text
+'O'           Text
+'N'           Text
+'}'           Text
+'/'           Text
+'%'           Text
+'{'           Text
+'O'           Text
+'S'           Text
+'V'           Text
+'E'           Text
+'R'           Text
+'S'           Text
+'I'           Text
+'O'           Text
+'N'           Text
+'}'           Text
+'/'           Text
+'o'           Text
+'s'           Text
+'/'           Text
+'$'           Text
+'b'           Text
+'a'           Text
+'s'           Text
+'e'           Text
+'a'           Text
+'r'           Text
+'c'           Text
+'h'           Text
+'/'           Text
+'\n'          Text
+
+' '           Text.Whitespace
+'From'        Keyword
+':'           Text
+' '           Text.Whitespace
+'u'           Text
+'b'           Text
+'u'           Text
+'n'           Text
+'t'           Text
+'u'           Text
+':'           Text
+'18.04'       Literal.Number
+' # pass: leading whitespace allowed\n' Comment
+
+'\n'          Text.Whitespace
+
+'%setup'      Generic.Heading
+'\n    '      Text.Whitespace
+'touch'       Text
+' '           Text.Whitespace
+'/file1'      Text
+'\n'          Text.Whitespace
+
+'touch'       Text
+' '           Text.Whitespace
+'${'          Literal.String.Interpol
+'SINGULARITY_ROOTFS' Name.Variable
+'}'           Literal.String.Interpol
+'/file2'      Text
+' '           Text.Whitespace
+'# pass: leading whitespace optional\n' Comment.Single
+
+'\n'          Text.Whitespace
+
+'%files'      Generic.Heading
+'\n    '      Text.Whitespace
+'/file1'      Text
+'\n    '      Text.Whitespace
+'/file1'      Text
+' '           Text.Whitespace
+'/opt'        Text
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'%environment' Generic.Heading
+'\n    '      Text.Whitespace
+'export'      Name.Builtin
+' '           Text.Whitespace
+'LISTEN_PORT' Name.Variable
+'='           Operator
+'12345'       Literal.Number
+'\n    '      Text.Whitespace
+'export'      Name.Builtin
+' '           Text.Whitespace
+'LC_ALL'      Name.Variable
+'='           Operator
+'C'           Text
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'%runscript'  Generic.Heading
+'\n    '      Text.Whitespace
+'echo'        Name.Builtin
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'Container was created ' Literal.String.Double
+'$NOW'        Name.Variable
+'"'           Literal.String.Double
+'\n    '      Text.Whitespace
+'echo'        Name.Builtin
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'Arguments received: ' Literal.String.Double
+'$*'          Name.Variable
+'"'           Literal.String.Double
+'\n    '      Text.Whitespace
+'exec'        Name.Builtin
+' '           Text.Whitespace
+'echo'        Name.Builtin
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'$@'          Name.Variable
+'"'           Literal.String.Double
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'%startscript' Generic.Heading
+'\n    '      Text.Whitespace
+'nc'          Text
+' '           Text.Whitespace
+'-lp'         Text
+' '           Text.Whitespace
+'$LISTEN_PORT' Name.Variable
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'%test'       Generic.Heading
+'\n    '      Text.Whitespace
+'grep'        Text
+' '           Text.Whitespace
+'-q'          Text
+' '           Text.Whitespace
+'NAME'        Name.Variable
+'='           Operator
+'\\"'         Literal.String.Escape
+'Ubuntu'      Text
+'\\"'         Literal.String.Escape
+' '           Text.Whitespace
+'/etc/os-release' Text
+'\n    '      Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'['           Operator
+' '           Text.Whitespace
+'$?'          Name.Variable
+' '           Text.Whitespace
+'-eq'         Text
+' '           Text.Whitespace
+'0'           Literal.Number
+' '           Text.Whitespace
+']'           Operator
+';'           Punctuation
+' '           Text.Whitespace
+'then'        Keyword
+'\n        '  Text.Whitespace
+'echo'        Name.Builtin
+' '           Text.Whitespace
+'"Container base is Ubuntu as expected."' Literal.String.Double
+'\n    '      Text.Whitespace
+'else'        Keyword
+'\n        '  Text.Whitespace
+'echo'        Name.Builtin
+' '           Text.Whitespace
+'"Container base is not Ubuntu."' Literal.String.Double
+'\n    '      Text.Whitespace
+'fi'          Keyword
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'%labels'     Generic.Heading
+'\n    '      Text.Whitespace
+'Author'      Text
+' '           Text.Whitespace
+'d@sylabs.io' Text
+'\n    '      Text.Whitespace
+'Version'     Text
+' '           Text.Whitespace
+'v0.0.1'      Text
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'%help'       Generic.Heading
+'\n    '      Text.Whitespace
+'This'        Text
+' '           Text.Whitespace
+'is'          Text
+' '           Text.Whitespace
+'a'           Text
+' '           Text.Whitespace
+'demo'        Text
+' '           Text.Whitespace
+'container'   Text
+' '           Text.Whitespace
+'used'        Text
+' '           Text.Whitespace
+'to'          Text
+' '           Text.Whitespace
+'illustrate'  Text
+' '           Text.Whitespace
+'a'           Text
+' '           Text.Whitespace
+'def'         Text
+' '           Text.Whitespace
+'file'        Text
+' '           Text.Whitespace
+'that'        Text
+' '           Text.Whitespace
+'uses'        Text
+' '           Text.Whitespace
+'all'         Text
+'\n    '      Text.Whitespace
+'supported'   Text
+' '           Text.Whitespace
+'sections.'   Text
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'%post'       Generic.Heading
+'\n    '      Text.Whitespace
+'apt-get'     Text
+' '           Text.Whitespace
+'update'      Text
+' '           Text.Whitespace
+'&&'          Operator
+' '           Text.Whitespace
+'apt-get'     Text
+' '           Text.Whitespace
+'install'     Text
+' '           Text.Whitespace
+'-y'          Text
+' '           Text.Whitespace
+'netcat'      Text
+'\n    '      Text.Whitespace
+'NOW'         Name.Variable
+'='           Operator
+'$(('         Keyword
+'date'        Name.Variable
+' '           Text.Whitespace
+'%'           Operator
+' '           Text.Whitespace
+'1'           Literal.Number
+'))'          Keyword
+' '           Text.Whitespace
+"# pass: don't highlight '%'\n" Comment.Single
+
+'    '        Text.Whitespace
+'echo'        Name.Builtin
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'export NOW=\\"' Literal.String.Double
+'${'          Literal.String.Interpol
+'NOW'         Name.Variable
+'}'           Literal.String.Interpol
+'\\"'         Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'>>'          Text
+' '           Text.Whitespace
+'$SINGULARITY_ENVIRONMENT' Name.Variable
+'\n'          Text.Whitespace

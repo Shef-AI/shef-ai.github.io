@@ -1,0 +1,31 @@
+{
+  "paths": [
+    {
+      "_path": "lib/libbrotlidec.so",
+      "path_type": "softlink",
+      "sha256": "468f198a7a15aa67c4dd7b272281d8b8ecedd39c9548b693a948e02e0dcf6788",
+      "size_in_bytes": 60224
+    },
+    {
+      "_path": "lib/libbrotlidec.so.1",
+      "path_type": "softlink",
+      "sha256": "468f198a7a15aa67c4dd7b272281d8b8ecedd39c9548b693a948e02e0dcf6788",
+      "size_in_bytes": 60224
+    },
+    {
+      "_path": "lib/libbrotlidec.so.1.2.0",
+      "path_type": "hardlink",
+      "sha256": "468f198a7a15aa67c4dd7b272281d8b8ecedd39c9548b693a948e02e0dcf6788",
+      "size_in_bytes": 60224
+    },
+    {
+      "_path": "lib/pkgconfig/libbrotlidec.pc",
+      "file_mode": "text",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/home/task_176236350079666/conda-bld/brotli-split_1762363540655/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+      "sha256": "73239569edbeca951cf3ae3198a748b6f4bc72fe7cbdf8f201cbcce590931a2c",
+      "size_in_bytes": 787
+    }
+  ],
+  "paths_version": 1
+}

@@ -1,0 +1,576 @@
+'{'           Punctuation
+' '           Text
+'stdenv'      Text
+','           Punctuation
+' '           Text
+'fetchurl'    Text
+','           Punctuation
+' '           Text
+'fetchgit'    Text
+','           Punctuation
+' '           Text
+'openssl'     Text
+','           Punctuation
+' '           Text
+'zlib'        Text
+','           Punctuation
+' '           Text
+'pcre'        Text
+','           Punctuation
+' '           Text
+'libxml2'     Text
+','           Punctuation
+' '           Text
+'libxslt'     Text
+','           Punctuation
+' '           Text
+'expat'       Text
+'\n'          Text
+
+','           Punctuation
+' '           Text
+'rtmp'        Text
+' '           Text
+'?'           Operator
+' '           Text
+'false'       Name.Constant
+'\n'          Text
+
+','           Punctuation
+' '           Text
+'fullWebDAV'  Text
+' '           Text
+'?'           Operator
+' '           Text
+'false'       Name.Constant
+'\n'          Text
+
+','           Punctuation
+' '           Text
+'syslog'      Text
+' '           Text
+'?'           Operator
+' '           Text
+'false'       Name.Constant
+'\n'          Text
+
+','           Punctuation
+' '           Text
+'moreheaders' Text
+' '           Text
+'?'           Operator
+' '           Text
+'false'       Name.Constant
+','           Punctuation
+' '           Text
+'.'           Operator
+'.'           Operator
+'.'           Operator
+'}'           Punctuation
+':'           Punctuation
+'\n\n'        Text
+
+'let'         Keyword
+'\n  '        Text
+'version'     Literal.String.Symbol
+' '           Text
+'='           Operator
+' '           Text
+'"'           Literal.String.Double
+'1.4.4'       Literal.String.Double
+'"'           Literal.String.Double
+';'           Punctuation
+'\n  '        Text
+'mainSrc'     Literal.String.Symbol
+' '           Text
+'='           Operator
+' '           Text
+'fetchurl'    Text
+' '           Text
+'{'           Punctuation
+'\n    '      Text
+'url'         Literal.String.Symbol
+' '           Text
+'='           Operator
+' '           Text
+'"'           Literal.String.Double
+'http://nginx.org/download/nginx-' Literal.String.Double
+'${'          Literal.String.Interpol
+'version'     Text
+'}'           Literal.String.Interpol
+'.tar.gz'     Literal.String.Double
+'"'           Literal.String.Double
+';'           Punctuation
+'\n    '      Text
+'sha256'      Literal.String.Symbol
+' '           Text
+'='           Operator
+' '           Text
+'"'           Literal.String.Double
+'1f82845mpgmhvm151fhn2cnqjggw9w7cvsqbva9rb320wmc9m63w' Literal.String.Double
+'"'           Literal.String.Double
+';'           Punctuation
+'\n  '        Text
+'}'           Punctuation
+';'           Punctuation
+'\n\n  '      Text
+'rtmp-ext'    Literal.String.Symbol
+' '           Text
+'='           Operator
+' '           Text
+'fetchgit'    Text
+' '           Text
+'{'           Punctuation
+'\n    '      Text
+'url'         Literal.String.Symbol
+' '           Text
+'='           Operator
+' '           Text
+'git://github.com/arut/nginx-rtmp-module.git' Literal
+';'           Punctuation
+'\n    '      Text
+'rev'         Literal.String.Symbol
+' '           Text
+'='           Operator
+' '           Text
+'"'           Literal.String.Double
+'1cfb7aeb582789f3b15a03da5b662d1811e2a3f1' Literal.String.Double
+'"'           Literal.String.Double
+';'           Punctuation
+'\n    '      Text
+'sha256'      Literal.String.Symbol
+' '           Text
+'='           Operator
+' '           Text
+'"'           Literal.String.Double
+'03ikfd2l8mzsjwx896l07rdrw5jn7jjfdiyl572yb9jfrnk48fwi' Literal.String.Double
+'"'           Literal.String.Double
+';'           Punctuation
+'\n  '        Text
+'}'           Punctuation
+';'           Punctuation
+'\n\n  '      Text
+'dav-ext'     Literal.String.Symbol
+' '           Text
+'='           Operator
+' '           Text
+'fetchgit'    Text
+' '           Text
+'{'           Punctuation
+'\n    '      Text
+'url'         Literal.String.Symbol
+' '           Text
+'='           Operator
+' '           Text
+'git://github.com/arut/nginx-dav-ext-module.git' Literal
+';'           Punctuation
+'\n    '      Text
+'rev'         Literal.String.Symbol
+' '           Text
+'='           Operator
+' '           Text
+'"'           Literal.String.Double
+'54cebc1f21fc13391aae692c6cce672fa7986f9d' Literal.String.Double
+'"'           Literal.String.Double
+';'           Punctuation
+'\n    '      Text
+'sha256'      Literal.String.Symbol
+' '           Text
+'='           Operator
+' '           Text
+'"'           Literal.String.Double
+'1dvpq1fg5rslnl05z8jc39sgnvh3akam9qxfl033akpczq1bh8nq' Literal.String.Double
+'"'           Literal.String.Double
+';'           Punctuation
+'\n  '        Text
+'}'           Punctuation
+';'           Punctuation
+'\n\n  '      Text
+'syslog-ext'  Literal.String.Symbol
+' '           Text
+'='           Operator
+' '           Text
+'fetchgit'    Text
+' '           Text
+'{'           Punctuation
+'\n    '      Text
+'url'         Literal.String.Symbol
+' '           Text
+'='           Operator
+' '           Text
+'https://github.com/yaoweibin/nginx_syslog_patch.git' Literal
+';'           Punctuation
+'\n    '      Text
+'rev'         Literal.String.Symbol
+' '           Text
+'='           Operator
+' '           Text
+'"'           Literal.String.Double
+'165affd9741f0e30c4c8225da5e487d33832aca3' Literal.String.Double
+'"'           Literal.String.Double
+';'           Punctuation
+'\n    '      Text
+'sha256'      Literal.String.Symbol
+' '           Text
+'='           Operator
+' '           Text
+'"'           Literal.String.Double
+'14dkkafjnbapp6jnvrjg9ip46j00cr8pqc2g7374z9aj7hrvdvhs' Literal.String.Double
+'"'           Literal.String.Double
+';'           Punctuation
+'\n  '        Text
+'}'           Punctuation
+';'           Punctuation
+'\n\n  '      Text
+'moreheaders-ext' Literal.String.Symbol
+' '           Text
+'='           Operator
+' '           Text
+'fetchgit'    Text
+' '           Text
+'{'           Punctuation
+'\n    '      Text
+'url'         Literal.String.Symbol
+' '           Text
+'='           Operator
+' '           Text
+'https://github.com/agentzh/headers-more-nginx-module.git' Literal
+';'           Punctuation
+'\n    '      Text
+'rev'         Literal.String.Symbol
+' '           Text
+'='           Operator
+' '           Text
+'"'           Literal.String.Double
+'refs/tags/v0.23' Literal.String.Double
+'"'           Literal.String.Double
+';'           Punctuation
+'\n    '      Text
+'sha256'      Literal.String.Symbol
+' '           Text
+'='           Operator
+' '           Text
+'"'           Literal.String.Double
+'12pbjgsxnvcf2ff2i2qdn39q4cm5czlgrng96j8ml4cgxvnbdh39' Literal.String.Double
+'"'           Literal.String.Double
+';'           Punctuation
+'\n  '        Text
+'}'           Punctuation
+';'           Punctuation
+'\n'          Text
+
+'in'          Keyword
+'\n\n'        Text
+
+'stdenv'      Text
+'.'           Operator
+'mkDerivation' Text
+' '           Text
+'rec'         Keyword
+' '           Text
+'{'           Punctuation
+'\n  '        Text
+'name'        Literal.String.Symbol
+' '           Text
+'='           Operator
+' '           Text
+'"'           Literal.String.Double
+'nginx-'      Literal.String.Double
+'${'          Literal.String.Interpol
+'version'     Text
+'}'           Literal.String.Interpol
+'"'           Literal.String.Double
+';'           Punctuation
+'\n  '        Text
+'src'         Literal.String.Symbol
+' '           Text
+'='           Operator
+' '           Text
+'mainSrc'     Text
+';'           Punctuation
+'\n\n  '      Text
+'buildInputs' Literal.String.Symbol
+' '           Text
+'='           Operator
+' '           Text
+'['           Punctuation
+' '           Text
+'openssl'     Text
+' '           Text
+'zlib'        Text
+' '           Text
+'pcre'        Text
+' '           Text
+'libxml2'     Text
+' '           Text
+'libxslt'     Text
+'\n    '      Text
+']'           Punctuation
+' '           Text
+'++'          Operator
+' '           Text
+'stdenv'      Text
+'.'           Operator
+'lib'         Text
+'.'           Operator
+'optional'    Text
+' '           Text
+'fullWebDAV'  Text
+' '           Text
+'expat'       Text
+';'           Punctuation
+'\n\n  '      Text
+'patches'     Literal.String.Symbol
+' '           Text
+'='           Operator
+' '           Text
+'if'          Keyword
+' '           Text
+'syslog'      Text
+' '           Text
+'then'        Keyword
+' '           Text
+'['           Punctuation
+' '           Text
+'"'           Literal.String.Double
+'${'          Literal.String.Interpol
+'syslog-ext'  Text
+'}'           Literal.String.Interpol
+'/syslog_1.4.0.patch' Literal.String.Double
+'"'           Literal.String.Double
+' '           Text
+']'           Punctuation
+' '           Text
+'else'        Keyword
+' '           Text
+'['           Punctuation
+']'           Punctuation
+';'           Punctuation
+'\n\n  '      Text
+'configureFlags' Literal.String.Symbol
+' '           Text
+'='           Operator
+' '           Text
+'['           Punctuation
+'\n    '      Text
+'"'           Literal.String.Double
+'--with-http_ssl_module' Literal.String.Double
+'"'           Literal.String.Double
+'\n    '      Text
+'"'           Literal.String.Double
+'--with-http_spdy_module' Literal.String.Double
+'"'           Literal.String.Double
+'\n    '      Text
+'"'           Literal.String.Double
+'--with-http_xslt_module' Literal.String.Double
+'"'           Literal.String.Double
+'\n    '      Text
+'"'           Literal.String.Double
+'--with-http_sub_module' Literal.String.Double
+'"'           Literal.String.Double
+'\n    '      Text
+'"'           Literal.String.Double
+'--with-http_dav_module' Literal.String.Double
+'"'           Literal.String.Double
+'\n    '      Text
+'"'           Literal.String.Double
+'--with-http_gzip_static_module' Literal.String.Double
+'"'           Literal.String.Double
+'\n    '      Text
+'"'           Literal.String.Double
+'--with-http_secure_link_module' Literal.String.Double
+'"'           Literal.String.Double
+'\n    '      Text
+'"'           Literal.String.Double
+'--with-ipv6' Literal.String.Double
+'"'           Literal.String.Double
+'\n    '      Text
+'# Install destination problems' Comment.Single
+'\n    '      Text
+'# "--with-http_perl_module"' Comment.Single
+'\n  '        Text
+']'           Punctuation
+' '           Text
+'++'          Operator
+' '           Text
+'stdenv'      Text
+'.'           Operator
+'lib'         Text
+'.'           Operator
+'optional'    Text
+' '           Text
+'rtmp'        Text
+' '           Text
+'"'           Literal.String.Double
+'--add-module=' Literal.String.Double
+'${'          Literal.String.Interpol
+'rtmp-ext'    Text
+'}'           Literal.String.Interpol
+'"'           Literal.String.Double
+'\n    '      Text
+'++'          Operator
+' '           Text
+'stdenv'      Text
+'.'           Operator
+'lib'         Text
+'.'           Operator
+'optional'    Text
+' '           Text
+'fullWebDAV'  Text
+' '           Text
+'"'           Literal.String.Double
+'--add-module=' Literal.String.Double
+'${'          Literal.String.Interpol
+'dav-ext'     Text
+'}'           Literal.String.Interpol
+'"'           Literal.String.Double
+'\n    '      Text
+'++'          Operator
+' '           Text
+'stdenv'      Text
+'.'           Operator
+'lib'         Text
+'.'           Operator
+'optional'    Text
+' '           Text
+'syslog'      Text
+' '           Text
+'"'           Literal.String.Double
+'--add-module=' Literal.String.Double
+'${'          Literal.String.Interpol
+'syslog-ext'  Text
+'}'           Literal.String.Interpol
+'"'           Literal.String.Double
+'\n    '      Text
+'++'          Operator
+' '           Text
+'stdenv'      Text
+'.'           Operator
+'lib'         Text
+'.'           Operator
+'optional'    Text
+' '           Text
+'moreheaders' Text
+' '           Text
+'"'           Literal.String.Double
+'--add-module=' Literal.String.Double
+'${'          Literal.String.Interpol
+'moreheaders-ext' Text
+'}'           Literal.String.Interpol
+'"'           Literal.String.Double
+';'           Punctuation
+'\n\n  '      Text
+'preConfigure' Literal.String.Symbol
+' '           Text
+'='           Operator
+' '           Text
+"''"          Literal.String.Multiline
+'\n    export NIX_CFLAGS_COMPILE="' Literal.String.Multiline
+'$N'          Literal.String.Multiline
+'IX_CFLAGS_COMPILE -I' Literal.String.Multiline
+'${'          Literal.String.Interpol
+'libxml2'     Text
+' '           Text
+'}'           Literal.String.Interpol
+'/include/libxml2"\n  ' Literal.String.Multiline
+"''"          Literal.String.Multiline
+';'           Punctuation
+'\n\n  '      Text
+'# escape example' Comment.Single
+'\n  '        Text
+'postInstall' Literal.String.Symbol
+' '           Text
+'='           Operator
+' '           Text
+"''"          Literal.String.Multiline
+'\n    mv '   Literal.String.Multiline
+'$o'          Literal.String.Multiline
+'ut/sbin '    Literal.String.Multiline
+"'f"          Literal.String.Multiline
+'oo'          Literal.String.Multiline
+"' "          Literal.String.Multiline
+'$o'          Literal.String.Multiline
+'ut/bin '     Literal.String.Multiline
+"'''"         Literal.String.Escape
+' '           Literal.String.Multiline
+"''$"         Literal.String.Escape
+'{\n   '      Literal.String.Multiline
+'${'          Literal.String.Interpol
+' '           Text
+'if'          Keyword
+' '           Text
+'true'        Name.Constant
+' '           Text
+'then'        Keyword
+' '           Text
+'${'          Literal.String.Interpol
+' '           Text
+'"'           Literal.String.Double
+'"'           Literal.String.Double
+' '           Text
+'}'           Literal.String.Interpol
+' '           Text
+'else'        Keyword
+' '           Text
+'false'       Name.Constant
+' '           Text
+'}'           Literal.String.Interpol
+'\n  '        Literal.String.Multiline
+"''"          Literal.String.Multiline
+';'           Punctuation
+'\n\n  '      Text
+'meta'        Literal.String.Symbol
+' '           Text
+'='           Operator
+' '           Text
+'{'           Punctuation
+'\n    '      Text
+'description' Literal.String.Symbol
+' '           Text
+'='           Operator
+' '           Text
+'"'           Literal.String.Double
+'A reverse proxy and lightweight webserver' Literal.String.Double
+'"'           Literal.String.Double
+';'           Punctuation
+'\n    '      Text
+'maintainers' Literal.String.Symbol
+' '           Text
+'='           Operator
+' '           Text
+'['           Punctuation
+' '           Text
+'stdenv'      Text
+'.'           Operator
+'lib'         Text
+'.'           Operator
+'maintainers' Text
+'.'           Operator
+'raskin'      Text
+']'           Punctuation
+';'           Punctuation
+'\n    '      Text
+'platforms'   Literal.String.Symbol
+' '           Text
+'='           Operator
+' '           Text
+'stdenv'      Text
+'.'           Operator
+'lib'         Text
+'.'           Operator
+'platforms'   Text
+'.'           Operator
+'all'         Text
+';'           Punctuation
+'\n    '      Text
+'inherit'     Keyword
+' '           Text
+'version'     Text
+';'           Punctuation
+'\n  '        Text
+'}'           Punctuation
+';'           Punctuation
+'\n'          Text
+
+'}'           Punctuation
+'\n'          Text

@@ -1,0 +1,21 @@
+{
+  "arch": "x86_64",
+  "build": "hc03a8fd_8",
+  "build_number": 8,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64/",
+  "constrains": [],
+  "depends": [
+    "libstdcxx 15.2.0 h39759b7_8"
+  ],
+  "fn": "libstdcxx-ng-15.2.0-hc03a8fd_8.conda",
+  "license": "GPL-3.0-only WITH GCC-exception-3.1",
+  "md5": "1b632358fe0c3badbd77b81ac05a48c2",
+  "name": "libstdcxx-ng",
+  "platform": "linux",
+  "sha256": "35c3aff92b054a79655da09d4435faefcd7b23303d225b327065db9d263766ed",
+  "size": 28504,
+  "subdir": "linux-64",
+  "timestamp": 1779212854000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/libstdcxx-ng-15.2.0-hc03a8fd_8.conda",
+  "version": "15.2.0"
+}

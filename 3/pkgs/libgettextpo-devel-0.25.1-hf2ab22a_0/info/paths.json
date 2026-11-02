@@ -1,0 +1,17 @@
+{
+  "paths": [
+    {
+      "_path": "include/gettext-po.h",
+      "path_type": "hardlink",
+      "sha256": "d3f27edfdf9218be5b36323a09fd7f1ed601a470a9477669e54823b7b070b031",
+      "size_in_bytes": 15736
+    },
+    {
+      "_path": "lib/libgettextpo.so",
+      "path_type": "softlink",
+      "sha256": "995efd5ce5775d2b12912aeb485d7c628a3aeb044101b5c3c54f59554cf4feaf",
+      "size_in_bytes": 466024
+    }
+  ],
+  "paths_version": 1
+}

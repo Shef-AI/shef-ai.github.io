@@ -1,0 +1,49 @@
+bzip2: '1'
+c_compiler: gcc
+c_compiler_version: 14.3.0
+c_stdlib: sysroot
+c_stdlib_version: '2.28'
+channel_targets: defaults
+cpu_optimization_target: nocona
+cran_mirror: https://cran.r-project.org
+cxx_compiler: gxx
+cxx_compiler_version: 14.3.0
+expat: '2'
+extend_keys:
+- extend_keys
+- ignore_build_only_deps
+- pin_run_as_build
+- ignore_version
+fortran_compiler: gfortran
+gil_type: normal
+ignore_build_only_deps:
+- numpy
+- python
+libffi: '3.4'
+libmpdec: '4'
+libuuid: '1'
+lua: '5'
+ncurses: '6'
+numpy: '2.3'
+openssl: '3'
+perl: 5.26.2
+pin_run_as_build:
+  python:
+    max_pin: x.x
+    min_pin: x.x
+  r-base:
+    max_pin: x.x
+    min_pin: x.x
+platform: linux-64
+python: '3.14'
+python_impl: cpython
+r_base: '3.5'
+readline: '8'
+sqlite: '3'
+target_platform: linux-64
+tk: '9.0'
+xorg_libx11: '1'
+xorg_xorgproto: '2025'
+xz: '5'
+zlib: '1'
+zstd: '1.5'

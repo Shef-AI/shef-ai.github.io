@@ -1,0 +1,163 @@
+{
+  "name": "lz4-c",
+  "version": "1.9.4",
+  "build": "h7354ed3_5",
+  "build_number": 5,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "subdir": "linux-64",
+  "fn": "lz4-c-1.9.4-h7354ed3_5.conda",
+  "md5": "66a8a9e87baa7d1c8c7ceb77d0c3908e",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/lz4-c-1.9.4-h7354ed3_5.conda",
+  "sha256": "1dbe45752d84df4b5bf0d565667b25af47b2e5f71dac48a94005b01685e675ef",
+  "arch": "x86_64",
+  "platform": "linux",
+  "depends": [
+    "__glibc >=2.28,<3.0.a0",
+    "libgcc >=14",
+    "libstdcxx >=14"
+  ],
+  "constrains": [],
+  "license": "BSD-2-Clause",
+  "license_family": "BSD",
+  "timestamp": 1782922294000,
+  "size": 147630,
+  "requested_spec": "https://repo.anaconda.com/pkgs/main/linux-64::lz4-c==1.9.4=h7354ed3_5",
+  "package_tarball_full_path": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/lz4-c-1.9.4-h7354ed3_5.conda",
+  "extracted_package_dir": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/lz4-c-1.9.4-h7354ed3_5",
+  "files": [
+    "bin/lz4",
+    "bin/lz4c",
+    "bin/lz4cat",
+    "bin/unlz4",
+    "include/lz4.h",
+    "include/lz4frame.h",
+    "include/lz4frame_static.h",
+    "include/lz4hc.h",
+    "lib/liblz4.so",
+    "lib/liblz4.so.1",
+    "lib/liblz4.so.1.9.4",
+    "lib/pkgconfig/liblz4.pc",
+    "share/man/man1/lz4.1",
+    "share/man/man1/lz4c.1",
+    "share/man/man1/lz4cat.1",
+    "share/man/man1/unlz4.1"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "bin/lz4",
+        "path_type": "hardlink",
+        "sha256": "ac1cd5a600e143c793395456f26cdd9b018aff8df58e052a2b9437b1ba8da2d9",
+        "size_in_bytes": 224664,
+        "sha256_in_prefix": "ac1cd5a600e143c793395456f26cdd9b018aff8df58e052a2b9437b1ba8da2d9"
+      },
+      {
+        "_path": "bin/lz4c",
+        "path_type": "softlink",
+        "sha256": "ac1cd5a600e143c793395456f26cdd9b018aff8df58e052a2b9437b1ba8da2d9",
+        "size_in_bytes": 224664
+      },
+      {
+        "_path": "bin/lz4cat",
+        "path_type": "softlink",
+        "sha256": "ac1cd5a600e143c793395456f26cdd9b018aff8df58e052a2b9437b1ba8da2d9",
+        "size_in_bytes": 224664
+      },
+      {
+        "_path": "bin/unlz4",
+        "path_type": "softlink",
+        "sha256": "ac1cd5a600e143c793395456f26cdd9b018aff8df58e052a2b9437b1ba8da2d9",
+        "size_in_bytes": 224664
+      },
+      {
+        "_path": "include/lz4.h",
+        "path_type": "hardlink",
+        "sha256": "c1614ecf7ada7b0be1acb560d4239595f96fbb7aa6a79a7c40cb358753830be6",
+        "size_in_bytes": 43263,
+        "sha256_in_prefix": "c1614ecf7ada7b0be1acb560d4239595f96fbb7aa6a79a7c40cb358753830be6"
+      },
+      {
+        "_path": "include/lz4frame.h",
+        "path_type": "hardlink",
+        "sha256": "47501e4925d60c0f87c7bfc68c8b9e0e4d942eea786e35d2c5bfbf5e9deab561",
+        "size_in_bytes": 32749,
+        "sha256_in_prefix": "47501e4925d60c0f87c7bfc68c8b9e0e4d942eea786e35d2c5bfbf5e9deab561"
+      },
+      {
+        "_path": "include/lz4frame_static.h",
+        "path_type": "hardlink",
+        "sha256": "31ab72a6e97e4fa0bedd4420d24a3f1f8024cbfa1d8ffad88c87cbb4e04f769d",
+        "size_in_bytes": 2044,
+        "sha256_in_prefix": "31ab72a6e97e4fa0bedd4420d24a3f1f8024cbfa1d8ffad88c87cbb4e04f769d"
+      },
+      {
+        "_path": "include/lz4hc.h",
+        "path_type": "hardlink",
+        "sha256": "6bc1efeb79571807da2ca084809de1760e0cd87064e40eccf9624d95088dce7d",
+        "size_in_bytes": 20179,
+        "sha256_in_prefix": "6bc1efeb79571807da2ca084809de1760e0cd87064e40eccf9624d95088dce7d"
+      },
+      {
+        "_path": "lib/liblz4.so",
+        "path_type": "softlink",
+        "sha256": "6f42cd0f67e0314032ef1b23993f90a739a636d85cad3590e043e7ca6551fad0",
+        "size_in_bytes": 190272
+      },
+      {
+        "_path": "lib/liblz4.so.1",
+        "path_type": "softlink",
+        "sha256": "6f42cd0f67e0314032ef1b23993f90a739a636d85cad3590e043e7ca6551fad0",
+        "size_in_bytes": 190272
+      },
+      {
+        "_path": "lib/liblz4.so.1.9.4",
+        "path_type": "hardlink",
+        "sha256": "6f42cd0f67e0314032ef1b23993f90a739a636d85cad3590e043e7ca6551fad0",
+        "size_in_bytes": 190272,
+        "sha256_in_prefix": "6f42cd0f67e0314032ef1b23993f90a739a636d85cad3590e043e7ca6551fad0"
+      },
+      {
+        "_path": "lib/pkgconfig/liblz4.pc",
+        "prefix_placeholder": "/home/task_PdhvA_zvRjS4t_0/croot/lz4-c-split_1782922265414/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "sha256": "1be05d5025cf54e03e4da9a61c9c92ad83e1f58d99f5ce15b0d54b9059a41fda",
+        "size_in_bytes": 640,
+        "sha256_in_prefix": "bb13b2dfe2fe08a60fc44e5986f4c15de2ea200788e1015b7cc5be6595e3068e"
+      },
+      {
+        "_path": "share/man/man1/lz4.1",
+        "path_type": "hardlink",
+        "sha256": "fe2f1418e45f8044d53d67022d205c79bee8e6f72958fb40633b6167289dd909",
+        "size_in_bytes": 9262,
+        "sha256_in_prefix": "fe2f1418e45f8044d53d67022d205c79bee8e6f72958fb40633b6167289dd909"
+      },
+      {
+        "_path": "share/man/man1/lz4c.1",
+        "path_type": "softlink",
+        "sha256": "fe2f1418e45f8044d53d67022d205c79bee8e6f72958fb40633b6167289dd909",
+        "size_in_bytes": 9262
+      },
+      {
+        "_path": "share/man/man1/lz4cat.1",
+        "path_type": "softlink",
+        "sha256": "fe2f1418e45f8044d53d67022d205c79bee8e6f72958fb40633b6167289dd909",
+        "size_in_bytes": 9262
+      },
+      {
+        "_path": "share/man/man1/unlz4.1",
+        "path_type": "softlink",
+        "sha256": "fe2f1418e45f8044d53d67022d205c79bee8e6f72958fb40633b6167289dd909",
+        "size_in_bytes": 9262
+      }
+    ]
+  },
+  "link": {
+    "source": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/lz4-c-1.9.4-h7354ed3_5",
+    "type": 1
+  },
+  "requested_specs": [
+    "https://repo.anaconda.com/pkgs/main/linux-64::lz4-c==1.9.4=h7354ed3_5"
+  ]
+}

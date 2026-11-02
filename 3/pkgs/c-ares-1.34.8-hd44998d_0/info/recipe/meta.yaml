@@ -1,0 +1,79 @@
+# This file created by conda-build 26.7.1
+# ------------------------------------------------
+
+package:
+  name: c-ares
+  version: 1.34.8
+source:
+  url: https://github.com/c-ares/c-ares/archive/refs/tags/v1.34.8.tar.gz
+  sha256: ddf8be8b179ef6ff656e7413da93cf0f3038c627aca29ce9aae30f66e5b32bc1
+build:
+  run_exports:
+    - c-ares >=1.34.8,<2.0a0
+  number: 0
+  string: hd44998d_0
+requirements:
+  build:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 52_gnu
+    - binutils_impl_linux-64 2.44 h78f17ca_3
+    - binutils_linux-64 2.44 hc03a8fd_3
+    - cmake-no-system 4.3.2 h7354ed3_1
+    - gcc_impl_linux-64 14.3.0 h4943218_4
+    - gcc_linux-64 14.3.0 hda73cce_15
+    - gtest 1.17.0 h5f83a47_0
+    - gxx_impl_linux-64 14.3.0 he634eba_4
+    - gxx_linux-64 14.3.0 hca8765c_15
+    - kernel-headers_linux-64 4.18.0 h3108a97_1
+    - ld_impl_linux-64 2.44 h9e0c5a2_3
+    - libgcc 15.2.0 h69a1729_8
+    - libgcc-devel_linux-64 14.3.0 he7458c1_104
+    - libgcc-ng 15.2.0 h166f726_8
+    - libgomp 15.2.0 h4751f2c_8
+    - libsanitizer 14.3.0 hd4faa28_4
+    - libstdcxx 15.2.0 h39759b7_8
+    - libstdcxx-devel_linux-64 14.3.0 he7458c1_104
+    - libstdcxx-ng 15.2.0 hc03a8fd_8
+    - ninja-base 1.13.2 hf01770c_0
+    - sysroot_linux-64 2.28 h3108a97_1
+    - tzdata 2026c he532380_0
+  run_constraint:
+    - c-ares-static <0a0
+  host:
+    - _openmp_mutex 5.1 52_gnu
+    - libgcc 15.2.0 h69a1729_8
+    - libstdcxx 15.2.0 h39759b7_8
+  run:
+    - __glibc >=2.28,<3.0.a0
+    - libgcc >=14
+    - libstdcxx >=14
+test:
+  commands:
+    - test -f ${PREFIX}/include/ares.h
+    - test -f ${PREFIX}/lib/libcares${SHLIB_EXT}
+    - test ! -f ${PREFIX}/lib/libcares.a
+    - test ! -f ${PREFIX}/lib/libcares_static.a
+about:
+  home: https://c-ares.org
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE.md
+  summary: This is c-ares, an asynchronous resolver library
+  description: 'c-ares is a C library for asynchronous DNS requests (including name
+    resolves).
+
+    '
+  dev_url: https://github.com/c-ares/c-ares
+  doc_url: https://c-ares.org/docs.html
+extra:
+  recipe-maintainers:
+    - ocefpaf
+    - wesm
+    - xhochy
+  final: true
+  copy_test_source_files: true
+  remote_url: https://github.com/AnacondaRecipes/c-ares-feedstock
+  sha: 043025884bfd6b05f97a5d4ef4549fecaa95acb0
+  task_id: MOlnTmDXR8a1C5PppNA6tw
+  task_run_id: '0'
+  pbp_graph_uuid: c7fdef45-022d-43dc-818a-2485c8bd5382

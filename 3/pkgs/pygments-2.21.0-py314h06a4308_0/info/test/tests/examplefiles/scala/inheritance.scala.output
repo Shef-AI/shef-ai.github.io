@@ -1,0 +1,104 @@
+'// Extends\n' Comment.Single
+
+'trait'       Keyword
+' '           Text.Whitespace
+'A'           Name.Class
+' '           Text.Whitespace
+'extends'     Keyword
+' '           Text.Whitespace
+'B'           Name.Class
+'\n'          Text.Whitespace
+
+'trait'       Keyword
+' '           Text.Whitespace
+'A'           Name.Class
+' '           Text.Whitespace
+'extends'     Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'B'           Name.Class
+' '           Text.Whitespace
+'=>'          Operator
+' '           Text.Whitespace
+'B'           Name.Class
+')'           Punctuation
+'{'           Punctuation
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'trait'       Keyword
+' '           Text.Whitespace
+'Color'       Name.Class
+'\n'          Text.Whitespace
+
+'object'      Keyword
+' '           Text.Whitespace
+'Red'         Name.Class
+' '           Text.Whitespace
+'extends'     Keyword
+' '           Text.Whitespace
+'Color'       Name.Class
+'\n\n'        Text.Whitespace
+
+'// Derives\n' Comment.Single
+
+'enum'        Keyword
+' '           Text.Whitespace
+'Tree'        Name.Class
+'['           Punctuation
+'T'           Name.Class
+']'           Punctuation
+' '           Text.Whitespace
+'derives'     Keyword
+' '           Text.Whitespace
+'Eq'          Name.Class
+','           Punctuation
+' '           Text.Whitespace
+'Ordering'    Name.Class
+','           Punctuation
+' '           Text.Whitespace
+'Show'        Name.Class
+' '           Text.Whitespace
+'{'           Punctuation
+'\n  '        Text.Whitespace
+'case'        Keyword
+' '           Text.Whitespace
+'Branch'      Name.Class
+'['           Punctuation
+'T'           Name.Class
+']'           Punctuation
+'('           Punctuation
+'left'        Name
+':'           Punctuation
+' '           Text.Whitespace
+'Tree'        Name.Class
+'['           Punctuation
+'T'           Name.Class
+']'           Punctuation
+','           Punctuation
+' '           Text.Whitespace
+'right'       Name
+':'           Punctuation
+' '           Text.Whitespace
+'Tree'        Name.Class
+'['           Punctuation
+'T'           Name.Class
+']'           Punctuation
+')'           Punctuation
+'\n  '        Text.Whitespace
+'case'        Keyword
+' '           Text.Whitespace
+'Leaf'        Name.Class
+'['           Punctuation
+'T'           Name.Class
+']'           Punctuation
+'('           Punctuation
+'elem'        Name
+':'           Punctuation
+' '           Text.Whitespace
+'T'           Name.Class
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n'          Text.Whitespace

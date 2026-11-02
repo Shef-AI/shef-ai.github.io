@@ -1,0 +1,21 @@
+In gettext-tools, both `libgrep` and `gnulib-lib` provide their own versions of
+headers like `stdlib.h`, but the two variants aren't the same. Some of the tools
+want to use `unsetenv()` as provided by gnulib-lib, but the default include flag
+ordering puts libgrep first, which doesn't define it. This is all pretty messy
+but the most expedient thing is to reorder the includes to get the gnulib-lib
+version first.
+
+diff --git a/gettext-tools/src/Makefile.am b/gettext-tools/src/Makefile.am
+index 607dcf0..c641919 100644
+--- a/gettext-tools/src/Makefile.am
++++ b/gettext-tools/src/Makefile.am
+@@ -109,8 +109,8 @@ schemadir = $(pkgdatadir)/schema
+ # The option -I$(top_srcdir) is needed so that woe32dll/export.h is found.
+ AM_CPPFLAGS = \
+   -I$(top_srcdir) \
+-  -I../libgrep -I$(top_srcdir)/libgrep \
+   -I../gnulib-lib -I$(top_srcdir)/gnulib-lib \
++  -I../libgrep -I$(top_srcdir)/libgrep \
+   -I../../gettext-runtime/intl -I$(top_srcdir)/../gettext-runtime/intl
+ DEFS = \
+   -DLOCALEDIR=$(localedir_c_make) \

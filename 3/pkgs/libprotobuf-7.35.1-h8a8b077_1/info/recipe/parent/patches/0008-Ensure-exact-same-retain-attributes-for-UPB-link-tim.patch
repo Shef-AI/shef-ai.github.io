@@ -1,0 +1,27 @@
+From b1f19d13d00fcf64e6440322b0a99fb1072f4683 Mon Sep 17 00:00:00 2001
+From: Julien Jerphanion <git@jjerphan.xyz>
+Date: Fri, 27 Feb 2026 11:09:59 +0100
+Subject: [PATCH 8/9] Ensure exact same retain attributes for UPB link-time
+ entries
+
+Ensure the UPB link-time array entries have the same retain attributes
+as their sentinel, to avoid section type conflicts in upb tests.
+
+Signed-off-by: Julien Jerphanion <git@jjerphan.xyz>
+---
+ upb/port/def.inc | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/upb/port/def.inc b/upb/port/def.inc
+index b398a95a55..0b128faa9f 100644
+--- a/upb/port/def.inc
++++ b/upb/port/def.inc
+@@ -577,7 +577,7 @@ Error, UINTPTR_MAX is undefined
+ #if defined(__ELF__) || defined(__wasm__)
+ 
+ #define UPB_LINKARR_APPEND(name) \
+-  __attribute__((                \
++  UPB_RETAIN __attribute__((     \
+       section("linkarr_" #name))) UPB_LINKARR_ATTR UPB_NO_SANITIZE_ADDRESS
+ #define UPB_LINKARR_DECLARE(name, type) \
+   extern type __start_linkarr_##name;   \

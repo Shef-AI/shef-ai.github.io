@@ -1,0 +1,275 @@
+{
+  "paths": [
+    {
+      "_path": "site-packages/jeepney-0.7.1.dist-info/INSTALLER",
+      "path_type": "hardlink",
+      "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+      "size_in_bytes": 5
+    },
+    {
+      "_path": "site-packages/jeepney-0.7.1.dist-info/LICENSE",
+      "path_type": "hardlink",
+      "sha256": "1b22b049b5267d6dfc23a67bf4a84d8ec04b9fdfb1a51d360e42b4342c8b4154",
+      "size_in_bytes": 1081
+    },
+    {
+      "_path": "site-packages/jeepney-0.7.1.dist-info/METADATA",
+      "path_type": "hardlink",
+      "sha256": "b8b70d4bf426f416f6b7cf3258fe12ae3747e67f6999c096b217c77a68aa537c",
+      "size_in_bytes": 1273
+    },
+    {
+      "_path": "site-packages/jeepney-0.7.1.dist-info/RECORD",
+      "path_type": "hardlink",
+      "sha256": "a9f018f7cf2c780a4601298906b0452499d461e50f9596d862a83a6b4658ef35",
+      "size_in_bytes": 5683
+    },
+    {
+      "_path": "site-packages/jeepney-0.7.1.dist-info/REQUESTED",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "site-packages/jeepney-0.7.1.dist-info/WHEEL",
+      "path_type": "hardlink",
+      "sha256": "a3e43613cb3b04a902275102dae41d6b2999555bb6694b757bcb934c5a731d5b",
+      "size_in_bytes": 81
+    },
+    {
+      "_path": "site-packages/jeepney-0.7.1.dist-info/direct_url.json",
+      "path_type": "hardlink",
+      "sha256": "37aa21045752da253d8c65204661893838127e2887dc06959a96665cafd3c7c9",
+      "size_in_bytes": 80
+    },
+    {
+      "_path": "site-packages/jeepney/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "b08cb660d89f125a5131f3a8bb4153fdc43640bdfb7bbc892f1fe13b41709fd1",
+      "size_in_bytes": 408
+    },
+    {
+      "_path": "site-packages/jeepney/auth.py",
+      "path_type": "hardlink",
+      "sha256": "0e1de7b73b82734ada7887160ccfc60c02cdc0ba94b9e24ce281071ffa424130",
+      "size_in_bytes": 4933
+    },
+    {
+      "_path": "site-packages/jeepney/bindgen.py",
+      "path_type": "hardlink",
+      "sha256": "eaf2c8d53ffbac437df1f03c084b37a86dcb937cc9b32f0cd8412ff499c36c2d",
+      "size_in_bytes": 4054
+    },
+    {
+      "_path": "site-packages/jeepney/bus.py",
+      "path_type": "hardlink",
+      "sha256": "294892af7102cdd6def92f6d34a9ba92f7f7a198b84589c95a46545caeed1369",
+      "size_in_bytes": 1817
+    },
+    {
+      "_path": "site-packages/jeepney/bus_messages.py",
+      "path_type": "hardlink",
+      "sha256": "9da6bda743dd100bea27ec59f7e577ec1dfeefed717cbb4069b28479367aa105",
+      "size_in_bytes": 8140
+    },
+    {
+      "_path": "site-packages/jeepney/fds.py",
+      "path_type": "hardlink",
+      "sha256": "658ccdfdcffbae4053d3053b7585264118a3a52cc2bfe0c04c2604925a57c545",
+      "size_in_bytes": 5056
+    },
+    {
+      "_path": "site-packages/jeepney/integrate/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "f50beba458d6a747214479432e68154cc6c2f0ee269ed01dd6e10403c6fcfc4e",
+      "size_in_bytes": 41
+    },
+    {
+      "_path": "site-packages/jeepney/integrate/asyncio.py",
+      "path_type": "hardlink",
+      "sha256": "ce19a57e9e79fd02422f64d0cacc39cd917d12e3a19bb3de732f383d3cdfea4b",
+      "size_in_bytes": 3081
+    },
+    {
+      "_path": "site-packages/jeepney/integrate/blocking.py",
+      "path_type": "hardlink",
+      "sha256": "51b36ee6e1fd2c03a0b59180bb565b6d8c70065b3f0d09ae14ed281da7996e72",
+      "size_in_bytes": 515
+    },
+    {
+      "_path": "site-packages/jeepney/integrate/tests/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "site-packages/jeepney/integrate/tests/test_asyncio.py",
+      "path_type": "hardlink",
+      "sha256": "024ddf203f6b46d07cda4adebc2592751be4a8b290a4532f52fe3c3006c30bc7",
+      "size_in_bytes": 1357
+    },
+    {
+      "_path": "site-packages/jeepney/integrate/tornado.py",
+      "path_type": "hardlink",
+      "sha256": "99a776e0bfd2b92f270cc24e2eb3c72316636c55596122b46b91369326645b8a",
+      "size_in_bytes": 523
+    },
+    {
+      "_path": "site-packages/jeepney/io/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "8a7248ff553e013ca62dc01562cf8b0f6694c2097eb62856f3ea15154c584600",
+      "size_in_bytes": 33
+    },
+    {
+      "_path": "site-packages/jeepney/io/asyncio.py",
+      "path_type": "hardlink",
+      "sha256": "a9f5a2ff5a5609748fd4b35169f1c1bafaf11f1e2d5fde9be762816b8b1414c7",
+      "size_in_bytes": 7622
+    },
+    {
+      "_path": "site-packages/jeepney/io/blocking.py",
+      "path_type": "hardlink",
+      "sha256": "c8aef4d232b18cb46b1b7bb3a3cc136acc25ec021283cd03a62a8c2654779a14",
+      "size_in_bytes": 11967
+    },
+    {
+      "_path": "site-packages/jeepney/io/common.py",
+      "path_type": "hardlink",
+      "sha256": "97c95b154810981c5fa920be86a1d898f51809514c29b3860759396563ca5dfb",
+      "size_in_bytes": 2696
+    },
+    {
+      "_path": "site-packages/jeepney/io/tests/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "site-packages/jeepney/io/tests/conftest.py",
+      "path_type": "hardlink",
+      "sha256": "a3b26b632a5813ed2334552776c438124e5d358334a1f875b1870855e099323d",
+      "size_in_bytes": 2730
+    },
+    {
+      "_path": "site-packages/jeepney/io/tests/test_asyncio.py",
+      "path_type": "hardlink",
+      "sha256": "76908acfc5f097d08a5afbf643ba6fefcde437083fe59011e8b78be77edd351d",
+      "size_in_bytes": 2598
+    },
+    {
+      "_path": "site-packages/jeepney/io/tests/test_blocking.py",
+      "path_type": "hardlink",
+      "sha256": "3f4d36fe7ea852ba7f40806a9b33f4269520e0fefa841a8bea708df65e9fa9f0",
+      "size_in_bytes": 2981
+    },
+    {
+      "_path": "site-packages/jeepney/io/tests/test_threading.py",
+      "path_type": "hardlink",
+      "sha256": "4402f0cbe688eb84c1a059819d253adc72dcc119d2b4b56d9dec0eb68681977a",
+      "size_in_bytes": 2699
+    },
+    {
+      "_path": "site-packages/jeepney/io/tests/test_trio.py",
+      "path_type": "hardlink",
+      "sha256": "0cf63557f2b6a8b4f2053adbaf165e2d303976671add87b77baa73d3c5316cef",
+      "size_in_bytes": 3892
+    },
+    {
+      "_path": "site-packages/jeepney/io/tests/utils.py",
+      "path_type": "hardlink",
+      "sha256": "8bb549613f9ac5e7f34bc99672fbfef43787101e8b74ff4cf361f71f1e9fc82e",
+      "size_in_bytes": 79
+    },
+    {
+      "_path": "site-packages/jeepney/io/threading.py",
+      "path_type": "hardlink",
+      "sha256": "9b0182365ba7fdb697f18e1e89e9c218329d643e1229d4ccbc14e4204d0430aa",
+      "size_in_bytes": 9391
+    },
+    {
+      "_path": "site-packages/jeepney/io/tornado.py",
+      "path_type": "hardlink",
+      "sha256": "87e32e8a74e11d65689b585f2f9c6bce1a39721076f32338a8b8ba8e1b26ff1c",
+      "size_in_bytes": 6858
+    },
+    {
+      "_path": "site-packages/jeepney/io/trio.py",
+      "path_type": "hardlink",
+      "sha256": "3e4be4a815e4185dcd027d62a43f1e78fce7ab60d9de47ff9196e5b765dc2b67",
+      "size_in_bytes": 14848
+    },
+    {
+      "_path": "site-packages/jeepney/low_level.py",
+      "path_type": "hardlink",
+      "sha256": "4e4815b0b404d5b755c1aebce10788850f26e7722326deffda6c53b07eba258b",
+      "size_in_bytes": 19119
+    },
+    {
+      "_path": "site-packages/jeepney/routing.py",
+      "path_type": "hardlink",
+      "sha256": "ef4ba37261b2bca28fa7abd49f958b96f63033b3c5887f97453daea5ae77f1c8",
+      "size_in_bytes": 2827
+    },
+    {
+      "_path": "site-packages/jeepney/tests/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "site-packages/jeepney/tests/secrets_introspect.xml",
+      "path_type": "hardlink",
+      "sha256": "f5c7cdb356862ed200ca471056cc9cc08c022e611ea2b2a4163a8908b0249d14",
+      "size_in_bytes": 4575
+    },
+    {
+      "_path": "site-packages/jeepney/tests/test_auth.py",
+      "path_type": "hardlink",
+      "sha256": "11eefdbec79d0b0bdeba4b9d0194f0a984d71d65773d89d7926325d0c04c6441",
+      "size_in_bytes": 611
+    },
+    {
+      "_path": "site-packages/jeepney/tests/test_bindgen.py",
+      "path_type": "hardlink",
+      "sha256": "133f7dcebf53215de6959747fb603f773e0b6efc42ab358321a7613826db6a87",
+      "size_in_bytes": 1098
+    },
+    {
+      "_path": "site-packages/jeepney/tests/test_bus.py",
+      "path_type": "hardlink",
+      "sha256": "0293b177701c610075e06d57b22146058b50e3148ac39db2f58be63f3ef4d207",
+      "size_in_bytes": 847
+    },
+    {
+      "_path": "site-packages/jeepney/tests/test_bus_messages.py",
+      "path_type": "hardlink",
+      "sha256": "161ed46f8b055996ec5c6a81298a12e8333f192d641f14ce034c9d90be4f601a",
+      "size_in_bytes": 3228
+    },
+    {
+      "_path": "site-packages/jeepney/tests/test_fds.py",
+      "path_type": "hardlink",
+      "sha256": "fa0caf4297ec5ed3da2047aa6f086b34f39c2003740ecad0ecc5d9bb89ccbef4",
+      "size_in_bytes": 1821
+    },
+    {
+      "_path": "site-packages/jeepney/tests/test_low_level.py",
+      "path_type": "hardlink",
+      "sha256": "472d8599ee22f5754015c2b408bd01ffed37d678ec541550d989d3db211ac703",
+      "size_in_bytes": 2554
+    },
+    {
+      "_path": "site-packages/jeepney/tests/test_routing.py",
+      "path_type": "hardlink",
+      "sha256": "6a10e4b32986433dea96507fdfbf04bd397422fc4b057121070a5d5a9d12643b",
+      "size_in_bytes": 959
+    },
+    {
+      "_path": "site-packages/jeepney/wrappers.py",
+      "path_type": "hardlink",
+      "sha256": "4ebd6d27e29b4d9b83ccbbe36702f61f22a5854aa109c0f8f9464308a2045b81",
+      "size_in_bytes": 7979
+    }
+  ],
+  "paths_version": 1
+}

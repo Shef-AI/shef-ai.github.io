@@ -1,0 +1,147 @@
+'<%@'         Name.Tag
+' '           Text.Whitespace
+'Register'    Name
+' '           Text.Whitespace
+'TagPrefix'   Name
+'='           Operator
+'"'           Literal.String
+'Acme'        Literal.String
+'"'           Literal.String
+' '           Text.Whitespace
+'TagName'     Name
+'='           Operator
+'"'           Literal.String
+'Message'     Literal.String
+'"'           Literal.String
+' '           Text.Whitespace
+'Src'         Name
+'='           Operator
+'"'           Literal.String
+'userctrl2_vb.ascx' Literal.String
+'"'           Literal.String
+' '           Text.Whitespace
+'%>'          Name.Tag
+'\n\n'        Text.Whitespace
+
+'<html'       Name.Tag
+'>'           Name.Tag
+'\n\n  '      Text.Whitespace
+'<script'     Name.Tag
+' '           Text.Whitespace
+'language='   Name.Attribute
+'"VB"'        Literal.String
+' '           Text.Whitespace
+'runat='      Name.Attribute
+'"server"'    Literal.String
+'>'           Name.Tag
+'\n\n      '  Text.Whitespace
+'Sub'         Keyword
+' '           Text.Whitespace
+'SubmitBtn_Click' Name.Function
+'('           Punctuation
+'Sender'      Name
+' '           Text.Whitespace
+'As'          Operator.Word
+' '           Text.Whitespace
+'Object'      Keyword.Type
+','           Punctuation
+' '           Text.Whitespace
+'E'           Name
+' '           Text.Whitespace
+'As'          Operator.Word
+' '           Text.Whitespace
+'EventArgs'   Name
+')'           Punctuation
+'\n          ' Text.Whitespace
+'MyMessage'   Name
+'.'           Punctuation
+'MessageText' Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'"'           Literal.String
+'Message text changed!' Literal.String
+'"'           Literal.String
+'\n          ' Text.Whitespace
+'MyMessage'   Name
+'.'           Punctuation
+'Color'       Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'"'           Literal.String
+'red'         Literal.String
+'"'           Literal.String
+'\n      '    Text.Whitespace
+'End'         Keyword
+' '           Text.Whitespace
+'Sub'         Keyword
+'\n\n  '      Text.Whitespace
+'</script>'   Name.Tag
+'\n\n'        Text.Whitespace
+
+'<body'       Name.Tag
+' '           Text.Whitespace
+'style='      Name.Attribute
+'"font: 10pt verdana"' Literal.String
+'>'           Name.Tag
+'\n\n  '      Text.Whitespace
+'<h3'         Name.Tag
+'>'           Name.Tag
+'A'           Text
+' '           Text.Whitespace
+'Simple'      Text
+' '           Text.Whitespace
+'User'        Text
+' '           Text.Whitespace
+'Control'     Text
+' '           Text.Whitespace
+'w/'          Text
+' '           Text.Whitespace
+'Properties'  Text
+'</h3>'       Name.Tag
+'\n\n  '      Text.Whitespace
+'<form'       Name.Tag
+' '           Text.Whitespace
+'runat='      Name.Attribute
+'"server"'    Literal.String
+'>'           Name.Tag
+'\n\n    '    Text.Whitespace
+'<Acme:Message' Name.Tag
+' '           Text.Whitespace
+'id='         Name.Attribute
+'"MyMessage"' Literal.String
+' '           Text.Whitespace
+'MessageText=' Name.Attribute
+'"This is a custom message!"' Literal.String
+' '           Text.Whitespace
+'Color='      Name.Attribute
+'"blue"'      Literal.String
+' '           Text.Whitespace
+'runat='      Name.Attribute
+'"server"'    Literal.String
+'/>'          Name.Tag
+'\n\n    '    Text.Whitespace
+'<p'          Name.Tag
+'>'           Name.Tag
+'\n\n    '    Text.Whitespace
+'<asp:button' Name.Tag
+' '           Text.Whitespace
+'text='       Name.Attribute
+'"Change Properties"' Literal.String
+' '           Text.Whitespace
+'OnClick='    Name.Attribute
+'"SubmitBtn_Click"' Literal.String
+' '           Text.Whitespace
+'runat='      Name.Attribute
+'server/'     Literal.String
+'>'           Name.Tag
+'\n\n  '      Text.Whitespace
+'</form>'     Name.Tag
+'\n\n'        Text.Whitespace
+
+'</body>'     Name.Tag
+'\n'          Text.Whitespace
+
+'</html>'     Name.Tag
+'\n'          Text.Whitespace

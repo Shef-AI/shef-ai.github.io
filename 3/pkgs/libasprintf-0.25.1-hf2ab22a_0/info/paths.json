@@ -1,0 +1,17 @@
+{
+  "paths": [
+    {
+      "_path": "lib/libasprintf.so.0",
+      "path_type": "hardlink",
+      "sha256": "7a3f7ae69a26cd0cdf0c7487956c30041087a8ec69c95fa3900eec7cebafc65c",
+      "size_in_bytes": 110760
+    },
+    {
+      "_path": "lib/libasprintf.so.0.0.0",
+      "path_type": "hardlink",
+      "sha256": "7a3f7ae69a26cd0cdf0c7487956c30041087a8ec69c95fa3900eec7cebafc65c",
+      "size_in_bytes": 110760
+    }
+  ],
+  "paths_version": 1
+}

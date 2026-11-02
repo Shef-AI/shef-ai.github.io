@@ -1,0 +1,34 @@
+From e6777bb0691be74ae011cd60766f4587714532d2 Mon Sep 17 00:00:00 2001
+From: Julien Jerphanion <git@jjerphan.xyz>
+Date: Tue, 26 May 2026 00:00:00 +0000
+Subject: [PATCH 10/10] Add ppc64le to python/dist ABI suffix map
+
+conda-forge's bazel-toolchain sets CONDA_BAZEL_TOOLCHAIN_PPC64LE_CPU=ppc,
+so the target platform uses @platforms//cpu:ppc. Upstream only lists
+ppc64le in _cpu_constraints, causing _get_cpu_name to fail with
+"Protobuf: Unknown CPU for target platform" on linux_ppc64le builds.
+---
+ python/dist/dist.bzl | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/python/dist/dist.bzl b/python/dist/dist.bzl
+index 4ea95a6485..084f8f0f7f 100644
+--- a/python/dist/dist.bzl
++++ b/python/dist/dist.bzl
+@@ -44,6 +44,8 @@ def _get_suffix(ctx, limited_api, python_version):
+                 abi = "aarch64-linux-gnu"
+             elif cpu == "ppc":
+                 abi = "powerpc64le-linux-gnu"
++            elif cpu == "ppc64le":
++                abi = "powerpc64le-linux-gnu"
+             elif cpu == "s390x":
+                 abi = "s390x-linux-gnu"
+             else:
+@@ -165,6 +167,7 @@ py_dist_module = rule(
+                 "x86_64": "@platforms//cpu:x86_64",
+                 "x86_32": "@platforms//cpu:x86_32",
+                 "s390x": "@platforms//cpu:s390x",
++                "ppc": "@platforms//cpu:ppc",
+                 "ppc64le": "@platforms//cpu:ppc64le",
+             },
+         ),

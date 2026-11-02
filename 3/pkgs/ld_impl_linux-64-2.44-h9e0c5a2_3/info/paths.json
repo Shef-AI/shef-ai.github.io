@@ -1,0 +1,19 @@
+{
+  "paths": [
+    {
+      "_path": "bin/x86_64-conda-linux-gnu-ld",
+      "file_mode": "binary",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/home/task_177325514644898/croot/binutils_split_1773255467083/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh",
+      "sha256": "e5e2063623d80bd5956391561faf35295bacaa03af1c0c1f6e4391d08d48364f",
+      "size_in_bytes": 2941304
+    },
+    {
+      "_path": "x86_64-conda-linux-gnu/bin/ld",
+      "path_type": "softlink",
+      "sha256": "e5e2063623d80bd5956391561faf35295bacaa03af1c0c1f6e4391d08d48364f",
+      "size_in_bytes": 2941304
+    }
+  ],
+  "paths_version": 1
+}

@@ -1,0 +1,77 @@
+'10'          Literal.Number.Float
+' '           Text.Whitespace
+'rem cbm basic v2 example\n' Comment.Single
+
+'20'          Literal.Number.Float
+' '           Text.Whitespace
+'rem comment with keywords: for, data\n' Comment.Single
+
+'30'          Literal.Number.Float
+' '           Text.Whitespace
+'dim'         Keyword.Declaration
+' '           Text.Whitespace
+'a$'          Name
+'('           Punctuation
+'20'          Literal.Number.Float
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'35'          Literal.Number.Float
+' '           Text.Whitespace
+'rem the typical space efficient form of leaving spaces out:\n' Comment.Single
+
+'40'          Literal.Number.Float
+' '           Text.Whitespace
+'for'         Keyword.Reserved
+'t'           Name
+'='           Operator
+'0'           Literal.Number.Float
+'to'          Keyword.Reserved
+'15'          Literal.Number.Float
+':'           Punctuation
+'poke'        Keyword.Reserved
+'646'         Literal.Number.Float
+','           Punctuation
+'t'           Name
+':'           Punctuation
+'print'       Keyword.Reserved
+'"{revers on}     "' Literal.String
+';'           Punctuation
+':'           Punctuation
+'next'        Keyword.Reserved
+'\n'          Text.Whitespace
+
+'50'          Literal.Number.Float
+' '           Text.Whitespace
+'get'         Keyword.Reserved
+'a$'          Name
+':'           Punctuation
+'if'          Keyword.Reserved
+'a$'          Name
+'='           Operator
+'chr$'        Name.Builtin
+'('           Punctuation
+'0'           Literal.Number.Float
+')'           Punctuation
+':'           Punctuation
+'goto'        Keyword.Reserved
+'40'          Literal.Number.Float
+'\n'          Text.Whitespace
+
+'55'          Literal.Number.Float
+' '           Text.Whitespace
+'rem it is legal to omit the closing " on line end\n' Comment.Single
+
+'60'          Literal.Number.Float
+' '           Text.Whitespace
+'print'       Keyword.Reserved
+'"{white}"'   Literal.String
+':'           Punctuation
+'print'       Keyword.Reserved
+'"bye...'     Literal.String
+'\n'          Text.Whitespace
+
+'70'          Literal.Number.Float
+' '           Text.Whitespace
+'end'         Keyword.Reserved
+'\n'          Text.Whitespace

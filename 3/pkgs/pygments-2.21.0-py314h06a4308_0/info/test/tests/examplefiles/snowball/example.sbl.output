@@ -1,0 +1,913 @@
+'/* Stemmer for Esperanto in UTF-8 */' Comment.Multiline
+'\n\n'        Text.Whitespace
+
+'strings'     Keyword.Reserved
+' '           Text.Whitespace
+'('           Punctuation
+')'           Punctuation
+'\n\n'        Text.Whitespace
+
+'integers'    Keyword.Reserved
+' '           Text.Whitespace
+'('           Punctuation
+')'           Punctuation
+'\n\n'        Text.Whitespace
+
+'booleans'    Keyword.Reserved
+' '           Text.Whitespace
+'('           Punctuation
+' '           Text.Whitespace
+'foreign'     Name
+' '           Text.Whitespace
+')'           Punctuation
+'\n\n'        Text.Whitespace
+
+'routines'    Keyword.Reserved
+' '           Text.Whitespace
+'('           Punctuation
+'\n    '      Text.Whitespace
+'apostrophe'  Name
+'\n    '      Text.Whitespace
+'canonical_form' Name
+'\n    '      Text.Whitespace
+'correlative' Name
+'\n    '      Text.Whitespace
+'interjection' Name
+'\n    '      Text.Whitespace
+'short_word'  Name
+'\n    '      Text.Whitespace
+'standard_suffix' Name
+'\n    '      Text.Whitespace
+'unuj'        Name
+'\n'          Text.Whitespace
+
+')'           Punctuation
+'\n\n'        Text.Whitespace
+
+'externals'   Keyword.Reserved
+' '           Text.Whitespace
+'('           Punctuation
+' '           Text.Whitespace
+'stem'        Name
+' '           Text.Whitespace
+')'           Punctuation
+'\n\n'        Text.Whitespace
+
+'groupings'   Keyword.Reserved
+' '           Text.Whitespace
+'('           Punctuation
+' '           Text.Whitespace
+'vowel'       Name
+' '           Text.Whitespace
+'aiou'        Name
+' '           Text.Whitespace
+'ao'          Name
+' '           Text.Whitespace
+'ou'          Name
+' '           Text.Whitespace
+')'           Punctuation
+'\n\n'        Text.Whitespace
+
+'stringdef'   Keyword.Reserved
+' '           Text.Whitespace
+"a'"          Literal.String.Escape
+' '           Text.Whitespace
+'decimal'     Keyword.Reserved
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'225'         Literal.String.Single
+"'"           Literal.String.Single
+'\n'          Text.Whitespace
+
+'stringdef'   Keyword.Reserved
+' '           Text.Whitespace
+"e'"          Literal.String.Escape
+' '           Text.Whitespace
+'hex'         Keyword.Reserved
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'E9'          Literal.String.Single
+"'"           Literal.String.Single
+'\n'          Text.Whitespace
+
+'stringdef'   Keyword.Reserved
+' '           Text.Whitespace
+"i'"          Literal.String.Escape
+' '           Text.Whitespace
+'hex'         Keyword.Reserved
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'ED'          Literal.String.Single
+"'"           Literal.String.Single
+'\n'          Text.Whitespace
+
+'stringdef'   Keyword.Reserved
+' '           Text.Whitespace
+"o'"          Literal.String.Escape
+' '           Text.Whitespace
+'hex'         Keyword.Reserved
+' '           Text.Whitespace
+"'"           Literal.String.Single
+' f3'         Literal.String.Single
+"'"           Literal.String.Single
+'\n'          Text.Whitespace
+
+'stringdef'   Keyword.Reserved
+' '           Text.Whitespace
+"u'"          Literal.String.Escape
+' '           Text.Whitespace
+'hex'         Keyword.Reserved
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'fa '         Literal.String.Single
+"'"           Literal.String.Single
+'\n\n'        Text.Whitespace
+
+'stringdef'   Keyword.Reserved
+' '           Text.Whitespace
+'cx'          Literal.String.Escape
+' '           Text.Whitespace
+'hex'         Keyword.Reserved
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'0109'        Literal.String.Single
+"'"           Literal.String.Single
+'\n'          Text.Whitespace
+
+'stringdef'   Keyword.Reserved
+' '           Text.Whitespace
+'gx'          Literal.String.Escape
+' '           Text.Whitespace
+'hex'         Keyword.Reserved
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'011D'        Literal.String.Single
+"'"           Literal.String.Single
+'\n'          Text.Whitespace
+
+'stringdef'   Keyword.Reserved
+' '           Text.Whitespace
+'hx'          Literal.String.Escape
+' '           Text.Whitespace
+'hex'         Keyword.Reserved
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'0125'        Literal.String.Single
+"'"           Literal.String.Single
+'\n'          Text.Whitespace
+
+'stringdef'   Keyword.Reserved
+' '           Text.Whitespace
+'jx'          Literal.String.Escape
+' '           Text.Whitespace
+'hex'         Keyword.Reserved
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'0135'        Literal.String.Single
+"'"           Literal.String.Single
+'\n'          Text.Whitespace
+
+'stringdef'   Keyword.Reserved
+' '           Text.Whitespace
+'sx'          Literal.String.Escape
+' '           Text.Whitespace
+'hex'         Keyword.Reserved
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'015D'        Literal.String.Single
+"'"           Literal.String.Single
+'\n'          Text.Whitespace
+
+'stringdef'   Keyword.Reserved
+' '           Text.Whitespace
+'ux'          Literal.String.Escape
+' '           Text.Whitespace
+'hex'         Keyword.Reserved
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'016D'        Literal.String.Single
+"'"           Literal.String.Single
+'\n\n'        Text.Whitespace
+
+'define'      Keyword.Reserved
+' '           Text.Whitespace
+'canonical_form' Name
+' '           Text.Whitespace
+'as'          Keyword.Reserved
+' '           Text.Whitespace
+'repeat'      Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'\n    '      Text.Whitespace
+'['           Operator
+'substring'   Operator.Word
+']'           Operator
+'\n    '      Text.Whitespace
+'among'       Keyword.Reserved
+' '           Text.Whitespace
+'('           Punctuation
+'\n'          Text.Whitespace
+
+'stringescapes' Keyword.Reserved
+' '           Text.Whitespace
+'/'           Literal.String.Escape
+'/'           Literal.String.Escape
+'\n        '  Text.Whitespace
+"'"           Literal.String.Single
+''            Literal.String.Single
+'/'           Literal.String.Escape
+"a'"          Literal.String.Escape
+'/'           Literal.String.Escape
+''            Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'('           Punctuation
+'<-'          Operator
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'a'           Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'set'         Operator.Word
+' '           Text.Whitespace
+'foreign'     Name
+')'           Punctuation
+'\n        '  Text.Whitespace
+"'"           Literal.String.Single
+''            Literal.String.Single
+'/'           Literal.String.Escape
+"e'"          Literal.String.Escape
+'/'           Literal.String.Escape
+''            Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'('           Punctuation
+'<-'          Operator
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'e'           Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'set'         Operator.Word
+' '           Text.Whitespace
+'foreign'     Name
+')'           Punctuation
+'\n        '  Text.Whitespace
+"'"           Literal.String.Single
+''            Literal.String.Single
+'/'           Literal.String.Escape
+"i'"          Literal.String.Escape
+'/'           Literal.String.Escape
+''            Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'('           Punctuation
+'<-'          Operator
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'i'           Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'set'         Operator.Word
+' '           Text.Whitespace
+'foreign'     Name
+')'           Punctuation
+'\n        '  Text.Whitespace
+"'"           Literal.String.Single
+''            Literal.String.Single
+'/'           Literal.String.Escape
+"o'"          Literal.String.Escape
+'/'           Literal.String.Escape
+''            Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'('           Punctuation
+'<-'          Operator
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'o'           Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'set'         Operator.Word
+' '           Text.Whitespace
+'foreign'     Name
+')'           Punctuation
+'\n        '  Text.Whitespace
+"'"           Literal.String.Single
+''            Literal.String.Single
+'/'           Literal.String.Escape
+"u'"          Literal.String.Escape
+'/'           Literal.String.Escape
+''            Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'('           Punctuation
+'<-'          Operator
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'u'           Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'set'         Operator.Word
+' '           Text.Whitespace
+'foreign'     Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'stringescapes' Keyword.Reserved
+' '           Text.Whitespace
+'`'           Literal.String.Escape
+"'"           Literal.String.Escape
+'\n        '  Text.Whitespace
+"'"           Literal.String.Single
+'cx'          Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'('           Punctuation
+'<-'          Operator
+' '           Text.Whitespace
+"'"           Literal.String.Single
+''            Literal.String.Single
+'`'           Literal.String.Escape
+"cx'"         Literal.String.Escape
+''            Literal.String.Single
+"'"           Literal.String.Single
+')'           Punctuation
+'\n        '  Text.Whitespace
+"'"           Literal.String.Single
+'gx'          Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'('           Punctuation
+'<-'          Operator
+' '           Text.Whitespace
+"'"           Literal.String.Single
+''            Literal.String.Single
+'`'           Literal.String.Escape
+"gx'"         Literal.String.Escape
+''            Literal.String.Single
+"'"           Literal.String.Single
+')'           Punctuation
+'\n        '  Text.Whitespace
+"'"           Literal.String.Single
+'hx'          Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'('           Punctuation
+'<-'          Operator
+' '           Text.Whitespace
+"'"           Literal.String.Single
+''            Literal.String.Single
+'`'           Literal.String.Escape
+"hx'"         Literal.String.Escape
+''            Literal.String.Single
+"'"           Literal.String.Single
+')'           Punctuation
+'\n        '  Text.Whitespace
+"'"           Literal.String.Single
+'jx'          Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'('           Punctuation
+'<-'          Operator
+' '           Text.Whitespace
+"'"           Literal.String.Single
+''            Literal.String.Single
+'`'           Literal.String.Escape
+"jx'"         Literal.String.Escape
+''            Literal.String.Single
+"'"           Literal.String.Single
+')'           Punctuation
+'\n        '  Text.Whitespace
+"'"           Literal.String.Single
+'sx'          Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'('           Punctuation
+'<-'          Operator
+' '           Text.Whitespace
+"'"           Literal.String.Single
+''            Literal.String.Single
+'`'           Literal.String.Escape
+"sx'"         Literal.String.Escape
+''            Literal.String.Single
+"'"           Literal.String.Single
+')'           Punctuation
+'\n        '  Text.Whitespace
+"'"           Literal.String.Single
+'ux'          Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'('           Punctuation
+'<-'          Operator
+' '           Text.Whitespace
+"'"           Literal.String.Single
+''            Literal.String.Single
+'`'           Literal.String.Escape
+"ux'"         Literal.String.Escape
+''            Literal.String.Single
+"'"           Literal.String.Single
+')'           Punctuation
+'\n        '  Text.Whitespace
+"'"           Literal.String.Single
+''            Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'('           Punctuation
+'next'        Operator.Word
+')'           Punctuation
+'\n    '      Text.Whitespace
+')'           Punctuation
+'\n'          Text.Whitespace
+
+')'           Punctuation
+'\n\n'        Text.Whitespace
+
+'backwardmode' Keyword.Reserved
+' '           Text.Whitespace
+'('           Punctuation
+'\n    '      Text.Whitespace
+'stringescapes' Keyword.Reserved
+' '           Text.Whitespace
+'{'           Literal.String.Escape
+' '           Text.Whitespace
+'}'           Literal.String.Escape
+'\n\n    '    Text.Whitespace
+'define'      Keyword.Reserved
+' '           Text.Whitespace
+'apostrophe'  Name
+' '           Text.Whitespace
+'as'          Keyword.Reserved
+' '           Text.Whitespace
+'('           Punctuation
+'\n        '  Text.Whitespace
+'('           Punctuation
+'['           Operator
+"'"           Literal.String.Single
+'un'          Literal.String.Single
+'{'           Literal.String.Escape
+"'"           Literal.String.Escape
+'}'           Literal.String.Escape
+''            Literal.String.Single
+"'"           Literal.String.Single
+']'           Operator
+' '           Text.Whitespace
+'atlimit'     Operator.Word
+' '           Text.Whitespace
+'<-'          Operator
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'unu'         Literal.String.Single
+"'"           Literal.String.Single
+')'           Punctuation
+' '           Text.Whitespace
+'or'          Operator.Word
+'\n        '  Text.Whitespace
+'('           Punctuation
+'['           Operator
+"'"           Literal.String.Single
+'l'           Literal.String.Single
+'{'           Literal.String.Escape
+"'"           Literal.String.Escape
+'}'           Literal.String.Escape
+''            Literal.String.Single
+"'"           Literal.String.Single
+']'           Operator
+' '           Text.Whitespace
+'atlimit'     Operator.Word
+' '           Text.Whitespace
+'<-'          Operator
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'la'          Literal.String.Single
+"'"           Literal.String.Single
+')'           Punctuation
+' '           Text.Whitespace
+'or'          Operator.Word
+'\n        '  Text.Whitespace
+'('           Punctuation
+'['           Operator
+"'"           Literal.String.Single
+''            Literal.String.Single
+'{'           Literal.String.Escape
+"'"           Literal.String.Escape
+'}'           Literal.String.Escape
+''            Literal.String.Single
+"'"           Literal.String.Single
+']'           Operator
+' '           Text.Whitespace
+'<-'          Operator
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'o'           Literal.String.Single
+"'"           Literal.String.Single
+')'           Punctuation
+'\n    '      Text.Whitespace
+')'           Punctuation
+'\n\n    '    Text.Whitespace
+'define'      Keyword.Reserved
+' '           Text.Whitespace
+'vowel'       Name
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'aeiou'       Literal.String.Single
+"'"           Literal.String.Single
+'\n    '      Text.Whitespace
+'define'      Keyword.Reserved
+' '           Text.Whitespace
+'aiou'        Name
+' '           Text.Whitespace
+'vowel'       Name
+' '           Text.Whitespace
+'-'           Operator
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'e'           Literal.String.Single
+"'"           Literal.String.Single
+'\n    '      Text.Whitespace
+'define'      Keyword.Reserved
+' '           Text.Whitespace
+'ao'          Name
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'ao'          Literal.String.Single
+"'"           Literal.String.Single
+'\n    '      Text.Whitespace
+'define'      Keyword.Reserved
+' '           Text.Whitespace
+'ou'          Name
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'ou'          Literal.String.Single
+"'"           Literal.String.Single
+'\n\n    '    Text.Whitespace
+'define'      Keyword.Reserved
+' '           Text.Whitespace
+'short_word'  Name
+' '           Text.Whitespace
+'as'          Keyword.Reserved
+' '           Text.Whitespace
+'not'         Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'loop'        Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'maxint'      Name.Builtin
+' '           Text.Whitespace
+'*'           Operator
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+'4'           Literal.Number.Integer
+' '           Text.Whitespace
+'/'           Operator
+' '           Text.Whitespace
+'2'           Literal.Number.Integer
+')'           Punctuation
+' '           Text.Whitespace
+'gopast'      Operator.Word
+' '           Text.Whitespace
+'vowel'       Name
+')'           Punctuation
+'\n\n    '    Text.Whitespace
+'define'      Keyword.Reserved
+' '           Text.Whitespace
+'interjection' Name
+' '           Text.Whitespace
+'as'          Keyword.Reserved
+' '           Text.Whitespace
+'('           Punctuation
+'\n        '  Text.Whitespace
+'among'       Keyword.Reserved
+' '           Text.Whitespace
+'('           Punctuation
+"'"           Literal.String.Single
+'adia'        Literal.String.Single
+'{'           Literal.String.Escape
+'ux}'         Literal.String.Escape
+''            Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'aha'         Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'amen'        Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'hola'        Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'hura'        Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'mia'         Literal.String.Single
+'{'           Literal.String.Escape
+'ux}'         Literal.String.Escape
+''            Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'muu'         Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'oho'         Literal.String.Single
+"'"           Literal.String.Single
+')'           Punctuation
+'\n        '  Text.Whitespace
+'atlimit'     Operator.Word
+'\n    '      Text.Whitespace
+')'           Punctuation
+'\n\n    '    Text.Whitespace
+'define'      Keyword.Reserved
+' '           Text.Whitespace
+'correlative' Name
+' '           Text.Whitespace
+'as'          Keyword.Reserved
+' '           Text.Whitespace
+'('           Punctuation
+'\n        '  Text.Whitespace
+'['           Operator
+']'           Operator
+'\n        '  Text.Whitespace
+"// Ignore -al, -am, etc. since they can't be confused with suffixes." Comment.Single
+'\n        '  Text.Whitespace
+'test'        Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'\n            ' Text.Whitespace
+'('           Punctuation
+"'"           Literal.String.Single
+'a'           Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'or'          Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'try'         Operator.Word
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'n'           Literal.String.Single
+"'"           Literal.String.Single
+']'           Operator
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'e'           Literal.String.Single
+"'"           Literal.String.Single
+')'           Punctuation
+' '           Text.Whitespace
+'or'          Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'try'         Operator.Word
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'n'           Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'try'         Operator.Word
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'j'           Literal.String.Single
+"'"           Literal.String.Single
+']'           Operator
+' '           Text.Whitespace
+'ou'          Name
+')'           Punctuation
+')'           Punctuation
+'\n            ' Text.Whitespace
+"'"           Literal.String.Single
+'i'           Literal.String.Single
+"'"           Literal.String.Single
+'\n            ' Text.Whitespace
+'try'         Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+"'"           Literal.String.Single
+'k'           Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'or'          Operator.Word
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'t'           Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'or'          Operator.Word
+' '           Text.Whitespace
+"'"           Literal.String.Single
+''            Literal.String.Single
+'{'           Literal.String.Escape
+'cx}'         Literal.String.Escape
+''            Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'or'          Operator.Word
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'nen'         Literal.String.Single
+"'"           Literal.String.Single
+')'           Punctuation
+'\n            ' Text.Whitespace
+'atlimit'     Operator.Word
+'\n        '  Text.Whitespace
+')'           Punctuation
+'\n        '  Text.Whitespace
+'delete'      Operator.Word
+'\n    '      Text.Whitespace
+')'           Punctuation
+'\n\n    '    Text.Whitespace
+'define'      Keyword.Reserved
+' '           Text.Whitespace
+'unuj'        Name
+' '           Text.Whitespace
+'as'          Keyword.Reserved
+' '           Text.Whitespace
+'('           Punctuation
+'\n        '  Text.Whitespace
+'['           Operator
+'try'         Operator.Word
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'n'           Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'j'           Literal.String.Single
+"'"           Literal.String.Single
+']'           Operator
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'unu'         Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'atlimit'     Operator.Word
+' '           Text.Whitespace
+'delete'      Operator.Word
+'\n    '      Text.Whitespace
+')'           Punctuation
+'\n\n    '    Text.Whitespace
+'define'      Keyword.Reserved
+' '           Text.Whitespace
+'standard_suffix' Name
+' '           Text.Whitespace
+'as'          Keyword.Reserved
+' '           Text.Whitespace
+'('           Punctuation
+'\n        '  Text.Whitespace
+'['           Operator
+'\n        '  Text.Whitespace
+'try'         Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'('           Punctuation
+'try'         Operator.Word
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'n'           Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'try'         Operator.Word
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'j'           Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'ao'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'or'          Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'try'         Operator.Word
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'s'           Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'aiou'        Name
+')'           Punctuation
+' '           Text.Whitespace
+'or'          Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'try'         Operator.Word
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'n'           Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'e'           Literal.String.Single
+"'"           Literal.String.Single
+')'           Punctuation
+')'           Punctuation
+'\n        '  Text.Whitespace
+'try'         Operator.Word
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'-'           Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'try'         Operator.Word
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'a'           Literal.String.Single
+'{'           Literal.String.Escape
+'ux}'         Literal.String.Escape
+''            Literal.String.Single
+"'"           Literal.String.Single
+'\n        '  Text.Whitespace
+']'           Operator
+' '           Text.Whitespace
+'delete'      Operator.Word
+'\n    '      Text.Whitespace
+')'           Punctuation
+'\n'          Text.Whitespace
+
+')'           Punctuation
+'\n\n'        Text.Whitespace
+
+'define'      Keyword.Reserved
+' '           Text.Whitespace
+'stem'        Name
+' '           Text.Whitespace
+'as'          Keyword.Reserved
+' '           Text.Whitespace
+'('           Punctuation
+'\n    '      Text.Whitespace
+'do'          Operator.Word
+' '           Text.Whitespace
+'canonical_form' Name
+'\n    '      Text.Whitespace
+'not'         Operator.Word
+' '           Text.Whitespace
+'foreign'     Name
+'\n    '      Text.Whitespace
+'backwards'   Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'\n        '  Text.Whitespace
+'do'          Operator.Word
+' '           Text.Whitespace
+'apostrophe'  Name
+'\n        '  Text.Whitespace
+'short_word'  Name
+' '           Text.Whitespace
+'or'          Operator.Word
+' '           Text.Whitespace
+'interjection' Name
+' '           Text.Whitespace
+'or'          Operator.Word
+'\n        '  Text.Whitespace
+'correlative' Name
+' '           Text.Whitespace
+'or'          Operator.Word
+' '           Text.Whitespace
+'unuj'        Name
+' '           Text.Whitespace
+'or'          Operator.Word
+' '           Text.Whitespace
+'do'          Operator.Word
+' '           Text.Whitespace
+'standard_suffix' Name
+'\n    '      Text.Whitespace
+')'           Punctuation
+'\n    '      Text.Whitespace
+'$'           Operator
+'('           Punctuation
+'lenof'       Operator.Word
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'a'           Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'<='          Operator
+' '           Text.Whitespace
+'sizeof'      Operator.Word
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'a'           Literal.String.Single
+"'"           Literal.String.Single
+')'           Punctuation
+'\n    '      Text.Whitespace
+'$'           Operator
+'('           Punctuation
+'len'         Name.Builtin
+' '           Text.Whitespace
+'<='          Operator
+' '           Text.Whitespace
+'size'        Name.Builtin
+')'           Punctuation
+'\n'          Text.Whitespace
+
+')'           Punctuation
+'\n'          Text.Whitespace

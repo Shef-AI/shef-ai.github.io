@@ -1,0 +1,44 @@
+From 4ba68414d0fb9b310143c86251bfe432ff165d35 Mon Sep 17 00:00:00 2001
+From: "jan.nijtmans" <nijtmans@users.sourceforge.net>
+Date: Tue, 30 Jun 2026 08:47:55 +0000
+Subject: [PATCH] Fix setting  ZIPFS_BUILD=0 when building for Tcl 8 (Thanks,
+ @fgaz)
+
+Modified for vendoring in tcl9.0.4/pkgs/thread3.0.6
+
+---
+ configure    | 3 +++
+ configure.ac | 3 +++
+ 2 files changed, 6 insertions(+)
+
+diff --git a/tcl9.0.4/pkgs/thread3.0.6/configure b/tcl9.0.4/pkgs/thread3.0.6/configure
+index b14b157..293bfa4 100755
+--- a/tcl9.0.4/pkgs/thread3.0.6/configure
++++ b/tcl9.0.4/pkgs/thread3.0.6/configure
+@@ -9701,6 +9701,9 @@ fi
+ 	ZIPFS_BUILD=0
+ 	THREAD_ZIP_FILE=
+     fi
++else
++    ZIPFS_BUILD=0
++    THREAD_ZIP_FILE=
+ fi
+ 
+ # Do checking message here to not mess up interleaved configure output
+diff --git a/tcl9.0.4/pkgs/thread3.0.6/configure.ac b/tcl9.0.4/pkgs/thread3.0.6/configure.ac
+index c95fd34..5a5a312 100644
+--- a/tcl9.0.4/pkgs/thread3.0.6/configure.ac
++++ b/tcl9.0.4/pkgs/thread3.0.6/configure.ac
+@@ -215,6 +215,9 @@ if test "${TCL_MAJOR_VERSION}" -gt 8 -a x"${with_tcl8}" = x; then
+ 	ZIPFS_BUILD=0
+ 	THREAD_ZIP_FILE=
+     fi
++else
++    ZIPFS_BUILD=0
++    THREAD_ZIP_FILE=
+ fi
+ 
+ # Do checking message here to not mess up interleaved configure output
+-- 
+2.51.0
+

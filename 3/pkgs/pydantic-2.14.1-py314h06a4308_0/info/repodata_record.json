@@ -1,0 +1,29 @@
+{
+  "arch": "x86_64",
+  "build": "py314h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64/",
+  "constrains": [
+    "email-validator >=2.0.0"
+  ],
+  "depends": [
+    "annotated-types >=0.6.0",
+    "pydantic-core 2.50.1",
+    "python >=3.14,<3.15.0a0",
+    "python_abi 3.14.* *_cp314",
+    "typing-inspection >=0.4.4",
+    "typing_extensions >=4.16.0"
+  ],
+  "fn": "pydantic-2.14.1-py314h06a4308_0.conda",
+  "license": "MIT",
+  "license_family": "MIT",
+  "md5": "aed08089a8b77d4fc8563301857a8e1b",
+  "name": "pydantic",
+  "platform": "linux",
+  "sha256": "6c07a8410326cd37f5fa8d8514dc4a0c4d8c86642e6f41239d724b805c2d3684",
+  "size": 1226828,
+  "subdir": "linux-64",
+  "timestamp": 1792505750000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/pydantic-2.14.1-py314h06a4308_0.conda",
+  "version": "2.14.1"
+}

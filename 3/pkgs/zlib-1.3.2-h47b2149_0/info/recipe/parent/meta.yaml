@@ -1,0 +1,152 @@
+{% set name = "zlib" %}
+{% set version = "1.3.2" %}
+
+package:
+  name: {{ name|lower }}-split
+  version: {{ version }}
+
+source:
+  url: https://zlib.net/fossils/zlib-{{ version }}.tar.gz
+  sha256: bb329a0a2cd0274d05519d61c667c062e06990d72e125ee2dfa8de64f0119d16
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - {{ stdlib('c') }}
+    - {{ compiler('c') }}
+    - cmake # [win]
+    - make  # [unix]
+
+outputs:
+  - name: lib{{ name }}
+    run_exports:
+      - {{ pin_subpackage('lib' + name, max_pin='x') }}
+    requirements:
+      build:
+        - {{ stdlib('c') }}
+        - {{ compiler('c') }}
+      run_constrained:
+        - {{ name }} {{ version }}
+    files:
+      - lib/libz.so.*         # [linux]
+      - lib/libz.*.dylib      # [osx]
+      - Library/bin/zlib.dll  # [win]
+      - zlib.dll              # [win]
+    test:
+      commands:
+        - test ! -f ${PREFIX}/lib/libz.a              # [unix]
+        - test ! -f ${PREFIX}/lib/libz${SHLIB_EXT}    # [unix]
+        - test ! -f ${PREFIX}/include/zlib.h          # [unix]
+        - if not exist %LIBRARY_BIN%\zlib.dll exit 1  # [win]
+        - if not exist %PREFIX%\zlib.dll exit 1       # [win]
+
+  - name: lib{{ name }}-wapi
+    build:
+      skip: true  # [not win]
+      run_exports:
+        - {{ pin_subpackage('lib' + name + '-wapi', max_pin='x') }}
+    requirements:
+      build:
+        - {{ stdlib('c') }}
+        - {{ compiler('c') }}
+      run_constrained:
+        - {{ name }} {{ version }}
+        - {{ name }}-wapi {{ version }}
+    files:
+      - Library/bin/zlibwapi.dll
+    test:
+      commands:
+        - if not exist "%LIBRARY_BIN%\zlibwapi.dll" exit 1
+
+  - name: {{ name }}
+    build:
+      run_exports:
+        - {{ pin_subpackage('lib' + name, max_pin='x') }}
+    requirements:
+      build:
+        - {{ stdlib('c') }}
+        - {{ compiler('c') }}
+      host:
+        - {{ pin_subpackage('lib' + name, exact=True) }}
+      run:
+        - {{ pin_subpackage('lib' + name, exact=True) }}
+    files:
+      - lib/libz.so                 # [linux]
+      - lib/libz.dylib              # [osx]
+      - include                     # [unix]
+      - lib/pkgconfig               # [unix]
+      - lib/libz.a                  # [unix]
+      - Library/include             # [win]
+      - Library/share               # [win]
+      - Library/lib/zlib.lib        # [win]
+      - Library/lib/zdll.lib        # [win]
+      - Library/lib/z.lib           # [win]
+      - Library/lib/zlibstatic.lib  # [win]
+      - Library/lib/pkgconfig       # [win]
+    test:
+      requires:
+        - {{ compiler('c') }}
+      files:
+        - test_compile_flags.bat
+        - test_compile_flags.c
+      commands:
+        - test -f ${PREFIX}/lib/libz.a                         # [unix]
+        - test -f ${PREFIX}/lib/libz${SHLIB_EXT}               # [unix]
+        - test -f ${PREFIX}/include/zlib.h                     # [unix]
+        - if not exist %LIBRARY_LIB%\zlibstatic.lib exit 1     # [win]
+        - if not exist %LIBRARY_LIB%\zlib.lib exit 1           # [win]
+        - if not exist %LIBRARY_LIB%\pkgconfig\zlib.pc exit 1  # [win]
+        - if not exist %LIBRARY_INC%\zlib.h exit 1             # [win]
+        - if exist %LIBRARY_LIB%\zlibwapi.lib exit 1           # [win]
+        - call test_compile_flags.bat                          # [win]
+
+  - name: {{ name }}-wapi
+    build:
+      skip: true  # [not win]
+      run_exports:
+        - {{ pin_subpackage('lib' + name + '-wapi', max_pin='x') }}
+    requirements:
+      build:
+        - {{ stdlib('c') }}
+        - {{ compiler('c') }}
+      host:
+        - {{ pin_subpackage('lib' + name + '-wapi', exact=True) }}
+        - {{ pin_subpackage(name, exact=True) }}
+      run:
+        - {{ pin_subpackage('lib' + name + '-wapi', exact=True) }}
+        - {{ pin_subpackage(name, exact=True) }}
+    files:
+      - Library/lib/zlibwapi.lib
+    test:
+      requires:
+        - {{ compiler('c') }}
+      files:
+        - test_compile_flags.bat
+        - test_compile_flags.c
+      commands:
+        - if not exist %LIBRARY_LIB%\zlibwapi.lib exit 1
+        - call test_compile_flags.bat "wapi"
+
+about:
+  home: https://zlib.net/
+  summary: A massively spiffy yet delicately unobtrusive compression library
+  description: |
+    zlib is designed to be a free, general-purpose, lossless data-compression
+    library for use on virtually any computer hardware and operating system.
+  license: Zlib
+  license_family: OTHER
+  license_file: LICENSE
+  doc_url: https://zlib.net/manual.html
+  dev_url: https://github.com/madler/zlib
+
+extra:
+  skip-lints:
+    # incorrectly flags pin_subpackage as unpinned
+    - host_section_needs_exact_pinnings
+  recipe-maintainers:
+    - groutr
+    - msarahan
+    - ocefpaf
+    - mingwandroid

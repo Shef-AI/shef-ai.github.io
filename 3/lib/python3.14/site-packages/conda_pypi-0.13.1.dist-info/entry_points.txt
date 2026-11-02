@@ -1,0 +1,2 @@
+[conda]
+conda-pypi = conda_pypi.plugin

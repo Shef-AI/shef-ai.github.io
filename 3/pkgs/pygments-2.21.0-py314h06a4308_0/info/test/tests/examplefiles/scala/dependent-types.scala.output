@@ -1,0 +1,102 @@
+'trait'       Keyword
+' '           Text.Whitespace
+'Entry'       Name.Class
+' '           Text.Whitespace
+'{'           Punctuation
+' '           Text.Whitespace
+'type'        Keyword
+' '           Text.Whitespace
+'Key'         Name.Class
+';'           Punctuation
+' '           Text.Whitespace
+'val'         Keyword.Declaration
+' '           Text.Whitespace
+'key'         Name
+':'           Punctuation
+' '           Text.Whitespace
+'Key'         Name.Class
+' '           Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'def'         Keyword
+' '           Text.Whitespace
+'extractKey'  Name.Function
+'('           Punctuation
+'e'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'Entry'       Name.Class
+')'           Punctuation
+':'           Punctuation
+' '           Text.Whitespace
+'e'           Name
+'.'           Punctuation
+'Key'         Name.Class
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'e'           Name
+'.'           Punctuation
+'key'         Name
+'\n'          Text.Whitespace
+
+'val'         Keyword.Declaration
+' '           Text.Whitespace
+'extractor'   Name
+':'           Punctuation
+' '           Text.Whitespace
+'('           Punctuation
+'e'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'Entry'       Name.Class
+')'           Punctuation
+' '           Text.Whitespace
+'=>'          Operator
+' '           Text.Whitespace
+'e'           Name
+'.'           Punctuation
+'Key'         Name.Class
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'extractKey'  Name
+'\n'          Text.Whitespace
+
+'type'        Keyword
+' '           Text.Whitespace
+'Extractor'   Name.Class
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'Function1'   Name.Class
+'['           Punctuation
+'Entry'       Name.Class
+','           Punctuation
+' '           Text.Whitespace
+'Entry'       Name.Class
+'#'           Name
+'Key'         Name.Class
+']'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n  '        Text.Whitespace
+'def'         Keyword
+' '           Text.Whitespace
+'apply'       Name.Function
+'('           Punctuation
+'e'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'Entry'       Name.Class
+')'           Punctuation
+':'           Punctuation
+' '           Text.Whitespace
+'e'           Name
+'.'           Punctuation
+'Key'         Name.Class
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n'          Text.Whitespace

@@ -1,0 +1,26 @@
+{
+  "arch": "x86_64",
+  "build": "h65de747_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.28,<3.0.a0",
+    "libgcc >=14",
+    "libxcb >=1.17.0,<2.0a0",
+    "xorg-xorgproto >=2024.1",
+    "xorg-xorgproto >=2025.1,<2026.0a0"
+  ],
+  "fn": "xorg-libx11-1.8.14-h65de747_0.conda",
+  "license": "MIT",
+  "license_family": "MIT",
+  "md5": "b2f04deb8085b15c3d4d60a92e380e67",
+  "name": "xorg-libx11",
+  "platform": "linux",
+  "sha256": "bfa0f3f6232453ef46663209af0d5f59f179f609e39ba8c36c8afaabd61473b1",
+  "size": 839520,
+  "subdir": "linux-64",
+  "timestamp": 1792574232000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/xorg-libx11-1.8.14-h65de747_0.conda",
+  "version": "1.8.14"
+}

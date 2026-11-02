@@ -1,0 +1,290 @@
+# This file is dual licensed under the terms of the Apache License, Version
+# 2.0, and the BSD License. See the LICENSE file in the root of this repository
+# for complete details.
+
+
+import binascii
+import os
+import sys
+import typing
+
+import pytest
+
+from cryptography.exceptions import AlreadyFinalized, InvalidKey
+from cryptography.hazmat.primitives import hashes
+from cryptography.hazmat.primitives.kdf.hkdf import HKDF, HKDFExpand
+
+from ...doubles import DummyHashAlgorithm
+from ...utils import load_nist_vectors, load_vectors_from_file
+
+
+class TestHKDF:
+    def test_overflow_protection_enormous_digest_size(self):
+        enormous_digest_size = sys.maxsize >> 3
+        dummy_hash = DummyHashAlgorithm(enormous_digest_size)
+
+        with pytest.raises(
+            ValueError, match="Digest size too large, would cause overflow"
+        ):
+            HKDF(dummy_hash, 32, salt=None, info=None)
+
+    def test_length_limit(self):
+        big_length = 255 * hashes.SHA256().digest_size + 1
+
+        with pytest.raises(ValueError):
+            HKDF(hashes.SHA256(), big_length, salt=None, info=None)
+
+    def test_already_finalized(self):
+        hkdf = HKDF(hashes.SHA256(), 16, salt=None, info=None)
+
+        hkdf.derive(b"\x01" * 16)
+
+        with pytest.raises(AlreadyFinalized):
+            hkdf.derive(b"\x02" * 16)
+
+        hkdf = HKDF(hashes.SHA256(), 16, salt=None, info=None)
+
+        hkdf.verify(b"\x01" * 16, b"gJ\xfb{\xb1Oi\xc5sMC\xb7\xe4@\xf7u")
+
+        with pytest.raises(AlreadyFinalized):
+            hkdf.verify(b"\x02" * 16, b"gJ\xfb{\xb1Oi\xc5sMC\xb7\xe4@\xf7u")
+
+        hkdf = HKDF(hashes.SHA256(), 16, salt=None, info=None)
+
+    def test_verify(self):
+        hkdf = HKDF(hashes.SHA256(), 16, salt=None, info=None)
+
+        hkdf.verify(b"\x01" * 16, b"gJ\xfb{\xb1Oi\xc5sMC\xb7\xe4@\xf7u")
+
+    def test_verify_invalid(self):
+        hkdf = HKDF(hashes.SHA256(), 16, salt=None, info=None)
+
+        with pytest.raises(InvalidKey):
+            hkdf.verify(b"\x02" * 16, b"gJ\xfb{\xb1Oi\xc5sMC\xb7\xe4@\xf7u")
+
+    def test_unicode_typeerror(self):
+        with pytest.raises(TypeError):
+            HKDF(
+                hashes.SHA256(),
+                16,
+                salt=typing.cast(typing.Any, "foo"),
+                info=None,
+            )
+
+        with pytest.raises(TypeError):
+            HKDF(
+                hashes.SHA256(),
+                16,
+                salt=None,
+                info=typing.cast(typing.Any, "foo"),
+            )
+
+        with pytest.raises(TypeError):
+            hkdf = HKDF(hashes.SHA256(), 16, salt=None, info=None)
+
+            hkdf.derive(typing.cast(typing.Any, "foo"))
+
+        with pytest.raises(TypeError):
+            hkdf = HKDF(hashes.SHA256(), 16, salt=None, info=None)
+
+            hkdf.verify(typing.cast(typing.Any, "foo"), b"bar")
+
+        with pytest.raises(TypeError):
+            hkdf = HKDF(hashes.SHA256(), 16, salt=None, info=None)
+
+            hkdf.verify(b"foo", typing.cast(typing.Any, "bar"))
+
+    def test_derive_short_output(self):
+        hkdf = HKDF(hashes.SHA256(), 4, salt=None, info=None)
+
+        assert hkdf.derive(b"\x01" * 16) == b"gJ\xfb{"
+
+    def test_derive_long_output(self):
+        vector = load_vectors_from_file(
+            os.path.join("KDF", "hkdf-generated.txt"), load_nist_vectors
+        )[0]
+        hkdf = HKDF(
+            hashes.SHA256(),
+            int(vector["l"]),
+            salt=vector["salt"],
+            info=vector["info"],
+        )
+        ikm = binascii.unhexlify(vector["ikm"])
+
+        assert hkdf.derive(ikm) == binascii.unhexlify(vector["okm"])
+
+    def test_private_extract_exists(self):
+        # This was DeprecatedIn47 but we can't raise a warning
+        # because the scapy tests are fragile butterflies
+        hkdf = HKDF(hashes.SHA256(), 32, salt=b"0", info=None)
+        prk = hkdf._extract(b"0")  # type:ignore[attr-defined]
+        assert len(prk) == 32
+
+    def test_buffer_protocol(self):
+        vector = load_vectors_from_file(
+            os.path.join("KDF", "hkdf-generated.txt"), load_nist_vectors
+        )[0]
+        hkdf = HKDF(
+            hashes.SHA256(),
+            int(vector["l"]),
+            salt=vector["salt"],
+            info=vector["info"],
+        )
+        ikm = bytearray(binascii.unhexlify(vector["ikm"]))
+
+        assert hkdf.derive(ikm) == binascii.unhexlify(vector["okm"])
+
+    def test_derive_into(self):
+        hkdf = HKDF(hashes.SHA256(), 16, salt=None, info=None)
+        buf = bytearray(16)
+        n = hkdf.derive_into(b"\x01" * 16, buf)
+        assert n == 16
+        assert buf == b"gJ\xfb{\xb1Oi\xc5sMC\xb7\xe4@\xf7u"
+
+    @pytest.mark.parametrize(
+        ("buflen", "outlen"), [(15, 16), (17, 16), (22, 23), (24, 23)]
+    )
+    def test_derive_into_buffer_incorrect_size(self, buflen, outlen):
+        hkdf = HKDF(hashes.SHA256(), outlen, salt=None, info=None)
+        buf = bytearray(buflen)
+        with pytest.raises(ValueError, match="buffer must be"):
+            hkdf.derive_into(b"\x01" * 16, buf)
+
+    def test_derive_into_already_finalized(self):
+        hkdf = HKDF(hashes.SHA256(), 16, salt=None, info=None)
+        buf = bytearray(16)
+        hkdf.derive_into(b"\x01" * 16, buf)
+        with pytest.raises(AlreadyFinalized):
+            hkdf.derive_into(b"\x02" * 16, buf)
+
+
+class TestHKDFExpand:
+    def test_derive(self):
+        prk = binascii.unhexlify(
+            b"077709362c2e32df0ddc3f0dc47bba6390b6c73bb50f9c3122ec844ad7c2b3e5"
+        )
+
+        okm = (
+            b"3cb25f25faacd57a90434f64d0362f2a2d2d0a90cf1a5a4c5db02d56ecc4c"
+            b"5bf34007208d5b887185865"
+        )
+
+        info = binascii.unhexlify(b"f0f1f2f3f4f5f6f7f8f9")
+        hkdf = HKDFExpand(hashes.SHA256(), 42, info)
+
+        assert binascii.hexlify(hkdf.derive(prk)) == okm
+
+    def test_buffer_protocol(self):
+        prk = bytearray(
+            binascii.unhexlify(
+                b"077709362c2e32df0ddc3f0dc47bba6390b6c73bb50f9c3122ec844ad7c2"
+                b"b3e5"
+            )
+        )
+
+        okm = (
+            b"3cb25f25faacd57a90434f64d0362f2a2d2d0a90cf1a5a4c5db02d56ecc4c"
+            b"5bf34007208d5b887185865"
+        )
+
+        info = binascii.unhexlify(b"f0f1f2f3f4f5f6f7f8f9")
+        hkdf = HKDFExpand(hashes.SHA256(), 42, info)
+
+        assert binascii.hexlify(hkdf.derive(prk)) == okm
+
+    def test_verify(self):
+        prk = binascii.unhexlify(
+            b"077709362c2e32df0ddc3f0dc47bba6390b6c73bb50f9c3122ec844ad7c2b3e5"
+        )
+
+        okm = (
+            b"3cb25f25faacd57a90434f64d0362f2a2d2d0a90cf1a5a4c5db02d56ecc4c"
+            b"5bf34007208d5b887185865"
+        )
+
+        info = binascii.unhexlify(b"f0f1f2f3f4f5f6f7f8f9")
+        hkdf = HKDFExpand(hashes.SHA256(), 42, info)
+
+        hkdf.verify(prk, binascii.unhexlify(okm))
+
+    def test_invalid_verify(self):
+        prk = binascii.unhexlify(
+            b"077709362c2e32df0ddc3f0dc47bba6390b6c73bb50f9c3122ec844ad7c2b3e5"
+        )
+
+        info = binascii.unhexlify(b"f0f1f2f3f4f5f6f7f8f9")
+        hkdf = HKDFExpand(hashes.SHA256(), 42, info)
+
+        with pytest.raises(InvalidKey):
+            hkdf.verify(prk, b"wrong key")
+
+    def test_already_finalized(self):
+        info = binascii.unhexlify(b"f0f1f2f3f4f5f6f7f8f9")
+        hkdf = HKDFExpand(hashes.SHA256(), 42, info)
+
+        hkdf.derive(b"first")
+
+        with pytest.raises(AlreadyFinalized):
+            hkdf.derive(b"second")
+
+    def test_unicode_error(self):
+        info = binascii.unhexlify(b"f0f1f2f3f4f5f6f7f8f9")
+        hkdf = HKDFExpand(hashes.SHA256(), 42, info)
+
+        with pytest.raises(TypeError):
+            hkdf.derive(typing.cast(typing.Any, "first"))
+
+    def test_overflow_protection_enormous_digest_size(self):
+        enormous_digest_size = sys.maxsize >> 3
+        dummy_hash = DummyHashAlgorithm(enormous_digest_size)
+
+        with pytest.raises(
+            ValueError, match="Digest size too large, would cause overflow"
+        ):
+            HKDFExpand(dummy_hash, 32, info=None)
+
+    def test_length_limit(self):
+        big_length = 255 * hashes.SHA256().digest_size + 1
+
+        with pytest.raises(ValueError):
+            HKDFExpand(
+                hashes.SHA256(),
+                big_length,
+                info=None,
+            )
+
+    def test_derive_into(self):
+        prk = binascii.unhexlify(
+            b"077709362c2e32df0ddc3f0dc47bba6390b6c73bb50f9c3122ec844ad7c2b3e5"
+        )
+
+        okm = binascii.unhexlify(
+            b"3cb25f25faacd57a90434f64d0362f2a2d2d0a90cf1a5a4c5db02d56ecc4c"
+            b"5bf34007208d5b887185865"
+        )
+
+        info = binascii.unhexlify(b"f0f1f2f3f4f5f6f7f8f9")
+        hkdf = HKDFExpand(hashes.SHA256(), 42, info)
+
+        buf = bytearray(42)
+        n = hkdf.derive_into(prk, buf)
+        assert n == 42
+        assert buf == okm
+
+    @pytest.mark.parametrize(
+        ("buflen", "outlen"), [(15, 16), (17, 16), (22, 23), (24, 23)]
+    )
+    def test_derive_into_buffer_incorrect_size(self, buflen, outlen):
+        hkdf = HKDFExpand(hashes.SHA256(), outlen, info=None)
+
+        buf = bytearray(buflen)
+        with pytest.raises(ValueError, match="buffer must be"):
+            hkdf.derive_into(b"\x00" * 16, buf)
+
+    def test_derive_into_already_finalized(self):
+        hkdf = HKDFExpand(hashes.SHA256(), 42, info=None)
+
+        buf = bytearray(42)
+        hkdf.derive_into(b"0" * 16, buf)
+        with pytest.raises(AlreadyFinalized):
+            hkdf.derive_into(b"0" * 16, buf)

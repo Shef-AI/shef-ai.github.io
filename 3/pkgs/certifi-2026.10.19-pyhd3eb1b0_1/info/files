@@ -1,0 +1,15 @@
+site-packages/certifi-2026.10.19.dist-info/INSTALLER
+site-packages/certifi-2026.10.19.dist-info/METADATA
+site-packages/certifi-2026.10.19.dist-info/RECORD
+site-packages/certifi-2026.10.19.dist-info/REQUESTED
+site-packages/certifi-2026.10.19.dist-info/WHEEL
+site-packages/certifi-2026.10.19.dist-info/direct_url.json
+site-packages/certifi-2026.10.19.dist-info/licenses/LICENSE
+site-packages/certifi-2026.10.19.dist-info/top_level.txt
+site-packages/certifi/__init__.py
+site-packages/certifi/__main__.py
+site-packages/certifi/cacert.pem
+site-packages/certifi/core.py
+site-packages/certifi/py.typed
+site-packages/certifi/tests/__init__.py
+site-packages/certifi/tests/test_certify.py

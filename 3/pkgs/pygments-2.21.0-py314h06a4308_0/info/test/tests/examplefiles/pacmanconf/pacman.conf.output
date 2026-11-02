@@ -1,0 +1,429 @@
+'#'           Comment.Single
+'\n'          Text.Whitespace
+
+'# /etc/pacman.conf' Comment.Single
+'\n'          Text.Whitespace
+
+'#'           Comment.Single
+'\n'          Text.Whitespace
+
+'# This example file has no relation to `pacman.ijs`' Comment.Single
+'\n'          Text.Whitespace
+
+"# but is of configuration of Arch Linux's package manager `pacman`." Comment.Single
+'\n'          Text.Whitespace
+
+'#'           Comment.Single
+'\n\n'        Text.Whitespace
+
+'#'           Comment.Single
+'\n'          Text.Whitespace
+
+'# GENERAL OPTIONS' Comment.Single
+'\n'          Text.Whitespace
+
+'#'           Comment.Single
+'\n'          Text.Whitespace
+
+'[options]'   Keyword
+'\n'          Text.Whitespace
+
+'RootDir'     Name.Attribute
+'     '       Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'/'           Text
+'o'           Text
+'p'           Text
+'t'           Text
+'/'           Text
+'l'           Text
+'o'           Text
+'c'           Text
+'a'           Text
+'l'           Text
+'/'           Text
+'s'           Text
+'i'           Text
+'t'           Text
+'e'           Text
+'-'           Text
+'p'           Text
+'r'           Text
+'i'           Text
+'v'           Text
+'a'           Text
+'t'           Text
+'e'           Text
+'\n'          Text.Whitespace
+
+'#DBPath      = /var/lib/pacman/' Comment.Single
+'\n'          Text.Whitespace
+
+'#CacheDir    = /var/cache/pacman/pkg/' Comment.Single
+'\n'          Text.Whitespace
+
+'LogFile'     Name.Attribute
+'     '       Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'/'           Text
+'o'           Text
+'p'           Text
+'t'           Text
+'/'           Text
+'l'           Text
+'o'           Text
+'c'           Text
+'a'           Text
+'l'           Text
+'/'           Text
+'s'           Text
+'i'           Text
+'t'           Text
+'e'           Text
+'-'           Text
+'p'           Text
+'r'           Text
+'i'           Text
+'v'           Text
+'a'           Text
+'t'           Text
+'e'           Text
+'/'           Text
+'v'           Text
+'a'           Text
+'r'           Text
+'/'           Text
+'l'           Text
+'o'           Text
+'g'           Text
+'/'           Text
+'p'           Text
+'a'           Text
+'c'           Text
+'m'           Text
+'a'           Text
+'n'           Text
+'.'           Text
+'l'           Text
+'o'           Text
+'g'           Text
+'\n'          Text.Whitespace
+
+'#GPGDir      = /etc/pacman.d/gnupg/' Comment.Single
+'\n'          Text.Whitespace
+
+'HoldPkg'     Name.Attribute
+'      '      Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'p'           Text
+'a'           Text
+'c'           Text
+'m'           Text
+'a'           Text
+'n'           Text
+'\n'          Text.Whitespace
+
+'#XferCommand = /usr/bin/curl -C - -f %u > %o' Comment.Single
+'\n'          Text.Whitespace
+
+'XferCommand' Name.Attribute
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'/'           Text
+'u'           Text
+'s'           Text
+'r'           Text
+'/'           Text
+'l'           Text
+'o'           Text
+'c'           Text
+'a'           Text
+'l'           Text
+'/'           Text
+'b'           Text
+'i'           Text
+'n'           Text
+'/'           Text
+'w'           Text
+'g'           Text
+'e'           Text
+'t'           Text
+' '           Text.Whitespace
+'-'           Text
+'-'           Text
+'p'           Text
+'a'           Text
+'s'           Text
+'s'           Text
+'i'           Text
+'v'           Text
+'e'           Text
+'-'           Text
+'f'           Text
+'t'           Text
+'p'           Text
+' '           Text.Whitespace
+'-'           Text
+'c'           Text
+' '           Text.Whitespace
+'-'           Text
+'O'           Text
+' '           Text.Whitespace
+'%o'          Name.Variable
+' '           Text.Whitespace
+'%u'          Name.Variable
+'\n'          Text.Whitespace
+
+'#CleanMethod = KeepInstalled' Comment.Single
+'\n'          Text.Whitespace
+
+'#UseDelta    = 0.7' Comment.Single
+'\n'          Text.Whitespace
+
+'Architecture' Name.Attribute
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'a'           Text
+'u'           Text
+'t'           Text
+'o'           Text
+'\n\n'        Text.Whitespace
+
+'#IgnorePkg   =' Comment.Single
+'\n'          Text.Whitespace
+
+'#IgnoreGroup =' Comment.Single
+'\n\n'        Text.Whitespace
+
+'NoUpgrade'   Name.Attribute
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'e'           Text
+'t'           Text
+'c'           Text
+'/'           Text
+'p'           Text
+'a'           Text
+'s'           Text
+'s'           Text
+'w'           Text
+'d'           Text
+' '           Text.Whitespace
+'e'           Text
+'t'           Text
+'c'           Text
+'/'           Text
+'g'           Text
+'r'           Text
+'o'           Text
+'u'           Text
+'p'           Text
+' '           Text.Whitespace
+'e'           Text
+'t'           Text
+'c'           Text
+'/'           Text
+'s'           Text
+'h'           Text
+'a'           Text
+'d'           Text
+'o'           Text
+'w'           Text
+'\n'          Text.Whitespace
+
+'NoUpgrade'   Name.Attribute
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'e'           Text
+'t'           Text
+'c'           Text
+'/'           Text
+'f'           Text
+'s'           Text
+'t'           Text
+'a'           Text
+'b'           Text
+'\n'          Text.Whitespace
+
+'#NoExtract   =' Comment.Single
+'\n\n'        Text.Whitespace
+
+'#UseSyslog'  Comment.Single
+'\n'          Text.Whitespace
+
+'Color'       Name.Attribute
+'\n'          Text.Whitespace
+
+'#TotalDownload' Comment.Single
+'\n'          Text.Whitespace
+
+'CheckSpace'  Name.Attribute
+'\n'          Text.Whitespace
+
+'#VerbosePkgLists' Comment.Single
+'\n\n'        Text.Whitespace
+
+'#SigLevel = Never' Comment.Single
+'\n'          Text.Whitespace
+
+'SigLevel'    Name.Attribute
+'    '        Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'R'           Text
+'e'           Text
+'q'           Text
+'u'           Text
+'i'           Text
+'r'           Text
+'e'           Text
+'d'           Text
+' '           Text.Whitespace
+'D'           Text
+'a'           Text
+'t'           Text
+'a'           Text
+'b'           Text
+'a'           Text
+'s'           Text
+'e'           Text
+'O'           Text
+'p'           Text
+'t'           Text
+'i'           Text
+'o'           Text
+'n'           Text
+'a'           Text
+'l'           Text
+'\n'          Text.Whitespace
+
+'LocalFileSigLevel' Name.Attribute
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'O'           Text
+'p'           Text
+'t'           Text
+'i'           Text
+'o'           Text
+'n'           Text
+'a'           Text
+'l'           Text
+'\n'          Text.Whitespace
+
+'RemoteFileSigLevel' Name.Attribute
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'R'           Text
+'e'           Text
+'q'           Text
+'u'           Text
+'i'           Text
+'r'           Text
+'e'           Text
+'d'           Text
+'\n\n'        Text.Whitespace
+
+'Server'      Name.Attribute
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'f'           Text
+'t'           Text
+'p'           Text
+':'           Text
+'/'           Text
+'/'           Text
+'f'           Text
+'t'           Text
+'p'           Text
+'9'           Text
+'.'           Text
+'y'           Text
+'a'           Text
+'p'           Text
+'h'           Text
+'a'           Text
+'t'           Text
+'c'           Text
+'h'           Text
+'p'           Text
+'o'           Text
+'t'           Text
+'c'           Text
+'h'           Text
+'g'           Text
+'e'           Text
+'n'           Text
+'.'           Text
+'n'           Text
+'e'           Text
+'t'           Text
+'/'           Text
+'$repo'       Name.Variable
+'/'           Text
+'o'           Text
+'s'           Text
+'/'           Text
+'$arch'       Name.Variable
+'\n\n'        Text.Whitespace
+
+'[fubar32]'   Keyword
+'\n'          Text.Whitespace
+
+'Include'     Name.Attribute
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'/'           Text
+'e'           Text
+'t'           Text
+'c'           Text
+'/'           Text
+'p'           Text
+'a'           Text
+'c'           Text
+'m'           Text
+'a'           Text
+'n'           Text
+'.'           Text
+'d'           Text
+'/'           Text
+'m'           Text
+'i'           Text
+'r'           Text
+'r'           Text
+'o'           Text
+'r'           Text
+'l'           Text
+'i'           Text
+'s'           Text
+'t'           Text
+'.'           Text
+'f'           Text
+'u'           Text
+'b'           Text
+'a'           Text
+'r'           Text
+'3'           Text
+'2'           Text
+' '           Text.Whitespace
+'# comment is allowed here' Comment.Single
+'\n\n'        Text.Whitespace
+
+'#[custom]'   Comment.Single
+'\n'          Text.Whitespace
+
+'#SigLevel = Optional TrustAll' Comment.Single
+'\n'          Text.Whitespace
+
+'#Server = file:///home/custompkgs' Comment.Single
+'\n'          Text.Whitespace

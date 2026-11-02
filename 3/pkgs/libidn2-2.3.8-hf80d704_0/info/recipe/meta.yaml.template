@@ -1,0 +1,53 @@
+{% set name = "libidn2" %}
+{% set version = "2.3.8" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  url: https://ftp.gnu.org/gnu/libidn/libidn2-{{ version }}.tar.gz
+  sha256: f557911bf6171621e1f72ff35f5b1825bb35b52ed45325dcdee931e5d3c0787a
+
+build:
+  skip: True  # [win]
+  number: 0
+  run_exports:
+    # _Amazing_ backwards compatibility so pin to major number:
+    #    https://abi-laboratory.pro/tracker/timeline/libidn2/
+    - {{ pin_subpackage('libidn2', min_pin='x', max_pin='x') }}
+
+requirements:
+  build:
+    - {{ stdlib('c') }}
+    - {{ compiler('c') }}
+    - make
+    - pkg-config
+    - gnuconfig # [unix]
+  host:
+    - gettext >=0.19.8
+    - libunistring 1.3
+    - libiconv
+  run:
+    - libiconv
+
+test:
+  commands:
+    - test -f "${PREFIX}/include/idn2.h"
+    - test -f "${PREFIX}/lib/libidn2${SHLIB_EXT}"
+    - test ! -f "${PREFIX}/lib/libidn2.a"
+
+about:
+  home: https://www.gnu.org/software/libidn/#libidn2
+  license: LGPL-2.0 AND LGPL-3.0-or-later AND GPL-3.0-or-later
+  license_file: COPYING
+  license_family: OTHER
+  description: "Library for internationalized domain names (IDNA2008) support"
+  summary: "Library for internationalized domain names (IDNA2008) support"
+  dev_url: https://gitlab.com/libidn/libidn2
+  doc_url: https://libidn.gitlab.io/libidn2/manual/libidn2.html
+
+extra:
+  recipe-maintainers:
+    - hmaarrfk
+    - chenghlee

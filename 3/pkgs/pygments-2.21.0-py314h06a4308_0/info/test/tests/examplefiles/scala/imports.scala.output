@@ -1,0 +1,171 @@
+'import'      Keyword
+' '           Text.Whitespace
+'// This is incorrect Scala but can still be highlighted correctly\n' Comment.Single
+
+''            Text
+'import'      Keyword
+' '           Text.Whitespace
+'a'           Name.Namespace
+'.'           Punctuation
+'{'           Punctuation
+'x'           Name
+' '           Text.Whitespace
+'=>'          Operator
+' '           Text.Whitespace
+'y'           Name
+'}'           Punctuation
+' '           Text.Whitespace
+'// Test comment\n' Comment.Single
+
+''            Text
+'import'      Keyword
+' '           Text.Whitespace
+'a'           Name.Namespace
+'.'           Punctuation
+'{'           Punctuation
+'x'           Name
+' '           Text.Whitespace
+'=>'          Operator
+' '           Text.Whitespace
+'}'           Punctuation
+' '           Text.Whitespace
+'// This is incorrect Scala but can still be highlighted correctly\n' Comment.Single
+
+''            Text
+'import'      Keyword
+' '           Text.Whitespace
+'a'           Name.Namespace
+'.'           Punctuation
+'{'           Punctuation
+'x'           Name
+' '           Text.Whitespace
+'=>'          Operator
+' '           Text.Whitespace
+'`test-name`' Name
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'import'      Keyword
+' '           Text.Whitespace
+'a'           Name.Namespace
+'.'           Punctuation
+'given'       Keyword
+'\n'          Text.Whitespace
+
+'import'      Keyword
+' '           Text.Whitespace
+'a'           Name.Namespace
+'.'           Punctuation
+'{'           Punctuation
+'given'       Keyword
+' '           Text.Whitespace
+'a'           Name
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'import'      Keyword
+' '           Text.Whitespace
+'a'           Name.Namespace
+'.'           Punctuation
+'{'           Punctuation
+'x'           Name
+','           Punctuation
+' '           Text.Whitespace
+'y'           Name
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'import'      Keyword
+' '           Text.Whitespace
+'a'           Name.Namespace
+'.'           Punctuation
+'_'           Name
+'\n'          Text.Whitespace
+
+'import'      Keyword
+' '           Text.Whitespace
+'a'           Name.Namespace
+'.'           Punctuation
+'x'           Name
+'\n'          Text.Whitespace
+
+'import'      Keyword
+' '           Text.Whitespace
+'a'           Name.Namespace
+'.'           Punctuation
+'x'           Name.Namespace
+'.'           Punctuation
+'y'           Name.Namespace
+'.'           Punctuation
+'z'           Name
+'\n'          Text.Whitespace
+
+'import'      Keyword
+' '           Text.Whitespace
+'java'        Name.Namespace
+'.'           Punctuation
+'io'          Name.Namespace
+'.'           Punctuation
+'{'           Punctuation
+'File'        Name.Class
+','           Punctuation
+' '           Text.Whitespace
+'IOException' Name.Class
+','           Punctuation
+' '           Text.Whitespace
+'FileNotFoundException' Name.Class
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'import'      Keyword
+' '           Text.Whitespace
+'java'        Name.Namespace
+'.'           Punctuation
+'io'          Name.Namespace
+'.'           Punctuation
+'File'        Name.Class
+'\n'          Text.Whitespace
+
+'import'      Keyword
+' '           Text.Whitespace
+'scala'       Name.Namespace
+'.'           Punctuation
+'math'        Name.Namespace
+'.'           Punctuation
+'{'           Punctuation
+'given'       Keyword
+' '           Text.Whitespace
+'Ordering'    Name.Class
+'['           Punctuation
+'Int'         Name.Class
+']'           Punctuation
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'import'      Keyword
+' '           Text.Whitespace
+'scala'       Name.Namespace
+'.'           Punctuation
+'math'        Name.Namespace
+'.'           Punctuation
+'{'           Punctuation
+'given'       Keyword
+' '           Text.Whitespace
+'Ordering'    Name.Class
+'['           Punctuation
+'?'           Name
+']'           Punctuation
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'import'      Keyword
+' '           Text.Whitespace
+'a'           Name.Namespace
+'.'           Punctuation
+'givenSomething' Name
+'\n'          Text.Whitespace
+
+'import'      Keyword
+' '           Text.Whitespace
+'givenPackage' Name
+'\n'          Text.Whitespace

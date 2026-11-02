@@ -1,0 +1,109 @@
+{% set name = "libsolv" %}
+{% set version = "0.7.39" %}
+
+package:
+  name: {{ name }}-suite
+  version: {{ version }}
+
+source:
+  url: https://github.com/openSUSE/{{ name }}/archive/{{ version }}.tar.gz
+  sha256: 2a74cbf1e49984cb01f75ac4b19a237f24de6ce199766858aeb9ab3aae2b95fa
+  patches:
+    - patches/conda_variant_priorization.patch
+    - patches/no_error_subdir_mismatch.patch
+    - patches/pcre2-compat.patch
+    - patches/win_export_and_static_build.patch  # [win]
+
+build:
+  number: 2
+  run_exports:
+    - {{ pin_subpackage('libsolv', max_pin='x.x') }}
+  ignore_run_exports:  # [win]
+    - zlib             # [win]
+
+requirements:
+  build:
+    - {{ stdlib('c') }}
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - pkg-config
+    - ninja-base
+    - cmake
+  host:
+    - zlib {{ zlib }}
+    - pcre2 {{ pcre2 }}
+
+outputs:
+  - name: libsolv
+    script: install.sh           # [unix]
+    script: install_dynamic.bat  # [win]
+    requirements:
+      build:
+        - {{ stdlib('c') }}
+        - {{ compiler('c') }}
+        - {{ compiler('cxx') }}
+        - pkg-config
+        - ninja-base
+        - cmake
+      host:
+        - zlib {{ zlib }}
+        - pcre2 {{ pcre2 }}
+    test:
+      commands:
+        - test -f ${PREFIX}/lib/libsolv${SHLIB_EXT}     # [unix]
+        - test -f ${PREFIX}/lib/libsolvext${SHLIB_EXT}  # [unix]
+        - test -f ${PREFIX}/lib/libsolv.so.1            # [linux]
+        - test -f ${PREFIX}/include/solv/repo.h         # [unix]
+        - if not exist %LIBRARY_INC%\solv\repo.h (exit 1)     # [win]
+        - if not exist %LIBRARY_BIN%\solv.dll (exit 1)        # [win]
+        - if not exist %LIBRARY_LIB%\solv.lib (exit 1)        # [win]
+        - if not exist %LIBRARY_BIN%\solvext.dll (exit 1)     # [win]
+        - if not exist %LIBRARY_LIB%\solvext.lib (exit 1)     # [win]
+        - if exist %LIBRARY_LIB%\solv_static.lib (exit 1)     # [win]
+        - if exist %LIBRARY_LIB%\solvext_static.lib (exit 1)  # [win]
+        # Running the executables
+        - dumpsolv.exe -h  # [win]
+        - dumpsolv -h      # [unix]
+
+  - name: libsolv-static
+    script: install.sh          # [unix]
+    script: install_static.bat  # [win]
+    requirements:
+      build:
+        - {{ stdlib('c') }}
+        - {{ compiler('c') }}
+        - {{ compiler('cxx') }}
+        - pkg-config
+        - ninja-base
+        - cmake
+      host:
+        - zlib {{ zlib }}
+        - pcre2 {{ pcre2 }}
+        - {{ pin_subpackage("libsolv", exact=True) }}
+      run:
+        - {{ pin_subpackage("libsolv", exact=True) }}
+    test:
+      commands:
+        - test -f "${PREFIX}/lib/libsolv.a"     # [unix]
+        - test -f "${PREFIX}/lib/libsolvext.a"  # [unix]
+        - if not exist %LIBRARY_LIB%\solv_static.lib (exit 1)     # [win]
+        - if not exist %LIBRARY_LIB%\solvext_static.lib (exit 1)  # [win]
+
+about:
+  home: https://github.com/openSUSE/libsolv
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE.BSD
+  summary: Library for solving packages and reading repositories
+  description: |
+    libsolv, a free package dependency solver using a satisfiability algorithm.
+  dev_url: https://github.com/openSUSE/libsolv
+  doc_url: https://github.com/openSUSE/libsolv/tree/master/doc
+
+extra:
+  recipe-maintainers:
+    - SylvainCorlay
+    - JohanMabille
+    - wolfv
+    - davidbrochart
+    - adriendelsalle

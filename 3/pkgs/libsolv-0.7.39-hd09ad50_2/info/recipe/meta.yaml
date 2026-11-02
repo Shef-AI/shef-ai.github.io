@@ -1,0 +1,128 @@
+# This file created by conda-build 26.7.1
+# ------------------------------------------------
+
+package:
+  name: libsolv
+  version: 0.7.39
+source:
+  url: https://github.com/openSUSE/libsolv/archive/0.7.39.tar.gz
+  sha256: 2a74cbf1e49984cb01f75ac4b19a237f24de6ce199766858aeb9ab3aae2b95fa
+  patches:
+    - patches/conda_variant_priorization.patch
+    - patches/no_error_subdir_mismatch.patch
+    - patches/pcre2-compat.patch
+build:
+  number: '2'
+  script: install.sh
+  noarch: false
+  noarch_python: false
+  python_version_independent: false
+  string: hd09ad50_2
+requirements:
+  build:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 52_gnu
+    - binutils_impl_linux-64 2.44 h78f17ca_3
+    - binutils_linux-64 2.44 hc03a8fd_3
+    - bzip2 1.0.8 h5eee18b_6
+    - c-ares 1.34.8 hd44998d_0
+    - ca-certificates 2026.10.20 h06a4308_0
+    - cmake 4.3.4 h0077a1f_0
+    - expat 2.9.0 h7354ed3_0
+    - gcc_impl_linux-64 14.3.0 h4943218_4
+    - gcc_linux-64 14.3.0 hda73cce_15
+    - gettext 0.25.1 h92eb808_0
+    - gettext-tools 0.25.1 h6a67909_0
+    - gxx_impl_linux-64 14.3.0 he634eba_4
+    - gxx_linux-64 14.3.0 hca8765c_15
+    - icu 78.3 h53478e7_1
+    - jansson 2.15.0 hbcba0ee_0
+    - kernel-headers_linux-64 4.18.0 h3108a97_1
+    - ld_impl_linux-64 2.44 h9e0c5a2_3
+    - libasprintf 0.25.1 hf2ab22a_0
+    - libasprintf-devel 0.25.1 hf2ab22a_0
+    - libbrotlicommon 1.2.0 h32cd6e7_0
+    - libbrotlidec 1.2.0 ha2c5f68_0
+    - libbrotlienc 1.2.0 h2e96acb_0
+    - libcurl 8.23.0 hd8fa685_0
+    - libev 4.33 h7f8727e_1
+    - libexpat 2.9.0 h7354ed3_0
+    - libgcc 15.2.0 h69a1729_8
+    - libgcc-devel_linux-64 14.3.0 he7458c1_104
+    - libgcc-ng 15.2.0 h166f726_8
+    - libgettextpo 0.25.1 hf2ab22a_0
+    - libgettextpo-devel 0.25.1 hf2ab22a_0
+    - libgomp 15.2.0 h4751f2c_8
+    - libiconv 1.18 h75a1612_0
+    - libidn2 2.3.8 hf80d704_0
+    - libkrb5 1.22.2 hbd13c29_0
+    - libnghttp2 1.69.0 h8214106_1
+    - libsanitizer 14.3.0 hd4faa28_4
+    - libssh2 1.11.1 hfbabe93_2
+    - libstdcxx 15.2.0 h39759b7_8
+    - libstdcxx-devel_linux-64 14.3.0 he7458c1_104
+    - libstdcxx-ng 15.2.0 hc03a8fd_8
+    - libunistring 1.4.2 h34b0ebb_0
+    - libuv 1.52.1 heb5a705_0
+    - libxml2 2.15.4 h00c5e6d_0
+    - libzlib 1.3.2 h47b2149_0
+    - lmdb 1.0.0 hfe55579_0
+    - lz4-c 1.9.4 h7354ed3_5
+    - ncurses 6.6 hfaaeb4e_0
+    - ninja-base 1.13.2 hf01770c_0
+    - openssl 3.5.9 h1b28b03_0
+    - pkg-config 0.29.2 h1bed415_8
+    - rhash 1.4.6 hd199180_1
+    - sysroot_linux-64 2.28 h3108a97_1
+    - tzdata 2026c he532380_0
+    - xz 5.8.4 h140a991_0
+    - zlib 1.3.2 h47b2149_0
+    - zstd 1.5.7 h11fc155_0
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 52_gnu
+    - bzip2 1.0.8 h5eee18b_6
+    - libgcc 15.2.0 h69a1729_8
+    - libgcc-ng 15.2.0 h166f726_8
+    - libstdcxx 15.2.0 h39759b7_8
+    - libzlib 1.3.2 h47b2149_0
+    - pcre2 10.49 h9438ae6_0
+    - zlib 1.3.2 h47b2149_0
+  run:
+    - __glibc >=2.28,<3.0.a0
+    - libgcc >=14
+    - libstdcxx >=14
+    - libzlib >=1.3.2,<2.0a0
+    - pcre2 >=10.49,<10.50.0a0
+test:
+  commands:
+    - test -f ${PREFIX}/lib/libsolv${SHLIB_EXT}
+    - test -f ${PREFIX}/lib/libsolvext${SHLIB_EXT}
+    - test -f ${PREFIX}/lib/libsolv.so.1
+    - test -f ${PREFIX}/include/solv/repo.h
+    - dumpsolv -h
+about:
+  home: https://github.com/openSUSE/libsolv
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE.BSD
+  summary: Library for solving packages and reading repositories
+  description: 'libsolv, a free package dependency solver using a satisfiability algorithm.
+
+    '
+  dev_url: https://github.com/openSUSE/libsolv
+  doc_url: https://github.com/openSUSE/libsolv/tree/master/doc
+extra:
+  recipe-maintainers:
+    - JohanMabille
+    - SylvainCorlay
+    - adriendelsalle
+    - davidbrochart
+    - wolfv
+  final: true
+  copy_test_source_files: true
+  remote_url: https://github.com/AnacondaRecipes/libsolv-feedstock
+  sha: dc7d8b8ec1d7e05009203db3062004fba6b7b225
+  task_id: SB0O56UnQ3K54XFQa-YOpw
+  task_run_id: '0'
+  pbp_graph_uuid: a8ff1dd3-357a-4775-8886-7385665dc6de

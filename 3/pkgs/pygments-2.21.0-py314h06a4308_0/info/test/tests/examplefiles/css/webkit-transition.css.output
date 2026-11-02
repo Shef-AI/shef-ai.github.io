@@ -1,0 +1,19 @@
+'p'           Name.Tag
+' '           Text.Whitespace
+'{'           Punctuation
+'\n    '      Text.Whitespace
+'-webkit-'    Keyword.Pseudo
+'transition'  Keyword
+':'           Punctuation
+' '           Text.Whitespace
+'opacity'     Keyword
+' '           Text.Whitespace
+'1'           Literal.Number.Integer
+'s'           Keyword.Type
+' '           Text.Whitespace
+'linear'      Keyword.Constant
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n'          Text.Whitespace

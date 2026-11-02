@@ -1,0 +1,95 @@
+# This file created by conda-build 26.7.1
+# meta.yaml template originally from:
+# /home/task_179076688589432/pyjwt-feedstock/recipe, last modified Wed Sep 30 11:14:51 2026
+# ------------------------------------------------
+
+package:
+  name: pyjwt
+  version: 2.15.1
+source:
+  url: https://pypi.org/packages/source/p/pyjwt/pyjwt-2.15.1.tar.gz
+  sha256: 4f259e80cdfb6b3fc18a7de51fd1ef9ec79652f25019bae68975ca2468a34df8
+build:
+  number: '0'
+  script: /home/task_179076688589432/croot/pyjwt_1790766911254/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place/bin/python
+    -m pip install . --no-deps --no-build-isolation --ignore-installed --no-cache-dir
+    -vv
+  string: py314h06a4308_0
+requirements:
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 52_gnu
+    - bzip2 1.0.8 h5eee18b_6
+    - ca-certificates 2026.8.13 h06a4308_0
+    - ld_impl_linux-64 2.44 h9e0c5a2_3
+    - libexpat 2.8.5 h7354ed3_1
+    - libffi 3.4.8 h06d3fd0_3
+    - libgcc 15.2.0 h69a1729_8
+    - libgcc-ng 15.2.0 h166f726_8
+    - libmpdec 4.0.1 h47b2149_0
+    - libstdcxx 15.2.0 h39759b7_8
+    - libstdcxx-ng 15.2.0 hc03a8fd_8
+    - libuuid 1.41.5 h5eee18b_0
+    - libxcb 1.17.0 h9b100fa_0
+    - libzlib 1.3.2 h47b2149_0
+    - lz4-c 1.9.4 h7354ed3_5
+    - ncurses 6.6 hfaaeb4e_0
+    - openssl 3.5.8 h1b28b03_0
+    - pip 26.2.1 pyh0d26453_0
+    - pthread-stubs 0.3 h47b2149_2
+    - python 3.14.7 h2bd7c14_101_cp314
+    - python_abi 3.14 4_cp314
+    - readline 8.3 hc2a1206_0
+    - setuptools 83.0.0 py314h06a4308_0
+    - sqlite 3.53.4 h795bf6d_0
+    - tk 9.0.4 h3840b71_1
+    - tzdata 2026c he532380_0
+    - xorg-libx11 1.8.13 h65de747_0
+    - xorg-libxau 1.0.12 h9b100fa_0
+    - xorg-libxdmcp 1.1.5 h9b100fa_0
+    - xorg-xorgproto 2025.1 h47b2149_0
+    - xz 5.8.4 h140a991_0
+    - zlib 1.3.2 h47b2149_0
+    - zstd 1.5.7 h11fc155_0
+  run:
+    - python >=3.14,<3.15.0a0
+    - python_abi 3.14.* *_cp314
+  run_constrained:
+    - cryptography >=3.4.0
+test:
+  source_files:
+    - tests
+  imports:
+    - jwt
+  requires:
+    - pip
+    - pytest >=6.0.0,<9.0.0
+  commands:
+    - pip check
+    - pytest -vv tests
+about:
+  home: https://github.com/jpadilla/pyjwt
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: JSON Web Token implementation in Python
+  description: 'PyJWT is a Python library which allows you to encode and decode JSON
+    Web Tokens (JWT).
+
+    JWT is an open, industry-standard (RFC 7519) for representing claims securely
+    between two parties.
+
+    '
+  dev_url: https://github.com/jpadilla/pyjwt
+  doc_url: https://pyjwt.readthedocs.io
+extra:
+  recipe-maintainers:
+    - ocefpaf
+    - pmlandwehr
+  final: true
+  copy_test_source_files: true
+  remote_url: https://github.com/AnacondaRecipes/pyjwt-feedstock
+  sha: cf1558fa9c3f22f989e338baa77d7fe9130c379c
+  task_id: HrpU1COqTRKjiKC1ZUTt4Q
+  task_run_id: '0'
+  pbp_graph_uuid: 8b4d4178-e1af-4615-8ca2-3da35112b72b

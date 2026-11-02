@@ -1,0 +1,198 @@
+{
+  "name": "conda-anaconda-telemetry",
+  "version": "0.4.0",
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "subdir": "noarch",
+  "fn": "conda-anaconda-telemetry-0.4.0-pyhd3eb1b0_0.conda",
+  "md5": "31a22cb0d8f6a41172866dc9f7e318b0",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/conda-anaconda-telemetry-0.4.0-pyhd3eb1b0_0.conda",
+  "sha256": "368cb5004a045a2fe422df8e3567fff8c95077b19c4cef8ce0148a94b3fc4a32",
+  "depends": [
+    "anaconda-opentelemetry >=1.2.5",
+    "conda >=26.5",
+    "python >=3.10",
+    "requests"
+  ],
+  "constrains": [],
+  "noarch": "python",
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "package_type": "noarch_python",
+  "timestamp": 1791923906000,
+  "size": 19095,
+  "requested_spec": "https://repo.anaconda.com/pkgs/main/noarch::conda-anaconda-telemetry==0.4.0=pyhd3eb1b0_0",
+  "package_tarball_full_path": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/conda-anaconda-telemetry-0.4.0-pyhd3eb1b0_0.conda",
+  "extracted_package_dir": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/conda-anaconda-telemetry-0.4.0-pyhd3eb1b0_0",
+  "files": [
+    "lib/python3.14/site-packages/conda_anaconda_telemetry-0.4.0.dist-info/INSTALLER",
+    "lib/python3.14/site-packages/conda_anaconda_telemetry-0.4.0.dist-info/METADATA",
+    "lib/python3.14/site-packages/conda_anaconda_telemetry-0.4.0.dist-info/RECORD",
+    "lib/python3.14/site-packages/conda_anaconda_telemetry-0.4.0.dist-info/REQUESTED",
+    "lib/python3.14/site-packages/conda_anaconda_telemetry-0.4.0.dist-info/WHEEL",
+    "lib/python3.14/site-packages/conda_anaconda_telemetry-0.4.0.dist-info/direct_url.json",
+    "lib/python3.14/site-packages/conda_anaconda_telemetry-0.4.0.dist-info/entry_points.txt",
+    "lib/python3.14/site-packages/conda_anaconda_telemetry-0.4.0.dist-info/licenses/LICENSE",
+    "lib/python3.14/site-packages/conda_anaconda_telemetry/__init__.py",
+    "lib/python3.14/site-packages/conda_anaconda_telemetry/_version.py",
+    "lib/python3.14/site-packages/conda_anaconda_telemetry/hooks.py",
+    "lib/python3.14/site-packages/conda_anaconda_telemetry/otel.py",
+    "lib/python3.14/site-packages/conda_anaconda_telemetry/plugin.py",
+    "lib/python3.14/site-packages/conda_anaconda_telemetry/py.typed",
+    "lib/python3.14/site-packages/conda_anaconda_telemetry/resource_attributes.py",
+    "lib/python3.14/site-packages/conda_anaconda_telemetry/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/conda_anaconda_telemetry/__pycache__/_version.cpython-314.pyc",
+    "lib/python3.14/site-packages/conda_anaconda_telemetry/__pycache__/hooks.cpython-314.pyc",
+    "lib/python3.14/site-packages/conda_anaconda_telemetry/__pycache__/otel.cpython-314.pyc",
+    "lib/python3.14/site-packages/conda_anaconda_telemetry/__pycache__/plugin.cpython-314.pyc",
+    "lib/python3.14/site-packages/conda_anaconda_telemetry/__pycache__/resource_attributes.cpython-314.pyc"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "site-packages/conda_anaconda_telemetry-0.4.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5,
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8"
+      },
+      {
+        "_path": "site-packages/conda_anaconda_telemetry-0.4.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "00efa888c73b1c48673a1c3cc667bdd4f6d1a093ca5f84e6d2c272c6b56d4d9b",
+        "size_in_bytes": 4037,
+        "sha256_in_prefix": "00efa888c73b1c48673a1c3cc667bdd4f6d1a093ca5f84e6d2c272c6b56d4d9b"
+      },
+      {
+        "_path": "site-packages/conda_anaconda_telemetry-0.4.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "f52abe86f78ef86b5b498ecb76fef43227125fb7a862c487d882ccb016a2aebb",
+        "size_in_bytes": 1857,
+        "sha256_in_prefix": "f52abe86f78ef86b5b498ecb76fef43227125fb7a862c487d882ccb016a2aebb"
+      },
+      {
+        "_path": "site-packages/conda_anaconda_telemetry-0.4.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "site-packages/conda_anaconda_telemetry-0.4.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "942926c567d0b1273d09f20295879abd37507845f6b683eab9f87d808df91100",
+        "size_in_bytes": 87,
+        "sha256_in_prefix": "942926c567d0b1273d09f20295879abd37507845f6b683eab9f87d808df91100"
+      },
+      {
+        "_path": "site-packages/conda_anaconda_telemetry-0.4.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "daed135c68e3cc4d9b19aa68a253db1b655ee734a6b9a854a4cb892a80fd5191",
+        "size_in_bytes": 114,
+        "sha256_in_prefix": "daed135c68e3cc4d9b19aa68a253db1b655ee734a6b9a854a4cb892a80fd5191"
+      },
+      {
+        "_path": "site-packages/conda_anaconda_telemetry-0.4.0.dist-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "31162e8ee8e56095821750cf2fcf1d6f40a077dc0bb900134429e9a6b190c1fc",
+        "size_in_bytes": 66,
+        "sha256_in_prefix": "31162e8ee8e56095821750cf2fcf1d6f40a077dc0bb900134429e9a6b190c1fc"
+      },
+      {
+        "_path": "site-packages/conda_anaconda_telemetry-0.4.0.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "9e504431070dd8a4cc8c021042d1bea065a71cae71ba7841e1d26ce7d2596b5a",
+        "size_in_bytes": 1544,
+        "sha256_in_prefix": "9e504431070dd8a4cc8c021042d1bea065a71cae71ba7841e1d26ce7d2596b5a"
+      },
+      {
+        "_path": "site-packages/conda_anaconda_telemetry/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "d09702cb8b481fa9b3f9137be0a7062fe3a711139cd10ecace05ab379834fb28",
+        "size_in_bytes": 983,
+        "sha256_in_prefix": "d09702cb8b481fa9b3f9137be0a7062fe3a711139cd10ecace05ab379834fb28"
+      },
+      {
+        "_path": "site-packages/conda_anaconda_telemetry/_version.py",
+        "path_type": "hardlink",
+        "sha256": "d71ae096a7e052cf6c4a2b2a231089104a399f2da3e4bcb66a689872673f6ce8",
+        "size_in_bytes": 544,
+        "sha256_in_prefix": "d71ae096a7e052cf6c4a2b2a231089104a399f2da3e4bcb66a689872673f6ce8"
+      },
+      {
+        "_path": "site-packages/conda_anaconda_telemetry/hooks.py",
+        "path_type": "hardlink",
+        "sha256": "bcd6eef039b93390237fffce1cb76d0d91e42c0e50081da526b228f6523190f6",
+        "size_in_bytes": 10942,
+        "sha256_in_prefix": "bcd6eef039b93390237fffce1cb76d0d91e42c0e50081da526b228f6523190f6"
+      },
+      {
+        "_path": "site-packages/conda_anaconda_telemetry/otel.py",
+        "path_type": "hardlink",
+        "sha256": "098873ed69b24636c14ac96002ecab6a5326bc7fe899c68ebd2428540d83891e",
+        "size_in_bytes": 11515,
+        "sha256_in_prefix": "098873ed69b24636c14ac96002ecab6a5326bc7fe899c68ebd2428540d83891e"
+      },
+      {
+        "_path": "site-packages/conda_anaconda_telemetry/plugin.py",
+        "path_type": "hardlink",
+        "sha256": "a6377c16b864059975d6efd24668041945fc901be5720c320f5f3b2d331aa412",
+        "size_in_bytes": 6132,
+        "sha256_in_prefix": "a6377c16b864059975d6efd24668041945fc901be5720c320f5f3b2d331aa412"
+      },
+      {
+        "_path": "site-packages/conda_anaconda_telemetry/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "site-packages/conda_anaconda_telemetry/resource_attributes.py",
+        "path_type": "hardlink",
+        "sha256": "51d600aacd4f5c89ab706cd0714cbabaa82d12d8e966ee530fa15384544f549e",
+        "size_in_bytes": 2692,
+        "sha256_in_prefix": "51d600aacd4f5c89ab706cd0714cbabaa82d12d8e966ee530fa15384544f549e"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/conda_anaconda_telemetry/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "pyc_file",
+        "size_in_bytes": 921
+      },
+      {
+        "_path": "lib/python3.14/site-packages/conda_anaconda_telemetry/__pycache__/_version.cpython-314.pyc",
+        "path_type": "pyc_file",
+        "size_in_bytes": 663
+      },
+      {
+        "_path": "lib/python3.14/site-packages/conda_anaconda_telemetry/__pycache__/hooks.cpython-314.pyc",
+        "path_type": "pyc_file",
+        "size_in_bytes": 17576
+      },
+      {
+        "_path": "lib/python3.14/site-packages/conda_anaconda_telemetry/__pycache__/otel.cpython-314.pyc",
+        "path_type": "pyc_file",
+        "size_in_bytes": 15427
+      },
+      {
+        "_path": "lib/python3.14/site-packages/conda_anaconda_telemetry/__pycache__/plugin.cpython-314.pyc",
+        "path_type": "pyc_file",
+        "size_in_bytes": 8729
+      },
+      {
+        "_path": "lib/python3.14/site-packages/conda_anaconda_telemetry/__pycache__/resource_attributes.cpython-314.pyc",
+        "path_type": "pyc_file",
+        "size_in_bytes": 3859
+      }
+    ]
+  },
+  "link": {
+    "source": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/conda-anaconda-telemetry-0.4.0-pyhd3eb1b0_0",
+    "type": 1
+  },
+  "requested_specs": [
+    "https://repo.anaconda.com/pkgs/main/noarch::conda-anaconda-telemetry==0.4.0=pyhd3eb1b0_0"
+  ]
+}

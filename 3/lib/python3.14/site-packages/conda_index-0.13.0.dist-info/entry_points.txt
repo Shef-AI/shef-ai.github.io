@@ -1,0 +1,2 @@
+[conda]
+index = conda_index.plugin

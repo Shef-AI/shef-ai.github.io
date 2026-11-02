@@ -1,0 +1,4414 @@
+'  '          Text.Whitespace
+'# Underscore.coffee' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'# (c) 2010 Jeremy Ashkenas, DocumentCloud Inc.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'# Underscore is freely distributable under the terms of the MIT license.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'# Portions of Underscore are inspired by or borrowed from Prototype.js,' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+"# Oliver Steele's Functional, and John Resig's Micro-Templating." Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'# For all details and documentation:' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'# http://documentcloud.github.com/underscore/' Comment.Single
+'\n'          Text.Whitespace
+
+'\n\n  '      Text.Whitespace
+'# ------------------------- Baseline setup ---------------------------------' Comment.Single
+'\n'          Text.Whitespace
+
+'\n  '        Text.Whitespace
+'# Establish the root object, "window" in the browser, or "global" on the server.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'root'        Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'this'        Keyword
+'\n\n\n  '    Text.Whitespace
+'# Save the previous value of the "_" variable.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'previousUnderscore' Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'root'        Name.Other
+'.'           Punctuation
+'_'           Name.Other
+'\n\n\n  '    Text.Whitespace
+'# If Underscore is called as a function, it returns a wrapped object that' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'# can be used OO-style. This wrapper holds altered versions of all the' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'# underscore functions. Wrapped objects may be chained.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'wrapper'     Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(obj) ->'    Name.Function
+'\n    '      Text.Whitespace
+'this'        Keyword
+'.'           Punctuation
+'_wrapped'    Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'obj'         Name.Other
+'\n    '      Text.Whitespace
+'this'        Keyword
+'\n\n\n  '    Text.Whitespace
+'# Establish the object that gets thrown to break out of a loop iteration.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'breaker'     Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'typeof'      Keyword
+'('           Punctuation
+'StopIteration' Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'is'          Operator
+' '           Text.Whitespace
+"'"           Literal.String
+'undefined'   Literal.String
+"'"           Literal.String
+' '           Text.Whitespace
+'then'        Keyword
+' '           Text.Whitespace
+"'"           Literal.String
+'__break__'   Literal.String
+"'"           Literal.String
+' '           Text.Whitespace
+'else'        Keyword
+' '           Text.Whitespace
+'StopIteration' Name.Other
+'\n\n\n  '    Text.Whitespace
+'# Create a safe reference to the Underscore object forreference below.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_'           Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'root._'      Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(obj) ->'    Name.Function
+' '           Text.Whitespace
+'new'         Keyword
+' '           Text.Whitespace
+'wrapper'     Name.Other
+'('           Punctuation
+'obj'         Name.Other
+')'           Punctuation
+'\n\n\n  '    Text.Whitespace
+'# Export the Underscore object for CommonJS.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'typeof'      Keyword
+'('           Punctuation
+'exports'     Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'!='          Operator
+' '           Text.Whitespace
+"'"           Literal.String
+'undefined'   Literal.String
+"'"           Literal.String
+' '           Text.Whitespace
+'then'        Keyword
+' '           Text.Whitespace
+'exports._'   Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'_'           Name.Other
+'\n\n\n  '    Text.Whitespace
+'# Create quick reference variables for speed access to core prototypes.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'slice'       Name.Variable
+':'           Operator
+'                ' Text.Whitespace
+'Array'       Name.Builtin
+':'           Operator
+':'           Operator
+'slice'       Name.Other
+'\n  '        Text.Whitespace
+'unshift'     Name.Variable
+':'           Operator
+'              ' Text.Whitespace
+'Array'       Name.Builtin
+':'           Operator
+':'           Operator
+'unshift'     Name.Other
+'\n  '        Text.Whitespace
+'toString'    Name.Variable
+':'           Operator
+'             ' Text.Whitespace
+'Object'      Name.Builtin
+':'           Operator
+':'           Operator
+'toString'    Name.Other
+'\n  '        Text.Whitespace
+'hasOwnProperty' Name.Variable
+':'           Operator
+'       '     Text.Whitespace
+'Object'      Name.Builtin
+':'           Operator
+':'           Operator
+'hasOwnProperty' Name.Other
+'\n  '        Text.Whitespace
+'propertyIsEnumerable' Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'Object'      Name.Builtin
+':'           Operator
+':'           Operator
+'propertyIsEnumerable' Name.Other
+'\n\n\n  '    Text.Whitespace
+'# Current version.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.VERSION'   Name.Variable
+':'           Operator
+' '           Text.Whitespace
+"'"           Literal.String
+'0.5.7'       Literal.String
+"'"           Literal.String
+'\n\n\n  '    Text.Whitespace
+'# ------------------------ Collection Functions: ---------------------------' Comment.Single
+'\n'          Text.Whitespace
+
+'\n  '        Text.Whitespace
+'# The cornerstone, an each implementation.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'# Handles objects implementing forEach, arrays, and raw objects.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.each'      Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(obj, iterator, context) ->' Name.Function
+'\n    '      Text.Whitespace
+'index'       Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+'\n    '      Text.Whitespace
+'try'         Keyword
+'\n      '    Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'obj'         Name.Other
+'.'           Punctuation
+'forEach'     Name.Other
+'('           Punctuation
+'iterator'    Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'context'     Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'obj'         Name.Other
+'.'           Punctuation
+'forEach'     Name.Other
+'\n      '    Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'isArray'     Name.Other
+'('           Punctuation
+'obj'         Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'or'          Operator
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'isArguments' Name.Other
+'('           Punctuation
+'obj'         Name.Other
+')'           Punctuation
+'\n        '  Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'iterator'    Name.Other
+'.'           Punctuation
+'call'        Name.Other
+'('           Punctuation
+'context'     Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'obj'         Name.Other
+'['           Punctuation
+'i'           Name.Other
+']'           Punctuation
+','           Punctuation
+' '           Text.Whitespace
+'i'           Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'obj'         Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'for'         Keyword
+' '           Text.Whitespace
+'i'           Name.Other
+' '           Text.Whitespace
+'in'          Keyword
+' '           Text.Whitespace
+'['           Punctuation
+'0'           Literal.Number.Integer
+'.'           Punctuation
+'.'           Punctuation
+'.'           Punctuation
+'obj'         Name.Other
+'.'           Punctuation
+'length'      Name.Other
+']'           Punctuation
+'\n      '    Text.Whitespace
+'iterator'    Name.Other
+'.'           Punctuation
+'call'        Name.Other
+'('           Punctuation
+'context'     Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'val'         Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'key'         Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'obj'         Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'for'         Keyword
+' '           Text.Whitespace
+'key'         Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'val'         Name.Other
+' '           Text.Whitespace
+'of'          Keyword
+' '           Text.Whitespace
+'obj'         Name.Other
+'\n    '      Text.Whitespace
+'catch'       Keyword
+' '           Text.Whitespace
+'e'           Name.Other
+'\n      '    Text.Whitespace
+'throw'       Keyword
+' '           Text.Whitespace
+'e'           Name.Other
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'e'           Name.Other
+' '           Text.Whitespace
+'isnt'        Operator
+' '           Text.Whitespace
+'breaker'     Name.Other
+'\n    '      Text.Whitespace
+'obj'         Name.Other
+'\n\n\n  '    Text.Whitespace
+'# Return the results of applying the iterator to each element. Use JavaScript' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+"# 1.6's version of map, if possible." Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.map'       Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(obj, iterator, context) ->' Name.Function
+'\n    '      Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'obj'         Name.Other
+'.'           Punctuation
+'map'         Name.Other
+'('           Punctuation
+'iterator'    Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'context'     Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'obj'         Name.Other
+' '           Text.Whitespace
+'and'         Operator
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'isFunction'  Name.Other
+'('           Punctuation
+'obj'         Name.Other
+'.'           Punctuation
+'map'         Name.Other
+')'           Punctuation
+')'           Punctuation
+'\n    '      Text.Whitespace
+'results'     Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'['           Punctuation
+']'           Punctuation
+'\n    '      Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'each'        Name.Other
+' '           Text.Whitespace
+'obj'         Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'(value, index, list) ->' Name.Function
+'\n      '    Text.Whitespace
+'results'     Name.Other
+'.'           Punctuation
+'push'        Name.Other
+'('           Punctuation
+'iterator'    Name.Other
+'.'           Punctuation
+'call'        Name.Other
+'('           Punctuation
+'context'     Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'value'       Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'index'       Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'list'        Name.Other
+')'           Punctuation
+')'           Punctuation
+'\n    '      Text.Whitespace
+'results'     Name.Other
+'\n\n\n  '    Text.Whitespace
+'# Reduce builds up a single result from a list of values. Also known as' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+"# inject, or foldl. Uses JavaScript 1.8's version of reduce, if possible." Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.reduce'    Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(obj, memo, iterator, context) ->' Name.Function
+'\n    '      Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'obj'         Name.Other
+'.'           Punctuation
+'reduce'      Name.Other
+'('           Punctuation
+'_'           Name.Other
+'.'           Punctuation
+'bind'        Name.Other
+'('           Punctuation
+'iterator'    Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'context'     Name.Other
+')'           Punctuation
+','           Punctuation
+' '           Text.Whitespace
+'memo'        Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'obj'         Name.Other
+' '           Text.Whitespace
+'and'         Operator
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'isFunction'  Name.Other
+'('           Punctuation
+'obj'         Name.Other
+'.'           Punctuation
+'reduce'      Name.Other
+')'           Punctuation
+')'           Punctuation
+'\n    '      Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'each'        Name.Other
+' '           Text.Whitespace
+'obj'         Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'(value, index, list) ->' Name.Function
+'\n      '    Text.Whitespace
+'memo'        Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'iterator'    Name.Other
+'.'           Punctuation
+'call'        Name.Other
+'('           Punctuation
+'context'     Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'memo'        Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'value'       Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'index'       Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'list'        Name.Other
+')'           Punctuation
+'\n    '      Text.Whitespace
+'memo'        Name.Other
+'\n\n\n  '    Text.Whitespace
+'# The right-associative version of reduce, also known as foldr. Uses' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+"# JavaScript 1.8's version of reduceRight, if available." Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.reduceRight' Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(obj, memo, iterator, context) ->' Name.Function
+'\n    '      Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'obj'         Name.Other
+'.'           Punctuation
+'reduceRight' Name.Other
+'('           Punctuation
+'_'           Name.Other
+'.'           Punctuation
+'bind'        Name.Other
+'('           Punctuation
+'iterator'    Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'context'     Name.Other
+')'           Punctuation
+','           Punctuation
+' '           Text.Whitespace
+'memo'        Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'obj'         Name.Other
+' '           Text.Whitespace
+'and'         Operator
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'isFunction'  Name.Other
+'('           Punctuation
+'obj'         Name.Other
+'.'           Punctuation
+'reduceRight' Name.Other
+')'           Punctuation
+')'           Punctuation
+'\n    '      Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'each'        Name.Other
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'clone'       Name.Other
+'('           Punctuation
+'_'           Name.Other
+'.'           Punctuation
+'toArray'     Name.Other
+'('           Punctuation
+'obj'         Name.Other
+')'           Punctuation
+')'           Punctuation
+'.'           Punctuation
+'reverse'     Name.Other
+'('           Punctuation
+')'           Punctuation
+','           Punctuation
+' '           Text.Whitespace
+'(value, index) ->' Name.Function
+'\n      '    Text.Whitespace
+'memo'        Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'iterator'    Name.Other
+'.'           Punctuation
+'call'        Name.Other
+'('           Punctuation
+'context'     Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'memo'        Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'value'       Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'index'       Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'obj'         Name.Other
+')'           Punctuation
+'\n    '      Text.Whitespace
+'memo'        Name.Other
+'\n\n\n  '    Text.Whitespace
+'# Return the first value which passes a truth test.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.detect'    Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(obj, iterator, context) ->' Name.Function
+'\n    '      Text.Whitespace
+'result'      Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'null'        Keyword.Constant
+'\n    '      Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'each'        Name.Other
+' '           Text.Whitespace
+'obj'         Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'(value, index, list) ->' Name.Function
+'\n      '    Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'iterator'    Name.Other
+'.'           Punctuation
+'call'        Name.Other
+'('           Punctuation
+'context'     Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'value'       Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'index'       Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'list'        Name.Other
+')'           Punctuation
+'\n        '  Text.Whitespace
+'result'      Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'value'       Name.Other
+'\n        '  Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'breakLoop'   Name.Other
+'('           Punctuation
+')'           Punctuation
+'\n    '      Text.Whitespace
+'result'      Name.Other
+'\n\n\n  '    Text.Whitespace
+"# Return all the elements that pass a truth test. Use JavaScript 1.6's" Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'# filter(), if it exists.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.select'    Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(obj, iterator, context) ->' Name.Function
+'\n    '      Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'obj'         Name.Other
+' '           Text.Whitespace
+'and'         Operator
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'isFunction'  Name.Other
+'('           Punctuation
+'obj'         Name.Other
+'.'           Punctuation
+'filter'      Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'then'        Keyword
+' '           Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'obj'         Name.Other
+'.'           Punctuation
+'filter'      Name.Other
+'('           Punctuation
+'iterator'    Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'context'     Name.Other
+')'           Punctuation
+'\n    '      Text.Whitespace
+'results'     Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'['           Punctuation
+']'           Punctuation
+'\n    '      Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'each'        Name.Other
+' '           Text.Whitespace
+'obj'         Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'(value, index, list) ->' Name.Function
+'\n      '    Text.Whitespace
+'results'     Name.Other
+'.'           Punctuation
+'push'        Name.Other
+'('           Punctuation
+'value'       Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'iterator'    Name.Other
+'.'           Punctuation
+'call'        Name.Other
+'('           Punctuation
+'context'     Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'value'       Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'index'       Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'list'        Name.Other
+')'           Punctuation
+'\n    '      Text.Whitespace
+'results'     Name.Other
+'\n\n\n  '    Text.Whitespace
+'# Return all the elements for which a truth test fails.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.reject'    Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(obj, iterator, context) ->' Name.Function
+'\n    '      Text.Whitespace
+'results'     Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'['           Punctuation
+']'           Punctuation
+'\n    '      Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'each'        Name.Other
+' '           Text.Whitespace
+'obj'         Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'(value, index, list) ->' Name.Function
+'\n      '    Text.Whitespace
+'results'     Name.Other
+'.'           Punctuation
+'push'        Name.Other
+'('           Punctuation
+'value'       Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'not'         Operator
+' '           Text.Whitespace
+'iterator'    Name.Other
+'.'           Punctuation
+'call'        Name.Other
+'('           Punctuation
+'context'     Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'value'       Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'index'       Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'list'        Name.Other
+')'           Punctuation
+'\n    '      Text.Whitespace
+'results'     Name.Other
+'\n\n\n  '    Text.Whitespace
+'# Determine whether all of the elements match a truth test. Delegate to' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+"# JavaScript 1.6's every(), if it is present." Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.all'       Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(obj, iterator, context) ->' Name.Function
+'\n    '      Text.Whitespace
+'iterator'    Name.Other
+' '           Text.Whitespace
+'||'          Operator
+'='           Operator
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'identity'    Name.Other
+'\n    '      Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'obj'         Name.Other
+'.'           Punctuation
+'every'       Name.Other
+'('           Punctuation
+'iterator'    Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'context'     Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'obj'         Name.Other
+' '           Text.Whitespace
+'and'         Operator
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'isFunction'  Name.Other
+'('           Punctuation
+'obj'         Name.Other
+'.'           Punctuation
+'every'       Name.Other
+')'           Punctuation
+'\n    '      Text.Whitespace
+'result'      Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'true'        Keyword.Constant
+'\n    '      Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'each'        Name.Other
+' '           Text.Whitespace
+'obj'         Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'(value, index, list) ->' Name.Function
+'\n      '    Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'breakLoop'   Name.Other
+'('           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'unless'      Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'result'      Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'result'      Name.Other
+' '           Text.Whitespace
+'and'         Operator
+' '           Text.Whitespace
+'iterator'    Name.Other
+'.'           Punctuation
+'call'        Name.Other
+'('           Punctuation
+'context'     Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'value'       Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'index'       Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'list'        Name.Other
+')'           Punctuation
+')'           Punctuation
+'\n    '      Text.Whitespace
+'result'      Name.Other
+'\n\n\n  '    Text.Whitespace
+'# Determine if at least one element in the object matches a truth test. Use' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+"# JavaScript 1.6's some(), if it exists." Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.any'       Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(obj, iterator, context) ->' Name.Function
+'\n    '      Text.Whitespace
+'iterator'    Name.Other
+' '           Text.Whitespace
+'||'          Operator
+'='           Operator
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'identity'    Name.Other
+'\n    '      Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'obj'         Name.Other
+'.'           Punctuation
+'some'        Name.Other
+'('           Punctuation
+'iterator'    Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'context'     Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'obj'         Name.Other
+' '           Text.Whitespace
+'and'         Operator
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'isFunction'  Name.Other
+'('           Punctuation
+'obj'         Name.Other
+'.'           Punctuation
+'some'        Name.Other
+')'           Punctuation
+'\n    '      Text.Whitespace
+'result'      Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'false'       Keyword.Constant
+'\n    '      Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'each'        Name.Other
+' '           Text.Whitespace
+'obj'         Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'(value, index, list) ->' Name.Function
+'\n      '    Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'breakLoop'   Name.Other
+'('           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'result'      Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'iterator'    Name.Other
+'.'           Punctuation
+'call'        Name.Other
+'('           Punctuation
+'context'     Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'value'       Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'index'       Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'list'        Name.Other
+')'           Punctuation
+')'           Punctuation
+'\n    '      Text.Whitespace
+'result'      Name.Other
+'\n\n\n  '    Text.Whitespace
+'# Determine if a given value is included in the array or object,' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+"# based on '==='." Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.include'   Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(obj, target) ->' Name.Function
+'\n    '      Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'indexOf'     Name.Other
+'('           Punctuation
+'obj'         Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'target'      Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'isnt'        Operator
+' '           Text.Whitespace
+'-'           Operator
+'1'           Literal.Number.Integer
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'isArray'     Name.Other
+'('           Punctuation
+'obj'         Name.Other
+')'           Punctuation
+'\n    '      Text.Whitespace
+'for'         Keyword
+' '           Text.Whitespace
+'key'         Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'val'         Name.Other
+' '           Text.Whitespace
+'of'          Keyword
+' '           Text.Whitespace
+'obj'         Name.Other
+'\n      '    Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'true'        Keyword.Constant
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'val'         Name.Other
+' '           Text.Whitespace
+'is'          Operator
+' '           Text.Whitespace
+'target'      Name.Other
+'\n    '      Text.Whitespace
+'false'       Keyword.Constant
+'\n\n\n  '    Text.Whitespace
+'# Invoke a method with arguments on every item in a collection.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.invoke'    Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(obj, method) ->' Name.Function
+'\n    '      Text.Whitespace
+'args'        Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'rest'        Name.Other
+'('           Punctuation
+'arguments'   Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'2'           Literal.Number.Integer
+')'           Punctuation
+'\n    '      Text.Whitespace
+'('           Punctuation
+'if'          Keyword
+' '           Text.Whitespace
+'method'      Name.Other
+' '           Text.Whitespace
+'then'        Keyword
+' '           Text.Whitespace
+'val'         Name.Other
+'['           Punctuation
+'method'      Name.Other
+']'           Punctuation
+' '           Text.Whitespace
+'else'        Keyword
+' '           Text.Whitespace
+'val'         Name.Other
+')'           Punctuation
+'.'           Punctuation
+'apply'       Name.Other
+'('           Punctuation
+'val'         Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'args'        Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'for'         Keyword
+' '           Text.Whitespace
+'val'         Name.Other
+' '           Text.Whitespace
+'in'          Keyword
+' '           Text.Whitespace
+'obj'         Name.Other
+'\n\n\n  '    Text.Whitespace
+'# Convenience version of a common use case of map: fetching a property.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.pluck'     Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(obj, key) ->' Name.Function
+'\n    '      Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'map'         Name.Other
+'('           Punctuation
+'obj'         Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'('           Punctuation
+'(val) ->'    Name.Function
+' '           Text.Whitespace
+'val'         Name.Other
+'['           Punctuation
+'key'         Name.Other
+']'           Punctuation
+')'           Punctuation
+')'           Punctuation
+'\n\n\n  '    Text.Whitespace
+'# Return the maximum item or (item-based computation).' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.max'       Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(obj, iterator, context) ->' Name.Function
+'\n    '      Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'Math'        Name.Builtin
+'.'           Punctuation
+'max'         Name.Other
+'.'           Punctuation
+'apply'       Name.Other
+'('           Punctuation
+'Math'        Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'obj'         Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'not'         Operator
+' '           Text.Whitespace
+'iterator'    Name.Other
+' '           Text.Whitespace
+'and'         Operator
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'isArray'     Name.Other
+'('           Punctuation
+'obj'         Name.Other
+')'           Punctuation
+'\n    '      Text.Whitespace
+'result'      Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'{'           Punctuation
+'computed'    Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'-'           Operator
+'Infinity'    Keyword.Constant
+'}'           Punctuation
+'\n    '      Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'each'        Name.Other
+' '           Text.Whitespace
+'obj'         Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'(value, index, list) ->' Name.Function
+'\n      '    Text.Whitespace
+'computed'    Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'iterator'    Name.Other
+' '           Text.Whitespace
+'then'        Keyword
+' '           Text.Whitespace
+'iterator'    Name.Other
+'.'           Punctuation
+'call'        Name.Other
+'('           Punctuation
+'context'     Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'value'       Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'index'       Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'list'        Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'else'        Keyword
+' '           Text.Whitespace
+'value'       Name.Other
+'\n      '    Text.Whitespace
+'computed'    Name.Other
+' '           Text.Whitespace
+'>='          Operator
+' '           Text.Whitespace
+'result'      Name.Other
+'.'           Punctuation
+'computed'    Name.Other
+' '           Text.Whitespace
+'and'         Operator
+' '           Text.Whitespace
+'('           Punctuation
+'result'      Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'{'           Punctuation
+'value'       Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'value'       Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'computed'    Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'computed'    Name.Other
+'}'           Punctuation
+')'           Punctuation
+'\n    '      Text.Whitespace
+'result'      Name.Other
+'.'           Punctuation
+'value'       Name.Other
+'\n\n\n  '    Text.Whitespace
+'# Return the minimum element (or element-based computation).' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.min'       Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(obj, iterator, context) ->' Name.Function
+'\n    '      Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'Math'        Name.Builtin
+'.'           Punctuation
+'min'         Name.Other
+'.'           Punctuation
+'apply'       Name.Other
+'('           Punctuation
+'Math'        Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'obj'         Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'not'         Operator
+' '           Text.Whitespace
+'iterator'    Name.Other
+' '           Text.Whitespace
+'and'         Operator
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'isArray'     Name.Other
+'('           Punctuation
+'obj'         Name.Other
+')'           Punctuation
+'\n    '      Text.Whitespace
+'result'      Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'{'           Punctuation
+'computed'    Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'Infinity'    Keyword.Constant
+'}'           Punctuation
+'\n    '      Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'each'        Name.Other
+' '           Text.Whitespace
+'obj'         Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'(value, index, list) ->' Name.Function
+'\n      '    Text.Whitespace
+'computed'    Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'iterator'    Name.Other
+' '           Text.Whitespace
+'then'        Keyword
+' '           Text.Whitespace
+'iterator'    Name.Other
+'.'           Punctuation
+'call'        Name.Other
+'('           Punctuation
+'context'     Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'value'       Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'index'       Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'list'        Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'else'        Keyword
+' '           Text.Whitespace
+'value'       Name.Other
+'\n      '    Text.Whitespace
+'computed'    Name.Other
+' '           Text.Whitespace
+'<'           Operator
+' '           Text.Whitespace
+'result'      Name.Other
+'.'           Punctuation
+'computed'    Name.Other
+' '           Text.Whitespace
+'and'         Operator
+' '           Text.Whitespace
+'('           Punctuation
+'result'      Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'{'           Punctuation
+'value'       Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'value'       Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'computed'    Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'computed'    Name.Other
+'}'           Punctuation
+')'           Punctuation
+'\n    '      Text.Whitespace
+'result'      Name.Other
+'.'           Punctuation
+'value'       Name.Other
+'\n\n\n  '    Text.Whitespace
+"# Sort the object's values by a criteria produced by an iterator." Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.sortBy'    Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(obj, iterator, context) ->' Name.Function
+'\n    '      Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'pluck'       Name.Other
+'('           Punctuation
+'('           Punctuation
+'('           Punctuation
+'_'           Name.Other
+'.'           Punctuation
+'map'         Name.Other
+' '           Text.Whitespace
+'obj'         Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'(value, index, list) ->' Name.Function
+'\n      '    Text.Whitespace
+'{'           Punctuation
+'value'       Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'value'       Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'criteria'    Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'iterator'    Name.Other
+'.'           Punctuation
+'call'        Name.Other
+'('           Punctuation
+'context'     Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'value'       Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'index'       Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'list'        Name.Other
+')'           Punctuation
+'}'           Punctuation
+'\n    '      Text.Whitespace
+')'           Punctuation
+'.'           Punctuation
+'sort'        Name.Other
+'('           Punctuation
+'(left, right) ->' Name.Function
+'\n      '    Text.Whitespace
+'a'           Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'left'        Name.Other
+'.'           Punctuation
+'criteria'    Name.Other
+';'           Punctuation
+' '           Text.Whitespace
+'b'           Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'right'       Name.Other
+'.'           Punctuation
+'criteria'    Name.Other
+'\n      '    Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'a'           Name.Other
+' '           Text.Whitespace
+'<'           Operator
+' '           Text.Whitespace
+'b'           Name.Other
+' '           Text.Whitespace
+'then'        Keyword
+' '           Text.Whitespace
+'-'           Operator
+'1'           Literal.Number.Integer
+' '           Text.Whitespace
+'else'        Keyword
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'a'           Name.Other
+' '           Text.Whitespace
+'>'           Operator
+' '           Text.Whitespace
+'b'           Name.Other
+' '           Text.Whitespace
+'then'        Keyword
+' '           Text.Whitespace
+'1'           Literal.Number.Integer
+' '           Text.Whitespace
+'else'        Keyword
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+'\n    '      Text.Whitespace
+')'           Punctuation
+')'           Punctuation
+','           Punctuation
+' '           Text.Whitespace
+"'"           Literal.String
+'value'       Literal.String
+"'"           Literal.String
+')'           Punctuation
+'\n\n\n  '    Text.Whitespace
+'# Use a comparator function to figure out at what index an object should' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'# be inserted so as to maintain order. Uses binary search.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.sortedIndex' Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(array, obj, iterator) ->' Name.Function
+'\n    '      Text.Whitespace
+'iterator'    Name.Other
+' '           Text.Whitespace
+'||'          Operator
+'='           Operator
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'identity'    Name.Other
+'\n    '      Text.Whitespace
+'low'         Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+';'           Punctuation
+' '           Text.Whitespace
+'high'        Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'array'       Name.Other
+'.'           Punctuation
+'length'      Name.Other
+'\n    '      Text.Whitespace
+'while'       Keyword
+' '           Text.Whitespace
+'low'         Name.Other
+' '           Text.Whitespace
+'<'           Operator
+' '           Text.Whitespace
+'high'        Name.Other
+'\n      '    Text.Whitespace
+'mid'         Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'('           Punctuation
+'low'         Name.Other
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+'high'        Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'>>'          Operator
+' '           Text.Whitespace
+'1'           Literal.Number.Integer
+'\n      '    Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'iterator'    Name.Other
+'('           Punctuation
+'array'       Name.Other
+'['           Punctuation
+'mid'         Name.Other
+']'           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'<'           Operator
+' '           Text.Whitespace
+'iterator'    Name.Other
+'('           Punctuation
+'obj'         Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'then'        Keyword
+' '           Text.Whitespace
+'low'         Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'mid'         Name.Other
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+'1'           Literal.Number.Integer
+' '           Text.Whitespace
+'else'        Keyword
+' '           Text.Whitespace
+'high'        Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'mid'         Name.Other
+'\n    '      Text.Whitespace
+'low'         Name.Other
+'\n\n\n  '    Text.Whitespace
+'# Convert anything iterable into a real, live array.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.toArray'   Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(iterable) ->' Name.Function
+'\n    '      Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'['           Punctuation
+']'           Punctuation
+'                   ' Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'!'           Operator
+'iterable'    Name.Other
+')'           Punctuation
+'\n    '      Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'iterable'    Name.Other
+'.'           Punctuation
+'toArray'     Name.Other
+'('           Punctuation
+')'           Punctuation
+'   '         Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'iterable'    Name.Other
+'.'           Punctuation
+'toArray'     Name.Other
+')'           Punctuation
+'\n    '      Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'iterable'    Name.Other
+'             ' Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'_'           Name.Other
+'.'           Punctuation
+'isArray'     Name.Other
+'('           Punctuation
+'iterable'    Name.Other
+')'           Punctuation
+')'           Punctuation
+'\n    '      Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'slice'       Name.Other
+'.'           Punctuation
+'call'        Name.Other
+'('           Punctuation
+'iterable'    Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'_'           Name.Other
+'.'           Punctuation
+'isArguments' Name.Other
+'('           Punctuation
+'iterable'    Name.Other
+')'           Punctuation
+')'           Punctuation
+'\n    '      Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'values'      Name.Other
+'('           Punctuation
+'iterable'    Name.Other
+')'           Punctuation
+'\n\n\n  '    Text.Whitespace
+'# Return the number of elements in an object.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.size'      Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(obj) ->'    Name.Function
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'toArray'     Name.Other
+'('           Punctuation
+'obj'         Name.Other
+')'           Punctuation
+'.'           Punctuation
+'length'      Name.Other
+'\n\n\n  '    Text.Whitespace
+'# -------------------------- Array Functions: ------------------------------' Comment.Single
+'\n'          Text.Whitespace
+
+'\n  '        Text.Whitespace
+'# Get the first element of an array. Passing "n" will return the first N' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'# values in the array. Aliased as "head". The "guard" check allows it to work' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'# with _.map.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.first'     Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(array, n, guard) ->' Name.Function
+'\n    '      Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'n'           Name.Other
+' '           Text.Whitespace
+'and'         Operator
+' '           Text.Whitespace
+'not'         Operator
+' '           Text.Whitespace
+'guard'       Name.Other
+' '           Text.Whitespace
+'then'        Keyword
+' '           Text.Whitespace
+'slice'       Name.Other
+'.'           Punctuation
+'call'        Name.Other
+'('           Punctuation
+'array'       Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+','           Punctuation
+' '           Text.Whitespace
+'n'           Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'else'        Keyword
+' '           Text.Whitespace
+'array'       Name.Other
+'['           Punctuation
+'0'           Literal.Number.Integer
+']'           Punctuation
+'\n\n\n  '    Text.Whitespace
+'# Returns everything but the first entry of the array. Aliased as "tail".' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'# Especially useful on the arguments object. Passing an "index" will return' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'# the rest of the values in the array from that index onward. The "guard"' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'# check allows it to work with _.map.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.rest'      Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(array, index, guard) ->' Name.Function
+'\n    '      Text.Whitespace
+'slice'       Name.Other
+'.'           Punctuation
+'call'        Name.Other
+'('           Punctuation
+'array'       Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'isUndefined' Name.Other
+'('           Punctuation
+'index'       Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'or'          Operator
+' '           Text.Whitespace
+'guard'       Name.Other
+' '           Text.Whitespace
+'then'        Keyword
+' '           Text.Whitespace
+'1'           Literal.Number.Integer
+' '           Text.Whitespace
+'else'        Keyword
+' '           Text.Whitespace
+'index'       Name.Other
+')'           Punctuation
+'\n\n\n  '    Text.Whitespace
+'# Get the last element of an array.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.last'      Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(array) ->'  Name.Function
+' '           Text.Whitespace
+'array'       Name.Other
+'['           Punctuation
+'array'       Name.Other
+'.'           Punctuation
+'length'      Name.Other
+' '           Text.Whitespace
+'-'           Operator
+' '           Text.Whitespace
+'1'           Literal.Number.Integer
+']'           Punctuation
+'\n\n\n  '    Text.Whitespace
+'# Trim out all falsy values from an array.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.compact'   Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(array) ->'  Name.Function
+' '           Text.Whitespace
+'array'       Name.Other
+'['           Punctuation
+'i'           Name.Other
+']'           Punctuation
+' '           Text.Whitespace
+'for'         Keyword
+' '           Text.Whitespace
+'i'           Name.Other
+' '           Text.Whitespace
+'in'          Keyword
+' '           Text.Whitespace
+'['           Punctuation
+'0'           Literal.Number.Integer
+'.'           Punctuation
+'.'           Punctuation
+'.'           Punctuation
+'array'       Name.Other
+'.'           Punctuation
+'length'      Name.Other
+']'           Punctuation
+' '           Text.Whitespace
+'when'        Keyword
+' '           Text.Whitespace
+'array'       Name.Other
+'['           Punctuation
+'i'           Name.Other
+']'           Punctuation
+'\n\n\n  '    Text.Whitespace
+'# Return a completely flattened version of an array.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.flatten'   Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(array) ->'  Name.Function
+'\n    '      Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'reduce'      Name.Other
+' '           Text.Whitespace
+'array'       Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+']'           Punctuation
+','           Punctuation
+' '           Text.Whitespace
+'(memo, value) ->' Name.Function
+'\n      '    Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'memo'        Name.Other
+'.'           Punctuation
+'concat'      Name.Other
+'('           Punctuation
+'_'           Name.Other
+'.'           Punctuation
+'flatten'     Name.Other
+'('           Punctuation
+'value'       Name.Other
+')'           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'isArray'     Name.Other
+'('           Punctuation
+'value'       Name.Other
+')'           Punctuation
+'\n      '    Text.Whitespace
+'memo'        Name.Other
+'.'           Punctuation
+'push'        Name.Other
+'('           Punctuation
+'value'       Name.Other
+')'           Punctuation
+'\n      '    Text.Whitespace
+'memo'        Name.Other
+'\n\n\n  '    Text.Whitespace
+'# Return a version of the array that does not contain the specified value(s).' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.without'   Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(array) ->'  Name.Function
+'\n    '      Text.Whitespace
+'values'      Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'rest'        Name.Other
+'('           Punctuation
+'arguments'   Name.Other
+')'           Punctuation
+'\n    '      Text.Whitespace
+'val'         Name.Other
+' '           Text.Whitespace
+'for'         Keyword
+' '           Text.Whitespace
+'val'         Name.Other
+' '           Text.Whitespace
+'in'          Keyword
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'toArray'     Name.Other
+'('           Punctuation
+'array'       Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'when'        Keyword
+' '           Text.Whitespace
+'not'         Operator
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'include'     Name.Other
+'('           Punctuation
+'values'      Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'val'         Name.Other
+')'           Punctuation
+'\n\n\n  '    Text.Whitespace
+'# Produce a duplicate-free version of the array. If the array has already' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'# been sorted, you have the option of using a faster algorithm.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.uniq'      Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(array, isSorted) ->' Name.Function
+'\n    '      Text.Whitespace
+'memo'        Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'['           Punctuation
+']'           Punctuation
+'\n    '      Text.Whitespace
+'for'         Keyword
+' '           Text.Whitespace
+'el'          Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'i'           Name.Other
+' '           Text.Whitespace
+'in'          Keyword
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'toArray'     Name.Other
+'('           Punctuation
+'array'       Name.Other
+')'           Punctuation
+'\n      '    Text.Whitespace
+'memo'        Name.Other
+'.'           Punctuation
+'push'        Name.Other
+'('           Punctuation
+'el'          Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'i'           Name.Other
+' '           Text.Whitespace
+'is'          Operator
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+' '           Text.Whitespace
+'||'          Operator
+' '           Text.Whitespace
+'('           Punctuation
+'if'          Keyword
+' '           Text.Whitespace
+'isSorted'    Name.Other
+' '           Text.Whitespace
+'is'          Operator
+' '           Text.Whitespace
+'true'        Keyword.Constant
+' '           Text.Whitespace
+'then'        Keyword
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'last'        Name.Other
+'('           Punctuation
+'memo'        Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'isnt'        Operator
+' '           Text.Whitespace
+'el'          Name.Other
+' '           Text.Whitespace
+'else'        Keyword
+' '           Text.Whitespace
+'not'         Operator
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'include'     Name.Other
+'('           Punctuation
+'memo'        Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'el'          Name.Other
+')'           Punctuation
+')'           Punctuation
+'\n    '      Text.Whitespace
+'memo'        Name.Other
+'\n\n\n  '    Text.Whitespace
+'# Produce an array that contains every item shared between all the' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'# passed-in arrays.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.intersect' Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(array) ->'  Name.Function
+'\n    '      Text.Whitespace
+'rest'        Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'rest'        Name.Other
+'('           Punctuation
+'arguments'   Name.Other
+')'           Punctuation
+'\n    '      Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'select'      Name.Other
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'uniq'        Name.Other
+'('           Punctuation
+'array'       Name.Other
+')'           Punctuation
+','           Punctuation
+' '           Text.Whitespace
+'(item) ->'   Name.Function
+'\n      '    Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'all'         Name.Other
+' '           Text.Whitespace
+'rest'        Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'(other) ->'  Name.Function
+'\n        '  Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'indexOf'     Name.Other
+'('           Punctuation
+'other'       Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'item'        Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'>='          Operator
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+'\n\n\n  '    Text.Whitespace
+'# Zip together multiple lists into a single array -- elements that share' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'# an index go together.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.zip'       Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'->'          Name.Function
+'\n    '      Text.Whitespace
+'length'      Name.Variable
+':'           Operator
+'     '       Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'max'         Name.Other
+'('           Punctuation
+'_'           Name.Other
+'.'           Punctuation
+'pluck'       Name.Other
+'('           Punctuation
+'arguments'   Name.Other
+','           Punctuation
+' '           Text.Whitespace
+"'"           Literal.String
+'length'      Literal.String
+"'"           Literal.String
+')'           Punctuation
+')'           Punctuation
+'\n    '      Text.Whitespace
+'results'     Name.Variable
+':'           Operator
+'    '        Text.Whitespace
+'new'         Keyword
+' '           Text.Whitespace
+'Array'       Name.Builtin
+'('           Punctuation
+'length'      Name.Other
+')'           Punctuation
+'\n    '      Text.Whitespace
+'for'         Keyword
+' '           Text.Whitespace
+'i'           Name.Other
+' '           Text.Whitespace
+'in'          Keyword
+' '           Text.Whitespace
+'['           Punctuation
+'0'           Literal.Number.Integer
+'.'           Punctuation
+'.'           Punctuation
+'.'           Punctuation
+'length'      Name.Other
+']'           Punctuation
+'\n      '    Text.Whitespace
+'results'     Name.Other
+'['           Punctuation
+'i'           Name.Other
+']'           Punctuation
+':'           Operator
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'pluck'       Name.Other
+'('           Punctuation
+'arguments'   Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'String'      Name.Builtin
+'('           Punctuation
+'i'           Name.Other
+')'           Punctuation
+')'           Punctuation
+'\n    '      Text.Whitespace
+'results'     Name.Other
+'\n\n\n  '    Text.Whitespace
+"# If the browser doesn't supply us with indexOf (I'm looking at you, MSIE)," Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'# we need this function. Return the position of the first occurence of an' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'# item in an array, or -1 if the item is not included in the array.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.indexOf'   Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(array, item) ->' Name.Function
+'\n    '      Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'array'       Name.Other
+'.'           Punctuation
+'indexOf'     Name.Other
+'('           Punctuation
+'item'        Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'array'       Name.Other
+'.'           Punctuation
+'indexOf'     Name.Other
+'\n    '      Text.Whitespace
+'i'           Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+';'           Punctuation
+' '           Text.Whitespace
+'l'           Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'array'       Name.Other
+'.'           Punctuation
+'length'      Name.Other
+'\n    '      Text.Whitespace
+'while'       Keyword
+' '           Text.Whitespace
+'l'           Name.Other
+' '           Text.Whitespace
+'-'           Operator
+' '           Text.Whitespace
+'i'           Name.Other
+'\n      '    Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'array'       Name.Other
+'['           Punctuation
+'i'           Name.Other
+']'           Punctuation
+' '           Text.Whitespace
+'is'          Operator
+' '           Text.Whitespace
+'item'        Name.Other
+' '           Text.Whitespace
+'then'        Keyword
+' '           Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'i'           Name.Other
+' '           Text.Whitespace
+'else'        Keyword
+' '           Text.Whitespace
+'i'           Name.Other
+'++'          Operator
+'\n    '      Text.Whitespace
+'-'           Operator
+'1'           Literal.Number.Integer
+'\n\n\n  '    Text.Whitespace
+"# Provide JavaScript 1.6's lastIndexOf, delegating to the native function," Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'# if possible.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.lastIndexOf' Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(array, item) ->' Name.Function
+'\n    '      Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'array'       Name.Other
+'.'           Punctuation
+'lastIndexOf' Name.Other
+'('           Punctuation
+'item'        Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'array'       Name.Other
+'.'           Punctuation
+'lastIndexOf' Name.Other
+'\n    '      Text.Whitespace
+'i'           Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'array'       Name.Other
+'.'           Punctuation
+'length'      Name.Other
+'\n    '      Text.Whitespace
+'while'       Keyword
+' '           Text.Whitespace
+'i'           Name.Other
+'\n      '    Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'array'       Name.Other
+'['           Punctuation
+'i'           Name.Other
+']'           Punctuation
+' '           Text.Whitespace
+'is'          Operator
+' '           Text.Whitespace
+'item'        Name.Other
+' '           Text.Whitespace
+'then'        Keyword
+' '           Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'i'           Name.Other
+' '           Text.Whitespace
+'else'        Keyword
+' '           Text.Whitespace
+'i'           Name.Other
+'-'           Operator
+'-'           Operator
+'\n    '      Text.Whitespace
+'-'           Operator
+'1'           Literal.Number.Integer
+'\n\n\n  '    Text.Whitespace
+'# Generate an integer Array containing an arithmetic progression. A port of' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'# the native Python range() function. See:' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'# http://docs.python.org/library/functions.html#range' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.range'     Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(start, stop, step) ->' Name.Function
+'\n    '      Text.Whitespace
+'a'           Name.Variable
+':'           Operator
+'        '    Text.Whitespace
+'arguments'   Name.Other
+'\n    '      Text.Whitespace
+'solo'        Name.Variable
+':'           Operator
+'     '       Text.Whitespace
+'a'           Name.Other
+'.'           Punctuation
+'length'      Name.Other
+' '           Text.Whitespace
+'<='          Operator
+' '           Text.Whitespace
+'1'           Literal.Number.Integer
+'\n    '      Text.Whitespace
+'i'           Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'start'       Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'solo'        Name.Other
+' '           Text.Whitespace
+'then'        Keyword
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+' '           Text.Whitespace
+'else'        Keyword
+' '           Text.Whitespace
+'a'           Name.Other
+'['           Punctuation
+'0'           Literal.Number.Integer
+']'           Punctuation
+';'           Punctuation
+'\n    '      Text.Whitespace
+'stop'        Name.Variable
+':'           Operator
+'     '       Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'solo'        Name.Other
+' '           Text.Whitespace
+'then'        Keyword
+' '           Text.Whitespace
+'a'           Name.Other
+'['           Punctuation
+'0'           Literal.Number.Integer
+']'           Punctuation
+' '           Text.Whitespace
+'else'        Keyword
+' '           Text.Whitespace
+'a'           Name.Other
+'['           Punctuation
+'1'           Literal.Number.Integer
+']'           Punctuation
+';'           Punctuation
+'\n    '      Text.Whitespace
+'step'        Name.Variable
+':'           Operator
+'     '       Text.Whitespace
+'a'           Name.Other
+'['           Punctuation
+'2'           Literal.Number.Integer
+']'           Punctuation
+' '           Text.Whitespace
+'or'          Operator
+' '           Text.Whitespace
+'1'           Literal.Number.Integer
+'\n    '      Text.Whitespace
+'len'         Name.Variable
+':'           Operator
+'      '      Text.Whitespace
+'Math'        Name.Builtin
+'.'           Punctuation
+'ceil'        Name.Other
+'('           Punctuation
+'('           Punctuation
+'stop'        Name.Other
+' '           Text.Whitespace
+'-'           Operator
+' '           Text.Whitespace
+'start'       Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'/'           Operator
+' '           Text.Whitespace
+'step'        Name.Other
+')'           Punctuation
+'\n    '      Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'['           Punctuation
+']'           Punctuation
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'len'         Name.Other
+' '           Text.Whitespace
+'<='          Operator
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+'\n    '      Text.Whitespace
+'range'       Name.Variable
+':'           Operator
+'    '        Text.Whitespace
+'new'         Keyword
+' '           Text.Whitespace
+'Array'       Name.Builtin
+'('           Punctuation
+'len'         Name.Other
+')'           Punctuation
+'\n    '      Text.Whitespace
+'idx'         Name.Variable
+':'           Operator
+'      '      Text.Whitespace
+'0'           Literal.Number.Integer
+'\n    '      Text.Whitespace
+'while'       Keyword
+' '           Text.Whitespace
+'true'        Keyword.Constant
+'\n      '    Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'range'       Name.Other
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'if'          Keyword
+' '           Text.Whitespace
+'step'        Name.Other
+' '           Text.Whitespace
+'>'           Operator
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+' '           Text.Whitespace
+'then'        Keyword
+' '           Text.Whitespace
+'i'           Name.Other
+' '           Text.Whitespace
+'-'           Operator
+' '           Text.Whitespace
+'stop'        Name.Other
+' '           Text.Whitespace
+'else'        Keyword
+' '           Text.Whitespace
+'stop'        Name.Other
+' '           Text.Whitespace
+'-'           Operator
+' '           Text.Whitespace
+'i'           Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'>='          Operator
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+'\n      '    Text.Whitespace
+'range'       Name.Other
+'['           Punctuation
+'idx'         Name.Other
+']'           Punctuation
+':'           Operator
+' '           Text.Whitespace
+'i'           Name.Other
+'\n      '    Text.Whitespace
+'idx'         Name.Other
+'++'          Operator
+'\n      '    Text.Whitespace
+'i'           Name.Other
+'+='          Operator
+' '           Text.Whitespace
+'step'        Name.Other
+'\n\n\n  '    Text.Whitespace
+'# ----------------------- Function Functions: -----------------------------' Comment.Single
+'\n'          Text.Whitespace
+
+'\n  '        Text.Whitespace
+"# Create a function bound to a given object (assigning 'this', and arguments," Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+"# optionally). Binding with arguments is also known as 'curry'." Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.bind'      Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(func, obj) ->' Name.Function
+'\n    '      Text.Whitespace
+'args'        Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'rest'        Name.Other
+'(arguments, 2)\n    ->' Name.Function
+' '           Text.Whitespace
+'func'        Name.Other
+'.'           Punctuation
+'apply'       Name.Other
+'('           Punctuation
+'obj'         Name.Other
+' '           Text.Whitespace
+'or'          Operator
+' '           Text.Whitespace
+'root'        Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'args'        Name.Other
+'.'           Punctuation
+'concat'      Name.Other
+'('           Punctuation
+'arguments'   Name.Other
+')'           Punctuation
+')'           Punctuation
+'\n\n\n  '    Text.Whitespace
+"# Bind all of an object's methods to that object. Useful for ensuring that" Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'# all callbacks defined on an object belong to it.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.bindAll'   Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(obj) ->'    Name.Function
+'\n    '      Text.Whitespace
+'funcs'       Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'arguments'   Name.Other
+'.'           Punctuation
+'length'      Name.Other
+' '           Text.Whitespace
+'>'           Operator
+' '           Text.Whitespace
+'1'           Literal.Number.Integer
+' '           Text.Whitespace
+'then'        Keyword
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'rest'        Name.Other
+'('           Punctuation
+'arguments'   Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'else'        Keyword
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'functions'   Name.Other
+'('           Punctuation
+'obj'         Name.Other
+')'           Punctuation
+'\n    '      Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'each'        Name.Other
+'('           Punctuation
+'funcs'       Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'(f) ->'      Name.Function
+' '           Text.Whitespace
+'obj'         Name.Other
+'['           Punctuation
+'f'           Name.Other
+']'           Punctuation
+':'           Operator
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'bind'        Name.Other
+'('           Punctuation
+'obj'         Name.Other
+'['           Punctuation
+'f'           Name.Other
+']'           Punctuation
+','           Punctuation
+' '           Text.Whitespace
+'obj'         Name.Other
+')'           Punctuation
+')'           Punctuation
+'\n    '      Text.Whitespace
+'obj'         Name.Other
+'\n\n\n  '    Text.Whitespace
+'# Delays a function for the given number of milliseconds, and then calls' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'# it with the arguments supplied.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.delay'     Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(func, wait) ->' Name.Function
+'\n    '      Text.Whitespace
+'args'        Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'rest'        Name.Other
+'('           Punctuation
+'arguments'   Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'2'           Literal.Number.Integer
+')'           Punctuation
+'\n    '      Text.Whitespace
+'setTimeout'  Name.Other
+'('           Punctuation
+'('           Punctuation
+'->'          Name.Function
+' '           Text.Whitespace
+'func'        Name.Other
+'.'           Punctuation
+'apply'       Name.Other
+'('           Punctuation
+'func'        Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'args'        Name.Other
+')'           Punctuation
+')'           Punctuation
+','           Punctuation
+' '           Text.Whitespace
+'wait'        Name.Other
+')'           Punctuation
+'\n\n\n  '    Text.Whitespace
+'# Defers a function, scheduling it to run after the current call stack has' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'# cleared.'  Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.defer'     Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(func) ->'   Name.Function
+'\n    '      Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'delay'       Name.Other
+'.'           Punctuation
+'apply'       Name.Other
+'('           Punctuation
+'_'           Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'func'        Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'1'           Literal.Number.Integer
+']'           Punctuation
+'.'           Punctuation
+'concat'      Name.Other
+'('           Punctuation
+'_'           Name.Other
+'.'           Punctuation
+'rest'        Name.Other
+'('           Punctuation
+'arguments'   Name.Other
+')'           Punctuation
+')'           Punctuation
+')'           Punctuation
+'\n\n\n  '    Text.Whitespace
+'# Returns the first function passed as an argument to the second,' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'# allowing you to adjust arguments, run code before and after, and' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'# conditionally execute the original function.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.wrap'      Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(func, wrapper) ->' Name.Function
+'\n    '      Text.Whitespace
+'->'          Name.Function
+' '           Text.Whitespace
+'wrapper'     Name.Other
+'.'           Punctuation
+'apply'       Name.Other
+'('           Punctuation
+'wrapper'     Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'func'        Name.Other
+']'           Punctuation
+'.'           Punctuation
+'concat'      Name.Other
+'('           Punctuation
+'arguments'   Name.Other
+')'           Punctuation
+')'           Punctuation
+'\n\n\n  '    Text.Whitespace
+'# Returns a function that is the composition of a list of functions, each' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'# consuming the return value of the function that follows.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.compose'   Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'->'          Name.Function
+'\n    '      Text.Whitespace
+'funcs'       Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'arguments'   Name.Other
+'\n    '      Text.Whitespace
+'->'          Name.Function
+'\n      '    Text.Whitespace
+'args'        Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'arguments'   Name.Other
+'\n      '    Text.Whitespace
+'for'         Keyword
+' '           Text.Whitespace
+'i'           Name.Other
+' '           Text.Whitespace
+'in'          Keyword
+' '           Text.Whitespace
+'['           Punctuation
+'('           Punctuation
+'funcs'       Name.Other
+'.'           Punctuation
+'length'      Name.Other
+' '           Text.Whitespace
+'-'           Operator
+' '           Text.Whitespace
+'1'           Literal.Number.Integer
+')'           Punctuation
+'.'           Punctuation
+'.'           Punctuation
+'0'           Literal.Number.Integer
+']'           Punctuation
+'\n        '  Text.Whitespace
+'args'        Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'['           Punctuation
+'funcs'       Name.Other
+'['           Punctuation
+'i'           Name.Other
+']'           Punctuation
+'.'           Punctuation
+'apply'       Name.Other
+'('           Punctuation
+'this'        Keyword
+','           Punctuation
+' '           Text.Whitespace
+'args'        Name.Other
+')'           Punctuation
+']'           Punctuation
+'\n      '    Text.Whitespace
+'args'        Name.Other
+'['           Punctuation
+'0'           Literal.Number.Integer
+']'           Punctuation
+'\n\n\n  '    Text.Whitespace
+'# ------------------------- Object Functions: ----------------------------' Comment.Single
+'\n'          Text.Whitespace
+
+'\n  '        Text.Whitespace
+"# Retrieve the names of an object's properties." Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.keys'      Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(obj) ->'    Name.Function
+'\n    '      Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'range'       Name.Other
+'('           Punctuation
+'0'           Literal.Number.Integer
+','           Punctuation
+' '           Text.Whitespace
+'obj'         Name.Other
+'.'           Punctuation
+'length'      Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'isArray'     Name.Other
+'('           Punctuation
+'obj'         Name.Other
+')'           Punctuation
+'\n    '      Text.Whitespace
+'key'         Name.Other
+' '           Text.Whitespace
+'for'         Keyword
+' '           Text.Whitespace
+'key'         Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'val'         Name.Other
+' '           Text.Whitespace
+'of'          Keyword
+' '           Text.Whitespace
+'obj'         Name.Other
+'\n\n\n  '    Text.Whitespace
+"# Retrieve the values of an object's properties." Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.values'    Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(obj) ->'    Name.Function
+'\n    '      Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'map'         Name.Other
+'('           Punctuation
+'obj'         Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'identity'    Name.Other
+')'           Punctuation
+'\n\n\n  '    Text.Whitespace
+'# Return a sorted list of the function names available in Underscore.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.functions' Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(obj) ->'    Name.Function
+'\n    '      Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'select'      Name.Other
+'('           Punctuation
+'_'           Name.Other
+'.'           Punctuation
+'keys'        Name.Other
+'('           Punctuation
+'obj'         Name.Other
+')'           Punctuation
+','           Punctuation
+' '           Text.Whitespace
+'(key) ->'    Name.Function
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'isFunction'  Name.Other
+'('           Punctuation
+'obj'         Name.Other
+'['           Punctuation
+'key'         Name.Other
+']'           Punctuation
+')'           Punctuation
+')'           Punctuation
+'.'           Punctuation
+'sort'        Name.Other
+'('           Punctuation
+')'           Punctuation
+'\n\n\n  '    Text.Whitespace
+'# Extend a given object with all of the properties in a source object.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.extend'    Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(destination, source) ->' Name.Function
+'\n    '      Text.Whitespace
+'for'         Keyword
+' '           Text.Whitespace
+'key'         Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'val'         Name.Other
+' '           Text.Whitespace
+'of'          Keyword
+' '           Text.Whitespace
+'source'      Name.Other
+'\n      '    Text.Whitespace
+'destination' Name.Other
+'['           Punctuation
+'key'         Name.Other
+']'           Punctuation
+':'           Operator
+' '           Text.Whitespace
+'val'         Name.Other
+'\n    '      Text.Whitespace
+'destination' Name.Other
+'\n\n\n  '    Text.Whitespace
+'# Create a (shallow-cloned) duplicate of an object.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.clone'     Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(obj) ->'    Name.Function
+'\n    '      Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'obj'         Name.Other
+'.'           Punctuation
+'slice'       Name.Other
+'('           Punctuation
+'0'           Literal.Number.Integer
+')'           Punctuation
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'isArray'     Name.Other
+'('           Punctuation
+'obj'         Name.Other
+')'           Punctuation
+'\n    '      Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'extend'      Name.Other
+'('           Punctuation
+'{'           Punctuation
+'}'           Punctuation
+','           Punctuation
+' '           Text.Whitespace
+'obj'         Name.Other
+')'           Punctuation
+'\n\n\n  '    Text.Whitespace
+'# Invokes interceptor with the obj, and then returns obj.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'# The primary purpose of this method is to "tap into" a method chain, in order to perform operations on intermediate results within the chain.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.tap'       Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(obj, interceptor) ->' Name.Function
+'\n    '      Text.Whitespace
+'interceptor' Name.Other
+'('           Punctuation
+'obj'         Name.Other
+')'           Punctuation
+'\n    '      Text.Whitespace
+'obj'         Name.Other
+'\n\n\n  '    Text.Whitespace
+'# Perform a deep comparison to check if two objects are equal.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.isEqual'   Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(a, b) ->'   Name.Function
+'\n    '      Text.Whitespace
+'# Check object identity.' Comment.Single
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'true'        Keyword.Constant
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'a'           Name.Other
+' '           Text.Whitespace
+'is'          Operator
+' '           Text.Whitespace
+'b'           Name.Other
+'\n    '      Text.Whitespace
+'# Different types?' Comment.Single
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'atype'       Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'typeof'      Keyword
+'('           Punctuation
+'a'           Name.Other
+')'           Punctuation
+';'           Punctuation
+' '           Text.Whitespace
+'btype'       Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'typeof'      Keyword
+'('           Punctuation
+'b'           Name.Other
+')'           Punctuation
+'\n    '      Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'false'       Keyword.Constant
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'atype'       Name.Other
+' '           Text.Whitespace
+'isnt'        Operator
+' '           Text.Whitespace
+'btype'       Name.Other
+'\n    '      Text.Whitespace
+'# Basic equality test (watch out for coercions).' Comment.Single
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'true'        Keyword.Constant
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'`'           Operator
+'a'           Name.Other
+' '           Text.Whitespace
+'=='          Operator
+' '           Text.Whitespace
+'b'           Name.Other
+'`'           Operator
+'\n    '      Text.Whitespace
+'# One is falsy and the other truthy.' Comment.Single
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'false'       Keyword.Constant
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'!'           Operator
+'a'           Name.Other
+' '           Text.Whitespace
+'and'         Operator
+' '           Text.Whitespace
+'b'           Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'or'          Operator
+' '           Text.Whitespace
+'('           Punctuation
+'a'           Name.Other
+' '           Text.Whitespace
+'and'         Operator
+' '           Text.Whitespace
+'!'           Operator
+'b'           Name.Other
+')'           Punctuation
+'\n    '      Text.Whitespace
+'# One of them implements an isEqual()?' Comment.Single
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'a'           Name.Other
+'.'           Punctuation
+'isEqual'     Name.Other
+'('           Punctuation
+'b'           Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'a'           Name.Other
+'.'           Punctuation
+'isEqual'     Name.Other
+'\n    '      Text.Whitespace
+"# Check dates' integer values." Comment.Single
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'a'           Name.Other
+'.'           Punctuation
+'getTime'     Name.Other
+'('           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'is'          Operator
+' '           Text.Whitespace
+'b'           Name.Other
+'.'           Punctuation
+'getTime'     Name.Other
+'('           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'isDate'      Name.Other
+'('           Punctuation
+'a'           Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'and'         Operator
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'isDate'      Name.Other
+'('           Punctuation
+'b'           Name.Other
+')'           Punctuation
+'\n    '      Text.Whitespace
+'# Both are NaN?' Comment.Single
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'true'        Keyword.Constant
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'isNaN'       Name.Builtin
+'('           Punctuation
+'a'           Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'and'         Operator
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'isNaN'       Name.Builtin
+'('           Punctuation
+'b'           Name.Other
+')'           Punctuation
+'\n    '      Text.Whitespace
+'# Compare regular expressions.' Comment.Single
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'isRegExp'    Name.Other
+'('           Punctuation
+'a'           Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'and'         Operator
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'isRegExp'    Name.Other
+'('           Punctuation
+'b'           Name.Other
+')'           Punctuation
+'\n      '    Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'a'           Name.Other
+'.'           Punctuation
+'source'      Name.Other
+'     '       Text.Whitespace
+'is'          Operator
+' '           Text.Whitespace
+'b'           Name.Other
+'.'           Punctuation
+'source'      Name.Other
+' '           Text.Whitespace
+'and'         Operator
+'\n             ' Text.Whitespace
+'a'           Name.Other
+'.'           Punctuation
+'global'      Name.Other
+'     '       Text.Whitespace
+'is'          Operator
+' '           Text.Whitespace
+'b'           Name.Other
+'.'           Punctuation
+'global'      Name.Other
+' '           Text.Whitespace
+'and'         Operator
+'\n             ' Text.Whitespace
+'a'           Name.Other
+'.'           Punctuation
+'ignoreCase'  Name.Other
+' '           Text.Whitespace
+'is'          Operator
+' '           Text.Whitespace
+'b'           Name.Other
+'.'           Punctuation
+'ignoreCase'  Name.Other
+' '           Text.Whitespace
+'and'         Operator
+'\n             ' Text.Whitespace
+'a'           Name.Other
+'.'           Punctuation
+'multiline'   Name.Other
+'  '          Text.Whitespace
+'is'          Operator
+' '           Text.Whitespace
+'b'           Name.Other
+'.'           Punctuation
+'multiline'   Name.Other
+'\n    '      Text.Whitespace
+"# If a is not an object by this point, we can't handle it." Comment.Single
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'false'       Keyword.Constant
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'atype'       Name.Other
+' '           Text.Whitespace
+'isnt'        Operator
+' '           Text.Whitespace
+"'"           Literal.String
+'object'      Literal.String
+"'"           Literal.String
+'\n    '      Text.Whitespace
+'# Check for different array lengths before comparing contents.' Comment.Single
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'false'       Keyword.Constant
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'a'           Name.Other
+'.'           Punctuation
+'length'      Name.Other
+' '           Text.Whitespace
+'and'         Operator
+' '           Text.Whitespace
+'('           Punctuation
+'a'           Name.Other
+'.'           Punctuation
+'length'      Name.Other
+' '           Text.Whitespace
+'isnt'        Operator
+' '           Text.Whitespace
+'b'           Name.Other
+'.'           Punctuation
+'length'      Name.Other
+')'           Punctuation
+'\n    '      Text.Whitespace
+'# Nothing else worked, deep compare the contents.' Comment.Single
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'aKeys'       Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'keys'        Name.Other
+'('           Punctuation
+'a'           Name.Other
+')'           Punctuation
+';'           Punctuation
+' '           Text.Whitespace
+'bKeys'       Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'keys'        Name.Other
+'('           Punctuation
+'b'           Name.Other
+')'           Punctuation
+'\n    '      Text.Whitespace
+'# Different object sizes?' Comment.Single
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'false'       Keyword.Constant
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'aKeys'       Name.Other
+'.'           Punctuation
+'length'      Name.Other
+' '           Text.Whitespace
+'isnt'        Operator
+' '           Text.Whitespace
+'bKeys'       Name.Other
+'.'           Punctuation
+'length'      Name.Other
+'\n    '      Text.Whitespace
+'# Recursive comparison of contents.' Comment.Single
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'# for (var key in a) if (!_.isEqual(a[key], b[key])) return false;' Comment.Single
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'true'        Keyword.Constant
+'\n\n\n  '    Text.Whitespace
+'# Is a given array or object empty?' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.isEmpty'   Name.Variable
+':'           Operator
+'      '      Text.Whitespace
+'(obj) ->'    Name.Function
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'keys'        Name.Other
+'('           Punctuation
+'obj'         Name.Other
+')'           Punctuation
+'.'           Punctuation
+'length'      Name.Other
+' '           Text.Whitespace
+'is'          Operator
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+'\n\n\n  '    Text.Whitespace
+'# Is a given value a DOM element?' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.isElement' Name.Variable
+':'           Operator
+'    '        Text.Whitespace
+'(obj) ->'    Name.Function
+' '           Text.Whitespace
+'obj'         Name.Other
+' '           Text.Whitespace
+'and'         Operator
+' '           Text.Whitespace
+'obj'         Name.Other
+'.'           Punctuation
+'nodeType'    Name.Other
+' '           Text.Whitespace
+'is'          Operator
+' '           Text.Whitespace
+'1'           Literal.Number.Integer
+'\n\n\n  '    Text.Whitespace
+'# Is a given value an array?' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.isArray'   Name.Variable
+':'           Operator
+'      '      Text.Whitespace
+'(obj) ->'    Name.Function
+' '           Text.Whitespace
+'!'           Operator
+'!'           Operator
+'('           Punctuation
+'obj'         Name.Other
+' '           Text.Whitespace
+'and'         Operator
+' '           Text.Whitespace
+'obj'         Name.Other
+'.'           Punctuation
+'concat'      Name.Other
+' '           Text.Whitespace
+'and'         Operator
+' '           Text.Whitespace
+'obj'         Name.Other
+'.'           Punctuation
+'unshift'     Name.Other
+')'           Punctuation
+'\n\n\n  '    Text.Whitespace
+'# Is a given variable an arguments object?' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.isArguments' Name.Variable
+':'           Operator
+'  '          Text.Whitespace
+'(obj) ->'    Name.Function
+' '           Text.Whitespace
+'obj'         Name.Other
+' '           Text.Whitespace
+'and'         Operator
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'isNumber'    Name.Other
+'('           Punctuation
+'obj'         Name.Other
+'.'           Punctuation
+'length'      Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'and'         Operator
+' '           Text.Whitespace
+'not'         Operator
+' '           Text.Whitespace
+'obj'         Name.Other
+'.'           Punctuation
+'concat'      Name.Other
+' '           Text.Whitespace
+'and'         Operator
+'\n                           ' Text.Whitespace
+'not'         Operator
+' '           Text.Whitespace
+'obj'         Name.Other
+'.'           Punctuation
+'substr'      Name.Other
+' '           Text.Whitespace
+'and'         Operator
+' '           Text.Whitespace
+'not'         Operator
+' '           Text.Whitespace
+'obj'         Name.Other
+'.'           Punctuation
+'apply'       Name.Other
+' '           Text.Whitespace
+'and'         Operator
+' '           Text.Whitespace
+'not'         Operator
+' '           Text.Whitespace
+'propertyIsEnumerable' Name.Other
+'.'           Punctuation
+'call'        Name.Other
+'('           Punctuation
+'obj'         Name.Other
+','           Punctuation
+' '           Text.Whitespace
+"'"           Literal.String
+'length'      Literal.String
+"'"           Literal.String
+')'           Punctuation
+'\n\n\n  '    Text.Whitespace
+'# Is the given value a function?' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.isFunction' Name.Variable
+':'           Operator
+'   '         Text.Whitespace
+'(obj) ->'    Name.Function
+' '           Text.Whitespace
+'!'           Operator
+'!'           Operator
+'('           Punctuation
+'obj'         Name.Other
+' '           Text.Whitespace
+'and'         Operator
+' '           Text.Whitespace
+'obj'         Name.Other
+'.'           Punctuation
+'constructor' Name.Other
+' '           Text.Whitespace
+'and'         Operator
+' '           Text.Whitespace
+'obj'         Name.Other
+'.'           Punctuation
+'call'        Name.Other
+' '           Text.Whitespace
+'and'         Operator
+' '           Text.Whitespace
+'obj'         Name.Other
+'.'           Punctuation
+'apply'       Name.Other
+')'           Punctuation
+'\n\n\n  '    Text.Whitespace
+'# Is the given value a string?' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.isString'  Name.Variable
+':'           Operator
+'     '       Text.Whitespace
+'(obj) ->'    Name.Function
+' '           Text.Whitespace
+'!'           Operator
+'!'           Operator
+'('           Punctuation
+'obj'         Name.Other
+' '           Text.Whitespace
+'is'          Operator
+' '           Text.Whitespace
+"'"           Literal.String
+"'"           Literal.String
+' '           Text.Whitespace
+'or'          Operator
+' '           Text.Whitespace
+'('           Punctuation
+'obj'         Name.Other
+' '           Text.Whitespace
+'and'         Operator
+' '           Text.Whitespace
+'obj'         Name.Other
+'.'           Punctuation
+'charCodeAt'  Name.Other
+' '           Text.Whitespace
+'and'         Operator
+' '           Text.Whitespace
+'obj'         Name.Other
+'.'           Punctuation
+'substr'      Name.Other
+')'           Punctuation
+')'           Punctuation
+'\n\n\n  '    Text.Whitespace
+'# Is a given value a number?' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.isNumber'  Name.Variable
+':'           Operator
+'     '       Text.Whitespace
+'(obj) ->'    Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'obj'         Name.Other
+' '           Text.Whitespace
+'is'          Operator
+' '           Text.Whitespace
+'+'           Operator
+'obj'         Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'or'          Operator
+' '           Text.Whitespace
+'toString'    Name.Other
+'.'           Punctuation
+'call'        Name.Other
+'('           Punctuation
+'obj'         Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'is'          Operator
+' '           Text.Whitespace
+"'"           Literal.String
+'[object Number]' Literal.String
+"'"           Literal.String
+'\n\n\n  '    Text.Whitespace
+'# Is a given value a Date?' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.isDate'    Name.Variable
+':'           Operator
+'       '     Text.Whitespace
+'(obj) ->'    Name.Function
+' '           Text.Whitespace
+'!'           Operator
+'!'           Operator
+'('           Punctuation
+'obj'         Name.Other
+' '           Text.Whitespace
+'and'         Operator
+' '           Text.Whitespace
+'obj'         Name.Other
+'.'           Punctuation
+'getTimezoneOffset' Name.Other
+' '           Text.Whitespace
+'and'         Operator
+' '           Text.Whitespace
+'obj'         Name.Other
+'.'           Punctuation
+'setUTCFullYear' Name.Other
+')'           Punctuation
+'\n\n\n  '    Text.Whitespace
+'# Is the given value a regular expression?' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.isRegExp'  Name.Variable
+':'           Operator
+'     '       Text.Whitespace
+'(obj) ->'    Name.Function
+' '           Text.Whitespace
+'!'           Operator
+'!'           Operator
+'('           Punctuation
+'obj'         Name.Other
+' '           Text.Whitespace
+'and'         Operator
+' '           Text.Whitespace
+'obj'         Name.Other
+'.'           Punctuation
+'exec'        Name.Other
+' '           Text.Whitespace
+'and'         Operator
+' '           Text.Whitespace
+'('           Punctuation
+'obj'         Name.Other
+'.'           Punctuation
+'ignoreCase'  Name.Other
+' '           Text.Whitespace
+'or'          Operator
+' '           Text.Whitespace
+'obj'         Name.Other
+'.'           Punctuation
+'ignoreCase'  Name.Other
+' '           Text.Whitespace
+'is'          Operator
+' '           Text.Whitespace
+'false'       Keyword.Constant
+')'           Punctuation
+')'           Punctuation
+'\n\n\n  '    Text.Whitespace
+'# Is the given value NaN -- this one is interesting. NaN != NaN, and' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+"# isNaN(undefined) == true, so we make sure it's a number first." Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.isNaN'     Name.Variable
+':'           Operator
+'        '    Text.Whitespace
+'(obj) ->'    Name.Function
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'isNumber'    Name.Other
+'('           Punctuation
+'obj'         Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'and'         Operator
+' '           Text.Whitespace
+'window'      Name.Builtin
+'.'           Punctuation
+'isNaN'       Name.Builtin
+'('           Punctuation
+'obj'         Name.Other
+')'           Punctuation
+'\n\n\n  '    Text.Whitespace
+'# Is a given value equal to null?' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.isNull'    Name.Variable
+':'           Operator
+'       '     Text.Whitespace
+'(obj) ->'    Name.Function
+' '           Text.Whitespace
+'obj'         Name.Other
+' '           Text.Whitespace
+'is'          Operator
+' '           Text.Whitespace
+'null'        Keyword.Constant
+'\n\n\n  '    Text.Whitespace
+'# Is a given variable undefined?' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.isUndefined' Name.Variable
+':'           Operator
+'  '          Text.Whitespace
+'(obj) ->'    Name.Function
+' '           Text.Whitespace
+'typeof'      Keyword
+' '           Text.Whitespace
+'obj'         Name.Other
+' '           Text.Whitespace
+'is'          Operator
+' '           Text.Whitespace
+"'"           Literal.String
+'undefined'   Literal.String
+"'"           Literal.String
+'\n\n\n  '    Text.Whitespace
+'# -------------------------- Utility Functions: --------------------------' Comment.Single
+'\n'          Text.Whitespace
+
+'\n  '        Text.Whitespace
+"# Run Underscore.js in noConflict mode, returning the '_' variable to its" Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'# previous owner. Returns a reference to the Underscore object.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.noConflict' Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'->'          Name.Function
+'\n    '      Text.Whitespace
+'root._'      Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'previousUnderscore' Name.Other
+'\n    '      Text.Whitespace
+'this'        Keyword
+'\n\n\n  '    Text.Whitespace
+'# Keep the identity function around for default iterators.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.identity'  Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(value) ->'  Name.Function
+' '           Text.Whitespace
+'value'       Name.Other
+'\n\n\n  '    Text.Whitespace
+'# Break out of the middle of an iteration.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.breakLoop' Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'->'          Name.Function
+' '           Text.Whitespace
+'throw'       Keyword
+' '           Text.Whitespace
+'breaker'     Name.Other
+'\n\n\n  '    Text.Whitespace
+'# Generate a unique integer id (unique within the entire client session).' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'# Useful for temporary DOM ids.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'idCounter'   Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+'\n  '        Text.Whitespace
+'_.uniqueId'  Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(prefix) ->' Name.Function
+'\n    '      Text.Whitespace
+'('           Punctuation
+'prefix'      Name.Other
+' '           Text.Whitespace
+'or'          Operator
+' '           Text.Whitespace
+"'"           Literal.String
+"'"           Literal.String
+')'           Punctuation
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+'idCounter'   Name.Other
+'++'          Operator
+'\n\n\n  '    Text.Whitespace
+'# By default, Underscore uses ERB-style template delimiters, change the' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'# following template settings to use alternative delimiters.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.templateSettings' Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'{'           Punctuation
+'\n    '      Text.Whitespace
+'start'       Name.Variable
+':'           Operator
+'        '    Text.Whitespace
+"'"           Literal.String
+'<%'          Literal.String
+"'"           Literal.String
+'\n    '      Text.Whitespace
+'end'         Name.Variable
+':'           Operator
+'          '  Text.Whitespace
+"'"           Literal.String
+'%>'          Literal.String
+"'"           Literal.String
+'\n    '      Text.Whitespace
+'interpolate' Name.Variable
+':'           Operator
+'  '          Text.Whitespace
+'/<%=(.+?)%>/g' Literal.String.Regex
+'\n  '        Text.Whitespace
+'}'           Punctuation
+'\n\n\n  '    Text.Whitespace
+"# JavaScript templating a-la ERB, pilfered from John Resig's" Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'# "Secrets of the JavaScript Ninja", page 83.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+"# Single-quotea fix from Rick Strahl's version." Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_.template'  Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(str, data) ->' Name.Function
+'\n    '      Text.Whitespace
+'c'           Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'templateSettings' Name.Other
+'\n    '      Text.Whitespace
+'fn'          Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'new'         Keyword
+' '           Text.Whitespace
+'Function'    Name.Builtin
+' '           Text.Whitespace
+"'"           Literal.String
+'obj'         Literal.String
+"'"           Literal.String
+','           Punctuation
+'\n      '    Text.Whitespace
+"'"           Literal.String
+'var p=[],print=function(){p.push.apply(p,arguments);};' Literal.String
+"'"           Literal.String
+' '           Text.Whitespace
+'+'           Operator
+'\n      '    Text.Whitespace
+"'"           Literal.String
+'with(obj){p.push(' Literal.String
+"\\'"         Literal.String
+"'"           Literal.String
+' '           Text.Whitespace
+'+'           Operator
+'\n      '    Text.Whitespace
+'str'         Name.Other
+'.'           Punctuation
+'replace'     Name.Other
+'('           Punctuation
+'/[\\r\\t\\n]/g' Literal.String.Regex
+','           Punctuation
+' '           Text.Whitespace
+'"'           Literal.String
+' '           Literal.String
+'"'           Literal.String
+')'           Punctuation
+'\n         ' Text.Whitespace
+'.'           Punctuation
+'replace'     Name.Other
+'('           Punctuation
+'new'         Keyword
+' '           Text.Whitespace
+'RegExp'      Name.Builtin
+'('           Punctuation
+'"'           Literal.String
+"'"           Literal.String
+'(?=[^'       Literal.String
+'"'           Literal.String
+'+'           Operator
+'c'           Name.Other
+'.'           Punctuation
+'end'         Name.Other
+'['           Punctuation
+'0'           Literal.Number.Integer
+']'           Punctuation
+'+'           Operator
+'"'           Literal.String
+']*'          Literal.String
+'"'           Literal.String
+'+'           Operator
+'c'           Name.Other
+'.'           Punctuation
+'end'         Name.Other
+'+'           Operator
+'"'           Literal.String
+')'           Literal.String
+'"'           Literal.String
+','           Punctuation
+'"'           Literal.String
+'g'           Literal.String
+'"'           Literal.String
+')'           Punctuation
+','           Punctuation
+'"'           Literal.String
+'\\t'         Literal.String
+'"'           Literal.String
+')'           Punctuation
+'\n         ' Text.Whitespace
+'.'           Punctuation
+'split'       Name.Other
+'('           Punctuation
+'"'           Literal.String
+"'"           Literal.String
+'"'           Literal.String
+')'           Punctuation
+'.'           Punctuation
+'join'        Name.Other
+'('           Punctuation
+'"'           Literal.String
+'\\\\'        Literal.String
+"'"           Literal.String
+'"'           Literal.String
+')'           Punctuation
+'\n         ' Text.Whitespace
+'.'           Punctuation
+'split'       Name.Other
+'('           Punctuation
+'"'           Literal.String
+'\\t'         Literal.String
+'"'           Literal.String
+')'           Punctuation
+'.'           Punctuation
+'join'        Name.Other
+'('           Punctuation
+'"'           Literal.String
+"'"           Literal.String
+'"'           Literal.String
+')'           Punctuation
+'\n         ' Text.Whitespace
+'.'           Punctuation
+'replace'     Name.Other
+'('           Punctuation
+'c'           Name.Other
+'.'           Punctuation
+'interpolate' Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'"'           Literal.String
+"'"           Literal.String
+',$1,'        Literal.String
+"'"           Literal.String
+'"'           Literal.String
+')'           Punctuation
+'\n         ' Text.Whitespace
+'.'           Punctuation
+'split'       Name.Other
+'('           Punctuation
+'c'           Name.Other
+'.'           Punctuation
+'start'       Name.Other
+')'           Punctuation
+'.'           Punctuation
+'join'        Name.Other
+'('           Punctuation
+'"'           Literal.String
+"'"           Literal.String
+');'          Literal.String
+'"'           Literal.String
+')'           Punctuation
+'\n         ' Text.Whitespace
+'.'           Punctuation
+'split'       Name.Other
+'('           Punctuation
+'c'           Name.Other
+'.'           Punctuation
+'end'         Name.Other
+')'           Punctuation
+'.'           Punctuation
+'join'        Name.Other
+'('           Punctuation
+'"'           Literal.String
+'p.push('     Literal.String
+"'"           Literal.String
+'"'           Literal.String
+')'           Punctuation
+' '           Text.Whitespace
+'+'           Operator
+'\n         ' Text.Whitespace
+'"'           Literal.String
+"'"           Literal.String
+');}return p.join(' Literal.String
+"'"           Literal.String
+"'"           Literal.String
+');'          Literal.String
+'"'           Literal.String
+'\n    '      Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'data'        Name.Other
+' '           Text.Whitespace
+'then'        Keyword
+' '           Text.Whitespace
+'fn'          Name.Other
+'('           Punctuation
+'data'        Name.Other
+')'           Punctuation
+' '           Text.Whitespace
+'else'        Keyword
+' '           Text.Whitespace
+'fn'          Name.Other
+'\n\n\n  '    Text.Whitespace
+'# ------------------------------- Aliases ----------------------------------' Comment.Single
+'\n'          Text.Whitespace
+
+'\n  '        Text.Whitespace
+'_.forEach'   Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'each'        Name.Other
+'\n  '        Text.Whitespace
+'_.foldl'     Name.Variable
+':'           Operator
+'   '         Text.Whitespace
+'_.inject'    Name.Variable
+':'           Operator
+'      '      Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'reduce'      Name.Other
+'\n  '        Text.Whitespace
+'_.foldr'     Name.Variable
+':'           Operator
+'   '         Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'reduceRight' Name.Other
+'\n  '        Text.Whitespace
+'_.filter'    Name.Variable
+':'           Operator
+'  '          Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'select'      Name.Other
+'\n  '        Text.Whitespace
+'_.every'     Name.Variable
+':'           Operator
+'   '         Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'all'         Name.Other
+'\n  '        Text.Whitespace
+'_.some'      Name.Variable
+':'           Operator
+'    '        Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'any'         Name.Other
+'\n  '        Text.Whitespace
+'_.head'      Name.Variable
+':'           Operator
+'    '        Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'first'       Name.Other
+'\n  '        Text.Whitespace
+'_.tail'      Name.Variable
+':'           Operator
+'    '        Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'rest'        Name.Other
+'\n  '        Text.Whitespace
+'_.methods'   Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'functions'   Name.Other
+'\n\n\n  '    Text.Whitespace
+'#   /*------------------------ Setup the OOP Wrapper: --------------------------*/' Comment.Single
+'\n'          Text.Whitespace
+
+'\n  '        Text.Whitespace
+'# Helper function to continue chaining intermediate results.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'result'      Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'(obj, chain) ->' Name.Function
+'\n    '      Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'chain'       Name.Other
+' '           Text.Whitespace
+'then'        Keyword
+' '           Text.Whitespace
+'_'           Name.Other
+'('           Punctuation
+'obj'         Name.Other
+')'           Punctuation
+'.'           Punctuation
+'chain'       Name.Other
+'('           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'else'        Keyword
+' '           Text.Whitespace
+'obj'         Name.Other
+'\n\n\n  '    Text.Whitespace
+'# Add all of the Underscore functions to the wrapper object.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'each'        Name.Other
+' '           Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'functions'   Name.Other
+'('           Punctuation
+'_'           Name.Other
+')'           Punctuation
+','           Punctuation
+' '           Text.Whitespace
+'(name) ->'   Name.Function
+'\n    '      Text.Whitespace
+'method'      Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'_'           Name.Other
+'['           Punctuation
+'name'        Name.Other
+']'           Punctuation
+'\n    '      Text.Whitespace
+'wrapper'     Name.Other
+'.'           Punctuation
+'prototype'   Name.Other
+'['           Punctuation
+'name'        Name.Other
+']'           Punctuation
+':'           Operator
+' '           Text.Whitespace
+'->'          Name.Function
+'\n      '    Text.Whitespace
+'unshift'     Name.Other
+'.'           Punctuation
+'call'        Name.Other
+'('           Punctuation
+'arguments'   Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'this'        Keyword
+'.'           Punctuation
+'_wrapped'    Name.Other
+')'           Punctuation
+'\n      '    Text.Whitespace
+'result'      Name.Other
+'('           Punctuation
+'method'      Name.Other
+'.'           Punctuation
+'apply'       Name.Other
+'('           Punctuation
+'_'           Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'arguments'   Name.Other
+')'           Punctuation
+','           Punctuation
+' '           Text.Whitespace
+'this'        Keyword
+'.'           Punctuation
+'_chain'      Name.Other
+')'           Punctuation
+'\n\n\n  '    Text.Whitespace
+'# Add all mutator Array functions to the wrapper.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'each'        Name.Other
+' '           Text.Whitespace
+'['           Punctuation
+"'"           Literal.String
+'pop'         Literal.String
+"'"           Literal.String
+','           Punctuation
+' '           Text.Whitespace
+"'"           Literal.String
+'push'        Literal.String
+"'"           Literal.String
+','           Punctuation
+' '           Text.Whitespace
+"'"           Literal.String
+'reverse'     Literal.String
+"'"           Literal.String
+','           Punctuation
+' '           Text.Whitespace
+"'"           Literal.String
+'shift'       Literal.String
+"'"           Literal.String
+','           Punctuation
+' '           Text.Whitespace
+"'"           Literal.String
+'sort'        Literal.String
+"'"           Literal.String
+','           Punctuation
+' '           Text.Whitespace
+"'"           Literal.String
+'splice'      Literal.String
+"'"           Literal.String
+','           Punctuation
+' '           Text.Whitespace
+"'"           Literal.String
+'unshift'     Literal.String
+"'"           Literal.String
+']'           Punctuation
+','           Punctuation
+' '           Text.Whitespace
+'(name) ->'   Name.Function
+'\n    '      Text.Whitespace
+'method'      Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'Array'       Name.Builtin
+'.'           Punctuation
+'prototype'   Name.Other
+'['           Punctuation
+'name'        Name.Other
+']'           Punctuation
+'\n    '      Text.Whitespace
+'wrapper'     Name.Other
+'.'           Punctuation
+'prototype'   Name.Other
+'['           Punctuation
+'name'        Name.Other
+']'           Punctuation
+':'           Operator
+' '           Text.Whitespace
+'->'          Name.Function
+'\n      '    Text.Whitespace
+'method'      Name.Other
+'.'           Punctuation
+'apply'       Name.Other
+'('           Punctuation
+'this'        Keyword
+'.'           Punctuation
+'_wrapped'    Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'arguments'   Name.Other
+')'           Punctuation
+'\n      '    Text.Whitespace
+'result'      Name.Other
+'('           Punctuation
+'this'        Keyword
+'.'           Punctuation
+'_wrapped'    Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'this'        Keyword
+'.'           Punctuation
+'_chain'      Name.Other
+')'           Punctuation
+'\n\n\n  '    Text.Whitespace
+'# Add all accessor Array functions to the wrapper.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'_'           Name.Other
+'.'           Punctuation
+'each'        Name.Other
+' '           Text.Whitespace
+'['           Punctuation
+"'"           Literal.String
+'concat'      Literal.String
+"'"           Literal.String
+','           Punctuation
+' '           Text.Whitespace
+"'"           Literal.String
+'join'        Literal.String
+"'"           Literal.String
+','           Punctuation
+' '           Text.Whitespace
+"'"           Literal.String
+'slice'       Literal.String
+"'"           Literal.String
+']'           Punctuation
+','           Punctuation
+' '           Text.Whitespace
+'(name) ->'   Name.Function
+'\n    '      Text.Whitespace
+'method'      Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'Array'       Name.Builtin
+'.'           Punctuation
+'prototype'   Name.Other
+'['           Punctuation
+'name'        Name.Other
+']'           Punctuation
+'\n    '      Text.Whitespace
+'wrapper'     Name.Other
+'.'           Punctuation
+'prototype'   Name.Other
+'['           Punctuation
+'name'        Name.Other
+']'           Punctuation
+':'           Operator
+' '           Text.Whitespace
+'->'          Name.Function
+'\n      '    Text.Whitespace
+'result'      Name.Other
+'('           Punctuation
+'method'      Name.Other
+'.'           Punctuation
+'apply'       Name.Other
+'('           Punctuation
+'this'        Keyword
+'.'           Punctuation
+'_wrapped'    Name.Other
+','           Punctuation
+' '           Text.Whitespace
+'arguments'   Name.Other
+')'           Punctuation
+','           Punctuation
+' '           Text.Whitespace
+'this'        Keyword
+'.'           Punctuation
+'_chain'      Name.Other
+')'           Punctuation
+'\n\n\n  '    Text.Whitespace
+'# Start chaining a wrapped Underscore object.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'wrapper::chain' Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'->'          Name.Function
+'\n    '      Text.Whitespace
+'this'        Keyword
+'.'           Punctuation
+'_chain'      Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'true'        Keyword.Constant
+'\n    '      Text.Whitespace
+'this'        Keyword
+'\n\n\n  '    Text.Whitespace
+'# Extracts the result from a wrapped and chained object.' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'wrapper::value' Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'->'          Name.Function
+' '           Text.Whitespace
+'this'        Keyword
+'.'           Punctuation
+'_wrapped'    Name.Other
+'\n'          Text.Whitespace

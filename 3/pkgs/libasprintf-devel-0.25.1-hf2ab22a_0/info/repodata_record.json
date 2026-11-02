@@ -1,0 +1,23 @@
+{
+  "arch": "x86_64",
+  "build": "hf2ab22a_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.28,<3.0.a0",
+    "libasprintf 0.25.1 hf2ab22a_0",
+    "libgcc >=14"
+  ],
+  "fn": "libasprintf-devel-0.25.1-hf2ab22a_0.conda",
+  "license": "LGPL-2.1-or-later",
+  "md5": "114f7a7ae6d01b7f5d568439769857f7",
+  "name": "libasprintf-devel",
+  "platform": "linux",
+  "sha256": "a2652c79b33be9f2d2ea0a98dbb5f0b63b16598b4b16600f15f89d98655a1a6f",
+  "size": 33684,
+  "subdir": "linux-64",
+  "timestamp": 1772045249000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/libasprintf-devel-0.25.1-hf2ab22a_0.conda",
+  "version": "0.25.1"
+}

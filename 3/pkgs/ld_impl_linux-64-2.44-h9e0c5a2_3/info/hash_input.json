@@ -1,0 +1,12 @@
+{
+  "cxx_compiler_version": "14.3.0",
+  "c_stdlib": "sysroot",
+  "triplet": "x86_64-conda-linux-gnu",
+  "target_platform": "linux-64",
+  "channel_targets": "defaults",
+  "cross_target_platform": "linux-64",
+  "cxx_compiler": "gcc_bootstrap",
+  "ctng_vendor": "conda",
+  "c_stdlib_version": "2.28",
+  "__glibc": "__glibc >=2.28,<3.0.a0"
+}

@@ -1,0 +1,87 @@
+# This file created by conda-build 26.3.0
+# meta.yaml template originally from:
+# /home/task_178173107304744/conda-package-streaming-feedstock/recipe, last modified Wed Jun 17 21:19:59 2026
+# ------------------------------------------------
+
+package:
+  name: conda-package-streaming
+  version: 0.13.0
+source:
+  url: https://github.com/conda/conda-package-streaming/archive/refs/tags/v0.13.0.tar.gz
+  sha256: a58868bedb6231485008c6fef0326900cd6fab51b6ed9942457100836c5c8588
+build:
+  number: '0'
+  script: /home/task_178173107304744/croot/conda-package-streaming_1781731221551/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/bin/python
+    -m pip install --no-deps --no-build-isolation . -vv
+  string: py314h06a4308_0
+requirements:
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 52_gnu
+    - bzip2 1.0.8 h5eee18b_6
+    - ca-certificates 2026.5.14 h06a4308_0
+    - flit-core 3.12.0 py314hee27c6d_2
+    - ld_impl_linux-64 2.44 h9e0c5a2_3
+    - libexpat 2.8.1 h7354ed3_0
+    - libffi 3.4.8 h06d3fd0_3
+    - libgcc 15.2.0 h69a1729_8
+    - libgcc-ng 15.2.0 h166f726_8
+    - libmpdec 4.0.1 h47b2149_0
+    - libstdcxx 15.2.0 h39759b7_8
+    - libstdcxx-ng 15.2.0 hc03a8fd_8
+    - libuuid 1.41.5 h5eee18b_0
+    - libxcb 1.17.0 h9b100fa_0
+    - libzlib 1.3.2 h47b2149_0
+    - lz4-c 1.9.4 h6a678d5_1
+    - ncurses 6.5 h7934f7d_0
+    - openssl 3.5.7 h1b28b03_0
+    - pip 26.1.1 pyh0d26453_1
+    - pthread-stubs 0.3 h0ce48e5_1
+    - python 3.14.5 h4bdf6f9_100_cp314
+    - python_abi 3.14 2_cp314
+    - readline 8.3 hc2a1206_0
+    - sqlite 3.53.2 h795bf6d_0
+    - tk 8.6.15 h54e0aa7_0
+    - tzdata 2026b he532380_0
+    - xorg-libx11 1.8.12 h9b100fa_1
+    - xorg-libxau 1.0.12 h9b100fa_0
+    - xorg-libxdmcp 1.1.5 h9b100fa_0
+    - xorg-xorgproto 2024.1 h5eee18b_1
+    - xz 5.8.2 h448239c_0
+    - zlib 1.3.2 h47b2149_0
+    - zstd 1.5.7 h11fc155_0
+  run:
+    - python >=3.14,<3.15.0a0
+    - python_abi 3.14.* *_cp314
+    - requests
+test:
+  imports:
+    - conda_package_streaming
+    - conda_package_streaming.url
+  requires:
+    - pip
+  commands:
+    - pip check
+about:
+  home: https://github.com/conda/conda-package-streaming
+  summary: An efficient library to read from new and old format .conda and .tar.bz2
+    conda packages.
+  description: 'An efficient library to read from new and old format .conda and .tar.bz2
+    conda packages.
+
+    '
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
+  doc_url: https://conda.github.io/conda-package-streaming/
+  dev_url: https://github.com/conda/conda-package-streaming
+extra:
+  recipe-maintainers:
+    - dholth
+  final: true
+  copy_test_source_files: true
+  remote_url: https://github.com/AnacondaRecipes/conda-package-streaming-feedstock
+  sha: d5b3da85213306b45113936a04bd687fa74c42df
+  task_id: au9cEJKBQjqnEh5Zfqdytw
+  task_run_id: '0'
+  pbp_graph_uuid: 9bee6b79-1f21-4998-a1de-3e32466610c9

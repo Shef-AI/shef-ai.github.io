@@ -1,0 +1,15 @@
+# mdb_drop.c is new in 1.0.0; extends the same getopt.h fix that
+# getopt_win.patch applies to mdb_dump.c/mdb_load.c/mdb_stat.c.
+diff --git a/libraries/liblmdb/mdb_drop.c b/libraries/liblmdb/mdb_drop.c
+index 8a1b2c3..d4e5f6a 100644
+--- a/libraries/liblmdb/mdb_drop.c
++++ b/libraries/liblmdb/mdb_drop.c
+@@ -16,7 +16,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <ctype.h>
+-#include <unistd.h>
++#include <getopt.h>
+ #include <signal.h>
+ #include "lmdb.h"
+

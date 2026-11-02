@@ -1,0 +1,68 @@
+{% set build_num = 5 %}
+{% if python_impl_version is not defined %}
+{% set python_impl_version = "3.8" %}
+{% endif %}
+
+{% if python_version is not defined %}
+{% set python_version = "3.8" %}
+{% endif %}
+
+{% set python_minor = python_version.split(".")[1]|int %}
+
+package:
+  name: python_abi
+  version: {{ python_version }}
+
+build:
+  number: {{ build_num }}
+  string: {{ build_num }}_{{ python_abi_tag }}
+  track_features:
+    - pypy                # [python_implementation == "pypy"]
+    - native_graalpy      # [python_implementation == "graalpy"]
+    - freethreading      # [python_implementation == "cpython" and python_abi_tag.endswith("t")]
+  # force_ignore_keys required for PBP. Ignore aggregate python zip_keys (numpy /
+  # is_freethreading / is_python_min) so this matrix does not collide.
+  force_ignore_keys:
+    - python
+    - numpy
+    - is_freethreading
+    - is_python_min
+
+requirements:
+  run_constrained:
+    {% if python_minor >= 13 %}
+    - python {{ python_version }}.* *_{{ python_abi_tag }}                                         # [python_implementation == "cpython"]
+    {% else %}
+    # anaconda's python interpreters prior to 3.13 only have build numbers, and conda-forge's interpreters use suffix _cpython
+    # What we want is:
+    # - python {{ python_version }}.* ^.*_(cpython|\d+)$ # [python_implementation == "cpython"]
+    # However, conda does not handle well OR operators in build strings.
+    # Also, rattler does not handle lookahead in build strings.
+    # So the best we can do is to avoid regexes.
+
+    # This is a catch-all for all python builds
+    # As far as I am aware, the only other python builds are graalpy and pypy.
+    # These were built with dependencies on other variants of python_abi, so they wouldn't be picked up by this.
+    - python {{ python_version }}.*                                                                # [python_implementation == "cpython"]
+    {% endif %}
+    - python {{ python_version }}.* *_{{ python_impl_version.replace('.', '') }}_pypy              # [python_implementation == "pypy"]
+    - python {{ python_version }}.* *_native{{ python_impl_version.replace('.', '') }}_graalpy     # [python_implementation == "graalpy"]
+
+test:
+  commands:
+    - echo "hello"
+
+about:
+  home: https://github.com/conda-forge/python_abi-feedstock
+  summary: Metapackage to select python implementation
+  description: Metapackage to select python implementation
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
+  dev_url: https://github.com/conda-forge/python_abi-feedstock
+  doc_url: https://github.com/conda-forge/python_abi-feedstock
+
+extra:
+  recipe-maintainers:
+    - chrisburr
+    - isuruf

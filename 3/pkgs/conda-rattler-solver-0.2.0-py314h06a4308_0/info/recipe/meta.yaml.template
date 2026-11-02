@@ -1,0 +1,99 @@
+{% set name = "conda-rattler-solver" %}
+{% set version = "0.2.0" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://github.com/conda/{{ name }}/archive/{{ version }}.tar.gz
+  sha256: 3276b7a8cd63dfa64822c75e99e318b10f7e5a02ffb6c26cf5ab7db2b470562e
+
+build:
+  number: 0
+  skip: true  # [py<310]
+  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
+
+requirements:
+  host:
+    - pip
+    - python
+    - hatchling
+    - hatch-vcs
+  run:
+    - python
+    - conda >=26.7.0
+    - py-rattler >=0.26.0,<0.27.0a0
+
+{% set deselect_tests = "" %}
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_channels.py::test_conda_build_with_aliased_channels" %}
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_downstream.py::test_build_recipe" %}
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_downstream.py::test_conda_lock" %}
+# Tests hang on these ones
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_performance.py::test_install_vaex_from_conda_forge_and_defaults" %}
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_solver_differences.py::test_gpu_cpu_mutexes" %}  # [linux]
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_solver_differences.py::test_old_panel" %}  # [linux]
+# FileNotFoundError: [Errno 2] No such file or directory: '$PREFIX/lib/python3.11/site-packages/tests/data/index.json'
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_solver.py::TestRattlerSolver::test_empty" %}
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_solver.py::TestRattlerSolver::test_anaconda_nomkl" %}
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_solver.py::TestRattlerSolver::test_unsat_from_r1" %}
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_solver.py::TestRattlerSolver::test_get_dists" %}
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_solver.py::TestRattlerSolver::test_timestamps_and_deps" %}
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_solver.py::TestRattlerSolver::test_nonexistent_deps" %}
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_solver.py::TestRattlerSolver::test_install_package_with_feature" %}
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_solver.py::TestRattlerSolver::test_circular_dependencies" %}
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_solver.py::TestRattlerSolver::test_irrational_version" %}
+# AssertionError
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_solver.py::test_too_aggressive_update_to_conda_forge_packages" %}  # [linux]
+# LibMambaUnsatisfiableError: Encountered problems while solving: package pandas-1.2.5-py37h295c915_0 is excluded by strict repo priority
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_solver.py::test_pinned_with_cli_build_string " %}  # [linux64]
+# RattlerUnsatisfiableError: Cannot solve the request because of: The following packages are incompatible - python_abi 3.6 | 3.7
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_solve_comparison_benchmarks.py::test_solve_update_all_large_lockfile" %}
+# Unavailable packages on the win-arm64 channel
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_channels.py::test_channel_matchspec" %}  # [win and arm64]
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_repoquery.py::test_query_search" %}  # [win and arm64]
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_solver.py::test_determinism" %}  # [win and arm64]
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_solver.py::test_constraining_pin_and_requested" %}  # [win and arm64]
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_solver.py::test_ca_certificates_pins" %}  # [win and arm64]
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_solver.py::test_python_update_should_not_uninstall_history" %}  # [win and arm64]
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_solver.py::test_python_downgrade_with_pins_removes_truststore" %}  # [win and arm64]
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_solver.py::test_urls_are_percent_decoded" %}  # [win and arm64]
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_solver.py::test_prune_existing_env_dependencies_are_solved" %}  # [win and arm64]
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_solver.py::test_python_does_not_change_unless_wanted" %}  # [win and arm64]
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_solver.py::test_python_downgrade_reinstalls_noarch_packages" %}  # [win and arm64]
+
+test:
+  source_files:
+    - tests
+    - pyproject.toml
+  imports:
+    - conda_rattler_solver.solver
+  requires:
+    - pip
+    - pytest
+    - pytest-xprocess
+    - pytest-benchmark
+    - conda-index
+  commands:
+    - pip check
+    - python -m conda create --dry-run python --solver=rattler
+    - pytest -vv tests {{ deselect_tests }}
+
+about:
+  home: https://github.com/conda/conda-rattler-solver
+  summary: The fast pixi solver, now in conda
+  description: |
+    If conda-libmamba-solver brought the mamba solver to conda, conda-rattler-solver tries to
+    integrate the pixi solver (called resolvo, as provided in rattler) in conda.
+    Environments solve meaningfully faster with Rattler, especially large or complex ones, and
+    your existing environments and workflows keep working.
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
+  dev_url: https://github.com/conda/conda-rattler-solver
+  doc_url: https://github.com/conda/conda-rattler-solver/blob/main/README.md
+
+extra:
+  recipe-maintainers:
+    - danyeaw
+    - jaimergp

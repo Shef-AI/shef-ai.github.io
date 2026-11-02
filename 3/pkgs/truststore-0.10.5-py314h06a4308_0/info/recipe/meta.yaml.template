@@ -1,0 +1,68 @@
+{% set name = "truststore" %}
+{% set version = "0.10.5" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://github.com/sethmlarson/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
+  fn: {{ name }}-{{ version }}.tar.gz
+  sha256: de09d73aacfab4e179e65fb07826f57f2f5ca5f1d00cdf1a3cadbb4bc036f853
+
+build:
+  skip: true  # [py<310]
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 0
+
+requirements:
+  host:
+    - python
+    - pip
+    - flit-core >=3.11,<4
+  run:
+    - python
+
+test:
+  requires:
+    - pip
+    - aiohttp
+    - pyopenssl
+    - pytest
+    - pytest-asyncio
+    - pytest-httpserver
+    - urllib3
+    - trustme
+    - requests
+    - flaky
+    - httpx
+  imports:
+    - truststore
+  source_files:
+    - tests
+  commands:
+    - pip check
+    # @internet is not registered here, so marked tests still run.
+    # Skip live-network PBP flakes, not truststore logic: inject (1.1.1.1 404);
+    # test_minimum_maximum_version (howsmyssl DNS); superfish, test_check_hostname_false,
+    # and test_sslcontext_api_failures_async (badssl.com connection reset).
+    # test_failures is not a substring of test_sslcontext_api_failures_async.
+    - pytest -k "not (test_failures or test_failure_after_loading_additional_anchors or test_success_with_inject or test_minimum_maximum_version or superfish or test_check_hostname_false or test_sslcontext_api_failures_async)" tests/  # [win]
+    - pytest -k 'not (test_failures or test_failure_after_loading_additional_anchors or test_success_with_inject or test_minimum_maximum_version or test_check_hostname_false or test_sslcontext_api_failures_async)' tests/  # [unix]
+
+about:
+  home: https://github.com/sethmlarson/truststore
+  summary: Verify certificates using native system trust stores
+  description: |
+    A library which exposes native system certificate stores (ie "trust stores")
+    through an ssl.SSLContext-like API. This means that Python applications no
+    longer need to rely on certifi as a root certificate store.
+  license: MIT
+  license_file: LICENSE
+  license_family: MIT
+  doc_url: https://truststore.readthedocs.io
+  dev_url: https://github.com/sethmlarson/truststore
+
+extra:
+  recipe-maintainers:
+    - conda-forge/truststore

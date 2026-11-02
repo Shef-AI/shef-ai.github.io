@@ -1,0 +1,50 @@
+{
+  "name": "pthread-stubs",
+  "version": "0.3",
+  "build": "h47b2149_2",
+  "build_number": 2,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "subdir": "linux-64",
+  "fn": "pthread-stubs-0.3-h47b2149_2.conda",
+  "md5": "bcec658a2b5d21bbb5bf97c4548a7cf3",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/pthread-stubs-0.3-h47b2149_2.conda",
+  "sha256": "f9ccf45615a75712116b79a4b02fbc69e681b4e82d65a0dd11430fac3244623c",
+  "arch": "x86_64",
+  "platform": "linux",
+  "depends": [
+    "__glibc >=2.28,<3.0.a0",
+    "libgcc >=14"
+  ],
+  "constrains": [],
+  "license": "MIT",
+  "license_family": "MIT",
+  "timestamp": 1784896794000,
+  "size": 7522,
+  "requested_spec": "https://repo.anaconda.com/pkgs/main/linux-64::pthread-stubs==0.3=h47b2149_2",
+  "package_tarball_full_path": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/pthread-stubs-0.3-h47b2149_2.conda",
+  "extracted_package_dir": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/pthread-stubs-0.3-h47b2149_2",
+  "files": [
+    "lib/pkgconfig/pthread-stubs.pc"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/pkgconfig/pthread-stubs.pc",
+        "prefix_placeholder": "/home/task_IvKTYlU4Sf-Bz_0/croot/pthread-stubs_1784896770088/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho",
+        "file_mode": "text",
+        "path_type": "hardlink",
+        "sha256": "1a22f4ed8316c96eecdd789f5ee4d73efa64cdfdc8e4926420a7fef52d484674",
+        "size_in_bytes": 420,
+        "sha256_in_prefix": "0afd607edf2a277a0141021314f037d29a9046ebcf027144338920f3daee8799"
+      }
+    ]
+  },
+  "link": {
+    "source": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/pthread-stubs-0.3-h47b2149_2",
+    "type": 1
+  },
+  "requested_specs": [
+    "https://repo.anaconda.com/pkgs/main/linux-64::pthread-stubs==0.3=h47b2149_2"
+  ]
+}

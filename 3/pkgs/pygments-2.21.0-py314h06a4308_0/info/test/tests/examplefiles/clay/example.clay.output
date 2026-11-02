@@ -1,0 +1,269 @@
+'\x0c\n'      Text.Whitespace
+
+'/// @section  StringLiteralRef ' Comment.Single
+'\n\n'        Text.Whitespace
+
+'record'      Keyword
+' '           Text.Whitespace
+'StringLiteralRef' Name
+' '           Text.Whitespace
+'('           Punctuation
+'\n    '      Text.Whitespace
+'sizep'       Name
+' '           Text.Whitespace
+':'           Operator
+' '           Text.Whitespace
+'Pointer'     Name
+'['           Punctuation
+'SizeT'       Name
+']'           Punctuation
+','           Punctuation
+'\n'          Text.Whitespace
+
+')'           Punctuation
+';'           Punctuation
+'\n\n\x0c\n'  Text.Whitespace
+
+'/// @section  predicates ' Comment.Single
+'\n\n'        Text.Whitespace
+
+'overload'    Keyword
+' '           Text.Whitespace
+'ContiguousSequence?' Name
+'('           Punctuation
+'#'           Punctuation
+'StringLiteralRef' Name
+')'           Punctuation
+' '           Text.Whitespace
+':'           Operator
+' '           Text.Whitespace
+'Bool'        Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'true'        Keyword
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'['           Punctuation
+'s'           Name
+' '           Text.Whitespace
+'when'        Keyword
+' '           Text.Whitespace
+'StringLiteral?' Name
+'('           Punctuation
+'s'           Name
+')'           Punctuation
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'overload'    Keyword
+' '           Text.Whitespace
+'ContiguousSequence?' Name
+'('           Punctuation
+'#'           Punctuation
+'Static'      Name
+'['           Punctuation
+'s'           Name
+']'           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+':'           Operator
+' '           Text.Whitespace
+'Bool'        Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'true'        Keyword
+';'           Punctuation
+'\n\n\n\x0c\n' Text.Whitespace
+
+'/// @section  size, begin, end, index ' Comment.Single
+'\n\n'        Text.Whitespace
+
+'forceinline' Keyword
+' '           Text.Whitespace
+'overload'    Keyword
+' '           Text.Whitespace
+'size'        Name
+'('           Punctuation
+'a'           Name
+':'           Operator
+'StringLiteralRef' Name
+')'           Punctuation
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'a'           Name
+'.'           Punctuation
+'sizep'       Name
+'^'           Operator
+';'           Punctuation
+'\n\n'        Text.Whitespace
+
+'forceinline' Keyword
+' '           Text.Whitespace
+'overload'    Keyword
+' '           Text.Whitespace
+'begin'       Name
+'('           Punctuation
+'a'           Name
+':'           Operator
+'StringLiteralRef' Name
+')'           Punctuation
+' '           Text.Whitespace
+':'           Operator
+' '           Text.Whitespace
+'Pointer'     Name
+'['           Punctuation
+'Char'        Name
+']'           Punctuation
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'Pointer'     Name
+'['           Punctuation
+'Char'        Name
+']'           Punctuation
+'('           Punctuation
+'a'           Name
+'.'           Punctuation
+'sizep'       Name
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+'1'           Literal.Number.Integer
+')'           Punctuation
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'forceinline' Keyword
+' '           Text.Whitespace
+'overload'    Keyword
+' '           Text.Whitespace
+'end'         Name
+'('           Punctuation
+'a'           Name
+':'           Operator
+'StringLiteralRef' Name
+')'           Punctuation
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'begin'       Name
+'('           Punctuation
+'a'           Name
+')'           Punctuation
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+'size'        Name
+'('           Punctuation
+'a'           Name
+')'           Punctuation
+';'           Punctuation
+'\n\n'        Text.Whitespace
+
+'['           Punctuation
+'I'           Name
+' '           Text.Whitespace
+'when'        Keyword
+' '           Text.Whitespace
+'Integer?'    Name
+'('           Punctuation
+'I'           Name
+')'           Punctuation
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'forceinline' Keyword
+' '           Text.Whitespace
+'overload'    Keyword
+' '           Text.Whitespace
+'index'       Name
+'('           Punctuation
+'a'           Name
+':'           Operator
+'StringLiteralRef' Name
+','           Punctuation
+' '           Text.Whitespace
+'i'           Name
+':'           Operator
+'I'           Name
+')'           Punctuation
+' '           Text.Whitespace
+':'           Operator
+' '           Text.Whitespace
+'ByRef'       Name
+'['           Punctuation
+'Char'        Name
+']'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n    '      Text.Whitespace
+'assert'      Name
+'['           Punctuation
+'"'           Literal.String
+'boundsChecks' Literal.String
+'"'           Literal.String
+']'           Punctuation
+'('           Punctuation
+'i'           Name
+' '           Text.Whitespace
+'>'           Operator
+'='           Operator
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+' '           Text.Whitespace
+'and'         Keyword
+' '           Text.Whitespace
+'i'           Name
+' '           Text.Whitespace
+'<'           Operator
+' '           Text.Whitespace
+'size'        Name
+'('           Punctuation
+'a'           Name
+')'           Punctuation
+','           Punctuation
+' '           Text.Whitespace
+'"'           Literal.String
+'StringLiteralRef index out of bounds' Literal.String
+'"'           Literal.String
+')'           Punctuation
+';'           Punctuation
+'\n    '      Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'ref'         Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'begin'       Name
+'('           Punctuation
+'a'           Name
+')'           Punctuation
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+'i'           Name
+')'           Punctuation
+'^'           Operator
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n\n'        Text.Whitespace
+
+'foo'         Name
+'('           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'"""'         Literal.String
+'\nlong'      Literal.String
+'\\t'         Literal.String.Escape
+'long\nstory\n' Literal.String
+
+'"""'         Literal.String
+'\n'          Text.Whitespace

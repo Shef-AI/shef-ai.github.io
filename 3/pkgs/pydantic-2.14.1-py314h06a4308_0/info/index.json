@@ -1,0 +1,23 @@
+{
+  "arch": "x86_64",
+  "build": "py314h06a4308_0",
+  "build_number": 0,
+  "constrains": [
+    "email-validator >=2.0.0"
+  ],
+  "depends": [
+    "annotated-types >=0.6.0",
+    "pydantic-core 2.50.1",
+    "python >=3.14,<3.15.0a0",
+    "python_abi 3.14.* *_cp314",
+    "typing-inspection >=0.4.4",
+    "typing_extensions >=4.16.0"
+  ],
+  "license": "MIT",
+  "license_family": "MIT",
+  "name": "pydantic",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1792505750680,
+  "version": "2.14.1"
+}

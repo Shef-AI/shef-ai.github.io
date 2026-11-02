@@ -1,0 +1,36 @@
+'window'      Name.Builtin
+'.'           Punctuation
+'foo'         Name.Other
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'{'           Punctuation
+'\n'          Text.Whitespace
+
+'#'           Comment.Preproc
+'if'          Comment.Preproc
+' '           Text
+'defined'     Keyword
+'('           Punctuation
+'__foo__'     Name.Variable
+')'           Punctuation
+'\n'          Text
+
+'  '          Text.Whitespace
+"'key'"       Literal.String.Single
+':'           Operator
+' '           Text.Whitespace
+"'value'"     Literal.String.Single
+'\n'          Text.Whitespace
+
+'#'           Comment.Preproc
+'endif'       Comment.Preproc
+'\n'          Text
+
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'#'           Comment.Preproc
+'literal'     Comment.Preproc
+' #foo'       Text
+'\n'          Text.Whitespace

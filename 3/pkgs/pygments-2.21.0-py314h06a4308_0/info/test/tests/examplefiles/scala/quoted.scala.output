@@ -1,0 +1,13 @@
+"'{"          Punctuation
+' '           Text.Whitespace
+'2'           Literal.Number.Integer
+' '           Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+"'["          Punctuation
+' '           Text.Whitespace
+'String'      Name.Class
+' '           Text.Whitespace
+']'           Punctuation
+'\n'          Text.Whitespace

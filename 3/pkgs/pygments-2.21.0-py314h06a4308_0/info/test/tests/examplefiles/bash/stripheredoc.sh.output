@@ -1,0 +1,4 @@
+'cat'         Text
+' '           Text.Whitespace
+'<<-EOF\n  Hello world $PATH\n  EOF' Literal.String
+'\n'          Text.Whitespace

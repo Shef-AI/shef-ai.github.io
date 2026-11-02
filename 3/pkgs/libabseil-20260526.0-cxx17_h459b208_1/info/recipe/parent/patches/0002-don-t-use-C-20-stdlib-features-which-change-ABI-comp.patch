@@ -1,0 +1,23 @@
+From e7640aa9130977071ec525e6dfc764b54cb52cb5 Mon Sep 17 00:00:00 2001
+From: "H. Vetinari" <h.vetinari@gmx.com>
+Date: Wed, 7 Feb 2024 17:07:42 +0100
+Subject: [PATCH 2/3] don't use C++20 stdlib-features which change ABI compared
+ to C++17 baseline
+
+---
+ CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 1e7c8563..fb0a9c56 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -220,7 +220,7 @@ if(ABSL_ENABLE_INSTALL)
+     foreach(FEATURE "ORDERING")
+       string(REPLACE
+       "#define ABSL_OPTION_USE_STD_${FEATURE} 2"
+-      "#define ABSL_OPTION_USE_STD_${FEATURE} 1"
++      "#define ABSL_OPTION_USE_STD_${FEATURE} 0"
+       ABSL_INTERNAL_OPTIONS_H_PINNED
+       "${ABSL_INTERNAL_OPTIONS_H_CONTENTS}")
+       set(ABSL_INTERNAL_OPTIONS_H_CONTENTS "${ABSL_INTERNAL_OPTIONS_H_PINNED}")

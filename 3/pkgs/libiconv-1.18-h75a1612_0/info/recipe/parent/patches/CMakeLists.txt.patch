@@ -1,0 +1,69 @@
+--- /dev/null
++++ CMakeLists.txt
+@@ -0,0 +1,66 @@
++# Copyright (C) 2007-2012 LuaDist.
++# Created by Peter Drahoš
++# Redistribution and use of this file is allowed according to the terms of the MIT license.
++# For details see the COPYRIGHT file distributed with LuaDist.
++# Please note that the package source code is licensed under its own license.
++
++project(libiconv C)
++cmake_minimum_required(VERSION 3.4)
++include(configure.cmake)
++
++# Options
++option(ENABLE_EXTRA "Enable a few rarely used encodings" OFF)
++option(ENABLE_NLS "Translation of program messages to the user's native language is requested" OFF)
++
++# iconv.h
++set(USE_MBSTATE_T 1)
++set(BROKEN_WCHAR_H 0)
++set(HAVE_WCHAR_T 0)
++
++configure_file(config.h.cmake ${CMAKE_CURRENT_SOURCE_DIR}/config.h)
++configure_file(include/iconv.h.build.in ${CMAKE_CURRENT_SOURCE_DIR}/include/iconv.h)
++configure_file(libcharset/include/libcharset.h.build.in ${CMAKE_CURRENT_SOURCE_DIR}/include/libcharset.h)
++configure_file(srclib/uniwidth.in.h ${CMAKE_CURRENT_SOURCE_DIR}/srclib/uniwidth.h)
++configure_file(srclib/unitypes.in.h ${CMAKE_CURRENT_SOURCE_DIR}/srclib/unitypes.h)
++
++# Dirty fix for MinGW
++if (MINGW)
++  add_definitions(-DELOOP=0 -DHAVE_DECL_STRERROR_R=0)
++  configure_file(srclib/alloca.in.h ${CMAKE_CURRENT_SOURCE_DIR}/srclib/alloca.h)
++endif ()
++
++include_directories(${CMAKE_CURRENT_SOURCE_DIR} include srclib)
++add_definitions(-DHAVE_CONFIG_H)
++
++# libcharset
++set(SRC_LIBCHARSET
++  libcharset/lib/localcharset.c
++  libcharset/lib/relocatable-stub.c
++)
++
++add_library(charset SHARED ${SRC_LIBCHARSET})
++set_target_properties(charset PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
++target_compile_definitions(charset PRIVATE BUILDING_LIBCHARSET)
++
++# libiconv
++set(SRC_LIBICONV
++  lib/iconv.c
++  lib/compat.c
++)
++
++add_library(iconv SHARED ${SRC_LIBICONV})
++target_link_libraries(iconv charset)
++set_target_properties(iconv PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
++target_compile_definitions(iconv PRIVATE BUILDING_LIBICONV ENABLE_EXTRA=1)
++
++# removed exe since it requires safe_read which doesn't work with MSVC
++#add_executable(iconvcli src/iconv_no_i18n.c)
++#target_link_libraries(iconvcli iconv icrt charset)
++#set_target_properties(iconvcli PROPERTIES RUNTIME_OUTPUT_NAME iconv)
++
++install(TARGETS iconv charset #iconvcli
++  RUNTIME DESTINATION bin
++  LIBRARY DESTINATION lib
++  ARCHIVE DESTINATION lib)
++
++install(FILES include/iconv.h include/libcharset.h srclib/localcharset.h DESTINATION include)

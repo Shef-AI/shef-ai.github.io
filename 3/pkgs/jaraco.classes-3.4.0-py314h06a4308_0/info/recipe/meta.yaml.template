@@ -1,0 +1,59 @@
+{% set name = "jaraco.classes" %}
+{% set version = "3.4.0" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 47a024b51d0239c0dd8c8540c6c7f484be3b8fcf0b2d85c13825780d3b3f3acd
+
+build:
+  number: 0
+  skip: True  # [py<38]
+  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation --ignore-installed --no-cache-dir -vv
+
+requirements:
+  host:
+    - python
+    - setuptools >=56
+    - setuptools-scm >=3.4.1
+    - pip
+  run:
+    - python
+    - more-itertools
+
+test:
+  imports:
+    - jaraco
+    - jaraco.classes
+    - jaraco.classes.ancestry
+    - jaraco.classes.meta
+    - jaraco.classes.properties
+  files:
+    - test_jaraco_classes.py
+  requires:
+    - pip
+    - pytest
+  commands:
+    - pip check
+    - python -c "import jaraco.classes.properties as p; assert hasattr(p, 'NonDataProperty')"
+    - pytest -v --color=yes test_jaraco_classes.py
+
+about:
+  home: https://github.com/jaraco/jaraco.classes
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: Utility functions for Python class constructs
+  description: |
+    jaraco.classes provides additional routines for obtaining the class names of an object and its parent classes,
+    some useful metaclasses and methods for class properties
+  dev_url: https://github.com/jaraco/jaraco.classes
+  doc_url: https://jaracoclasses.readthedocs.io
+
+extra:
+  recipe-maintainers:
+    - pmlandwehr
+    - carlodri

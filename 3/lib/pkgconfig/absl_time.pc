@@ -1,0 +1,12 @@
+prefix=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3
+exec_prefix=${prefix}
+libdir=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/lib
+includedir=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/include
+
+Name: absl_time
+Description: Abseil time library
+URL: https://abseil.io/
+Version: 20260526
+Requires: absl_base = 20260526, absl_civil_time = 20260526, absl_core_headers = 20260526, absl_int128 = 20260526, absl_raw_logging_internal = 20260526, absl_strings = 20260526, absl_time_zone = 20260526
+Libs: -L${libdir}  -labsl_time 
+Cflags: -I${includedir} -DNOMINMAX

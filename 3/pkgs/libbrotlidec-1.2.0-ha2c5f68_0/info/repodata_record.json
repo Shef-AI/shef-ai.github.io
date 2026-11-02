@@ -1,0 +1,24 @@
+{
+  "arch": "x86_64",
+  "build": "ha2c5f68_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.28,<3.0.a0",
+    "libbrotlicommon 1.2.0 h32cd6e7_0",
+    "libgcc-ng >=11.2.0"
+  ],
+  "fn": "libbrotlidec-1.2.0-ha2c5f68_0.conda",
+  "license": "MIT",
+  "license_family": "MIT",
+  "md5": "7cad8348df1c96bf2f0a697806d1b3b5",
+  "name": "libbrotlidec",
+  "platform": "linux",
+  "sha256": "475bcf1824c93184cd4f2091481a5e6da5d593c5fc466a53c449e14aa30e850d",
+  "size": 33634,
+  "subdir": "linux-64",
+  "timestamp": 1762363575000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/libbrotlidec-1.2.0-ha2c5f68_0.conda",
+  "version": "1.2.0"
+}

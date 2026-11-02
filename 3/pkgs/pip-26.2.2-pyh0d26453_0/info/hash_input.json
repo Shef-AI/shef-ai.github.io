@@ -1,0 +1,4 @@
+{
+  "channel_targets": "defaults",
+  "with_setuptools_wheel": "false"
+}

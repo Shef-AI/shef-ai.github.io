@@ -1,0 +1,12 @@
+prefix=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3
+exec_prefix=${prefix}
+libdir=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/lib
+includedir=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/include
+
+Name: absl_random_internal_randen_engine
+Description: Abseil random_internal_randen_engine library
+URL: https://abseil.io/
+Version: 20260526
+Requires: absl_endian = 20260526, absl_random_internal_iostream_state_saver = 20260526, absl_random_internal_randen = 20260526, absl_raw_logging_internal = 20260526, absl_type_traits = 20260526
+Libs: -L${libdir}  
+Cflags: -I${includedir} -DNOMINMAX

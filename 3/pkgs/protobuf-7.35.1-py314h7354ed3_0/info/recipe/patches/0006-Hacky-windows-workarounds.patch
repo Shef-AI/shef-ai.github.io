@@ -1,0 +1,65 @@
+From 7bde030bcc72ce577862937dfaf2cf7d7eb941d1 Mon Sep 17 00:00:00 2001
+From: "Uwe L. Korn" <uwe.korn@quantco.com>
+Date: Wed, 18 Sep 2024 11:54:27 +0200
+Subject: [PATCH 06/10] Hacky windows workarounds
+
+---
+ python/dist/system_python.bzl | 6 +++---
+ python/message.c              | 2 +-
+ python/protobuf.c             | 2 +-
+ 3 files changed, 5 insertions(+), 5 deletions(-)
+
+diff --git a/python/dist/system_python.bzl b/python/dist/system_python.bzl
+index 232085f591..f0358eb36d 100644
+--- a/python/dist/system_python.bzl
++++ b/python/dist/system_python.bzl
+@@ -159,12 +159,12 @@ def register_system_python():
+ 
+ def _get_python_version(repository_ctx):
+     py_program = "import sys; print(str(sys.version_info.major) + '.' + str(sys.version_info.minor) + '.' + str(sys.version_info.micro))"
+-    result = repository_ctx.execute(["python3", "-c", py_program])
++    result = repository_ctx.execute(["PYTHON_EXE", "-c", py_program])
+     return (result.stdout).strip().split(".")
+ 
+ def _get_python_path(repository_ctx):
+     py_program = "import sysconfig; print(sysconfig.get_config_var('%s'), end='')"
+-    result = repository_ctx.execute(["python3", "-c", py_program % ("INCLUDEPY")])
++    result = repository_ctx.execute(["PYTHON_EXE", "-c", py_program % ("INCLUDEPY")])
+     if result.return_code != 0:
+         return None
+     return result.stdout
+@@ -219,7 +219,7 @@ def _populate_empty_package(ctx):
+ 
+ def _system_python_impl(repository_ctx):
+     path = _get_python_path(repository_ctx)
+-    python3 = repository_ctx.which("python3")
++    python3 = "PYTHON_EXE"
+     python_version = _get_python_version(repository_ctx)
+ 
+     if path and python_version[0] == "3":
+diff --git a/python/message.c b/python/message.c
+index 0497d394fa..e71aa3ca06 100644
+--- a/python/message.c
++++ b/python/message.c
+@@ -1036,7 +1036,7 @@ int PyUpb_Message_GetVersion(PyObject* _self) {
+  * Attribute lookup must find both message fields and base class methods like
+  * msg.SerializeToString().
+  */
+-__attribute__((flatten)) static PyObject* PyUpb_Message_GetAttr(
++static PyObject* PyUpb_Message_GetAttr(
+     PyObject* _self, PyObject* attr) {
+   PyUpb_Message* self = (void*)_self;
+ 
+diff --git a/python/protobuf.c b/python/protobuf.c
+index 004fac99eb..4dc7b899d5 100644
+--- a/python/protobuf.c
++++ b/python/protobuf.c
+@@ -491,7 +491,7 @@ bool PyUpb_IndexToRange(PyObject* index, Py_ssize_t size, Py_ssize_t* i,
+ // Module Entry Point
+ // -----------------------------------------------------------------------------
+ 
+-PyMODINIT_FUNC PyInit__message(void) {
++__declspec(dllexport) PyMODINIT_FUNC PyInit__message(void) {
+   PyObject* m = PyModule_Create(&module_def);
+   if (!m) return NULL;
+ 

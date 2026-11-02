@@ -1,0 +1,84 @@
+{% set name = "urllib3" %}
+{% set version = "2.8.0" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 63bf2ead4c879426ebf22ef2a781eeb4aa3b4ae798a0435506f8687fd5bb9b63
+  patches:
+    # E   ModuleNotFoundError: No module named 'quart'
+    - patches/0001-remove-dummyserver-usage-in-tests.patch
+
+build:
+  number: 1
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  skip: true  # [py<310]
+
+requirements:
+  host:
+    - python
+    - pip
+    - hatchling >=1.27.0,<2
+    - hatch-vcs >=0.4.0,<0.6.0
+    - setuptools-scm >=8,<11
+  run:
+    - python
+    # socks
+    - pysocks >=1.5.6,<2.0,!=1.5.7
+    # Using brotlicffi instead of python-brotli on purpose
+    # to avoid breaking user updates on installers.
+    # See: https://github.com/AnacondaRecipes/repodata-hotfixes/pull/349
+    - brotlicffi >=1.2.0
+  run_constrained:
+    - backports.zstd >=1.0.0  # [py<314]
+    # h2
+    - h2 >=4,<5
+
+test:
+  source_files:
+    - dummyserver
+    - test
+  imports:
+    - urllib3
+    - urllib3.contrib
+    - urllib3.util
+    - urllib.parse
+    - urllib3.connection
+    - urllib3.http2
+  commands:
+    - pip check
+    - python -c "from importlib.metadata import version; assert(version('{{ name }}')=='{{ version }}')"
+    # Manually excluded tests which used quart(not in main) and dummyserver(used quart)
+    - cd test && pytest -v test_collections.py test_compatibility.py test_connection.py test_connectionpool.py test_exceptions.py test_fields.py test_filepost.py test_http2_connection.py test_no_ssl.py test_poolmanager.py test_proxymanager.py test_queue_monkeypatch.py test_response.py test_retry.py test_ssl.py test_util.py test_wait.py tz_stub.py
+  requires:
+    - pip
+    - pytest >=8.3.4
+    - trustme >=1.2.1
+    - trio >=0.27.0
+    - h2 >=4,<5
+
+about:
+  home: https://urllib3.readthedocs.io
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE.txt
+  summary: HTTP library with thread-safe connection pooling, file post, and more.
+  description: |
+    urllib3 is a powerful, sanity-friendly HTTP client for Python. Much of the
+    Python ecosystem already uses urllib3. urllib3 brings many critical features
+    that are missing from the Python standard libraries, such as thread safety,
+    connection pooling, client side ssl/tls verification, support for gzip and
+    deflate encodings, HTTP and SOCKS proxy support, helpers for retrying requests
+    and dealing with HTTP redirects.
+  doc_url: https://urllib3.readthedocs.io
+  dev_url: https://github.com/urllib3/urllib3
+
+extra:
+  recipe-maintainers:
+    - pmlandwehr
+    - sigmavirus24
+    - ocefpaf
+    - sethmlarson

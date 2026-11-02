@@ -1,0 +1,199 @@
+from __future__ import annotations
+
+import logging
+import os
+import re
+from pathlib import Path
+
+from unearth.errors import UnpackError
+from unearth.link import Link
+from unearth.utils import add_ssh_scheme_to_git_uri, display_path
+from unearth.vcs.base import HiddenText, VersionControl, vcs_support
+
+logger = logging.getLogger(__name__)
+HASH_REGEX = re.compile("^[a-fA-F0-9]{40}$")
+
+
+def looks_like_hash(sha: str) -> bool:
+    return bool(HASH_REGEX.match(sha))
+
+
+@vcs_support.register
+class Git(VersionControl):
+    name = "git"
+    dir_name = ".git"
+
+    def get_git_version(self) -> tuple[int, ...]:
+        result = self.run_command(["version"], stdout_only=True, log_output=False)
+        output = result.stdout.strip()
+        match = re.match(r"git version (\d+)\.(\d+)(?:\.(\d+))?", output)
+        if not match:
+            raise UnpackError(f"Failed to get git version: {output}")
+        return tuple(int(part) for part in match.groups())
+
+    def fetch_new(
+        self,
+        location: Path,
+        url: HiddenText,
+        rev: str | None,
+        args: list[str | HiddenText],
+    ) -> None:
+        rev_display = f" (revision: {rev})" if rev else ""
+        logger.info("Cloning %s%s to %s", url, rev_display, display_path(location))
+        env = None
+        if self.verbosity <= 0:
+            flags: tuple[str, ...] = ("--quiet",)
+            env = {"GIT_TERMINAL_PROMPT": "0"}
+        elif self.verbosity == 1:
+            flags = ()
+        else:
+            flags = ("--verbose", "--progress")
+        if self.get_git_version() >= (2, 17):
+            # Git added support for partial clone in 2.17
+            # https://git-scm.com/docs/partial-clone
+            # Speeds up cloning by functioning without a complete copy of repository
+            self.run_command(
+                ["clone", "--filter=blob:none", *flags, url, str(location)],
+                extra_env=env,
+            )
+        else:
+            self.run_command(["clone", *flags, url, str(location)], extra_env=env)
+
+        if rev is not None:
+            if self._should_fetch(location, rev):
+                self.run_command(["fetch", "-q", url, rev], cwd=location)
+                revision = self._resolve_revision(location, "FETCH_HEAD")
+            else:
+                revision = self._resolve_revision(location, rev)
+        else:
+            revision = self.get_revision(location)
+        logger.info("Resolved %s to commit %s", url, revision)
+        self.run_command(["reset", "--hard", "-q", revision], cwd=location)
+        self._update_submodules(location)
+
+    def _update_submodules(self, location: Path) -> None:
+        if not location.joinpath(".gitmodules").exists():
+            return
+        self.run_command(
+            ["submodule", "update", "--init", "-q", "--recursive"], cwd=location
+        )
+
+    def _should_fetch(self, dest: Path, rev: str) -> bool:
+        """
+        Return true if rev is a ref or is a commit that we don't have locally.
+
+        Branches and tags are not considered in this method because they are
+        assumed to be always available locally (which is a normal outcome of
+        ``git clone`` and ``git fetch --tags``).
+        """
+        if rev.startswith("refs/"):
+            # Always fetch remote refs.
+            return True
+
+        if not looks_like_hash(rev):
+            # Git fetch would fail with abbreviated commits.
+            return False
+
+        if self.has_commit(dest, rev):
+            # Don't fetch if we have the commit locally.
+            return False
+
+        return True
+
+    def has_commit(self, location: Path, rev: str) -> bool:
+        """
+        Check if rev is a commit that is available in the local repository.
+        """
+        try:
+            self.run_command(
+                ["rev-parse", "-q", "--verify", f"sha^{rev}"],
+                cwd=location,
+            )
+        except UnpackError:
+            return False
+        else:
+            return True
+
+    def update(
+        self, location: Path, rev: str | None, args: list[str | HiddenText]
+    ) -> None:
+        self.run_command(["fetch", "-q", "--tags"], cwd=location)
+        if rev is not None:
+            if self._should_fetch(location, rev):
+                url = self.get_remote_url(location)
+                self.run_command(["fetch", "-q", url, rev], cwd=location)
+                resolved = self._resolve_revision(location, "FETCH_HEAD")
+            else:
+                resolved = self._resolve_revision(location, rev)
+        else:
+            try:
+                # try as if the rev is a branch name or HEAD
+                resolved = self._resolve_revision(location, "origin/HEAD")
+            except UnpackError:
+                resolved = self._resolve_revision(location, "HEAD")
+        logger.info("Updating %s to commit %s", display_path(location), resolved)
+        self.run_command(["reset", "--hard", "-q", resolved], cwd=location)
+
+    def get_remote_url(self, location: Path) -> str:
+        result = self.run_command(
+            ["config", "--get-regexp", r"remote\..*\.url"],
+            extra_ok_returncodes=(1,),
+            cwd=location,
+            stdout_only=True,
+            log_output=False,
+        )
+        remotes = result.stdout.splitlines()
+        try:
+            found_remote = remotes[0]
+        except IndexError:
+            raise UnpackError(
+                f"Remote not found for {display_path(location)}"
+            ) from None
+
+        for remote in remotes:
+            if remote.startswith("remote.origin.url "):
+                found_remote = remote
+                break
+        url = found_remote.split(" ")[1]
+        return self._git_remote_to_pip_url(url.strip())
+
+    def _git_remote_to_pip_url(self, url: str) -> str:
+        if "://" in url:
+            return url
+        if os.path.exists(url):
+            return Path(os.path.abspath(url)).as_uri()
+        else:
+            return add_ssh_scheme_to_git_uri(url)
+
+    def _resolve_revision(self, location: Path, rev: str | None) -> str:
+        if rev is None:
+            rev_alternatives = ["HEAD"]
+        else:
+            rev_alternatives = [rev, f"origin/{rev}"]
+        last_error = RuntimeError()
+        for check_rev in rev_alternatives:
+            try:
+                result = self.run_command(
+                    ["rev-parse", "--quiet", "--verify", f"{check_rev}^{{commit}}"],
+                    cwd=location,
+                    stdout_only=True,
+                    log_output=False,
+                )
+            except UnpackError as e:
+                last_error = e
+                continue
+            return result.stdout.strip()
+        logger.error("Unable to resolve: %s", rev)
+        raise last_error
+
+    def get_revision(self, location: Path) -> str:
+        return self._resolve_revision(location, None)
+
+    def is_commit_hash_equal(self, location: Path, rev: str | None) -> bool:
+        return rev is not None and self.get_revision(location) == rev
+
+    def is_immutable_revision(self, location: Path, link: Link) -> bool:
+        _, rev, _ = self.get_url_and_rev_options(link)
+        if rev is None:
+            return False
+        return self.is_commit_hash_equal(location, rev)

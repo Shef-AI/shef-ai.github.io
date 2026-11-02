@@ -1,0 +1,33 @@
+{
+  "arch": "x86_64",
+  "build": "py314h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64/",
+  "constrains": [
+    "certifi >=2026.10.19"
+  ],
+  "depends": [
+    "conda >=26.1.0",
+    "conda-index >=0.13.0",
+    "conda-package-streaming >=0.11",
+    "packaging",
+    "platformdirs",
+    "python >=3.14,<3.15.0a0",
+    "python-build",
+    "python-installer >=1.0",
+    "python_abi 3.14.* *_cp314",
+    "unearth"
+  ],
+  "fn": "conda-pypi-0.13.1-py314h06a4308_0.conda",
+  "license": "MIT",
+  "license_family": "MIT",
+  "md5": "964e19725766b5b75d368b27c44cd875",
+  "name": "conda-pypi",
+  "platform": "linux",
+  "sha256": "1cfad7f3063f6378d1c6d5d957bec646690c43be0a793435d04882a87c961244",
+  "size": 269514,
+  "subdir": "linux-64",
+  "timestamp": 1792607322000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/conda-pypi-0.13.1-py314h06a4308_0.conda",
+  "version": "0.13.1"
+}

@@ -1,0 +1,21 @@
+'// Scilab'   Comment.Single
+'\n'          Text.Whitespace
+
+'//'          Comment.Single
+'\n'          Text.Whitespace
+
+'disp'        Name.Builtin
+'('           Punctuation
+'%pi'         Name.Constant
+');'          Punctuation
+'\n\n'        Text.Whitespace
+
+'assert_checkequal' Name.Builtin
+'('           Punctuation
+'2'           Literal.Number.Integer
+'+'           Operator
+'2'           Literal.Number.Integer
+','           Punctuation
+'4'           Literal.Number.Integer
+');'          Punctuation
+'\n'          Text.Whitespace

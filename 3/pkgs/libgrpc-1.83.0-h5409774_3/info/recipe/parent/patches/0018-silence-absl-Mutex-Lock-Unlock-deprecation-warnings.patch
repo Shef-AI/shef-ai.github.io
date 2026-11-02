@@ -1,0 +1,85 @@
+From 2c846440f40e63a3ad7dbbec286fbe41e7e6feb9 Mon Sep 17 00:00:00 2001
+From: Julien Jerphanion <git@jjerphan.xyz>
+Date: Tue, 9 Jun 2026 12:30:00 +0000
+Subject: [PATCH 18/18] silence absl Mutex Lock/Unlock deprecation warnings
+
+Newer abseil versions deprecate absl::Mutex::Lock()/Unlock()/TryLock() in
+favor of lock()/unlock()/try_lock(). gRPC still uses the CamelCase names
+widely (including LockableAndReleasableMutexLock in sync.h), which spams
+-Wdeprecated-declarations during builds.
+
+Provide a thin grpc_core/grpc::internal Mutex wrapper that forwards the
+legacy names to the standard methods, and use the standard methods in the
+gpr_mu compatibility layer.
+---
+
+diff --git c/include/grpcpp/impl/sync.h i/include/grpcpp/impl/sync.h
+index 66001ec..148ccc3 100644
+--- c/include/grpcpp/impl/sync.h
++++ i/include/grpcpp/impl/sync.h
+@@ -47,7 +47,16 @@ namespace internal {
+ 
+ #ifdef GPR_ABSEIL_SYNC
+ 
+-using Mutex = absl::Mutex;
++// absl deprecated CamelCase Lock()/Unlock() in favor of the standard
++// lower-case methods. grpc still uses the legacy names widely.
++class ABSL_LOCKABLE Mutex : public absl::Mutex {
++ public:
++  using absl::Mutex::Mutex;
++
++  void Lock() ABSL_EXCLUSIVE_LOCK_FUNCTION() { absl::Mutex::lock(); }
++  void Unlock() ABSL_UNLOCK_FUNCTION() { absl::Mutex::unlock(); }
++};
++
+ using CondVar = absl::CondVar;
+ 
+ // absl deprecated MutexLock(Mutex*) in favor of MutexLock(Mutex&), but grpc
+diff --git c/src/core/util/sync.h i/src/core/util/sync.h
+index 33c7c13..2d8d8ab 100644
+--- c/src/core/util/sync.h
++++ i/src/core/util/sync.h
+@@ -43,7 +43,19 @@ namespace grpc_core {
+ 
+ #ifdef GPR_ABSEIL_SYNC
+ 
+-using Mutex = absl::Mutex;
++// absl deprecated CamelCase Lock()/Unlock()/TryLock() in favor of the
++// standard lower-case methods. grpc still uses the legacy names widely.
++class ABSL_LOCKABLE Mutex : public absl::Mutex {
++ public:
++  using absl::Mutex::Mutex;
++
++  void Lock() ABSL_EXCLUSIVE_LOCK_FUNCTION() { absl::Mutex::lock(); }
++  void Unlock() ABSL_UNLOCK_FUNCTION() { absl::Mutex::unlock(); }
++  bool TryLock() ABSL_EXCLUSIVE_TRYLOCK_FUNCTION(true) {
++    return absl::Mutex::try_lock();
++  }
++};
++
+ using CondVar = absl::CondVar;
+ 
+ // absl deprecated MutexLock(Mutex*) in favor of MutexLock(Mutex&), but grpc
+diff --git c/src/core/util/sync_abseil.cc i/src/core/util/sync_abseil.cc
+index d1cd7f7..8a38a24 100644
+--- c/src/core/util/sync_abseil.cc
++++ i/src/core/util/sync_abseil.cc
+@@ -43,15 +43,15 @@ void gpr_mu_destroy(gpr_mu* mu) {
+ }
+ 
+ void gpr_mu_lock(gpr_mu* mu) ABSL_NO_THREAD_SAFETY_ANALYSIS {
+-  reinterpret_cast<absl::Mutex*>(mu)->Lock();
++  reinterpret_cast<absl::Mutex*>(mu)->lock();
+ }
+ 
+ void gpr_mu_unlock(gpr_mu* mu) ABSL_NO_THREAD_SAFETY_ANALYSIS {
+-  reinterpret_cast<absl::Mutex*>(mu)->Unlock();
++  reinterpret_cast<absl::Mutex*>(mu)->unlock();
+ }
+ 
+ int gpr_mu_trylock(gpr_mu* mu) {
+-  return reinterpret_cast<absl::Mutex*>(mu)->TryLock();
++  return reinterpret_cast<absl::Mutex*>(mu)->try_lock();
+ }
+ 
+ //----------------------------------------

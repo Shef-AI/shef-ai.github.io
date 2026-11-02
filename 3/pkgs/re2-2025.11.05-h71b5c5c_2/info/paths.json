@@ -1,0 +1,67 @@
+{
+  "paths": [
+    {
+      "_path": "include/re2/filtered_re2.h",
+      "path_type": "hardlink",
+      "sha256": "1ea210499ecb637cd0c8ebc5f20d0c3be02697e4aa0f614ebc831812709227f5",
+      "size_in_bytes": 4281
+    },
+    {
+      "_path": "include/re2/re2.h",
+      "path_type": "hardlink",
+      "sha256": "59f4d4b5318fcb6acf0c90f17d17e71903a87ec25d75fcf5d13e738beb29490f",
+      "size_in_bytes": 42153
+    },
+    {
+      "_path": "include/re2/set.h",
+      "path_type": "hardlink",
+      "sha256": "d862a0e44570aad753ab7b68ec1c3e34a95075aaf95e50b208b26b894cefd903",
+      "size_in_bytes": 2693
+    },
+    {
+      "_path": "include/re2/stringpiece.h",
+      "path_type": "hardlink",
+      "sha256": "59c1438095decbdab33a6140f6b358634e3dc31c36408ba9ce3b382ab3fb6c5a",
+      "size_in_bytes": 504
+    },
+    {
+      "_path": "lib/cmake/re2/re2Config.cmake",
+      "path_type": "hardlink",
+      "sha256": "382134b3768060ad7ccdfe110feb2baac9110ccf0b5f3307d9fb3a147e540d42",
+      "size_in_bytes": 1382
+    },
+    {
+      "_path": "lib/cmake/re2/re2ConfigVersion.cmake",
+      "path_type": "hardlink",
+      "sha256": "0646009b5688c6b38b691169fc0ed61fa393a9856fae8dcbc14ba2a4992b3792",
+      "size_in_bytes": 2765
+    },
+    {
+      "_path": "lib/cmake/re2/re2Targets-release.cmake",
+      "path_type": "hardlink",
+      "sha256": "e44466ec6079460153ec3b825b9e366b9dcf2913b381c8a2f6c3016ce132f8d8",
+      "size_in_bytes": 814
+    },
+    {
+      "_path": "lib/cmake/re2/re2Targets.cmake",
+      "path_type": "hardlink",
+      "sha256": "2ddef9e276bbb549060a35301194499ece718e1e06660fa84a6b4f5ea6bd5aa2",
+      "size_in_bytes": 4423
+    },
+    {
+      "_path": "lib/libre2.so",
+      "path_type": "softlink",
+      "sha256": "ab75aab4fe9489d6c364ba3cddee7e89fcd749d4d7c4d53c7ab6e4ed568226cd",
+      "size_in_bytes": 592424
+    },
+    {
+      "_path": "lib/pkgconfig/re2.pc",
+      "file_mode": "text",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/home/task_Y-0WDfq3SsS74_0/croot/re2-split_1784746970236/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p",
+      "sha256": "7108c54728fe2f946e0468834881babd7828f86cd89a52312f47dd31ad9ad094",
+      "size_in_bytes": 950
+    }
+  ],
+  "paths_version": 1
+}
