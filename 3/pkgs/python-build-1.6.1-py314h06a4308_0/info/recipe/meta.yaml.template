@@ -1,0 +1,114 @@
+{% set name = "python-build" %}
+{% set version = "1.6.1" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.org/packages/source/b/{{ name.split('-')[1] }}/{{ name.split('-')[1] }}-{{ version }}.tar.gz
+  sha256: 51cc11666391ab6f092070437ac747002ff46f3e4113a3622177ee6b488bfc53
+
+build:
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation --ignore-installed --no-cache-dir -vv
+  entry_points:
+    # don`t remove python-build to save back-compat
+    - python-build = build.__main__:entrypoint
+    - pyproject-build = build.__main__:entrypoint
+  skip: true  # [py<310]
+
+requirements:
+  host:
+    - pip
+    - python
+    - flit-core >=3.11
+  run:
+    - python
+    - packaging >=24.0
+    - pyproject_hooks
+    - colorama  # [win]
+    - importlib-metadata >=4.6  # [py<310]
+    - tomli >=1.1.0  # [py<311]
+  run_constrained:
+    - uv >=0.1.18
+    - virtualenv >=20.36.1
+
+# 'test_output' is flaky
+# 'test_build_sdist' requires all files to be accessible from repo
+# 'test_uv_install_strips_pythonpath' requires the uv package, not available in -c main
+{% set tests_to_skip = [
+  "test_output",
+  "test_build_sdist",
+  "test_uv_install_strips_pythonpath",
+  "test_metadata_path_legacy",
+] %}
+{% if win %}
+# build 1.6.1's symlinked venv creation fails DLL resolution when elevated on win
+{% set tests_to_skip = tests_to_skip + [
+  "test_build_package",
+  "test_build_wheel",
+  "test_build_with_dep_on_console_script",
+  "test_default_impl_install_cmd_well_formed",
+  "test_default_impl_install_files_line_endings_not_doubled",
+  "test_default_pip_is_never_too_old",
+  "test_install_dependencies_passes_keyring_env",
+  "test_logging_output",
+  "test_main_sdist_input_end_to_end",
+  "test_pip_needs_upgrade_mac_os_11",
+  "test_pythonpath_does_not_interfere_with_outer_pip",
+  "test_requirement_installation",
+  "test_venv_creation",
+  "test_verbose_logging_output",
+  "test_wheel_metadata",
+  "test_with_get_requires",
+] %}
+{% endif %}
+
+test:
+  imports:
+    - build
+  source_files:
+    - tests
+    # Following files are required for some tests
+    - pyproject.toml
+    - src
+    - README.md
+    - LICENSE
+  commands:
+    - pip check
+    - python-build --help
+    - pyproject-build --help
+    # tests pased on osx, but cleanup randomly failed with 
+    # OSError: [Errno 66] Directory not empty: '/private/var/folders/bf/pytest-of-ec2-user/garbage-c32b059c/test_discovery_via_path_in_non0'
+    - pytest -vv tests -k "not ({{ tests_to_skip | join(' or ') }})"  # [not osx]
+  requires:
+    - pip
+    - pytest >=6.2.4
+    - pytest-mock >=2
+    - pytest-rerunfailures >=10.2
+    - filelock >=3
+    - wheel >=0.36.0
+    - virtualenv >=20.36.1
+    # The fixture is written for older setuptools
+    - setuptools >=42.0.0,<77  # [py<310]
+    - setuptools >=56.0.0,<77  # [py310]
+    - setuptools >=56.0.0,<77  # [py311]
+    - setuptools >=67.8.0,<77  # [py>=312]
+
+about:
+  home: https://build.pypa.io/
+  summary: A simple, correct Python build frontend
+  description: |
+    build manages pyproject.toml-based builds, invoking build-backend hooks
+    as appropriate to build a distribution package. It is a simple build tool
+    and does not perform any dependency management.
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  dev_url: https://github.com/pypa/build
+  doc_url: https://pypa-build.readthedocs.io/en/stable/
+
+extra:
+  recipe-maintainers:
+    - ocefpaf

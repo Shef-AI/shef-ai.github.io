@@ -1,0 +1,127 @@
+'{'           Punctuation
+'\n  '        Text.Whitespace
+'"@context"'  Name.Decorator
+':'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n     '     Text.Whitespace
+'"schema"'    Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'"http://schema.org/"' Literal.String.Double
+','           Punctuation
+'\n     '     Text.Whitespace
+'"name"'      Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'"schema:name"' Literal.String.Double
+','           Punctuation
+'\n     '     Text.Whitespace
+'"body"'      Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'"schema:articleBody"' Literal.String.Double
+','           Punctuation
+'\n     '     Text.Whitespace
+'"words"'     Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'"schema:wordCount"' Literal.String.Double
+','           Punctuation
+'\n     '     Text.Whitespace
+'"post"'      Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n       '   Text.Whitespace
+'"@id"'       Name.Decorator
+':'           Punctuation
+' '           Text.Whitespace
+'"schema:blogPost"' Literal.String.Double
+','           Punctuation
+'\n       '   Text.Whitespace
+'"@container"' Name.Decorator
+':'           Punctuation
+' '           Text.Whitespace
+'"@index"'    Literal.String.Double
+'\n     '     Text.Whitespace
+'}'           Punctuation
+'\n  '        Text.Whitespace
+'},'          Punctuation
+'\n  '        Text.Whitespace
+'"@id"'       Name.Decorator
+':'           Punctuation
+' '           Text.Whitespace
+'"http://example.com/"' Literal.String.Double
+','           Punctuation
+'\n  '        Text.Whitespace
+'"@type"'     Name.Decorator
+':'           Punctuation
+' '           Text.Whitespace
+'"schema:Blog"' Literal.String.Double
+','           Punctuation
+'\n  '        Text.Whitespace
+'"name"'      Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'"World Financial News"' Literal.String.Double
+','           Punctuation
+'\n  '        Text.Whitespace
+'"post"'      Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n     '     Text.Whitespace
+'"en"'        Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n       '   Text.Whitespace
+'"@id"'       Name.Decorator
+':'           Punctuation
+' '           Text.Whitespace
+'"http://example.com/posts/1/en"' Literal.String.Double
+','           Punctuation
+'\n       '   Text.Whitespace
+'"body"'      Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'"World commodities were up today with heavy trading of crude oil..."' Literal.String.Double
+','           Punctuation
+'\n       '   Text.Whitespace
+'"words"'     Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'1539'        Literal.Number.Integer
+'\n     '     Text.Whitespace
+'},'          Punctuation
+'\n     '     Text.Whitespace
+'"de"'        Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n       '   Text.Whitespace
+'"@id"'       Name.Decorator
+':'           Punctuation
+' '           Text.Whitespace
+'"http://example.com/posts/1/de"' Literal.String.Double
+','           Punctuation
+'\n       '   Text.Whitespace
+'"body"'      Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'"Die Werte an Warenbörsen stiegen im Sog eines starken Handels von Rohöl..."' Literal.String.Double
+','           Punctuation
+'\n       '   Text.Whitespace
+'"words"'     Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'1204'        Literal.Number.Integer
+'\n     '     Text.Whitespace
+'}'           Punctuation
+'\n  '        Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n'          Text.Whitespace

@@ -1,0 +1,364 @@
+'package'     Keyword
+' '           Text.Whitespace
+'addressbook' Name.Namespace
+'\n\n'        Text.Whitespace
+
+'class'       Keyword.Declaration
+' '           Text.Whitespace
+'Contact'     Name.Class
+'('           Punctuation
+'\n  '        Text.Whitespace
+'val'         Keyword.Declaration
+' '           Text.Whitespace
+'name'        Name.Variable
+' '           Text.Whitespace
+':'           Punctuation
+' '           Text.Whitespace
+'String'      Keyword.Type
+','           Punctuation
+'\n  '        Text.Whitespace
+'val'         Keyword.Declaration
+' '           Text.Whitespace
+'emails'      Name.Variable
+' '           Text.Whitespace
+':'           Punctuation
+' '           Text.Whitespace
+'List'        Name
+'<'           Operator
+'EmailAddress' Name
+'>'           Operator
+','           Punctuation
+'\n  '        Text.Whitespace
+'val'         Keyword.Declaration
+' '           Text.Whitespace
+'addresses'   Name.Variable
+' '           Text.Whitespace
+':'           Punctuation
+' '           Text.Whitespace
+'List'        Name
+'<'           Operator
+'PostalAddress' Name
+'>'           Operator
+','           Punctuation
+'\n  '        Text.Whitespace
+'val'         Keyword.Declaration
+' '           Text.Whitespace
+'phonenums'   Name.Variable
+' '           Text.Whitespace
+':'           Punctuation
+' '           Text.Whitespace
+'List'        Name
+'<'           Operator
+'PhoneNumber' Name
+'>'           Operator
+'\n'          Text.Whitespace
+
+')'           Punctuation
+'\n\n'        Text.Whitespace
+
+'class'       Keyword.Declaration
+' '           Text.Whitespace
+'EmailAddress' Name.Class
+'('           Punctuation
+'\n  '        Text.Whitespace
+'val'         Keyword.Declaration
+' '           Text.Whitespace
+'user'        Name.Variable
+' '           Text.Whitespace
+':'           Punctuation
+' '           Text.Whitespace
+'String'      Keyword.Type
+','           Punctuation
+'\n  '        Text.Whitespace
+'val'         Keyword.Declaration
+' '           Text.Whitespace
+'host'        Name.Variable
+' '           Text.Whitespace
+':'           Punctuation
+' '           Text.Whitespace
+'String'      Keyword.Type
+'\n'          Text.Whitespace
+
+')'           Punctuation
+'\n\n'        Text.Whitespace
+
+'class'       Keyword.Declaration
+' '           Text.Whitespace
+'PostalAddress' Name.Class
+'('           Punctuation
+'\n  '        Text.Whitespace
+'val'         Keyword.Declaration
+' '           Text.Whitespace
+'streetAddress' Name.Variable
+' '           Text.Whitespace
+':'           Punctuation
+' '           Text.Whitespace
+'String'      Keyword.Type
+','           Punctuation
+'\n  '        Text.Whitespace
+'val'         Keyword.Declaration
+' '           Text.Whitespace
+'city'        Name.Variable
+' '           Text.Whitespace
+':'           Punctuation
+' '           Text.Whitespace
+'String'      Keyword.Type
+','           Punctuation
+'\n  '        Text.Whitespace
+'val'         Keyword.Declaration
+' '           Text.Whitespace
+'zip'         Name.Variable
+' '           Text.Whitespace
+':'           Punctuation
+' '           Text.Whitespace
+'String'      Keyword.Type
+','           Punctuation
+'\n  '        Text.Whitespace
+'val'         Keyword.Declaration
+' '           Text.Whitespace
+'state'       Name.Variable
+' '           Text.Whitespace
+':'           Punctuation
+' '           Text.Whitespace
+'USState?'    Name
+','           Punctuation
+'\n  '        Text.Whitespace
+'val'         Keyword.Declaration
+' '           Text.Whitespace
+'country'     Name.Variable
+' '           Text.Whitespace
+':'           Punctuation
+' '           Text.Whitespace
+'Country'     Name
+'\n'          Text.Whitespace
+
+')'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n   '       Text.Whitespace
+'assert'      Name
+' '           Text.Whitespace
+'{'           Punctuation
+'('           Punctuation
+'state'       Name
+' '           Text.Whitespace
+'='           Operator
+'='           Operator
+' '           Text.Whitespace
+'null'        Keyword.Constant
+')'           Punctuation
+' '           Text.Whitespace
+'xor'         Name
+' '           Text.Whitespace
+'('           Punctuation
+'country'     Name
+' '           Text.Whitespace
+'='           Operator
+'='           Operator
+' '           Text.Whitespace
+'Countries'   Name
+'['           Operator
+'"'           Literal.String
+'US'          Literal.String
+'"'           Literal.String
+']'           Operator
+')'           Punctuation
+' '           Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n\n'        Text.Whitespace
+
+'class'       Keyword.Declaration
+' '           Text.Whitespace
+'PhoneNumber' Name.Class
+'('           Punctuation
+'\n  '        Text.Whitespace
+'val'         Keyword.Declaration
+' '           Text.Whitespace
+'country'     Name.Variable
+' '           Text.Whitespace
+':'           Punctuation
+' '           Text.Whitespace
+'Country'     Name
+','           Punctuation
+'\n  '        Text.Whitespace
+'val'         Keyword.Declaration
+' '           Text.Whitespace
+'areaCode'    Name.Variable
+' '           Text.Whitespace
+':'           Punctuation
+' '           Text.Whitespace
+'Int'         Keyword.Type
+','           Punctuation
+'\n  '        Text.Whitespace
+'val'         Keyword.Declaration
+' '           Text.Whitespace
+'number'      Name.Variable
+' '           Text.Whitespace
+':'           Punctuation
+' '           Text.Whitespace
+'Long'        Keyword.Type
+'\n'          Text.Whitespace
+
+')'           Punctuation
+'\n\n'        Text.Whitespace
+
+'object'      Keyword.Declaration
+' '           Text.Whitespace
+'Countries'   Name.Class
+' '           Text.Whitespace
+'{'           Punctuation
+'\n  '        Text.Whitespace
+'fun'         Keyword.Declaration
+' '           Text.Whitespace
+'get'         Name.Function
+'('           Punctuation
+'id'          Name
+' '           Text.Whitespace
+':'           Punctuation
+' '           Text.Whitespace
+'CountryID'   Name
+')'           Punctuation
+' '           Text.Whitespace
+':'           Punctuation
+' '           Text.Whitespace
+'Country'     Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'countryTable' Name
+'['           Operator
+'id'          Name
+']'           Operator
+'\n  \n  '    Text.Whitespace
+'private'     Keyword.Declaration
+' '           Text.Whitespace
+'var'         Keyword.Declaration
+' '           Text.Whitespace
+'table'       Name.Variable
+' '           Text.Whitespace
+':'           Punctuation
+' '           Text.Whitespace
+'Map'         Name
+'<'           Operator
+'String'      Keyword.Type
+','           Punctuation
+' '           Text.Whitespace
+'Country'     Name
+'>'           Operator
+'?'           Operator
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'null'        Keyword.Constant
+'\n  '        Text.Whitespace
+'private'     Keyword.Declaration
+' '           Text.Whitespace
+'val'         Keyword.Declaration
+' '           Text.Whitespace
+'countryTable' Name.Variable
+' '           Text.Whitespace
+':'           Punctuation
+' '           Text.Whitespace
+'Map'         Name
+'<'           Operator
+'String'      Keyword.Type
+','           Punctuation
+' '           Text.Whitespace
+'Country'     Name
+'>'           Operator
+'\n    '      Text.Whitespace
+'get'         Keyword
+'('           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n      '    Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'table'       Name
+' '           Text.Whitespace
+'='           Operator
+'='           Operator
+' '           Text.Whitespace
+'null'        Keyword.Constant
+')'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n        '  Text.Whitespace
+'table'       Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'HashMap'     Name
+'('           Punctuation
+')'           Punctuation
+'\n        '  Text.Whitespace
+'for'         Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'line'        Name
+' '           Text.Whitespace
+'in'          Keyword
+' '           Text.Whitespace
+'TextFile'    Name
+'('           Punctuation
+'"'           Literal.String
+'countries.txt' Literal.String
+'"'           Literal.String
+')'           Punctuation
+'.'           Punctuation
+'lines'       Name.Attribute
+'('           Punctuation
+'stripWhiteSpace' Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'true'        Keyword.Constant
+')'           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n          ' Text.Whitespace
+'table'       Name
+'['           Operator
+'line'        Name
+']'           Operator
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'Country'     Name
+'('           Punctuation
+'line'        Name
+')'           Punctuation
+'\n        '  Text.Whitespace
+'}'           Punctuation
+'\n      '    Text.Whitespace
+'}'           Punctuation
+'\n      '    Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'table'       Name
+'\n    '      Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n\n'        Text.Whitespace
+
+'class'       Keyword.Declaration
+' '           Text.Whitespace
+'Country'     Name.Class
+'('           Punctuation
+'val'         Keyword.Declaration
+' '           Text.Whitespace
+'name'        Name.Variable
+' '           Text.Whitespace
+':'           Punctuation
+' '           Text.Whitespace
+'String'      Keyword.Type
+')'           Punctuation
+'\n'          Text.Whitespace

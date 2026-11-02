@@ -1,0 +1,74 @@
+--- a/.bazelrc
++++ b/.bazelrc
+@@ -9,7 +9,9 @@ build --javacopt=-Xep:SelfAssertion:WARN
+ #build --@com_google_protobuf//bazel/toolchains:prefer_prebuilt_protoc=false
+ 
+ # This flag works around some issues with Rust linking.
+-build --@rules_rust//rust/settings:experimental_use_cc_common_link=True
++# Disabled for conda builds — we only need the Python wheel and rules_rust
++# is incompatible with bazel 8.6 + clang-cl on Windows.
++# build --@rules_rust//rust/settings:experimental_use_cc_common_link=True
+ 
+ build:dbg --compilation_mode=dbg
+ 
+--- a/MODULE.bazel
++++ b/MODULE.bazel
+@@ -40,7 +40,8 @@ bazel_dep(name = "rules_kotlin", version
+ bazel_dep(name = "rules_license", version = "1.0.0")
+ bazel_dep(name = "rules_pkg", version = "1.0.1")
+ bazel_dep(name = "rules_python", version = "1.6.0")
+-bazel_dep(name = "rules_rust", version = "0.69.0")
++# Disabled for conda Python wheel builds (see 0009-dont-build-rust.patch)
++# bazel_dep(name = "rules_rust", version = "0.69.0")
+ 
+ bazel_dep(name = "rules_ruby", version = "0.20.1", dev_dependency = True)
+ 
+@@ -184,39 +185,15 @@ register_toolchains(
+     dev_dependency = True,
+ )
+ 
+-rust = use_extension("@rules_rust//rust:extensions.bzl", "rust", dev_dependency = True)
+-
+-# As of October 2025, our minimum supported Rust version is 1.79. However, we
+-# use 1.85.0 here so that we can get some test coverage with Rust edition 2024.
+-# Cargo and our Bazel WORKSPACE build are both still on Rust edition 2021.
+-rust.toolchain(
+-    edition = "2024",
+-    versions = ["1.85.0"],
+-)
+-
+-crate = use_extension("@rules_rust//crate_universe:extension.bzl", "crate")
+-crate.spec(
+-    package = "googletest",
+-    version = ">0.0.0",
+-)
+-crate.spec(
+-    package = "linkme",
+-    version = "0.3.35",
+-)
+-crate.spec(
+-    package = "paste",
+-    version = ">=1",
+-)
+-crate.spec(
+-    package = "quote",
+-    version = ">=1",
+-)
+-crate.spec(
+-    package = "syn",
+-    version = ">=2",
+-)
+-crate.from_specs()
+-use_repo(crate, crate_index = "crates")
++# Disabled for conda Python wheel builds (see 0009-dont-build-rust.patch)
++# rust = use_extension("@rules_rust//rust:extensions.bzl", "rust", dev_dependency = True)
++# rust.toolchain(
++#     edition = "2024",
++#     versions = ["1.85.0"],
++# )
++# crate = use_extension("@rules_rust//crate_universe:extension.bzl", "crate")
++# ...
++# use_repo(crate, crate_index = "crates")
+ 
+ # Keep this list minimal; these dependencies will be part of the common `maven` install and could affect end-user projects.
+ PROTOBUF_MAVEN_ARTIFACTS = [

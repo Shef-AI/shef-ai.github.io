@@ -1,0 +1,1 @@
+["pretend >=0.7", "pip", "certifi >=2024", "pytest >=7.4.0", "cryptography-vectors 50.0.0.*", "pytest-benchmark >=4.0", "pytest-xdist >=3.5.0"]

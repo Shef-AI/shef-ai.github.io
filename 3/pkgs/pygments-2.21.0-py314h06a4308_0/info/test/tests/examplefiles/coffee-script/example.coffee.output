@@ -1,0 +1,162 @@
+'# function arrows' Comment.Single
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'methodA'     Name.Other
+':'           Operator
+'->'          Name.Function
+' '           Text.Whitespace
+"'"           Literal.String
+'A'           Literal.String
+"'"           Literal.String
+'\n'          Text.Whitespace
+
+'methodB'     Name.Other
+':'           Operator
+'=>'          Name.Function
+' '           Text.Whitespace
+"'"           Literal.String
+'B'           Literal.String
+"'"           Literal.String
+'\n'          Text.Whitespace
+
+'methodC'     Name.Other
+':'           Operator
+'()=>'        Name.Function
+' '           Text.Whitespace
+"'"           Literal.String
+'C'           Literal.String
+"'"           Literal.String
+'\n'          Text.Whitespace
+
+'methodD'     Name.Other
+':'           Operator
+'()->'        Name.Function
+' '           Text.Whitespace
+"'"           Literal.String
+'D'           Literal.String
+"'"           Literal.String
+'\n'          Text.Whitespace
+
+'methodE'     Name.Other
+':'           Operator
+'(a,b)->'     Name.Function
+' '           Text.Whitespace
+"'"           Literal.String
+'E'           Literal.String
+"'"           Literal.String
+'\n'          Text.Whitespace
+
+'methodF'     Name.Other
+':'           Operator
+'(c,d)->'     Name.Function
+' '           Text.Whitespace
+"'"           Literal.String
+'F'           Literal.String
+"'"           Literal.String
+'\n'          Text.Whitespace
+
+'->'          Name.Function
+' '           Text.Whitespace
+"'"           Literal.String
+'G'           Literal.String
+"'"           Literal.String
+'\n'          Text.Whitespace
+
+'=>'          Name.Function
+' '           Text.Whitespace
+"'"           Literal.String
+'H'           Literal.String
+"'"           Literal.String
+'\n\n'        Text.Whitespace
+
+'('           Punctuation
+'->'          Name.Function
+' '           Text.Whitespace
+"'"           Literal.String
+'I'           Literal.String
+"'"           Literal.String
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'('           Punctuation
+'=>'          Name.Function
+' '           Text.Whitespace
+"'"           Literal.String
+'J'           Literal.String
+"'"           Literal.String
+')'           Punctuation
+'\n\n'        Text.Whitespace
+
+'# strings'   Comment.Single
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'"'           Literal.String
+'#{'          Literal.String.Interpol
+'wow'         Name.Other
+'}'           Literal.String.Interpol
+'"'           Literal.String
+'\n'          Text.Whitespace
+
+'"'           Literal.String
+'w'           Literal.String
+'#{'          Literal.String.Interpol
+'wow'         Name.Other
+'}'           Literal.String.Interpol
+'w'           Literal.String
+'"'           Literal.String
+'\n'          Text.Whitespace
+
+'"'           Literal.String
+'#'           Literal.String
+'wow'         Literal.String
+'"'           Literal.String
+'\n'          Text.Whitespace
+
+'"'           Literal.String
+'wow'         Literal.String
+'#'           Literal.String
+'"'           Literal.String
+'\n'          Text.Whitespace
+
+'"'           Literal.String
+'w'           Literal.String
+'#'           Literal.String
+'ow'          Literal.String
+'"'           Literal.String
+'\n\n'        Text.Whitespace
+
+"'"           Literal.String
+'#'           Literal.String
+'{wow}'       Literal.String
+"'"           Literal.String
+'\n'          Text.Whitespace
+
+"'"           Literal.String
+'w'           Literal.String
+'#'           Literal.String
+'{wow}w'      Literal.String
+"'"           Literal.String
+'\n'          Text.Whitespace
+
+"'"           Literal.String
+'#'           Literal.String
+'wow'         Literal.String
+"'"           Literal.String
+'\n'          Text.Whitespace
+
+"'"           Literal.String
+'wow'         Literal.String
+'#'           Literal.String
+"'"           Literal.String
+'\n'          Text.Whitespace
+
+"'"           Literal.String
+'w'           Literal.String
+'#'           Literal.String
+'ow'          Literal.String
+"'"           Literal.String
+'\n'          Text.Whitespace

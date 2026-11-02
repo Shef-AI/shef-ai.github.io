@@ -1,0 +1,101 @@
+{
+  "paths": [
+    {
+      "_path": "lib/python3.14/site-packages/pyproject_hooks-1.3.3.dist-info/INSTALLER",
+      "path_type": "hardlink",
+      "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+      "size_in_bytes": 5
+    },
+    {
+      "_path": "lib/python3.14/site-packages/pyproject_hooks-1.3.3.dist-info/METADATA",
+      "path_type": "hardlink",
+      "sha256": "844e375bb28dcbe42a0502fbd9428d9ba4669db25028ee7a7afaa8dd7ada2e00",
+      "size_in_bytes": 1312
+    },
+    {
+      "_path": "lib/python3.14/site-packages/pyproject_hooks-1.3.3.dist-info/RECORD",
+      "path_type": "hardlink",
+      "sha256": "d7be1ef2437d419c1866cb7fc58c464f48695b7ffe38a75021945e63bd559a89",
+      "size_in_bytes": 1326
+    },
+    {
+      "_path": "lib/python3.14/site-packages/pyproject_hooks-1.3.3.dist-info/REQUESTED",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "lib/python3.14/site-packages/pyproject_hooks-1.3.3.dist-info/WHEEL",
+      "path_type": "hardlink",
+      "sha256": "ff23073da055face9f40cc14a28f3735275308cddcf315d6157461a9a7cdfbb6",
+      "size_in_bytes": 81
+    },
+    {
+      "_path": "lib/python3.14/site-packages/pyproject_hooks-1.3.3.dist-info/direct_url.json",
+      "path_type": "hardlink",
+      "sha256": "f08d8d52d6537993225203ed4eb8354704f9b3cff11ac8ed4bdb61c5891a3545",
+      "size_in_bytes": 101
+    },
+    {
+      "_path": "lib/python3.14/site-packages/pyproject_hooks-1.3.3.dist-info/licenses/LICENSE",
+      "path_type": "hardlink",
+      "sha256": "1b22b049b5267d6dfc23a67bf4a84d8ec04b9fdfb1a51d360e42b4342c8b4154",
+      "size_in_bytes": 1081
+    },
+    {
+      "_path": "lib/python3.14/site-packages/pyproject_hooks/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "c89797a5c140ea7fc00c2d5e75e2d8e1127af43f5e04c56f610e6f506fede84f",
+      "size_in_bytes": 743
+    },
+    {
+      "_path": "lib/python3.14/site-packages/pyproject_hooks/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "06d27bd680a224945547eb24e91ef2c00e2560443177e866ae3240bd8c0112a6",
+      "size_in_bytes": 756
+    },
+    {
+      "_path": "lib/python3.14/site-packages/pyproject_hooks/__pycache__/_impl.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "e9b2b9c8d2586c616a041b133e6f35cc4cf9f5e43f559fcddea4a6b7516b4299",
+      "size_in_bytes": 22798
+    },
+    {
+      "_path": "lib/python3.14/site-packages/pyproject_hooks/_impl.py",
+      "path_type": "hardlink",
+      "sha256": "4949c4c0dff363f15d508f79a45a27d96695e859cc78e5578e8731be42da6c73",
+      "size_in_bytes": 15780
+    },
+    {
+      "_path": "lib/python3.14/site-packages/pyproject_hooks/_in_process/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "30934fa5f23170ef85821c6905bc641b5ac58907fa1ce51b5785399aad07167b",
+      "size_in_bytes": 557
+    },
+    {
+      "_path": "lib/python3.14/site-packages/pyproject_hooks/_in_process/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "832be4d319cdebd9384b0f008b3decdc6fc75076031f9d009fe4e9471954b018",
+      "size_in_bytes": 1039
+    },
+    {
+      "_path": "lib/python3.14/site-packages/pyproject_hooks/_in_process/__pycache__/_in_process.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "42f98d7da37fddd77bb7f22341887096712c3fccc61b460528cc8f2701b66292",
+      "size_in_bytes": 17134
+    },
+    {
+      "_path": "lib/python3.14/site-packages/pyproject_hooks/_in_process/_in_process.py",
+      "path_type": "hardlink",
+      "sha256": "e74d67a39a68a301ddec69516ec217081ccb4d00673c41f3e56ac6ca5d11065f",
+      "size_in_bytes": 12856
+    },
+    {
+      "_path": "lib/python3.14/site-packages/pyproject_hooks/py.typed",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    }
+  ],
+  "paths_version": 1
+}

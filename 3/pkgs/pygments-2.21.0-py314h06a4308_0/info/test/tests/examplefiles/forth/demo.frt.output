@@ -1,0 +1,36 @@
+'2'           Literal.Number.Integer
+' '           Text.Whitespace
+'3'           Literal.Number.Integer
+' '           Text.Whitespace
+'+'           Keyword
+' '           Text.Whitespace
+'CR'          Keyword
+' '           Text.Whitespace
+'.'           Keyword
+'\n'          Text.Whitespace
+
+':'           Keyword.Namespace
+' '           Text.Whitespace
+'F'           Name.Class
+' '           Text.Whitespace
+'( blah )'    Comment.Single
+' '           Text.Whitespace
+'DUP'         Keyword
+' '           Text.Whitespace
+'DROP'        Keyword
+' '           Text.Whitespace
+'1'           Literal.Number.Integer
+' '           Text.Whitespace
+'+'           Keyword
+' '           Text.Whitespace
+';'           Keyword
+'\n'          Text.Whitespace
+
+'1'           Literal.Number.Integer
+' '           Text.Whitespace
+'F'           Name.Function
+' '           Text.Whitespace
+'CR'          Keyword
+' '           Text.Whitespace
+'.'           Keyword
+'\n'          Text.Whitespace

@@ -1,0 +1,24 @@
+{
+  "arch": "x86_64",
+  "build": "h2e96acb_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.28,<3.0.a0",
+    "libbrotlicommon 1.2.0 h32cd6e7_0",
+    "libgcc-ng >=11.2.0"
+  ],
+  "fn": "libbrotlienc-1.2.0-h2e96acb_0.conda",
+  "license": "MIT",
+  "license_family": "MIT",
+  "md5": "854af1d6af8b3565fa8c7edb2141a2de",
+  "name": "libbrotlienc",
+  "platform": "linux",
+  "sha256": "31c153a8165bef6673fb460b9dd4cb6ed4904585cc455ab827282044fcfcce95",
+  "size": 279951,
+  "subdir": "linux-64",
+  "timestamp": 1762363583000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/libbrotlienc-1.2.0-h2e96acb_0.conda",
+  "version": "1.2.0"
+}

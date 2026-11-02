@@ -1,0 +1,77 @@
+{
+  "paths": [
+    {
+      "_path": "lib/python3.14/site-packages/__pycache__/socks.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "56e10bb56633a2228149d4d901b60c9df0cefd03089c1a98b9acc4d25afa3563",
+      "size_in_bytes": 35075
+    },
+    {
+      "_path": "lib/python3.14/site-packages/__pycache__/sockshandler.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "846787c33cc4981e33cf2074902545fde1891171d6ab23da9fc33cbb3d66c112",
+      "size_in_bytes": 7075
+    },
+    {
+      "_path": "lib/python3.14/site-packages/pysocks-1.7.1.dist-info/INSTALLER",
+      "path_type": "hardlink",
+      "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+      "size_in_bytes": 5
+    },
+    {
+      "_path": "lib/python3.14/site-packages/pysocks-1.7.1.dist-info/METADATA",
+      "path_type": "hardlink",
+      "sha256": "b34b4249a4f458944be8d352ed65e19fdb9ae8408157c0db0a222e34c680f609",
+      "size_in_bytes": 13468
+    },
+    {
+      "_path": "lib/python3.14/site-packages/pysocks-1.7.1.dist-info/RECORD",
+      "path_type": "hardlink",
+      "sha256": "8aaa123b10c3e544257f984f27527a10ecee5b0c208891b50e0ef0862eaf6da8",
+      "size_in_bytes": 893
+    },
+    {
+      "_path": "lib/python3.14/site-packages/pysocks-1.7.1.dist-info/REQUESTED",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "lib/python3.14/site-packages/pysocks-1.7.1.dist-info/WHEEL",
+      "path_type": "hardlink",
+      "sha256": "2b6eb4118ce7cd7b09601406aa623c553c4476265836f0d9c16f5c061f7efcc0",
+      "size_in_bytes": 91
+    },
+    {
+      "_path": "lib/python3.14/site-packages/pysocks-1.7.1.dist-info/direct_url.json",
+      "path_type": "hardlink",
+      "sha256": "18923f7aa14196985eefc4e2907711eae1603a5767aaccc02694785bf059298d",
+      "size_in_bytes": 93
+    },
+    {
+      "_path": "lib/python3.14/site-packages/pysocks-1.7.1.dist-info/licenses/LICENSE",
+      "path_type": "hardlink",
+      "sha256": "7027e214e014eb78b7adcc1ceda5aca713a79fc4f6a0c52c9da5b3e707e6ffe9",
+      "size_in_bytes": 1401
+    },
+    {
+      "_path": "lib/python3.14/site-packages/pysocks-1.7.1.dist-info/top_level.txt",
+      "path_type": "hardlink",
+      "sha256": "4ca48e21f0850682bd118f050586d8a82dcf59ddfef86d79a61f67f3e4073c39",
+      "size_in_bytes": 19
+    },
+    {
+      "_path": "lib/python3.14/site-packages/socks.py",
+      "path_type": "hardlink",
+      "sha256": "c4e627dbbb7d206adb4c1cd6b1452e3dad1806ea6582253293390e0795798856",
+      "size_in_bytes": 31086
+    },
+    {
+      "_path": "lib/python3.14/site-packages/sockshandler.py",
+      "path_type": "hardlink",
+      "sha256": "d926068fea70b7592380ba19026c9e6845c27990d64667d54bf406ea412b1ad6",
+      "size_in_bytes": 3966
+    }
+  ],
+  "paths_version": 1
+}

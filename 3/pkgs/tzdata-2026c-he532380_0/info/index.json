@@ -1,0 +1,14 @@
+{
+  "arch": null,
+  "build": "he532380_0",
+  "build_number": 0,
+  "depends": [],
+  "license": "CC-PDDC OR BSD-3-Clause",
+  "license_family": "BSD",
+  "name": "tzdata",
+  "noarch": "generic",
+  "platform": null,
+  "subdir": "noarch",
+  "timestamp": 1783948460184,
+  "version": "2026c"
+}

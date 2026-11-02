@@ -1,0 +1,22 @@
+{
+  "build": "pyhd3eb1b0_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch/",
+  "constrains": [],
+  "depends": [
+    "python >=3.10"
+  ],
+  "fn": "certifi-2026.10.19-pyhd3eb1b0_1.conda",
+  "license": "MPL-2.0",
+  "license_family": "Other",
+  "md5": "33c6cd1d79858a147edaefdda00046e7",
+  "name": "certifi",
+  "noarch": "python",
+  "package_type": "noarch_python",
+  "sha256": "c34c9c713ced51003cbef15569c513672db042d1b07f8b2b1ba82b425af15cfc",
+  "size": 135297,
+  "subdir": "noarch",
+  "timestamp": 1792676325000,
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/certifi-2026.10.19-pyhd3eb1b0_1.conda",
+  "version": "2026.10.19"
+}

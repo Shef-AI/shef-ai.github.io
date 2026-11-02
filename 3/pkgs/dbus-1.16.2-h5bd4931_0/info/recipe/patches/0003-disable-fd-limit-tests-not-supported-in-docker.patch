@@ -1,0 +1,28 @@
+From c40a97bc09fc2f7a6b670e8c75eb6f1022b93cd4 Mon Sep 17 00:00:00 2001
+From: Mike Sarahan <msarahan@gmail.com>
+Date: Mon, 2 Apr 2018 16:18:26 +0000
+Subject: [PATCH 3/3] disable fd-limit tests (not supported in docker)
+
+---
+ test/dbus-daemon.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/test/dbus-daemon.c b/test/dbus-daemon.c
+index 1288fe0..e61ee01 100644
+--- a/test/dbus-daemon.c
++++ b/test/dbus-daemon.c
+@@ -2871,10 +2871,10 @@ main (int argc,
+   g_test_add ("/unix-runtime-is-default", Fixture, &listen_unix_runtime_config,
+       setup, test_echo, teardown);
+ 
+-  g_test_add ("/fd-limit/session", Fixture, NULL,
+-              setup, test_fd_limit, teardown);
+-  g_test_add ("/fd-limit/system", Fixture, &as_another_user_config,
+-              setup, test_fd_limit, teardown);
++//   g_test_add ("/fd-limit/session", Fixture, NULL,
++//               setup, test_fd_limit, teardown);
++//   g_test_add ("/fd-limit/system", Fixture, &as_another_user_config,
++//               setup, test_fd_limit, teardown);
+ 
+ #ifdef ENABLE_TRADITIONAL_ACTIVATION
+   g_test_add ("/activation/forking", Fixture, &tmp_session_config,

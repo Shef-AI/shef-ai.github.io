@@ -1,0 +1,128 @@
+{
+  "name": "jaraco.context",
+  "version": "6.1.2",
+  "build": "py314h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "subdir": "linux-64",
+  "fn": "jaraco.context-6.1.2-py314h06a4308_0.conda",
+  "md5": "61d91cd2eed18aa166976d3988a0a74b",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/jaraco.context-6.1.2-py314h06a4308_0.conda",
+  "sha256": "0e47fa8d58326ada69b1779808ba17024a0c98bf6bd21853624b2c3961e73b15",
+  "arch": "x86_64",
+  "platform": "linux",
+  "depends": [
+    "python >=3.14,<3.15.0a0",
+    "python_abi 3.14.* *_cp314"
+  ],
+  "constrains": [],
+  "license": "MIT",
+  "license_family": "MIT",
+  "timestamp": 1791374903000,
+  "size": 20222,
+  "requested_spec": "https://repo.anaconda.com/pkgs/main/linux-64::jaraco.context==6.1.2=py314h06a4308_0",
+  "package_tarball_full_path": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/jaraco.context-6.1.2-py314h06a4308_0.conda",
+  "extracted_package_dir": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/jaraco.context-6.1.2-py314h06a4308_0",
+  "files": [
+    "lib/python3.14/site-packages/jaraco/context/__init__.py",
+    "lib/python3.14/site-packages/jaraco/context/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/jaraco/context/py.typed",
+    "lib/python3.14/site-packages/jaraco_context-6.1.2.dist-info/INSTALLER",
+    "lib/python3.14/site-packages/jaraco_context-6.1.2.dist-info/METADATA",
+    "lib/python3.14/site-packages/jaraco_context-6.1.2.dist-info/RECORD",
+    "lib/python3.14/site-packages/jaraco_context-6.1.2.dist-info/REQUESTED",
+    "lib/python3.14/site-packages/jaraco_context-6.1.2.dist-info/WHEEL",
+    "lib/python3.14/site-packages/jaraco_context-6.1.2.dist-info/direct_url.json",
+    "lib/python3.14/site-packages/jaraco_context-6.1.2.dist-info/licenses/LICENSE",
+    "lib/python3.14/site-packages/jaraco_context-6.1.2.dist-info/top_level.txt"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/python3.14/site-packages/jaraco/context/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "f94887f6406140c935243051a35662f83c5568e59f40b55bc2504a0e3de32e64",
+        "size_in_bytes": 12432,
+        "sha256_in_prefix": "f94887f6406140c935243051a35662f83c5568e59f40b55bc2504a0e3de32e64"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/jaraco/context/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "9bed213e8c2c12f330360fa4648e282798c7d8e48287d13f7635bfb1d5e2b3f8",
+        "size_in_bytes": 20479,
+        "sha256_in_prefix": "9bed213e8c2c12f330360fa4648e282798c7d8e48287d13f7635bfb1d5e2b3f8"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/jaraco/context/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/jaraco_context-6.1.2.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5,
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/jaraco_context-6.1.2.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "f1b65b60aea229af54e09b17ae0036cf048fe4a6161fa2e7966a8ea5c2321491",
+        "size_in_bytes": 4230,
+        "sha256_in_prefix": "f1b65b60aea229af54e09b17ae0036cf048fe4a6161fa2e7966a8ea5c2321491"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/jaraco_context-6.1.2.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "ca9fd876a7e73beb0db9285b0abe8ec23798792a073ee09048ab4f1ba2bcffe7",
+        "size_in_bytes": 945,
+        "sha256_in_prefix": "ca9fd876a7e73beb0db9285b0abe8ec23798792a073ee09048ab4f1ba2bcffe7"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/jaraco_context-6.1.2.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/jaraco_context-6.1.2.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "2b6eb4118ce7cd7b09601406aa623c553c4476265836f0d9c16f5c061f7efcc0",
+        "size_in_bytes": 91,
+        "sha256_in_prefix": "2b6eb4118ce7cd7b09601406aa623c553c4476265836f0d9c16f5c061f7efcc0"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/jaraco_context-6.1.2.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "da593e691d1507b4ed23040722cb9c54fc7d49a0133cfb930f8aace07b50bf44",
+        "size_in_bytes": 100,
+        "sha256_in_prefix": "da593e691d1507b4ed23040722cb9c54fc7d49a0133cfb930f8aace07b50bf44"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/jaraco_context-6.1.2.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "9755a18519666e5f0f4cae3daad3d7012bcae48a600b31237d75e9fe134e6683",
+        "size_in_bytes": 1076,
+        "sha256_in_prefix": "9755a18519666e5f0f4cae3daad3d7012bcae48a600b31237d75e9fe134e6683"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/jaraco_context-6.1.2.dist-info/top_level.txt",
+        "path_type": "hardlink",
+        "sha256": "d099cddcb7d71f82c845f5cbf9014e18227341664edc42f1e11d5dfe5a2ea103",
+        "size_in_bytes": 7,
+        "sha256_in_prefix": "d099cddcb7d71f82c845f5cbf9014e18227341664edc42f1e11d5dfe5a2ea103"
+      }
+    ]
+  },
+  "link": {
+    "source": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/jaraco.context-6.1.2-py314h06a4308_0",
+    "type": 1
+  },
+  "requested_specs": [
+    "https://repo.anaconda.com/pkgs/main/linux-64::jaraco.context==6.1.2=py314h06a4308_0"
+  ]
+}

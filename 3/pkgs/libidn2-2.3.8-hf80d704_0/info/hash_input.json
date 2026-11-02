@@ -1,0 +1,11 @@
+{
+  "target_platform": "linux-64",
+  "libiconv": "1",
+  "c_compiler": "gcc",
+  "c_compiler_version": "11.2.0",
+  "c_stdlib_version": "2.28",
+  "channel_targets": "defaults",
+  "c_stdlib": "sysroot",
+  "libidn2": "2",
+  "__glibc": "__glibc >=2.28,<3.0.a0"
+}

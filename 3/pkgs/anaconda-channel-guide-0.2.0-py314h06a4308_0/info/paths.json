@@ -1,0 +1,131 @@
+{
+  "paths": [
+    {
+      "_path": "lib/python3.14/site-packages/anaconda_channel_guide-0.2.0.dist-info/INSTALLER",
+      "path_type": "hardlink",
+      "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+      "size_in_bytes": 5
+    },
+    {
+      "_path": "lib/python3.14/site-packages/anaconda_channel_guide-0.2.0.dist-info/METADATA",
+      "path_type": "hardlink",
+      "sha256": "da67418cfc5d0509c81700cbe822f829d42af4be4a6a58276844844e2a561663",
+      "size_in_bytes": 1084
+    },
+    {
+      "_path": "lib/python3.14/site-packages/anaconda_channel_guide-0.2.0.dist-info/RECORD",
+      "path_type": "hardlink",
+      "sha256": "dc0940ed3aea64893570bcced87e4cc130c96afe0d5ccb7d587aabcc5109a888",
+      "size_in_bytes": 1789
+    },
+    {
+      "_path": "lib/python3.14/site-packages/anaconda_channel_guide-0.2.0.dist-info/REQUESTED",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "lib/python3.14/site-packages/anaconda_channel_guide-0.2.0.dist-info/WHEEL",
+      "path_type": "hardlink",
+      "sha256": "942926c567d0b1273d09f20295879abd37507845f6b683eab9f87d808df91100",
+      "size_in_bytes": 87
+    },
+    {
+      "_path": "lib/python3.14/site-packages/anaconda_channel_guide-0.2.0.dist-info/direct_url.json",
+      "path_type": "hardlink",
+      "sha256": "a5f45a773aa44e7bb0fc14da4cbb6ad60a432b75ff7d6d6810566793fa2614c0",
+      "size_in_bytes": 108
+    },
+    {
+      "_path": "lib/python3.14/site-packages/anaconda_channel_guide-0.2.0.dist-info/entry_points.txt",
+      "path_type": "hardlink",
+      "sha256": "5071627604029d3dc68b51ae660777800b6b61427d3325396f5c68bbaaf0bdf8",
+      "size_in_bytes": 62
+    },
+    {
+      "_path": "lib/python3.14/site-packages/anaconda_channel_guide-0.2.0.dist-info/licenses/LICENSE",
+      "path_type": "hardlink",
+      "sha256": "267458b8bc56146c3761eba74ac12ef4b3d652549949ed8fc0a2056eb18757e0",
+      "size_in_bytes": 1501
+    },
+    {
+      "_path": "lib/python3.14/site-packages/anaconda_channel_guide/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "e00f7cbe896584c7e09176c4843ee228141e68242410f6410c76de9ab0a13588",
+      "size_in_bytes": 469
+    },
+    {
+      "_path": "lib/python3.14/site-packages/anaconda_channel_guide/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "ef3aa3e0396bdbb818b179bfdaae1e0ac1791da9f9e2769424dfe12b6ac6a07b",
+      "size_in_bytes": 718
+    },
+    {
+      "_path": "lib/python3.14/site-packages/anaconda_channel_guide/__pycache__/_version.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "359af868ef01aa43de1bed86f7ae2e764b0e156b46a640e25dd7dd26ef14a944",
+      "size_in_bytes": 661
+    },
+    {
+      "_path": "lib/python3.14/site-packages/anaconda_channel_guide/__pycache__/box.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "8b6eea3490ad9c70036a1476b548c96d6b85c363f3e0c31a45d06e005c985b8b",
+      "size_in_bytes": 5894
+    },
+    {
+      "_path": "lib/python3.14/site-packages/anaconda_channel_guide/__pycache__/hooks.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "8ecf562adc23ee5c0f62ff95d7ae3333c39f5f89f865cce592749ff0bae98e45",
+      "size_in_bytes": 3880
+    },
+    {
+      "_path": "lib/python3.14/site-packages/anaconda_channel_guide/__pycache__/plugin.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "0ab55a8394107817212f78240452c46234ada483ee8b5303510268d0dee85e3e",
+      "size_in_bytes": 6081
+    },
+    {
+      "_path": "lib/python3.14/site-packages/anaconda_channel_guide/__pycache__/prefetch.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "0f23c2618d0349dfd8fd16d39dec3b5a6c06fa0a664735d7fbc8ced32e40bedd",
+      "size_in_bytes": 3095
+    },
+    {
+      "_path": "lib/python3.14/site-packages/anaconda_channel_guide/_version.py",
+      "path_type": "hardlink",
+      "sha256": "b3d5375f9e0f76bf89961f463fa2c169afd5468b3baacff0b6b55e7d41c73480",
+      "size_in_bytes": 520
+    },
+    {
+      "_path": "lib/python3.14/site-packages/anaconda_channel_guide/box.py",
+      "path_type": "hardlink",
+      "sha256": "a50b305b82324b6742275621a7224d3f001193c1e9392f9186c3cc7cd0d9cd7a",
+      "size_in_bytes": 3067
+    },
+    {
+      "_path": "lib/python3.14/site-packages/anaconda_channel_guide/hooks.py",
+      "path_type": "hardlink",
+      "sha256": "942175c09f711ac36c2d476ac065f0cfc2ab28971a160fdb887f22b500cb4499",
+      "size_in_bytes": 2248
+    },
+    {
+      "_path": "lib/python3.14/site-packages/anaconda_channel_guide/plugin.py",
+      "path_type": "hardlink",
+      "sha256": "33b64fe6079e0da749f0d53a4a5689f59fe9680a660657e2b8fb8a2a74679be4",
+      "size_in_bytes": 4293
+    },
+    {
+      "_path": "lib/python3.14/site-packages/anaconda_channel_guide/prefetch.py",
+      "path_type": "hardlink",
+      "sha256": "21a70edbd74de09dcdddfb1ca54e226d104908d6dd739f95789da71bba4dc88d",
+      "size_in_bytes": 1580
+    },
+    {
+      "_path": "lib/python3.14/site-packages/anaconda_channel_guide/py.typed",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    }
+  ],
+  "paths_version": 1
+}

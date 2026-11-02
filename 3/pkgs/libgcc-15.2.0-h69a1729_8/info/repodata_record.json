@@ -1,0 +1,25 @@
+{
+  "arch": "x86_64",
+  "build": "h69a1729_8",
+  "build_number": 8,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64/",
+  "constrains": [
+    "libgomp 15.2.0 h4751f2c_8",
+    "libgcc-ng ==15.2.0 *_8"
+  ],
+  "depends": [
+    "__glibc >=2.28,<3.0.a0",
+    "_openmp_mutex * *_gnu"
+  ],
+  "fn": "libgcc-15.2.0-h69a1729_8.conda",
+  "license": "GPL-3.0-only WITH GCC-exception-3.1",
+  "md5": "44a53b93cf0953bde4b0f4e610cef1c3",
+  "name": "libgcc",
+  "platform": "linux",
+  "sha256": "10fbca6e0cc0da1018f82f3c92e3841e734e704dbfee5df88ae652a49d8b402f",
+  "size": 822224,
+  "subdir": "linux-64",
+  "timestamp": 1779212817000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/libgcc-15.2.0-h69a1729_8.conda",
+  "version": "15.2.0"
+}

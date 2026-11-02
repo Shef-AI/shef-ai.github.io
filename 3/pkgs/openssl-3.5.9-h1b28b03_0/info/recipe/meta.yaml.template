@@ -1,0 +1,101 @@
+{% set name = "openssl" %}
+{% set version = "3.5.9" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://github.com/{{ name }}/{{ name }}/releases/download/{{ name }}-{{ version }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 603f5602e2eef00d77fbd429d34dcd5822bb301757a1bc9cdb24c670f1eb859a
+
+build:
+  number: 0
+  no_link:
+    - lib/libcrypto.so.3.0        # [linux]
+    - lib/libcrypto.3.0.dylib     # [osx]
+  # Prefix replacement: binaries and text files from the build contain the build
+  # prefix; these settings ensure conda rewrites them at install time (Unix).
+  # Windows uses a system path for OPENSSLDIR so no prefix in that path.
+  has_prefix_files:                      # [unix]
+    - bin/c_rehash                       # [unix]
+    - lib/pkgconfig/libcrypto.pc         # [unix]
+    - lib/pkgconfig/libssl.pc            # [unix]
+    - lib/pkgconfig/openssl.pc           # [unix]
+  detect_binary_files_with_prefix: true
+  binary_has_prefix_files:               # [unix]
+    - lib/libcrypto.so.3     # [linux]
+    - lib/libcrypto.3.dylib  # [osx]
+  run_exports:
+    # openssl's versioning of starting with 3.0 is X.Y.Z  (1.x was X.Y.Z(rev))
+    # https://openssl-library.org/policies/releasestrat/
+    # This pin allows the patch release to be >= the build-time openssl version.
+    - {{ pin_subpackage('openssl', max_pin='x') }}
+
+requirements:
+  build:
+    - {{ stdlib('c') }}
+    - {{ compiler('c') }}
+    - nasm               # [win and not arm64]
+    - make               # [unix]
+    - perl {{ perl }}
+  run:
+    - ca-certificates
+
+test:
+  requires:
+    - python 3.13
+    - pkg-config
+  commands:
+    - copy NUL checksum.txt        # [win]
+    - touch checksum.txt           # [unix]
+    - openssl sha256 checksum.txt
+    - openssl ecparam -name prime256v1
+    - if "%SSL_CERT_FILE%"=="" exit 1  # [win]
+    - if not exist "%SSL_CERT_FILE%" exit 1  # [win]
+    - python -c "import urllib.request; urllib.request.urlopen('https://pypi.org')"
+    # test pkgconfig metadata
+    - pkg-config --print-errors --exact-version "{{ version }}" openssl
+    # test presence of most important files
+    - test -f ${PREFIX}/lib/libcrypto.so.3                           # [linux]
+    - test -f ${PREFIX}/lib/libssl.so.3                              # [linux]
+    - test -f ${PREFIX}/lib/libcrypto.3.dylib                        # [osx]
+    - test -f ${PREFIX}/lib/libssl.3.dylib                           # [osx]
+    - test -f ${PREFIX}/lib/pkgconfig/libssl.pc                      # [unix]
+    - test -f ${PREFIX}/lib/pkgconfig/libcrypto.pc                   # [unix]
+    - test -f ${PREFIX}/lib/pkgconfig/openssl.pc                     # [unix]
+    - test -f ${PREFIX}/bin/openssl                                  # [unix]
+    - test -f ${PREFIX}/bin/c_rehash                                 # [unix]
+    - test -n "$(ls -A ${PREFIX}/include/openssl 2>/dev/null)"       # [unix]
+    - if not exist "%LIBRARY_LIB%\libcrypto.lib" exit 1              # [win]
+    - if not exist "%LIBRARY_LIB%\libssl.lib" exit 1                 # [win]
+    - if not exist "%LIBRARY_LIB%\pkgconfig\libssl.pc" exit 1        # [win]
+    - if not exist "%LIBRARY_LIB%\pkgconfig\libcrypto.pc" exit 1     # [win]
+    - if not exist "%LIBRARY_LIB%\pkgconfig\openssl.pc" exit 1       # [win]
+    - if not exist "%LIBRARY_BIN%\openssl.exe" exit 1                # [win]
+    - if not exist "%LIBRARY_INC%\openssl" exit 1                    # [win]
+
+about:
+  home: https://www.openssl.org
+  license_file: LICENSE.txt
+  license: Apache-2.0
+  license_family: Apache
+  summary: OpenSSL is an open-source implementation of the SSL and TLS protocols
+  description: |
+    OpenSSL is a robust, commercial-grade, full-featured Open Source Toolkit
+    for the Transport Layer Security (TLS) protocol formerly known as the
+    Secure Sockets Layer (SSL) protocol. The protocol implementation is based
+    on a full-strength general purpose cryptographic library, which can also
+    be used stand-alone.
+  dev_url: https://github.com/openssl/openssl
+  doc_url: https://docs.openssl.org
+
+extra:
+  recipe-maintainers:
+    - jakirkham
+    - jjhelmus
+    - msarahan
+    - ocefpaf
+    - pelson
+    - carlodri
+    - chenghlee

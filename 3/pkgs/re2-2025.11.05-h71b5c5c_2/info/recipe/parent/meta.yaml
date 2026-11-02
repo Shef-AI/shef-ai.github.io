@@ -1,0 +1,143 @@
+{% set name = "re2" %}
+{% set version = "2025-11-05" %}
+{% set dotversion = version.replace('-', '.') %}
+{% set build_num = 2 %}
+
+# see https://github.com/google/re2/blob/2023-06-01/CMakeLists.txt#L32-L34
+# changes more rarely than version
+{% set soversion = "11" %}
+
+package:
+  name: {{ name|lower }}-split
+  version: {{ dotversion }}
+
+source:
+  url: https://github.com/google/re2/archive/{{ version }}.tar.gz
+  sha256: 87f6029d2f6de8aa023654240a03ada90e876ce9a4676e258dd01ea4c26ffd67
+
+build:
+  number: {{ build_num }}
+  detect_binary_files_with_prefix: true
+  missing_dso_whitelist:
+    - '$RPATH/ld64.so.1'  # [s390x]
+
+requirements:
+  build:
+    - cmake
+    - ninja
+    - {{ stdlib('c') }}
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
+    - libabseil 20260526.0
+    - benchmark 1.9.1
+    - gtest {{ gtest }}
+
+outputs:
+  # re2 has a rarely-changing SOVERSION, and it's enough to depend on
+  # (and run-export) the output that contains the library artefact
+  - name: {{ name }}
+    script: install.sh   # [unix]
+    script: install.bat  # [win]
+    build:
+      run_exports:
+        - {{ pin_subpackage("libre2-" ~ soversion) }}
+        # by adding this run-export, we avoid that different libre2-{X,Y} builds
+        # can be co-installed, because they then depend on different re2-versions
+        # (see below), and each re2 in turn requires a specific soversion.
+        - re2
+
+    requirements:
+      build:
+        - cmake
+      host:
+        - {{ pin_subpackage("libre2-" ~ soversion, exact=True) }}
+      run:
+        - {{ pin_subpackage("libre2-" ~ soversion, exact=True) }}
+    test:
+      requires:
+        - {{ compiler('cxx') }}
+        - cmake
+        - ninja
+        - pkg-config
+      files:
+        - cmake_test/
+      commands:
+        # presence of shared libs (unix) & import lib (win)
+        - test -f ${PREFIX}/lib/libre2.so               # [linux]
+        - test -f ${PREFIX}/lib/libre2.dylib            # [osx]
+        - if not exist %LIBRARY_LIB%\re2.lib exit 1     # [win]
+
+        # absence of static libs
+        - test ! -f ${PREFIX}/lib/libre2.a              # [unix]
+        - if exist %LIBRARY_LIB%\re2_static.lib exit 1  # [win]
+
+        # presence of header
+        - test -f ${PREFIX}/include/re2/re2.h           # [unix]
+        - if not exist %LIBRARY_INC%\re2\re2.h exit 1   # [win]
+
+        # test correctness of pkg-config metadata
+        - pkg-config --print-errors --exact-version "{{ soversion }}.0.0" re2
+
+        # CMake integration
+        - cd cmake_test
+        - cmake -GNinja -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=17 .
+        - cmake --build .
+        - ./re2_example    # [unix]
+        - re2_example.exe  # [win]
+
+    # the versioned library artefact
+  - name: libre2-{{ soversion }}
+    script: install.sh   # [unix]
+    script: install.bat  # [win]
+    build:
+      run_exports:
+        - {{ pin_subpackage("libre2-" ~ soversion) }}
+      missing_dso_whitelist:
+        - '$RPATH/ld64.so.1'  # [s390x]
+    requirements:
+      build:
+        # for strong run-exports
+        - {{ stdlib('c') }}
+        - {{ compiler('c') }}
+        - {{ compiler('cxx') }}
+      host:
+        - libabseil 20260526.0
+      run_constrained:
+        - re2 {{ version }} *_{{ build_num }}
+    test:
+      commands:
+        # presence of versioned shared lib (unix) & plain dll (win)
+        - test -f ${PREFIX}/lib/libre2.so.{{ soversion }}       # [linux]
+        - test -f ${PREFIX}/lib/libre2.{{ soversion }}.dylib    # [osx]
+        - if not exist %LIBRARY_BIN%\re2.dll exit 1             # [win]
+
+        # absence of unversioned shared lib (unix) & import lib (win)
+        - test ! -f ${PREFIX}/lib/libre2.so             # [linux]
+        - test ! -f ${PREFIX}/lib/libre2.dylib          # [osx]
+        - if exist %LIBRARY_LIB%\re2.lib exit 1         # [win]
+
+about:
+  home: https://github.com/google/re2/
+  license: BSD-3-Clause
+  license_file: LICENSE
+  license_family: BSD
+  summary: |
+    RE2 is a fast, safe, thread-friendly alternative to backtracking regular expression
+    engines like those used in PCRE, Perl, and Python. It is a C++ library.
+  description:  |
+    RE2 is a fast, safe, thread-friendly alternative to backtracking regular expression
+    engines like those used in PCRE, Perl, and Python. It is a C++ library.
+  dev_url: https://github.com/google/re2/
+  doc_url: https://github.com/google/re2/
+
+extra:
+  recipe-maintainers:
+    - h-vetinari
+    - scopatz
+    - isuruf
+    - wesm
+    - xhochy
+    - kszucs
+    - pitrou
+  feedstock-name: re2

@@ -1,0 +1,239 @@
+'Public'      Keyword
+' '           Text.Whitespace
+'Class'       Keyword
+' '           Text.Whitespace
+'Form1'       Name.Class
+'\n    '      Text.Whitespace
+'Inherits'    Keyword
+' '           Text.Whitespace
+'System'      Name
+'.'           Punctuation
+'Windows'     Name
+'.'           Punctuation
+'Forms'       Name
+'.'           Punctuation
+'Form'        Name
+'\n\n    '    Text.Whitespace
+'Private'     Keyword
+' '           Text.Whitespace
+'t'           Name
+' '           Text.Whitespace
+'As'          Operator.Word
+' '           Text.Whitespace
+'New'         Keyword
+' '           Text.Whitespace
+'System'      Name
+'.'           Punctuation
+'Timers'      Name
+'.'           Punctuation
+'Timer'       Name
+'('           Punctuation
+'2000'        Literal.Number.Integer
+')'           Punctuation
+'\n\n    '    Text.Whitespace
+'Private'     Keyword
+' '           Text.Whitespace
+'Sub'         Keyword
+' '           Text.Whitespace
+'Form1_Load'  Name.Function
+'('           Punctuation
+'ByVal'       Keyword
+' '           Text.Whitespace
+'sender'      Name
+' '           Text.Whitespace
+'As'          Operator.Word
+' '           Text.Whitespace
+'Object'      Keyword.Type
+','           Punctuation
+' '           Text.Whitespace
+'_'           Text
+'\n'          Text.Whitespace
+
+'          '  Text.Whitespace
+'ByVal'       Keyword
+' '           Text.Whitespace
+'e'           Name
+' '           Text.Whitespace
+'As'          Operator.Word
+' '           Text.Whitespace
+'System'      Name
+'.'           Punctuation
+'EventArgs'   Name
+')'           Punctuation
+' '           Text.Whitespace
+'Handles'     Keyword
+' '           Text.Whitespace
+'MyBase'      Keyword
+'.'           Punctuation
+'Load'        Name
+'\n        \n        ' Text.Whitespace
+'AddHandler'  Keyword
+' '           Text.Whitespace
+'t'           Name
+'.'           Punctuation
+'Elapsed'     Name
+','           Punctuation
+' '           Text.Whitespace
+'AddressOf'   Operator.Word
+' '           Text.Whitespace
+'TimerFired'  Name
+'\n    '      Text.Whitespace
+'End'         Keyword
+' '           Text.Whitespace
+'Sub'         Keyword
+'\n\n    '    Text.Whitespace
+'Private'     Keyword
+' '           Text.Whitespace
+'Sub'         Keyword
+' '           Text.Whitespace
+'btnStart_Click' Name.Function
+'('           Punctuation
+'ByVal'       Keyword
+' '           Text.Whitespace
+'sender'      Name
+' '           Text.Whitespace
+'As'          Operator.Word
+' '           Text.Whitespace
+'System'      Name
+'.'           Punctuation
+'Object'      Name
+','           Punctuation
+' '           Text.Whitespace
+'_'           Name
+' \n          ' Text.Whitespace
+'ByVal'       Keyword
+' '           Text.Whitespace
+'e'           Name
+' '           Text.Whitespace
+'As'          Operator.Word
+' '           Text.Whitespace
+'System'      Name
+'.'           Punctuation
+'EventArgs'   Name
+')'           Punctuation
+' '           Text.Whitespace
+'Handles'     Keyword
+' '           Text.Whitespace
+'btnStart'    Name
+'.'           Punctuation
+'Click'       Name
+'\n          \n        ' Text.Whitespace
+'t'           Name
+'.'           Punctuation
+'Enabled'     Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'True'        Keyword
+'\n    '      Text.Whitespace
+'End'         Keyword
+' '           Text.Whitespace
+'Sub'         Keyword
+'\n\n    '    Text.Whitespace
+'Private'     Keyword
+' '           Text.Whitespace
+'Sub'         Keyword
+' '           Text.Whitespace
+'btnStop_Click' Name.Function
+'('           Punctuation
+'ByVal'       Keyword
+' '           Text.Whitespace
+'sender'      Name
+' '           Text.Whitespace
+'As'          Operator.Word
+' '           Text.Whitespace
+'System'      Name
+'.'           Punctuation
+'Object'      Name
+','           Punctuation
+' '           Text.Whitespace
+'_'           Text
+'\n'          Text.Whitespace
+
+'          '  Text.Whitespace
+'ByVal'       Keyword
+' '           Text.Whitespace
+'e'           Name
+' '           Text.Whitespace
+'As'          Operator.Word
+' '           Text.Whitespace
+'System'      Name
+'.'           Punctuation
+'EventArgs'   Name
+')'           Punctuation
+' '           Text.Whitespace
+'Handles'     Keyword
+' '           Text.Whitespace
+'btnStop'     Name
+'.'           Punctuation
+'Click'       Name
+'\n          \n        ' Text.Whitespace
+'t'           Name
+'.'           Punctuation
+'Enabled'     Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'False'       Keyword
+'\n    '      Text.Whitespace
+'End'         Keyword
+' '           Text.Whitespace
+'Sub'         Keyword
+'\n\n    '    Text.Whitespace
+'Public'      Keyword
+' '           Text.Whitespace
+'Sub'         Keyword
+' '           Text.Whitespace
+'TimerFired'  Name.Function
+'('           Punctuation
+'ByVal'       Keyword
+' '           Text.Whitespace
+'sender'      Name
+' '           Text.Whitespace
+'As'          Operator.Word
+' '           Text.Whitespace
+'Object'      Keyword.Type
+','           Punctuation
+' '           Text.Whitespace
+'_'           Name
+' \n           ' Text.Whitespace
+'ByVal'       Keyword
+' '           Text.Whitespace
+'e'           Name
+' '           Text.Whitespace
+'As'          Operator.Word
+' '           Text.Whitespace
+'System'      Name
+'.'           Punctuation
+'Timers'      Name
+'.'           Punctuation
+'ElapsedEventArgs' Name
+')'           Punctuation
+'\n           \n        ' Text.Whitespace
+'Label1'      Name
+'.'           Punctuation
+'Text'        Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'"'           Literal.String
+'Signal Time = ' Literal.String
+'"'           Literal.String
+' '           Text.Whitespace
+'&'           Operator
+' '           Text.Whitespace
+'e'           Name
+'.'           Punctuation
+'SignalTime'  Name
+'.'           Punctuation
+'ToString'    Name
+'\n    '      Text.Whitespace
+'End'         Keyword
+' '           Text.Whitespace
+'Sub'         Keyword
+'\n'          Text.Whitespace
+
+'End'         Keyword
+' '           Text.Whitespace
+'Class'       Keyword
+'\n'          Text.Whitespace

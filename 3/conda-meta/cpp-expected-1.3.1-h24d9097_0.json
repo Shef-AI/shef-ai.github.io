@@ -1,0 +1,73 @@
+{
+  "name": "cpp-expected",
+  "version": "1.3.1",
+  "build": "h24d9097_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "subdir": "linux-64",
+  "fn": "cpp-expected-1.3.1-h24d9097_0.conda",
+  "md5": "8193cca1844a6ae60e6a60388d7a9624",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/cpp-expected-1.3.1-h24d9097_0.conda",
+  "sha256": "6fffd5ebc43c191e281a88e72d7d1ead8d1d98bd0b3b6f04a84d4f408cd59e8a",
+  "arch": "x86_64",
+  "platform": "linux",
+  "depends": [
+    "__glibc >=2.28,<3.0.a0",
+    "libgcc >=14",
+    "libstdcxx >=14"
+  ],
+  "constrains": [],
+  "license": "CC0-1.0",
+  "license_family": "CC",
+  "timestamp": 1779458305000,
+  "size": 20075,
+  "requested_spec": "https://repo.anaconda.com/pkgs/main/linux-64::cpp-expected==1.3.1=h24d9097_0",
+  "package_tarball_full_path": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/cpp-expected-1.3.1-h24d9097_0.conda",
+  "extracted_package_dir": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/cpp-expected-1.3.1-h24d9097_0",
+  "files": [
+    "include/tl/expected.hpp",
+    "share/cmake/tl-expected/tl-expected-config-version.cmake",
+    "share/cmake/tl-expected/tl-expected-config.cmake",
+    "share/cmake/tl-expected/tl-expected-targets.cmake"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "include/tl/expected.hpp",
+        "path_type": "hardlink",
+        "sha256": "0788f7d544a2fdec1dd7a794e1e9863ad4cc6a8817982b6fd93fd98724b9fa19",
+        "size_in_bytes": 94709,
+        "sha256_in_prefix": "0788f7d544a2fdec1dd7a794e1e9863ad4cc6a8817982b6fd93fd98724b9fa19"
+      },
+      {
+        "_path": "share/cmake/tl-expected/tl-expected-config-version.cmake",
+        "path_type": "hardlink",
+        "sha256": "4b4b9bceb39058fd9079ddf7f4978185fe9e193733c29e439d8c4c1e2c5e84b8",
+        "size_in_bytes": 2303,
+        "sha256_in_prefix": "4b4b9bceb39058fd9079ddf7f4978185fe9e193733c29e439d8c4c1e2c5e84b8"
+      },
+      {
+        "_path": "share/cmake/tl-expected/tl-expected-config.cmake",
+        "path_type": "hardlink",
+        "sha256": "e81d5d1be789466fbf2bebff6818ac0879ccf13ef5f4e4566f91f1cfd47e0f08",
+        "size_in_bytes": 949,
+        "sha256_in_prefix": "e81d5d1be789466fbf2bebff6818ac0879ccf13ef5f4e4566f91f1cfd47e0f08"
+      },
+      {
+        "_path": "share/cmake/tl-expected/tl-expected-targets.cmake",
+        "path_type": "hardlink",
+        "sha256": "c5a1af88fa9c6b2033473954c42e4bffa9f86e59ae1354caefb69adc8eb8b97a",
+        "size_in_bytes": 4140,
+        "sha256_in_prefix": "c5a1af88fa9c6b2033473954c42e4bffa9f86e59ae1354caefb69adc8eb8b97a"
+      }
+    ]
+  },
+  "link": {
+    "source": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/cpp-expected-1.3.1-h24d9097_0",
+    "type": 1
+  },
+  "requested_specs": [
+    "https://repo.anaconda.com/pkgs/main/linux-64::cpp-expected==1.3.1=h24d9097_0"
+  ]
+}

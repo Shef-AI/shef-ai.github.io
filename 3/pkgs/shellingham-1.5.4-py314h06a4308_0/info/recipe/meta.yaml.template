@@ -1,0 +1,53 @@
+{% set version = "1.5.4" %}
+{% set name = "shellingham" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 8dbca0739d487e5bd35ab3ca4b36e11c4078f3a234bfce294b0a0291363404de
+
+build:
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  skip: true  # [py<37]
+
+requirements:
+  host:
+    - python
+    - pip
+    - setuptools
+    - wheel
+  run:
+    - python
+
+test:
+  source_files:
+    - tests
+  imports:
+    - shellingham
+    - shellingham.posix
+  requires:
+    - pip
+    - pytest
+    - pytest-mock
+  commands:
+    - pip check
+    - python -c "from importlib.metadata import version; assert(version('{{ name }}')=='{{ version }}')"
+    - pytest -v tests
+
+about:
+  home: https://github.com/sarugaku/shellingham
+  license: ISC
+  license_family: OTHER
+  license_file: LICENSE
+  summary: Tool to Detect Surrounding Shell
+  description: Shellingham detects what shell the current Python executable is running in.
+  dev_url: https://github.com/sarugaku/shellingham/tree/master
+  doc_url: https://github.com/sarugaku/shellingham#readme
+
+extra:
+  recipe-maintainers:
+    - ocefpaf

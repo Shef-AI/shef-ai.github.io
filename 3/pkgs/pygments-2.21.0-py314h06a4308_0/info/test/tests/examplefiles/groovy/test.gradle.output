@@ -1,0 +1,109 @@
+'apply'       Name
+' '           Text.Whitespace
+'plugin:'     Name.Label
+' '           Text.Whitespace
+"'java'"      Literal.String.Single
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'repositories' Name
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'mavenCentral' Name
+'('           Operator
+')'           Operator
+'\n'          Text.Whitespace
+
+'}'           Operator
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'dependencies' Name
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'testCompile' Name
+' '           Text.Whitespace
+"'junit:junit:4.12'" Literal.String.Single
+'\n'          Text.Whitespace
+
+'}'           Operator
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'task'        Name
+' '           Text.Whitespace
+'sayHello'    Name
+' '           Text.Whitespace
+'<'           Operator
+'<'           Operator
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'def'         Keyword.Type
+' '           Text.Whitespace
+'x'           Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'SomeClass'   Name
+'.'           Operator
+'worldString' Name.Attribute
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'println'     Name
+' '           Text.Whitespace
+'"Hello ${x}"' Literal.String.Double
+'\n'          Text.Whitespace
+
+'}'           Operator
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'private'     Keyword.Declaration
+' '           Text.Whitespace
+'class'       Keyword.Declaration
+' '           Text.Whitespace
+'SomeClass'   Name.Class
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'public'      Keyword.Declaration
+' '           Text.Whitespace
+'static'      Keyword.Declaration
+' '           Text.Whitespace
+'String'      Name
+' '           Text.Whitespace
+'getWorldString' Name
+'('           Operator
+')'           Operator
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'"world"'     Literal.String.Double
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'}'           Operator
+'\n'          Text.Whitespace

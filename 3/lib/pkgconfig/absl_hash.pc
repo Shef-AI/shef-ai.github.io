@@ -1,0 +1,12 @@
+prefix=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3
+exec_prefix=${prefix}
+libdir=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/lib
+includedir=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/include
+
+Name: absl_hash
+Description: Abseil hash library
+URL: https://abseil.io/
+Version: 20260526
+Requires: absl_bits = 20260526, absl_city = 20260526, absl_config = 20260526, absl_core_headers = 20260526, absl_endian = 20260526, absl_fixed_array = 20260526, absl_function_ref = 20260526, absl_meta = 20260526, absl_int128 = 20260526, absl_strings = 20260526, absl_optional = 20260526, absl_variant = 20260526, absl_utility = 20260526, absl_weakly_mixed_integer = 20260526
+Libs: -L${libdir}  -labsl_hash 
+Cflags: -I${includedir} -DNOMINMAX

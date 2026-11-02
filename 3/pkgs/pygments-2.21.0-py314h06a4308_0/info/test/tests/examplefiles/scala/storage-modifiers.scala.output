@@ -1,0 +1,179 @@
+'private'     Keyword
+' '           Text.Whitespace
+'object'      Keyword
+' '           Text.Whitespace
+'a'           Name.Class
+' '           Text.Whitespace
+'{'           Punctuation
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'private'     Keyword
+'['           Punctuation
+'com'         Name
+']'           Punctuation
+' '           Text.Whitespace
+'object'      Keyword
+' '           Text.Whitespace
+'b'           Name.Class
+' '           Text.Whitespace
+'{'           Punctuation
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'private'     Keyword
+'['           Punctuation
+'com'         Name
+'.'           Punctuation
+'example'     Name
+']'           Punctuation
+' '           Text.Whitespace
+'object'      Keyword
+' '           Text.Whitespace
+'c'           Name.Class
+' '           Text.Whitespace
+'{'           Punctuation
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'protected'   Keyword
+' '           Text.Whitespace
+'object'      Keyword
+' '           Text.Whitespace
+'d'           Name.Class
+' '           Text.Whitespace
+'{'           Punctuation
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'protected'   Keyword
+'['           Punctuation
+'com'         Name
+']'           Punctuation
+' '           Text.Whitespace
+'object'      Keyword
+' '           Text.Whitespace
+'e'           Name.Class
+' '           Text.Whitespace
+'{'           Punctuation
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'protected'   Keyword
+'['           Punctuation
+'com'         Name
+'.'           Punctuation
+'example'     Name
+']'           Punctuation
+' '           Text.Whitespace
+'object'      Keyword
+' '           Text.Whitespace
+'f'           Name.Class
+' '           Text.Whitespace
+'{'           Punctuation
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'synchronized' Keyword
+' '           Text.Whitespace
+'{'           Punctuation
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'abstract'    Keyword
+' '           Text.Whitespace
+'class'       Keyword
+' '           Text.Whitespace
+'g'           Name.Class
+' '           Text.Whitespace
+'{'           Punctuation
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'final'       Keyword
+' '           Text.Whitespace
+'val'         Keyword.Declaration
+' '           Text.Whitespace
+'h'           Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'???'         Operator
+'\n'          Text.Whitespace
+
+'lazy'        Keyword
+' '           Text.Whitespace
+'val'         Keyword.Declaration
+' '           Text.Whitespace
+'i'           Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'???'         Operator
+'\n'          Text.Whitespace
+
+'sealed'      Keyword
+' '           Text.Whitespace
+'trait'       Keyword
+' '           Text.Whitespace
+'j'           Name.Class
+'\n'          Text.Whitespace
+
+'implicit'    Keyword
+' '           Text.Whitespace
+'val'         Keyword.Declaration
+' '           Text.Whitespace
+'k'           Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'???'         Operator
+'\n'          Text.Whitespace
+
+'enum'        Keyword
+' '           Text.Whitespace
+'m'           Name.Class
+' '           Text.Whitespace
+'{'           Punctuation
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'inline'      Keyword
+' '           Text.Whitespace
+'val'         Keyword.Declaration
+' '           Text.Whitespace
+'n'           Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'???'         Operator
+'\n'          Text.Whitespace
+
+'opaque'      Keyword
+' '           Text.Whitespace
+'type'        Keyword
+' '           Text.Whitespace
+'o'           Name.Class
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'Unit'        Name.Class
+'\n'          Text.Whitespace
+
+'@volatile'   Name.Decorator
+' '           Text.Whitespace
+'@transient'  Name.Decorator
+' '           Text.Whitespace
+'@native'     Name.Decorator
+'\n'          Text.Whitespace
+
+'override'    Keyword
+' '           Text.Whitespace
+'def'         Keyword
+' '           Text.Whitespace
+'p'           Name.Function
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'???'         Operator
+'\n'          Text.Whitespace

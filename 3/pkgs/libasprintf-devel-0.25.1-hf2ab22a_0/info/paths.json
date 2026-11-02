@@ -1,0 +1,17 @@
+{
+  "paths": [
+    {
+      "_path": "include/autosprintf.h",
+      "path_type": "hardlink",
+      "sha256": "b63993786da0e9435ee611e08bfc12800e32f47c9820f7be42cb75687d7ee541",
+      "size_in_bytes": 2421
+    },
+    {
+      "_path": "lib/libasprintf.so",
+      "path_type": "softlink",
+      "sha256": "7a3f7ae69a26cd0cdf0c7487956c30041087a8ec69c95fa3900eec7cebafc65c",
+      "size_in_bytes": 110760
+    }
+  ],
+  "paths_version": 1
+}

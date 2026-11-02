@@ -1,0 +1,34 @@
+From acfe42c2a634212e5903e6aa96aea0697a42891f Mon Sep 17 00:00:00 2001
+From: "Uwe L. Korn" <uwe.korn@quantco.com>
+Date: Wed, 25 Sep 2024 20:56:25 +0200
+Subject: [PATCH 3/3] Don't try to compile to multiple OSX arches
+
+---
+ absl/copts/AbseilConfigureCopts.cmake | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+diff --git a/absl/copts/AbseilConfigureCopts.cmake b/absl/copts/AbseilConfigureCopts.cmake
+index f1d8b266..64ed9f3c 100644
+--- a/absl/copts/AbseilConfigureCopts.cmake
++++ b/absl/copts/AbseilConfigureCopts.cmake
+@@ -38,13 +38,13 @@ if(APPLE AND CMAKE_CXX_COMPILER_ID MATCHES [[Clang]])
+   # In both cases, the viable strategy is to pass all arguments at once, allowing
+   # the compiler to dispatch arch-specific arguments to a designated backend.
+   set(ABSL_RANDOM_RANDEN_COPTS "")
+-  foreach(_arch IN ITEMS "x86_64" "arm64")
+-    string(TOUPPER "${_arch}" _arch_uppercase)
+-    string(REPLACE "X86_64" "X64" _arch_uppercase ${_arch_uppercase})
+-    foreach(_flag IN LISTS ABSL_RANDOM_HWAES_${_arch_uppercase}_FLAGS)
+-      list(APPEND ABSL_RANDOM_RANDEN_COPTS "SHELL:-Xarch_${_arch} ${_flag}")
+-    endforeach()
+-  endforeach()
++  #foreach(_arch IN ITEMS "x86_64" "arm64")
++  #  string(TOUPPER "${_arch}" _arch_uppercase)
++  #  string(REPLACE "X86_64" "X64" _arch_uppercase ${_arch_uppercase})
++  #  foreach(_flag IN LISTS ABSL_RANDOM_HWAES_${_arch_uppercase}_FLAGS)
++  #    list(APPEND ABSL_RANDOM_RANDEN_COPTS "SHELL:-Xarch_${_arch} ${_flag}")
++  #  endforeach()
++  #endforeach()
+   # If a compiler happens to deal with an argument for a currently unused
+   # architecture, it will warn about an unused command line argument.
+   option(ABSL_RANDOM_RANDEN_COPTS_WARNING OFF

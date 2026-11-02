@@ -1,0 +1,140 @@
+'<%@'         Name.Tag
+' '           Text.Whitespace
+'Page'        Name
+' '           Text.Whitespace
+'Language'    Name
+'='           Operator
+'"C#"'        Literal.String
+' '           Text.Whitespace
+'%>'          Name.Tag
+'\n \n'       Text.Whitespace
+
+'<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"\n"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">' Comment.Preproc
+'\n \n'       Text.Whitespace
+
+'<script'     Name.Tag
+' '           Text.Whitespace
+'runat='      Name.Attribute
+'"server"'    Literal.String
+'>'           Name.Tag
+'\n'          Text.Whitespace
+
+' '           Text.Whitespace
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'protected'   Keyword
+' '           Text.Whitespace
+'void'        Keyword
+' '           Text.Whitespace
+'Page_Load'   Name.Function
+'('           Punctuation
+'object'      Keyword.Type
+' '           Text.Whitespace
+'sender'      Name
+','           Punctuation
+' '           Text.Whitespace
+'EventArgs'   Name
+' '           Text.Whitespace
+'e'           Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'{'           Punctuation
+'\n'          Text.Whitespace
+
+'        '    Text.Whitespace
+'Label1'      Name
+'.'           Punctuation
+'Text'        Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'DateTime'    Name
+'.'           Punctuation
+'Now'         Name
+'.'           Punctuation
+'ToLongDateString' Name
+'('           Punctuation
+')'           Punctuation
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+' '           Text.Whitespace
+'\n'          Text.Whitespace
+
+'</script>'   Name.Tag
+'\n \n'       Text.Whitespace
+
+'<html'       Name.Tag
+' '           Text.Whitespace
+'xmlns='      Name.Attribute
+'"http://www.w3.org/1999/xhtml"' Literal.String
+'>'           Name.Tag
+'\n'          Text.Whitespace
+
+'<head'       Name.Tag
+' '           Text.Whitespace
+'runat='      Name.Attribute
+'"server"'    Literal.String
+'>'           Name.Tag
+'\n    '      Text.Whitespace
+'<title'      Name.Tag
+'>'           Name.Tag
+'Sample'      Text
+' '           Text.Whitespace
+'page'        Text
+'</title>'    Name.Tag
+'\n'          Text.Whitespace
+
+'</head>'     Name.Tag
+'\n'          Text.Whitespace
+
+'<body'       Name.Tag
+'>'           Name.Tag
+'\n    '      Text.Whitespace
+'<form'       Name.Tag
+' '           Text.Whitespace
+'id='         Name.Attribute
+'"form1"'     Literal.String
+' '           Text.Whitespace
+'runat='      Name.Attribute
+'"server"'    Literal.String
+'>'           Name.Tag
+'\n    '      Text.Whitespace
+'<div'        Name.Tag
+'>'           Name.Tag
+'\n        '  Text.Whitespace
+'The'         Text
+' '           Text.Whitespace
+'current'     Text
+' '           Text.Whitespace
+'time'        Text
+' '           Text.Whitespace
+'is:'         Text
+' '           Text.Whitespace
+'<asp:Label'  Name.Tag
+' '           Text.Whitespace
+'runat='      Name.Attribute
+'"server"'    Literal.String
+' '           Text.Whitespace
+'id='         Name.Attribute
+'"Label1"'    Literal.String
+' '           Text.Whitespace
+'/>'          Name.Tag
+'\n    '      Text.Whitespace
+'</div>'      Name.Tag
+'\n    '      Text.Whitespace
+'</form>'     Name.Tag
+'\n \n'       Text.Whitespace
+
+'</body>'     Name.Tag
+'\n'          Text.Whitespace
+
+'</html>'     Name.Tag
+'\n'          Text.Whitespace

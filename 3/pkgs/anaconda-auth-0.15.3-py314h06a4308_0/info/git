@@ -1,0 +1,27 @@
+==> /home/task_178940650260633/croot/anaconda-auth_1789407038895/_build_env/bin/git log -n1 <==
+commit 95ca19536f37182b0ec0289cc7c6a5b383152a83
+Author: Matt Kramer <mkramer@anaconda.com>
+Date:   Tue Sep 8 17:00:24 2026 +0000
+
+    fix: Default to API key for repo.anaconda.cloud with fallback to repo token (#280)
+    
+    * fix: Add retry logic
+    
+    * chore: ignore click.utils.get_binary_stream DeprecationWarning from typer import
+    
+    * chore: broaden click.utils deprecation warning ignore for typer imports
+    
+    ---------
+    
+    Co-authored-by: Zeke Fralish <zfralish@anaconda.com>
+==> /home/task_178940650260633/croot/anaconda-auth_1789407038895/_build_env/bin/git describe --tags --dirty <==
+v0.15.3
+==> /home/task_178940650260633/croot/anaconda-auth_1789407038895/_build_env/bin/git status <==
+HEAD detached at 95ca195
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	build_env_setup.sh
+	conda_build.sh
+	metadata_conda_debug.yaml
+
+nothing added to commit but untracked files present (use "git add" to track)

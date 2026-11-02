@@ -1,0 +1,58 @@
+'def'         Keyword
+' '           Text.Whitespace
+'foo'         Name.Function
+'('           Punctuation
+')'           Punctuation
+':'           Punctuation
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'ur'          Literal.String.Affix
+'"""unicode-raw"""' Literal.String.Doc
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'def'         Keyword
+' '           Text.Whitespace
+'bar'         Name.Function
+'('           Punctuation
+')'           Punctuation
+':'           Punctuation
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'u'           Literal.String.Affix
+'"""unicode"""' Literal.String.Doc
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'def'         Keyword
+' '           Text.Whitespace
+'baz'         Name.Function
+'('           Punctuation
+')'           Punctuation
+':'           Punctuation
+'\n'          Text.Whitespace
+
+'    '        Text
+'r'           Literal.String.Affix
+"'"           Literal.String.Single
+'raw'         Literal.String.Single
+"'"           Literal.String.Single
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'def'         Keyword
+' '           Text.Whitespace
+'zap'         Name.Function
+'('           Punctuation
+')'           Punctuation
+':'           Punctuation
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'"""docstring"""' Literal.String.Doc
+'\n'          Text.Whitespace

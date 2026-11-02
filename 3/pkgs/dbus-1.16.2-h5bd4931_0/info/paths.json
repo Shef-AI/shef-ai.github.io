@@ -1,0 +1,329 @@
+{
+  "paths": [
+    {
+      "_path": "bin/dbus-cleanup-sockets",
+      "path_type": "hardlink",
+      "sha256": "490f02c21dae626823baa707fbf107b962d318b9273049811693bff1a7753add",
+      "size_in_bytes": 35056
+    },
+    {
+      "_path": "bin/dbus-daemon",
+      "file_mode": "binary",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/croot/dbus_1756144781092/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl",
+      "sha256": "4276d599091a53feb21011cbbd3c260b0bc72bb0b04a0a2b45d1237a9bc12163",
+      "size_in_bytes": 924472
+    },
+    {
+      "_path": "bin/dbus-launch",
+      "file_mode": "binary",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/croot/dbus_1756144781092/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl",
+      "sha256": "544f403540d8af7db60642ab18184705e7392ec724e28aec6e7b620f60fd42c4",
+      "size_in_bytes": 110064
+    },
+    {
+      "_path": "bin/dbus-monitor",
+      "path_type": "hardlink",
+      "sha256": "ccd67161f597dfe74354477238eb345b5ff055067c10993242a7d5c65a7417dc",
+      "size_in_bytes": 85800
+    },
+    {
+      "_path": "bin/dbus-run-session",
+      "path_type": "hardlink",
+      "sha256": "6f9ab6d8b47e76ab7165822dd8d2475766aeaf0cfd54c67281a6f48cfd32082f",
+      "size_in_bytes": 37848
+    },
+    {
+      "_path": "bin/dbus-send",
+      "path_type": "hardlink",
+      "sha256": "338f6115ce68c300f6d568d913eda3c362b64a05519eb048cad987d9f7e89ebf",
+      "size_in_bytes": 95600
+    },
+    {
+      "_path": "bin/dbus-test-tool",
+      "path_type": "hardlink",
+      "sha256": "e3338826085b68428883d6e6448843f7ab27564e4678776571f15419c8cbaf28",
+      "size_in_bytes": 68824
+    },
+    {
+      "_path": "bin/dbus-update-activation-environment",
+      "path_type": "hardlink",
+      "sha256": "ff4015869b78f217868eeac13a90a6ef01c93a91416ddd77e6c05e977996a313",
+      "size_in_bytes": 35304
+    },
+    {
+      "_path": "bin/dbus-uuidgen",
+      "path_type": "hardlink",
+      "sha256": "4629e99ee67a9f4afe5ea4414508738878cc24301a522ccca0f5dac3d0d6c981",
+      "size_in_bytes": 24312
+    },
+    {
+      "_path": "etc/dbus-1/session.conf",
+      "file_mode": "text",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/croot/dbus_1756144781092/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl",
+      "sha256": "de8b3097b2a479eefd42dd78997c63e924f44106a5a96f37fafd0ec789ed055c",
+      "size_in_bytes": 1340
+    },
+    {
+      "_path": "etc/dbus-1/system.conf",
+      "file_mode": "text",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/croot/dbus_1756144781092/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl",
+      "sha256": "5cce45bb781964badb4eb94100ef3c76749aff8fc6d0dc2abacd1b6c8f0b5848",
+      "size_in_bytes": 1335
+    },
+    {
+      "_path": "include/dbus-1.0/dbus/dbus-address.h",
+      "path_type": "hardlink",
+      "sha256": "5a6834badb73f871acaaea7f03f6497f50e958232a1dbe64f1f098e56c4557ce",
+      "size_in_bytes": 2868
+    },
+    {
+      "_path": "include/dbus-1.0/dbus/dbus-bus.h",
+      "path_type": "hardlink",
+      "sha256": "c50a3f89fab412a98544d98a1c94dc07ad5b540ebbf63e63105877039ff2f374",
+      "size_in_bytes": 3529
+    },
+    {
+      "_path": "include/dbus-1.0/dbus/dbus-connection.h",
+      "path_type": "hardlink",
+      "sha256": "f9496c07830e44fbda1668328b40c78527251c99e62919c80af479631ff794bf",
+      "size_in_bytes": 27295
+    },
+    {
+      "_path": "include/dbus-1.0/dbus/dbus-errors.h",
+      "path_type": "hardlink",
+      "sha256": "00292ccbbc3d30603c293122155151fd21aa26aa0adbc8333972440544f37ded",
+      "size_in_bytes": 2968
+    },
+    {
+      "_path": "include/dbus-1.0/dbus/dbus-macros.h",
+      "path_type": "hardlink",
+      "sha256": "78fc922e402466c826145dbfe31d2ae87682ef2df6233d436dc3399552f6362f",
+      "size_in_bytes": 6766
+    },
+    {
+      "_path": "include/dbus-1.0/dbus/dbus-memory.h",
+      "path_type": "hardlink",
+      "sha256": "7e0487d09e88e705bd166432e3d581aafe2e90c5654224505b73c56ae8d8cf2f",
+      "size_in_bytes": 2020
+    },
+    {
+      "_path": "include/dbus-1.0/dbus/dbus-message.h",
+      "path_type": "hardlink",
+      "sha256": "2dd354759e49fad23f25b3b85e73d9e6d4ad0034c08828af1d5f7226971f66d6",
+      "size_in_bytes": 15621
+    },
+    {
+      "_path": "include/dbus-1.0/dbus/dbus-misc.h",
+      "path_type": "hardlink",
+      "sha256": "6ff2e2f874f55a6b4738aea905ee413d814fec320b48ffd7f30a2df3237894aa",
+      "size_in_bytes": 1869
+    },
+    {
+      "_path": "include/dbus-1.0/dbus/dbus-pending-call.h",
+      "path_type": "hardlink",
+      "sha256": "0aee41fe9624a284935fee0d4b572a313f83230ac31bdead59dff96309b7d1e0",
+      "size_in_bytes": 3868
+    },
+    {
+      "_path": "include/dbus-1.0/dbus/dbus-protocol.h",
+      "path_type": "hardlink",
+      "sha256": "533fd55283662d1c013792a29e9993e31babe20d5a5dfedae2c4b8e8bebafc6a",
+      "size_in_bytes": 24015
+    },
+    {
+      "_path": "include/dbus-1.0/dbus/dbus-server.h",
+      "path_type": "hardlink",
+      "sha256": "f63bbd5503d13b1486b66a76cc9f289e19ff46d7b3c5f39df9953af3e6df0323",
+      "size_in_bytes": 5471
+    },
+    {
+      "_path": "include/dbus-1.0/dbus/dbus-shared.h",
+      "path_type": "hardlink",
+      "sha256": "97ed7edf5baf42bdee4d5777d63158599667078499ca1b0360ccedb013d3531c",
+      "size_in_bytes": 5451
+    },
+    {
+      "_path": "include/dbus-1.0/dbus/dbus-signature.h",
+      "path_type": "hardlink",
+      "sha256": "13a10246dee6a378899c88a9ac37e0eb618a1f91766fc27de0053309e6aac941",
+      "size_in_bytes": 3106
+    },
+    {
+      "_path": "include/dbus-1.0/dbus/dbus-syntax.h",
+      "path_type": "hardlink",
+      "sha256": "200170d6ee508b6daa8a17dc9b804a0a35fa555d8d8c8768258edd75dd36cd43",
+      "size_in_bytes": 2418
+    },
+    {
+      "_path": "include/dbus-1.0/dbus/dbus-threads.h",
+      "path_type": "hardlink",
+      "sha256": "16c10fafae90e9aaeaf0506f41432bfa389dfdf333115f8934680d88d83ae12d",
+      "size_in_bytes": 8564
+    },
+    {
+      "_path": "include/dbus-1.0/dbus/dbus-types.h",
+      "path_type": "hardlink",
+      "sha256": "0228e51763888e7319f0b8c862f0ee928e3079340408512f7e4a594e1eeae48d",
+      "size_in_bytes": 4839
+    },
+    {
+      "_path": "include/dbus-1.0/dbus/dbus.h",
+      "path_type": "hardlink",
+      "sha256": "56ff456922bf6df191958a291fc5d6d66f39b82b156bc2d715ef87add155cea5",
+      "size_in_bytes": 4020
+    },
+    {
+      "_path": "lib/cmake/DBus1/DBus1Config.cmake",
+      "path_type": "hardlink",
+      "sha256": "2b87ab38b3e12784248895cc9b3bde668f14e78d308e24d1976ddaa613e4431b",
+      "size_in_bytes": 3193
+    },
+    {
+      "_path": "lib/cmake/DBus1/DBus1ConfigVersion.cmake",
+      "path_type": "hardlink",
+      "sha256": "3192a0e2bc3bc301da62c4f28e244b6795f31089da92ae8f799613951932715d",
+      "size_in_bytes": 366
+    },
+    {
+      "_path": "lib/dbus-1.0/include/dbus/dbus-arch-deps.h",
+      "path_type": "hardlink",
+      "sha256": "599da3a9e936fdd5a1702b48cf1c0db5226e37931ff5f957f5d2fbfe63f89eca",
+      "size_in_bytes": 2167
+    },
+    {
+      "_path": "lib/libdbus-1.so",
+      "path_type": "softlink",
+      "sha256": "2c6aed297959d20918b415241081280e1311f43774a0d07c936c0360cbfcb6b6",
+      "size_in_bytes": 1401000
+    },
+    {
+      "_path": "lib/libdbus-1.so.3",
+      "path_type": "softlink",
+      "sha256": "2c6aed297959d20918b415241081280e1311f43774a0d07c936c0360cbfcb6b6",
+      "size_in_bytes": 1401000
+    },
+    {
+      "_path": "lib/libdbus-1.so.3.38.3",
+      "file_mode": "binary",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/croot/dbus_1756144781092/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl",
+      "sha256": "2c6aed297959d20918b415241081280e1311f43774a0d07c936c0360cbfcb6b6",
+      "size_in_bytes": 1401000
+    },
+    {
+      "_path": "lib/pkgconfig/dbus-1.pc",
+      "file_mode": "text",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/croot/dbus_1756144781092/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl",
+      "sha256": "66d00dd077eeded1c6f5e364e7037d6918179f3d5c416be34912600e0241463d",
+      "size_in_bytes": 1382
+    },
+    {
+      "_path": "libexec/dbus-daemon-launch-helper",
+      "file_mode": "binary",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/croot/dbus_1756144781092/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl",
+      "sha256": "96d0ed5c03e05460387dcc058134a6c2d24f94ac2b4d5f40d3e2d5b18f03d402",
+      "size_in_bytes": 206880
+    },
+    {
+      "_path": "share/dbus-1/session.conf",
+      "file_mode": "text",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/croot/dbus_1756144781092/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl",
+      "sha256": "926274616594450611ed76ed229fd3ed335dd6f8a586e04cb1d68d2de1d2124f",
+      "size_in_bytes": 4326
+    },
+    {
+      "_path": "share/dbus-1/system.conf",
+      "file_mode": "text",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/croot/dbus_1756144781092/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl",
+      "sha256": "42a89b0fd5f0785ef398ef1b2e2cb94e02f95083f59d051f3b2bd14ce01c32e5",
+      "size_in_bytes": 7336
+    },
+    {
+      "_path": "share/doc/dbus/diagram.png",
+      "path_type": "hardlink",
+      "sha256": "552d5d0582db3aa6f180eae85f97e822eebc6938b07d84e1a2063ab85ff3f3d7",
+      "size_in_bytes": 78762
+    },
+    {
+      "_path": "share/doc/dbus/diagram.svg",
+      "path_type": "hardlink",
+      "sha256": "7f30f1cc7d95526b8627253fac66e3db2748260dcd6a483a6937e6970510004e",
+      "size_in_bytes": 33892
+    },
+    {
+      "_path": "share/doc/dbus/examples/GetAllMatchRules.py",
+      "path_type": "hardlink",
+      "sha256": "c74450ed315eda77216755a229481cf32b4d503af50da5efe9b52dfe502a166c",
+      "size_in_bytes": 3924
+    },
+    {
+      "_path": "share/doc/dbus/examples/__pycache__/GetAllMatchRules.cpython-313.pyc",
+      "path_type": "hardlink",
+      "sha256": "0bec5c8a7609aa218e205bd16222a204eea4aa6943e9a7944ecf1ab53510af20",
+      "size_in_bytes": 6467
+    },
+    {
+      "_path": "share/doc/dbus/examples/example-session-disable-stats.conf",
+      "file_mode": "text",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/croot/dbus_1756144781092/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl",
+      "sha256": "15e5e96c6ef7a6e878586a0e2c04220b7553f9281ec1c64f4c86ec9b91104ef7",
+      "size_in_bytes": 861
+    },
+    {
+      "_path": "share/doc/dbus/examples/example-system-enable-stats.conf",
+      "file_mode": "text",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/croot/dbus_1756144781092/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl",
+      "sha256": "0c1326fcbcf8c2a11429361dbb2975e2f896cfb2c696e1f0594f8ec6e185dc38",
+      "size_in_bytes": 827
+    },
+    {
+      "_path": "share/doc/dbus/examples/example-system-hardening-without-traditional-activation.conf",
+      "path_type": "hardlink",
+      "sha256": "3c340785681ec1a73d497575c8ad44ee5de6f098c25055863b90d3fbcba7d8d7",
+      "size_in_bytes": 1048
+    },
+    {
+      "_path": "share/doc/dbus/index.html",
+      "path_type": "hardlink",
+      "sha256": "6d7472ddbde7cd341b68e07ea2744a70ff1e1770d62f1ef9694c8eaadae97e6e",
+      "size_in_bytes": 998
+    },
+    {
+      "_path": "share/doc/dbus/system-activation.txt",
+      "path_type": "hardlink",
+      "sha256": "adf91f1eed77db6e0ea41a0c21da7bf3641e6640dcd0524885e4a53ea3dc6537",
+      "size_in_bytes": 3175
+    },
+    {
+      "_path": "share/xml/dbus-1/busconfig.dtd",
+      "path_type": "hardlink",
+      "sha256": "9403dd9564b4568d62ca9004d40e2d0c1141ad2a1274d50e97bac66f98cc739d",
+      "size_in_bytes": 1907
+    },
+    {
+      "_path": "share/xml/dbus-1/catalog.xml",
+      "file_mode": "text",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/croot/dbus_1756144781092/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pl",
+      "sha256": "258bc441065d4e0104ceef804fef81a2a3646c0226ffd5477d5090b457912ee1",
+      "size_in_bytes": 1616
+    },
+    {
+      "_path": "share/xml/dbus-1/introspect.dtd",
+      "path_type": "hardlink",
+      "sha256": "be73d84e8f764478f78be388385eaa7a3e4c86d314f9d68934f2c7be8b0d25bf",
+      "size_in_bytes": 1226
+    }
+  ],
+  "paths_version": 1
+}

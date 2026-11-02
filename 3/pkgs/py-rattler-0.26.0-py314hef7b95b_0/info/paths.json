@@ -1,0 +1,893 @@
+{
+  "paths": [
+    {
+      "_path": "lib/python3.14/site-packages/py_rattler-0.26.0.dist-info/INSTALLER",
+      "path_type": "hardlink",
+      "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+      "size_in_bytes": 5
+    },
+    {
+      "_path": "lib/python3.14/site-packages/py_rattler-0.26.0.dist-info/METADATA",
+      "path_type": "hardlink",
+      "sha256": "77b3692767de0289c2133395f394fe66cd7512a2ea0201d5d221ad324ba19c2b",
+      "size_in_bytes": 10526
+    },
+    {
+      "_path": "lib/python3.14/site-packages/py_rattler-0.26.0.dist-info/RECORD",
+      "path_type": "hardlink",
+      "sha256": "b101517b0441c47990a7c2aad09471d1b03e38818b352fd656afa94a224652a7",
+      "size_in_bytes": 10850
+    },
+    {
+      "_path": "lib/python3.14/site-packages/py_rattler-0.26.0.dist-info/REQUESTED",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "lib/python3.14/site-packages/py_rattler-0.26.0.dist-info/WHEEL",
+      "path_type": "hardlink",
+      "sha256": "b0b293386a1885cc677f4973f74d15f2241b15abcf46b883476bc44cd5423e64",
+      "size_in_bytes": 99
+    },
+    {
+      "_path": "lib/python3.14/site-packages/py_rattler-0.26.0.dist-info/direct_url.json",
+      "path_type": "hardlink",
+      "sha256": "992092c390ca2541a2d17a135c1f61bd593bf17f8b59256653fbb352bf23a308",
+      "size_in_bytes": 102
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "4c0041922a6b3265254562b936a9c6c15b7ce4c014dd5408f619ef3a745602f8",
+      "size_in_bytes": 3403
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "2efff76086d19d67c21da87863641dfd156b7c820aba2a2eef7655fc17d7a127",
+      "size_in_bytes": 4111
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/__pycache__/exceptions.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "ad22c9d6b4a43d9b0c255625d3cc1836850f48c6fb7d09cfafec3a815ceca906",
+      "size_in_bytes": 9723
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/channel/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "2be640a34a85cdc85758ffba0e93072e0fdd8c60f6e7ed02470bac8ac206a7c9",
+      "size_in_bytes": 221
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/channel/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "1c84fb252bf323caf1e161b914c47e0c5181ab1d02176a65a115acf447c67554",
+      "size_in_bytes": 394
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/channel/__pycache__/channel.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "82deb09a3cb2725076921fe1647d47708c57460a1b38c06863531baf4309fb7b",
+      "size_in_bytes": 4060
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/channel/__pycache__/channel_config.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "c95fa1405c1277fb1330d7b9b4925202139e84caea68b9be9e074d6fadbea4ef",
+      "size_in_bytes": 2310
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/channel/__pycache__/channel_priority.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "1edc68b47caaa8c93cb97921148696e2d356d0c45f444024d700de29d6da77f1",
+      "size_in_bytes": 1116
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/channel/channel.py",
+      "path_type": "hardlink",
+      "sha256": "90679929afd891233de37080d62ffc3b51571bd912f6192b9e64a5e8e8646db4",
+      "size_in_bytes": 2474
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/channel/channel_config.py",
+      "path_type": "hardlink",
+      "sha256": "ad10f87467874c121c9b7bd3b90475c1319310b35d37af72ab897209a4da3773",
+      "size_in_bytes": 1532
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/channel/channel_priority.py",
+      "path_type": "hardlink",
+      "sha256": "1b6113323a536effa5f5bffa26841c96d399c9cca7ee087eadd62bfc4f13b71a",
+      "size_in_bytes": 718
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/config/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "b05067471547cee474ec7f6e5a95032811cb8f33384204e5a9fea39e416c2d13",
+      "size_in_bytes": 135
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/config/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "8e6cdb2e3674b5597331f3e00cb4913a8e72165003a3113ac74af886698c97fa",
+      "size_in_bytes": 286
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/config/__pycache__/config.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "72a445d83dc4ed0a197469e712efd071fd66b886ca43413930699d4a0bf9dc19",
+      "size_in_bytes": 25465
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/config/config.py",
+      "path_type": "hardlink",
+      "sha256": "4b8761067616ea46122769d391f4fb5327dc300d319f4466d2ce32fcdfc7985e",
+      "size_in_bytes": 17997
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/exceptions.py",
+      "path_type": "hardlink",
+      "sha256": "08348820b19f89574e49dacfae136676f237679294cc33694d5bbcb2a1b06776",
+      "size_in_bytes": 7281
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/explicit_environment/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "4079b0664755b7eb452feb4411d84b747ddaa6e23917b125a4ccc2459787dffa",
+      "size_in_bytes": 170
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/explicit_environment/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "f501f773cf2e79fbb3c62680977b83fd5c051a5291ca810bf7b962902530aefd",
+      "size_in_bytes": 332
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/explicit_environment/__pycache__/environment.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "823ef98c43d83a8fc7bf401977c9c1e60741b6363240294d9615f3598a90b8de",
+      "size_in_bytes": 5216
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/explicit_environment/environment.py",
+      "path_type": "hardlink",
+      "sha256": "0ea72f9b973b0b72b4149d3861537c58852b97447c15ed9379767842af0383ed",
+      "size_in_bytes": 2641
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/index/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "6e9a5fc6602647ef09c2afe18d3a7321739d2a55f153913fafc9ff019e4f6d04",
+      "size_in_bytes": 484
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/index/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "77cf91bd406388e1d093b9281934c725b8fb94dadb868af4a465bcd8d616a824",
+      "size_in_bytes": 543
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/index/__pycache__/index.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "b2200af9d36d3e20c6913b5181ee0ce74c511a4e5c987f82fa55112400aa194e",
+      "size_in_bytes": 12864
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/index/index.py",
+      "path_type": "hardlink",
+      "sha256": "640376c03ebd73c7f1e720bfffa96a8414f1b464f1d7c5211c571cc33a106350",
+      "size_in_bytes": 11738
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/install/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "3f236e09c83bfefd8cf49927aa78cb69a2482870b401e7de8117aaac26fd6e4e",
+      "size_in_bytes": 109
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/install/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "f55df96373b2458d60cade3ce3b169922e77356a9b915d3b11b37ad963cde107",
+      "size_in_bytes": 281
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/install/__pycache__/installer.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "ce489fd4932131e4e4a0a860fc80b148a8e4e58d7c2b215c05b6a66f1901544b",
+      "size_in_bytes": 17447
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/install/installer.py",
+      "path_type": "hardlink",
+      "sha256": "a4f723003967631abaccdb226c342a9125656a2ad2051c02bdfe0ff66f8ef244",
+      "size_in_bytes": 13763
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/lock/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "16816cc88565f22cdfaf7313787512c37df2fed49e661f786660b415cb430b20",
+      "size_in_bytes": 638
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/lock/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "1760b03668f0d9c577a2b0f4238f82b47be8cd718fa3fffa0def68018bf725cb",
+      "size_in_bytes": 712
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/lock/__pycache__/channel.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "840567d3da9b85ec13d4acc58a9a6e1da3c6c3aabc97cc5069b88ee4c45e21d8",
+      "size_in_bytes": 2606
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/lock/__pycache__/environment.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "84d48632cc73113ec381d0c019a49e84d372f345b7ab909ada85504a23630579",
+      "size_in_bytes": 12025
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/lock/__pycache__/hash.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "3c914663ae187e03d52250bd2cafc10e9859e10b4300afddda45a9f250638874",
+      "size_in_bytes": 2163
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/lock/__pycache__/lock_file.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "fb74647ee9c685806b3570287be0f95f60a5d95727f0df5fddce69445c9f3a0d",
+      "size_in_bytes": 10325
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/lock/__pycache__/package.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "c3468e5ca06abc52b2bf93812967f17bbcd4e218c8f7cde4fcd52db9035bd0ec",
+      "size_in_bytes": 12267
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/lock/__pycache__/platform.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "ef7290b167e671567132a3e9f21e4fd39cf632f3a40c2e737e82d37735271904",
+      "size_in_bytes": 4923
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/lock/channel.py",
+      "path_type": "hardlink",
+      "sha256": "3da2dbfaf5912d3256531edfc8c74fd93a30e703251aeab7594ac792b408cde8",
+      "size_in_bytes": 1331
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/lock/environment.py",
+      "path_type": "hardlink",
+      "sha256": "20a833b8b12346b0278289a25d75decaaa73783864b265ff28e9434af34fe9d3",
+      "size_in_bytes": 8492
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/lock/hash.py",
+      "path_type": "hardlink",
+      "sha256": "a8d8a0d6c7f911f45f6822bdc77e760e0a93a4b768ef91aee2abd16436cbdf74",
+      "size_in_bytes": 805
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/lock/lock_file.py",
+      "path_type": "hardlink",
+      "sha256": "4a9e3c9a69b18169b5363b38c162d1f9e7986388a8838f789063df660b1d4b05",
+      "size_in_bytes": 7219
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/lock/package.py",
+      "path_type": "hardlink",
+      "sha256": "154b278bbbb361eeb9daabf26de0c7535c21df9b0741855a66d69f93c424b6a3",
+      "size_in_bytes": 8262
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/lock/platform.py",
+      "path_type": "hardlink",
+      "sha256": "72a3c1642f6ed2f71a4442fc57e675b6d905000842b30e5e4ccfd6719dc160c8",
+      "size_in_bytes": 3182
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/match_spec/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "b81577a2fd559422199485a1931c4c3dc4ea441179a7996abd3da0ea442fe644",
+      "size_in_bytes": 167
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/match_spec/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "d2c10362436a6f9c97c7f421ae1ef1bfc4f3509c8ad0ccf01eb4d1110b076000",
+      "size_in_bytes": 343
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/match_spec/__pycache__/match_spec.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "e029e4e3bd39983e23cc6d88815549b031a67d0201eca466332d9e61c05a9ed0",
+      "size_in_bytes": 15842
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/match_spec/__pycache__/nameless_match_spec.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "f35255461196555e2ce84b004e6ec53e547b23b41e70d92fed931c8ff58a1378",
+      "size_in_bytes": 9538
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/match_spec/match_spec.py",
+      "path_type": "hardlink",
+      "sha256": "b8ef686b45943d941d2d43ae6ec92e8748177c0cf8fbcf9b3407a30f79e0ec07",
+      "size_in_bytes": 11559
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/match_spec/nameless_match_spec.py",
+      "path_type": "hardlink",
+      "sha256": "d1b8a1bcd8e97f9408670f93c549ff5777101dab759a1b73707da2372d494c84",
+      "size_in_bytes": 5461
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/networking/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "7c9534894597af6bed978cb60014d4b13f95cccda93b96c704e925c88a072476",
+      "size_in_bytes": 612
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/networking/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "eee773db49df10cdac2b095be590f2b8cf5076e8ddd5441c7e154859a9e6fecc",
+      "size_in_bytes": 675
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/networking/__pycache__/client.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "fbfc346cd57747c76fee13839fee5eb53b7c1fce562d75fbd8028bb6334e48f2",
+      "size_in_bytes": 5403
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/networking/__pycache__/fetch_repo_data.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "8f0a845616aea5bd6b4bfb6f29fa7350cc9cf637eb3c856c56980a2ea5d304f4",
+      "size_in_bytes": 4748
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/networking/__pycache__/middleware.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "6b7be46e5ef49f45f8a3682c1da4843b70d615feb113df51a7b1e2eb42782f1e",
+      "size_in_bytes": 11861
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/networking/client.py",
+      "path_type": "hardlink",
+      "sha256": "96424a04fa98313d5e426f1c6c25e873a1d2ff71f1ba4e2fe4eef2ae979d81b9",
+      "size_in_bytes": 4264
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/networking/fetch_repo_data.py",
+      "path_type": "hardlink",
+      "sha256": "9d8eed32154762c6a960e800c35725970b19c9400963031a11532ed1b335c9c3",
+      "size_in_bytes": 4038
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/networking/middleware.py",
+      "path_type": "hardlink",
+      "sha256": "b424c215034494dcc9d5b695afe16107b3e098b26ed3806baa2ab59e74b14a18",
+      "size_in_bytes": 7154
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/package/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "a265e72d52029221fb1e2694ce945601a2714bde795229a6d694fc75e8c98155",
+      "size_in_bytes": 624
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/package/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "ccdb09c2cf2089e763c87544d14073b51fc8821c2740ad86fe16559aacab5477",
+      "size_in_bytes": 742
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/package/__pycache__/about_json.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "a1bbad4e3865baa1fac278ee39512ca0a843d545fb89ad52bfbe13f26935ab72",
+      "size_in_bytes": 15480
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/package/__pycache__/index_json.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "a88bd269089fde2f2869a3a5b18dd48c7816a8ea0c6dd989c93b68635456afc6",
+      "size_in_bytes": 28750
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/package/__pycache__/no_arch_type.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "a22760accd206c1157460667b9e786d7f9fb8dc48944c41b49f450410a2517cf",
+      "size_in_bytes": 5987
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/package/__pycache__/package_name.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "61bdcf870027a954524b53b0b15818249fcf17bd1a47e1941db217f7206cf8c4",
+      "size_in_bytes": 8427
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/package/__pycache__/package_name_matcher.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "599c1cac24ed208690828be2dee5df3f7351f853bf5d48ded3fd2ef0133d7854",
+      "size_in_bytes": 4027
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/package/__pycache__/paths_json.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "1e14899768266a133bb3acb62aa55f5b48e74ba012fe00562fe761eea3b5bba1",
+      "size_in_bytes": 32124
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/package/__pycache__/run_exports_json.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "4e5022754e0d5d731b278ffb1a02804db325633595889d0b639b951db084dc21",
+      "size_in_bytes": 13995
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/package/about_json.py",
+      "path_type": "hardlink",
+      "sha256": "84c32739d2b4b9c156ced970affaf0bd976f4340e04c1856e707488bdb9c8670",
+      "size_in_bytes": 10066
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/package/index_json.py",
+      "path_type": "hardlink",
+      "sha256": "fa9e018f7e12b47da078e04ac879c244030c9ebeb05bf70b62cc1b513d65104f",
+      "size_in_bytes": 18610
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/package/no_arch_type.py",
+      "path_type": "hardlink",
+      "sha256": "cbfd6ca62226637eb9e120cb4505b2a799aaaf897e818288b8ae290a710f8f5b",
+      "size_in_bytes": 3740
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/package/package_name.py",
+      "path_type": "hardlink",
+      "sha256": "e24f66ce86199cf439bb8a26d5593fbeaf7ac1a670b0746f3974a61edc0ca40b",
+      "size_in_bytes": 5985
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/package/package_name_matcher.py",
+      "path_type": "hardlink",
+      "sha256": "e0caee2d2c7a7d5b43905a811c89d482cf79bf8aebef3693c85f144f40475e04",
+      "size_in_bytes": 2545
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/package/paths_json.py",
+      "path_type": "hardlink",
+      "sha256": "c0c41fca89acf987c64a6436b69f2b6aae0a21f49a4862b79f9619733a0cf2c7",
+      "size_in_bytes": 21935
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/package/run_exports_json.py",
+      "path_type": "hardlink",
+      "sha256": "d7e475d4566cc2d04a01477e1797eebaa0747f9e92d6517a12496154c1eccb88",
+      "size_in_bytes": 9825
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/package_streaming/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "c177580076f2a6f2adad52d26c47e573d9bcb76df40d363481227b1ac15e3547",
+      "size_in_bytes": 11693
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/package_streaming/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "3647eb33021e324802e066816e14ac928f34720b45f44449e9bcde83b9c0e0c1",
+      "size_in_bytes": 19739
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/platform/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "619697c672661bf5a361b8480310348d00e168f600478ad35500a6e32468c994",
+      "size_in_bytes": 154
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/platform/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "146496313bad5218aec5e5c74d2801ad1a9a2b275060a8c1fc80343006dd5e5f",
+      "size_in_bytes": 333
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/platform/__pycache__/arch.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "bb217df4af1abd019760178f946c2d7692ea9d6ce780db3cd109848837743b05",
+      "size_in_bytes": 2431
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/platform/__pycache__/platform.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "1ffa9aa7f661abf5f4e5fa0526d1cd3cb677399d83f7ebb28ac4d44df8ea2377",
+      "size_in_bytes": 8876
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/platform/arch.py",
+      "path_type": "hardlink",
+      "sha256": "2e03d8c2fea202aee9d576d58eae7e628d56b7e6971a47fddced5dd7fba4cc04",
+      "size_in_bytes": 1178
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/platform/platform.py",
+      "path_type": "hardlink",
+      "sha256": "1e3eae7d7ca24465ea58271e4dfb80e1c73d22ffa22d7093987fe798dc731721",
+      "size_in_bytes": 5111
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/prefix/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "824832a99d324e6c4e096f031ee486f97d2ca44cdbf012288a8c7c606e745d87",
+      "size_in_bytes": 257
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/prefix/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "f9b8134e28d20a0713f047a8b490749d23340078110e829677b308d727eb0612",
+      "size_in_bytes": 432
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/prefix/__pycache__/prefix_paths.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "f1b2c290d9cefa763dcb4532a60ab8b018e77ef20d6bbf3ddd1f2c31044a5606",
+      "size_in_bytes": 20895
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/prefix/__pycache__/prefix_record.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "d887c8e08720e16aef5e3efbf217d4199588321a0a71d8421b5b6e55116fdce7",
+      "size_in_bytes": 11467
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/prefix/prefix_paths.py",
+      "path_type": "hardlink",
+      "sha256": "0741303859156d2cee2c285d8e48de9d37a17f18d7c3030122875218e7c11c55",
+      "size_in_bytes": 12828
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/prefix/prefix_record.py",
+      "path_type": "hardlink",
+      "sha256": "d402d24711e586438097cebf1ca854fe5f8dcb43cad758deeab9c7a3d6a57e1f",
+      "size_in_bytes": 7048
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/pty/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "948a1e714427b1c275b6e8b95efc8889515caadc41fa3a59b00d4f7970ca3bb4",
+      "size_in_bytes": 794
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/pty/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "2cfe7172d7638f745c0e2d04fbcdf92aab5483be7152c7e9738a464a59c14dcf",
+      "size_in_bytes": 994
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/pty/__pycache__/pty_process.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "ff08dfc29ff49f8d34fd94408d6bfe90bb6bcb1cbdf56f1ac24b4ee8ee29cbc8",
+      "size_in_bytes": 14873
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/pty/__pycache__/pty_session.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "65bc3ddb08b516ab5145c9972fdb5626e6fb957bec981c1852461408b90fd2b1",
+      "size_in_bytes": 8592
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/pty/pty_process.py",
+      "path_type": "hardlink",
+      "sha256": "ac7696a9d137f240ede2759a5f7e0df217d1f9286c7c1fe16aa9cc744900e085",
+      "size_in_bytes": 11583
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/pty/pty_session.py",
+      "path_type": "hardlink",
+      "sha256": "1a68f61410bd6d6e6e6bbb79db74fd6c9370a9ee6af2ca83bbad6de98fc3d30b",
+      "size_in_bytes": 7329
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/py.typed",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/rattler.abi3.so",
+      "path_type": "hardlink",
+      "sha256": "9b63c1e3767d9c2abc980678925c7cbeac62af51560c6559a03a489ebdbd53d2",
+      "size_in_bytes": 38547736
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/repo_data/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "f8eb5b9a3ff720b92cc5ec3a8d4b0c71842dc9d6b8a8e3b281e85b6e0f04d51d",
+      "size_in_bytes": 1187
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/repo_data/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "e196274a4eec0a5ce3196d444fcab0c4b436b1d82f069ca93b77e28bc13b72f7",
+      "size_in_bytes": 1225
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/repo_data/__pycache__/gateway.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "09139eb31437ea134d39526714a40debefca26776c7fe5746b06c52e6869f51c",
+      "size_in_bytes": 28972
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/repo_data/__pycache__/package_record.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "645ac3cc12ff310e9b0be04d18bbfc66a27a823ca0118155fd0002d44a92f71c",
+      "size_in_bytes": 44359
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/repo_data/__pycache__/patch_instructions.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "8fac5c7fd701a4ebc11abdddb1c9e1148a218f834c308ba793a3c52d50784f61",
+      "size_in_bytes": 1599
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/repo_data/__pycache__/record.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "f555b52265d53b1d536ea218c0fe51da22ee9537d92d074d7313db9587a044c9",
+      "size_in_bytes": 7695
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/repo_data/__pycache__/removed_package.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "b6e3e95fb6c85b148a6f7c58813f26ae0876a43b997a9aaf314bbaf449b9d5d7",
+      "size_in_bytes": 1779
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/repo_data/__pycache__/repo_data.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "066ba768d9027bd7a7bf2b56a1f0da11f0dc350d541087fa78f013b6fbba4f43",
+      "size_in_bytes": 11906
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/repo_data/__pycache__/revisions.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "803bc2b4470967fc5729de9b38e73445c5402a2ebc158fb07b9ec70de96ffc6c",
+      "size_in_bytes": 2359
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/repo_data/__pycache__/source.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "d516a87f48679d4474e8273df4f29a69f9666faba4732fc278af29906f8acbac",
+      "size_in_bytes": 3696
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/repo_data/__pycache__/sparse.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "116e901ac9ef768bc6e9da34566929cbf447dacf7f6a59b4baeb0da558bb146d",
+      "size_in_bytes": 17462
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/repo_data/__pycache__/whl_package_record.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "79cd5878b7324bdde15bf14824f2a5589092d20405b854987edf6f6709194345",
+      "size_in_bytes": 2002
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/repo_data/__pycache__/who_needs.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "a16fb6a46779ae2d255e5fa789334b6d41770474c56c216a4683a4a60669e2e8",
+      "size_in_bytes": 5336
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/repo_data/gateway.py",
+      "path_type": "hardlink",
+      "sha256": "f6a788605be7e12c6c628c333e55a23f7120912216bee88da582d3ed9471507e",
+      "size_in_bytes": 25263
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/repo_data/package_record.py",
+      "path_type": "hardlink",
+      "sha256": "053dd3f79407f82a57dc545c5f10f45b262b5ee6ad9056525cbabb34d14e4ad9",
+      "size_in_bytes": 34253
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/repo_data/patch_instructions.py",
+      "path_type": "hardlink",
+      "sha256": "4cd6bb3602eda8643a952a626cb171b8f170b26a912eb391a4364ea5e6797e79",
+      "size_in_bytes": 694
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/repo_data/record.py",
+      "path_type": "hardlink",
+      "sha256": "1951c59a5aab71047efd79121160019bd594fef1a6680f270fc93cb5c87b3548",
+      "size_in_bytes": 5604
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/repo_data/removed_package.py",
+      "path_type": "hardlink",
+      "sha256": "cf04722fedec55cfede2375df553ddeba96a24658a31fc15a5831d1e19ea363a",
+      "size_in_bytes": 1445
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/repo_data/repo_data.py",
+      "path_type": "hardlink",
+      "sha256": "59b0673f19ce501bc26d3f0a12791e235f885d1cbf2df1cbc8fdf6adb3a89246",
+      "size_in_bytes": 6634
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/repo_data/revisions.py",
+      "path_type": "hardlink",
+      "sha256": "9e5b04d5cb032edddbdae83356a21ec232ecbcab932c13e99bb95e01da857439",
+      "size_in_bytes": 1536
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/repo_data/source.py",
+      "path_type": "hardlink",
+      "sha256": "587a575e767402dd1c896a2d8577026aef6f60908ed682ec756eac9d7d5605ae",
+      "size_in_bytes": 2959
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/repo_data/sparse.py",
+      "path_type": "hardlink",
+      "sha256": "91307190b45d0e28a9f0644e092a4e5a5bf80c60be50cb487acd2a3896ff97bb",
+      "size_in_bytes": 14448
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/repo_data/whl_package_record.py",
+      "path_type": "hardlink",
+      "sha256": "def16aa30c939345faa465e2071a2a5da468d75317de7d8b23b20f651f64f2ce",
+      "size_in_bytes": 714
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/repo_data/who_needs.py",
+      "path_type": "hardlink",
+      "sha256": "d5de185de179d1c58bf6d397c900d6909269893bfedcb667dd8820e50cfaa870",
+      "size_in_bytes": 2649
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/shell/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "196e4099f9b0ee59fd97890105909e95a2716013f9c5b93936374d2cc66134c5",
+      "size_in_bytes": 179
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/shell/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "e87f0be0fe57ff0ccc853561ea8b75ddebcfe4f6f142dd828dda434fea98a4f6",
+      "size_in_bytes": 314
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/shell/__pycache__/shell.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "e34153d97c5976ed98933b833353c3cdde2750de11890a9eb34b228746776e55",
+      "size_in_bytes": 7281
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/shell/shell.py",
+      "path_type": "hardlink",
+      "sha256": "149d477777cc41209dee33479a93ce477c082a500374d6536595b8da590d4d8d",
+      "size_in_bytes": 4543
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/solver/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "35969bade95bfe972a3a2e4fc994ebdce7816e377ce48a96d7edb298e04efa4d",
+      "size_in_bytes": 119
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/solver/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "0a48d5eb56431c7f750ed5d3a5c17b06dce9f1e31a2fc5192da8cbd12714389b",
+      "size_in_bytes": 283
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/solver/__pycache__/solver.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "f40719cded6fb3d54626b63bd1b5ae491cd9a109ac8029a0323e0710e25b67d1",
+      "size_in_bytes": 15315
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/solver/solver.py",
+      "path_type": "hardlink",
+      "sha256": "fbc06cba4eb44e5857ffc0b4fd54929d3468e800f451fbfdae94cad000c6c693",
+      "size_in_bytes": 13621
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/utils/__pycache__/rattler_version.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "8cb82a84c65f6e15efe1a0621dfba93fca8f943b5c3a1321d1948911010c7c7c",
+      "size_in_bytes": 896
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/utils/rattler_version.py",
+      "path_type": "hardlink",
+      "sha256": "79701537a358839126b10fc3adf8315b5c89fde580956c7b20035ab0c458815e",
+      "size_in_bytes": 526
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/version/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "9fcc22d7e9b0e0081a107cd4a1cfa91b497eec6d3aeb94cc32c10a6fe7d21c10",
+      "size_in_bytes": 214
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/version/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "d509defdcd201761f0c5eabb83c5ad35bbe31e1ef03bdc2b03e350eaace89976",
+      "size_in_bytes": 387
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/version/__pycache__/version.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "7b1d0afa2bf68d19fab7c7df03b6da84ba136fd2b6e136c86d9dee7f6a1402a7",
+      "size_in_bytes": 20932
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/version/__pycache__/version_spec.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "e741c444b0bbfb8b5ae7ee7e743cf570d8658b8e34314db2624d166156b33bc6",
+      "size_in_bytes": 6570
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/version/__pycache__/with_source.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "a95e94e515d589835b695dcd33c9f1c66a41de7fd8c0ae1fda2db2813b1756c0",
+      "size_in_bytes": 4113
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/version/version.py",
+      "path_type": "hardlink",
+      "sha256": "ca3e36ae5f92fad4d85b08da0b23f826490e21cfa7f684999a4813ca9bfadf56",
+      "size_in_bytes": 15946
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/version/version_spec.py",
+      "path_type": "hardlink",
+      "sha256": "62685ccfbdee12b7b5fa7dd3048745cf75ba617044e147dc01dccda8d7bee1d5",
+      "size_in_bytes": 4820
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/version/with_source.py",
+      "path_type": "hardlink",
+      "sha256": "9c45bf8deb5db01fb984a9f11d5620c0eb1dd0401ed1f34a6822e50f87c86623",
+      "size_in_bytes": 2539
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/virtual_package/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "a4ebef0fef15e8b779818063d8a3c8dfe7192f1f26da1725e9da915280531eec",
+      "size_in_bytes": 262
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/virtual_package/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "1c5eba232829d65269df025a71224300937169ef7d5bd8b13f1bd33360bcad44",
+      "size_in_bytes": 422
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/virtual_package/__pycache__/generic.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "e62c61d46cf982467bccfb553146ade4520e7203ea92495bd63573c71dc78f10",
+      "size_in_bytes": 6188
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/virtual_package/__pycache__/virtual_package.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "8f69b552b393444fbedfb9344dc5a4b43d068336f51ce14afb440977d545873c",
+      "size_in_bytes": 16380
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/virtual_package/generic.py",
+      "path_type": "hardlink",
+      "sha256": "ced0d51cb35b3b649e9994a97686b649da177194f5868a6f045435d5f3416664",
+      "size_in_bytes": 4411
+    },
+    {
+      "_path": "lib/python3.14/site-packages/rattler/virtual_package/virtual_package.py",
+      "path_type": "hardlink",
+      "sha256": "683ed2afd4e5081c98624e069c29096d371f4e2a5eae57cc2c6036f138b649b6",
+      "size_in_bytes": 8588
+    }
+  ],
+  "paths_version": 1
+}

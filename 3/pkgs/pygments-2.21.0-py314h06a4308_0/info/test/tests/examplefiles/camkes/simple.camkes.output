@@ -1,0 +1,139 @@
+'/*\n * Example input for CAmkES lexer.\n */' Comment
+'\n\n'        Text.Whitespace
+
+'import'      Comment.Preproc
+' '           Text.Whitespace
+'<std_connector.camkes>;' Comment.Preproc
+'\n\n'        Text.Whitespace
+
+'// A single-line comment.' Comment
+'\n\n'        Text.Whitespace
+
+'import'      Comment.Preproc
+' '           Text.Whitespace
+'"components/Client/Client.camkes";' Comment.Preproc
+'\n'          Text.Whitespace
+
+'import'      Comment.Preproc
+' '           Text.Whitespace
+'"components/Echo/Echo.camkes";' Comment.Preproc
+'\n\n'        Text.Whitespace
+
+'component'   Keyword
+' '           Text.Whitespace
+'Foo'         Name
+' '           Text.Whitespace
+'{'           Punctuation
+'\n  '        Text.Whitespace
+'include'     Comment.Preproc
+' '           Text.Whitespace
+'"proc_defn.h";' Comment.Preproc
+'\n  '        Text.Whitespace
+'control'     Keyword
+';'           Punctuation
+'\n  '        Text.Whitespace
+'dataport'    Keyword
+' '           Text.Whitespace
+'Buf'         Keyword.Type
+' '           Text.Whitespace
+'my_port'     Name
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n\n'        Text.Whitespace
+
+'#ifdef BAR_AVAILABLE' Comment.Preproc
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'component'   Keyword
+' '           Text.Whitespace
+'Bar'         Name
+' '           Text.Whitespace
+'{'           Punctuation
+'\n    '      Text.Whitespace
+'provides'    Keyword
+' '           Text.Whitespace
+'CharAccess'  Name
+' '           Text.Whitespace
+'ca'          Name
+';'           Punctuation
+'\n  '        Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'#endif'      Comment.Preproc
+'\n'          Text.Whitespace
+
+'\n    '      Text.Whitespace
+'#define HASH_DEF_WITH_LEADING_SPACE' Comment.Preproc
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'assembly'    Keyword
+' '           Text.Whitespace
+'{'           Punctuation
+' '           Text.Whitespace
+'/* Another multiline comment. */' Comment
+'\n  '        Text.Whitespace
+'composition' Keyword
+' '           Text.Whitespace
+'{'           Punctuation
+'\n    '      Text.Whitespace
+'component'   Keyword
+' '           Text.Whitespace
+'Echo'        Name
+' '           Text.Whitespace
+'echo'        Name
+';'           Punctuation
+'\n    '      Text.Whitespace
+'component'   Keyword
+' '           Text.Whitespace
+'Client'      Name
+' '           Text.Whitespace
+'client'      Name
+';'           Punctuation
+'\n\n    '    Text.Whitespace
+'connection'  Keyword
+' '           Text.Whitespace
+'seL4RPC'     Name
+' '           Text.Whitespace
+'simple'      Name
+'('           Punctuation
+'from'        Keyword
+' '           Text.Whitespace
+'client'      Name
+'.'           Punctuation
+'s'           Name
+','           Punctuation
+' '           Text.Whitespace
+'to'          Keyword
+' '           Text.Whitespace
+'echo'        Name
+'.'           Punctuation
+'s'           Name
+')'           Punctuation
+';'           Punctuation
+'\n  '        Text.Whitespace
+'}'           Punctuation
+'\n\n  '      Text.Whitespace
+'configuration' Keyword
+' '           Text.Whitespace
+'{'           Punctuation
+'\n    '      Text.Whitespace
+'echo'        Name
+'.'           Punctuation
+'dma_pool'    Keyword.Reserved
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'4096'        Literal.Number
+';'           Punctuation
+'\n  '        Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n'          Text.Whitespace

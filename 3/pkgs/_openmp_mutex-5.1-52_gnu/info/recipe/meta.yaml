@@ -1,0 +1,46 @@
+# This file created by conda-build 26.3.0
+# meta.yaml template originally from:
+# /home/task_177913071841271/_openmp_mutex-feedstock/recipe, last modified Mon May 18 19:04:43 2026
+# ------------------------------------------------
+
+package:
+  name: _openmp_mutex
+  version: '5.1'
+build:
+  number: '52'
+  string: 52_gnu
+  always_include_files: null
+  run_exports:
+    - _openmp_mutex >=5.1 *_gnu
+requirements:
+  build: []
+  run: []
+test:
+  commands:
+    - echo "gnu mutex selected"
+    - test ! -e "${PREFIX}/lib/libgomp.so.1"
+about:
+  summary: Mutex metapackage for selecting a single OpenMP runtime family
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
+  home: https://github.com/AnacondaRecipes/_openmp_mutex-feedstock
+  description: '_openmp_mutex is a lightweight selector package used to keep environments
+
+    on a single OpenMP runtime family. Variants use family-specific build
+
+    strings so runtime packages can constrain solver behavior without this
+
+    package owning the runtime libraries themselves.
+
+    '
+extra:
+  recipe-maintainers:
+    - ELundby45
+  final: true
+  copy_test_source_files: true
+  remote_url: https://github.com/AnacondaRecipes/_openmp_mutex-feedstock
+  sha: 32ad5da9a5931bc6a2d54301b3eba5f896cce4bf
+  task_id: Wd18b7B8SpKnsZZyNEiBbw
+  task_run_id: '0'
+  pbp_graph_uuid: 7c030ae3-11ed-4c00-8575-ea017637bce2

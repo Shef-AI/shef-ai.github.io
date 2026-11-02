@@ -1,0 +1,58 @@
+{% set name = "mdurl" %}
+{% set version = "0.1.2" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  - url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+    sha256: bb413d29f5eea38f31dd4754dd7377d4465116fb207585f97bf925588687c1ba
+  - url: https://github.com/executablebooks/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
+    sha256: 99d4fabddab7ee4a05fa458deb1a6f0d009966e4631c50d1b875767a1cd3896d
+    folder: gh
+
+build:
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  skip: true  # [py<37]
+
+requirements:
+  host:
+    - python
+    - pip
+    - flit-core >=3.2.0,<4
+  run:
+    - python
+
+test:
+  source_files:
+    - gh/tests
+  imports:
+    - mdurl
+    - mdurl._decode
+    - mdurl._encode
+    - mdurl._format
+    - mdurl._parse
+    - mdurl._url
+  requires:
+    - pip
+    - pytest
+  commands:
+    - pip check
+    - python -c "from importlib.metadata import version; assert(version('{{ name }}')=='{{ version }}')"
+    - pytest -v gh/tests
+
+about:
+  home: https://github.com/executablebooks/mdurl
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: This is a Python port of the JavaScript mdurl package. See the upstream README.md file for API documentation.
+  description: This is a Python port of the JavaScript mdurl package. See the upstream README.md file for API documentation.
+  dev_url: https://github.com/executablebooks/mdurl
+  doc_url: https://github.com/executablebooks/mdurl/blob/master/README.md
+
+extra:
+  recipe-maintainers:
+    - chrisjsewell

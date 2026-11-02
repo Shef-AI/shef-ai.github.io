@@ -1,0 +1,2 @@
+include/gettext-po.h
+lib/libgettextpo.so

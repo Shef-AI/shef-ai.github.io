@@ -1,0 +1,33 @@
+{
+  "arch": "x86_64",
+  "build": "py314h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64/",
+  "constrains": [
+    "linkify-it-py >=1,<3",
+    "sphinx-book-theme >=1,<2",
+    "mistune >=3.0,<4.0",
+    "markdown >=3.4,<4",
+    "mdit-py-plugins >=0.5.0",
+    "commonmark >=0.9,<0.10",
+    "mistletoe >=1.0,<2.0",
+    "panflute >=2.3,<2.4"
+  ],
+  "depends": [
+    "mdurl >=0.1,<0.2",
+    "python >=3.14,<3.15.0a0",
+    "python_abi 3.14.* *_cp314"
+  ],
+  "fn": "markdown-it-py-4.2.0-py314h06a4308_0.conda",
+  "license": "MIT",
+  "license_family": "MIT",
+  "md5": "24ca75efa9a0f98818ddb53568f7f785",
+  "name": "markdown-it-py",
+  "platform": "linux",
+  "sha256": "818d46233942296b9d3891597d3ead4054ae440017e803fe851a08a6b9c8c06e",
+  "size": 261687,
+  "subdir": "linux-64",
+  "timestamp": 1787310589000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/markdown-it-py-4.2.0-py314h06a4308_0.conda",
+  "version": "4.2.0"
+}

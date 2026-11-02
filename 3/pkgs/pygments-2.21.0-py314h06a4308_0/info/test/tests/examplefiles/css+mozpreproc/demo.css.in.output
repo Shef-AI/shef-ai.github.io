@@ -1,0 +1,34 @@
+'%'           Comment.Preproc
+'if'          Comment.Preproc
+' '           Text
+'defined'     Keyword
+'('           Punctuation
+'__foo__'     Name.Variable
+')'           Punctuation
+'\n'          Text
+
+'.'           Punctuation
+'cls'         Name.Class
+' '           Text.Whitespace
+'{'           Punctuation
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'color'       Keyword
+':'           Punctuation
+' '           Text.Whitespace
+'#fff'        Literal.Number.Hex
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'%'           Comment.Preproc
+'endif'       Comment.Preproc
+'\n'          Text
+
+'%'           Comment.Preproc
+'literal'     Comment.Preproc
+' %foo'       Text
+'\n'          Text.Whitespace

@@ -1,0 +1,11 @@
+prefix=/home/task_177977878094896/croot/simdjson-split_1779778809111/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+Name: simdjson
+Description: Parsing gigabytes of JSON per second
+URL: https://simdjson.org/
+Version: 4.6.4
+Cflags: -I${includedir} -DSIMDJSON_THREADS_ENABLED=1
+Libs: -L${libdir} -lsimdjson
+Libs.private: -pthread

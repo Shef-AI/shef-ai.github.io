@@ -1,0 +1,7 @@
+prefix=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/envs/test
+includedir=${prefix}/include
+
+Name: AppleWMProto
+Description: AppleWM extension headers
+Version: 1.4.2
+Cflags: -I${includedir}

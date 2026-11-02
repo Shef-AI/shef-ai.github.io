@@ -1,0 +1,22 @@
+{
+  "arch": "x86_64",
+  "build": "h75a1612_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.28,<3.0.a0",
+    "libgcc >=14"
+  ],
+  "fn": "libiconv-1.18-h75a1612_0.conda",
+  "license": "LGPL-2.1-only",
+  "md5": "14e4ca2d3797abc3c78ca0ce0e3d9c17",
+  "name": "libiconv",
+  "platform": "linux",
+  "sha256": "8852881ce7522ad4b9eb45ba94cd353f6b381ffd3f9fb5d31426ce2abd8c3ab0",
+  "size": 789520,
+  "subdir": "linux-64",
+  "timestamp": 1771491869000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/libiconv-1.18-h75a1612_0.conda",
+  "version": "1.18"
+}

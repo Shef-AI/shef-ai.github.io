@@ -1,0 +1,51 @@
+{% set name = "python-installer" %}
+{% set version = "1.1.0" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.org/packages/source/{{ name.split('-')[1][0] }}/{{ name.split('-')[1] }}/{{ name.split('-')[1] }}-{{ version }}.tar.gz
+  sha256: 5adc0c01ce62d809989e246987cd68944fe5df8af562d0358f65b2ab15cb5de7
+
+build:
+  number: 0
+  script: {{ PYTHON }} -m pip install --no-deps --no-build-isolation . -vv
+  skip: true  # [py<310]
+
+requirements:
+  host:
+    - pip
+    - python
+    - flit-core >=3.11,<5
+  run:
+    - python
+
+test:
+  source_files:
+    - tests
+  imports:
+    - installer
+  commands:
+    - pip check
+    - pytest -vv tests
+  requires:
+    - pip
+    - pytest
+
+about:
+  home: https://github.com/pypa/installer
+  description: |
+    This is a low-level library for installing a Python package from a wheel distribution.
+    It provides basic functionality and abstractions for handling wheels and installing packages from wheels.
+  summary: A library for installing Python wheels.
+  license: MIT
+  license_file: LICENSE
+  license_family: MIT
+  dev_url: https://installer.pypa.io
+  doc_url: https://github.com/pypa/installer/tree/main/docs
+
+extra:
+  recipe-maintainers:
+    - xhochy

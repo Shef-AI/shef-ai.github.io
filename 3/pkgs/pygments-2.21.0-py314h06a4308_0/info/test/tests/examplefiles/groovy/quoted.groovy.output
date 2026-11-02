@@ -1,0 +1,28 @@
+'def'         Keyword.Type
+' '           Text.Whitespace
+'"long function name"' Name.Function
+'('           Operator
+'i'           Name
+')'           Operator
+' '           Text.Whitespace
+'{'           Operator
+' '           Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'i'           Name
+' '           Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'assert'      Keyword
+' '           Text.Whitespace
+"'long function name'" Literal.String.Single
+'('           Operator
+'1'           Literal.Number.Integer
+')'           Operator
+' '           Text.Whitespace
+'='           Operator
+'='           Operator
+' '           Text.Whitespace
+'1'           Literal.Number.Integer
+'\n'          Text.Whitespace

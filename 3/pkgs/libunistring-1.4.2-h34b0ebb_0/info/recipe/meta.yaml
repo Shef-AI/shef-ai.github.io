@@ -1,0 +1,73 @@
+# This file created by conda-build 26.3.0
+# meta.yaml template originally from:
+# /home/task_177746525108562/libunistring-feedstock/recipe, last modified Wed Apr 29 12:24:51 2026
+# ------------------------------------------------
+
+package:
+  name: libunistring
+  version: 1.4.2
+source:
+  url: https://ftpmirror.gnu.org/libunistring/libunistring-1.4.2.tar.xz
+  sha256: 5b46e74377ed7409c5b75e7a96f95377b095623b689d8522620927964a41499c
+build:
+  number: '0'
+  run_exports:
+    - libunistring >=1,<2.0a0
+  string: h34b0ebb_0
+requirements:
+  build:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - binutils_impl_linux-64 2.44 h78f17ca_3
+    - binutils_linux-64 2.44 hc03a8fd_3
+    - gcc_impl_linux-64 14.3.0 h4943218_4
+    - gcc_linux-64 14.3.0 hda73cce_14
+    - kernel-headers_linux-64 4.18.0 h3108a97_1
+    - ld_impl_linux-64 2.44 h9e0c5a2_3
+    - libgcc 15.2.0 h69a1729_7
+    - libgcc-devel_linux-64 14.3.0 he7458c1_104
+    - libgcc-ng 15.2.0 h166f726_7
+    - libgomp 15.2.0 h4751f2c_7
+    - libltdl 2.6.0 h47b2149_0
+    - libsanitizer 14.3.0 hd4faa28_4
+    - libstdcxx 15.2.0 h39759b7_7
+    - libtool 2.6.0 h7354ed3_0
+    - make 4.2.1 h1bed415_1
+    - sysroot_linux-64 2.28 h3108a97_1
+    - tzdata 2026a he532380_0
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - libgcc 15.2.0 h69a1729_7
+    - libgomp 15.2.0 h4751f2c_7
+  run:
+    - __glibc >=2.28,<3.0.a0
+    - libgcc >=14
+test:
+  commands:
+    - test -e $PREFIX/lib/libunistring${SHLIB_EXT}
+about:
+  home: https://www.gnu.org/software/libunistring
+  license: LGPL-3.0-only
+  license_file: COPYING
+  license_family: LGPL
+  summary: C unicode string manipulation library
+  description: 'This library provides functions for manipulating Unicode strings and
+
+    for manipulating C strings according to the Unicode standard.
+
+    '
+  dev_url: https://git.savannah.gnu.org/gitweb/?p=libunistring.git
+  doc_url: https://www.gnu.org/software/libunistring/manual/libunistring.html
+extra:
+  recipe-maintainers:
+    - bgruening
+    - chenghlee
+    - stefan-balke
+  final: true
+  copy_test_source_files: true
+  remote_url: https://github.com/AnacondaRecipes/libunistring-feedstock.git
+  sha: a6ed38fd0538c50db16a037976deee95239c0aa8
+  task_id: dVUdrVPTSJGrdGP-JHFy4w
+  task_run_id: '0'
+  pbp_graph_uuid: 6481bbc8-aee1-4ff8-ab01-f1366fc3956c

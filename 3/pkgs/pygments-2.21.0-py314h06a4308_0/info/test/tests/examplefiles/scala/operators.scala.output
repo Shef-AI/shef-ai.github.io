@@ -1,0 +1,52 @@
+'1'           Literal.Number.Integer
+' '           Text.Whitespace
+'::'          Operator
+' '           Text.Whitespace
+'2'           Literal.Number.Integer
+' '           Text.Whitespace
+'::'          Operator
+' '           Text.Whitespace
+'Nil'         Name.Class
+'\n'          Text.Whitespace
+
+'a'           Name
+' '           Text.Whitespace
+'++'          Operator
+' '           Text.Whitespace
+'b'           Name
+'\n'          Text.Whitespace
+
+'a'           Name
+' '           Text.Whitespace
+':+'          Operator
+' '           Text.Whitespace
+'b'           Name
+'\n'          Text.Whitespace
+
+'a'           Name
+' '           Text.Whitespace
+'+:'          Operator
+' '           Text.Whitespace
+'b'           Name
+'\n'          Text.Whitespace
+
+'a'           Name
+' '           Text.Whitespace
+':++'         Operator
+' '           Text.Whitespace
+'b'           Name
+'\n'          Text.Whitespace
+
+'a'           Name
+' '           Text.Whitespace
+'++:'         Operator
+' '           Text.Whitespace
+'b'           Name
+'\n'          Text.Whitespace
+
+'a'           Name
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+'b'           Name
+'\n'          Text.Whitespace

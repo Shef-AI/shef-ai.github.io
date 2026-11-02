@@ -1,0 +1,22 @@
+{
+  "arch": "x86_64",
+  "build": "py314h7354ed3_0",
+  "build_number": 0,
+  "constrains": [
+    "libprotobuf 7.35.1"
+  ],
+  "depends": [
+    "__glibc >=2.28,<3.0.a0",
+    "libgcc >=14",
+    "libstdcxx >=14",
+    "python >=3.14,<3.15.0a0",
+    "python_abi 3.14.* *_cp314"
+  ],
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "name": "protobuf",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1785888151290,
+  "version": "7.35.1"
+}

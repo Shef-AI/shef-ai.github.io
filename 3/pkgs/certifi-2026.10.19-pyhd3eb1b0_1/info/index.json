@@ -1,0 +1,16 @@
+{
+  "arch": null,
+  "build": "pyhd3eb1b0_1",
+  "build_number": 1,
+  "depends": [
+    "python >=3.10"
+  ],
+  "license": "MPL-2.0",
+  "license_family": "Other",
+  "name": "certifi",
+  "noarch": "python",
+  "platform": null,
+  "subdir": "noarch",
+  "timestamp": 1792676325543,
+  "version": "2026.10.19"
+}

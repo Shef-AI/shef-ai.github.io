@@ -1,0 +1,84 @@
+# Fixes MSVC build errors in LMDB 1.0.0's mdb.c: void* pointer
+# arithmetic (MSVC rejects the GNU extension) and LARGE_INTEGER (a
+# union) used as a plain integer. Confirmed as upstream bug ITS#10539,
+# resolved in OpenLDAP master for the 1.0.1 milestone.
+diff --git a/libraries/liblmdb/mdb.c b/libraries/liblmdb/mdb.c
+index 1234567..89abcde 100644
+--- a/libraries/liblmdb/mdb.c
++++ b/libraries/liblmdb/mdb.c
+@@ -7213,7 +7213,7 @@
+ #endif
+ 	*ret = p;
+ 	if (enc && env->me_encfunc) {
+-		*enc = (MDB_page *)(id3.mptr + rem * env->me_psize);
++		*enc = (MDB_page *)((char *)id3.mptr + rem * env->me_psize);
+ 	}
+ 	return rc;
+ }
+@@ -11614,7 +11614,7 @@
+ #endif
+ #if MDB_RPAGE_CACHE
+ #ifdef _WIN32
+-	LARGE_INTEGER	off = 0;
++	LARGE_INTEGER	off = {0};
+ #else
+ 	off_t	off = 0;
+ #endif
+@@ -11678,7 +11678,11 @@
+ 	}
+ #if MDB_RPAGE_CACHE
+ 	if (MDB_REMAPPING(env->me_flags)) {
++#ifdef _WIN32
++		off.QuadPart = wsize;
++#else
+ 		off = wsize;
++#endif
+ 	}
+ #endif
+ 	wsize = w3 - wsize;
+@@ -11704,7 +11708,11 @@
+ 			wsize -= len;
+ #if MDB_RPAGE_CACHE
+ 			if (MDB_REMAPPING(env->me_flags)) {
++#ifdef _WIN32
++				off.QuadPart += len;
++#else
+ 				off += len;
++#endif
+ 			}
+ #endif
+ 			continue;
+@@ -11946,7 +11954,8 @@
+ 		return ENOMEM;
+
+ #ifdef _WIN32
+-		SetFilePointerEx(env->me_fd, 0, NULL, FILE_BEGIN);
++		off.QuadPart = 0;
++		SetFilePointerEx(env->me_fd, off, NULL, FILE_BEGIN);
+ #else
+ 		lseek(env->me_fd, 0, SEEK_SET);
+ #endif
+@@ -12011,15 +12020,21 @@
+ 			ptr += rlen;
+ 			rsize -= rlen;
+ 		}
++#ifdef _WIN32
++		off.QuadPart = (LONGLONG)(pg-prevpg-numprev) * env->me_psize;
++#else
+ 		off = (pg-prevpg-numprev) * env->me_psize;
++#endif
+ 		rsize = numpgs * env->me_psize;
+-		if (off) {
+ #ifdef _WIN32
++		if (off.QuadPart) {
+ 			SetFilePointerEx(env->me_fd, off, NULL, FILE_CURRENT);
++		}
+ #else
++		if (off) {
+ 			lseek(env->me_fd, off, SEEK_CUR);
+-#endif
+ 		}
++#endif
+ 		ptr = pbuf;
+ 		while (rsize > 0) {
+ 			w2 = (rsize > MAX_WRITE) ? MAX_WRITE: rsize;

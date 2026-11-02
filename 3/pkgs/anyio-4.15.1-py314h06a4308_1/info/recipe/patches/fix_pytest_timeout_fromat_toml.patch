@@ -1,0 +1,13 @@
+diff --git a/pyproject.toml b/pyproject.toml
+index 7a53c2f..fa3abb5 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -134,7 +134,7 @@ addopts = [
+ ]
+ testpaths = ["tests"]
+ anyio_mode = "auto"
+-timeout = "20"
++timeout = 20
+ xfail_strict = true
+ filterwarnings = [
+     "error",

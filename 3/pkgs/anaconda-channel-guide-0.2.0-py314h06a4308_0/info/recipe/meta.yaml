@@ -1,0 +1,110 @@
+# This file created by conda-build 26.3.0
+# meta.yaml template originally from:
+# /home/task_178663810467942/anaconda-channel-guide-feedstock/recipe, last modified Thu Aug 13 16:23:16 2026
+# ------------------------------------------------
+
+package:
+  name: anaconda-channel-guide
+  version: 0.2.0
+source:
+  url: https://github.com/anaconda/anaconda-channel-guide/archive/refs/tags/v0.2.0.tar.gz
+  sha256: b9689e2767f12f0e5ff21a025754f68e768acf129c151663f0140fd86d7e2dcc
+build:
+  number: '0'
+  script: /home/task_178663810467942/croot/anaconda-channel-guide_1786638219082/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol/bin/python
+    -m pip install . -vv --no-deps --no-build-isolation
+  string: py314h06a4308_0
+requirements:
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 52_gnu
+    - bzip2 1.0.8 h5eee18b_6
+    - ca-certificates 2026.7.16 h06a4308_0
+    - hatch-vcs 0.5.0 py314h06a4308_0
+    - hatchling 1.31.0 py314h06a4308_0
+    - ld_impl_linux-64 2.44 h9e0c5a2_3
+    - libexpat 2.8.2 h7354ed3_1
+    - libffi 3.4.8 h06d3fd0_3
+    - libgcc 15.2.0 h69a1729_8
+    - libgcc-ng 15.2.0 h166f726_8
+    - libmpdec 4.0.1 h47b2149_0
+    - libstdcxx 15.2.0 h39759b7_8
+    - libstdcxx-ng 15.2.0 hc03a8fd_8
+    - libuuid 1.41.5 h5eee18b_0
+    - libxcb 1.17.0 h9b100fa_0
+    - libzlib 1.3.2 h47b2149_0
+    - lz4-c 1.9.4 h7354ed3_5
+    - ncurses 6.5 h7934f7d_0
+    - openssl 3.5.7 h1b28b03_0
+    - packaging 26.2 py314h06a4308_0
+    - pathspec 1.1.1 py314h06a4308_0
+    - pip 26.1.2 pyh0d26453_0
+    - pluggy 1.6.0 py314h06a4308_0
+    - pthread-stubs 0.3 h47b2149_2
+    - python 3.14.6 h4bdf6f9_101_cp314
+    - python_abi 3.14 4_cp314
+    - readline 8.3 hc2a1206_0
+    - setuptools 83.0.0 py314h06a4308_0
+    - setuptools-scm 10.0.5 py314h06a4308_0
+    - sqlite 3.53.2 h795bf6d_0
+    - tk 8.6.15 h54e0aa7_0
+    - trove-classifiers 2026.6.1.19 py314h06a4308_0
+    - tzdata 2026c he532380_0
+    - vcs-versioning 1.1.1 py314h06a4308_0
+    - xorg-libx11 1.8.12 h9b100fa_1
+    - xorg-libxau 1.0.12 h9b100fa_0
+    - xorg-libxdmcp 1.1.5 h9b100fa_0
+    - xorg-xorgproto 2024.1 h47b2149_2
+    - xz 5.8.2 h448239c_0
+    - zlib 1.3.2 h47b2149_0
+    - zstd 1.5.7 h11fc155_0
+  run:
+    - anaconda-auth >=0.15.1
+    - conda >=26.7.0
+    - conda-anaconda-tos
+    - python >=3.14,<3.15.0a0
+    - python_abi 3.14.* *_cp314
+    - requests
+test:
+  source_files:
+    - tests
+  imports:
+    - anaconda_channel_guide
+    - anaconda_channel_guide.box
+    - anaconda_channel_guide.hooks
+    - anaconda_channel_guide.plugin
+  requires:
+    - conda
+    - pip
+    - pytest
+    - pytest-mock
+  commands:
+    - pip check
+    - python -c "from anaconda_channel_guide import __version__; assert __version__
+      == \"0.2.0\""
+    - python -c "from importlib.metadata import version; assert version('anaconda-channel-guide')
+      == '0.2.0'"
+    - pytest -v tests
+about:
+  home: https://github.com/anaconda/anaconda-channel-guide
+  summary: Conda plugin that guides users to main-x channel packages
+  description: 'A plug-in that checks whether a package is available on main-x when
+
+    unavailable in other channels.
+
+    '
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
+  dev_url: https://github.com/anaconda/anaconda-channel-guide
+  doc_url: https://github.com/anaconda/anaconda-channel-guide
+extra:
+  recipe-maintainers:
+    - psteyer
+  final: true
+  copy_test_source_files: true
+  remote_url: https://github.com/AnacondaRecipes/anaconda-channel-guide-feedstock
+  sha: 5c1edc0e7e91845af2772d1db4c7e816fd4c0dfc
+  task_id: aFtGhuOUR1KHQPj8CkNMbw
+  task_run_id: '0'
+  pbp_graph_uuid: 1c6213b0-46de-4165-ab82-f16037e474db

@@ -1,0 +1,125 @@
+# This file created by conda-build 26.7.1
+# meta.yaml template originally from:
+# /home/task_179195936940841/typer-feedstock/recipe, last modified Wed Oct 14 06:29:52 2026
+# ------------------------------------------------
+
+package:
+  name: typer
+  version: 0.27.3
+source:
+  url: https://pypi.org/packages/source/t/typer/typer-0.27.3.tar.gz
+  sha256: d0396f770a560ab1b0a8504e13b5f254b728cedb05c61cf0359e944e50ce8901
+build:
+  number: '0'
+  entry_points:
+    - typer = typer.cli:main
+  script: /home/task_179195936940841/croot/typer_1791959423621/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place/bin/python
+    -m pip install . -vv --no-deps --no-build-isolation
+  string: py314h06a4308_0
+requirements:
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 52_gnu
+    - bzip2 1.0.8 h5eee18b_6
+    - ca-certificates 2026.9.25 h06a4308_0
+    - ld_impl_linux-64 2.44 h9e0c5a2_3
+    - libexpat 2.9.0 h7354ed3_0
+    - libffi 3.4.8 h06d3fd0_3
+    - libgcc 15.2.0 h69a1729_8
+    - libgcc-ng 15.2.0 h166f726_8
+    - libmpdec 4.0.1 h47b2149_0
+    - libstdcxx 15.2.0 h39759b7_8
+    - libstdcxx-ng 15.2.0 hc03a8fd_8
+    - libuuid 1.41.5 h5eee18b_0
+    - libxcb 1.17.0 h9b100fa_0
+    - libzlib 1.3.2 h47b2149_0
+    - lz4-c 1.9.4 h7354ed3_5
+    - ncurses 6.6 hfaaeb4e_0
+    - openssl 3.5.9 h1b28b03_0
+    - packaging 26.3 py314h06a4308_0
+    - pdm-backend 2.4.9 py314h893fd2c_0
+    - pip 26.2.1 pyh0d26453_0
+    - pthread-stubs 0.3 h47b2149_2
+    - pyproject_hooks 1.3.3 py314h06a4308_0
+    - python 3.14.8 h4c9324e_101_cp314
+    - python-build 1.6.1 py314h06a4308_0
+    - python_abi 3.14 5_cp314
+    - readline 8.3 hc2a1206_0
+    - sqlite 3.53.4 h795bf6d_0
+    - tk 9.0.4 h3840b71_1
+    - tzdata 2026c he532380_0
+    - xorg-libx11 1.8.13 h65de747_0
+    - xorg-libxau 1.0.12 h9b100fa_0
+    - xorg-libxdmcp 1.1.5 h9b100fa_0
+    - xorg-xorgproto 2025.1 h47b2149_0
+    - xz 5.8.4 h140a991_0
+    - zlib 1.3.2 h47b2149_0
+    - zstd 1.5.7 h11fc155_0
+  run:
+    - annotated-doc >=0.0.2
+    - python >=3.14,<3.15.0a0
+    - python_abi 3.14.* *_cp314
+    - rich >=13.8.0
+    - shellingham >=1.3.0
+test:
+  source_files:
+    - docs_src
+    - scripts
+    - tests
+    - typer
+  imports:
+    - typer
+  requires:
+    - coverage
+    - pip
+    - pytest
+  commands:
+    - pip check
+    - typer --version
+    - typer --help
+    - PYTHONPATH=. coverage run --source=typer --branch -m pytest tests -vv --color=yes
+      --tb=long -k "not ((multiple_values and main) or completion or invalid_score
+      or test_file_error)"  --deselect=tests/test_tracebacks.py::test_rich_exceptions_dont_truncate_code_on_wide_terminal
+      --deselect=tests/test_tutorial/test_printing/test_tutorial001.py::test_cli --deselect=tests/test_tutorial/test_printing/test_tutorial002.py::test_cli
+about:
+  home: https://github.com/fastapi/typer
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: A library for building CLI applications
+  description: 'Typer is library for building CLI applications that users will love
+    using and developers will love creating. Based on Python type hints.
+
+
+    The key features are:
+
+
+    Intuitive to write: Great editor support. Completion everywhere. Less time debugging.
+    Designed to be easy to use and learn. Less time reading docs.
+
+    Easy to use: It''s easy to use for the final users. Automatic help, and automatic
+    completion for all shells.
+
+    Short: Minimize code duplication. Multiple features from each parameter declaration.
+    Fewer bugs.
+
+    Start simple: The simplest example adds only 2 lines of code to your app: 1 import,
+    1 function call.
+
+    Grow large: Grow in complexity as much as you want, create arbitrarily complex
+    trees of commands and groups of subcommands, with options and arguments.
+
+    '
+  doc_url: https://typer.tiangolo.com
+  dev_url: https://github.com/fastapi/typer
+extra:
+  recipe-maintainers:
+    - bollwyvl
+    - dfornika
+  final: true
+  copy_test_source_files: true
+  remote_url: https://github.com/AnacondaRecipes/typer-feedstock
+  sha: d704333cc0ecc3d406f743e2c16a6acdb49a38c7
+  task_id: Bh9U9Ap4Tv2N0FfhIm3DMw
+  task_run_id: '0'
+  pbp_graph_uuid: d525c683-0d80-490d-b292-11985f7aef9b

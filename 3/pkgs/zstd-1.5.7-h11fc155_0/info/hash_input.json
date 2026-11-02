@@ -1,0 +1,16 @@
+{
+  "vc": "14",
+  "xz": "5",
+  "zstd": "1.5",
+  "channel_targets": "defaults",
+  "cxx_compiler": "gxx",
+  "lz4_c": "1.9",
+  "c_stdlib_version": "2.28",
+  "c_compiler_version": "11.2.0",
+  "cxx_compiler_version": "11.2.0",
+  "c_stdlib": "sysroot",
+  "target_platform": "linux-64",
+  "c_compiler": "gcc",
+  "libzlib": "1",
+  "__glibc": "__glibc >=2.28,<3.0.a0"
+}

@@ -1,0 +1,55 @@
+{% set name = "pluggy" %}
+{% set version = "1.6.0" %}
+{% set sha256 = "7dcc130b76258d33b90f61b658791dede3486c3e6bfb003ee5c9bfb396dd22f3" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name [0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  number: 0
+  skip: True  # [py<39]
+  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation --ignore-installed --no-cache-dir -vv
+
+requirements:
+  host:
+    - python
+    - pip
+    - setuptools >=65.0
+    - wheel
+    - setuptools-scm >=8.0
+    - tomli  # [py<311]
+  run:
+    - python
+
+test:
+  imports:
+    - pluggy
+  requires:
+    - pip
+  commands:
+    - pip check
+
+about:
+  home: https://github.com/pytest-dev/pluggy
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: Plugin registration and hook calling for Python
+  description: |
+    pluggy is the crystallized core of plugin management and hook calling for pytest. 
+    It enables 1400+ plugins to extend and customize pytest's default behaviour. 
+    Even pytest itself is composed as a set of pluggy plugins which are invoked 
+    in sequence according to a well defined set of protocols.
+  doc_url: https://pluggy.readthedocs.io
+  dev_url: https://github.com/pytest-dev/pluggy/
+
+extra:
+  recipe-maintainers:
+    - JohnGreeley
+    - nicoddemus

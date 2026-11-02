@@ -1,0 +1,17 @@
+{
+  "target_platform": "linux-64",
+  "zstd": "1.5",
+  "xz": "5",
+  "zlib": "1",
+  "c_stdlib_version": "2.28",
+  "c_compiler": "gcc",
+  "lz4_c": "1.9",
+  "channel_targets": "defaults",
+  "c_stdlib": "sysroot",
+  "openssl": "3",
+  "bzip2": "1",
+  "c_compiler_version": "14.3.0",
+  "libxml2": "2.15.3",
+  "libarchive": "3.8",
+  "__glibc": "__glibc >=2.28,<3.0.a0"
+}

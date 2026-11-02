@@ -1,0 +1,8 @@
+libdir=/home/task_179265716557808/croot/libsolv-suite_1792657207229/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/lib
+includedir=/home/task_179265716557808/croot/libsolv-suite_1792657207229/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/include
+
+Name: libsolv
+Description: Library for solving packages
+Version: 0.7.39
+Libs: -L${libdir} -lsolv
+Cflags: -I${includedir}

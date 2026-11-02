@@ -1,0 +1,193 @@
+'export'      Keyword
+' '           Text.Whitespace
+'// This is incorrect Scala but can still be highlighted correctly\n' Comment.Single
+
+''            Text
+'export'      Keyword
+' '           Text.Whitespace
+'a'           Name.Namespace
+'.'           Punctuation
+'_'           Name
+'\n'          Text.Whitespace
+
+'export'      Keyword
+' '           Text.Whitespace
+'a'           Name.Namespace
+'.'           Punctuation
+'x'           Name
+' '           Text.Whitespace
+'// Test comment\n' Comment.Single
+
+''            Text
+'export'      Keyword
+' '           Text.Whitespace
+'a'           Name.Namespace
+'.'           Punctuation
+'x'           Name.Namespace
+'.'           Punctuation
+'y'           Name.Namespace
+'.'           Punctuation
+'z'           Name
+' '           Text.Whitespace
+'// Test comment\n' Comment.Single
+
+''            Text
+'export'      Keyword
+' '           Text.Whitespace
+'a'           Name.Namespace
+'.'           Punctuation
+'{'           Punctuation
+'x'           Name
+','           Punctuation
+' '           Text.Whitespace
+'y'           Name
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'export'      Keyword
+' '           Text.Whitespace
+'a'           Name.Namespace
+'.'           Punctuation
+'{'           Punctuation
+'x'           Name
+' '           Text.Whitespace
+'=>'          Operator
+' '           Text.Whitespace
+'y'           Name
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'export'      Keyword
+' '           Text.Whitespace
+'a'           Name.Namespace
+'.'           Punctuation
+'{'           Punctuation
+'x'           Name
+' '           Text.Whitespace
+'=>'          Operator
+' '           Text.Whitespace
+'}'           Punctuation
+' '           Text.Whitespace
+'// This is incorrect Scala but can still be highlighted correctly\n' Comment.Single
+
+''            Text
+'export'      Keyword
+' '           Text.Whitespace
+'a'           Name.Namespace
+'.'           Punctuation
+'{'           Punctuation
+'x'           Name
+' '           Text.Whitespace
+'=>'          Operator
+' '           Text.Whitespace
+'`test-name`' Name
+'}'           Punctuation
+' '           Text.Whitespace
+'// Test comment\n' Comment.Single
+
+''            Text
+'export'      Keyword
+' '           Text.Whitespace
+'given'       Keyword
+'\n'          Text.Whitespace
+
+''            Text
+'export'      Keyword
+' '           Text.Whitespace
+'given'       Keyword
+' '           Text.Whitespace
+'a'           Name
+' '           Text.Whitespace
+'// Test comment\n' Comment.Single
+
+''            Text
+'export'      Keyword
+' '           Text.Whitespace
+'given'       Keyword
+' '           Text.Whitespace
+'a'           Name.Namespace
+'.'           Punctuation
+'x'           Name
+' '           Text.Whitespace
+'// Test comment\n' Comment.Single
+
+''            Text
+'export'      Keyword
+' '           Text.Whitespace
+'given'       Keyword
+' '           Text.Whitespace
+'a'           Name.Namespace
+'.'           Punctuation
+'_'           Name
+'\n'          Text.Whitespace
+
+'export'      Keyword
+' '           Text.Whitespace
+'given'       Keyword
+' '           Text.Whitespace
+'a'           Name.Namespace
+'.'           Punctuation
+'{'           Punctuation
+'x'           Name
+','           Punctuation
+' '           Text.Whitespace
+'y'           Name
+'}'           Punctuation
+' '           Text.Whitespace
+'// Test comment\n' Comment.Single
+
+''            Text
+'export'      Keyword
+' '           Text.Whitespace
+'given'       Keyword
+' '           Text.Whitespace
+'a'           Name.Namespace
+'.'           Punctuation
+'{'           Punctuation
+'x'           Name
+' '           Text.Whitespace
+'=>'          Operator
+' '           Text.Whitespace
+'y'           Name
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'export'      Keyword
+' '           Text.Whitespace
+'given'       Keyword
+' '           Text.Whitespace
+'a'           Name.Namespace
+'.'           Punctuation
+'{'           Punctuation
+'x'           Name
+' '           Text.Whitespace
+'=>'          Operator
+' '           Text.Whitespace
+'`test-name`' Name
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'export'      Keyword
+' '           Text.Whitespace
+'scanUnit'    Name.Namespace
+'.'           Punctuation
+'scan'        Name
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'export'      Keyword
+' '           Text.Whitespace
+'printUnit'   Name.Namespace
+'.'           Punctuation
+'{'           Punctuation
+'status'      Name
+' '           Text.Whitespace
+'=>'          Operator
+' '           Text.Whitespace
+'_'           Name
+','           Punctuation
+' '           Text.Whitespace
+'_'           Name
+'}'           Punctuation
+'\n'          Text.Whitespace

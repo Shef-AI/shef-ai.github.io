@@ -1,0 +1,56 @@
+{
+  "name": "libasprintf",
+  "version": "0.25.1",
+  "build": "hf2ab22a_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "subdir": "linux-64",
+  "fn": "libasprintf-0.25.1-hf2ab22a_0.conda",
+  "md5": "9fe17fea3f12a5dcc483b89f48e361da",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/libasprintf-0.25.1-hf2ab22a_0.conda",
+  "sha256": "b2f3a2a452022b990a76205957145a567b5aba86910fc20c4e2f853b4687132c",
+  "arch": "x86_64",
+  "platform": "linux",
+  "depends": [
+    "__glibc >=2.28,<3.0.a0",
+    "libgcc >=14",
+    "libstdcxx >=14"
+  ],
+  "constrains": [],
+  "license": "LGPL-2.1-or-later",
+  "timestamp": 1772045241000,
+  "size": 52393,
+  "requested_spec": "https://repo.anaconda.com/pkgs/main/linux-64::libasprintf==0.25.1=hf2ab22a_0",
+  "package_tarball_full_path": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/libasprintf-0.25.1-hf2ab22a_0.conda",
+  "extracted_package_dir": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/libasprintf-0.25.1-hf2ab22a_0",
+  "files": [
+    "lib/libasprintf.so.0",
+    "lib/libasprintf.so.0.0.0"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/libasprintf.so.0",
+        "path_type": "hardlink",
+        "sha256": "7a3f7ae69a26cd0cdf0c7487956c30041087a8ec69c95fa3900eec7cebafc65c",
+        "size_in_bytes": 110760,
+        "sha256_in_prefix": "7a3f7ae69a26cd0cdf0c7487956c30041087a8ec69c95fa3900eec7cebafc65c"
+      },
+      {
+        "_path": "lib/libasprintf.so.0.0.0",
+        "path_type": "hardlink",
+        "sha256": "7a3f7ae69a26cd0cdf0c7487956c30041087a8ec69c95fa3900eec7cebafc65c",
+        "size_in_bytes": 110760,
+        "sha256_in_prefix": "7a3f7ae69a26cd0cdf0c7487956c30041087a8ec69c95fa3900eec7cebafc65c"
+      }
+    ]
+  },
+  "link": {
+    "source": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/libasprintf-0.25.1-hf2ab22a_0",
+    "type": 1
+  },
+  "requested_specs": [
+    "https://repo.anaconda.com/pkgs/main/linux-64::libasprintf==0.25.1=hf2ab22a_0"
+  ]
+}

@@ -1,0 +1,4519 @@
+' A Sukodku solver by Chris Kuklewicz (haskell (at) list (dot) mightyreason (dot) com)\n' Text
+
+' The usual BSD license applies, copyright 2006.\n' Text
+
+' Uploaded to HaskellWiki as DancingSudoku.lhs\n' Text
+
+'\n'          Text
+
+' I compile on a powerbook G4 (Mac OS X, ghc 6.4.2) using\n' Text
+
+' ghc -optc-O3 -funbox-strict-fields -O2 --make -fglasgow-exts\n' Text
+
+'\n'          Text
+
+" This is a translation of Knuth's GDANCE from dance.w / dance.c\n" Text
+
+'\n'          Text
+
+' http://www-cs-faculty.stanford.edu/~uno/preprints.html\n' Text
+
+' http://www-cs-faculty.stanford.edu/~uno/programs.html\n' Text
+
+' http://en.wikipedia.org/wiki/Dancing_Links\n' Text
+
+'\n'          Text
+
+' I have an older verison that uses lazy ST to return the solutions on\n' Text
+
+' demand, which was more useful when trying to generate new puzzles to\n' Text
+
+' solve.\n'   Text
+
+'\n'          Text
+
+'> '          Comment.Special
+'module'      Keyword.Reserved
+' '           Text.Whitespace
+'Main'        Name.Namespace
+' '           Text.Whitespace
+'where'       Keyword.Reserved
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+'> '          Comment.Special
+'import'      Keyword.Reserved
+' '           Text.Whitespace
+'Prelude'     Name.Namespace
+' '           Text.Whitespace
+'hiding'      Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'read'        Name.Function
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'import'      Keyword.Reserved
+' '           Text.Whitespace
+'Control.Monad' Name.Namespace
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'import'      Keyword.Reserved
+' '           Text.Whitespace
+'Control.Monad.Fix' Name.Namespace
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'import'      Keyword.Reserved
+' '           Text.Whitespace
+'Data.Array.IArray' Name.Namespace
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'import'      Keyword.Reserved
+' '           Text.Whitespace
+'Control.Monad.ST.Strict' Name.Namespace
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'import'      Keyword.Reserved
+' '           Text.Whitespace
+'Data.STRef.Strict' Name.Namespace
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'import'      Keyword.Reserved
+' '           Text.Whitespace
+'Data.Char'   Name.Namespace
+'('           Punctuation
+'intToDigit'  Name
+','           Punctuation
+'digitToInt'  Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'import'      Keyword.Reserved
+' '           Text.Whitespace
+'Data.List'   Name.Namespace
+'('           Punctuation
+'unfoldr'     Name
+','           Punctuation
+'intersperse' Name
+','           Punctuation
+'inits'       Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+'> '          Comment.Special
+'new'         Name.Function
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'newSTRef'    Name
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'{-'          Comment.Multiline
+'# INLINE new #' Comment.Multiline
+'-}'          Comment.Multiline
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'read'        Name.Function
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'readSTRef'   Name
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'{-'          Comment.Multiline
+'# INLINE read #' Comment.Multiline
+'-}'          Comment.Multiline
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'write'       Name.Function
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'writeSTRef'  Name
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'{-'          Comment.Multiline
+'# INLINE write #' Comment.Multiline
+'-}'          Comment.Multiline
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'modify'      Name.Function
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'modifySTRef' Name
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'{-'          Comment.Multiline
+'# INLINE modify #' Comment.Multiline
+'-}'          Comment.Multiline
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+' Data types to prevent mixing different index and value types\n' Text
+
+'\n'          Text
+
+'> '          Comment.Special
+'type'        Keyword.Reserved
+' '           Text.Whitespace
+'A'           Keyword.Type
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'Int'         Keyword.Type
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'newtype'     Keyword.Reserved
+' '           Text.Whitespace
+'R'           Keyword.Type
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'R'           Keyword.Type
+' '           Text.Whitespace
+'A'           Keyword.Type
+' '           Text.Whitespace
+'deriving'    Keyword.Reserved
+' '           Text.Whitespace
+'('           Punctuation
+'Show'        Keyword.Type
+','           Punctuation
+'Read'        Keyword.Type
+','           Punctuation
+'Eq'          Keyword.Type
+','           Punctuation
+'Ord'         Keyword.Type
+','           Punctuation
+'Ix'          Keyword.Type
+','           Punctuation
+'Enum'        Keyword.Type
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'newtype'     Keyword.Reserved
+' '           Text.Whitespace
+'C'           Keyword.Type
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'C'           Keyword.Type
+' '           Text.Whitespace
+'A'           Keyword.Type
+' '           Text.Whitespace
+'deriving'    Keyword.Reserved
+' '           Text.Whitespace
+'('           Punctuation
+'Show'        Keyword.Type
+','           Punctuation
+'Read'        Keyword.Type
+','           Punctuation
+'Eq'          Keyword.Type
+','           Punctuation
+'Ord'         Keyword.Type
+','           Punctuation
+'Ix'          Keyword.Type
+','           Punctuation
+'Enum'        Keyword.Type
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'newtype'     Keyword.Reserved
+' '           Text.Whitespace
+'V'           Keyword.Type
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'V'           Keyword.Type
+' '           Text.Whitespace
+'A'           Keyword.Type
+' '           Text.Whitespace
+'deriving'    Keyword.Reserved
+' '           Text.Whitespace
+'('           Punctuation
+'Show'        Keyword.Type
+','           Punctuation
+'Read'        Keyword.Type
+','           Punctuation
+'Eq'          Keyword.Type
+','           Punctuation
+'Ord'         Keyword.Type
+','           Punctuation
+'Ix'          Keyword.Type
+','           Punctuation
+'Enum'        Keyword.Type
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'newtype'     Keyword.Reserved
+' '           Text.Whitespace
+'B'           Keyword.Type
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'B'           Keyword.Type
+' '           Text.Whitespace
+'A'           Keyword.Type
+' '           Text.Whitespace
+'deriving'    Keyword.Reserved
+' '           Text.Whitespace
+'('           Punctuation
+'Show'        Keyword.Type
+','           Punctuation
+'Read'        Keyword.Type
+','           Punctuation
+'Eq'          Keyword.Type
+','           Punctuation
+'Ord'         Keyword.Type
+','           Punctuation
+'Ix'          Keyword.Type
+','           Punctuation
+'Enum'        Keyword.Type
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+' Sudoku also has block constraints, so we want to look up a block\n' Text
+
+' index in an array:\n' Text
+
+'\n'          Text
+
+'> '          Comment.Special
+'lookupBlock' Name.Function
+' '           Text.Whitespace
+'::'          Operator.Word
+' '           Text.Whitespace
+'Array'       Keyword.Type
+' '           Text.Whitespace
+'('           Punctuation
+'R'           Keyword.Type
+','           Punctuation
+'C'           Keyword.Type
+')'           Punctuation
+' '           Text.Whitespace
+'B'           Keyword.Type
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'lookupBlock' Name.Function
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'listArray'   Name
+' '           Text.Whitespace
+'bb'          Name
+' '           Text.Whitespace
+'['           Punctuation
+' '           Text.Whitespace
+'toBlock'     Name
+' '           Text.Whitespace
+'ij'          Name
+' '           Text.Whitespace
+'|'           Operator
+' '           Text.Whitespace
+'ij'          Name
+' '           Text.Whitespace
+'<-'          Operator.Word
+' '           Text.Whitespace
+'range'       Name
+' '           Text.Whitespace
+'bb'          Name
+' '           Text.Whitespace
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'>     '      Comment.Special
+'where'       Keyword.Reserved
+' '           Text.Whitespace
+'ra'          Name
+' '           Text.Whitespace
+'::'          Operator.Word
+' '           Text.Whitespace
+'Array'       Keyword.Type
+' '           Text.Whitespace
+'Int'         Keyword.Type
+' '           Text.Whitespace
+'B'           Keyword.Type
+'\n'          Text.Whitespace
+
+'>           ' Comment.Special
+'ra'          Name.Function
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'listArray'   Name
+' '           Text.Whitespace
+'('           Punctuation
+'0'           Literal.Number.Integer
+','           Punctuation
+'pred'        Name
+' '           Text.Whitespace
+'('           Punctuation
+'rangeSize'   Name
+' '           Text.Whitespace
+'b'           Name
+')'           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'B'           Keyword.Type
+' '           Text.Whitespace
+'('           Punctuation
+'fst'         Name
+' '           Text.Whitespace
+'b'           Name
+')'           Punctuation
+' '           Text.Whitespace
+'..'          Operator
+' '           Text.Whitespace
+'B'           Keyword.Type
+' '           Text.Whitespace
+'('           Punctuation
+'snd'         Name
+' '           Text.Whitespace
+'b'           Name
+')'           Punctuation
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'>           ' Comment.Special
+'toBlock'     Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'R'           Keyword.Type
+' '           Text.Whitespace
+'i'           Name
+','           Punctuation
+'C'           Keyword.Type
+' '           Text.Whitespace
+'j'           Name
+')'           Punctuation
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'ra'          Name
+' '           Text.Whitespace
+'!'           Operator
+' '           Text.Whitespace
+'('           Punctuation
+' '           Text.Whitespace
+'('           Punctuation
+'div'         Name
+' '           Text.Whitespace
+'('           Punctuation
+'index'       Name
+' '           Text.Whitespace
+'b'           Name
+' '           Text.Whitespace
+'j'           Name
+')'           Punctuation
+' '           Text.Whitespace
+'3'           Literal.Number.Integer
+')'           Punctuation
+'+'           Operator
+'3'           Literal.Number.Integer
+'*'           Operator
+'('           Punctuation
+'div'         Name
+' '           Text.Whitespace
+'('           Punctuation
+'index'       Name
+' '           Text.Whitespace
+'b'           Name
+' '           Text.Whitespace
+'i'           Name
+')'           Punctuation
+' '           Text.Whitespace
+'3'           Literal.Number.Integer
+')'           Punctuation
+' '           Text.Whitespace
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+" The values for an unknown location is 'u'.\n" Text
+
+' The bound and range are given by b and rng.  And bb is a 2D bound.\n' Text
+
+'\n'          Text
+
+'> '          Comment.Special
+'u'           Name.Function
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'V'           Keyword.Type
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+'  '          Text.Whitespace
+'-- unknown value' Comment.Single
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'b'           Name.Function
+' '           Text.Whitespace
+'::'          Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'Int'         Keyword.Type
+','           Punctuation
+'Int'         Keyword.Type
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'b'           Name.Function
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'1'           Literal.Number.Integer
+','           Punctuation
+'9'           Literal.Number.Integer
+')'           Punctuation
+' '           Text.Whitespace
+'-- min and max bounds' Comment.Single
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'rng'         Name.Function
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'enumFromTo'  Name
+' '           Text.Whitespace
+'('           Punctuation
+'fst'         Name
+' '           Text.Whitespace
+'b'           Name
+')'           Punctuation
+'  '          Text.Whitespace
+'('           Punctuation
+'snd'         Name
+' '           Text.Whitespace
+'b'           Name
+')'           Punctuation
+'  '          Text.Whitespace
+"-- list from '1' to '9'" Comment.Single
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'bb'          Name.Function
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'('           Punctuation
+'R'           Keyword.Type
+' '           Text.Whitespace
+'('           Punctuation
+'fst'         Name
+' '           Text.Whitespace
+'b'           Name
+')'           Punctuation
+','           Punctuation
+'C'           Keyword.Type
+' '           Text.Whitespace
+'('           Punctuation
+'fst'         Name
+' '           Text.Whitespace
+'b'           Name
+')'           Punctuation
+')'           Punctuation
+','           Punctuation
+'('           Punctuation
+'R'           Keyword.Type
+' '           Text.Whitespace
+'('           Punctuation
+'snd'         Name
+' '           Text.Whitespace
+'b'           Name
+')'           Punctuation
+','           Punctuation
+'C'           Keyword.Type
+' '           Text.Whitespace
+'('           Punctuation
+'snd'         Name
+' '           Text.Whitespace
+'b'           Name
+')'           Punctuation
+')'           Punctuation
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+'  A Spec can be turned into a parsed array with ease:\n' Text
+
+'\n'          Text
+
+'> '          Comment.Special
+'type'        Keyword.Reserved
+' '           Text.Whitespace
+'Hint'        Keyword.Type
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'('           Punctuation
+'R'           Keyword.Type
+','           Punctuation
+'C'           Keyword.Type
+')'           Punctuation
+','           Punctuation
+'V'           Keyword.Type
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'newtype'     Keyword.Reserved
+' '           Text.Whitespace
+'Spec'        Keyword.Type
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'Spec'        Keyword.Type
+' '           Text.Whitespace
+'['           Punctuation
+'Hint'        Keyword.Type
+']'           Punctuation
+' '           Text.Whitespace
+'deriving'    Keyword.Reserved
+' '           Text.Whitespace
+'('           Punctuation
+'Eq'          Keyword.Type
+','           Punctuation
+'Show'        Keyword.Type
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+'> '          Comment.Special
+'type'        Keyword.Reserved
+' '           Text.Whitespace
+'PA'          Keyword.Type
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'Array'       Keyword.Type
+' '           Text.Whitespace
+'('           Punctuation
+'R'           Keyword.Type
+','           Punctuation
+'C'           Keyword.Type
+')'           Punctuation
+' '           Text.Whitespace
+'V'           Keyword.Type
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+'> '          Comment.Special
+'parse'       Name.Function
+' '           Text.Whitespace
+'::'          Operator.Word
+' '           Text.Whitespace
+'Spec'        Keyword.Type
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'PA'          Keyword.Type
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'parse'       Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'Spec'        Keyword.Type
+' '           Text.Whitespace
+'parsed'      Name
+')'           Punctuation
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'let'         Keyword.Reserved
+' '           Text.Whitespace
+'acc'         Name
+' '           Text.Whitespace
+'old'         Name
+' '           Text.Whitespace
+'new'         Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'new'         Name
+'\n'          Text.Whitespace
+
+'>                       ' Comment.Special
+'in'          Keyword.Reserved
+' '           Text.Whitespace
+'accumArray'  Name
+' '           Text.Whitespace
+'acc'         Name
+' '           Text.Whitespace
+'u'           Name
+' '           Text.Whitespace
+'bb'          Name
+' '           Text.Whitespace
+'parsed'      Name
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+' The dancing links algorithm depends on a sparse 2D node structure.\n' Text
+
+' Each column represents a constraint.  Each row represents a Hint.\n' Text
+
+' The number of possible hints is 9x9x9 = 271\n' Text
+
+'\n'          Text
+
+'> '          Comment.Special
+'type'        Keyword.Reserved
+' '           Text.Whitespace
+'('           Punctuation
+'MutInt'      Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+'  '          Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'STRef'       Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'Int'         Keyword.Type
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+' The pointer types:\n' Text
+
+'\n'          Text
+
+'> '          Comment.Special
+'type'        Keyword.Reserved
+' '           Text.Whitespace
+'('           Punctuation
+'NodePtr'     Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'STRef'       Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'('           Punctuation
+'Node'        Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'type'        Keyword.Reserved
+' '           Text.Whitespace
+'('           Punctuation
+'HeadPtr'     Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+'  '          Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'STRef'       Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'('           Punctuation
+'Head'        Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+" The structures is a 2D grid of nodes, with Col's on the top of\n" Text
+
+' columns and a sparse collection of nodes.  Note that topNode of Head\n' Text
+
+' is not a strict field.  This is because the topNode needs to refer to\n' Text
+
+' the Head, and they are both created monadically.\n' Text
+
+'\n'          Text
+
+'> '          Comment.Special
+'type'        Keyword.Reserved
+' '           Text.Whitespace
+'HeadName'    Keyword.Type
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'Int'         Keyword.Type
+','           Punctuation
+'Int'         Keyword.Type
+','           Punctuation
+'Int'         Keyword.Type
+')'           Punctuation
+' '           Text.Whitespace
+'-- see below for meaning' Comment.Single
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+'> '          Comment.Special
+'data'        Keyword.Reserved
+' '           Text.Whitespace
+'Head'        Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'Head'        Keyword.Type
+' '           Text.Whitespace
+'{'           Punctuation
+'headName'    Name
+'::'          Operator.Word
+' '           Text.Whitespace
+'!'           Operator
+'HeadName'    Keyword.Type
+'\n'          Text.Whitespace
+
+'>                     ' Comment.Special
+','           Punctuation
+'topNode'     Name
+'::'          Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'Node'        Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'-- header node for this column' Comment.Single
+'\n'          Text.Whitespace
+
+'>                     ' Comment.Special
+','           Punctuation
+'len'         Name
+'::'          Operator.Word
+' '           Text.Whitespace
+'!'           Operator
+'('           Punctuation
+'MutInt'      Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+'  '          Text.Whitespace
+'-- number of nodes below this head' Comment.Single
+'\n'          Text.Whitespace
+
+'>                     ' Comment.Special
+','           Punctuation
+'next'        Name
+','           Punctuation
+'prev'        Name
+'::'          Operator.Word
+' '           Text.Whitespace
+'!'           Operator
+'('           Punctuation
+'HeadPtr'     Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+'  '          Text.Whitespace
+'-- doubly-linked list' Comment.Single
+'\n'          Text.Whitespace
+
+'>                     ' Comment.Special
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+'> '          Comment.Special
+'data'        Keyword.Reserved
+' '           Text.Whitespace
+'Node'        Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'Node'        Keyword.Type
+' '           Text.Whitespace
+'{'           Punctuation
+'getHint'     Name
+'::'          Operator.Word
+' '           Text.Whitespace
+'!'           Operator
+'Hint'        Keyword.Type
+'\n'          Text.Whitespace
+
+'>                     ' Comment.Special
+','           Punctuation
+'getHead'     Name
+'::'          Operator.Word
+' '           Text.Whitespace
+'!'           Operator
+'('           Punctuation
+'Head'        Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+'  '          Text.Whitespace
+'-- head for the column this node is in' Comment.Single
+'\n'          Text.Whitespace
+
+'>                     ' Comment.Special
+','           Punctuation
+'up'          Name
+','           Punctuation
+'down'        Name
+','           Punctuation
+'left'        Name
+','           Punctuation
+'right'       Name
+' '           Text.Whitespace
+'::'          Operator.Word
+' '           Text.Whitespace
+'!'           Operator
+'('           Punctuation
+'NodePtr'     Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+'  '          Text.Whitespace
+'-- two doubly-linked lists' Comment.Single
+'\n'          Text.Whitespace
+
+'>                     ' Comment.Special
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+'> '          Comment.Special
+'instance'    Keyword.Reserved
+' '           Text.Whitespace
+'Eq'          Keyword.Type
+' '           Text.Whitespace
+'('           Punctuation
+'Head'        Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'where'       Keyword.Reserved
+'\n'          Text.Whitespace
+
+'>     '      Comment.Special
+'a'           Name.Function
+' '           Text.Whitespace
+'=='          Operator
+' '           Text.Whitespace
+'b'           Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'headName'    Name
+' '           Text.Whitespace
+'a'           Name
+' '           Text.Whitespace
+'=='          Operator
+' '           Text.Whitespace
+'headName'    Name
+' '           Text.Whitespace
+'b'           Name
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+'> '          Comment.Special
+'instance'    Keyword.Reserved
+' '           Text.Whitespace
+'Eq'          Keyword.Type
+' '           Text.Whitespace
+'('           Punctuation
+'Node'        Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'where'       Keyword.Reserved
+'\n'          Text.Whitespace
+
+'>     '      Comment.Special
+'a'           Name.Function
+' '           Text.Whitespace
+'=='          Operator
+' '           Text.Whitespace
+'b'           Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'up'          Name
+' '           Text.Whitespace
+'a'           Name
+' '           Text.Whitespace
+'=='          Operator
+' '           Text.Whitespace
+'up'          Name
+' '           Text.Whitespace
+'b'           Name
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+" To initialize the structures is a bit tedious.  Knuth's code reads in\n" Text
+
+' the problem description from a data file and builds the structure\n' Text
+
+' based on that.  Rather than short strings, I will use HeadName as the\n' Text
+
+' identifier.\n' Text
+
+' \n'         Text
+
+' The columns are (0,4,5) for nodes that put some value in Row 4 Col 5\n' Text
+
+'                 (1,2,3) for nodes that put Val 3 in Row 2 and some column\n' Text
+
+'                 (2,7,4) for nodes that put Val 4 in Col 7 and some row\n' Text
+
+'                 (3,1,8) for nodes that put Val 8 in some (row,column) in Block 1\n' Text
+
+'\n'          Text
+
+' The first head is (0,0,0) which is the root.  The non-root head data\n' Text
+
+' will be put in an array with the HeadName as an index.\n' Text
+
+'\n'          Text
+
+'> '          Comment.Special
+'headNames'   Name.Function
+' '           Text.Whitespace
+'::'          Operator.Word
+' '           Text.Whitespace
+'['           Punctuation
+'HeadName'    Keyword.Type
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'headNames'   Name.Function
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'let'         Keyword.Reserved
+' '           Text.Whitespace
+'names'       Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'['           Punctuation
+'0'           Literal.Number.Integer
+','           Punctuation
+'1'           Literal.Number.Integer
+','           Punctuation
+'2'           Literal.Number.Integer
+','           Punctuation
+'3'           Literal.Number.Integer
+']'           Punctuation
+' \n'         Text.Whitespace
+
+'>             ' Comment.Special
+'in'          Keyword.Reserved
+' '           Text.Whitespace
+'('           Punctuation
+'0'           Literal.Number.Integer
+','           Punctuation
+'0'           Literal.Number.Integer
+','           Punctuation
+'0'           Literal.Number.Integer
+')'           Punctuation
+':'           Keyword.Type
+'['           Punctuation
+' '           Text.Whitespace
+'('           Punctuation
+'l'           Name
+','           Punctuation
+'i'           Name
+','           Punctuation
+'j'           Name
+')'           Punctuation
+' '           Text.Whitespace
+'|'           Operator
+' '           Text.Whitespace
+'l'           Name
+'<-'          Operator.Word
+'names'       Name
+','           Punctuation
+'i'           Name
+'<-'          Operator.Word
+'rng'         Name
+','           Punctuation
+'j'           Name
+'<-'          Operator.Word
+'rng'         Name
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+' A "row" of left-right linked nodes is a move.  It is defined by a\n' Text
+
+' list of head names.\n' Text
+
+'\n'          Text
+
+'> '          Comment.Special
+'type'        Keyword.Reserved
+' '           Text.Whitespace
+'Move'        Keyword.Type
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'['           Punctuation
+'('           Punctuation
+'Hint'        Keyword.Type
+','           Punctuation
+'HeadName'    Keyword.Type
+')'           Punctuation
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+' Initial hints are enforced by making them the only legal move for\n' Text
+
+" that location.  Blank entries with value 'u = V 0' have a move for\n" Text
+
+' all possible values [V 1..V 9].\n' Text
+
+'\n'          Text
+
+'> '          Comment.Special
+'parseSpec'   Name.Function
+' '           Text.Whitespace
+'::'          Operator.Word
+' '           Text.Whitespace
+'Spec'        Keyword.Type
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'['           Punctuation
+'Move'        Keyword.Type
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'parseSpec'   Name.Function
+' '           Text.Whitespace
+'spec'        Name
+' '           Text.Whitespace
+'='           Operator.Word
+'\n'          Text.Whitespace
+
+'>   '        Comment.Special
+'let'         Keyword.Reserved
+' '           Text.Whitespace
+'rowsFrom'    Name
+' '           Text.Whitespace
+'::'          Operator.Word
+' '           Text.Whitespace
+'Hint'        Keyword.Type
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'['           Punctuation
+'Move'        Keyword.Type
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'>       '    Comment.Special
+'rowsFrom'    Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'rc'          Name
+'@'           Operator
+'('           Punctuation
+'R'           Keyword.Type
+' '           Text.Whitespace
+'r'           Name
+','           Punctuation
+'C'           Keyword.Type
+' '           Text.Whitespace
+'c'           Name
+')'           Punctuation
+','           Punctuation
+'mv'          Name
+'@'           Operator
+'('           Punctuation
+'V'           Keyword.Type
+' '           Text.Whitespace
+"v'"          Name
+')'           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'='           Operator.Word
+' \n'         Text.Whitespace
+
+'>           ' Comment.Special
+'if'          Keyword.Reserved
+' '           Text.Whitespace
+'mv'          Name
+' '           Text.Whitespace
+'=='          Operator
+' '           Text.Whitespace
+'u'           Name
+' '           Text.Whitespace
+'then'        Keyword.Reserved
+' '           Text.Whitespace
+'['           Punctuation
+' '           Text.Whitespace
+'rsyms'       Name
+' '           Text.Whitespace
+'v'           Name
+' '           Text.Whitespace
+'|'           Operator
+' '           Text.Whitespace
+'v'           Name
+' '           Text.Whitespace
+'<-'          Operator.Word
+' '           Text.Whitespace
+'rng'         Name
+' '           Text.Whitespace
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'>           ' Comment.Special
+'else'        Keyword.Reserved
+' '           Text.Whitespace
+'['           Punctuation
+' '           Text.Whitespace
+'rsyms'       Name
+' '           Text.Whitespace
+"v'"          Name
+' '           Text.Whitespace
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'>         '  Comment.Special
+'where'       Keyword.Reserved
+' '           Text.Whitespace
+'('           Punctuation
+'B'           Keyword.Type
+' '           Text.Whitespace
+'b'           Name
+')'           Punctuation
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'lookupBlock' Name
+' '           Text.Whitespace
+'!'           Operator
+' '           Text.Whitespace
+'rc'          Name
+'\n'          Text.Whitespace
+
+'>               ' Comment.Special
+'rsyms'       Name.Function
+' '           Text.Whitespace
+'::'          Operator.Word
+' '           Text.Whitespace
+'A'           Keyword.Type
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'Move'        Keyword.Type
+'\n'          Text.Whitespace
+
+'>               ' Comment.Special
+'rsyms'       Name.Function
+' '           Text.Whitespace
+'v'           Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'map'         Name
+' '           Text.Whitespace
+'('           Punctuation
+' '           Text.Whitespace
+'('           Punctuation
+','           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'('           Punctuation
+'rc'          Name
+','           Punctuation
+'V'           Keyword.Type
+' '           Text.Whitespace
+'v'           Name
+')'           Punctuation
+' '           Text.Whitespace
+')'           Punctuation
+' '           Text.Whitespace
+'['           Punctuation
+'('           Punctuation
+'0'           Literal.Number.Integer
+','           Punctuation
+'r'           Name
+','           Punctuation
+'c'           Name
+')'           Punctuation
+','           Punctuation
+'('           Punctuation
+'1'           Literal.Number.Integer
+','           Punctuation
+'r'           Name
+','           Punctuation
+'v'           Name
+')'           Punctuation
+','           Punctuation
+'('           Punctuation
+'2'           Literal.Number.Integer
+','           Punctuation
+'c'           Name
+','           Punctuation
+'v'           Name
+')'           Punctuation
+','           Punctuation
+'('           Punctuation
+'3'           Literal.Number.Integer
+','           Punctuation
+'b'           Name
+','           Punctuation
+'v'           Name
+')'           Punctuation
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'>   '        Comment.Special
+'in'          Keyword.Reserved
+' '           Text.Whitespace
+'concatMap'   Name
+' '           Text.Whitespace
+'rowsFrom'    Name
+' '           Text.Whitespace
+'('           Punctuation
+'assocs'      Name
+' '           Text.Whitespace
+'('           Punctuation
+'parse'       Name
+' '           Text.Whitespace
+'spec'        Name
+')'           Punctuation
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+' mkDList creates doubly linked lists using a monadic smart\n' Text
+
+' constructor and the recursive "mdo" notation as documented at\n' Text
+
+' http://www.haskell.org/ghc/docs/latest/html/users_guide/syntax-extns.html#mdo-notation\n' Text
+
+' http://www.cse.ogi.edu/PacSoft/projects/rmb/\n' Text
+
+'\n'          Text
+
+' For more fun with this, see the wiki page at\n' Text
+
+' http://haskell.org/hawiki/TyingTheKnot\n' Text
+
+'\n'          Text
+
+'> '          Comment.Special
+'mkDList'     Name.Function
+' '           Text.Whitespace
+'::'          Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'MonadFix'    Keyword.Type
+' '           Text.Whitespace
+'m'           Name
+')'           Punctuation
+' '           Text.Whitespace
+'=>'          Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'b'           Name
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'a'           Name
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'b'           Name
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'m'           Name
+' '           Text.Whitespace
+'b'           Name
+')'           Punctuation
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'['           Punctuation
+'a'           Name
+']'           Punctuation
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'m'           Name
+' '           Text.Whitespace
+'b'           Name
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'mkDList'     Name.Function
+' '           Text.Whitespace
+'_'           Keyword.Reserved
+' '           Text.Whitespace
+'[]'          Keyword.Type
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'error'       Name.Exception
+' '           Text.Whitespace
+'"'           Literal.String
+'must have at least one element' Literal.String
+'"'           Literal.String
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'mkDList'     Name.Function
+' '           Text.Whitespace
+'mkNode'      Name
+' '           Text.Whitespace
+'xs'          Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'mdo'         Name
+' '           Text.Whitespace
+'('           Punctuation
+'first'       Name
+','           Punctuation
+'last'        Name
+')'           Punctuation
+' '           Text.Whitespace
+'<-'          Operator.Word
+' '           Text.Whitespace
+'go'          Name
+' '           Text.Whitespace
+'last'        Name
+' '           Text.Whitespace
+'xs'          Name
+' '           Text.Whitespace
+'first'       Name
+'\n'          Text.Whitespace
+
+'>                         ' Comment.Special
+'return'      Name.Function
+' '           Text.Whitespace
+'first'       Name
+'\n'          Text.Whitespace
+
+'>   '        Comment.Special
+'where'       Keyword.Reserved
+' '           Text.Whitespace
+'go'          Name
+' '           Text.Whitespace
+'prev'        Name
+' '           Text.Whitespace
+'[]'          Keyword.Type
+'     '       Text.Whitespace
+'next'        Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'return'      Name
+' '           Text.Whitespace
+'('           Punctuation
+'next'        Name
+','           Punctuation
+'prev'        Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'>         '  Comment.Special
+'go'          Name.Function
+' '           Text.Whitespace
+'prev'        Name
+' '           Text.Whitespace
+'('           Punctuation
+'x'           Name
+':'           Keyword.Type
+'xs'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'next'        Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'mdo'         Name
+' '           Text.Whitespace
+'this'        Name
+' '           Text.Whitespace
+'<-'          Operator.Word
+' '           Text.Whitespace
+'mkNode'      Name
+' '           Text.Whitespace
+'prev'        Name
+' '           Text.Whitespace
+'x'           Name
+' '           Text.Whitespace
+'rest'        Name
+'\n'          Text.Whitespace
+
+'>                                   ' Comment.Special
+'('           Punctuation
+'rest'        Name
+','           Punctuation
+'last'        Name
+')'           Punctuation
+' '           Text.Whitespace
+'<-'          Operator.Word
+' '           Text.Whitespace
+'go'          Name
+' '           Text.Whitespace
+'this'        Name
+' '           Text.Whitespace
+'xs'          Name
+' '           Text.Whitespace
+'next'        Name
+'\n'          Text.Whitespace
+
+'>                                   ' Comment.Special
+'return'      Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'this'        Name
+','           Punctuation
+'last'        Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+' toSimple takes a function and a header node and iterates (read . function)\n' Text
+
+' until the header is reached again, but does not return the header\n' Text
+
+' itself.\n'  Text
+
+'\n'          Text
+
+'> '          Comment.Special
+'toSingle'    Name.Function
+' '           Text.Whitespace
+'step'        Name
+' '           Text.Whitespace
+'header'      Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'loop'        Name
+' '           Text.Whitespace
+'=<<'         Operator
+' '           Text.Whitespace
+'('           Punctuation
+'read'        Name
+' '           Text.Whitespace
+'.'           Operator
+' '           Text.Whitespace
+'step'        Name
+')'           Punctuation
+' '           Text.Whitespace
+'header'      Name
+'\n'          Text.Whitespace
+
+'>     '      Comment.Special
+'where'       Keyword.Reserved
+' '           Text.Whitespace
+'loop'        Name
+' '           Text.Whitespace
+'y'           Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'if'          Keyword.Reserved
+' '           Text.Whitespace
+'header'      Name
+'/='          Operator
+'y'           Name
+' '           Text.Whitespace
+'then'        Keyword.Reserved
+' '           Text.Whitespace
+'liftM'       Name
+' '           Text.Whitespace
+'('           Punctuation
+'y'           Name
+':'           Keyword.Type
+')'           Punctuation
+' '           Text.Whitespace
+'('           Punctuation
+'read'        Name
+' '           Text.Whitespace
+'('           Punctuation
+'step'        Name
+' '           Text.Whitespace
+'y'           Name
+')'           Punctuation
+' '           Text.Whitespace
+'>>='         Operator
+' '           Text.Whitespace
+'loop'        Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'>                                 ' Comment.Special
+'else'        Keyword.Reserved
+' '           Text.Whitespace
+'return'      Name
+' '           Text.Whitespace
+'[]'          Keyword.Type
+'\n'          Text.Whitespace
+
+'>        '   Comment.Special
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+' forEach is an optimization of (toSimple step header >>= mapM_ act)\n' Text
+
+'\n'          Text
+
+'> '          Comment.Special
+'forEach'     Name.Function
+' '           Text.Whitespace
+'step'        Name
+' '           Text.Whitespace
+'header'      Name
+' '           Text.Whitespace
+'act'         Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'loop'        Name
+' '           Text.Whitespace
+'=<<'         Operator
+' '           Text.Whitespace
+'('           Punctuation
+'read'        Name
+' '           Text.Whitespace
+'.'           Operator
+' '           Text.Whitespace
+'step'        Name
+')'           Punctuation
+' '           Text.Whitespace
+'header'      Name
+'\n'          Text.Whitespace
+
+'>      '     Comment.Special
+'where'       Keyword.Reserved
+' '           Text.Whitespace
+'loop'        Name
+' '           Text.Whitespace
+'y'           Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'if'          Keyword.Reserved
+' '           Text.Whitespace
+'header'      Name
+'/='          Operator
+'y'           Name
+' '           Text.Whitespace
+'then'        Keyword.Reserved
+' '           Text.Whitespace
+'('           Punctuation
+'act'         Name
+' '           Text.Whitespace
+'y'           Name
+' '           Text.Whitespace
+'>>'          Operator
+' '           Text.Whitespace
+'('           Punctuation
+'read'        Name
+' '           Text.Whitespace
+'('           Punctuation
+'step'        Name
+' '           Text.Whitespace
+'y'           Name
+')'           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'>>='         Operator
+' '           Text.Whitespace
+'loop'        Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'>                                  ' Comment.Special
+'else'        Keyword.Reserved
+' '           Text.Whitespace
+'return'      Name
+' '           Text.Whitespace
+'()'          Name.Builtin
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+' Now make the root node and all the head nodes. This also exploits mdo:\n' Text
+
+'\n'          Text
+
+'> '          Comment.Special
+'makeHeads'   Name.Function
+' '           Text.Whitespace
+'::'          Operator.Word
+' '           Text.Whitespace
+'['           Punctuation
+'HeadName'    Keyword.Type
+']'           Punctuation
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'ST'          Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'('           Punctuation
+'Head'        Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'makeHeads'   Name.Function
+' '           Text.Whitespace
+'names'       Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'mkDList'     Name
+' '           Text.Whitespace
+'makeHead'    Name
+' '           Text.Whitespace
+'names'       Name
+'\n'          Text.Whitespace
+
+'>     '      Comment.Special
+'where'       Keyword.Reserved
+' '           Text.Whitespace
+'makeHead'    Name
+' '           Text.Whitespace
+'before'      Name
+' '           Text.Whitespace
+'name'        Name
+' '           Text.Whitespace
+'after'       Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'mdo'         Name
+'\n'          Text.Whitespace
+
+'>             ' Comment.Special
+'~'           Operator
+'newTopNode'  Name
+' '           Text.Whitespace
+'<-'          Operator.Word
+' '           Text.Whitespace
+'liftM4'      Name
+' '           Text.Whitespace
+'('           Punctuation
+'Node'        Keyword.Type
+' '           Text.Whitespace
+'('           Punctuation
+'('           Punctuation
+'R'           Keyword.Type
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+','           Punctuation
+'C'           Keyword.Type
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+')'           Punctuation
+','           Punctuation
+'V'           Keyword.Type
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+')'           Punctuation
+' '           Text.Whitespace
+'newHead'     Name
+')'           Punctuation
+' '           Text.Whitespace
+'('           Punctuation
+'new'         Name
+' '           Text.Whitespace
+'newTopNode'  Name
+')'           Punctuation
+' '           Text.Whitespace
+'('           Punctuation
+'new'         Name
+' '           Text.Whitespace
+'newTopNode'  Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'>                                                                 ' Comment.Special
+'('           Punctuation
+'new'         Name
+' '           Text.Whitespace
+'newTopNode'  Name
+')'           Punctuation
+' '           Text.Whitespace
+'('           Punctuation
+'new'         Name
+' '           Text.Whitespace
+'newTopNode'  Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'>             ' Comment.Special
+'newHead'     Name.Function
+' '           Text.Whitespace
+'<-'          Operator.Word
+' '           Text.Whitespace
+'liftM3'      Name
+' '           Text.Whitespace
+'('           Punctuation
+'Head'        Keyword.Type
+' '           Text.Whitespace
+'name'        Name
+' '           Text.Whitespace
+'newTopNode'  Name
+')'           Punctuation
+'                         \n' Text.Whitespace
+
+'>                                    ' Comment.Special
+'('           Punctuation
+'new'         Name
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+')'           Punctuation
+' '           Text.Whitespace
+'('           Punctuation
+'new'         Name
+' '           Text.Whitespace
+'after'       Name
+')'           Punctuation
+' '           Text.Whitespace
+'('           Punctuation
+'new'         Name
+' '           Text.Whitespace
+'before'      Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'>             ' Comment.Special
+'return'      Name.Function
+' '           Text.Whitespace
+'newHead'     Name
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+' The Head nodes will be places in an array for easy lookup while building moves:\n' Text
+
+'\n'          Text
+
+'> '          Comment.Special
+'type'        Keyword.Reserved
+' '           Text.Whitespace
+'HArray'      Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'Array'       Keyword.Type
+' '           Text.Whitespace
+'HeadName'    Keyword.Type
+' '           Text.Whitespace
+'('           Punctuation
+'Head'        Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'hBounds'     Name.Function
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'('           Punctuation
+'0'           Literal.Number.Integer
+','           Punctuation
+'1'           Literal.Number.Integer
+','           Punctuation
+'1'           Literal.Number.Integer
+')'           Punctuation
+','           Punctuation
+'('           Punctuation
+'3'           Literal.Number.Integer
+','           Punctuation
+'9'           Literal.Number.Integer
+','           Punctuation
+'9'           Literal.Number.Integer
+')'           Punctuation
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'type'        Keyword.Reserved
+' '           Text.Whitespace
+'Root'        Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+' '           Text.Whitespace
+'='           Operator.Word
+'  '          Text.Whitespace
+'('           Punctuation
+'Head'        Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+','           Punctuation
+'HArray'      Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+' The addMove function creates the (four) nodes that represent a move and adds\n' Text
+
+' them to the data structure.  The HArray in Root makes for a fast\n' Text
+
+' lookup of the Head data.\n' Text
+
+'\n'          Text
+
+'> '          Comment.Special
+'addMove'     Name.Function
+' '           Text.Whitespace
+'::'          Operator.Word
+' '           Text.Whitespace
+'forall'      Name
+' '           Text.Whitespace
+'st'          Name
+'.'           Operator
+' '           Text.Whitespace
+'('           Punctuation
+'Root'        Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'Move'        Keyword.Type
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'ST'          Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'('           Punctuation
+'Node'        Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'addMove'     Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'_'           Keyword.Reserved
+','           Punctuation
+'ha'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'move'        Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'mkDList'     Name
+' '           Text.Whitespace
+'addNode'     Name
+' '           Text.Whitespace
+'move'        Name
+'\n'          Text.Whitespace
+
+'>     '      Comment.Special
+'where'       Keyword.Reserved
+' '           Text.Whitespace
+'addNode'     Name
+' '           Text.Whitespace
+'::'          Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'Node'        Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'Hint'        Keyword.Type
+','           Punctuation
+'HeadName'    Keyword.Type
+')'           Punctuation
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'Node'        Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'ST'          Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'('           Punctuation
+'Node'        Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'>           ' Comment.Special
+'addNode'     Name.Function
+' '           Text.Whitespace
+'before'      Name
+' '           Text.Whitespace
+'('           Punctuation
+'hint'        Name
+','           Punctuation
+'name'        Name
+')'           Punctuation
+' '           Text.Whitespace
+'after'       Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'do'          Keyword.Reserved
+'\n'          Text.Whitespace
+
+'>             ' Comment.Special
+'let'         Keyword.Reserved
+' '           Text.Whitespace
+'head'        Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'ha'          Name
+' '           Text.Whitespace
+'!'           Operator
+' '           Text.Whitespace
+'name'        Name
+'\n'          Text.Whitespace
+
+'>             ' Comment.Special
+'let'         Keyword.Reserved
+' '           Text.Whitespace
+'below'       Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'topNode'     Name
+' '           Text.Whitespace
+'head'        Name
+'\n'          Text.Whitespace
+
+'>             ' Comment.Special
+'above'       Name.Function
+' '           Text.Whitespace
+'<-'          Operator.Word
+' '           Text.Whitespace
+'read'        Name
+' '           Text.Whitespace
+'('           Punctuation
+'up'          Name
+' '           Text.Whitespace
+'below'       Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'>             ' Comment.Special
+'newNode'     Name.Function
+' '           Text.Whitespace
+'<-'          Operator.Word
+' '           Text.Whitespace
+'liftM4'      Name
+' '           Text.Whitespace
+'('           Punctuation
+'Node'        Keyword.Type
+' '           Text.Whitespace
+'hint'        Name
+' '           Text.Whitespace
+'head'        Name
+')'           Punctuation
+' '           Text.Whitespace
+'('           Punctuation
+'new'         Name
+' '           Text.Whitespace
+'above'       Name
+')'           Punctuation
+' '           Text.Whitespace
+'('           Punctuation
+'new'         Name
+' '           Text.Whitespace
+'below'       Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'>                                                ' Comment.Special
+'('           Punctuation
+'new'         Name
+' '           Text.Whitespace
+'before'      Name
+')'           Punctuation
+' '           Text.Whitespace
+'('           Punctuation
+'new'         Name
+' '           Text.Whitespace
+'after'       Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'>             ' Comment.Special
+'write'       Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'down'        Name
+' '           Text.Whitespace
+'above'       Name
+')'           Punctuation
+' '           Text.Whitespace
+'newNode'     Name
+'\n'          Text.Whitespace
+
+'>             ' Comment.Special
+'write'       Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'up'          Name
+' '           Text.Whitespace
+'below'       Name
+')'           Punctuation
+' '           Text.Whitespace
+'newNode'     Name
+'\n'          Text.Whitespace
+
+'>             ' Comment.Special
+'modify'      Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'len'         Name
+' '           Text.Whitespace
+'head'        Name
+')'           Punctuation
+' '           Text.Whitespace
+'succ'        Name
+'\n'          Text.Whitespace
+
+'>             ' Comment.Special
+'l'           Name.Function
+' '           Text.Whitespace
+'<-'          Operator.Word
+' '           Text.Whitespace
+'read'        Name
+' '           Text.Whitespace
+'('           Punctuation
+'len'         Name
+' '           Text.Whitespace
+'head'        Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'>             ' Comment.Special
+'seq'         Name.Function
+' '           Text.Whitespace
+'l'           Name
+' '           Text.Whitespace
+'('           Punctuation
+'return'      Name
+' '           Text.Whitespace
+'newNode'     Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+' Create the column headers, including the fast lookup array.  These\n' Text
+
+' will be resused between puzzles.\n' Text
+
+'\n'          Text
+
+'> '          Comment.Special
+'initHA'      Name.Function
+' '           Text.Whitespace
+'::'          Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'ST'          Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'('           Punctuation
+'Root'        Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'initHA'      Name.Function
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'do'          Keyword.Reserved
+'\n'          Text.Whitespace
+
+'>   '        Comment.Special
+'root'        Name.Function
+' '           Text.Whitespace
+'<-'          Operator.Word
+' '           Text.Whitespace
+'makeHeads'   Name
+' '           Text.Whitespace
+'headNames'   Name
+'\n'          Text.Whitespace
+
+'>   '        Comment.Special
+'heads'       Name.Function
+' '           Text.Whitespace
+'<-'          Operator.Word
+' '           Text.Whitespace
+'toSingle'    Name
+' '           Text.Whitespace
+'next'        Name
+' '           Text.Whitespace
+'root'        Name
+'\n'          Text.Whitespace
+
+'>   '        Comment.Special
+'let'         Keyword.Reserved
+' '           Text.Whitespace
+'ha'          Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'array'       Name
+' '           Text.Whitespace
+'hBounds'     Name
+' '           Text.Whitespace
+'('           Punctuation
+'zip'         Name
+' '           Text.Whitespace
+'('           Punctuation
+'map'         Name
+' '           Text.Whitespace
+'headName'    Name
+' '           Text.Whitespace
+'heads'       Name
+')'           Punctuation
+' '           Text.Whitespace
+'heads'       Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'>   '        Comment.Special
+'return'      Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'root'        Name
+','           Punctuation
+'ha'          Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+' Take the Root from initHA and a puzzle Spec and fill in all the Nodes.\n' Text
+
+'\n'          Text
+
+'> '          Comment.Special
+'initRoot'    Name.Function
+' '           Text.Whitespace
+'::'          Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'Root'        Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'Spec'        Keyword.Type
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'ST'          Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'()'          Name.Builtin
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'initRoot'    Name.Function
+' '           Text.Whitespace
+'root'        Name
+' '           Text.Whitespace
+'spec'        Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'do'          Keyword.Reserved
+'\n'          Text.Whitespace
+
+'>   '        Comment.Special
+'let'         Keyword.Reserved
+' '           Text.Whitespace
+'moves'       Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'parseSpec'   Name
+' '           Text.Whitespace
+'spec'        Name
+'\n'          Text.Whitespace
+
+'>   '        Comment.Special
+'mapM_'       Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'addMove'     Name
+' '           Text.Whitespace
+'root'        Name
+')'           Punctuation
+' '           Text.Whitespace
+'moves'       Name
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+'  Return the column headers to their condition after initHA\n' Text
+
+'\n'          Text
+
+'> '          Comment.Special
+'resetRoot'   Name.Function
+' '           Text.Whitespace
+'::'          Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'Root'        Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'ST'          Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'()'          Name.Builtin
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'resetRoot'   Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'root'        Name
+','           Punctuation
+'ha'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'do'          Keyword.Reserved
+'\n'          Text.Whitespace
+
+'>   '        Comment.Special
+'let'         Keyword.Reserved
+' '           Text.Whitespace
+'heads'       Name
+'@'           Operator
+'('           Punctuation
+'first'       Name
+':'           Keyword.Type
+'_'           Keyword.Reserved
+')'           Punctuation
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'elems'       Name
+' '           Text.Whitespace
+'ha'          Name
+'\n'          Text.Whitespace
+
+'>   '        Comment.Special
+'let'         Keyword.Reserved
+' '           Text.Whitespace
+'resetHead'   Name
+' '           Text.Whitespace
+'head'        Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'do'          Keyword.Reserved
+'\n'          Text.Whitespace
+
+'>         '  Comment.Special
+'write'       Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'len'         Name
+' '           Text.Whitespace
+'head'        Name
+')'           Punctuation
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+'\n'          Text.Whitespace
+
+'>         '  Comment.Special
+'let'         Keyword.Reserved
+' '           Text.Whitespace
+'node'        Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'topNode'     Name
+' '           Text.Whitespace
+'head'        Name
+'\n'          Text.Whitespace
+
+'>         '  Comment.Special
+'write'       Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'down'        Name
+' '           Text.Whitespace
+'node'        Name
+')'           Punctuation
+' '           Text.Whitespace
+'node'        Name
+'\n'          Text.Whitespace
+
+'>         '  Comment.Special
+'write'       Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'up'          Name
+' '           Text.Whitespace
+'node'        Name
+')'           Punctuation
+' '           Text.Whitespace
+'node'        Name
+'\n'          Text.Whitespace
+
+'>       '    Comment.Special
+'reset'       Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'last'        Name
+':'           Keyword.Type
+'[]'          Keyword.Type
+')'           Punctuation
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'do'          Keyword.Reserved
+'\n'          Text.Whitespace
+
+'>         '  Comment.Special
+'write'       Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'prev'        Name
+' '           Text.Whitespace
+'root'        Name
+')'           Punctuation
+' '           Text.Whitespace
+'last'        Name
+'\n'          Text.Whitespace
+
+'>         '  Comment.Special
+'write'       Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'next'        Name
+' '           Text.Whitespace
+'root'        Name
+')'           Punctuation
+' '           Text.Whitespace
+'first'       Name
+'\n'          Text.Whitespace
+
+'>       '    Comment.Special
+'reset'       Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'before'      Name
+':'           Keyword.Type
+'xs'          Name
+'@'           Operator
+'('           Punctuation
+'head'        Name
+':'           Keyword.Type
+'[]'          Keyword.Type
+')'           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'do'          Keyword.Reserved
+'\n'          Text.Whitespace
+
+'>         '  Comment.Special
+'resetHead'   Name.Function
+' '           Text.Whitespace
+'head'        Name
+'\n'          Text.Whitespace
+
+'>         '  Comment.Special
+'write'       Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'prev'        Name
+' '           Text.Whitespace
+'head'        Name
+')'           Punctuation
+' '           Text.Whitespace
+'before'      Name
+'\n'          Text.Whitespace
+
+'>         '  Comment.Special
+'write'       Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'next'        Name
+' '           Text.Whitespace
+'head'        Name
+')'           Punctuation
+' '           Text.Whitespace
+'root'        Name
+'\n'          Text.Whitespace
+
+'>         '  Comment.Special
+'reset'       Name.Function
+' '           Text.Whitespace
+'xs'          Name
+'\n'          Text.Whitespace
+
+'>       '    Comment.Special
+'reset'       Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'before'      Name
+':'           Keyword.Type
+'xs'          Name
+'@'           Operator
+'('           Punctuation
+'head'        Name
+':'           Keyword.Type
+'after'       Name
+':'           Keyword.Type
+'_'           Keyword.Reserved
+')'           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'do'          Keyword.Reserved
+'\n'          Text.Whitespace
+
+'>         '  Comment.Special
+'resetHead'   Name.Function
+' '           Text.Whitespace
+'head'        Name
+'\n'          Text.Whitespace
+
+'>         '  Comment.Special
+'write'       Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'prev'        Name
+' '           Text.Whitespace
+'head'        Name
+')'           Punctuation
+' '           Text.Whitespace
+'before'      Name
+'\n'          Text.Whitespace
+
+'>         '  Comment.Special
+'write'       Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'next'        Name
+' '           Text.Whitespace
+'head'        Name
+')'           Punctuation
+' '           Text.Whitespace
+'after'       Name
+'\n'          Text.Whitespace
+
+'>         '  Comment.Special
+'reset'       Name.Function
+' '           Text.Whitespace
+'xs'          Name
+'\n'          Text.Whitespace
+
+'>   '        Comment.Special
+'reset'       Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'root'        Name
+':'           Keyword.Type
+'heads'       Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+' getBest iterates over the unmet constraints (i.e. the Head that are\n' Text
+
+' reachable from root). It locates the one with the lowest number of\n' Text
+
+' possible moves that will solve it, aborting early if it finds 0 or 1\n' Text
+
+' moves.\n'   Text
+
+'\n'          Text
+
+'> '          Comment.Special
+'getBest'     Name.Function
+' '           Text.Whitespace
+'::'          Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'Head'        Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'ST'          Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'('           Punctuation
+'Maybe'       Keyword.Type
+' '           Text.Whitespace
+'('           Punctuation
+'Head'        Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'getBest'     Name.Function
+' '           Text.Whitespace
+'root'        Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'do'          Keyword.Reserved
+'\n'          Text.Whitespace
+
+'>   '        Comment.Special
+'first'       Name.Function
+' '           Text.Whitespace
+'<-'          Operator.Word
+' '           Text.Whitespace
+'read'        Name
+' '           Text.Whitespace
+'('           Punctuation
+'next'        Name
+' '           Text.Whitespace
+'root'        Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'>   '        Comment.Special
+'if'          Keyword.Reserved
+' '           Text.Whitespace
+'first'       Name
+' '           Text.Whitespace
+'=='          Operator
+' '           Text.Whitespace
+'root'        Name
+' '           Text.Whitespace
+'then'        Keyword.Reserved
+' '           Text.Whitespace
+'return'      Name
+' '           Text.Whitespace
+'Nothing'     Keyword.Type
+'\n'          Text.Whitespace
+
+'>     '      Comment.Special
+'else'        Keyword.Reserved
+' '           Text.Whitespace
+'do'          Keyword.Reserved
+'\n'          Text.Whitespace
+
+'>       '    Comment.Special
+'let'         Keyword.Reserved
+' '           Text.Whitespace
+'findMin'     Name
+' '           Text.Whitespace
+'m'           Name
+' '           Text.Whitespace
+'best'        Name
+' '           Text.Whitespace
+'head'        Name
+' '           Text.Whitespace
+'|'           Operator
+' '           Text.Whitespace
+'head'        Name
+' '           Text.Whitespace
+'=='          Operator
+' '           Text.Whitespace
+'root'        Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'return'      Name
+' '           Text.Whitespace
+'('           Punctuation
+'Just'        Keyword.Type
+' '           Text.Whitespace
+'best'        Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'>                               ' Comment.Special
+'|'           Operator
+' '           Text.Whitespace
+'otherwise'   Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'do'          Keyword.Reserved
+'\n'          Text.Whitespace
+
+'>             ' Comment.Special
+'l'           Name.Function
+' '           Text.Whitespace
+'<-'          Operator.Word
+' '           Text.Whitespace
+'read'        Name
+' '           Text.Whitespace
+'('           Punctuation
+'len'         Name
+' '           Text.Whitespace
+'head'        Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'>             ' Comment.Special
+'if'          Keyword.Reserved
+' '           Text.Whitespace
+'l'           Name
+' '           Text.Whitespace
+'<='          Operator
+' '           Text.Whitespace
+'1'           Literal.Number.Integer
+' '           Text.Whitespace
+'then'        Keyword.Reserved
+' '           Text.Whitespace
+'return'      Name
+' '           Text.Whitespace
+'('           Punctuation
+'Just'        Keyword.Type
+' '           Text.Whitespace
+'head'        Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'>               ' Comment.Special
+'else'        Keyword.Reserved
+' '           Text.Whitespace
+'if'          Keyword.Reserved
+' '           Text.Whitespace
+'l'           Name
+' '           Text.Whitespace
+'<'           Operator
+' '           Text.Whitespace
+'m'           Name
+' '           Text.Whitespace
+'then'        Keyword.Reserved
+' '           Text.Whitespace
+'findMin'     Name
+' '           Text.Whitespace
+'l'           Name
+' '           Text.Whitespace
+'head'        Name
+' '           Text.Whitespace
+'=<<'         Operator
+' '           Text.Whitespace
+'read'        Name
+' '           Text.Whitespace
+'('           Punctuation
+'next'        Name
+' '           Text.Whitespace
+'head'        Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'>                      ' Comment.Special
+'else'        Keyword.Reserved
+' '           Text.Whitespace
+'findMin'     Name
+' '           Text.Whitespace
+'l'           Name
+' '           Text.Whitespace
+'best'        Name
+' '           Text.Whitespace
+'=<<'         Operator
+' '           Text.Whitespace
+'read'        Name
+' '           Text.Whitespace
+'('           Punctuation
+'next'        Name
+' '           Text.Whitespace
+'head'        Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'>       '    Comment.Special
+'findMin'     Name.Function
+' '           Text.Whitespace
+'10'          Literal.Number.Integer
+' '           Text.Whitespace
+'first'       Name
+' '           Text.Whitespace
+'first'       Name
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+' The unlink and relink operations are from where Knuth got the name\n' Text
+
+' "dancing links".  So long as "a" does not change in between, the\n' Text
+
+' relink call will undo the unlink call.  Similarly, the unconver will\n' Text
+
+' undo the changes of cover and unconverOthers will undo coverOthers.\n' Text
+
+'\n'          Text
+
+'> '          Comment.Special
+'unlink'      Name.Function
+' '           Text.Whitespace
+'::'          Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'a'           Name
+'->'          Operator.Word
+'STRef'       Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+' '           Text.Whitespace
+'a'           Name
+')'           Punctuation
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'a'           Name
+'->'          Operator.Word
+'STRef'       Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+' '           Text.Whitespace
+'a'           Name
+')'           Punctuation
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'a'           Name
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'ST'          Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'()'          Name.Builtin
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'unlink'      Name.Function
+' '           Text.Whitespace
+'prev'        Name
+' '           Text.Whitespace
+'next'        Name
+' '           Text.Whitespace
+'a'           Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'do'          Keyword.Reserved
+'\n'          Text.Whitespace
+
+'>   '        Comment.Special
+'before'      Name.Function
+' '           Text.Whitespace
+'<-'          Operator.Word
+' '           Text.Whitespace
+'read'        Name
+' '           Text.Whitespace
+'('           Punctuation
+'prev'        Name
+' '           Text.Whitespace
+'a'           Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'>   '        Comment.Special
+'after'       Name.Function
+' '           Text.Whitespace
+'<-'          Operator.Word
+' '           Text.Whitespace
+'read'        Name
+' '           Text.Whitespace
+'('           Punctuation
+'next'        Name
+' '           Text.Whitespace
+'a'           Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'>   '        Comment.Special
+'write'       Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'next'        Name
+' '           Text.Whitespace
+'before'      Name
+')'           Punctuation
+' '           Text.Whitespace
+'after'       Name
+'\n'          Text.Whitespace
+
+'>   '        Comment.Special
+'write'       Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'prev'        Name
+' '           Text.Whitespace
+'after'       Name
+')'           Punctuation
+' '           Text.Whitespace
+'before'      Name
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+'> '          Comment.Special
+'relink'      Name.Function
+' '           Text.Whitespace
+'::'          Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'a'           Name
+'->'          Operator.Word
+'STRef'       Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+' '           Text.Whitespace
+'a'           Name
+')'           Punctuation
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'a'           Name
+'->'          Operator.Word
+'STRef'       Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+' '           Text.Whitespace
+'a'           Name
+')'           Punctuation
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'a'           Name
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'ST'          Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'()'          Name.Builtin
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'relink'      Name.Function
+' '           Text.Whitespace
+'prev'        Name
+' '           Text.Whitespace
+'next'        Name
+' '           Text.Whitespace
+'a'           Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'do'          Keyword.Reserved
+'\n'          Text.Whitespace
+
+'>   '        Comment.Special
+'before'      Name.Function
+' '           Text.Whitespace
+'<-'          Operator.Word
+' '           Text.Whitespace
+'read'        Name
+' '           Text.Whitespace
+'('           Punctuation
+'prev'        Name
+' '           Text.Whitespace
+'a'           Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'>   '        Comment.Special
+'after'       Name.Function
+' '           Text.Whitespace
+'<-'          Operator.Word
+' '           Text.Whitespace
+'read'        Name
+' '           Text.Whitespace
+'('           Punctuation
+'next'        Name
+' '           Text.Whitespace
+'a'           Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'>   '        Comment.Special
+'write'       Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'next'        Name
+' '           Text.Whitespace
+'before'      Name
+')'           Punctuation
+' '           Text.Whitespace
+'a'           Name
+'\n'          Text.Whitespace
+
+'>   '        Comment.Special
+'write'       Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'prev'        Name
+' '           Text.Whitespace
+'after'       Name
+')'           Punctuation
+' '           Text.Whitespace
+'a'           Name
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+'> '          Comment.Special
+'cover'       Name.Function
+' '           Text.Whitespace
+'::'          Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'Head'        Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'ST'          Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'()'          Name.Builtin
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'cover'       Name.Function
+' '           Text.Whitespace
+'head'        Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'do'          Keyword.Reserved
+'\n'          Text.Whitespace
+
+'>   '        Comment.Special
+'unlink'      Name.Function
+' '           Text.Whitespace
+'prev'        Name
+' '           Text.Whitespace
+'next'        Name
+' '           Text.Whitespace
+'head'        Name
+'\n'          Text.Whitespace
+
+'>   '        Comment.Special
+'let'         Keyword.Reserved
+' '           Text.Whitespace
+'eachDown'    Name
+' '           Text.Whitespace
+'rr'          Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'forEach'     Name
+' '           Text.Whitespace
+'right'       Name
+' '           Text.Whitespace
+'rr'          Name
+' '           Text.Whitespace
+'eachRight'   Name
+'\n'          Text.Whitespace
+
+'>       '    Comment.Special
+'eachRight'   Name.Function
+' '           Text.Whitespace
+'nn'          Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'do'          Keyword.Reserved
+'\n'          Text.Whitespace
+
+'>         '  Comment.Special
+'unlink'      Name.Function
+' '           Text.Whitespace
+'up'          Name
+' '           Text.Whitespace
+'down'        Name
+' '           Text.Whitespace
+'nn'          Name
+'\n'          Text.Whitespace
+
+'>         '  Comment.Special
+'modify'      Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'len'         Name
+' '           Text.Whitespace
+'$'           Operator
+' '           Text.Whitespace
+'getHead'     Name
+' '           Text.Whitespace
+'nn'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'pred'        Name
+'\n'          Text.Whitespace
+
+'>   '        Comment.Special
+'forEach'     Name.Function
+' '           Text.Whitespace
+'down'        Name
+' '           Text.Whitespace
+'('           Punctuation
+'topNode'     Name
+' '           Text.Whitespace
+'head'        Name
+')'           Punctuation
+' '           Text.Whitespace
+'eachDown'    Name
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+'> '          Comment.Special
+'uncover'     Name.Function
+' '           Text.Whitespace
+'::'          Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'Head'        Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'ST'          Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'()'          Name.Builtin
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'uncover'     Name.Function
+' '           Text.Whitespace
+'head'        Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'do'          Keyword.Reserved
+'\n'          Text.Whitespace
+
+'>   '        Comment.Special
+'let'         Keyword.Reserved
+' '           Text.Whitespace
+'eachUp'      Name
+' '           Text.Whitespace
+'rr'          Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'forEach'     Name
+' '           Text.Whitespace
+'left'        Name
+' '           Text.Whitespace
+'rr'          Name
+' '           Text.Whitespace
+'eachLeft'    Name
+'\n'          Text.Whitespace
+
+'>       '    Comment.Special
+'eachLeft'    Name.Function
+' '           Text.Whitespace
+'nn'          Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'do'          Keyword.Reserved
+'\n'          Text.Whitespace
+
+'>         '  Comment.Special
+'modify'      Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'len'         Name
+' '           Text.Whitespace
+'$'           Operator
+' '           Text.Whitespace
+'getHead'     Name
+' '           Text.Whitespace
+'nn'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'succ'        Name
+'\n'          Text.Whitespace
+
+'>         '  Comment.Special
+'relink'      Name.Function
+' '           Text.Whitespace
+'up'          Name
+' '           Text.Whitespace
+'down'        Name
+' '           Text.Whitespace
+'nn'          Name
+'\n'          Text.Whitespace
+
+'>   '        Comment.Special
+'forEach'     Name.Function
+' '           Text.Whitespace
+'up'          Name
+' '           Text.Whitespace
+'('           Punctuation
+'topNode'     Name
+' '           Text.Whitespace
+'head'        Name
+')'           Punctuation
+' '           Text.Whitespace
+'eachUp'      Name
+'\n'          Text.Whitespace
+
+'>   '        Comment.Special
+'relink'      Name.Function
+' '           Text.Whitespace
+'prev'        Name
+' '           Text.Whitespace
+'next'        Name
+' '           Text.Whitespace
+'head'        Name
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+'> '          Comment.Special
+'coverOthers' Name.Function
+' '           Text.Whitespace
+'::'          Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'Node'        Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'ST'          Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'()'          Name.Builtin
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'coverOthers' Name.Function
+' '           Text.Whitespace
+'node'        Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'forEach'     Name
+' '           Text.Whitespace
+'right'       Name
+' '           Text.Whitespace
+'node'        Name
+' '           Text.Whitespace
+'('           Punctuation
+'cover'       Name
+' '           Text.Whitespace
+'.'           Operator
+' '           Text.Whitespace
+'getHead'     Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+'> '          Comment.Special
+'uncoverOthers' Name.Function
+' '           Text.Whitespace
+'::'          Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'Node'        Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'ST'          Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'()'          Name.Builtin
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'uncoverOthers' Name.Function
+' '           Text.Whitespace
+'node'        Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'forEach'     Name
+' '           Text.Whitespace
+'left'        Name
+' '           Text.Whitespace
+'node'        Name
+' '           Text.Whitespace
+'('           Punctuation
+'uncover'     Name
+' '           Text.Whitespace
+'.'           Operator
+' '           Text.Whitespace
+'getHead'     Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+' A helper function for gdance:\n' Text
+
+'\n'          Text
+
+'> '          Comment.Special
+'choicesToSpec' Name.Function
+' '           Text.Whitespace
+'::'          Operator.Word
+' '           Text.Whitespace
+'['           Punctuation
+'('           Punctuation
+'Node'        Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+']'           Punctuation
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'Spec'        Keyword.Type
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'choicesToSpec' Name.Function
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'Spec'        Keyword.Type
+' '           Text.Whitespace
+'.'           Operator
+' '           Text.Whitespace
+'('           Punctuation
+'map'         Name
+' '           Text.Whitespace
+'getHint'     Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+' This is the heart of the algorithm.  I have altered it to return only\n' Text
+
+' the first solution, or produce an error if none is found.\n' Text
+
+'\n'          Text
+
+' Knuth used several goto links to do what is done below with tail\n' Text
+
+' recursion.\n' Text
+
+'\n'          Text
+
+'> '          Comment.Special
+'gdance'      Name.Function
+' '           Text.Whitespace
+'::'          Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'Head'        Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'ST'          Keyword.Type
+' '           Text.Whitespace
+'st'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'Spec'        Keyword.Type
+' '           Text.Whitespace
+'-- [Spec]'   Comment.Single
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'gdance'      Name.Function
+' '           Text.Whitespace
+'root'        Name
+' '           Text.Whitespace
+'='           Operator.Word
+'\n'          Text.Whitespace
+
+'>     '      Comment.Special
+'let'         Keyword.Reserved
+'\n'          Text.Whitespace
+
+'>         '  Comment.Special
+'forward'     Name.Function
+' '           Text.Whitespace
+'choices'     Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'do'          Keyword.Reserved
+'\n'          Text.Whitespace
+
+'>             ' Comment.Special
+'maybeHead'   Name.Function
+' '           Text.Whitespace
+'<-'          Operator.Word
+' '           Text.Whitespace
+'getBest'     Name
+' '           Text.Whitespace
+'root'        Name
+'\n'          Text.Whitespace
+
+'>             ' Comment.Special
+'case'        Keyword.Reserved
+' '           Text.Whitespace
+'maybeHead'   Name
+' '           Text.Whitespace
+'of'          Keyword.Reserved
+'\n'          Text.Whitespace
+
+'>                 ' Comment.Special
+'Nothing'     Keyword.Type
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'if'          Keyword.Reserved
+' '           Text.Whitespace
+'null'        Name
+' '           Text.Whitespace
+'choices'     Name
+'\n'          Text.Whitespace
+
+'>                              ' Comment.Special
+'then'        Keyword.Reserved
+' '           Text.Whitespace
+'error'       Name.Exception
+' '           Text.Whitespace
+'"'           Literal.String
+'No choices in forward' Literal.String
+'"'           Literal.String
+' '           Text.Whitespace
+'-- return [] -- for [Spec]' Comment.Single
+'\n'          Text.Whitespace
+
+'>                              ' Comment.Special
+'else'        Keyword.Reserved
+' '           Text.Whitespace
+'do'          Keyword.Reserved
+' '           Text.Whitespace
+'-- nextSols <- recover choices -- for [Spec]' Comment.Single
+'\n'          Text.Whitespace
+
+'>                                      ' Comment.Special
+'return'      Name.Function
+' '           Text.Whitespace
+'$'           Operator
+' '           Text.Whitespace
+'('           Punctuation
+'choicesToSpec' Name
+' '           Text.Whitespace
+'choices'     Name
+')'           Punctuation
+' '           Text.Whitespace
+'-- :nextSols -- for [Spec]' Comment.Single
+'\n'          Text.Whitespace
+
+'>                 ' Comment.Special
+'Just'        Keyword.Type
+' '           Text.Whitespace
+'head'        Name
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'do'          Keyword.Reserved
+' '           Text.Whitespace
+'cover'       Name
+' '           Text.Whitespace
+'head'        Name
+'\n'          Text.Whitespace
+
+'>                                 ' Comment.Special
+'startRow'    Name.Function
+' '           Text.Whitespace
+'<-'          Operator.Word
+' '           Text.Whitespace
+'readSTRef'   Name
+' '           Text.Whitespace
+'('           Punctuation
+'down'        Name
+' '           Text.Whitespace
+'('           Punctuation
+'topNode'     Name
+' '           Text.Whitespace
+'head'        Name
+')'           Punctuation
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'>                                 ' Comment.Special
+'advance'     Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'startRow'    Name
+':'           Keyword.Type
+'choices'     Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'\n'          Text.Whitespace
+
+'>         '  Comment.Special
+'advance'     Name.Function
+' '           Text.Whitespace
+'choices'     Name
+'@'           Operator
+'('           Punctuation
+'newRow'      Name
+':'           Keyword.Type
+'oldChoices'  Name
+')'           Punctuation
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'do'          Keyword.Reserved
+'\n'          Text.Whitespace
+
+'>             ' Comment.Special
+'let'         Keyword.Reserved
+' '           Text.Whitespace
+'endOfRows'   Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'topNode'     Name
+' '           Text.Whitespace
+'('           Punctuation
+'getHead'     Name
+' '           Text.Whitespace
+'newRow'      Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'>             ' Comment.Special
+'if'          Keyword.Reserved
+' '           Text.Whitespace
+'('           Punctuation
+'newRow'      Name
+' '           Text.Whitespace
+'=='          Operator
+' '           Text.Whitespace
+'endOfRows'   Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'>               ' Comment.Special
+'then'        Keyword.Reserved
+' '           Text.Whitespace
+'do'          Keyword.Reserved
+' '           Text.Whitespace
+'uncover'     Name
+' '           Text.Whitespace
+'('           Punctuation
+'getHead'     Name
+' '           Text.Whitespace
+'newRow'      Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'>                       ' Comment.Special
+'if'          Keyword.Reserved
+' '           Text.Whitespace
+'('           Punctuation
+'null'        Name
+' '           Text.Whitespace
+'oldChoices'  Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'>                         ' Comment.Special
+'then'        Keyword.Reserved
+' '           Text.Whitespace
+'error'       Name.Exception
+' '           Text.Whitespace
+'"'           Literal.String
+'No choices in advance' Literal.String
+'"'           Literal.String
+' '           Text.Whitespace
+'-- return [] -- for [Spec]' Comment.Single
+'\n'          Text.Whitespace
+
+'>                         ' Comment.Special
+'else'        Keyword.Reserved
+' '           Text.Whitespace
+'recover'     Name
+' '           Text.Whitespace
+'oldChoices'  Name
+'\n'          Text.Whitespace
+
+'>               ' Comment.Special
+'else'        Keyword.Reserved
+' '           Text.Whitespace
+'do'          Keyword.Reserved
+' '           Text.Whitespace
+'coverOthers' Name
+' '           Text.Whitespace
+'newRow'      Name
+'\n'          Text.Whitespace
+
+'>                       ' Comment.Special
+'forward'     Name.Function
+' '           Text.Whitespace
+'choices'     Name
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'\n'          Text.Whitespace
+
+'>         '  Comment.Special
+'recover'     Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'oldRow'      Name
+':'           Keyword.Type
+'oldChoices'  Name
+')'           Punctuation
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'do'          Keyword.Reserved
+'\n'          Text.Whitespace
+
+'>             ' Comment.Special
+'uncoverOthers' Name.Function
+' '           Text.Whitespace
+'oldRow'      Name
+'\n'          Text.Whitespace
+
+'>             ' Comment.Special
+'newRow'      Name.Function
+' '           Text.Whitespace
+'<-'          Operator.Word
+' '           Text.Whitespace
+'readSTRef'   Name
+' '           Text.Whitespace
+'('           Punctuation
+'down'        Name
+' '           Text.Whitespace
+'oldRow'      Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'>             ' Comment.Special
+'advance'     Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'newRow'      Name
+':'           Keyword.Type
+'oldChoices'  Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'\n'          Text.Whitespace
+
+'>     '      Comment.Special
+'in'          Keyword.Reserved
+' '           Text.Whitespace
+'forward'     Name
+' '           Text.Whitespace
+'[]'          Keyword.Type
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+'\n'          Text
+
+' Convert a text board into a Spec\n' Text
+
+'\n'          Text
+
+'> '          Comment.Special
+'parseBoard'  Name.Function
+' '           Text.Whitespace
+'::'          Operator.Word
+' '           Text.Whitespace
+'String'      Keyword.Type
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'Spec'        Keyword.Type
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'parseBoard'  Name.Function
+' '           Text.Whitespace
+'s'           Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'Spec'        Keyword.Type
+' '           Text.Whitespace
+'('           Punctuation
+'zip'         Name
+' '           Text.Whitespace
+'rcs'         Name
+' '           Text.Whitespace
+"vs'check"    Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'>   '        Comment.Special
+'where'       Keyword.Reserved
+' '           Text.Whitespace
+'rcs'         Name
+' '           Text.Whitespace
+'::'          Operator.Word
+' '           Text.Whitespace
+'['           Punctuation
+'('           Punctuation
+'R'           Keyword.Type
+','           Punctuation
+'C'           Keyword.Type
+')'           Punctuation
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'>         '  Comment.Special
+'rcs'         Name.Function
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'['           Punctuation
+' '           Text.Whitespace
+'('           Punctuation
+'R'           Keyword.Type
+' '           Text.Whitespace
+'r'           Name
+','           Punctuation
+'C'           Keyword.Type
+' '           Text.Whitespace
+'c'           Name
+')'           Punctuation
+' '           Text.Whitespace
+'|'           Operator
+' '           Text.Whitespace
+'r'           Name
+' '           Text.Whitespace
+'<-'          Operator.Word
+' '           Text.Whitespace
+'rng'         Name
+','           Punctuation
+' '           Text.Whitespace
+'c'           Name
+' '           Text.Whitespace
+'<-'          Operator.Word
+' '           Text.Whitespace
+'rng'         Name
+' '           Text.Whitespace
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'>         '  Comment.Special
+'isUnset'     Name.Function
+' '           Text.Whitespace
+'c'           Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'c'           Name
+'=='          Operator
+"'.'"         Literal.String.Char
+')'           Punctuation
+' '           Text.Whitespace
+'||'          Operator
+' '           Text.Whitespace
+'('           Punctuation
+'c'           Name
+'=='          Operator
+"' '"         Literal.String.Char
+')'           Punctuation
+' '           Text.Whitespace
+'||'          Operator
+' '           Text.Whitespace
+'('           Punctuation
+'c'           Name
+'=='          Operator
+"'0'"         Literal.String.Char
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'>         '  Comment.Special
+'isHint'      Name.Function
+' '           Text.Whitespace
+'c'           Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+"'1'"         Literal.String.Char
+'<='          Operator
+'c'           Name
+')'           Punctuation
+' '           Text.Whitespace
+'&&'          Operator
+' '           Text.Whitespace
+'('           Punctuation
+'c'           Name
+'<='          Operator
+"'9'"         Literal.String.Char
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'>         '  Comment.Special
+'cs'          Name.Function
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'take'        Name
+' '           Text.Whitespace
+'81'          Literal.Number.Integer
+' '           Text.Whitespace
+'$'           Operator
+' '           Text.Whitespace
+'filter'      Name
+' '           Text.Whitespace
+'('           Punctuation
+'\\'          Name.Function
+'c'           Name
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'isUnset'     Name
+' '           Text.Whitespace
+'c'           Name
+' '           Text.Whitespace
+'||'          Operator
+' '           Text.Whitespace
+'isHint'      Name
+' '           Text.Whitespace
+'c'           Name
+')'           Punctuation
+' '           Text.Whitespace
+'s'           Name
+'\n'          Text.Whitespace
+
+'>         '  Comment.Special
+'vs'          Name.Function
+' '           Text.Whitespace
+'::'          Operator.Word
+' '           Text.Whitespace
+'['           Punctuation
+'V'           Keyword.Type
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'>         '  Comment.Special
+'vs'          Name.Function
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'map'         Name
+' '           Text.Whitespace
+'('           Punctuation
+'\\'          Name.Function
+'c'           Name
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'if'          Keyword.Reserved
+' '           Text.Whitespace
+'isUnset'     Name
+' '           Text.Whitespace
+'c'           Name
+' '           Text.Whitespace
+'then'        Keyword.Reserved
+' '           Text.Whitespace
+'u'           Name
+' '           Text.Whitespace
+'else'        Keyword.Reserved
+' '           Text.Whitespace
+'('           Punctuation
+'V'           Keyword.Type
+' '           Text.Whitespace
+'$'           Operator
+' '           Text.Whitespace
+'digitToInt'  Name
+' '           Text.Whitespace
+'c'           Name
+')'           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'cs'          Name
+'\n'          Text.Whitespace
+
+'>         '  Comment.Special
+"vs'check"    Name.Function
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'if'          Keyword.Reserved
+' '           Text.Whitespace
+'81'          Literal.Number.Integer
+'=='          Operator
+'length'      Name
+' '           Text.Whitespace
+'vs'          Name
+' '           Text.Whitespace
+'then'        Keyword.Reserved
+' '           Text.Whitespace
+'vs'          Name
+' '           Text.Whitespace
+'else'        Keyword.Reserved
+' '           Text.Whitespace
+'error'       Name.Exception
+' '           Text.Whitespace
+'('           Punctuation
+'"'           Literal.String
+'parse of board failed' Literal.String
+'\\'          Literal.String.Escape
+'n'           Literal.String.Escape
+'"'           Literal.String
+'++'          Operator
+'s'           Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+' This is quite useful as a utility function which partitions the list into groups of n elements.\n' Text
+
+' Used by showSpec.\n' Text
+
+'\n'          Text
+
+'> '          Comment.Special
+'groupTake'   Name.Function
+' '           Text.Whitespace
+'::'          Operator.Word
+' '           Text.Whitespace
+'Int'         Keyword.Type
+'->'          Operator.Word
+'['           Punctuation
+'a'           Name
+']'           Punctuation
+'->'          Operator.Word
+'['           Punctuation
+'['           Punctuation
+'a'           Name
+']'           Punctuation
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'groupTake'   Name.Function
+' '           Text.Whitespace
+'n'           Name
+' '           Text.Whitespace
+'b'           Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'unfoldr'     Name
+' '           Text.Whitespace
+'foo'         Name
+' '           Text.Whitespace
+'b'           Name
+'\n'          Text.Whitespace
+
+'>     '      Comment.Special
+'where'       Keyword.Reserved
+' '           Text.Whitespace
+'foo'         Name
+' '           Text.Whitespace
+'[]'          Keyword.Type
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'Nothing'     Keyword.Type
+'\n'          Text.Whitespace
+
+'>           ' Comment.Special
+'foo'         Name.Function
+' '           Text.Whitespace
+'b'           Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'Just'        Keyword.Type
+' '           Text.Whitespace
+'('           Punctuation
+'splitAt'     Name
+' '           Text.Whitespace
+'n'           Name
+' '           Text.Whitespace
+'b'           Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+' \n'         Text
+
+' Make a nice 2D ascii board from the Spec (not used at the moment)\n' Text
+
+'\n'          Text
+
+'> '          Comment.Special
+'showSpec'    Name.Function
+' '           Text.Whitespace
+'::'          Operator.Word
+' '           Text.Whitespace
+'Spec'        Keyword.Type
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'String'      Keyword.Type
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+'showSpec'    Name.Function
+' '           Text.Whitespace
+'spec'        Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'let'         Keyword.Reserved
+' '           Text.Whitespace
+'pa'          Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'parse'       Name
+' '           Text.Whitespace
+'spec'        Name
+'\n'          Text.Whitespace
+
+'>                     ' Comment.Special
+'g'           Name.Function
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'groupTake'   Name
+' '           Text.Whitespace
+'9'           Literal.Number.Integer
+' '           Text.Whitespace
+'('           Punctuation
+'map'         Name
+' '           Text.Whitespace
+'('           Punctuation
+'\\'          Name.Function
+'('           Punctuation
+'V'           Keyword.Type
+' '           Text.Whitespace
+'v'           Name
+')'           Punctuation
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'if'          Keyword.Reserved
+' '           Text.Whitespace
+'v'           Name
+' '           Text.Whitespace
+'=='          Operator
+' '           Text.Whitespace
+'0'           Literal.Number.Integer
+' '           Text.Whitespace
+'then'        Keyword.Reserved
+' '           Text.Whitespace
+"'.'"         Literal.String.Char
+' '           Text.Whitespace
+'else'        Keyword.Reserved
+' '           Text.Whitespace
+'intToDigit'  Name
+' '           Text.Whitespace
+'v'           Name
+')'           Punctuation
+' '           Text.Whitespace
+'$'           Operator
+' '           Text.Whitespace
+'elems'       Name
+' '           Text.Whitespace
+'pa'          Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'>                     ' Comment.Special
+'addV'        Name.Function
+' '           Text.Whitespace
+'line'        Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'concat'      Name
+' '           Text.Whitespace
+'$'           Operator
+' '           Text.Whitespace
+'intersperse' Name
+' '           Text.Whitespace
+'"'           Literal.String
+'|'           Literal.String
+'"'           Literal.String
+' '           Text.Whitespace
+'('           Punctuation
+'groupTake'   Name
+' '           Text.Whitespace
+'3'           Literal.Number.Integer
+' '           Text.Whitespace
+'line'        Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'>                     ' Comment.Special
+'addH'        Name.Function
+' '           Text.Whitespace
+'list'        Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'concat'      Name
+' '           Text.Whitespace
+'$'           Operator
+' '           Text.Whitespace
+'intersperse' Name
+' '           Text.Whitespace
+'['           Punctuation
+'"'           Literal.String
+'---+---+---' Literal.String
+'"'           Literal.String
+']'           Punctuation
+' '           Text.Whitespace
+'('           Punctuation
+'groupTake'   Name
+' '           Text.Whitespace
+'3'           Literal.Number.Integer
+' '           Text.Whitespace
+'list'        Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'>                 ' Comment.Special
+'in'          Keyword.Reserved
+' '           Text.Whitespace
+'unlines'     Name
+' '           Text.Whitespace
+'$'           Operator
+' '           Text.Whitespace
+'addH'        Name
+' '           Text.Whitespace
+'('           Punctuation
+'map'         Name
+' '           Text.Whitespace
+'addV'        Name
+' '           Text.Whitespace
+'g'           Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+'  One line display\n' Text
+
+'\n'          Text
+
+'> '          Comment.Special
+'showCompact' Name.Function
+' '           Text.Whitespace
+'spec'        Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'map'         Name
+' '           Text.Whitespace
+'('           Punctuation
+'\\'          Name.Function
+'('           Punctuation
+'V'           Keyword.Type
+' '           Text.Whitespace
+'v'           Name
+')'           Punctuation
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'intToDigit'  Name
+' '           Text.Whitespace
+'v'           Name
+')'           Punctuation
+' '           Text.Whitespace
+'('           Punctuation
+'elems'       Name
+' '           Text.Whitespace
+'('           Punctuation
+'parse'       Name
+' '           Text.Whitespace
+'spec'        Name
+')'           Punctuation
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+' The main routine is designed to handle the input from http://www.csse.uwa.edu.au/~gordon/sudoku17\n' Text
+
+'\n'          Text
+
+'> '          Comment.Special
+'main'        Name.Function
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'do'          Keyword.Reserved
+'\n'          Text.Whitespace
+
+'>   '        Comment.Special
+'all'         Name.Function
+' '           Text.Whitespace
+'<-'          Operator.Word
+' '           Text.Whitespace
+'getContents' Name
+'\n'          Text.Whitespace
+
+'>   '        Comment.Special
+'let'         Keyword.Reserved
+' '           Text.Whitespace
+'puzzles'     Name
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'zip'         Name
+' '           Text.Whitespace
+'['           Punctuation
+'1'           Literal.Number.Integer
+'..'          Operator
+']'           Punctuation
+' '           Text.Whitespace
+'('           Punctuation
+'map'         Name
+' '           Text.Whitespace
+'parseBoard'  Name
+' '           Text.Whitespace
+'('           Punctuation
+'lines'       Name
+' '           Text.Whitespace
+'all'         Name
+')'           Punctuation
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'>   '        Comment.Special
+'root'        Name.Function
+' '           Text.Whitespace
+'<-'          Operator.Word
+' '           Text.Whitespace
+'stToIO'      Name
+' '           Text.Whitespace
+'initHA'      Name
+'\n'          Text.Whitespace
+
+'>   '        Comment.Special
+'let'         Keyword.Reserved
+' '           Text.Whitespace
+'act'         Name
+' '           Text.Whitespace
+'::'          Operator.Word
+' '           Text.Whitespace
+'('           Punctuation
+'Int'         Keyword.Type
+','           Punctuation
+'Spec'        Keyword.Type
+')'           Punctuation
+' '           Text.Whitespace
+'->'          Operator.Word
+' '           Text.Whitespace
+'IO'          Keyword.Type
+' '           Text.Whitespace
+'()'          Name.Builtin
+'\n'          Text.Whitespace
+
+'>       '    Comment.Special
+'act'         Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'i'           Name
+','           Punctuation
+'spec'        Name
+')'           Punctuation
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'do'          Keyword.Reserved
+'\n'          Text.Whitespace
+
+'>         '  Comment.Special
+'answer'      Name.Function
+' '           Text.Whitespace
+'<-'          Operator.Word
+' '           Text.Whitespace
+'stToIO'      Name
+' '           Text.Whitespace
+'('           Punctuation
+'do'          Keyword.Reserved
+' '           Text.Whitespace
+'initRoot'    Name
+' '           Text.Whitespace
+'root'        Name
+' '           Text.Whitespace
+'spec'        Name
+' \n'         Text.Whitespace
+
+'>                              ' Comment.Special
+'answer'      Name.Function
+' '           Text.Whitespace
+'<-'          Operator.Word
+' '           Text.Whitespace
+'gdance'      Name
+' '           Text.Whitespace
+'('           Punctuation
+'fst'         Name
+' '           Text.Whitespace
+'root'        Name
+')'           Punctuation
+' \n'         Text.Whitespace
+
+'>                              ' Comment.Special
+'resetRoot'   Name.Function
+' '           Text.Whitespace
+'root'        Name
+'\n'          Text.Whitespace
+
+'>                              ' Comment.Special
+'return'      Name.Function
+' '           Text.Whitespace
+'answer'      Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'>         '  Comment.Special
+'print'       Name.Function
+' '           Text.Whitespace
+'('           Punctuation
+'i'           Name
+','           Punctuation
+'showCompact' Name
+'  '          Text.Whitespace
+'answer'      Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'>   '        Comment.Special
+'mapM_'       Name.Function
+' '           Text.Whitespace
+'act'         Name
+' '           Text.Whitespace
+'puzzles'     Name
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+'> '          Comment.Special
+"inits'"      Name.Function
+' '           Text.Whitespace
+'xn'          Name
+'@'           Operator
+'('           Punctuation
+'_'           Keyword.Reserved
+':'           Keyword.Type
+'_'           Keyword.Reserved
+')'           Punctuation
+' '           Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'zipWith'     Name
+' '           Text.Whitespace
+'take'        Name
+' '           Text.Whitespace
+'['           Punctuation
+'0'           Literal.Number.Integer
+'..'          Operator
+']'           Punctuation
+' '           Text.Whitespace
+'$'           Operator
+' '           Text.Whitespace
+'map'         Name
+' '           Text.Whitespace
+'('           Punctuation
+'const'       Name
+' '           Text.Whitespace
+'xn'          Name
+')'           Punctuation
+' '           Text.Whitespace
+'$'           Operator
+' '           Text.Whitespace
+'undefined'   Name
+':'           Keyword.Type
+'xn'          Name
+'\n'          Text.Whitespace
+
+'> '          Comment.Special
+"inits'"      Name.Function
+' '           Text.Whitespace
+'_'           Keyword.Reserved
+'        '    Text.Whitespace
+'='           Operator.Word
+' '           Text.Whitespace
+'undefined'   Name
+'\n'          Text.Whitespace

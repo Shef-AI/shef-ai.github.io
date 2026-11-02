@@ -1,0 +1,1 @@
+["pip >=21.1", "hypothesis >=6.0.0", "pretend", "tomli-w", "pytest >=6.2.0"]

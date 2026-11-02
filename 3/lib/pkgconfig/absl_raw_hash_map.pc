@@ -1,0 +1,12 @@
+prefix=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3
+exec_prefix=${prefix}
+libdir=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/lib
+includedir=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/include
+
+Name: absl_raw_hash_map
+Description: Abseil raw_hash_map library
+URL: https://abseil.io/
+Version: 20260526
+Requires: absl_config = 20260526, absl_common_policy_traits = 20260526, absl_container_memory = 20260526, absl_core_headers = 20260526, absl_raw_hash_set = 20260526, absl_type_traits = 20260526, absl_throw_delegate = 20260526
+Libs: -L${libdir}  
+Cflags: -I${includedir} -DNOMINMAX

@@ -1,0 +1,57 @@
+{% set name = "annotated-types" %}
+{% set alt_name = name.replace('-','_') %}
+{% set version = "0.7.0" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ alt_name }}/{{ alt_name }}-{{ version }}.tar.gz
+  sha256: aff07c09a53a08bc8cfccb9c85b05f1aa9a2a6f23728d790723543408344ce89
+
+build:
+  skip: true  # [py<38]
+  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
+  number: 0
+
+requirements:
+  host:
+    - python
+    - pip
+    - hatchling
+  run:
+    - python
+    - typing-extensions >=4.0.0  # [py<39]
+
+test:
+  source_files:
+    - tests
+  imports:
+    - annotated_types
+  commands:
+    - pip check
+    - pytest -v tests
+  requires:
+    - pip
+    - pytest
+
+about:
+  home: https://github.com/annotated-types/annotated-types
+  summary: Reusable constraint types to use with typing.Annotated
+  description: |
+    This package provides metadata objects which can be used to represent common constraints such as upper and lower
+    bounds on scalar values and collection sizes, a Predicate marker for runtime checks, and descriptions of how we
+    intend these metadata to be interpreted. In some cases, we also note alternative representations which do not
+    require this package.
+  license: MIT
+  license_file: LICENSE
+  license_family: MIT
+  doc_url: https://github.com/annotated-types/annotated-types
+  dev_url: https://github.com/annotated-types/annotated-types
+
+extra:
+  recipe-maintainers:
+    - mattwthompson
+    - samuelcolvin
+    - Zac-HD

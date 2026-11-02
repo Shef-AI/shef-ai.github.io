@@ -1,0 +1,12 @@
+prefix=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3
+exec_prefix=${prefix}
+libdir=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/lib
+includedir=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/include
+
+Name: absl_log_streamer
+Description: Abseil log_streamer library
+URL: https://abseil.io/
+Version: 20260526
+Requires: absl_config = 20260526, absl_absl_log = 20260526, absl_log_severity = 20260526, absl_optional = 20260526, absl_source_location = 20260526, absl_strings = 20260526, absl_strings_internal = 20260526, absl_utility = 20260526
+Libs: -L${libdir}  
+Cflags: -I${includedir} -DNOMINMAX

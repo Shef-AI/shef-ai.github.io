@@ -1,0 +1,84 @@
+---input---
+true.
+stop :- !.
+of (fun F) :- pi x\ of x => of (F x).
+match (uvar as Y) :- print Y.
+f :- forall (_\ true) []. 
+
+---tokens---
+'true'        Text
+'.'           Operator
+'\n'          Text.Whitespace
+
+'stop'        Text
+' '           Text.Whitespace
+':-'          Keyword.Declaration
+' '           Text.Whitespace
+'!'           Keyword.Declaration
+'.'           Operator
+'\n'          Text.Whitespace
+
+'of'          Text
+' '           Text.Whitespace
+'('           Punctuation
+'fun'         Text
+' '           Text.Whitespace
+'F'           Name.Variable
+')'           Punctuation
+' '           Text.Whitespace
+':-'          Keyword.Declaration
+' '           Text.Whitespace
+'pi'          Keyword.Declaration
+' '           Text.Whitespace
+'x'           Name.Variable
+'\\'          Text
+' '           Text.Whitespace
+'of'          Text
+' '           Text.Whitespace
+'x'           Text
+' '           Text.Whitespace
+'=>'          Keyword.Declaration
+' '           Text.Whitespace
+'of'          Text
+' '           Text.Whitespace
+'('           Punctuation
+'F'           Name.Variable
+' '           Text.Whitespace
+'x'           Text
+')'           Punctuation
+'.'           Operator
+'\n'          Text.Whitespace
+
+'match'       Text
+' '           Text.Whitespace
+'('           Punctuation
+'uvar'        Keyword.Declaration
+' '           Text.Whitespace
+'as'          Keyword.Declaration
+' '           Text.Whitespace
+'Y'           Name.Variable
+')'           Punctuation
+' '           Text.Whitespace
+':-'          Keyword.Declaration
+' '           Text.Whitespace
+'print'       Text
+' '           Text.Whitespace
+'Y'           Name.Variable
+'.'           Operator
+'\n'          Text.Whitespace
+
+'f'           Text
+' '           Text.Whitespace
+':-'          Keyword.Declaration
+' '           Text.Whitespace
+'forall'      Text
+' '           Text.Whitespace
+'('           Punctuation
+'_\\'         Name.Variable
+' '           Text.Whitespace
+'true'        Text
+')'           Punctuation
+' '           Text.Whitespace
+'[]'          Keyword.Declaration
+'.'           Operator
+' \n'         Text.Whitespace

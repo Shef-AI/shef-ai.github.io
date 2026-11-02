@@ -1,0 +1,30 @@
+From 29020c3ccf83992621dd96e7a9d5d90d8d790181 Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Thu, 29 Jun 2017 01:08:03 -0500
+Subject: [PATCH] define ssize_t as int
+
+Rebased for 1.0.0: upstream replaced the code block this patch
+targeted with new MDB_FMT_Z/MDB_PRIy macros, so the diff is redone
+against the new context; the fix itself is unchanged.
+
+---
+ libraries/liblmdb/mdb_stat.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/libraries/liblmdb/mdb_stat.c b/libraries/liblmdb/mdb_stat.c
+index a7315d8..f7b0d95 100644
+--- a/libraries/liblmdb/mdb_stat.c
++++ b/libraries/liblmdb/mdb_stat.c
+@@ -16,6 +16,10 @@
+ #include <string.h>
+ #include <unistd.h>
+ #include "lmdb.h"
++
++#ifdef	_WIN32
++#define	ssize_t	int
++#endif
+ 
+ #define Z	MDB_FMT_Z
+ #define Yu	MDB_PRIy(u)
+--
+2.5.1.windows.1

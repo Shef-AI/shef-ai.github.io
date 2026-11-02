@@ -1,0 +1,56 @@
+{% set name = "conda-anaconda-telemetry" %}
+{% set version = "0.4.0" %}
+{% set sha256 = "ebae0a126c513542c8500e0d35abee3ea3486eacfc48ce0866fcfd81411b6fbc" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://github.com/anaconda/{{ name }}/archive/{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  # keeping as noarch so that the plugin may be used with architectures which are no longer actively maintained (e.g. osx-64)
+  noarch: python
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
+
+requirements:
+  build:
+    - git # [not win]
+  host:
+    - python >=3.10
+    - pip
+    - hatchling >=1.12.2
+    - hatch-vcs >=0.2.0
+  run:
+    - python >=3.10
+    - conda >=26.5
+    - anaconda-opentelemetry >=1.2.5
+    - requests
+
+test:
+  imports:
+    - conda_anaconda_telemetry
+    - conda_anaconda_telemetry.hooks
+  requires:
+    - pip
+  commands:
+    - pip check
+    - python -m conda --version
+
+about:
+  home: https://github.com/anaconda/{{ name }}
+  summary: Anaconda Telemetry conda plugin
+  description: Anaconda Telemetry for conda helps us understand how conda is being used.
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
+  doc_source_url: https://github.com/anaconda/{{ name }}/blob/{{ version }}/README.md
+  dev_url: https://github.com/anaconda/{{ name }}
+
+extra:
+  recipe-maintainers:
+    - travishathaway
+    - jezdez

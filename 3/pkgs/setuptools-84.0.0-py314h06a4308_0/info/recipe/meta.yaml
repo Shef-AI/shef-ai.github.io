@@ -1,0 +1,91 @@
+# This file created by conda-build 26.7.1
+# meta.yaml template originally from:
+# /home/task_179137380197314/setuptools-feedstock/recipe, last modified Wed Oct  7 11:50:07 2026
+# ------------------------------------------------
+
+package:
+  name: setuptools
+  version: 84.0.0
+source:
+  url: https://pypi.org/packages/source/s/setuptools/setuptools-84.0.0.tar.gz
+  sha256: f4695c21257f0d9b537ec2692c941d02ee143b7cc1276941349a546573b2ef73
+  patches:
+    - patches/0021-Add-d1trimfile-SRC_DIR-to-make-pdbs-more-relocatable.patch
+build:
+  number: '0'
+  string: py314h06a4308_0
+requirements:
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 52_gnu
+    - bzip2 1.0.8 h5eee18b_6
+    - ca-certificates 2026.9.25 h06a4308_0
+    - ld_impl_linux-64 2.44 h9e0c5a2_3
+    - libexpat 2.8.5 h7354ed3_1
+    - libffi 3.4.8 h06d3fd0_3
+    - libgcc 15.2.0 h69a1729_8
+    - libgcc-ng 15.2.0 h166f726_8
+    - libmpdec 4.0.1 h47b2149_0
+    - libstdcxx 15.2.0 h39759b7_8
+    - libstdcxx-ng 15.2.0 hc03a8fd_8
+    - libuuid 1.41.5 h5eee18b_0
+    - libxcb 1.17.0 h9b100fa_0
+    - libzlib 1.3.2 h47b2149_0
+    - lz4-c 1.9.4 h7354ed3_5
+    - ncurses 6.6 hfaaeb4e_0
+    - openssl 3.5.9 h1b28b03_0
+    - pthread-stubs 0.3 h47b2149_2
+    - python 3.14.8 h4c9324e_101_cp314
+    - python_abi 3.14 5_cp314
+    - readline 8.3 hc2a1206_0
+    - sqlite 3.53.4 h795bf6d_0
+    - tk 9.0.4 h3840b71_1
+    - tzdata 2026c he532380_0
+    - xorg-libx11 1.8.13 h65de747_0
+    - xorg-libxau 1.0.12 h9b100fa_0
+    - xorg-libxdmcp 1.1.5 h9b100fa_0
+    - xorg-xorgproto 2025.1 h47b2149_0
+    - xz 5.8.4 h140a991_0
+    - zlib 1.3.2 h47b2149_0
+    - zstd 1.5.7 h11fc155_0
+  run:
+    - python >=3.14,<3.15.0a0
+    - python_abi 3.14.* *_cp314
+test:
+  imports:
+    - setuptools
+  requires:
+    - pip
+  commands:
+    - pip check
+about:
+  home: https://github.com/pypa/setuptools
+  license: MIT
+  license_file: LICENSE
+  license_family: MIT
+  summary: Download, build, install, upgrade, and uninstall Python packages
+  description: 'Setuptools is a fully-featured, actively-maintained, and stable library
+
+    designed to facilitate packaging Python projects.
+
+    '
+  doc_url: https://setuptools.pypa.io
+  dev_url: https://github.com/pypa/setuptools
+extra:
+  recipe-maintainers:
+    - isuruf
+    - jakirkham
+    - msarahan
+    - nicoddemus
+    - ocefpaf
+  skip-lints:
+    - deprecated_python_install_command
+    - missing_python_build_tool
+    - python_build_tools_in_host
+  final: true
+  copy_test_source_files: true
+  remote_url: https://github.com/AnacondaRecipes/setuptools-feedstock
+  sha: c4072d14e2229847c754e41cd22db485b187c61f
+  task_id: NK0zcMHbShiRffsZbVj_8w
+  task_run_id: '0'
+  pbp_graph_uuid: 68d173d9-1052-4ee4-92d5-30faef16e38e

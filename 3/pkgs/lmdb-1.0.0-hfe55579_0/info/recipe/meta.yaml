@@ -1,0 +1,81 @@
+# This file created by conda-build 26.3.0
+# meta.yaml template originally from:
+# /home/task_dSTETSviQgGtM_0/lmdb-feedstock/recipe, last modified Thu Jul 23 08:03:23 2026
+# ------------------------------------------------
+
+package:
+  name: lmdb
+  version: 1.0.0
+source:
+  url: https://github.com/LMDB/lmdb/archive/refs/tags/LMDB_1.0.0.tar.gz
+  sha256: 44a5ec3a8d71b4287244c538ee80a95e2af40b1a4ee04553359f044c7939734a
+  patches:
+    - patches/0001-fix-makefile.patch
+    - patches/mdb_msvc_fixes.patch
+build:
+  number: '0'
+  run_exports:
+    - lmdb >=1.0.0,<2.0a0
+  string: hfe55579_0
+requirements:
+  build:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 52_gnu
+    - binutils_impl_linux-64 2.44 h78f17ca_3
+    - binutils_linux-64 2.44 hc03a8fd_3
+    - gcc_impl_linux-64 14.3.0 h4943218_4
+    - gcc_linux-64 14.3.0 hda73cce_15
+    - kernel-headers_linux-64 4.18.0 h3108a97_1
+    - ld_impl_linux-64 2.44 h9e0c5a2_3
+    - libgcc 15.2.0 h69a1729_8
+    - libgcc-devel_linux-64 14.3.0 he7458c1_104
+    - libgcc-ng 15.2.0 h166f726_8
+    - libgomp 15.2.0 h4751f2c_8
+    - libsanitizer 14.3.0 hd4faa28_4
+    - libstdcxx 15.2.0 h39759b7_8
+    - make 4.2.1 h1bed415_1
+    - sysroot_linux-64 2.28 h3108a97_1
+    - tzdata 2026c he532380_0
+  host:
+    - _openmp_mutex 5.1 52_gnu
+    - libgcc 15.2.0 h69a1729_8
+  run:
+    - __glibc >=2.28,<3.0.a0
+    - libgcc >=14
+test:
+  requires:
+    - conda-build
+  commands:
+    - mdb_copy -V
+    - mdb_drop -V
+    - mdb_dump -V
+    - mdb_load -V
+    - mdb_stat -V
+    - conda inspect linkages -p $PREFIX lmdb
+about:
+  home: https://www.symas.com/symas-embedded-database-lmdb
+  license: OLDAP-2.8
+  license_file: libraries/liblmdb/LICENSE
+  license_family: other
+  summary: A high-performance embedded transactional key-value store database.
+  description: 'Symas LMDB is an extraordinarily fast, memory-efficient database developed
+
+    for the Symas OpenLDAP Project. With memory-mapped files, it has the read
+
+    performance of a pure in-memory database while retaining the persistence of
+
+    standard disk-based databases.
+
+    '
+  doc_url: https://www.symas.com/symas-embedded-database-lmdb
+  dev_url: https://github.com/LMDB/lmdb
+extra:
+  recipe-maintainers:
+    - jakirkham
+  final: true
+  copy_test_source_files: true
+  remote_url: https://github.com/AnacondaRecipes/lmdb-feedstock
+  sha: f56e2a537c201b850d5ae0c9a979b2399a6a557f
+  task_id: dSTETSviQgGtMHOLp5zffw
+  task_run_id: '0'
+  pbp_graph_uuid: 3719a315-3beb-4764-9646-434f9394899e

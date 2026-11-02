@@ -1,0 +1,27 @@
+'declare'     Keyword.Constant
+' '           Text.Whitespace
+'xyz'         Name
+' '           Text.Whitespace
+'true'        Keyword.Constant
+'\n'          Text.Whitespace
+
+'declare'     Keyword.Constant
+' '           Text.Whitespace
+'s'           Name
+' '           Text.Whitespace
+'"some string"' Literal.String
+'\n'          Text.Whitespace
+
+'i'           Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'2'           Literal.Number
+'\n'          Text.Whitespace
+
+'f'           Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'0.2'         Literal.Number
+'\n'          Text.Whitespace

@@ -1,0 +1,24 @@
+{
+  "arch": "x86_64",
+  "build": "h7bdf020_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.28,<3.0.a0",
+    "libgcc >=14",
+    "libstdcxx >=14"
+  ],
+  "fn": "reproc-14.2.7-h7bdf020_0.conda",
+  "license": "MIT",
+  "license_family": "MIT",
+  "md5": "6457711c539cd20f56d9fa5e6ae5a5f5",
+  "name": "reproc",
+  "platform": "linux",
+  "sha256": "afcc50a102a20a62df24c7fc24633890890af7cf64d9c08ca2286bccf8eec5c7",
+  "size": 33172,
+  "subdir": "linux-64",
+  "timestamp": 1779874661000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/reproc-14.2.7-h7bdf020_0.conda",
+  "version": "14.2.7"
+}

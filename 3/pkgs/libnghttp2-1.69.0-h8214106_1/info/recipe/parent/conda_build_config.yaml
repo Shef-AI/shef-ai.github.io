@@ -1,0 +1,8 @@
+c_compiler_version:        # [linux or osx]
+  - 15.2.0                 # [linux]
+cxx_compiler_version:      # [linux or osx]
+  - 15.2.0                 # [linux]
+fortran_compiler_version:
+  - 14.3.0                 # [osx or linux]
+libxml2:
+  - 2.15.3

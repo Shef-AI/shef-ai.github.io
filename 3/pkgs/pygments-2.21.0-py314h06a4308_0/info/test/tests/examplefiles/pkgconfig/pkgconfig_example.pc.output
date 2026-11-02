@@ -1,0 +1,144 @@
+"# This is for a fictional package `yet another portable hatchpotch generator'." Comment.Single
+'\n'          Text.Whitespace
+
+'prefix'      Name.Attribute
+'='           Operator
+'/usr/local/opt/site/private ' Text
+'# define variable `prefix`' Comment.Single
+'\n'          Text.Whitespace
+
+'exec_prefix' Name.Attribute
+'='           Operator
+'${'          Literal.String.Interpol
+'prefix'      Name.Attribute
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'# using variable reference' Comment.Single
+'\n'          Text.Whitespace
+
+'libdir'      Name.Attribute
+'='           Operator
+'${'          Literal.String.Interpol
+'exec_prefix' Name.Attribute
+'}'           Literal.String.Interpol
+'/lib'        Text
+'\n'          Text.Whitespace
+
+'includedir'  Name.Attribute
+'='           Operator
+'${'          Literal.String.Interpol
+'prefix'      Name.Attribute
+'}'           Literal.String.Interpol
+'/include'    Text
+'\n'          Text.Whitespace
+
+'just_for_test' Name.Attribute
+'='           Operator
+'$$'          Text
+'{'           Text
+'this is not a part of variable reference' Text
+'}'           Text
+' '           Text.Whitespace
+'# escape with `$$`' Comment.Single
+'\n\n'        Text.Whitespace
+
+'Name'        Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'YAPHatchPotchGen' Text
+'\n'          Text.Whitespace
+
+'Description' Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'Yet'         Text
+' '           Text.Whitespace
+'Another'     Text
+' '           Text.Whitespace
+'Portable'    Text
+' '           Text.Whitespace
+'HatchPotch'  Text
+' '           Text.Whitespace
+'GENerator.'  Text
+'\n'          Text.Whitespace
+
+'Version'     Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'352.9.3'     Text
+'\n'          Text.Whitespace
+
+'URL'         Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'http://www9.yaphatchpotchgen.net' Text
+'  '          Text.Whitespace
+"# Don't access." Comment.Single
+'\n'          Text.Whitespace
+
+'Requires'    Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'piyohogelib-9.0' Text
+' '           Text.Whitespace
+'='           Text
+' '           Text.Whitespace
+'9.5.3'       Text
+'\n'          Text.Whitespace
+
+'Requires.private' Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'nyorolib-3.0' Text
+' '           Text.Whitespace
+'='           Text
+' '           Text.Whitespace
+'3.0.9'       Text
+'\n'          Text.Whitespace
+
+'Conflicts'   Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'apiyohoge'   Text
+' '           Text.Whitespace
+'<='          Text
+' '           Text.Whitespace
+'8.3'         Text
+'\n'          Text.Whitespace
+
+'Libs'        Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'-L'          Text
+'${'          Literal.String.Interpol
+'libdir'      Name.Attribute
+'}'           Literal.String.Interpol
+' '           Text.Whitespace
+'-lyaphatchpotchgen-352.9' Text
+' '           Text.Whitespace
+'# using variable reference' Comment.Single
+'\n'          Text.Whitespace
+
+'Libs.private' Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'-ll'         Text
+' '           Text.Whitespace
+'-ly'         Text
+'\n'          Text.Whitespace
+
+'Cflags'      Name.Tag
+':'           Punctuation
+' '           Text.Whitespace
+'-I'          Text
+'${'          Literal.String.Interpol
+'includedir'  Name.Attribute
+'}'           Literal.String.Interpol
+'/piyohogelib-9.0' Text
+' '           Text.Whitespace
+'-I'          Text
+'${'          Literal.String.Interpol
+'libdir'      Name.Attribute
+'}'           Literal.String.Interpol
+'/yaphatchpotchgen/include' Text
+'\n'          Text.Whitespace

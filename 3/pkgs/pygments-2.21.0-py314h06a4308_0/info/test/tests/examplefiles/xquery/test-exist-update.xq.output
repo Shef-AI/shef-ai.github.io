@@ -1,0 +1,757 @@
+'xquery'      Keyword.Pseudo
+' '           Text.Whitespace
+'version'     Keyword.Pseudo
+' '           Text.Whitespace
+'"3.0"'       Literal.String.Double
+';'           Punctuation
+'\n\n'        Text.Whitespace
+
+'declare'     Keyword.Declaration
+' '           Text.Whitespace
+'function'    Keyword.Declaration
+' '           Text.Whitespace
+'local:add-log-message' Name.Function
+'('           Punctuation
+'$'           Name.Variable
+'message'     Name
+' '           Text.Whitespace
+'as'          Keyword
+' '           Text.Whitespace
+'xs:string'   Keyword.Type
+')'           Punctuation
+' '           Text.Whitespace
+'as'          Keyword
+' '           Text.Whitespace
+'empty-sequence' Name.Tag
+''            Text.Whitespace
+'('           Punctuation
+')'           Punctuation
+'?'           Punctuation
+'\n'          Text.Whitespace
+
+'{'           Punctuation
+'\n\t'        Text.Whitespace
+'let'         Keyword
+' '           Text.Whitespace
+'$'           Name.Variable
+'logfile-collection' Name
+' '           Text.Whitespace
+':='          Operator
+' '           Text.Whitespace
+'"/db/apps/exist101/log"' Literal.String.Double
+'\n\t'        Text.Whitespace
+'let'         Keyword
+' '           Text.Whitespace
+'$'           Name.Variable
+'logfile-name' Name
+' '           Text.Whitespace
+':='          Operator
+' '           Text.Whitespace
+'"exist101-log.xml"' Literal.String.Double
+'\n\t'        Text.Whitespace
+'let'         Keyword
+' '           Text.Whitespace
+'$'           Name.Variable
+'logfile-full' Name
+' '           Text.Whitespace
+':='          Operator
+' '           Text.Whitespace
+'concat'      Name.Function
+'('           Punctuation
+'$'           Name.Variable
+'logfile-collection' Name
+','           Punctuation
+' '           Text.Whitespace
+"'/'"         Literal.String.Single
+','           Punctuation
+' '           Text.Whitespace
+'$'           Name.Variable
+'logfile-name' Name
+')'           Punctuation
+'\n\t'        Text.Whitespace
+'let'         Keyword
+' '           Text.Whitespace
+'$'           Name.Variable
+'logfile-created' Name
+' '           Text.Whitespace
+':='          Operator
+'\n\t'        Text.Whitespace
+'if'          Keyword
+'('           Punctuation
+'doc-available' Name.Function
+'('           Punctuation
+'$'           Name.Variable
+'logfile-full' Name
+')'           Punctuation
+')'           Punctuation
+'then'        Keyword
+'\n\t\t'      Text.Whitespace
+'$'           Name.Variable
+'logfile-full' Name
+'\n\t'        Text.Whitespace
+'else'        Keyword
+'\n\t\t'      Text.Whitespace
+'xmldb:store' Name.Function
+'('           Punctuation
+'$'           Name.Variable
+'logfile-collection' Name
+','           Punctuation
+' '           Text.Whitespace
+'$'           Name.Variable
+'logfile-name' Name
+','           Punctuation
+' '           Text.Whitespace
+'<'           Name.Tag
+'eXist101-Log' Name.Tag
+'/>'          Name.Tag
+')'           Punctuation
+'\n\t'        Text.Whitespace
+'return'      Keyword
+'\n\t\t'      Text.Whitespace
+'update'      Keyword
+' '           Text.Whitespace
+'insert'      Keyword
+'\n\t\t\t'    Text.Whitespace
+'<'           Name.Tag
+'LogEntry'    Name.Tag
+' '           Text.Whitespace
+'timestamp'   Name.Tag
+'='           Operator
+'"'           Punctuation
+'{'           Punctuation
+'current-dateTime' Name.Function
+'('           Punctuation
+')'           Punctuation
+'}'           Punctuation
+'"'           Punctuation
+'>'           Name.Tag
+'{'           Punctuation
+'$'           Name.Variable
+'message'     Name
+'}'           Punctuation
+'</'          Name.Tag
+'LogEntry'    Name.Tag
+'>'           Name.Tag
+'\n\t\t'      Text.Whitespace
+'into'        Keyword
+' '           Text.Whitespace
+'doc'         Name.Function
+'('           Punctuation
+'$'           Name.Variable
+'logfile-full' Name
+')'           Punctuation
+'/'           Punctuation
+'*'           Name.Tag
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+';'           Punctuation
+'\n\n'        Text.Whitespace
+
+'declare'     Keyword.Declaration
+' '           Text.Whitespace
+'function'    Keyword.Declaration
+' '           Text.Whitespace
+'local:insert-attributes' Name.Function
+'('           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n\t'        Text.Whitespace
+'let'         Keyword
+' '           Text.Whitespace
+'$'           Name.Variable
+'elm'         Name
+' '           Text.Whitespace
+'as'          Keyword
+' '           Text.Whitespace
+'element'     Name.Tag
+''            Text.Whitespace
+'('           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+':='          Operator
+' '           Text.Whitespace
+'doc'         Name.Function
+'('           Punctuation
+"'/db/Path/To/Some/Document.xml'" Literal.String.Single
+')'           Punctuation
+'/'           Punctuation
+'*'           Name.Tag
+'\n\t'        Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'\n\t\t'      Text.Whitespace
+'update'      Keyword
+' '           Text.Whitespace
+'insert'      Keyword
+' '           Text.Whitespace
+'<'           Name.Tag
+'NEW'         Name.Tag
+'/>'          Name.Tag
+' '           Text.Whitespace
+'into'        Keyword
+' '           Text.Whitespace
+'$'           Name.Variable
+'elm'         Name
+','           Punctuation
+'\n\t\t'      Text.Whitespace
+'update'      Keyword
+' '           Text.Whitespace
+'insert'      Keyword
+' '           Text.Whitespace
+'attribute'   Keyword
+' '           Text.Whitespace
+'x'           Name.Variable
+' '           Text.Whitespace
+'{'           Punctuation
+' '           Text.Whitespace
+"'y'"         Literal.String.Single
+' '           Text.Whitespace
+'}'           Punctuation
+' '           Text.Whitespace
+'into'        Keyword
+' '           Text.Whitespace
+'$'           Name.Variable
+'elm'         Name
+'/'           Punctuation
+'*'           Name.Tag
+'['           Punctuation
+'last'        Name.Function
+'('           Punctuation
+')'           Punctuation
+']'           Punctuation
+','           Punctuation
+'\n\t\t'      Text.Whitespace
+'update'      Keyword
+' '           Text.Whitespace
+'insert'      Keyword
+' '           Text.Whitespace
+'attribute'   Keyword
+' '           Text.Whitespace
+'a'           Name.Variable
+' '           Text.Whitespace
+'{'           Punctuation
+' '           Text.Whitespace
+"'b'"         Literal.String.Single
+' '           Text.Whitespace
+'}'           Punctuation
+' '           Text.Whitespace
+'into'        Keyword
+' '           Text.Whitespace
+'$'           Name.Variable
+'elm'         Name
+'/'           Punctuation
+'*'           Name.Tag
+'['           Punctuation
+'last'        Name.Function
+'('           Punctuation
+')'           Punctuation
+']'           Punctuation
+'\n\t'        Text.Whitespace
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+';'           Punctuation
+'\n\n'        Text.Whitespace
+
+'declare'     Keyword.Declaration
+' '           Text.Whitespace
+'function'    Keyword.Declaration
+' '           Text.Whitespace
+'local:insert-elem' Name.Function
+'('           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n\t'        Text.Whitespace
+'let'         Keyword
+' '           Text.Whitespace
+'$'           Name.Variable
+'elm'         Name
+' '           Text.Whitespace
+'as'          Keyword
+' '           Text.Whitespace
+'element'     Name.Tag
+''            Text.Whitespace
+'('           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+':='          Operator
+' '           Text.Whitespace
+'doc'         Name.Function
+'('           Punctuation
+"'/db/Path/To/Some/Document.xml'" Literal.String.Single
+')'           Punctuation
+'/'           Punctuation
+'*'           Name.Tag
+'\n\t'        Text.Whitespace
+'return'      Keyword
+'\n\t\t'      Text.Whitespace
+'update'      Keyword
+' '           Text.Whitespace
+'insert'      Keyword
+' '           Text.Whitespace
+'<'           Name.Tag
+'NEW'         Name.Tag
+' '           Text.Whitespace
+'x'           Name.Tag
+'='           Operator
+'"'           Punctuation
+'y'           Name.Attribute
+'"'           Punctuation
+' '           Text.Whitespace
+'a'           Name.Tag
+'='           Operator
+'"'           Punctuation
+'b'           Name.Attribute
+'"'           Punctuation
+'/>'          Name.Tag
+' '           Text.Whitespace
+'into'        Keyword
+' '           Text.Whitespace
+'$'           Name.Variable
+'elm'         Name
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+';'           Punctuation
+'\n\n'        Text.Whitespace
+
+'declare'     Keyword.Declaration
+' '           Text.Whitespace
+'function'    Keyword.Declaration
+' '           Text.Whitespace
+'local:insert-elem2' Name.Function
+'('           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n\t'        Text.Whitespace
+'let'         Keyword
+' '           Text.Whitespace
+'$'           Name.Variable
+'elm'         Name
+' '           Text.Whitespace
+'as'          Keyword
+' '           Text.Whitespace
+'element'     Name.Tag
+''            Text.Whitespace
+'('           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+':='          Operator
+' '           Text.Whitespace
+'doc'         Name.Function
+'('           Punctuation
+"'/db/Path/To/Some/Document.xml'" Literal.String.Single
+')'           Punctuation
+'/'           Punctuation
+'*'           Name.Tag
+'\n\t'        Text.Whitespace
+'let'         Keyword
+' '           Text.Whitespace
+'$'           Name.Variable
+'new-element' Name
+' '           Text.Whitespace
+'as'          Keyword
+' '           Text.Whitespace
+'element'     Name.Tag
+''            Text.Whitespace
+'('           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+':='          Operator
+' '           Text.Whitespace
+'<'           Name.Tag
+'NEW'         Name.Tag
+' '           Text.Whitespace
+'x'           Name.Tag
+'='           Operator
+'"'           Punctuation
+'y'           Name.Attribute
+'"'           Punctuation
+' '           Text.Whitespace
+'a'           Name.Tag
+'='           Operator
+'"'           Punctuation
+'b'           Name.Attribute
+'"'           Punctuation
+'/>'          Name.Tag
+'\n\t'        Text.Whitespace
+'return'      Keyword
+'\n\t\t'      Text.Whitespace
+'update'      Keyword
+' '           Text.Whitespace
+'insert'      Keyword
+' '           Text.Whitespace
+'$'           Name.Variable
+'new-element' Name
+' '           Text.Whitespace
+'into'        Keyword
+' '           Text.Whitespace
+'$'           Name.Variable
+'elm'         Name
+'\t\n'        Text.Whitespace
+
+'}'           Punctuation
+';'           Punctuation
+'\n\n'        Text.Whitespace
+
+'declare'     Keyword.Declaration
+' '           Text.Whitespace
+'function'    Keyword.Declaration
+' '           Text.Whitespace
+'local:insert-single' Name.Function
+'('           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n\t'        Text.Whitespace
+'update'      Keyword
+' '           Text.Whitespace
+'insert'      Keyword
+' '           Text.Whitespace
+'<'           Name.Tag
+'LogEntry'    Name.Tag
+'>'           Name.Tag
+'S'           Literal
+'o'           Literal
+'m'           Literal
+'e'           Literal
+'t'           Literal
+'h'           Literal
+'i'           Literal
+'n'           Literal
+'g'           Literal
+' '           Literal
+'h'           Literal
+'a'           Literal
+'p'           Literal
+'p'           Literal
+'e'           Literal
+'n'           Literal
+'e'           Literal
+'d'           Literal
+'.'           Literal
+'.'           Literal
+'.'           Literal
+'</'          Name.Tag
+'LogEntry'    Name.Tag
+'>'           Name.Tag
+' '           Text.Whitespace
+'into'        Keyword
+' '           Text.Whitespace
+'doc'         Name.Function
+'('           Punctuation
+"'/db/logs/mainlog.xml'" Literal.String.Single
+')'           Punctuation
+'/'           Punctuation
+'*'           Name.Tag
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+';'           Punctuation
+'\n\n\n'      Text.Whitespace
+
+'declare'     Keyword.Declaration
+' '           Text.Whitespace
+'function'    Keyword.Declaration
+' '           Text.Whitespace
+'local:trim-insert' Name.Function
+'('           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n\t'        Text.Whitespace
+'let'         Keyword
+' '           Text.Whitespace
+'$'           Name.Variable
+'document'    Name
+' '           Text.Whitespace
+':='          Operator
+' '           Text.Whitespace
+'doc'         Name.Function
+'('           Punctuation
+"'/db/logs/mainlog.xml'" Literal.String.Single
+')'           Punctuation
+'\n\t'        Text.Whitespace
+'let'         Keyword
+' '           Text.Whitespace
+'$'           Name.Variable
+'newentry'    Name
+' '           Text.Whitespace
+':='          Operator
+' '           Text.Whitespace
+'<'           Name.Tag
+'LogEntry'    Name.Tag
+'>'           Name.Tag
+'S'           Literal
+'o'           Literal
+'m'           Literal
+'e'           Literal
+'t'           Literal
+'h'           Literal
+'i'           Literal
+'n'           Literal
+'g'           Literal
+' '           Literal
+'h'           Literal
+'a'           Literal
+'p'           Literal
+'p'           Literal
+'e'           Literal
+'n'           Literal
+'e'           Literal
+'d'           Literal
+'.'           Literal
+'.'           Literal
+'.'           Literal
+'</'          Name.Tag
+'LogEntry'    Name.Tag
+'>'           Name.Tag
+'\n\t'        Text.Whitespace
+'return'      Keyword
+'\n\t\t'      Text.Whitespace
+'update'      Keyword
+' '           Text.Whitespace
+'delete'      Keyword
+' '           Text.Whitespace
+'$'           Name.Variable
+'document'    Name
+'/'           Punctuation
+'*'           Name.Tag
+'/'           Punctuation
+'LogEntry'    Name.Tag
+'['           Punctuation
+'position'    Name.Function
+'('           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'ge'          Operator.Word
+' '           Text.Whitespace
+'10'          Literal.Number.Integer
+']'           Punctuation
+','           Punctuation
+'\n\t\t'      Text.Whitespace
+'if'          Keyword
+'('           Punctuation
+'exists'      Name.Function
+'('           Punctuation
+'$'           Name.Variable
+'document'    Name
+'/'           Punctuation
+'*'           Name.Tag
+'/'           Punctuation
+'LogEntry'    Name.Tag
+'['           Punctuation
+'1'           Literal.Number.Integer
+']'           Punctuation
+')'           Punctuation
+')'           Punctuation
+'then'        Keyword
+'\n\t\t\t'    Text.Whitespace
+'update'      Keyword
+' '           Text.Whitespace
+'insert'      Keyword
+' '           Text.Whitespace
+'$'           Name.Variable
+'newentry'    Name
+' '           Text.Whitespace
+'preceding'   Keyword
+' '           Text.Whitespace
+'$'           Name.Variable
+'document'    Name
+'/'           Punctuation
+'*'           Name.Tag
+'/'           Punctuation
+'LogEntry'    Name.Tag
+'['           Punctuation
+'1'           Literal.Number.Integer
+']'           Punctuation
+'\n\t\t'      Text.Whitespace
+'else'        Keyword
+'\n\t\t\t'    Text.Whitespace
+'update'      Keyword
+' '           Text.Whitespace
+'insert'      Keyword
+' '           Text.Whitespace
+'$'           Name.Variable
+'newentry'    Name
+' '           Text.Whitespace
+'into'        Keyword
+' '           Text.Whitespace
+'$'           Name.Variable
+'document'    Name
+'/'           Punctuation
+'*'           Name.Tag
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+';'           Punctuation
+'\n\n\n'      Text.Whitespace
+
+'declare'     Keyword.Declaration
+' '           Text.Whitespace
+'function'    Keyword.Declaration
+' '           Text.Whitespace
+'local:attempt-document-node-insert' Name.Function
+'('           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n\t\n\t'    Text.Whitespace
+'(:'          Comment
+' This is invalid' Comment
+':'           Comment
+' '           Comment
+':)'          Comment
+'\n\t'        Text.Whitespace
+'let'         Keyword
+' '           Text.Whitespace
+'$'           Name.Variable
+'document'    Name
+' '           Text.Whitespace
+'as'          Keyword
+' '           Text.Whitespace
+'document-node' Name.Tag
+''            Text.Whitespace
+'('           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+':='          Operator
+' '           Text.Whitespace
+'<'           Name.Tag
+'Root'        Name.Tag
+'>'           Name.Tag
+'<'           Name.Tag
+'a'           Name.Tag
+'/>'          Name.Tag
+'</'          Name.Tag
+'Root'        Name.Tag
+'>'           Name.Tag
+'\n\t'        Text.Whitespace
+'return'      Keyword
+'\n\t\t'      Text.Whitespace
+'update'      Keyword
+' '           Text.Whitespace
+'insert'      Keyword
+' '           Text.Whitespace
+'<'           Name.Tag
+'b'           Name.Tag
+'/>'          Name.Tag
+' '           Text.Whitespace
+'into'        Keyword
+' '           Text.Whitespace
+'$'           Name.Variable
+'document'    Name
+'/'           Punctuation
+'*'           Name.Tag
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+';'           Punctuation
+'\n\n'        Text.Whitespace
+
+'declare'     Keyword.Declaration
+' '           Text.Whitespace
+'function'    Keyword.Declaration
+' '           Text.Whitespace
+'local:attempt-attr-update-with-node' Name.Function
+'('           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n\t'        Text.Whitespace
+'update'      Keyword
+' '           Text.Whitespace
+'replace'     Keyword
+' '           Text.Whitespace
+'doc'         Name.Function
+'('           Punctuation
+"'/db/test/test.xml'" Literal.String.Single
+')'           Punctuation
+'/'           Punctuation
+'*'           Name.Tag
+'/'           Punctuation
+'@name'       Name.Attribute
+' '           Text.Whitespace
+'with'        Keyword
+'\n\t\t'      Text.Whitespace
+'<'           Name.Tag
+'a'           Name.Tag
+'>'           Name.Tag
+'a'           Literal
+'a'           Literal
+'a'           Literal
+'<'           Name.Tag
+'b'           Name.Tag
+'>'           Name.Tag
+'b'           Literal
+'b'           Literal
+'b'           Literal
+'</'          Name.Tag
+'b'           Name.Tag
+'>'           Name.Tag
+'</'          Name.Tag
+'a'           Name.Tag
+'>'           Name.Tag
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+';'           Punctuation
+'\n\n\n'      Text.Whitespace
+
+'(#'          Punctuation
+' '           Text.Whitespace
+'exist:batch-transaction' Name.Variable
+' '           Literal
+'#)'          Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n\t'        Text.Whitespace
+'update'      Keyword
+' '           Text.Whitespace
+'delete'      Keyword
+' '           Text.Whitespace
+'$'           Name.Variable
+'document'    Name
+'/'           Punctuation
+'*'           Name.Tag
+'/'           Punctuation
+'LogEntry'    Name.Tag
+'['           Punctuation
+'position'    Name.Function
+'('           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'ge'          Operator.Word
+' '           Text.Whitespace
+'10'          Literal.Number.Integer
+']'           Punctuation
+','           Punctuation
+'\n\t'        Text.Whitespace
+'update'      Keyword
+' '           Text.Whitespace
+'insert'      Keyword
+' '           Text.Whitespace
+'$'           Name.Variable
+'newentry'    Name
+' '           Text.Whitespace
+'preceding'   Keyword
+' '           Text.Whitespace
+'$'           Name.Variable
+'document'    Name
+'/'           Punctuation
+'*'           Name.Tag
+'/'           Punctuation
+'LogEntry'    Name.Tag
+'['           Punctuation
+'1'           Literal.Number.Integer
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n'          Text.Whitespace

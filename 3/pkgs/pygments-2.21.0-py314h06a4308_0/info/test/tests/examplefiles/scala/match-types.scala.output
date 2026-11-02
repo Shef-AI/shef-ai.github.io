@@ -1,0 +1,113 @@
+'type'        Keyword
+' '           Text.Whitespace
+'Elem'        Name.Class
+'['           Punctuation
+'X'           Name.Class
+']'           Punctuation
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'X'           Name.Class
+' '           Text.Whitespace
+'match'       Keyword
+' '           Text.Whitespace
+'{'           Punctuation
+'\n  '        Text.Whitespace
+'case'        Keyword
+' '           Text.Whitespace
+'String'      Name.Class
+' '           Text.Whitespace
+'=>'          Operator
+' '           Text.Whitespace
+'Char'        Name.Class
+'\n  '        Text.Whitespace
+'case'        Keyword
+' '           Text.Whitespace
+'Array'       Name.Class
+'['           Punctuation
+'t'           Name
+']'           Punctuation
+' '           Text.Whitespace
+'=>'          Operator
+' '           Text.Whitespace
+'t'           Name
+'\n  '        Text.Whitespace
+'case'        Keyword
+' '           Text.Whitespace
+'Iterable'    Name.Class
+'['           Punctuation
+'t'           Name
+']'           Punctuation
+' '           Text.Whitespace
+'=>'          Operator
+' '           Text.Whitespace
+'t'           Name
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n\n'        Text.Whitespace
+
+'type'        Keyword
+' '           Text.Whitespace
+'Concat'      Name.Class
+'['           Punctuation
+'Xs'          Name.Class
+' '           Text.Whitespace
+'<:'          Operator
+' '           Text.Whitespace
+'Tuple'       Name.Class
+','           Punctuation
+' '           Text.Whitespace
+'+'           Operator
+'Ys'          Name.Class
+' '           Text.Whitespace
+'<:'          Operator
+' '           Text.Whitespace
+'Tuple'       Name.Class
+']'           Punctuation
+' '           Text.Whitespace
+'<:'          Operator
+' '           Text.Whitespace
+'Tuple'       Name.Class
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'Xs'          Name.Class
+' '           Text.Whitespace
+'match'       Keyword
+' '           Text.Whitespace
+'{'           Punctuation
+'\n  '        Text.Whitespace
+'case'        Keyword
+' '           Text.Whitespace
+'Unit'        Name.Class
+' '           Text.Whitespace
+'=>'          Operator
+' '           Text.Whitespace
+'Ys'          Name.Class
+'\n  '        Text.Whitespace
+'case'        Keyword
+' '           Text.Whitespace
+'x'           Name
+' '           Text.Whitespace
+'*:'          Operator
+' '           Text.Whitespace
+'xs'          Name
+' '           Text.Whitespace
+'=>'          Operator
+' '           Text.Whitespace
+'x'           Name
+' '           Text.Whitespace
+'*:'          Operator
+' '           Text.Whitespace
+'Concat'      Name.Class
+'['           Punctuation
+'xs'          Name
+','           Punctuation
+' '           Text.Whitespace
+'Ys'          Name.Class
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n'          Text.Whitespace

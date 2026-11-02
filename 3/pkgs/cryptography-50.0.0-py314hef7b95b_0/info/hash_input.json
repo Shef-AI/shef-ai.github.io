@@ -1,0 +1,12 @@
+{
+  "c_compiler": "gcc",
+  "channel_targets": "defaults",
+  "rust_compiler": "rust",
+  "c_stdlib_version": "2.28",
+  "target_platform": "linux-64",
+  "c_compiler_version": "14.3.0",
+  "openssl": "3",
+  "rust_compiler_version": "1.96.0",
+  "c_stdlib": "sysroot",
+  "__glibc": "__glibc >=2.28,<3.0.a0"
+}

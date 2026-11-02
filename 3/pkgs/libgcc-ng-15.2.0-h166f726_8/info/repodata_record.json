@@ -1,0 +1,22 @@
+{
+  "arch": "x86_64",
+  "build": "h166f726_8",
+  "build_number": 8,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64/",
+  "constrains": [],
+  "depends": [
+    "libgcc 15.2.0 h69a1729_8",
+    "_libgcc_mutex * main"
+  ],
+  "fn": "libgcc-ng-15.2.0-h166f726_8.conda",
+  "license": "GPL-3.0-only WITH GCC-exception-3.1",
+  "md5": "b3f01816cd1e046648fff257be7b0248",
+  "name": "libgcc-ng",
+  "platform": "linux",
+  "sha256": "3b4b734309a58b3ded42e01aecfbb91b029ad22d768a4c9f0f4f0006a3172203",
+  "size": 28452,
+  "subdir": "linux-64",
+  "timestamp": 1779212820000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/libgcc-ng-15.2.0-h166f726_8.conda",
+  "version": "15.2.0"
+}

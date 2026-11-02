@@ -1,0 +1,55 @@
+{% set name = "opentelemetry-exporter-otlp-proto-http" %}
+{% set version = "1.43.0" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_')}}-{{ version }}.tar.gz
+  sha256: fa8a42bb7d00ee5391f4c0b04d8e6a46c03caa437903296ab73a81dc11ba118f
+
+build:
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  skip: true  # [py<310]
+
+requirements:
+  host:
+    - pip
+    - python
+    - hatchling
+  run:
+    - python
+    - googleapis-common-protos >=1.52,<2
+    - opentelemetry-api >=1.15,<2
+    - opentelemetry-proto =={{ version }}
+    - opentelemetry-sdk =={{ version }}
+    - opentelemetry-exporter-otlp-proto-common =={{ version }}
+    - requests >=2.7,<3
+    - typing-extensions >=4.5.0
+
+# pytest disabled in 1.43.0: every test module imports opentelemetry.test
+# (from opentelemetry-test-utils, not on pkgs/main). Re-enable once
+# opentelemetry-test-utils is packaged.
+test:
+  imports:
+    - opentelemetry.exporter.otlp.proto.http
+  commands:
+    - pip check
+  requires:
+    - pip
+
+about:
+  home: https://github.com/open-telemetry/opentelemetry-python/tree/main/exporter/opentelemetry-exporter-otlp-proto-http
+  license: Apache-2.0
+  license_file: LICENSE
+  license_family: Apache
+  summary: OpenTelemetry Collector Protobuf over HTTP Exporter
+  description: This library allows to export data to the OpenTelemetry Collector using the OpenTelemetry Protocol using Protobuf over HTTP.
+  dev_url: https://github.com/open-telemetry/opentelemetry-python/tree/main/exporter/opentelemetry-exporter-otlp-proto-http
+  doc_url: https://github.com/open-telemetry/opentelemetry-python/tree/main/exporter/opentelemetry-exporter-otlp-proto-http
+
+extra:
+  recipe-maintainers:
+    - mariusvniekerk

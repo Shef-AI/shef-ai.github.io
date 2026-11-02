@@ -1,0 +1,53 @@
+From 036ca6d0776e18d1e2c8aef33662e1a59b487cda Mon Sep 17 00:00:00 2001
+From: Nehal J Wani <nehaljw.kkd1@gmail.com>
+Date: Thu, 29 Jun 2017 00:54:09 -0500
+Subject: [PATCH] Use mingw-64 port of getopt
+
+---
+ libraries/liblmdb/mdb_dump.c | 2 +-
+ libraries/liblmdb/mdb_load.c | 2 +-
+ libraries/liblmdb/mdb_stat.c | 2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/libraries/liblmdb/mdb_dump.c b/libraries/liblmdb/mdb_dump.c
+index 537a499..5074386 100644
+--- a/libraries/liblmdb/mdb_dump.c
++++ b/libraries/liblmdb/mdb_dump.c
+@@ -16,7 +16,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <ctype.h>
+-#include <unistd.h>
++#include <getopt.h>
+ #include <signal.h>
+ #include "lmdb.h"
+ 
+diff --git a/libraries/liblmdb/mdb_load.c b/libraries/liblmdb/mdb_load.c
+index d193a69..1e1aec9 100644
+--- a/libraries/liblmdb/mdb_load.c
++++ b/libraries/liblmdb/mdb_load.c
+@@ -16,7 +16,7 @@
+ #include <errno.h>
+ #include <string.h>
+ #include <ctype.h>
+-#include <unistd.h>
++#include <getopt.h>
+ #include "lmdb.h"
+ 
+ #define PRINT	1
+diff --git a/libraries/liblmdb/mdb_stat.c b/libraries/liblmdb/mdb_stat.c
+index 51063ac..a7315d8 100644
+--- a/libraries/liblmdb/mdb_stat.c
++++ b/libraries/liblmdb/mdb_stat.c
+@@ -14,7 +14,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+-#include <unistd.h>
++#include <getopt.h>
+ #include "lmdb.h"
+ 
+ #ifdef	_WIN32
+-- 
+2.5.1.windows.1
+

@@ -1,0 +1,7 @@
+prefix=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3
+includedir=${prefix}/include
+
+Name: XineramaProto
+Description: Xinerama extension headers
+Version: 1.2.1
+Cflags: -I${includedir}

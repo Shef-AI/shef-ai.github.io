@@ -1,0 +1,26 @@
+{
+  "arch": "x86_64",
+  "build": "py314h7354ed3_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.28,<3.0.a0",
+    "libgcc >=14",
+    "libstdcxx >=14",
+    "python >=3.14,<3.15.0a0",
+    "python_abi 3.14.* *_cp314"
+  ],
+  "fn": "msgpack-python-1.2.1-py314h7354ed3_0.conda",
+  "license": "Apache-2.0",
+  "license_family": "Apache",
+  "md5": "d9f6a59f1baea8e2b419e6c0992e994f",
+  "name": "msgpack-python",
+  "platform": "linux",
+  "sha256": "31df42f70bfe861485915e7f62a16332161ab21aa3df804bc14f344167532844",
+  "size": 112002,
+  "subdir": "linux-64",
+  "timestamp": 1782399408000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/msgpack-python-1.2.1-py314h7354ed3_0.conda",
+  "version": "1.2.1"
+}

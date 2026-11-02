@@ -1,0 +1,73 @@
+{% set name = "pygments" %}
+{% set version = "2.21.0" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 610ca751c9bc2492b38eb9a38a7fbc93edbbb2d7182edaf34e66ae493dee5c8c
+
+build:
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation
+  entry_points:
+    - pygmentize = pygments.cmdline:main
+  skip: True  # [py<39]
+
+requirements:
+  host:
+    - python
+    - pip
+    - hatchling >=1.27
+  run:
+    - python
+  run_constrained:
+    # windows-terminal
+    - colorama >=0.4.6  # [win]
+
+# E   ModuleNotFoundError: No module named 'wcag_contrast_ratio' -> https://pypi.org/project/wcag-contrast-ratio/ (not in the main channel)
+{% set ignore_tests = " --ignore=tests/contrast/test_contrasts.py" %}
+# E   AssertionError: Example file tests/examplefiles/sqlite3/sqlite3.sqlite3-console not found
+# File is not in the site-packages directory:
+{% set deselect_tests = " --deselect=tests/test_basic_api.py::test_lexer_classes" %}
+test:
+  source_files:
+    - tests
+  imports:
+    - pygments
+    - pygments.filters
+    - pygments.formatters
+    - pygments.lexers
+    - pygments.styles
+    - pygments.plugin
+  commands:
+    - pip check
+    - pygmentize -h
+    - pytest -v tests {{ ignore_tests }} {{ deselect_tests }}
+  requires:
+    - pip
+    - pytest
+
+about:
+  home: https://pygments.org
+  license: BSD-2-Clause
+  license_family: BSD
+  license_file: LICENSE
+  summary: Pygments is a generic syntax highlighter suitable for use in code hosting, forums, wikis or other applications that need to prettify source code.
+  description: |
+    This is the source of Pygments. It is
+    a generic syntax highlighter written in Python
+    that supports over 500 languages and text formats,
+    for use in code hosting, forums, wikis or other applications
+    that need to prettify source code.
+  dev_url: https://github.com/pygments/pygments
+  doc_url: https://pygments.org/docs
+
+extra:
+  recipe-maintainers:
+    - jakirkham
+    - pelson
+    - ocefpaf
+    - scopatz

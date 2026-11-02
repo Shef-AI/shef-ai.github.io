@@ -1,0 +1,102 @@
+# This file created by conda-build 26.3.0
+# meta.yaml template originally from:
+# /home/task_cprZgjTRSUOIT_0/annotated-types-feedstock/recipe, last modified Fri Jul 10 10:55:27 2026
+# ------------------------------------------------
+
+package:
+  name: annotated-types
+  version: 0.7.0
+source:
+  url: https://pypi.org/packages/source/a/annotated_types/annotated_types-0.7.0.tar.gz
+  sha256: aff07c09a53a08bc8cfccb9c85b05f1aa9a2a6f23728d790723543408344ce89
+build:
+  script: /home/task_cprZgjTRSUOIT_0/croot/annotated-types_1783680958242/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_place/bin/python
+    -m pip install . --no-deps --no-build-isolation -vv
+  number: '0'
+  string: py314h06a4308_0
+requirements:
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 52_gnu
+    - bzip2 1.0.8 h5eee18b_6
+    - ca-certificates 2026.5.14 h06a4308_0
+    - hatchling 1.29.0 py314h06a4308_0
+    - ld_impl_linux-64 2.44 h9e0c5a2_3
+    - libexpat 2.8.2 h7354ed3_1
+    - libffi 3.4.8 h06d3fd0_3
+    - libgcc 15.2.0 h69a1729_8
+    - libgcc-ng 15.2.0 h166f726_8
+    - libmpdec 4.0.1 h47b2149_0
+    - libstdcxx 15.2.0 h39759b7_8
+    - libstdcxx-ng 15.2.0 hc03a8fd_8
+    - libuuid 1.41.5 h5eee18b_0
+    - libxcb 1.17.0 h9b100fa_0
+    - libzlib 1.3.2 h47b2149_0
+    - lz4-c 1.9.4 h7354ed3_5
+    - ncurses 6.5 h7934f7d_0
+    - openssl 3.5.7 h1b28b03_0
+    - packaging 26.0 py314h06a4308_0
+    - pathspec 1.0.4 py314h06a4308_0
+    - pip 26.1.2 pyh0d26453_0
+    - pluggy 1.6.0 py314h06a4308_0
+    - pthread-stubs 0.3 h0ce48e5_1
+    - python 3.14.6 h4bdf6f9_101_cp314
+    - python_abi 3.14 4_cp314
+    - readline 8.3 hc2a1206_0
+    - sqlite 3.53.2 h795bf6d_0
+    - tk 8.6.15 h54e0aa7_0
+    - trove-classifiers 2026.1.14.14 py314h06a4308_0
+    - tzdata 2026b he532380_0
+    - xorg-libx11 1.8.12 h9b100fa_1
+    - xorg-libxau 1.0.12 h9b100fa_0
+    - xorg-libxdmcp 1.1.5 h9b100fa_0
+    - xorg-xorgproto 2024.1 h47b2149_2
+    - xz 5.8.2 h448239c_0
+    - zlib 1.3.2 h47b2149_0
+    - zstd 1.5.7 h11fc155_0
+  run:
+    - python >=3.14,<3.15.0a0
+    - python_abi 3.14.* *_cp314
+test:
+  source_files:
+    - tests
+  imports:
+    - annotated_types
+  commands:
+    - pip check
+    - pytest -v tests
+  requires:
+    - pip
+    - pytest
+about:
+  home: https://github.com/annotated-types/annotated-types
+  summary: Reusable constraint types to use with typing.Annotated
+  description: 'This package provides metadata objects which can be used to represent
+    common constraints such as upper and lower
+
+    bounds on scalar values and collection sizes, a Predicate marker for runtime checks,
+    and descriptions of how we
+
+    intend these metadata to be interpreted. In some cases, we also note alternative
+    representations which do not
+
+    require this package.
+
+    '
+  license: MIT
+  license_file: LICENSE
+  license_family: MIT
+  doc_url: https://github.com/annotated-types/annotated-types
+  dev_url: https://github.com/annotated-types/annotated-types
+extra:
+  recipe-maintainers:
+    - Zac-HD
+    - mattwthompson
+    - samuelcolvin
+  final: true
+  copy_test_source_files: true
+  remote_url: https://github.com/AnacondaRecipes/annotated-types-feedstock
+  sha: 21bf71d7b112994c1d2f6e540e08e1ca232d6049
+  task_id: cprZgjTRSUOITNbeux59jA
+  task_run_id: '0'
+  pbp_graph_uuid: f9e3f4a0-17b8-4370-9ddc-762149f90a22

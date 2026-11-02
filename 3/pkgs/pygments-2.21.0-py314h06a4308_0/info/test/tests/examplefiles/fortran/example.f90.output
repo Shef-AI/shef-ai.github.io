@@ -1,0 +1,63 @@
+'program '    Keyword
+'main'        Name
+'\n  '        Text.Whitespace
+'integer'     Keyword.Type
+','           Punctuation
+' '           Text.Whitespace
+'parameter'   Keyword
+' '           Text.Whitespace
+'::'          Keyword.Declaration
+' '           Text.Whitespace
+'mykind'      Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'selected_real_kind' Name.Builtin
+'('           Punctuation
+')'           Punctuation
+'\n  '        Text.Whitespace
+'print'       Keyword
+' '           Text.Whitespace
+'*'           Operator
+','           Punctuation
+' '           Text.Whitespace
+'1'           Literal.Number.Integer
+'\n  '        Text.Whitespace
+'print'       Keyword
+' '           Text.Whitespace
+'*'           Operator
+','           Punctuation
+' '           Text.Whitespace
+'1_mykind'    Literal.Number.Integer
+'\n  '        Text.Whitespace
+'print'       Keyword
+' '           Text.Whitespace
+'*'           Operator
+','           Punctuation
+' '           Text.Whitespace
+'1.'          Literal.Number.Float
+'\n  '        Text.Whitespace
+'print'       Keyword
+' '           Text.Whitespace
+'*'           Operator
+','           Punctuation
+' '           Text.Whitespace
+'1._mykind'   Literal.Number.Float
+'\n  '        Text.Whitespace
+'print'       Keyword
+' '           Text.Whitespace
+'*'           Operator
+','           Punctuation
+' '           Text.Whitespace
+'('           Punctuation
+'1.'          Literal.Number.Float
+','           Punctuation
+' '           Text.Whitespace
+'1._mykind'   Literal.Number.Float
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'end '        Keyword
+'program '    Keyword
+'main'        Name
+'\n'          Text.Whitespace

@@ -1,0 +1,8 @@
+prefix=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3
+includedir=${prefix}/include
+
+Name: KBProto
+Description: KB extension headers
+Version: 1.0.7
+Cflags: -I${includedir}
+Requires: xproto >= 7.0.33
