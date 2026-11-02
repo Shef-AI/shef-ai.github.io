@@ -1,0 +1,265 @@
+{
+  "name": "opentelemetry-exporter-otlp-proto-common",
+  "version": "1.43.0",
+  "build": "py314h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "subdir": "linux-64",
+  "fn": "opentelemetry-exporter-otlp-proto-common-1.43.0-py314h06a4308_0.conda",
+  "md5": "dfbed818cd373537042316d2e05b8c82",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/opentelemetry-exporter-otlp-proto-common-1.43.0-py314h06a4308_0.conda",
+  "sha256": "e994f58758f8f8c02e55fb3a429a64e4b5398bc13c69058dce43a4025ff7b6d6",
+  "arch": "x86_64",
+  "platform": "linux",
+  "depends": [
+    "opentelemetry-proto 1.43.0",
+    "python >=3.14,<3.15.0a0",
+    "python_abi 3.14.* *_cp314"
+  ],
+  "constrains": [],
+  "license": "Apache-2.0",
+  "license_family": "Apache",
+  "timestamp": 1787045879000,
+  "size": 45042,
+  "requested_spec": "https://repo.anaconda.com/pkgs/main/linux-64::opentelemetry-exporter-otlp-proto-common==1.43.0=py314h06a4308_0",
+  "package_tarball_full_path": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/opentelemetry-exporter-otlp-proto-common-1.43.0-py314h06a4308_0.conda",
+  "extracted_package_dir": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/opentelemetry-exporter-otlp-proto-common-1.43.0-py314h06a4308_0",
+  "files": [
+    "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/__init__.py",
+    "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/__pycache__/_exporter_metrics.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/__pycache__/_log_encoder.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/__pycache__/metrics_encoder.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/__pycache__/trace_encoder.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/_exporter_metrics.py",
+    "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/_internal/__init__.py",
+    "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/_internal/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/_internal/_log_encoder/__init__.py",
+    "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/_internal/_log_encoder/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/_internal/metrics_encoder/__init__.py",
+    "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/_internal/metrics_encoder/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/_internal/trace_encoder/__init__.py",
+    "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/_internal/trace_encoder/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/_log_encoder.py",
+    "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/metrics_encoder.py",
+    "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/py.typed",
+    "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/trace_encoder.py",
+    "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/version/__init__.py",
+    "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/version/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/opentelemetry_exporter_otlp_proto_common-1.43.0.dist-info/INSTALLER",
+    "lib/python3.14/site-packages/opentelemetry_exporter_otlp_proto_common-1.43.0.dist-info/METADATA",
+    "lib/python3.14/site-packages/opentelemetry_exporter_otlp_proto_common-1.43.0.dist-info/RECORD",
+    "lib/python3.14/site-packages/opentelemetry_exporter_otlp_proto_common-1.43.0.dist-info/REQUESTED",
+    "lib/python3.14/site-packages/opentelemetry_exporter_otlp_proto_common-1.43.0.dist-info/WHEEL",
+    "lib/python3.14/site-packages/opentelemetry_exporter_otlp_proto_common-1.43.0.dist-info/direct_url.json",
+    "lib/python3.14/site-packages/opentelemetry_exporter_otlp_proto_common-1.43.0.dist-info/licenses/LICENSE"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "bb4651243f7576cf273c07edeea2570e0b65a31e228738c4e276c2fba8fba362",
+        "size_in_bytes": 178,
+        "sha256_in_prefix": "bb4651243f7576cf273c07edeea2570e0b65a31e228738c4e276c2fba8fba362"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "f852f887a9c9303d3cabd13e2503a7fb45c8149dec00f2b271807bbb27e1adc7",
+        "size_in_bytes": 297,
+        "sha256_in_prefix": "f852f887a9c9303d3cabd13e2503a7fb45c8149dec00f2b271807bbb27e1adc7"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/__pycache__/_exporter_metrics.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "911391ed8851fdd1050e878b87bcdc3602e7258d6a4d4bbefbe5a1f8ea166b36",
+        "size_in_bytes": 7746,
+        "sha256_in_prefix": "911391ed8851fdd1050e878b87bcdc3602e7258d6a4d4bbefbe5a1f8ea166b36"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/__pycache__/_log_encoder.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "74bac5150dddf1fc32326d0dda6b4fab26ea502a241f78dff224218a0e7b7135",
+        "size_in_bytes": 317,
+        "sha256_in_prefix": "74bac5150dddf1fc32326d0dda6b4fab26ea502a241f78dff224218a0e7b7135"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/__pycache__/metrics_encoder.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "cfa7962dbcd7787df948744ede0a8f7452c9e87806c88f59680ade10c074bd80",
+        "size_in_bytes": 327,
+        "sha256_in_prefix": "cfa7962dbcd7787df948744ede0a8f7452c9e87806c88f59680ade10c074bd80"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/__pycache__/trace_encoder.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "d586b4b0d05544df2e39e5f009421c3ebedcbea526a13dfff3f75e5d1daa7d64",
+        "size_in_bytes": 321,
+        "sha256_in_prefix": "d586b4b0d05544df2e39e5f009421c3ebedcbea526a13dfff3f75e5d1daa7d64"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/_exporter_metrics.py",
+        "path_type": "hardlink",
+        "sha256": "681278704c759873346ecc51371af5d0c03c2c380699c2406848796d4b003bcc",
+        "size_in_bytes": 5084,
+        "sha256_in_prefix": "681278704c759873346ecc51371af5d0c03c2c380699c2406848796d4b003bcc"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/_internal/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "11ff34bf4380e698fc5fb08ef86d13985947dc28bc816592b084bc8e098115c4",
+        "size_in_bytes": 4018,
+        "sha256_in_prefix": "11ff34bf4380e698fc5fb08ef86d13985947dc28bc816592b084bc8e098115c4"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/_internal/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "8653786ab698bfa181d4b0872e7bee7f1aefc5f669da19f537f42d4a4a42cc7e",
+        "size_in_bytes": 6527,
+        "sha256_in_prefix": "8653786ab698bfa181d4b0872e7bee7f1aefc5f669da19f537f42d4a4a42cc7e"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/_internal/_log_encoder/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "d1a83e17af890434a48c4f8391c5c12110058e5c81773d93e6bce23b18b1cb0b",
+        "size_in_bytes": 3267,
+        "sha256_in_prefix": "d1a83e17af890434a48c4f8391c5c12110058e5c81773d93e6bce23b18b1cb0b"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/_internal/_log_encoder/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "d58d9ff1eba7e98c58a0811cac300ebfaa237e6c7be6c768c6c73e6fadf865ac",
+        "size_in_bytes": 4465,
+        "sha256_in_prefix": "d58d9ff1eba7e98c58a0811cac300ebfaa237e6c7be6c768c6c73e6fadf865ac"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/_internal/metrics_encoder/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "0098567c9370c20b58acecebb474f738c3d92d4f36f0e2618836bf617c0ac4fe",
+        "size_in_bytes": 14101,
+        "sha256_in_prefix": "0098567c9370c20b58acecebb474f738c3d92d4f36f0e2618836bf617c0ac4fe"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/_internal/metrics_encoder/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "8841c0ba13b68027a8f1d93514c0971bf01e5e384389fc331c3e2abed6efd758",
+        "size_in_bytes": 14970,
+        "sha256_in_prefix": "8841c0ba13b68027a8f1d93514c0971bf01e5e384389fc331c3e2abed6efd758"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/_internal/trace_encoder/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "9f9509524bd3cec44f0adacc3b547ec0f943e651038744b8683193102e86e7f2",
+        "size_in_bytes": 6222,
+        "sha256_in_prefix": "9f9509524bd3cec44f0adacc3b547ec0f943e651038744b8683193102e86e7f2"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/_internal/trace_encoder/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "a5084cc54aa48e00b73ff368edca766a4efa8b73e3dee559b1eada3898c5e6fa",
+        "size_in_bytes": 9452,
+        "sha256_in_prefix": "a5084cc54aa48e00b73ff368edca766a4efa8b73e3dee559b1eada3898c5e6fa"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/_log_encoder.py",
+        "path_type": "hardlink",
+        "sha256": "a01e6d5154d48ec2ddc967be456ac6f4a0104241058604312bb22b5c43e5b7a5",
+        "size_in_bytes": 202,
+        "sha256_in_prefix": "a01e6d5154d48ec2ddc967be456ac6f4a0104241058604312bb22b5c43e5b7a5"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/metrics_encoder.py",
+        "path_type": "hardlink",
+        "sha256": "f9b7b8f5da49338842a631107890977a46200abb41e0fee6cee1b4421dbbff7c",
+        "size_in_bytes": 211,
+        "sha256_in_prefix": "f9b7b8f5da49338842a631107890977a46200abb41e0fee6cee1b4421dbbff7c"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/py.typed",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/trace_encoder.py",
+        "path_type": "hardlink",
+        "sha256": "8a96602f29ed7a74552d86807416e943109dbdefc250cceb1305de9bab642163",
+        "size_in_bytes": 205,
+        "sha256_in_prefix": "8a96602f29ed7a74552d86807416e943109dbdefc250cceb1305de9bab642163"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/version/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "633365f44e6eb06ac97ab3d93a8e8dcd23b6b7921ddddb13b491eff73f1611dd",
+        "size_in_bytes": 100,
+        "sha256_in_prefix": "633365f44e6eb06ac97ab3d93a8e8dcd23b6b7921ddddb13b491eff73f1611dd"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry/exporter/otlp/proto/common/version/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "1cf13536a8cfce23952b102cf905f2309cc15f1d24081ec0b2119c7cf3ace564",
+        "size_in_bytes": 217,
+        "sha256_in_prefix": "1cf13536a8cfce23952b102cf905f2309cc15f1d24081ec0b2119c7cf3ace564"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry_exporter_otlp_proto_common-1.43.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5,
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry_exporter_otlp_proto_common-1.43.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "dcd7fa2730c52974377135294d10d7d1f741d2473255e7a3618b0a8fe5a5e2d7",
+        "size_in_bytes": 1824,
+        "sha256_in_prefix": "dcd7fa2730c52974377135294d10d7d1f741d2473255e7a3618b0a8fe5a5e2d7"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry_exporter_otlp_proto_common-1.43.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "987e391ea1d9455e3ade7af7a9bd41630a2634c5264772ec9554bb68e29cf7cf",
+        "size_in_bytes": 3060,
+        "sha256_in_prefix": "987e391ea1d9455e3ade7af7a9bd41630a2634c5264772ec9554bb68e29cf7cf"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry_exporter_otlp_proto_common-1.43.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry_exporter_otlp_proto_common-1.43.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "942926c567d0b1273d09f20295879abd37507845f6b683eab9f87d808df91100",
+        "size_in_bytes": 87,
+        "sha256_in_prefix": "942926c567d0b1273d09f20295879abd37507845f6b683eab9f87d808df91100"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry_exporter_otlp_proto_common-1.43.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "e763a1b0ef8d6143be266c44573db8ab07c5f42650aa9790b945456004234656",
+        "size_in_bytes": 126,
+        "sha256_in_prefix": "e763a1b0ef8d6143be266c44573db8ab07c5f42650aa9790b945456004234656"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/opentelemetry_exporter_otlp_proto_common-1.43.0.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "size_in_bytes": 11357,
+        "sha256_in_prefix": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+      }
+    ]
+  },
+  "link": {
+    "source": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/opentelemetry-exporter-otlp-proto-common-1.43.0-py314h06a4308_0",
+    "type": 1
+  },
+  "requested_specs": [
+    "https://repo.anaconda.com/pkgs/main/linux-64::opentelemetry-exporter-otlp-proto-common==1.43.0=py314h06a4308_0"
+  ]
+}

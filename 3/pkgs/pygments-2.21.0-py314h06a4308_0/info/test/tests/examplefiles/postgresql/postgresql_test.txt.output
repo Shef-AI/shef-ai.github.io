@@ -1,0 +1,460 @@
+'CREATE'      Keyword
+' '           Text.Whitespace
+'OR'          Keyword
+' '           Text.Whitespace
+'REPLACE'     Keyword
+' '           Text.Whitespace
+'FUNCTION'    Keyword
+' '           Text.Whitespace
+'something'   Name
+'('           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'RETURNS'     Keyword
+' '           Text.Whitespace
+'int4'        Name.Builtin
+' '           Text.Whitespace
+'AS'          Keyword
+'\n'          Text.Whitespace
+
+'$'           Literal.String
+'x'           Literal.String.Delimiter
+'$'           Literal.String
+'\n'          Text.Whitespace
+
+'BEGIN'       Keyword
+'\n    '      Text.Whitespace
+'RETURN'      Keyword
+' '           Text.Whitespace
+'42'          Literal.Number.Float
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'END'         Keyword
+'\n'          Text.Whitespace
+
+'$'           Literal.String
+'x'           Literal.String.Delimiter
+'$'           Literal.String
+'\n'          Text.Whitespace
+
+'LANGUAGE'    Keyword
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'plpgsql'     Literal.String.Single
+"'"           Literal.String.Single
+';'           Punctuation
+'\n\n'        Text.Whitespace
+
+'CREATE'      Keyword
+' '           Text.Whitespace
+'FUNCTION'    Keyword
+' '           Text.Whitespace
+'pymax'       Name
+' '           Text.Whitespace
+'('           Punctuation
+'a'           Name
+' '           Text.Whitespace
+'integer'     Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'b'           Name
+' '           Text.Whitespace
+'integer'     Name.Builtin
+')'           Punctuation
+'\n  '        Text.Whitespace
+'RETURNS'     Keyword
+' '           Text.Whitespace
+'integer'     Name.Builtin
+'\n'          Text.Whitespace
+
+'AS'          Keyword
+' '           Text.Whitespace
+'$'           Literal.String
+''            Literal.String.Delimiter
+'$'           Literal.String
+'\n'          Text.Whitespace
+
+'  '          Text
+'if'          Keyword
+' '           Text
+'a'           Name
+' '           Text
+'>'           Operator
+' '           Text
+'b'           Name
+':'           Punctuation
+'\n'          Text.Whitespace
+
+'    '        Text
+'return'      Keyword
+' '           Text
+'a'           Name
+'\n'          Text.Whitespace
+
+'  '          Text
+'return'      Keyword
+' '           Text
+'b'           Name
+'\n'          Text.Whitespace
+
+'$'           Literal.String
+''            Literal.String.Delimiter
+'$'           Literal.String
+' '           Text.Whitespace
+'language'    Keyword
+' '           Text.Whitespace
+'plpythonu'   Name
+';'           Punctuation
+'\n\n'        Text.Whitespace
+
+'CREATE'      Keyword
+' '           Text.Whitespace
+'FUNCTION'    Keyword
+' '           Text.Whitespace
+'nested_lexers' Name
+' '           Text.Whitespace
+'('           Punctuation
+'a'           Name
+' '           Text.Whitespace
+'integer'     Name.Builtin
+','           Punctuation
+' '           Text.Whitespace
+'b'           Name
+' '           Text.Whitespace
+'integer'     Name.Builtin
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'$'           Literal.String
+'function'    Literal.String.Delimiter
+'$'           Literal.String
+'\n'          Text.Whitespace
+
+'BEGIN'       Keyword
+'\n    '      Text.Whitespace
+'SELECT'      Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'$1'          Name.Variable
+' '           Text.Whitespace
+'~'           Operator
+' '           Text.Whitespace
+'$'           Literal.String
+'q'           Literal.String.Delimiter
+'$'           Literal.String
+'[\\t\\r\\n\\v\\\\]' Literal.String
+'$'           Literal.String
+'q'           Literal.String.Delimiter
+'$'           Literal.String
+')'           Punctuation
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'END'         Keyword
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'$'           Literal.String
+'function'    Literal.String.Delimiter
+'$'           Literal.String
+'\n'          Text.Whitespace
+
+'LANGUAGE'    Keyword
+' '           Text.Whitespace
+'sql'         Keyword
+';'           Punctuation
+'\n\n'        Text.Whitespace
+
+'CREATE'      Keyword
+' '           Text.Whitespace
+'OR'          Keyword
+' '           Text.Whitespace
+'REPLACE'     Keyword
+' '           Text.Whitespace
+'FUNCTION'    Keyword
+' '           Text.Whitespace
+'measurement_insert_trigger' Name
+'('           Punctuation
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'RETURNS'     Keyword
+' '           Text.Whitespace
+'TRIGGER'     Keyword
+' '           Text.Whitespace
+'AS'          Keyword
+' '           Text.Whitespace
+'$'           Literal.String
+''            Literal.String.Delimiter
+'$'           Literal.String
+'\n'          Text.Whitespace
+
+'BEGIN'       Keyword
+'\n    '      Text.Whitespace
+'<<test>>'    Name.Label
+'\n    '      Text.Whitespace
+'INSERT'      Keyword
+' '           Text.Whitespace
+'INTO'        Keyword
+' '           Text.Whitespace
+'measurement_y2008m01' Name
+' '           Text.Whitespace
+'VALUES'      Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'NEW'         Keyword
+'.'           Literal.Number.Float
+'*'           Operator
+')'           Punctuation
+';'           Punctuation
+'\n    '      Text.Whitespace
+'RETURN'      Keyword
+' '           Text.Whitespace
+'NULL'        Keyword
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'END'         Keyword
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'$'           Literal.String
+''            Literal.String.Delimiter
+'$'           Literal.String
+'\n'          Text.Whitespace
+
+'LANGUAGE'    Keyword
+' '           Text.Whitespace
+'plpgsql'     Name
+';'           Punctuation
+'\n\n'        Text.Whitespace
+
+'-- As returned by pg_dump\n' Comment.Single
+
+'CREATE'      Keyword
+' '           Text.Whitespace
+'FUNCTION'    Keyword
+' '           Text.Whitespace
+'test_function' Name
+'('           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'RETURNS'     Keyword
+' '           Text.Whitespace
+'integer'     Name.Builtin
+'\n    '      Text.Whitespace
+'LANGUAGE'    Keyword
+' '           Text.Whitespace
+'plpgsql'     Name
+' '           Text.Whitespace
+'STABLE'      Keyword
+' '           Text.Whitespace
+'STRICT'      Keyword
+'\n    '      Text.Whitespace
+'AS'          Keyword
+' '           Text.Whitespace
+'$'           Literal.String
+''            Literal.String.Delimiter
+'$'           Literal.String
+'\n'          Text.Whitespace
+
+'begin'       Keyword
+'\n    '      Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'42'          Literal.Number.Float
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'end'         Keyword
+'\n'          Text.Whitespace
+
+'$'           Literal.String
+''            Literal.String.Delimiter
+'$'           Literal.String
+';'           Punctuation
+'\n\n'        Text.Whitespace
+
+'-- Unicode names and strings\n' Comment.Single
+
+'SELECT'      Keyword
+' '           Text.Whitespace
+'U&'          Literal.String.Affix
+"'"           Literal.String.Single
+'\\0441\\043B\\043E\\043D' Literal.String.Single
+"'"           Literal.String.Single
+'\n'          Text.Whitespace
+
+'FROM'        Keyword
+' '           Text.Whitespace
+'U&'          Literal.String.Affix
+'"'           Literal.String.Name
+'\\0441\\043B\\043E\\043D' Literal.String.Name
+'"'           Literal.String.Name
+';'           Punctuation
+'\n\n'        Text.Whitespace
+
+'-- Escapes\n' Comment.Single
+
+'SELECT'      Keyword
+' '           Text.Whitespace
+'E'           Literal.String.Affix
+"'"           Literal.String.Single
+'1\\n2\\n3'   Literal.String.Single
+"'"           Literal.String.Single
+';'           Punctuation
+'\n\n'        Text.Whitespace
+
+'-- DO example from postgresql documentation\n' Comment.Single
+
+'/*'          Comment.Multiline
+'\n '         Comment.Multiline
+'*'           Comment.Multiline
+' PostgreSQL is Copyright © 1996-2016 by the PostgreSQL Global Development Group.\n ' Comment.Multiline
+'*'           Comment.Multiline
+' \n '        Comment.Multiline
+'*'           Comment.Multiline
+' Postgres95 is Copyright © 1994-5 by the Regents of the University of California.\n ' Comment.Multiline
+'*'           Comment.Multiline
+' \n '        Comment.Multiline
+'*'           Comment.Multiline
+' Permission to use, copy, modify, and distribute this software and its\n ' Comment.Multiline
+'*'           Comment.Multiline
+' documentation for any purpose, without fee, and without a written agreement\n ' Comment.Multiline
+'*'           Comment.Multiline
+' is hereby granted, provided that the above copyright notice and this paragraph\n ' Comment.Multiline
+'*'           Comment.Multiline
+' and the following two paragraphs appear in all copies.\n ' Comment.Multiline
+'*'           Comment.Multiline
+' \n '        Comment.Multiline
+'*'           Comment.Multiline
+' IN NO EVENT SHALL THE UNIVERSITY OF CALIFORNIA BE LIABLE TO ANY PARTY FOR\n ' Comment.Multiline
+'*'           Comment.Multiline
+' DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING\n ' Comment.Multiline
+'*'           Comment.Multiline
+' LOST PROFITS, ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION,\n ' Comment.Multiline
+'*'           Comment.Multiline
+' EVEN IF THE UNIVERSITY OF CALIFORNIA HAS BEEN ADVISED OF THE POSSIBILITY OF\n ' Comment.Multiline
+'*'           Comment.Multiline
+' SUCH DAMAGE.\n ' Comment.Multiline
+'*'           Comment.Multiline
+' \n '        Comment.Multiline
+'*'           Comment.Multiline
+' THE UNIVERSITY OF CALIFORNIA SPECIFICALLY DISCLAIMS ANY WARRANTIES, INCLUDING,\n ' Comment.Multiline
+'*'           Comment.Multiline
+' BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\n ' Comment.Multiline
+'*'           Comment.Multiline
+' A PARTICULAR PURPOSE. THE SOFTWARE PROVIDED HEREUNDER IS ON AN "AS-IS" BASIS,\n ' Comment.Multiline
+'*'           Comment.Multiline
+' AND THE UNIVERSITY OF CALIFORNIA HAS NO OBLIGATIONS TO PROVIDE MAINTENANCE,\n ' Comment.Multiline
+'*'           Comment.Multiline
+' SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.\n ' Comment.Multiline
+'*/'          Comment.Multiline
+'\n'          Text.Whitespace
+
+'DO'          Keyword
+' '           Text.Whitespace
+'$'           Literal.String
+''            Literal.String.Delimiter
+'$'           Literal.String
+'DECLARE'     Keyword
+' '           Text.Whitespace
+'r'           Name
+' '           Text.Whitespace
+'record'      Name.Builtin
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'BEGIN'       Keyword
+'\n    '      Text.Whitespace
+'FOR'         Keyword
+' '           Text.Whitespace
+'r'           Name
+' '           Text.Whitespace
+'IN'          Keyword
+' '           Text.Whitespace
+'SELECT'      Keyword
+' '           Text.Whitespace
+'table_schema' Name
+','           Punctuation
+' '           Text.Whitespace
+'table_name'  Name
+' '           Text.Whitespace
+'FROM'        Keyword
+' '           Text.Whitespace
+'information_schema' Name
+'.'           Literal.Number.Float
+'tables'      Keyword
+'\n             ' Text.Whitespace
+'WHERE'       Keyword
+' '           Text.Whitespace
+'table_type'  Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'VIEW'        Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'AND'         Keyword
+' '           Text.Whitespace
+'table_schema' Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'public'      Literal.String.Single
+"'"           Literal.String.Single
+'\n    '      Text.Whitespace
+'LOOP'        Keyword
+'\n        '  Text.Whitespace
+'EXECUTE'     Keyword
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'GRANT ALL ON ' Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'||'          Operator
+' '           Text.Whitespace
+'quote_ident' Name
+'('           Punctuation
+'r'           Name
+'.'           Literal.Number.Float
+'table_schema' Name
+')'           Punctuation
+' '           Text.Whitespace
+'||'          Operator
+' '           Text.Whitespace
+"'"           Literal.String.Single
+'.'           Literal.String.Single
+"'"           Literal.String.Single
+' '           Text.Whitespace
+'||'          Operator
+' '           Text.Whitespace
+'quote_ident' Name
+'('           Punctuation
+'r'           Name
+'.'           Literal.Number.Float
+'table_name'  Name
+')'           Punctuation
+' '           Text.Whitespace
+'||'          Operator
+' '           Text.Whitespace
+"'"           Literal.String.Single
+' TO webuser' Literal.String.Single
+"'"           Literal.String.Single
+';'           Punctuation
+'\n    '      Text.Whitespace
+'END'         Keyword
+' '           Text.Whitespace
+'LOOP'        Keyword
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'END'         Keyword
+'$'           Literal.String
+''            Literal.String.Delimiter
+'$'           Literal.String
+';'           Punctuation
+'\n'          Text.Whitespace

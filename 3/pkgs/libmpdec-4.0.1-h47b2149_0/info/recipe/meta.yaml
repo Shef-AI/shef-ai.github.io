@@ -1,0 +1,70 @@
+# This file created by conda-build 26.3.0
+# ------------------------------------------------
+
+package:
+  name: libmpdec
+  version: 4.0.1
+source:
+  url: https://www.bytereef.org/software/mpdecimal/releases/mpdecimal-4.0.1.tar.gz
+  sha256: 96d33abb4bb0070c7be0fed4246cd38416188325f820468214471938545b1ac8
+  patches:
+    - fix-dll-name.diff
+build:
+  number: '0'
+  noarch: false
+  noarch_python: false
+  python_version_independent: false
+  string: h47b2149_0
+requirements:
+  build:
+    - _openmp_mutex 5.1 52_gnu
+    - binutils_impl_linux-64 2.44 h78f17ca_3
+    - binutils_linux-64 2.44 hc03a8fd_3
+    - gcc_impl_linux-64 14.3.0 h4943218_4
+    - gcc_linux-64 14.3.0 hda73cce_14
+    - kernel-headers_linux-64 4.18.0 h3108a97_1
+    - ld_impl_linux-64 2.44 h9e0c5a2_3
+    - libgcc 15.2.0 h69a1729_8
+    - libgcc-devel_linux-64 14.3.0 he7458c1_104
+    - libgomp 15.2.0 h4751f2c_8
+    - libsanitizer 14.3.0 hd4faa28_4
+    - libstdcxx 15.2.0 h39759b7_8
+    - sysroot_linux-64 2.28 h3108a97_1
+    - tzdata 2026b he532380_0
+  host:
+    - _openmp_mutex 5.1 52_gnu
+    - libgcc 15.2.0 h69a1729_8
+  run:
+    - __glibc >=2.28,<3.0.a0
+    - libgcc >=14
+test:
+  commands:
+    - test -f ${PREFIX}/lib/libmpdec.so.4
+    - test -f ${PREFIX}/lib/libmpdec.so.4.0.1
+about:
+  home: https://www.bytereef.org/mpdecimal/index.html
+  license: BSD-2-Clause
+  license_file: COPYRIGHT.txt
+  license_family: BSD
+  summary: A package for correctly-rounded arbitrary precision decimal floating point
+    arithmetic
+  description: 'libmpdec is a fast C library for correctly-rounded arbitrary precision
+    decimal floating point
+
+    arithmetic. It is a complete implementation of Mike Cowlishaw/IBM''s
+
+    General Decimal Arithmetic Specification.
+
+    '
+  doc_url: https://www.bytereef.org/mpdecimal/index.html
+  dev_url: https://www.bytereef.org/mpdecimal/download.html
+extra:
+  recipe-maintainers:
+    - isuruf
+  final: true
+  copy_test_source_files: true
+  remote_url: https://github.com/AnacondaRecipes/mpdecimal-feedstock
+  sha: 8c3ae1959f715d7e8e8b569376cec7532d16ffd0
+  task_id: FtzpIlz5TB6__J_wxUZ6Lw
+  task_run_id: '0'
+  pbp_graph_uuid: 7f98136c-bc72-44ce-b2b2-8d20d4671d30

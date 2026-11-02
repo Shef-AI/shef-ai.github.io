@@ -1,0 +1,75 @@
+{% set name = "tqdm" %}
+{% set version = "4.70.0" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  - url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+    sha256: 55b0b0dbd97462d06ebee91e4dac24ed4d4702be82b24f07e6c1d27e08cea220
+
+build:
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
+  entry_points:
+    - tqdm = tqdm.cli:main
+  skip: true  # [py<38]
+
+requirements:
+  host:
+    - python
+    - pip
+    - setuptools_scm >=3.4
+    - setuptools >=42
+    - toml
+    - wheel
+  run:
+    - python
+    - colorama  # [win]
+  run_constrained:
+    - ipywidgets >=6
+
+# E   FileNotFoundError: [WinError 2] The system cannot find the file specified
+# test_pandas_leave can raise AssertionError randomly on different platforms
+{% set deselect_tests = "test_pandas_leave" %}
+{% set deselect_tests = deselect_tests + " or tests_perf" %}
+{% set deselect_tests = deselect_tests + " or test_pipes" %}  # [win]
+
+test:
+  requires:
+    - dask-core
+    - pandas
+    - numpy
+    - pip
+    - pytest >=6
+    - pytest-timeout
+    - pytest-xdist
+    - pytest-asyncio >=0.24
+    - rich
+    - ripgrep
+  source_files:
+    - tests
+    - pyproject.toml
+  imports:
+    - tqdm
+  commands:
+    - pip check
+    - tqdm --help
+    - tqdm -v | rg {{ version }}
+    - pytest -vv -k "not ({{ deselect_tests }})" tests/ -W ignore::FutureWarning
+
+about:
+  home: https://tqdm.github.io
+  license: MPL-2.0 AND MIT
+  license_family: MOZILLA
+  license_file: LICENCE
+  summary: A Fast, Extensible Progress Meter
+  description: A Fast, Extensible Progress Bar for Python and CLI
+  dev_url: https://github.com/tqdm/tqdm
+  doc_url: https://tqdm.github.io
+
+extra:
+  recipe-maintainers:
+    - casperdcl
+    - pmlandwehr

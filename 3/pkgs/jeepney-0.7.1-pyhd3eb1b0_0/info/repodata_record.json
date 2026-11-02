@@ -1,0 +1,22 @@
+{
+  "build": "pyhd3eb1b0_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch/",
+  "constrains": [],
+  "depends": [
+    "python >=3.6"
+  ],
+  "fn": "jeepney-0.7.1-pyhd3eb1b0_0.conda",
+  "license": "MIT",
+  "license_family": "MIT",
+  "md5": "f115ef0af90b59f35ef56743955979a4",
+  "name": "jeepney",
+  "noarch": "python",
+  "package_type": "noarch_python",
+  "sha256": "a74312540427eb9b5b613afe7fdfbd1b271530e177c94d186e2aeea907e50522",
+  "size": 39004,
+  "subdir": "noarch",
+  "timestamp": 1627537099000,
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/jeepney-0.7.1-pyhd3eb1b0_0.conda",
+  "version": "0.7.1"
+}

@@ -1,0 +1,6 @@
+'end'         Name
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+'2'           Literal.Number.Integer
+'\n'          Text.Whitespace

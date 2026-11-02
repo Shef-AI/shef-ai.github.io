@@ -1,0 +1,64 @@
+From e2b90685da16e39127bf1bd77b816c3774751db5 Mon Sep 17 00:00:00 2001
+From: Eric Lundby <Eric.Lundby@gmail.com>
+Date: Thu, 8 Jan 2026 09:41:15 -0700
+Subject: [PATCH 1/1] Fix macOS ARM64 TLS linker error for shared library builds
+
+On macOS ARM64, referencing thread-local storage (TLS) variables across
+dynamic library boundaries causes linker errors:
+
+  ld: illegal thread local variable reference to regular symbol
+  __ZN6google8protobuf8internal15ThreadSafeArena13thread_cache_E
+
+This occurs because Mach-O has restrictions on how TLS symbols can be
+referenced from other dylibs. The inline thread_cache() accessor in the
+header causes external code to directly reference the TLS variable,
+triggering the linker error.
+
+Fix this by moving the thread_cache() implementation to arena.cc, making
+it a non-inline function. This ensures all TLS references occur within
+libprotobuf.dylib itself, while external callers use a normal function
+call to access the thread-local data.
+
+This is analogous to the existing PROTOBUF_USE_DLLS && _WIN32 path which
+uses a similar pattern to work around Windows DLL TLS limitations.
+
+---
+ src/google/protobuf/arena.cc            | 7 ++++++-
+ src/google/protobuf/thread_safe_arena.h | 2 +-
+ 2 files changed, 7 insertions(+), 2 deletions(-)
+
+diff --git a/src/google/protobuf/arena.cc b/src/google/protobuf/arena.cc
+index 284b8fb00..d2dd82673 100644
+--- a/src/google/protobuf/arena.cc
++++ b/src/google/protobuf/arena.cc
+@@ -553,8 +553,13 @@ ThreadSafeArena::ThreadCache& ThreadSafeArena::thread_cache() {
+   return thread_cache;
+ }
+ #else
+-PROTOBUF_CONSTINIT PROTOBUF_THREAD_LOCAL
++// Static member definition - must be in .cc file for macOS dylib TLS compatibility
++PROTOBUF_CONSTINIT PROTOBUF_THREAD_LOCAL 
+     ThreadSafeArena::ThreadCache ThreadSafeArena::thread_cache_;
++// Non-inline implementation to avoid cross-dylib TLS reference issues on macOS
++ThreadSafeArena::ThreadCache& ThreadSafeArena::thread_cache() {
++  return thread_cache_;
++}
+ #endif
+ 
+ ThreadSafeArena::ThreadSafeArena() : first_arena_(*this) { Init(); }
+diff --git a/src/google/protobuf/thread_safe_arena.h b/src/google/protobuf/thread_safe_arena.h
+index 4f976eaa0..e7981dadc 100644
+--- a/src/google/protobuf/thread_safe_arena.h
++++ b/src/google/protobuf/thread_safe_arena.h
+@@ -258,7 +258,7 @@ class PROTOBUF_EXPORT ThreadSafeArena {
+   static ThreadCache& thread_cache();
+ #else
+   PROTOBUF_CONSTINIT static PROTOBUF_THREAD_LOCAL ThreadCache thread_cache_;
+-  static ThreadCache& thread_cache() { return thread_cache_; }
++  static ThreadCache& thread_cache();  // Defined in arena.cc, not inline
+ #endif
+ 
+  public:
+-- 
+2.50.1 (Apple Git-155)
+

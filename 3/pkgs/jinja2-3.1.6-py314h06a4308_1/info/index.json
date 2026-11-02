@@ -1,0 +1,20 @@
+{
+  "arch": "x86_64",
+  "build": "py314h06a4308_1",
+  "build_number": 1,
+  "constrains": [
+    "babel >=2.7"
+  ],
+  "depends": [
+    "markupsafe >=2.0",
+    "python >=3.14,<3.15.0a0",
+    "python_abi 3.14.* *_cp314"
+  ],
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "name": "jinja2",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1787826229673,
+  "version": "3.1.6"
+}

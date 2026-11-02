@@ -1,0 +1,12 @@
+prefix=/home/task_179256651125846/croot/abseil-split_1792566589052/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol
+exec_prefix=${prefix}
+libdir=/home/task_179256651125846/croot/abseil-split_1792566589052/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol/lib
+includedir=/home/task_179256651125846/croot/abseil-split_1792566589052/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol/include
+
+Name: absl_str_format_internal
+Description: Abseil str_format_internal library
+URL: https://abseil.io/
+Version: 20260526
+Requires: absl_bits = 20260526, absl_strings = 20260526, absl_config = 20260526, absl_core_headers = 20260526, absl_fixed_array = 20260526, absl_inlined_vector = 20260526, absl_numeric_representation = 20260526, absl_type_traits = 20260526, absl_utility = 20260526, absl_int128 = 20260526, absl_span = 20260526, absl_strings_internal = 20260526
+Libs: -L${libdir}  -labsl_str_format_internal 
+Cflags: -I${includedir} -DNOMINMAX

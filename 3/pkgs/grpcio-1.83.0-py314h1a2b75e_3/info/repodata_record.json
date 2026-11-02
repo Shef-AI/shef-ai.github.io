@@ -1,0 +1,30 @@
+{
+  "arch": "x86_64",
+  "build": "py314h1a2b75e_3",
+  "build_number": 3,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.28,<3.0.a0",
+    "libabseil * cxx17*",
+    "libabseil >=20260526.0,<20260527.0a0",
+    "libgcc >=14",
+    "libgrpc 1.83.0 h5409774_3",
+    "libstdcxx >=14",
+    "python >=3.14,<3.15.0a0",
+    "python_abi 3.14.* *_cp314",
+    "typing-extensions >=4.12.2,<5"
+  ],
+  "fn": "grpcio-1.83.0-py314h1a2b75e_3.conda",
+  "license": "Apache-2.0",
+  "license_family": "APACHE",
+  "md5": "768dd7aadc55cf556420ae40b75b5062",
+  "name": "grpcio",
+  "platform": "linux",
+  "sha256": "5bc6f30c0a56943e86bfae3bbe258bbdfbf2e59246df98faf557f77c121b0172",
+  "size": 1063607,
+  "subdir": "linux-64",
+  "timestamp": 1792713070000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/grpcio-1.83.0-py314h1a2b75e_3.conda",
+  "version": "1.83.0"
+}

@@ -1,0 +1,65 @@
+{% set name = "anaconda-channel-guide" %}
+{% set version = "0.2.0" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://github.com/anaconda/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: b9689e2767f12f0e5ff21a025754f68e768acf129c151663f0140fd86d7e2dcc
+
+build:
+  number: 0
+  skip: true  # [py<310]
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python
+    - pip
+    - hatchling >=1.12.2
+    - hatch-vcs >=0.2.0
+  run:
+    - python
+    - conda >=26.7.0
+    - requests
+    - anaconda-auth >=0.15.1
+    # Not listed in upstream recipe, but was requested by the maintainer
+    # "It's a legal dependency, not a technical dependency."
+    - conda-anaconda-tos
+
+test:
+  source_files:
+    - tests
+  imports:
+    - anaconda_channel_guide
+    - anaconda_channel_guide.plugin
+    - anaconda_channel_guide.box
+    - anaconda_channel_guide.hooks
+  requires:
+    - pip
+    - pytest
+    - pytest-mock
+    - conda
+  commands:
+    - pip check
+    - python -c "from anaconda_channel_guide import __version__; assert __version__ == \"{{ version }}\""
+    - python -c "from importlib.metadata import version; assert version('{{ name }}') == '{{ version }}'"
+    - pytest -v tests
+
+about:
+  home: https://github.com/anaconda/anaconda-channel-guide
+  summary: Conda plugin that guides users to main-x channel packages
+  description: |
+    A plug-in that checks whether a package is available on main-x when
+    unavailable in other channels.
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
+  dev_url: https://github.com/anaconda/anaconda-channel-guide
+  doc_url: https://github.com/anaconda/anaconda-channel-guide
+
+extra:
+  recipe-maintainers:
+    - psteyer

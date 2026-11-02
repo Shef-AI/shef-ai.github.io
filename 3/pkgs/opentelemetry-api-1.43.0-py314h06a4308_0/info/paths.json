@@ -1,0 +1,503 @@
+{
+  "paths": [
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/_events/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "5f598a39709a2aedf1762c95ab6484695aa110dd12f7975e17a68f76f2f23e8c",
+      "size_in_bytes": 7799
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/_events/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "459169b4749b9eb7038048f4a9cec17d925156e179eb411af4d00a0877cc0791",
+      "size_in_bytes": 11850
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/_events/py.typed",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/_logs/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "7567ca875c5b49d7e0ac6f68b14f547dd74b5562102a25e3d525a18f0667ea04",
+      "size_in_bytes": 1366
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/_logs/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "14d4fb69bf7d0eceb122f3e4d56dee35b0b2b1ac6b8b11783b684a49170ca693",
+      "size_in_bytes": 1390
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/_logs/_internal/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "7b92e5cfe8472f9500bb57ce7f424649834fa5e5e7e2ca22fe3cb31919ce7501",
+      "size_in_bytes": 14607
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/_logs/_internal/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "5ac013c30b3bcd859c0e4983723a9c1f5920230c9d01e06e5c12ce40ac03ef73",
+      "size_in_bytes": 19301
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/_logs/py.typed",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/_logs/severity/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "19b1b0ae360372e249cf15c3000e265420cbeaad6101d1843e4ce28be4292f9b",
+      "size_in_bytes": 1007
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/_logs/severity/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "9757b2e411c6ee7a4c505c154a55a98c4d6c148224fa2941bef3553b981d8d98",
+      "size_in_bytes": 1357
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/attributes/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "f230bcd570dc975da1134bf83e49cb8c51b659058b2aaaec4d7dca61ad62bf81",
+      "size_in_bytes": 12885
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/attributes/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "2af91c3841b67b461e27ddc17b7e682d1173633e514b00435ef749b6d3045b0e",
+      "size_in_bytes": 16184
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/attributes/py.typed",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/baggage/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "079e6b73c31c912bf65d4d6832aa74e67364291a502beb7e8afd024cfe0a5e47",
+      "size_in_bytes": 3485
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/baggage/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "ffe7e9a55cd5640aa7c21687679834f4800f3b794b1f8da508b8faee76dd7234",
+      "size_in_bytes": 6207
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/baggage/propagation/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "93ebce64118698c9374a73f6262d19cf060373419193b4a98f8d495fd3998f80",
+      "size_in_bytes": 5600
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/baggage/propagation/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "7007a418dac4112eec2b350fb48010bf4c1dc0dabec7e31cef35c92962af4909",
+      "size_in_bytes": 8501
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/baggage/py.typed",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/context/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "fc417f6f93b58948458f4f0c1478f6ee9aef27a611821cc3591018ee40921948",
+      "size_in_bytes": 4820
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/context/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "71eefd2db20c4dd28fc898504515dfd00dbc72e60f17dbffe1dfdd408593f6ee",
+      "size_in_bytes": 6353
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/context/__pycache__/context.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "4fdc6c940832ecb09ae28d2a86be41f020987127fecb7b81a405dcca64375368",
+      "size_in_bytes": 2672
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/context/__pycache__/contextvars_context.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "2e1d665495af515cc3b54d9330b6067f6dbb328c72368f8b2722ea8e88db73d1",
+      "size_in_bytes": 2758
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/context/context.py",
+      "path_type": "hardlink",
+      "sha256": "179366df7ea53b39f70664b23499ea3b6f6d6b452bb917331462ede3981277ff",
+      "size_in_bytes": 1185
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/context/contextvars_context.py",
+      "path_type": "hardlink",
+      "sha256": "8c41dcec284d143de80dfe2cd045f1b6d24b976fb8ad2c18f87f0900655a1512",
+      "size_in_bytes": 1321
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/context/py.typed",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/environment_variables/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "23fb330709df211be3f55f9a4a584a2881942150e0d8ad856a2a949b30f61716",
+      "size_in_bytes": 1987
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/environment_variables/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "44966f1f889816f727f198f09acc2646385bcfc8cd8b4c6823f2af80f701dd01",
+      "size_in_bytes": 718
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/environment_variables/py.typed",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/metrics/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "4466bf1d25fa7401b4777bb8e29a3a3cb02806817b68b237c00bacef0fccbdc5",
+      "size_in_bytes": 3068
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/metrics/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "7564e32346476fb8fd8c438961995f5cf1c8c236b7b9c48892671f6de6487301",
+      "size_in_bytes": 2479
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/metrics/_internal/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "1c8ccb342439e29c4f28d801acd6ddc3ae2a32e1524afd2d3c121f3820dc1161",
+      "size_in_bytes": 30085
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/metrics/_internal/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "408e2dfdee30ee2819f47712c2744bb8a0a2ad8aafa61bd375c78aa8743e8053",
+      "size_in_bytes": 39028
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/metrics/_internal/__pycache__/instrument.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "7a9ef15e8191e04195edbfa95d888e41ca02a3c02dd52ce8097c638d6887e5ad",
+      "size_in_bytes": 28648
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/metrics/_internal/__pycache__/observation.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "b657a8578a6347414baa0a7872e36e547a18bc4359285f3b83875c38aafd983b",
+      "size_in_bytes": 3600
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/metrics/_internal/instrument.py",
+      "path_type": "hardlink",
+      "sha256": "9ebe8aaf6961d43046151c0aed2aa6b87142f3dd62ea5a5a56b3c56474d93bff",
+      "size_in_bytes": 16235
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/metrics/_internal/observation.py",
+      "path_type": "hardlink",
+      "sha256": "fdc1edfc45b4b54334aa86d787fd93c95c453303f73336f2d9f0a60b50425951",
+      "size_in_bytes": 1384
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/metrics/py.typed",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/propagate/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "cbdd89305b58ce89e56ce8fba7f7baa40738b1a58cf681e43aa6c538e83e3511",
+      "size_in_bytes": 6482
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/propagate/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "b6b862a86d6fca427ed980fff131b570d21e684f270d3980d07ffdab9c53a95f",
+      "size_in_bytes": 8064
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/propagate/py.typed",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/propagators/__pycache__/_envcarrier.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "0c0fb147ea7ff3fe4f6a9a701ca83b9e86c70f1a53722eee0d210979d24d6f2c",
+      "size_in_bytes": 6170
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/propagators/__pycache__/composite.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "cabce6180294db1dbeb3e594fea16c3fb6ef2b4e048d9e4d5770c6dea32c8ad7",
+      "size_in_bytes": 4698
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/propagators/__pycache__/textmap.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "a490e8a3cd3832ce491e6148acbfee74a47c62687332a8844e64b5b7644011e4",
+      "size_in_bytes": 9831
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/propagators/_envcarrier.py",
+      "path_type": "hardlink",
+      "sha256": "c95ba4c48bfbde556b44c260138687f414db5090f3ccf9ebb6ab6964026a736e",
+      "size_in_bytes": 3427
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/propagators/composite.py",
+      "path_type": "hardlink",
+      "sha256": "d6d65333d8ddc0468aaf5d739d891e31f209d197d9fa08e28d43c31bddbc6678",
+      "size_in_bytes": 2744
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/propagators/py.typed",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/propagators/textmap.py",
+      "path_type": "hardlink",
+      "sha256": "f49df13e3ecdb86960f5056deaefb4cbe77e1ed63838d17187dd14f016b2ab5e",
+      "size_in_bytes": 6031
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/py.typed",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/trace/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "ca3d9d8cd1ec49c0fa2a98b49dbccbef205a33710cc50fa40b96d9d480e75317",
+      "size_in_bytes": 23300
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/trace/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "b13dc02d469ec1f1f478ad7446476690586ce7c79686ef991aaa4d5599695cab",
+      "size_in_bytes": 28759
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/trace/__pycache__/span.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "ed4a3aaa029b5ba75ec69e5a74beacb2080a779a47c3a8968388b3f77348018c",
+      "size_in_bytes": 32533
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/trace/__pycache__/status.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "9b68dcdc9fc92bb643ce364b60bd0d689c9a9844507cfd28fcebe572baf915e0",
+      "size_in_bytes": 3729
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/trace/propagation/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "7f064ececa407f1a421113a4a7f82b73bec72a95ca6f1a7013940db0bbb2495d",
+      "size_in_bytes": 1136
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/trace/propagation/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "3ee4bd30db224377be2ce1a2a555c8c75e52a648913abf3a43a3591320a9efad",
+      "size_in_bytes": 1822
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/trace/propagation/__pycache__/tracecontext.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "381da319c3f62cefc1f60c24fced3ab8da1b74c751e2b456a97a7ec27393cac5",
+      "size_in_bytes": 5535
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/trace/propagation/tracecontext.py",
+      "path_type": "hardlink",
+      "sha256": "94fef4c502e2a56e6a4eb02598a821a387e40f17c54a7771bf1b9652cabf8faa",
+      "size_in_bytes": 3629
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/trace/py.typed",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/trace/span.py",
+      "path_type": "hardlink",
+      "sha256": "37bf9af0b92f242128e51c76c4b89cad16de2858ab6bb7b53b1bd29a7ae77464",
+      "size_in_bytes": 19734
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/trace/status.py",
+      "path_type": "hardlink",
+      "sha256": "b3c1c54e31e289b692b945ffad53615fb4167c4356003c32cc14c01d1c7358ec",
+      "size_in_bytes": 1997
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/util/__pycache__/_decorator.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "63d8ef2a71e034015e8c0f0ff3806330ef5bbbd36c396ed3606f2d54cde3964c",
+      "size_in_bytes": 4648
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/util/__pycache__/_importlib_metadata.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "893aef84f0b81d22d67dd56d25b66b2fae82bce6e54e094823493ab6603428c1",
+      "size_in_bytes": 2703
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/util/__pycache__/_once.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "2f4ceda4e801fcd7996f7ad051191423fb24c140960760684ef4917214a9166d",
+      "size_in_bytes": 1896
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/util/__pycache__/_providers.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "d05f7c87ee4cc972e5a4cf4893cff7e45569c6c817fa8c801d07310209ecdd02",
+      "size_in_bytes": 1627
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/util/__pycache__/re.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "539f37294044ad4615a873c51c33fd4fdebedba3fce09e1101efc6ffec3a388b",
+      "size_in_bytes": 4130
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/util/__pycache__/types.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "a14daf0d63b66ee306d87ac083f933ff04cb303f1ad83914041cce8e2020cc35",
+      "size_in_bytes": 1341
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/util/_decorator.py",
+      "path_type": "hardlink",
+      "sha256": "b6816ab8de35b9e58199d965b728e1d119e8da06e11967f36d0e5b351cccf7c4",
+      "size_in_bytes": 2991
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/util/_importlib_metadata.py",
+      "path_type": "hardlink",
+      "sha256": "fbed5c36f966722d7a14cbb2ce2b9ff15546f63ad46b6f181c99f677decb0a10",
+      "size_in_bytes": 1847
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/util/_once.py",
+      "path_type": "hardlink",
+      "sha256": "11211cea9c3c780219d84315d99284a5bc9fcc5e385261a1916e36aa78ae6ba8",
+      "size_in_bytes": 941
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/util/_providers.py",
+      "path_type": "hardlink",
+      "sha256": "e328f1423c0f203af75046736de2b8978f27e4a0683178b9f0ab044534e7d541",
+      "size_in_bytes": 1323
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/util/py.typed",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/util/re.py",
+      "path_type": "hardlink",
+      "sha256": "869e408036b129ac4a083023f6a47cb1bda9a70bbaa9479b78027ad8fd3a53c8",
+      "size_in_bytes": 4186
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/util/types.py",
+      "path_type": "hardlink",
+      "sha256": "f33c6ca209ab6b565c73e11ff33131a63f2d68dc93f16d227db167fb63697f8e",
+      "size_in_bytes": 1053
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/version/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "633365f44e6eb06ac97ab3d93a8e8dcd23b6b7921ddddb13b491eff73f1611dd",
+      "size_in_bytes": 100
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/version/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "fa990215bf3c298a787955f9e087d29c07c4d966c55dd63321862e9c87eda330",
+      "size_in_bytes": 190
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry/version/py.typed",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry_api-1.43.0.dist-info/INSTALLER",
+      "path_type": "hardlink",
+      "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+      "size_in_bytes": 5
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry_api-1.43.0.dist-info/METADATA",
+      "path_type": "hardlink",
+      "sha256": "0ed01d6d3051102fe6c09b8a109f791377559bcc404cbafd4a4ed3eab23ff492",
+      "size_in_bytes": 1411
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry_api-1.43.0.dist-info/RECORD",
+      "path_type": "hardlink",
+      "sha256": "7befe6a5958b5c98c739508cf65ae0d4d212f8a43fd1ec81535e897aeb9307c0",
+      "size_in_bytes": 6827
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry_api-1.43.0.dist-info/REQUESTED",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry_api-1.43.0.dist-info/WHEEL",
+      "path_type": "hardlink",
+      "sha256": "942926c567d0b1273d09f20295879abd37507845f6b683eab9f87d808df91100",
+      "size_in_bytes": 87
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry_api-1.43.0.dist-info/direct_url.json",
+      "path_type": "hardlink",
+      "sha256": "2cc99afcf716aa213df510e8245d55651824e79526158a0009cb14cf54f40916",
+      "size_in_bytes": 103
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry_api-1.43.0.dist-info/entry_points.txt",
+      "path_type": "hardlink",
+      "sha256": "7713ead1845b4034b097c42447e23d037f2b6db7ca406e61dae3458e9bd4e95e",
+      "size_in_bytes": 573
+    },
+    {
+      "_path": "lib/python3.14/site-packages/opentelemetry_api-1.43.0.dist-info/licenses/LICENSE",
+      "path_type": "hardlink",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "size_in_bytes": 11357
+    }
+  ],
+  "paths_version": 1
+}

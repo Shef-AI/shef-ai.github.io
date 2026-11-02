@@ -1,0 +1,95 @@
+{
+  "paths": [
+    {
+      "_path": "bin/mdb_copy",
+      "path_type": "hardlink",
+      "sha256": "047d1c8ed6c977a17abd414b6a25f14eea86d3df5e63f63d100070c47746a289",
+      "size_in_bytes": 372808
+    },
+    {
+      "_path": "bin/mdb_drop",
+      "path_type": "hardlink",
+      "sha256": "7e428f29e36417cc6e8d79b16b9502739354c2e31425e4ef33debd71ea07a6c0",
+      "size_in_bytes": 374896
+    },
+    {
+      "_path": "bin/mdb_dump",
+      "path_type": "hardlink",
+      "sha256": "96d86deacf7e1dc7b7d740178f96aad20674eb034f3ec27d06dd4c192f3fcaac",
+      "size_in_bytes": 388968
+    },
+    {
+      "_path": "bin/mdb_load",
+      "path_type": "hardlink",
+      "sha256": "8be11aa700af928fe4f4bdf6473845750dccc692b55236783b9b7af0dee5c3a9",
+      "size_in_bytes": 397512
+    },
+    {
+      "_path": "bin/mdb_stat",
+      "path_type": "hardlink",
+      "sha256": "18ec1ee1cc4a2390f0a05754809fd042fc826751503972bf3d0a83822e52c58c",
+      "size_in_bytes": 381384
+    },
+    {
+      "_path": "include/lmdb.h",
+      "path_type": "hardlink",
+      "sha256": "b9267c09ade0147e224316d0195c8ee3e9b8cc130ba196fad020bccb7b1cd043",
+      "size_in_bytes": 88304
+    },
+    {
+      "_path": "lib/liblmdb.a",
+      "path_type": "hardlink",
+      "sha256": "79810aa750755ac6077e2a87ed6f65739bba0358cefc8954a98043f164306810",
+      "size_in_bytes": 419576
+    },
+    {
+      "_path": "lib/liblmdb.so",
+      "path_type": "softlink",
+      "sha256": "8ca1ece6236343242fb97850c26bd9dc0fc461450e6c8f7a0170aaab35dc21f8",
+      "size_in_bytes": 364424
+    },
+    {
+      "_path": "lib/liblmdb.so.1",
+      "path_type": "softlink",
+      "sha256": "8ca1ece6236343242fb97850c26bd9dc0fc461450e6c8f7a0170aaab35dc21f8",
+      "size_in_bytes": 364424
+    },
+    {
+      "_path": "lib/liblmdb.so.1.0",
+      "path_type": "hardlink",
+      "sha256": "8ca1ece6236343242fb97850c26bd9dc0fc461450e6c8f7a0170aaab35dc21f8",
+      "size_in_bytes": 364424
+    },
+    {
+      "_path": "share/man/man1/mdb_copy.1",
+      "path_type": "hardlink",
+      "sha256": "c1d595f454a512ac2b6106dd5889831a589e6572d00239748e40cf21b161ab64",
+      "size_in_bytes": 2225
+    },
+    {
+      "_path": "share/man/man1/mdb_drop.1",
+      "path_type": "hardlink",
+      "sha256": "275312078df8720944f63607531fa37a29989e1d1873880d6080c6ced934d4e0",
+      "size_in_bytes": 1534
+    },
+    {
+      "_path": "share/man/man1/mdb_dump.1",
+      "path_type": "hardlink",
+      "sha256": "d1bf08c82c91b9bcd2cb43acd0e26e2032c14bcf47acd550208f329e078a0264",
+      "size_in_bytes": 3390
+    },
+    {
+      "_path": "share/man/man1/mdb_load.1",
+      "path_type": "hardlink",
+      "sha256": "54d6c88dc5ca2ffccb64e571a21002d3ddac27f4e8c269715f32731d81326817",
+      "size_in_bytes": 3447
+    },
+    {
+      "_path": "share/man/man1/mdb_stat.1",
+      "path_type": "hardlink",
+      "sha256": "c47a04873c6fd3c15c10b353c085bc7119c1a8641237f98eee6b4d6c8cd0587d",
+      "size_in_bytes": 2475
+    }
+  ],
+  "paths_version": 1
+}

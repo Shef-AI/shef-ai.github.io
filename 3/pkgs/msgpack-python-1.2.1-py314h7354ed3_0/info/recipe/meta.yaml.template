@@ -1,0 +1,64 @@
+{% set name = "msgpack-python" %}
+{% set version = "1.2.1" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name.split('-')[0] }}/{{ name.split('-')[0] }}-{{ version }}.tar.gz
+  sha256: 04c721c2c7448767e9e3f2520a475663d8ee0f09c31890f6d2bd70fd636a9647
+
+build:
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  skip: true  # [py<310]
+
+requirements:
+  build:
+    - {{ stdlib("c") }}
+    - {{ compiler("c") }}
+    - {{ compiler("cxx") }}
+  host:
+    - pip
+    - python
+    - cython >=3.2.5
+    - setuptools 78.1.1
+  run:
+    - python
+
+test:
+  source_files:
+    - test
+  imports:
+    - msgpack
+    - msgpack.exceptions
+    - msgpack.ext
+  commands:
+    - pip check
+    - python -c "from importlib.metadata import version; assert(version('msgpack')=='{{ version }}')"
+    - pytest -v test
+  requires:
+    - pip
+    - pytest >=9.0.3
+
+about:
+  home: https://msgpack.org
+  summary: MessagePack (de)serializer
+  license: Apache-2.0
+  license_file: COPYING
+  license_family: Apache
+  description: |
+    MessagePack is an efficient binary serialization format.
+    It lets you exchange data among multiple languages like JSON.
+    But it's faster and smaller. Small integers are encoded into a
+    single byte, and typical short strings require only one extra
+    byte in addition to the strings themselves.
+  dev_url: https://github.com/msgpack/msgpack-python
+  doc_url: https://github.com/msgpack/msgpack/blob/master/spec.md
+
+extra:
+  recipe-maintainers:
+    - jakirkham
+    - ocefpaf
+    - carlodri

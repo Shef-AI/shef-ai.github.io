@@ -1,0 +1,28 @@
+{
+  "arch": "x86_64",
+  "build": "h8a8b077_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.28,<3.0.a0",
+    "libabseil * cxx17*",
+    "libabseil >=20260526.0,<20260527.0a0",
+    "libgcc >=14",
+    "libstdcxx >=14",
+    "libzlib >=1.3.2,<2.0a0",
+    "zlib"
+  ],
+  "fn": "libprotobuf-7.35.1-h8a8b077_1.conda",
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "md5": "bbd338e2d8b14cb641fb15fd50361ab7",
+  "name": "libprotobuf",
+  "platform": "linux",
+  "sha256": "b49e6cb32286ffec34e5ec5734faa6f0b700e0bf100926d04d0dff7986b54175",
+  "size": 3811373,
+  "subdir": "linux-64",
+  "timestamp": 1792578633000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/libprotobuf-7.35.1-h8a8b077_1.conda",
+  "version": "7.35.1"
+}

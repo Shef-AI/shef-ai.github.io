@@ -1,0 +1,129 @@
+{% set version = "4.0.1" %}
+
+package:
+  name: mpdecimal
+  version: {{ version }}
+
+source:
+  url: https://www.bytereef.org/software/mpdecimal/releases/mpdecimal-{{ version }}.tar.gz
+  sha256: 96d33abb4bb0070c7be0fed4246cd38416188325f820468214471938545b1ac8
+  patches:
+    - fix-dll-name.diff
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - {{ stdlib('c') }}
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - make                   # [unix]
+    - wget                   # [unix]
+    - unzip                  # [unix]
+  host:
+  run:
+
+outputs:
+  - name: libmpdec
+    files:
+      - lib/libmpdec.so.*           # [linux]
+      - lib/libmpdec.*.dylib        # [osx]
+      - Library/bin/libmpdec-*.dll  # [win]
+    requirements:
+      build:
+        - {{ stdlib('c') }}
+        - {{ compiler('c') }}
+    test:
+      commands:
+        - test -f ${PREFIX}/lib/libmpdec.so.{{ version[0] }}               # [linux]
+        - test -f ${PREFIX}/lib/libmpdec.so.{{ version }}                  # [linux]
+        - test -f ${PREFIX}/lib/libmpdec.{{ version[0] }}.dylib            # [osx]
+        - if not exist %LIBRARY_BIN%\libmpdec-{{ version[0] }}.dll exit 1  # [win]
+
+  - name: libmpdecxx
+    files:
+      - lib/libmpdec++.so.*           # [linux]
+      - lib/libmpdec++.*.dylib        # [osx]
+      - Library/bin/libmpdec++-*.dll  # [win]
+    requirements:
+      build:
+        - {{ stdlib('c') }}
+        - {{ compiler('cxx') }}
+      host:
+        - {{ pin_subpackage("libmpdec", exact=True) }}
+      run:
+        - {{ pin_subpackage("libmpdec", exact=True) }}
+    test:
+      commands:
+        - test -f ${PREFIX}/lib/libmpdec++.so.{{ version[0] }}               # [linux]
+        - test -f ${PREFIX}/lib/libmpdec++.so.{{ version }}                  # [linux]
+        - test -f ${PREFIX}/lib/libmpdec++.{{ version[0] }}.dylib            # [osx]
+        - if not exist %LIBRARY_BIN%\libmpdec++-{{ version[0] }}.dll exit 1  # [win]
+
+  - name: libmpdec-devel
+    build:
+      run_exports:
+        - {{ pin_subpackage("libmpdec") }}
+    files:
+      - lib/libmpdec.so              # [linux]
+      - lib/libmpdec.dylib           # [osx]
+      - lib/pkgconfig/libmpdec.pc    # [not win]
+      - include/mpdecimal.h          # [not win]
+      - Library/lib/mpdec.lib        # [win]
+      - Library/include/mpdecimal.h  # [win]
+    requirements:
+      build:
+        - {{ stdlib('c') }}
+      host:
+        - {{ pin_subpackage("libmpdec", exact=True) }}
+      run:
+        - {{ pin_subpackage("libmpdec", exact=True) }}
+    test:
+      commands:
+        - test -f ${PREFIX}/lib/libmpdec.so            # [linux]
+        - test -f ${PREFIX}/lib/libmpdec.dylib         # [osx]
+        - if not exist %LIBRARY_LIB%\mpdec.lib exit 1  # [win]
+
+  - name: libmpdecxx-devel
+    build:
+      run_exports:
+        - {{ pin_subpackage("libmpdecxx") }}
+    files:
+      - lib/libmpdec++.so            # [linux]
+      - lib/libmpdec++.dylib         # [osx]
+      - lib/pkgconfig/libmpdec++.pc  # [not win]
+      - include/decimal.hh           # [not win]
+      - Library/lib/mpdec++.lib      # [win]
+      - Library/include/decimal.hh   # [win]
+    requirements:
+      build:
+        - {{ stdlib('c') }}
+      host:
+        - {{ pin_subpackage("libmpdec-devel", exact=True) }}
+        - {{ pin_subpackage("libmpdecxx", exact=True) }}
+      run:
+        - {{ pin_subpackage("libmpdec-devel", exact=True) }}
+        - {{ pin_subpackage("libmpdecxx", exact=True) }}
+    test:
+      commands:
+        - test -f ${PREFIX}/lib/libmpdec++.so            # [linux]
+        - test -f ${PREFIX}/lib/libmpdec++.dylib         # [osx]
+        - if not exist %LIBRARY_LIB%\mpdec++.lib exit 1  # [win]
+
+about:
+  home: https://www.bytereef.org/mpdecimal/index.html
+  license: BSD-2-Clause
+  license_file: COPYRIGHT.txt
+  license_family: BSD
+  summary: A package for correctly-rounded arbitrary precision decimal floating point arithmetic
+  description: |
+    libmpdec is a fast C library for correctly-rounded arbitrary precision decimal floating point 
+    arithmetic. It is a complete implementation of Mike Cowlishaw/IBM's 
+    General Decimal Arithmetic Specification.
+  doc_url: https://www.bytereef.org/mpdecimal/index.html
+  dev_url: https://www.bytereef.org/mpdecimal/download.html
+
+extra:
+  recipe-maintainers:
+    - isuruf

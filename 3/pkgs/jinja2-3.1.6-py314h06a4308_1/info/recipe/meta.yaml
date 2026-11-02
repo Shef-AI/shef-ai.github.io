@@ -1,0 +1,105 @@
+# This file created by conda-build 26.3.0
+# meta.yaml template originally from:
+# /home/task_178782617984657/jinja2-feedstock/recipe, last modified Thu Aug 27 10:23:05 2026
+# ------------------------------------------------
+
+package:
+  name: jinja2
+  version: 3.1.6
+source:
+  url: https://pypi.org/packages/source/j/jinja2/jinja2-3.1.6.tar.gz
+  sha256: 0137fb05990d35f1275a587e9aee6d56da821fc83491a0fb838183be43f66d6d
+build:
+  number: '1'
+  script: /home/task_178782617984657/croot/jinja2_1787826208678/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac/bin/python
+    -m pip install . --no-deps --no-build-isolation -vv
+  string: py314h06a4308_1
+requirements:
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 52_gnu
+    - bzip2 1.0.8 h5eee18b_6
+    - ca-certificates 2026.7.16 h06a4308_0
+    - flit-core 3.12.0 py314hee27c6d_2
+    - ld_impl_linux-64 2.44 h9e0c5a2_3
+    - libexpat 2.8.2 h7354ed3_1
+    - libffi 3.4.8 h06d3fd0_3
+    - libgcc 15.2.0 h69a1729_8
+    - libgcc-ng 15.2.0 h166f726_8
+    - libmpdec 4.0.1 h47b2149_0
+    - libstdcxx 15.2.0 h39759b7_8
+    - libstdcxx-ng 15.2.0 hc03a8fd_8
+    - libuuid 1.41.5 h5eee18b_0
+    - libxcb 1.17.0 h9b100fa_0
+    - libzlib 1.3.2 h47b2149_0
+    - lz4-c 1.9.4 h7354ed3_5
+    - ncurses 6.6 hfaaeb4e_0
+    - openssl 3.5.7 h1b28b03_0
+    - pip 26.1.2 pyh0d26453_0
+    - pthread-stubs 0.3 h47b2149_2
+    - python 3.14.7 h2bd7c14_101_cp314
+    - python_abi 3.14 4_cp314
+    - readline 8.3 hc2a1206_0
+    - sqlite 3.53.2 h795bf6d_0
+    - tk 9.0.4 h3840b71_1
+    - tzdata 2026c he532380_0
+    - xorg-libx11 1.8.12 h9b100fa_1
+    - xorg-libxau 1.0.12 h9b100fa_0
+    - xorg-libxdmcp 1.1.5 h9b100fa_0
+    - xorg-xorgproto 2024.1 h47b2149_2
+    - xz 5.8.2 h448239c_0
+    - zlib 1.3.2 h47b2149_0
+    - zstd 1.5.7 h11fc155_0
+  run:
+    - markupsafe >=2.0
+    - python >=3.14,<3.15.0a0
+    - python_abi 3.14.* *_cp314
+  run_constrained:
+    - babel >=2.7
+test:
+  source_files:
+    - tests
+  imports:
+    - jinja2
+  requires:
+    - pip
+    - pytest
+    - trio
+  commands:
+    - pip check
+    - pytest tests -v  --deselect=tests/test_fuzzing.py::TestFuzzing::test_cma_tell
+      --deselect=tests/test_core_tags.py::TestIfCondition::test_elif_deep
+about:
+  home: https://palletsprojects.com/p/jinja
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE.txt
+  summary: A very fast and expressive template engine.
+  description: "Jinja is a fast, expressive, extensible templating engine. Special\n\
+    placeholders in the template allow writing code similar to Python\nsyntax. Then\
+    \ the template is passed data to render the final document.\n\nIt includes:\n\
+    -   Template inheritance and inclusion.\n-   Define and import macros within templates.\n\
+    -   HTML templates can use autoescaping to prevent XSS from untrusted\n    user\
+    \ input.\n-   A sandboxed environment can safely render untrusted templates.\n\
+    -   AsyncIO support for generating templates and calling async\n    functions.\n\
+    -   I18N support with Babel.\n-   Templates are compiled to optimized Python code\
+    \ just-in-time and\n    cached, or can be compiled ahead-of-time.\n-   Exceptions\
+    \ point to the correct line in templates to make debugging\n    easier.\n-   Extensible\
+    \ filters, tests, functions, and even syntax.\n\nJinja's philosophy is that while\
+    \ application logic belongs in Python if\npossible, it shouldn't make the template\
+    \ designer's job difficult by\nrestricting functionality too much.\n"
+  doc_url: https://jinja.palletsprojects.com
+  dev_url: https://github.com/pallets/jinja
+extra:
+  recipe-maintainers:
+    - jakirkham
+    - msarahan
+    - nehaljwani
+    - scopatz
+  final: true
+  copy_test_source_files: true
+  remote_url: https://github.com/AnacondaRecipes/jinja2-feedstock
+  sha: 413a9a25e97ff7d4f128c34bd1ad4c7b1a82ee0d
+  task_id: OMzudMcPQhKTghVMvzhNaA
+  task_run_id: '0'
+  pbp_graph_uuid: 78a3488b-5a08-4497-b02c-1bf728cc8af3

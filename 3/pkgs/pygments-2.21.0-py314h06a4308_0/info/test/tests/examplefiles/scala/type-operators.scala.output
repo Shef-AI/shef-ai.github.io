@@ -1,0 +1,95 @@
+'Type'        Name.Class
+'['           Punctuation
+'A'           Name.Class
+' '           Text.Whitespace
+'with'        Keyword
+' '           Text.Whitespace
+'"user provided string"' Literal.String
+' '           Text.Whitespace
+'with'        Keyword
+' '           Text.Whitespace
+'B'           Name.Class
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'def'         Keyword
+' '           Text.Whitespace
+'help'        Name.Function
+'('           Punctuation
+'id'          Name
+':'           Punctuation
+' '           Text.Whitespace
+'UserName'    Name.Class
+' '           Text.Whitespace
+'|'           Operator
+' '           Text.Whitespace
+'Password'    Name.Class
+')'           Punctuation
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'???'         Operator
+'\n'          Text.Whitespace
+
+'val'         Keyword.Declaration
+' '           Text.Whitespace
+'either'      Name
+':'           Punctuation
+' '           Text.Whitespace
+'Password'    Name.Class
+' '           Text.Whitespace
+'|'           Operator
+' '           Text.Whitespace
+'UserName'    Name.Class
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'???'         Operator
+'\n'          Text.Whitespace
+
+'val'         Keyword.Declaration
+' '           Text.Whitespace
+'both'        Name
+':'           Punctuation
+' '           Text.Whitespace
+'Object'      Name.Class
+' '           Text.Whitespace
+'&'           Name
+' '           Text.Whitespace
+'Product'     Name.Class
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'???'         Operator
+'\n'          Text.Whitespace
+
+'<%'          Operator
+' '           Text.Whitespace
+'=:='         Operator
+' '           Text.Whitespace
+'<:<'         Operator
+' '           Text.Whitespace
+'<%<'         Operator
+' '           Text.Whitespace
+'>:'          Operator
+' '           Text.Whitespace
+'<:'          Operator
+'\n'          Text.Whitespace
+
+'['           Punctuation
+'X'           Name.Class
+','           Punctuation
+' '           Text.Whitespace
+'Y'           Name.Class
+']'           Punctuation
+' '           Text.Whitespace
+'=>>'         Operator
+' '           Text.Whitespace
+'Map'         Name.Class
+'['           Punctuation
+'Y'           Name.Class
+','           Punctuation
+' '           Text.Whitespace
+'X'           Name.Class
+']'           Punctuation
+'\n'          Text.Whitespace

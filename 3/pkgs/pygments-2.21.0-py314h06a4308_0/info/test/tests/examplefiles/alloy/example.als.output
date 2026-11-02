@@ -1,0 +1,2179 @@
+'module'      Keyword.Namespace
+' '           Text.Whitespace
+'examples'    Name
+'/'           Operator
+'systems'     Name
+'/'           Operator
+'views'       Name
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'/*\n * Model of views in object-oriented programming.\n *\n * Two object references, called the view and the backing,\n * are related by a view mechanism when changes to the\n * backing are automatically propagated to the view. Note\n * that the state of a view need not be a projection of the\n * state of the backing; the keySet method of Map, for\n * example, produces two view relationships, and for the\n * one in which the map is modified by changes to the key\n * set, the value of the new map cannot be determined from\n * the key set. Note that in the iterator view mechanism,\n * the iterator is by this definition the backing object,\n * since changes are propagated from iterator to collection\n * and not vice versa. Oddly, a reference may be a view of\n * more than one backing: there can be two iterators on the\n * same collection, eg. A reference cannot be a view under\n * more than one view type.\n *\n * A reference is made dirty when it is a backing for a view\n * with which it is no longer related by the view invariant.\n * This usually happens when a view is modified, either\n * directly or via another backing. For example, changing a\n * collection directly when it has an iterator invalidates\n * it, as does changing the collection through one iterator\n * when there are others.\n *\n * More work is needed if we want to model more closely the\n * failure of an iterator when its collection is invalidated.\n *\n * As a terminological convention, when there are two\n * complementary view relationships, we will give them types\n * t and t". For example, KeySetView propagates from map to\n * set, and KeySetView" propagates from set to map.\n *\n * author: Daniel Jackson\n */' Comment.Multiline
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'open'        Keyword.Namespace
+' '           Text.Whitespace
+'util'        Name
+'/'           Operator
+'ordering'    Name
+'['           Operator
+'State'       Name
+']'           Operator
+' '           Text.Whitespace
+'as'          Keyword
+' '           Text.Whitespace
+'so'          Name
+'\n'          Text.Whitespace
+
+'open'        Keyword.Namespace
+' '           Text.Whitespace
+'util'        Name
+'/'           Operator
+'relation'    Name
+' '           Text.Whitespace
+'as'          Keyword
+' '           Text.Whitespace
+'rel'         Name
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'sig'         Keyword.Declaration
+' '           Text.Whitespace
+'Ref'         Name
+' '           Text.Whitespace
+'{'           Operator
+'}'           Operator
+'\n'          Text.Whitespace
+
+'sig'         Keyword.Declaration
+' '           Text.Whitespace
+'Object'      Name
+' '           Text.Whitespace
+'{'           Operator
+'}'           Operator
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'-- t->b->v in views when v is view of type t of backing b' Comment.Single
+'\n'          Text.Whitespace
+
+'-- dirty contains refs that have been invalidated' Comment.Single
+'\n'          Text.Whitespace
+
+'sig'         Keyword.Declaration
+' '           Text.Whitespace
+'State'       Name
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'refs'        Name
+':'           Punctuation
+' '           Text.Whitespace
+'set'         Keyword
+' '           Text.Whitespace
+'Ref'         Name
+','           Punctuation
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'obj'         Name
+':'           Punctuation
+' '           Text.Whitespace
+'refs'        Name
+' '           Text.Whitespace
+'->'          Operator
+' '           Text.Whitespace
+'one'         Keyword
+' '           Text.Whitespace
+'Object'      Name
+','           Punctuation
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'views'       Name
+':'           Punctuation
+' '           Text.Whitespace
+'ViewType'    Name
+' '           Text.Whitespace
+'->'          Operator
+' '           Text.Whitespace
+'refs'        Name
+' '           Text.Whitespace
+'->'          Operator
+' '           Text.Whitespace
+'refs'        Name
+','           Punctuation
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'dirty'       Name
+':'           Punctuation
+' '           Text.Whitespace
+'set'         Keyword
+' '           Text.Whitespace
+'refs'        Name
+'\n'          Text.Whitespace
+
+'--  , anyviews: Ref -> Ref -- for visualization' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'-- {anyviews = ViewType.views}' Comment.Single
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'sig'         Keyword.Declaration
+' '           Text.Whitespace
+'Map'         Name
+' '           Text.Whitespace
+'extends'     Keyword
+' '           Text.Whitespace
+'Object'      Name
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'keys'        Name
+':'           Punctuation
+' '           Text.Whitespace
+'set'         Keyword
+' '           Text.Whitespace
+'Ref'         Name
+','           Punctuation
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'map'         Name
+':'           Punctuation
+' '           Text.Whitespace
+'keys'        Name
+' '           Text.Whitespace
+'->'          Operator
+' '           Text.Whitespace
+'one'         Keyword
+' '           Text.Whitespace
+'Ref'         Name
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'}'           Operator
+'{'           Operator
+'all'         Keyword
+' '           Text.Whitespace
+'s'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'State'       Name
+' '           Text.Whitespace
+'|'           Operator
+'  '          Text.Whitespace
+'keys'        Name
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+'Ref'         Name
+'.'           Operator
+'map'         Name
+' '           Text.Whitespace
+'in'          Operator.Word
+' '           Text.Whitespace
+'s'           Name
+'.'           Operator
+'refs'        Name
+'}'           Operator
+'\n'          Text.Whitespace
+
+'sig'         Keyword.Declaration
+' '           Text.Whitespace
+'MapRef'      Name
+' '           Text.Whitespace
+'extends'     Keyword
+' '           Text.Whitespace
+'Ref'         Name
+' '           Text.Whitespace
+'{'           Operator
+'}'           Operator
+'\n'          Text.Whitespace
+
+'fact'        Keyword
+' '           Text.Whitespace
+'{'           Operator
+'State'       Name
+'.'           Operator
+'obj'         Name
+'['           Operator
+'MapRef'      Name
+']'           Operator
+' '           Text.Whitespace
+'in'          Operator.Word
+' '           Text.Whitespace
+'Map'         Name
+'}'           Operator
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'sig'         Keyword.Declaration
+' '           Text.Whitespace
+'Iterator'    Name
+' '           Text.Whitespace
+'extends'     Keyword
+' '           Text.Whitespace
+'Object'      Name
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'left'        Name
+','           Punctuation
+' '           Text.Whitespace
+'done'        Name
+':'           Punctuation
+' '           Text.Whitespace
+'set'         Keyword
+' '           Text.Whitespace
+'Ref'         Name
+','           Punctuation
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'lastRef'     Name
+':'           Punctuation
+' '           Text.Whitespace
+'lone'        Keyword
+' '           Text.Whitespace
+'done'        Name
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'}'           Operator
+'{'           Operator
+'all'         Keyword
+' '           Text.Whitespace
+'s'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'State'       Name
+' '           Text.Whitespace
+'|'           Operator
+' '           Text.Whitespace
+'done'        Name
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+'left'        Name
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+'lastRef'     Name
+' '           Text.Whitespace
+'in'          Operator.Word
+' '           Text.Whitespace
+'s'           Name
+'.'           Operator
+'refs'        Name
+'}'           Operator
+'\n'          Text.Whitespace
+
+'sig'         Keyword.Declaration
+' '           Text.Whitespace
+'IteratorRef' Name
+' '           Text.Whitespace
+'extends'     Keyword
+' '           Text.Whitespace
+'Ref'         Name
+' '           Text.Whitespace
+'{'           Operator
+'}'           Operator
+'\n'          Text.Whitespace
+
+'fact'        Keyword
+' '           Text.Whitespace
+'{'           Operator
+'State'       Name
+'.'           Operator
+'obj'         Name
+'['           Operator
+'IteratorRef' Name
+']'           Operator
+' '           Text.Whitespace
+'in'          Operator.Word
+' '           Text.Whitespace
+'Iterator'    Name
+'}'           Operator
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'sig'         Keyword.Declaration
+' '           Text.Whitespace
+'Set'         Name
+' '           Text.Whitespace
+'extends'     Keyword
+' '           Text.Whitespace
+'Object'      Name
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'elts'        Name
+':'           Punctuation
+' '           Text.Whitespace
+'set'         Keyword
+' '           Text.Whitespace
+'Ref'         Name
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'}'           Operator
+'{'           Operator
+'all'         Keyword
+' '           Text.Whitespace
+'s'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'State'       Name
+' '           Text.Whitespace
+'|'           Operator
+' '           Text.Whitespace
+'elts'        Name
+' '           Text.Whitespace
+'in'          Operator.Word
+' '           Text.Whitespace
+'s'           Name
+'.'           Operator
+'refs'        Name
+'}'           Operator
+'\n'          Text.Whitespace
+
+'sig'         Keyword.Declaration
+' '           Text.Whitespace
+'SetRef'      Name
+' '           Text.Whitespace
+'extends'     Keyword
+' '           Text.Whitespace
+'Ref'         Name
+' '           Text.Whitespace
+'{'           Operator
+'}'           Operator
+'\n'          Text.Whitespace
+
+'fact'        Keyword
+' '           Text.Whitespace
+'{'           Operator
+'State'       Name
+'.'           Operator
+'obj'         Name
+'['           Operator
+'SetRef'      Name
+']'           Operator
+' '           Text.Whitespace
+'in'          Operator.Word
+' '           Text.Whitespace
+'Set'         Name
+'}'           Operator
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'abstract'    Keyword
+' '           Text.Whitespace
+'sig'         Keyword.Declaration
+' '           Text.Whitespace
+'ViewType'    Name
+' '           Text.Whitespace
+'{'           Operator
+'}'           Operator
+'\n'          Text.Whitespace
+
+'one'         Keyword
+' '           Text.Whitespace
+'sig'         Keyword.Declaration
+' '           Text.Whitespace
+'KeySetView'  Name
+','           Punctuation
+' '           Text.Whitespace
+'KeySetView"' Name
+','           Punctuation
+' '           Text.Whitespace
+'IteratorView' Name
+' '           Text.Whitespace
+'extends'     Keyword
+' '           Text.Whitespace
+'ViewType'    Name
+' '           Text.Whitespace
+'{'           Operator
+'}'           Operator
+'\n'          Text.Whitespace
+
+'fact'        Keyword
+' '           Text.Whitespace
+'ViewTypes'   Name
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'State'       Name
+'.'           Operator
+'views'       Name
+'['           Operator
+'KeySetView'  Name
+']'           Operator
+' '           Text.Whitespace
+'in'          Operator.Word
+' '           Text.Whitespace
+'MapRef'      Name
+' '           Text.Whitespace
+'->'          Operator
+' '           Text.Whitespace
+'SetRef'      Name
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'State'       Name
+'.'           Operator
+'views'       Name
+'['           Operator
+'KeySetView"' Name
+']'           Operator
+' '           Text.Whitespace
+'in'          Operator.Word
+' '           Text.Whitespace
+'SetRef'      Name
+' '           Text.Whitespace
+'->'          Operator
+' '           Text.Whitespace
+'MapRef'      Name
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'State'       Name
+'.'           Operator
+'views'       Name
+'['           Operator
+'IteratorView' Name
+']'           Operator
+' '           Text.Whitespace
+'in'          Operator.Word
+' '           Text.Whitespace
+'IteratorRef' Name
+' '           Text.Whitespace
+'->'          Operator
+' '           Text.Whitespace
+'SetRef'      Name
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'all'         Keyword
+' '           Text.Whitespace
+'s'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'State'       Name
+' '           Text.Whitespace
+'|'           Operator
+' '           Text.Whitespace
+'s'           Name
+'.'           Operator
+'views'       Name
+'['           Operator
+'KeySetView'  Name
+']'           Operator
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'~'           Operator
+'('           Operator
+'s'           Name
+'.'           Operator
+'views'       Name
+'['           Operator
+'KeySetView"' Name
+']'           Operator
+')'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+"/**\n * mods is refs modified directly or by view mechanism\n * doesn't handle possibility of modifying an object and its view at once?\n * should we limit frame conds to non-dirty refs?\n */" Comment.Multiline
+'\n'          Text.Whitespace
+
+'pred'        Keyword
+' '           Text.Whitespace
+'modifies'    Name
+' '           Text.Whitespace
+'['           Operator
+'pre'         Name
+','           Punctuation
+' '           Text.Whitespace
+'post'        Name
+':'           Punctuation
+' '           Text.Whitespace
+'State'       Name
+','           Punctuation
+' '           Text.Whitespace
+'rs'          Name
+':'           Punctuation
+' '           Text.Whitespace
+'set'         Keyword
+' '           Text.Whitespace
+'Ref'         Name
+']'           Operator
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'let'         Keyword
+' '           Text.Whitespace
+'vr'          Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'pre'         Name
+'.'           Operator
+'views'       Name
+'['           Operator
+'ViewType'    Name
+']'           Operator
+','           Punctuation
+' '           Text.Whitespace
+'mods'        Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'rs'          Name
+'.'           Operator
+'*'           Operator
+'vr'          Name
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'all'         Keyword
+' '           Text.Whitespace
+'r'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'pre'         Name
+'.'           Operator
+'refs'        Name
+' '           Text.Whitespace
+'-'           Operator
+' '           Text.Whitespace
+'mods'        Name
+' '           Text.Whitespace
+'|'           Operator
+' '           Text.Whitespace
+'pre'         Name
+'.'           Operator
+'obj'         Name
+'['           Operator
+'r'           Name
+']'           Operator
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'post'        Name
+'.'           Operator
+'obj'         Name
+'['           Operator
+'r'           Name
+']'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'all'         Keyword
+' '           Text.Whitespace
+'b'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'mods'        Name
+','           Punctuation
+' '           Text.Whitespace
+'v'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'pre'         Name
+'.'           Operator
+'refs'        Name
+','           Punctuation
+' '           Text.Whitespace
+'t'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'ViewType'    Name
+' '           Text.Whitespace
+'|'           Operator
+'\n'          Text.Whitespace
+
+'      '      Text.Whitespace
+'b'           Name
+'->'          Operator
+'v'           Name
+' '           Text.Whitespace
+'in'          Operator.Word
+' '           Text.Whitespace
+'pre'         Name
+'.'           Operator
+'views'       Name
+'['           Operator
+'t'           Name
+']'           Operator
+' '           Text.Whitespace
+'='           Operator
+'>'           Operator
+' '           Text.Whitespace
+'viewFrame'   Name
+' '           Text.Whitespace
+'['           Operator
+'t'           Name
+','           Punctuation
+' '           Text.Whitespace
+'pre'         Name
+'.'           Operator
+'obj'         Name
+'['           Operator
+'v'           Name
+']'           Operator
+','           Punctuation
+' '           Text.Whitespace
+'post'        Name
+'.'           Operator
+'obj'         Name
+'['           Operator
+'v'           Name
+']'           Operator
+','           Punctuation
+' '           Text.Whitespace
+'post'        Name
+'.'           Operator
+'obj'         Name
+'['           Operator
+'b'           Name
+']'           Operator
+']'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'post'        Name
+'.'           Operator
+'dirty'       Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'pre'         Name
+'.'           Operator
+'dirty'       Name
+' '           Text.Whitespace
+'+'           Operator
+'\n'          Text.Whitespace
+
+'      '      Text.Whitespace
+'{'           Operator
+'b'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'pre'         Name
+'.'           Operator
+'refs'        Name
+' '           Text.Whitespace
+'|'           Operator
+' '           Text.Whitespace
+'some'        Keyword
+' '           Text.Whitespace
+'v'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'Ref'         Name
+','           Punctuation
+' '           Text.Whitespace
+'t'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'ViewType'    Name
+' '           Text.Whitespace
+'|'           Operator
+'\n'          Text.Whitespace
+
+'          '  Text.Whitespace
+'b'           Name
+'->'          Operator
+'v'           Name
+' '           Text.Whitespace
+'in'          Operator.Word
+' '           Text.Whitespace
+'pre'         Name
+'.'           Operator
+'views'       Name
+'['           Operator
+'t'           Name
+']'           Operator
+' '           Text.Whitespace
+'&&'          Operator
+' '           Text.Whitespace
+'!'           Operator
+'viewFrame'   Name
+' '           Text.Whitespace
+'['           Operator
+'t'           Name
+','           Punctuation
+' '           Text.Whitespace
+'pre'         Name
+'.'           Operator
+'obj'         Name
+'['           Operator
+'v'           Name
+']'           Operator
+','           Punctuation
+' '           Text.Whitespace
+'post'        Name
+'.'           Operator
+'obj'         Name
+'['           Operator
+'v'           Name
+']'           Operator
+','           Punctuation
+' '           Text.Whitespace
+'post'        Name
+'.'           Operator
+'obj'         Name
+'['           Operator
+'b'           Name
+']'           Operator
+']'           Operator
+'\n'          Text.Whitespace
+
+'      '      Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'pred'        Keyword
+' '           Text.Whitespace
+'allocates'   Name
+' '           Text.Whitespace
+'['           Operator
+'pre'         Name
+','           Punctuation
+' '           Text.Whitespace
+'post'        Name
+':'           Punctuation
+' '           Text.Whitespace
+'State'       Name
+','           Punctuation
+' '           Text.Whitespace
+'rs'          Name
+':'           Punctuation
+' '           Text.Whitespace
+'set'         Keyword
+' '           Text.Whitespace
+'Ref'         Name
+']'           Operator
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'no'          Keyword
+' '           Text.Whitespace
+'rs'          Name
+' '           Text.Whitespace
+'&'           Operator
+' '           Text.Whitespace
+'pre'         Name
+'.'           Operator
+'refs'        Name
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'post'        Name
+'.'           Operator
+'refs'        Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'pre'         Name
+'.'           Operator
+'refs'        Name
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+'rs'          Name
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'/** \n * models frame condition that limits change to view object from v to v" when backing object changes to b"\n */' Comment.Multiline
+'\n'          Text.Whitespace
+
+'pred'        Keyword
+' '           Text.Whitespace
+'viewFrame'   Name
+' '           Text.Whitespace
+'['           Operator
+'t'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'ViewType'    Name
+','           Punctuation
+' '           Text.Whitespace
+'v'           Name
+','           Punctuation
+' '           Text.Whitespace
+'v"'          Name
+','           Punctuation
+' '           Text.Whitespace
+'b"'          Name
+':'           Punctuation
+' '           Text.Whitespace
+'Object'      Name
+']'           Operator
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'t'           Name
+' '           Text.Whitespace
+'in'          Operator.Word
+' '           Text.Whitespace
+'KeySetView'  Name
+' '           Text.Whitespace
+'='           Operator
+'>'           Operator
+' '           Text.Whitespace
+'v"'          Name
+'.'           Operator
+'elts'        Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'dom'         Name
+' '           Text.Whitespace
+'['           Operator
+'b"'          Name
+'.'           Operator
+'map'         Name
+']'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'t'           Name
+' '           Text.Whitespace
+'in'          Operator.Word
+' '           Text.Whitespace
+'KeySetView"' Name
+' '           Text.Whitespace
+'='           Operator
+'>'           Operator
+' '           Text.Whitespace
+'b"'          Name
+'.'           Operator
+'elts'        Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'dom'         Name
+' '           Text.Whitespace
+'['           Operator
+'v"'          Name
+'.'           Operator
+'map'         Name
+']'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'t'           Name
+' '           Text.Whitespace
+'in'          Operator.Word
+' '           Text.Whitespace
+'KeySetView"' Name
+' '           Text.Whitespace
+'='           Operator
+'>'           Operator
+' '           Text.Whitespace
+'('           Operator
+'b"'          Name
+'.'           Operator
+'elts'        Name
+')'           Operator
+' '           Text.Whitespace
+'<'           Operator
+':'           Punctuation
+' '           Text.Whitespace
+'('           Operator
+'v'           Name
+'.'           Operator
+'map'         Name
+')'           Operator
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'('           Operator
+'b"'          Name
+'.'           Operator
+'elts'        Name
+')'           Operator
+' '           Text.Whitespace
+'<'           Operator
+':'           Punctuation
+' '           Text.Whitespace
+'('           Operator
+'v"'          Name
+'.'           Operator
+'map'         Name
+')'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'t'           Name
+' '           Text.Whitespace
+'in'          Operator.Word
+' '           Text.Whitespace
+'IteratorView' Name
+' '           Text.Whitespace
+'='           Operator
+'>'           Operator
+' '           Text.Whitespace
+'v"'          Name
+'.'           Operator
+'elts'        Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'b"'          Name
+'.'           Operator
+'left'        Name
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+'b"'          Name
+'.'           Operator
+'done'        Name
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'pred'        Keyword
+' '           Text.Whitespace
+'MapRef'      Name
+'.'           Operator
+'keySet'      Name
+' '           Text.Whitespace
+'['           Operator
+'pre'         Name
+','           Punctuation
+' '           Text.Whitespace
+'post'        Name
+':'           Punctuation
+' '           Text.Whitespace
+'State'       Name
+','           Punctuation
+' '           Text.Whitespace
+'setRefs'     Name
+':'           Punctuation
+' '           Text.Whitespace
+'SetRef'      Name
+']'           Operator
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'post'        Name
+'.'           Operator
+'obj'         Name
+'['           Operator
+'setRefs'     Name
+']'           Operator
+'.'           Operator
+'elts'        Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'dom'         Name
+' '           Text.Whitespace
+'['           Operator
+'pre'         Name
+'.'           Operator
+'obj'         Name
+'['           Operator
+'this'        Keyword
+']'           Operator
+'.'           Operator
+'map'         Name
+']'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'modifies'    Name
+' '           Text.Whitespace
+'['           Operator
+'pre'         Name
+','           Punctuation
+' '           Text.Whitespace
+'post'        Name
+','           Punctuation
+' '           Text.Whitespace
+'none'        Keyword.Constant
+']'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'allocates'   Name
+' '           Text.Whitespace
+'['           Operator
+'pre'         Name
+','           Punctuation
+' '           Text.Whitespace
+'post'        Name
+','           Punctuation
+' '           Text.Whitespace
+'setRefs'     Name
+']'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'post'        Name
+'.'           Operator
+'views'       Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'pre'         Name
+'.'           Operator
+'views'       Name
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+'KeySetView'  Name
+'->'          Operator
+'this'        Keyword
+'->'          Operator
+'setRefs'     Name
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+'KeySetView"' Name
+'->'          Operator
+'setRefs'     Name
+'->'          Operator
+'this'        Keyword
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'pred'        Keyword
+' '           Text.Whitespace
+'MapRef'      Name
+'.'           Operator
+'put'         Name
+' '           Text.Whitespace
+'['           Operator
+'pre'         Name
+','           Punctuation
+' '           Text.Whitespace
+'post'        Name
+':'           Punctuation
+' '           Text.Whitespace
+'State'       Name
+','           Punctuation
+' '           Text.Whitespace
+'k'           Name
+','           Punctuation
+' '           Text.Whitespace
+'v'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'Ref'         Name
+']'           Operator
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'post'        Name
+'.'           Operator
+'obj'         Name
+'['           Operator
+'this'        Keyword
+']'           Operator
+'.'           Operator
+'map'         Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'pre'         Name
+'.'           Operator
+'obj'         Name
+'['           Operator
+'this'        Keyword
+']'           Operator
+'.'           Operator
+'map'         Name
+' '           Text.Whitespace
+'++'          Operator
+' '           Text.Whitespace
+'k'           Name
+'->'          Operator
+'v'           Name
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'modifies'    Name
+' '           Text.Whitespace
+'['           Operator
+'pre'         Name
+','           Punctuation
+' '           Text.Whitespace
+'post'        Name
+','           Punctuation
+' '           Text.Whitespace
+'this'        Keyword
+']'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'allocates'   Name
+' '           Text.Whitespace
+'['           Operator
+'pre'         Name
+','           Punctuation
+' '           Text.Whitespace
+'post'        Name
+','           Punctuation
+' '           Text.Whitespace
+'none'        Keyword.Constant
+']'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'post'        Name
+'.'           Operator
+'views'       Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'pre'         Name
+'.'           Operator
+'views'       Name
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'pred'        Keyword
+' '           Text.Whitespace
+'SetRef'      Name
+'.'           Operator
+'iterator'    Name
+' '           Text.Whitespace
+'['           Operator
+'pre'         Name
+','           Punctuation
+' '           Text.Whitespace
+'post'        Name
+':'           Punctuation
+' '           Text.Whitespace
+'State'       Name
+','           Punctuation
+' '           Text.Whitespace
+'iterRef'     Name
+':'           Punctuation
+' '           Text.Whitespace
+'IteratorRef' Name
+']'           Operator
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'let'         Keyword
+' '           Text.Whitespace
+'i'           Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'post'        Name
+'.'           Operator
+'obj'         Name
+'['           Operator
+'iterRef'     Name
+']'           Operator
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'i'           Name
+'.'           Operator
+'left'        Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'pre'         Name
+'.'           Operator
+'obj'         Name
+'['           Operator
+'this'        Keyword
+']'           Operator
+'.'           Operator
+'elts'        Name
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'no'          Keyword
+' '           Text.Whitespace
+'i'           Name
+'.'           Operator
+'done'        Name
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+'i'           Name
+'.'           Operator
+'lastRef'     Name
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'modifies'    Name
+' '           Text.Whitespace
+'['           Operator
+'pre'         Name
+','           Punctuation
+'post'        Name
+','           Punctuation
+'none'        Keyword.Constant
+']'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'allocates'   Name
+' '           Text.Whitespace
+'['           Operator
+'pre'         Name
+','           Punctuation
+' '           Text.Whitespace
+'post'        Name
+','           Punctuation
+' '           Text.Whitespace
+'iterRef'     Name
+']'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'post'        Name
+'.'           Operator
+'views'       Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'pre'         Name
+'.'           Operator
+'views'       Name
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+'IteratorView' Name
+'->'          Operator
+'iterRef'     Name
+'->'          Operator
+'this'        Keyword
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'pred'        Keyword
+' '           Text.Whitespace
+'IteratorRef' Name
+'.'           Operator
+'remove'      Name
+' '           Text.Whitespace
+'['           Operator
+'pre'         Name
+','           Punctuation
+' '           Text.Whitespace
+'post'        Name
+':'           Punctuation
+' '           Text.Whitespace
+'State'       Name
+']'           Operator
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'let'         Keyword
+' '           Text.Whitespace
+'i'           Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'pre'         Name
+'.'           Operator
+'obj'         Name
+'['           Operator
+'this'        Keyword
+']'           Operator
+','           Punctuation
+' '           Text.Whitespace
+'i"'          Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'post'        Name
+'.'           Operator
+'obj'         Name
+'['           Operator
+'this'        Keyword
+']'           Operator
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'i"'          Name
+'.'           Operator
+'left'        Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'i'           Name
+'.'           Operator
+'left'        Name
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'i"'          Name
+'.'           Operator
+'done'        Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'i'           Name
+'.'           Operator
+'done'        Name
+' '           Text.Whitespace
+'-'           Operator
+' '           Text.Whitespace
+'i'           Name
+'.'           Operator
+'lastRef'     Name
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'no'          Keyword
+' '           Text.Whitespace
+'i"'          Name
+'.'           Operator
+'lastRef'     Name
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'modifies'    Name
+' '           Text.Whitespace
+'['           Operator
+'pre'         Name
+','           Punctuation
+'post'        Name
+','           Punctuation
+'this'        Keyword
+']'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'allocates'   Name
+' '           Text.Whitespace
+'['           Operator
+'pre'         Name
+','           Punctuation
+' '           Text.Whitespace
+'post'        Name
+','           Punctuation
+' '           Text.Whitespace
+'none'        Keyword.Constant
+']'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'pre'         Name
+'.'           Operator
+'views'       Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'post'        Name
+'.'           Operator
+'views'       Name
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'pred'        Keyword
+' '           Text.Whitespace
+'IteratorRef' Name
+'.'           Operator
+'next'        Name
+' '           Text.Whitespace
+'['           Operator
+'pre'         Name
+','           Punctuation
+' '           Text.Whitespace
+'post'        Name
+':'           Punctuation
+' '           Text.Whitespace
+'State'       Name
+','           Punctuation
+' '           Text.Whitespace
+'ref'         Name
+':'           Punctuation
+' '           Text.Whitespace
+'Ref'         Name
+']'           Operator
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'let'         Keyword
+' '           Text.Whitespace
+'i'           Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'pre'         Name
+'.'           Operator
+'obj'         Name
+'['           Operator
+'this'        Keyword
+']'           Operator
+','           Punctuation
+' '           Text.Whitespace
+'i"'          Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'post'        Name
+'.'           Operator
+'obj'         Name
+'['           Operator
+'this'        Keyword
+']'           Operator
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'ref'         Name
+' '           Text.Whitespace
+'in'          Operator.Word
+' '           Text.Whitespace
+'i'           Name
+'.'           Operator
+'left'        Name
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'i"'          Name
+'.'           Operator
+'left'        Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'i'           Name
+'.'           Operator
+'left'        Name
+' '           Text.Whitespace
+'-'           Operator
+' '           Text.Whitespace
+'ref'         Name
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'i"'          Name
+'.'           Operator
+'done'        Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'i'           Name
+'.'           Operator
+'done'        Name
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+'ref'         Name
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'i"'          Name
+'.'           Operator
+'lastRef'     Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'ref'         Name
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'modifies'    Name
+' '           Text.Whitespace
+'['           Operator
+'pre'         Name
+','           Punctuation
+' '           Text.Whitespace
+'post'        Name
+','           Punctuation
+' '           Text.Whitespace
+'this'        Keyword
+']'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'allocates'   Name
+' '           Text.Whitespace
+'['           Operator
+'pre'         Name
+','           Punctuation
+' '           Text.Whitespace
+'post'        Name
+','           Punctuation
+' '           Text.Whitespace
+'none'        Keyword.Constant
+']'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'pre'         Name
+'.'           Operator
+'views'       Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'post'        Name
+'.'           Operator
+'views'       Name
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'pred'        Keyword
+' '           Text.Whitespace
+'IteratorRef' Name
+'.'           Operator
+'hasNext'     Name
+' '           Text.Whitespace
+'['           Operator
+'s'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'State'       Name
+']'           Operator
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'some'        Keyword
+' '           Text.Whitespace
+'s'           Name
+'.'           Operator
+'obj'         Name
+'['           Operator
+'this'        Keyword
+']'           Operator
+'.'           Operator
+'left'        Name
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'assert'      Keyword
+' '           Text.Whitespace
+'zippishOK'   Name
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'all'         Keyword
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'ks'          Name
+','           Punctuation
+' '           Text.Whitespace
+'vs'          Name
+':'           Punctuation
+' '           Text.Whitespace
+'SetRef'      Name
+','           Punctuation
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'m'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'MapRef'      Name
+','           Punctuation
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'ki'          Name
+','           Punctuation
+' '           Text.Whitespace
+'vi'          Name
+':'           Punctuation
+' '           Text.Whitespace
+'IteratorRef' Name
+','           Punctuation
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'k'           Name
+','           Punctuation
+' '           Text.Whitespace
+'v'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'Ref'         Name
+' '           Text.Whitespace
+'|'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'let'         Keyword
+' '           Text.Whitespace
+'s0'          Name
+'='           Operator
+'so'          Name
+'/'           Operator
+'first'       Name
+','           Punctuation
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'s1'          Name
+'='           Operator
+'so'          Name
+'/'           Operator
+'next'        Name
+'['           Operator
+'s0'          Name
+']'           Operator
+','           Punctuation
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'s2'          Name
+'='           Operator
+'so'          Name
+'/'           Operator
+'next'        Name
+'['           Operator
+'s1'          Name
+']'           Operator
+','           Punctuation
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'s3'          Name
+'='           Operator
+'so'          Name
+'/'           Operator
+'next'        Name
+'['           Operator
+'s2'          Name
+']'           Operator
+','           Punctuation
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'s4'          Name
+'='           Operator
+'so'          Name
+'/'           Operator
+'next'        Name
+'['           Operator
+'s3'          Name
+']'           Operator
+','           Punctuation
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'s5'          Name
+'='           Operator
+'so'          Name
+'/'           Operator
+'next'        Name
+'['           Operator
+'s4'          Name
+']'           Operator
+','           Punctuation
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'s6'          Name
+'='           Operator
+'so'          Name
+'/'           Operator
+'next'        Name
+'['           Operator
+'s5'          Name
+']'           Operator
+','           Punctuation
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'s7'          Name
+'='           Operator
+'so'          Name
+'/'           Operator
+'next'        Name
+'['           Operator
+'s6'          Name
+']'           Operator
+' '           Text.Whitespace
+'|'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'('           Operator
+'{'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'precondition' Name
+' '           Text.Whitespace
+'['           Operator
+'s0'          Name
+','           Punctuation
+' '           Text.Whitespace
+'ks'          Name
+','           Punctuation
+' '           Text.Whitespace
+'vs'          Name
+','           Punctuation
+' '           Text.Whitespace
+'m'           Name
+']'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'no'          Keyword
+' '           Text.Whitespace
+'s0'          Name
+'.'           Operator
+'dirty'       Name
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'ks'          Name
+'.'           Operator
+'iterator'    Name
+' '           Text.Whitespace
+'['           Operator
+'s0'          Name
+','           Punctuation
+' '           Text.Whitespace
+'s1'          Name
+','           Punctuation
+' '           Text.Whitespace
+'ki'          Name
+']'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'vs'          Name
+'.'           Operator
+'iterator'    Name
+' '           Text.Whitespace
+'['           Operator
+'s1'          Name
+','           Punctuation
+' '           Text.Whitespace
+'s2'          Name
+','           Punctuation
+' '           Text.Whitespace
+'vi'          Name
+']'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'ki'          Name
+'.'           Operator
+'hasNext'     Name
+' '           Text.Whitespace
+'['           Operator
+'s2'          Name
+']'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'vi'          Name
+'.'           Operator
+'hasNext'     Name
+' '           Text.Whitespace
+'['           Operator
+'s2'          Name
+']'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'ki'          Name
+'.'           Operator
+'this'        Keyword
+'/'           Operator
+'next'        Name
+' '           Text.Whitespace
+'['           Operator
+'s2'          Name
+','           Punctuation
+' '           Text.Whitespace
+'s3'          Name
+','           Punctuation
+' '           Text.Whitespace
+'k'           Name
+']'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'vi'          Name
+'.'           Operator
+'this'        Keyword
+'/'           Operator
+'next'        Name
+' '           Text.Whitespace
+'['           Operator
+'s3'          Name
+','           Punctuation
+' '           Text.Whitespace
+'s4'          Name
+','           Punctuation
+' '           Text.Whitespace
+'v'           Name
+']'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'m'           Name
+'.'           Operator
+'put'         Name
+' '           Text.Whitespace
+'['           Operator
+'s4'          Name
+','           Punctuation
+' '           Text.Whitespace
+'s5'          Name
+','           Punctuation
+' '           Text.Whitespace
+'k'           Name
+','           Punctuation
+' '           Text.Whitespace
+'v'           Name
+']'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'ki'          Name
+'.'           Operator
+'remove'      Name
+' '           Text.Whitespace
+'['           Operator
+'s5'          Name
+','           Punctuation
+' '           Text.Whitespace
+'s6'          Name
+']'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'vi'          Name
+'.'           Operator
+'remove'      Name
+' '           Text.Whitespace
+'['           Operator
+'s6'          Name
+','           Punctuation
+' '           Text.Whitespace
+'s7'          Name
+']'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'}'           Operator
+' '           Text.Whitespace
+'='           Operator
+'>'           Operator
+' '           Text.Whitespace
+'no'          Keyword
+' '           Text.Whitespace
+'State'       Name
+'.'           Operator
+'dirty'       Name
+')'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'pred'        Keyword
+' '           Text.Whitespace
+'precondition' Name
+' '           Text.Whitespace
+'['           Operator
+'pre'         Name
+':'           Punctuation
+' '           Text.Whitespace
+'State'       Name
+','           Punctuation
+' '           Text.Whitespace
+'ks'          Name
+','           Punctuation
+' '           Text.Whitespace
+'vs'          Name
+','           Punctuation
+' '           Text.Whitespace
+'m'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'Ref'         Name
+']'           Operator
+' '           Text.Whitespace
+'{'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'// all these conditions and other errors discovered in scope of 6 but 8,3' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'// in initial state, must have view invariants hold' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'('           Operator
+'all'         Keyword
+' '           Text.Whitespace
+'t'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'ViewType'    Name
+','           Punctuation
+' '           Text.Whitespace
+'b'           Name
+','           Punctuation
+' '           Text.Whitespace
+'v'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'pre'         Name
+'.'           Operator
+'refs'        Name
+' '           Text.Whitespace
+'|'           Operator
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'b'           Name
+'->'          Operator
+'v'           Name
+' '           Text.Whitespace
+'in'          Operator.Word
+' '           Text.Whitespace
+'pre'         Name
+'.'           Operator
+'views'       Name
+'['           Operator
+'t'           Name
+']'           Operator
+' '           Text.Whitespace
+'='           Operator
+'>'           Operator
+' '           Text.Whitespace
+'viewFrame'   Name
+' '           Text.Whitespace
+'['           Operator
+'t'           Name
+','           Punctuation
+' '           Text.Whitespace
+'pre'         Name
+'.'           Operator
+'obj'         Name
+'['           Operator
+'v'           Name
+']'           Operator
+','           Punctuation
+' '           Text.Whitespace
+'pre'         Name
+'.'           Operator
+'obj'         Name
+'['           Operator
+'v'           Name
+']'           Operator
+','           Punctuation
+' '           Text.Whitespace
+'pre'         Name
+'.'           Operator
+'obj'         Name
+'['           Operator
+'b'           Name
+']'           Operator
+']'           Operator
+')'           Operator
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'// sets are not aliases' Comment.Single
+'\n'          Text.Whitespace
+
+'--  ks != vs' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'// sets are not views of map' Comment.Single
+'\n'          Text.Whitespace
+
+'--  no (ks+vs)->m & ViewType.pre.views' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'// no iterator currently on either set' Comment.Single
+'\n'          Text.Whitespace
+
+'--  no Ref->(ks+vs) & ViewType.pre.views' Comment.Single
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'}'           Operator
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'check'       Keyword
+' '           Text.Whitespace
+'zippishOK'   Name
+' '           Text.Whitespace
+'for'         Keyword
+' '           Text.Whitespace
+'6'           Literal.Number.Integer
+' '           Text.Whitespace
+'but'         Keyword
+' '           Text.Whitespace
+'8'           Literal.Number.Integer
+' '           Text.Whitespace
+'State'       Name
+','           Punctuation
+' '           Text.Whitespace
+'3'           Literal.Number.Integer
+' '           Text.Whitespace
+'ViewType'    Name
+' '           Text.Whitespace
+'expect'      Keyword
+' '           Text.Whitespace
+'1'           Literal.Number.Integer
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'/** \n * experiment with controlling heap size\n */' Comment.Multiline
+'\n'          Text.Whitespace
+
+'fact'        Keyword
+' '           Text.Whitespace
+'{'           Operator
+'all'         Keyword
+' '           Text.Whitespace
+'s'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'State'       Name
+' '           Text.Whitespace
+'|'           Operator
+' '           Text.Whitespace
+'#'           Operator
+'s'           Name
+'.'           Operator
+'obj'         Name
+' '           Text.Whitespace
+'<'           Operator
+' '           Text.Whitespace
+'5'           Literal.Number.Integer
+'}'           Operator
+'\n'          Text.Whitespace

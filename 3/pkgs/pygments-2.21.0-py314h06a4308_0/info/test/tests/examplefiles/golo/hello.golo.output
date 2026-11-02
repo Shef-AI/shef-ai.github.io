@@ -1,0 +1,31 @@
+'module'      Keyword.Namespace
+' '           Text.Whitespace
+'hello.World' Name.Namespace
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'function'    Keyword.Declaration
+' '           Text.Whitespace
+'main'        Name.Function
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'|'           Punctuation
+'args'        Name
+'|'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'println'     Name.Builtin
+'('           Punctuation
+'"'           Literal.String
+'Hello world!' Literal.String
+'"'           Literal.String.Double
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n'          Text.Whitespace

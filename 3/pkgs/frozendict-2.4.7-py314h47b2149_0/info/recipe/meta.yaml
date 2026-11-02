@@ -1,0 +1,106 @@
+# This file created by conda-build 26.3.0
+# meta.yaml template originally from:
+# /home/task_Jvay628aQRO4B_0/frozendict-feedstock/recipe, last modified Wed Jul  1 12:50:12 2026
+# ------------------------------------------------
+
+package:
+  name: frozendict
+  version: 2.4.7
+source:
+  url: https://pypi.org/packages/source/f/frozendict/frozendict-2.4.7.tar.gz
+  sha256: e478fb2a1391a56c8a6e10cc97c4a9002b410ecd1ac28c18d780661762e271bd
+build:
+  number: '0'
+  script: /home/task_Jvay628aQRO4B_0/croot/frozendict_1782910235633/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_/bin/python
+    -m pip install . -v --no-deps --no-build-isolation
+  string: py314h47b2149_0
+requirements:
+  build:
+    - _openmp_mutex 5.1 52_gnu
+    - binutils_impl_linux-64 2.44 h78f17ca_3
+    - binutils_linux-64 2.44 hc03a8fd_3
+    - gcc_impl_linux-64 14.3.0 h4943218_4
+    - gcc_linux-64 14.3.0 hda73cce_14
+    - kernel-headers_linux-64 4.18.0 h3108a97_1
+    - ld_impl_linux-64 2.44 h9e0c5a2_3
+    - libgcc 15.2.0 h69a1729_8
+    - libgcc-devel_linux-64 14.3.0 he7458c1_104
+    - libgomp 15.2.0 h4751f2c_8
+    - libsanitizer 14.3.0 hd4faa28_4
+    - libstdcxx 15.2.0 h39759b7_8
+    - sysroot_linux-64 2.28 h3108a97_1
+    - tzdata 2026b he532380_0
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 52_gnu
+    - bzip2 1.0.8 h5eee18b_6
+    - ca-certificates 2026.5.14 h06a4308_0
+    - ld_impl_linux-64 2.44 h9e0c5a2_3
+    - libexpat 2.8.2 h7354ed3_1
+    - libffi 3.4.8 h06d3fd0_3
+    - libgcc 15.2.0 h69a1729_8
+    - libgcc-ng 15.2.0 h166f726_8
+    - libmpdec 4.0.1 h47b2149_0
+    - libstdcxx 15.2.0 h39759b7_8
+    - libstdcxx-ng 15.2.0 hc03a8fd_8
+    - libuuid 1.41.5 h5eee18b_0
+    - libxcb 1.17.0 h9b100fa_0
+    - libzlib 1.3.2 h47b2149_0
+    - lz4-c 1.9.4 h7354ed3_3
+    - ncurses 6.5 h7934f7d_0
+    - openssl 3.5.7 h1b28b03_0
+    - packaging 26.0 py314h06a4308_0
+    - pip 26.1.2 pyh0d26453_0
+    - pthread-stubs 0.3 h0ce48e5_1
+    - python 3.14.6 h4bdf6f9_100_cp314
+    - python_abi 3.14 4_cp314
+    - readline 8.3 hc2a1206_0
+    - setuptools 82.0.1 py314h06a4308_0
+    - sqlite 3.53.2 h795bf6d_0
+    - tk 8.6.15 h54e0aa7_0
+    - tzdata 2026b he532380_0
+    - wheel 0.47.0 py314h06a4308_0
+    - xorg-libx11 1.8.12 h9b100fa_1
+    - xorg-libxau 1.0.12 h9b100fa_0
+    - xorg-libxdmcp 1.1.5 h9b100fa_0
+    - xorg-xorgproto 2024.1 h47b2149_2
+    - xz 5.8.2 h448239c_0
+    - zlib 1.3.2 h47b2149_0
+    - zstd 1.5.7 h11fc155_0
+  run:
+    - __glibc >=2.28,<3.0.a0
+    - libgcc >=14
+    - python >=3.14,<3.15.0a0
+    - python_abi 3.14.* *_cp314
+test:
+  source_files:
+    - test
+  imports:
+    - frozendict
+  requires:
+    - pip
+    - pytest
+  commands:
+    - pip check
+    - pytest -v test  --deselect=test/test_frozendict_subclass.py::TestFrozendictSubclass::test_copycopy_sub
+about:
+  home: https://github.com/Marco-Sulla/python-frozendict
+  license: LGPL-3.0-only
+  license_family: LGPL
+  license_file: LICENSE.txt
+  summary: An immutable dictionary
+  description: frozendict is a simple immutable dictionary. It's fast as dict, and
+    sometimes faster!
+  dev_url: https://github.com/Marco-Sulla/python-frozendict
+  doc_url: https://github.com/Marco-Sulla/python-frozendict
+extra:
+  recipe-maintainers:
+    - Marco-Sulla
+    - ltalirz
+  final: true
+  copy_test_source_files: true
+  remote_url: https://github.com/AnacondaRecipes/frozendict-feedstock
+  sha: fd966b66fec8acfdad54915dd904c8348c7cafe1
+  task_id: Jvay628aQRO4By0X1r0Rxg
+  task_run_id: '0'
+  pbp_graph_uuid: 15b00201-e71a-4709-ba11-ec3f5a40d69f

@@ -1,0 +1,143 @@
+{
+  "paths": [
+    {
+      "_path": "lib/python3.14/site-packages/secretstorage-3.5.0.dist-info/INSTALLER",
+      "path_type": "hardlink",
+      "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+      "size_in_bytes": 5
+    },
+    {
+      "_path": "lib/python3.14/site-packages/secretstorage-3.5.0.dist-info/METADATA",
+      "path_type": "hardlink",
+      "sha256": "b98e3dc42ff7e9b1bacce60dac2662cd9965fad6e4469fc9483c9eb99998c367",
+      "size_in_bytes": 3974
+    },
+    {
+      "_path": "lib/python3.14/site-packages/secretstorage-3.5.0.dist-info/RECORD",
+      "path_type": "hardlink",
+      "sha256": "c069f40d9b216c4cf92c7006be88d1946bc785ea647c8c2139054d3d4ef29b1c",
+      "size_in_bytes": 1744
+    },
+    {
+      "_path": "lib/python3.14/site-packages/secretstorage-3.5.0.dist-info/REQUESTED",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "lib/python3.14/site-packages/secretstorage-3.5.0.dist-info/WHEEL",
+      "path_type": "hardlink",
+      "sha256": "69e6228a0d35958183cc1812f07c565ce837b95eb51bd8a33acba9fa4f68d6c9",
+      "size_in_bytes": 91
+    },
+    {
+      "_path": "lib/python3.14/site-packages/secretstorage-3.5.0.dist-info/direct_url.json",
+      "path_type": "hardlink",
+      "sha256": "3bc9d4d3b2c48543c502b259fad209e913dcfe9e3313dfac3329ad62d8a16877",
+      "size_in_bytes": 99
+    },
+    {
+      "_path": "lib/python3.14/site-packages/secretstorage-3.5.0.dist-info/licenses/LICENSE",
+      "path_type": "hardlink",
+      "sha256": "e700357592bb93704cb040ce4a6663a85292716a4041b6a267f598f21658466f",
+      "size_in_bytes": 1504
+    },
+    {
+      "_path": "lib/python3.14/site-packages/secretstorage-3.5.0.dist-info/top_level.txt",
+      "path_type": "hardlink",
+      "sha256": "86f7928b539619a12dde41156e3999d0cf8048fc62eb2fa74cf55af9dddcd01e",
+      "size_in_bytes": 14
+    },
+    {
+      "_path": "lib/python3.14/site-packages/secretstorage/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "fd8df8728da2f46fb49637c351913609d2cc61ad4757c8d045ce97b6b7fe7444",
+      "size_in_bytes": 3402
+    },
+    {
+      "_path": "lib/python3.14/site-packages/secretstorage/__pycache__/__init__.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "018e251ab749bf7f158c2a82a0c23b63649b4c53db02869fe55148567d23bdad",
+      "size_in_bytes": 3835
+    },
+    {
+      "_path": "lib/python3.14/site-packages/secretstorage/__pycache__/collection.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "0092599adbdc1c04ea781a7c3b9906eda6baf447f8e961a17095f543959c90eb",
+      "size_in_bytes": 15377
+    },
+    {
+      "_path": "lib/python3.14/site-packages/secretstorage/__pycache__/defines.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "d1a9ff4af5f109d63cdee776023a28154108033cd6d3d05b79d962a83afceaaf",
+      "size_in_bytes": 903
+    },
+    {
+      "_path": "lib/python3.14/site-packages/secretstorage/__pycache__/dhcrypto.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "8438cb42a4e791e1762ce61fca52796a4117f791fb1f46aca37ebcfd2e203457",
+      "size_in_bytes": 3058
+    },
+    {
+      "_path": "lib/python3.14/site-packages/secretstorage/__pycache__/exceptions.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "c0496668126a9ed102d4f77991f1f4b6ca71adaac86e2e1a3b3e4e111f3e4c63",
+      "size_in_bytes": 2252
+    },
+    {
+      "_path": "lib/python3.14/site-packages/secretstorage/__pycache__/item.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "9dd57b9edfb732b87e2af2c24369e19e95d4b45c4358a7d68130c5151a729d7f",
+      "size_in_bytes": 11870
+    },
+    {
+      "_path": "lib/python3.14/site-packages/secretstorage/__pycache__/util.cpython-314.pyc",
+      "path_type": "hardlink",
+      "sha256": "1d54c7f345c6c2dd28b33e05a6613808feb3c9c4095d158d27db49a74e99b416",
+      "size_in_bytes": 11696
+    },
+    {
+      "_path": "lib/python3.14/site-packages/secretstorage/collection.py",
+      "path_type": "hardlink",
+      "sha256": "e60f9aa879cf6c7a1a5f8d49f37f6869115a51df0caf805feca49ab5f0b2928a",
+      "size_in_bytes": 9829
+    },
+    {
+      "_path": "lib/python3.14/site-packages/secretstorage/defines.py",
+      "path_type": "hardlink",
+      "sha256": "39a72c67f8bb17b13e041a8a39d49304925498f07b08744d2e03632109e354cd",
+      "size_in_bytes": 872
+    },
+    {
+      "_path": "lib/python3.14/site-packages/secretstorage/dhcrypto.py",
+      "path_type": "hardlink",
+      "sha256": "55d4dbfabc7025c3a5b16153e1ad2fac5b9d0cc76181ab13483e2a4ebddb1e7f",
+      "size_in_bytes": 2274
+    },
+    {
+      "_path": "lib/python3.14/site-packages/secretstorage/exceptions.py",
+      "path_type": "hardlink",
+      "sha256": "d6e5195d3b9ae234597f83ca0c84f649559c48a3f694ff7bb3caf778966e762a",
+      "size_in_bytes": 1655
+    },
+    {
+      "_path": "lib/python3.14/site-packages/secretstorage/item.py",
+      "path_type": "hardlink",
+      "sha256": "6fb16519c5849830b5cdf10288ce79ac9d707b687af3836c55991652657fcc37",
+      "size_in_bytes": 6150
+    },
+    {
+      "_path": "lib/python3.14/site-packages/secretstorage/py.typed",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "lib/python3.14/site-packages/secretstorage/util.py",
+      "path_type": "hardlink",
+      "sha256": "27fb5961725356fef911216ebca62396d89d36bb7b7db4418703340b4f2a6cb8",
+      "size_in_bytes": 7487
+    }
+  ],
+  "paths_version": 1
+}

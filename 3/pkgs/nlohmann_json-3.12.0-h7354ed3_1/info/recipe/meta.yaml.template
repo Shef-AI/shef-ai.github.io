@@ -1,0 +1,63 @@
+{% set name = "nlohmann_json" %}
+{% set version = "3.12.0" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://github.com/nlohmann/json/archive/v{{ version }}.tar.gz
+  sha256: 4b92eb0c06d10683f7447ce9406cb97cd4b453be18d7279320f7b2f025c10187
+
+build:
+  number: 1
+  skip: true  # [win and vc<14]
+  # The json library is header only, so we do not need
+  # to export the compiler run-time libraries.
+  # They are just needed during the build to perform some checks.
+  ignore_run_exports:
+    - libcxx
+    - libgcc-ng
+    - libstdcxx-ng
+    - vc
+    - vs2015_runtime
+
+requirements:
+  build:
+    - cmake
+    - ninja-base
+    - {{ stdlib('c') }}
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host: []  # Empty host dependency section
+
+test:
+  commands:
+    - test -d ${PREFIX}/include/nlohmann  # [unix]
+    - test -f ${PREFIX}/include/nlohmann/json.hpp  # [unix]
+    - test -f ${PREFIX}/include/nlohmann/json_fwd.hpp  # [unix]
+    - test -f ${PREFIX}/share/cmake/nlohmann_json/nlohmann_jsonConfig.cmake  # [unix]
+    - test -f ${PREFIX}/share/cmake/nlohmann_json/nlohmann_jsonConfigVersion.cmake  # [unix]
+    - test -f ${PREFIX}/share/cmake/nlohmann_json/nlohmann_jsonTargets.cmake  # [unix]
+    - if not exist %LIBRARY_PREFIX%\include\nlohmann\json.hpp (exit 1)  # [win]
+    - if not exist %LIBRARY_PREFIX%\include\nlohmann\json_fwd.hpp (exit 1)  # [win]
+    - if not exist %LIBRARY_PREFIX%\share\cmake\nlohmann_json\nlohmann_jsonConfig.cmake (exit 1)  # [win]
+    - if not exist %LIBRARY_PREFIX%\share\cmake\nlohmann_json\nlohmann_jsonConfigVersion.cmake (exit 1)  # [win]
+    - if not exist %LIBRARY_PREFIX%\share\cmake\nlohmann_json\nlohmann_jsonTargets.cmake (exit 1)  # [win]
+
+about:
+  home: https://github.com/nlohmann/json
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE.MIT
+  summary: JSON for Modern C++
+  description: JSON for Modern C++ is a C++11 JSON parser.
+  dev_url: https://github.com/nlohmann/json
+  doc_url: https://nlohmann.github.io/json/
+
+extra:
+  recipe-maintainers:
+    - constantinpape
+    - SylvainCorlay
+    - JohanMabille
+    - wolfv

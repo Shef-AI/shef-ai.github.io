@@ -1,0 +1,94 @@
+{% set name = "menuinst" %}
+{% set version = "2.5.2" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  url: https://github.com/conda/{{ name }}/archive/{{ version }}.tar.gz
+  sha256: 079ea48b73530907881526240d0bda1cc012659baee344a61b62090d52465109
+
+build:
+  number: 0
+  # menuinst ships prebuilt launcher .exe binaries copied verbatim;
+  # relocation would corrupt them. See conda/menuinst#507.
+  binary_relocation: false
+  skip: true  # [py<310]
+  script:
+    # Apparently these files make the post-build linkage analysis crash
+    # and we should not need them on Windows
+    - del /q "{{ SRC_DIR }}\\menuinst\\data\\osx_launcher_*"  # [win]
+    - del /q "{{ SRC_DIR }}\\menuinst\\data\\appkit_launcher_*"  # [win]
+    # Delete in Linux too because we don't need them there
+    - rm -f "{{ SRC_DIR }}/menuinst/data/osx_launcher_*"  # [linux]
+    - rm -f "{{ SRC_DIR }}/menuinst/data/appkit_launcher_*"  # [linux]
+    - {{ PYTHON }} -m pip install . -vv --no-build-isolation --no-deps
+    # menuinst v1 expects cwp.py in PREFIX; backwards compat fix
+    - copy "%SP_DIR%\\menuinst\\_legacy\cwp.py" "%PREFIX%\\"  # [win]
+  skip_compile_pyc:  # [win]
+    - cwp.py  # [win]
+  missing_dso_whitelist:
+    - "**/libswift*"  # [osx]
+  entry_points:
+    - menuinst = menuinst.cli:main
+
+requirements:
+  build:
+    - python
+    - {{ stdlib('c') }}  # [win]
+    - {{ compiler('c') }}  # [win]
+    - {{ compiler('cxx') }}  # [win]
+  host:
+    - python
+    - pip
+    - wheel
+    - setuptools_scm >=6.2
+    - setuptools >=45
+    - toml
+  run:
+    - python
+    - tomli  # [py<311]
+    - tomli-w
+
+test:
+  source_files:
+    - tests
+  imports:
+    - menuinst
+    - menuinst.api
+    - menuinst._legacy  # [win]
+    - menuinst.platforms.win_utils.winshortcut  # [win]
+  # Test commands are moved to run_test.bat and run_test.sh
+  requires:
+    - pip
+    - conda
+    - pydantic >=2
+    - pytest
+    - pytest-mock
+
+
+about:
+  home: https://github.com/conda/menuinst
+  license: BSD-3-Clause AND MIT
+  license_family: BSD
+  license_file:
+    - LICENSE.txt
+    - menuinst/_vendor/apipkg/LICENSE
+  summary: cross platform install of menu items
+  description: |
+    This package provides cross platform menu item installation for conda packages.
+
+    If a conda package ships a menuinst JSON document under $PREFIX/Menu, conda will invoke
+    menuinst to process the JSON file and install the menu items in your operating system.
+    The menu items are removed when the package is uninstalled.
+  doc_url: https://conda.github.io/menuinst
+  dev_url: https://github.com/conda/menuinst
+
+extra:
+  recipe-maintainers:
+    - goanpeca
+    - jakirkham
+    - carlodri
+    - isuruf
+    - jaimergp

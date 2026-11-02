@@ -1,0 +1,53 @@
+'for'         Keyword
+' '           Text.Whitespace
+'('           Punctuation
+' '           Text.Whitespace
+'i'           Name
+' '           Text.Whitespace
+'<-'          Operator
+' '           Text.Whitespace
+'1'           Literal.Number.Integer
+' '           Text.Whitespace
+'to'          Name
+' '           Text.Whitespace
+'10'          Literal.Number.Integer
+' '           Text.Whitespace
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'for'         Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'user'        Name
+' '           Text.Whitespace
+'<-'          Operator
+' '           Text.Whitespace
+'userBase'    Name
+' '           Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'user'        Name
+'.'           Punctuation
+'age'         Name
+' '           Text.Whitespace
+'>='          Operator
+' '           Text.Whitespace
+'20'          Literal.Number.Integer
+' '           Text.Whitespace
+'&&'          Operator
+' '           Text.Whitespace
+'user'        Name
+'.'           Punctuation
+'age'         Name
+' '           Text.Whitespace
+'<'           Operator
+' '           Text.Whitespace
+'30'          Literal.Number.Integer
+')'           Punctuation
+' '           Text.Whitespace
+'yield'       Keyword
+' '           Text.Whitespace
+'user'        Name
+'.'           Punctuation
+'name'        Name
+'\n'          Text.Whitespace

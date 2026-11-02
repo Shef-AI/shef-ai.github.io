@@ -1,0 +1,20 @@
+{
+  "arch": "x86_64",
+  "build": "py314h7354ed3_0",
+  "build_number": 0,
+  "depends": [
+    "__glibc >=2.28,<3.0.a0",
+    "cffi >=1.17.0",
+    "libgcc >=14",
+    "libstdcxx >=14",
+    "python >=3.14,<3.15.0a0",
+    "python_abi 3.14.* *_cp314"
+  ],
+  "license": "MIT",
+  "license_family": "MIT",
+  "name": "brotlicffi",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1786444075287,
+  "version": "1.2.0.1"
+}

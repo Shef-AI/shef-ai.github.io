@@ -1,0 +1,8 @@
+prefix=/home/task_178784343179487/croot/xorg-xorgproto_1787843457862/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh
+includedir=${prefix}/include
+
+Name: KBProto
+Description: KB extension headers
+Version: 1.0.7
+Cflags: -I${includedir}
+Requires: xproto >= 7.0.33

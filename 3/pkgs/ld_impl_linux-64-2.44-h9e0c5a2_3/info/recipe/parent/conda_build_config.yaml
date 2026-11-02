@@ -1,0 +1,17 @@
+triplet:
+  - x86_64-conda-linux-gnu   # [linux and x86_64]
+  - aarch64-conda-linux-gnu  # [linux and aarch64]
+  - arm64-apple-darwin20.0.0  # [osx and arm64]
+ctng_vendor:
+  - conda  # [linux]
+  - none   # [not linux]
+cross_target_platform:
+  - linux-64       # [linux and x86_64]
+  - linux-aarch64  # [linux and aarch64]
+  - osx-arm64      # [osx and arm64]
+cxx_compiler:       # [linux or win]
+  - gcc_bootstrap   # [linux or win]
+c_stdlib:           # [win]
+  - m2w64-sysroot   # [win]
+cxx_compiler_version:  # [osx]
+- '17'                 # [osx]

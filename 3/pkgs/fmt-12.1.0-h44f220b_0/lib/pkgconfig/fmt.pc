@@ -1,0 +1,11 @@
+prefix=/home/task_177263987360664/croot/fmt_1772639901443/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho
+exec_prefix=/home/task_177263987360664/croot/fmt_1772639901443/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: fmt
+Description: A modern formatting library
+Version: 12.1.0
+Libs: -L${libdir} -lfmt
+Cflags: -I${includedir}
+

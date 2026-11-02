@@ -1,0 +1,23 @@
+{
+  "arch": "x86_64",
+  "build": "py314h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64/",
+  "constrains": [],
+  "depends": [
+    "python >=3.14,<3.15.0a0",
+    "python_abi 3.14.* *_cp314"
+  ],
+  "fn": "mdurl-0.1.2-py314h06a4308_0.conda",
+  "license": "MIT",
+  "license_family": "MIT",
+  "md5": "5468ed9d63f66b60e9aba2431874fb40",
+  "name": "mdurl",
+  "platform": "linux",
+  "sha256": "516beea38c8780b626072401c5e6eebba12b752de0cc099b73a16d74c8ba3410",
+  "size": 29384,
+  "subdir": "linux-64",
+  "timestamp": 1759954154000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/mdurl-0.1.2-py314h06a4308_0.conda",
+  "version": "0.1.2"
+}

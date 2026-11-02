@@ -1,0 +1,164 @@
+'# Computes Number of Public Methods (NPM) for each project, per-type' Comment.Single
+'\n'          Text.Whitespace
+
+'# Output is: NPM[ProjectID][TypeName] = NPM value' Comment.Single
+'\n'          Text.Whitespace
+
+'p'           Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'Project'     Name.Classes
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'input'       Keyword.Reserved
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'NPM'         Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'output'      Keyword.Reserved
+' '           Text.Whitespace
+'sum'         Keyword.Type
+'['           Punctuation
+'string'      Keyword.Type
+']'           Punctuation
+'['           Punctuation
+'string'      Keyword.Type
+']'           Punctuation
+' '           Text.Whitespace
+'of'          Keyword.Reserved
+' '           Text.Whitespace
+'int'         Keyword.Type
+';'           Punctuation
+'\n\n'        Text.Whitespace
+
+'visit'       Keyword.Reserved
+'('           Punctuation
+'p'           Name.Variable
+','           Punctuation
+' '           Text.Whitespace
+'visitor'     Keyword.Reserved
+' '           Text.Whitespace
+'{'           Punctuation
+'\n\t'        Text.Whitespace
+'# only look at the latest snapshot' Comment.Single
+'\n\t'        Text.Whitespace
+'before'      Keyword.Reserved
+' '           Text.Whitespace
+'n'           Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'CodeRepository' Name.Classes
+' '           Text.Whitespace
+'->'          Operator
+' '           Text.Whitespace
+'{'           Punctuation
+'\n\t\t'      Text.Whitespace
+'snapshot'    Name.Variable
+' '           Text.Whitespace
+':='          Operator
+' '           Text.Whitespace
+'getsnapshot(' Name.Function
+'n'           Name.Variable
+')'           Punctuation
+';'           Punctuation
+'\n\t\t'      Text.Whitespace
+'foreach'     Keyword.Reserved
+' '           Text.Whitespace
+'('           Punctuation
+'i'           Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'int'         Keyword.Type
+';'           Punctuation
+' '           Text.Whitespace
+'def('        Name.Function
+'snapshot'    Name.Variable
+'['           Punctuation
+'i'           Name.Variable
+']'           Punctuation
+')'           Punctuation
+')'           Punctuation
+'\n\t\t\t'    Text.Whitespace
+'visit'       Keyword.Reserved
+'('           Punctuation
+'snapshot'    Name.Variable
+'['           Punctuation
+'i'           Name.Variable
+']'           Punctuation
+')'           Punctuation
+';'           Punctuation
+'\n\t\t'      Text.Whitespace
+'stop'        Keyword.Reserved
+';'           Punctuation
+'\n\t'        Text.Whitespace
+'}'           Punctuation
+'\n\t'        Text.Whitespace
+'before'      Keyword.Reserved
+' '           Text.Whitespace
+'node'        Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'Declaration' Name.Classes
+' '           Text.Whitespace
+'->'          Operator
+'\n\t\t'      Text.Whitespace
+'if'          Keyword.Reserved
+' '           Text.Whitespace
+'('           Punctuation
+'node'        Name.Variable
+'.'           Punctuation
+'kind'        Name.Variable
+' '           Text.Whitespace
+'='           Operator
+'='           Operator
+' '           Text.Whitespace
+'TypeKind'    Name.Classes
+'.'           Punctuation
+'CLASS'       Name.Variable
+')'           Punctuation
+'\n\t\t\t'    Text.Whitespace
+'foreach'     Keyword.Reserved
+' '           Text.Whitespace
+'('           Punctuation
+'i'           Name.Variable
+':'           Operator
+' '           Text.Whitespace
+'int'         Keyword.Type
+';'           Punctuation
+' '           Text.Whitespace
+'has_modifier_public' Name.Variable
+'('           Punctuation
+'node'        Name.Variable
+'.'           Punctuation
+'methods'     Name.Variable
+'['           Punctuation
+'i'           Name.Variable
+']'           Punctuation
+')'           Punctuation
+')'           Punctuation
+'\n\t\t\t\t'  Text.Whitespace
+'NPM'         Name.Variable
+'['           Punctuation
+'p'           Name.Variable
+'.'           Punctuation
+'id'          Name.Variable
+']'           Punctuation
+'['           Punctuation
+'node'        Name.Variable
+'.'           Punctuation
+'name'        Name.Variable
+']'           Punctuation
+' '           Text.Whitespace
+'<<'          Operator
+' '           Text.Whitespace
+'1'           Literal.Number.Integer
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+')'           Punctuation
+';'           Punctuation
+'\n'          Text.Whitespace

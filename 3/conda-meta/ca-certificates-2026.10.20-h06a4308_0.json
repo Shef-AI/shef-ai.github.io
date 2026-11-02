@@ -1,0 +1,52 @@
+{
+  "name": "ca-certificates",
+  "version": "2026.10.20",
+  "build": "h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "subdir": "linux-64",
+  "fn": "ca-certificates-2026.10.20-h06a4308_0.conda",
+  "md5": "a7c7f8e255dee547754b1cb0872a3798",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/ca-certificates-2026.10.20-h06a4308_0.conda",
+  "sha256": "d9bf7a77d56cc1b9619423463c324cbf88d759fe5999549b271b1807860d9d52",
+  "arch": "x86_64",
+  "platform": "linux",
+  "depends": [],
+  "constrains": [],
+  "license": "MPL-2.0",
+  "license_family": "Other",
+  "timestamp": 1792524554000,
+  "size": 115864,
+  "requested_spec": "https://repo.anaconda.com/pkgs/main/linux-64::ca-certificates==2026.10.20=h06a4308_0",
+  "package_tarball_full_path": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/ca-certificates-2026.10.20-h06a4308_0.conda",
+  "extracted_package_dir": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/ca-certificates-2026.10.20-h06a4308_0",
+  "files": [
+    "ssl/cacert.pem",
+    "ssl/cert.pem"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "ssl/cacert.pem",
+        "path_type": "hardlink",
+        "sha256": "796f1389bfea13c0ed78f663b765baaff54a508e5483786bd6ece73c5e3e3cbe",
+        "size_in_bytes": 200116,
+        "sha256_in_prefix": "796f1389bfea13c0ed78f663b765baaff54a508e5483786bd6ece73c5e3e3cbe"
+      },
+      {
+        "_path": "ssl/cert.pem",
+        "path_type": "softlink",
+        "sha256": "796f1389bfea13c0ed78f663b765baaff54a508e5483786bd6ece73c5e3e3cbe",
+        "size_in_bytes": 200116
+      }
+    ]
+  },
+  "link": {
+    "source": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/ca-certificates-2026.10.20-h06a4308_0",
+    "type": 1
+  },
+  "requested_specs": [
+    "https://repo.anaconda.com/pkgs/main/linux-64::ca-certificates==2026.10.20=h06a4308_0"
+  ]
+}

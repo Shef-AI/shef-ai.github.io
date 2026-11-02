@@ -1,0 +1,15 @@
+{
+  "arch": "x86_64",
+  "build": "h71b5c5c_2",
+  "build_number": 2,
+  "depends": [
+    "libre2-11 2025.11.05 h7354ed3_2"
+  ],
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "name": "re2",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1784747043852,
+  "version": "2025.11.05"
+}

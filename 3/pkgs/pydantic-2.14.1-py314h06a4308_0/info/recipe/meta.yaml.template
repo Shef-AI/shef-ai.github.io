@@ -1,0 +1,117 @@
+{% set name = "pydantic" %}
+{% set version = "2.14.1" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 94f478203dd03404682a1ada216965651dd74b1d2d5ffd62e00e0837caab5c26
+
+build:
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation --ignore-installed --no-cache-dir -vvv
+  skip: true  # [py<310]
+
+requirements:
+  host:
+    - python
+    - pip
+    - hatch-fancy-pypi-readme >=22.5.0
+    - hatchling
+  run:
+    - python
+    - typing_extensions >=4.16.0
+    - annotated-types >=0.6.0
+    - pydantic-core ==2.50.1
+    - typing-inspection >=0.4.4
+  run_constrained:
+    - tzdata  # [win and py>=39]
+    - email-validator >=2.0.0
+
+# E   ModuleNotFoundError: No module named 'pytest_examples'
+{% set ignore_tests = " --ignore=tests/test_docs.py" %}
+# >       with pytest.raises(UserWarning, match="Items 'a', 'b' on TypedDict class 'TD' are using the `ReadOnly` qualifier"):
+# E       Failed: DID NOT RAISE <class 'UserWarning'>
+# pytest 9.1 removed the deprecated callable-form of pytest.warns()/raises(); pydantic 2.13.5's
+# bundled tests still call `pytest.warns(Warning, lambda: ..., match=...)` in these 5 tests,
+# which now raises TypeError instead of checking the warning. Already fixed on pydantic's main
+# branch (converted to `with pytest.warns(...)` blocks) but not yet released.
+{% set deselect_tests = " --deselect=tests/test_types_typeddict.py::test_readonly_qualifier_warning" %}
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_deprecated_fields.py::test_deprecated_fields" %}
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_deprecated_fields.py::test_deprecated_fields_deprecated_class" %}
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_deprecated_fields.py::test_computed_field_deprecated" %}
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_deprecated_fields.py::test_deprecated_with_boolean" %}
+{% set deselect_tests = deselect_tests + " --deselect=tests/test_deprecated_fields.py::test_deprecated_field_forward_annotation" %}
+test:
+  source_files:
+    - tests
+  imports:
+    - pydantic
+    - pydantic._internal
+    - pydantic._internal._config
+    - pydantic._internal._decorators
+    - pydantic._internal._discriminated_union
+    - pydantic._internal._generate_schema
+    - pydantic._internal._generics
+    - pydantic._internal._import_utils
+    - pydantic._internal._mock_val_ser
+    - pydantic._internal._model_construction
+    - pydantic._internal._repr
+    - pydantic._internal._typing_extra
+    - pydantic._internal._utils
+    - pydantic._internal._validators
+    - pydantic._migration
+    - pydantic.alias_generators
+    - pydantic.color
+    - pydantic.config
+    - pydantic.dataclasses
+    - pydantic.deprecated.decorator
+    - pydantic.deprecated.json
+    - pydantic.deprecated.parse
+    - pydantic.deprecated.tools
+    - pydantic.errors
+    - pydantic.experimental.arguments_schema
+    - pydantic.experimental.pipeline
+    - pydantic.fields
+    - pydantic.functional_serializers
+    - pydantic.functional_validators
+    - pydantic.json_schema
+    - pydantic.main
+    - pydantic.networks
+    - pydantic.plugin
+    - pydantic.plugin._loader
+    - pydantic.type_adapter
+    - pydantic.types
+  requires:
+    - pip
+    - pytest
+    - pytest-mock
+    - pytest-benchmark
+    - jsonschema
+    - pytz
+    - faker
+    - eval-type-backport  # [py<310]
+    - dirty-equals
+  commands:
+    - pip check
+    - python -c "from importlib.metadata import version; assert(version('{{ name }}')=='{{ version }}')"
+    - pytest -ra -vv --tb=short tests {{ ignore_tests }} {{ deselect_tests }}
+
+about:
+  home: https://github.com/pydantic/pydantic
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: Data validation and settings management using python type hinting
+  description: |
+    Data validation and settings management using python type hinting.
+    See documentation doc_url for more details.
+  doc_url: https://pydantic.dev/docs
+  dev_url: https://github.com/pydantic/pydantic
+
+extra:
+  recipe-maintainers:
+    - samuelcolvin
+    - dgasmith

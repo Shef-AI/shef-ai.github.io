@@ -1,0 +1,56 @@
+{% set name = "conda-self" %}
+{% set version = "0.3.0" %}
+{% set build_number = 0 %}
+{% set sha256 = "59ac0446537c94fc16177007ee4593dbd713e04432ca4a191badb799dfb26068" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  url: https://github.com/conda/{{ name }}/archive/{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  skip: True # [py<310]
+  number: {{ build_number }}
+  script_env:
+    - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
+  script:
+    - python -m pip install . --no-deps --no-build-isolation -vv
+
+requirements:
+  host:
+    - python
+    - pip
+    - hatchling >=1.12.2
+    - hatch-vcs >=0.2.0
+  run:
+    - python
+    - conda >=26.1.1
+
+test:
+  requires:
+    - python
+    - pip
+  imports:
+    - conda_self
+  commands:
+    - pip check
+    - python -m conda self --help
+
+
+about:
+  home: https://github.com/conda/conda-self
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
+  dev_url: https://github.com/conda/conda-self
+  doc_url: https://conda.github.io/conda-self/
+  summary: A conda self command to manage your base environment safely.
+  description: A conda self command to manage your base environment safely.
+
+extra:
+  recipe-maintainers:
+    - jaimergp
+    - soapy1

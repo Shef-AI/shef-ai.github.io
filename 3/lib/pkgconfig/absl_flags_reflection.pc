@@ -1,0 +1,12 @@
+prefix=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3
+exec_prefix=${prefix}
+libdir=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/lib
+includedir=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/include
+
+Name: absl_flags_reflection
+Description: Abseil flags_reflection library
+URL: https://abseil.io/
+Version: 20260526
+Requires: absl_config = 20260526, absl_fast_type_id = 20260526, absl_flags_commandlineflag = 20260526, absl_flags_private_handle_accessor = 20260526, absl_flags_config = 20260526, absl_strings = 20260526, absl_synchronization = 20260526, absl_flat_hash_map = 20260526, absl_no_destructor = 20260526
+Libs: -L${libdir}  -labsl_flags_reflection 
+Cflags: -I${includedir} -DNOMINMAX

@@ -1,0 +1,25 @@
+From a755711e9313ee22884960ff4dc53ee53e22fb50 Mon Sep 17 00:00:00 2001
+From: Riccardo Grieco <riccardo.grieco@hotmail.com>
+Date: Wed, 29 Apr 2026 11:42:57 +0200
+Subject: [PATCH] Update project version from 14.2.4 to 14.2.7
+
+---
+ CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 5d4cc2f..19bb268 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.12...3.21)
+ 
+ project(
+   reproc
+-  VERSION 14.2.4
++  VERSION 14.2.7
+   DESCRIPTION "Cross-platform C99/C++11 process library"
+   HOMEPAGE_URL "https://github.com/DaanDeMeyer/reproc"
+   LANGUAGES C
+-- 
+2.43.0
+

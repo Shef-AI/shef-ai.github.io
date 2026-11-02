@@ -1,0 +1,183 @@
+'messagebox'  Keyword
+' '           Text.Whitespace
+'"double string"' Literal.String.Double
+' '           Text.Whitespace
+'"title"'     Literal.String.Double
+'\n'          Text.Whitespace
+
+'messagebox'  Keyword
+' '           Text.Whitespace
+'"goto label /* a string */ ; same string"' Literal.String.Double
+'\n'          Text.Whitespace
+
+'a'           Name.Variable
+'='           Operator
+'10'          Literal.Number.Integer
+'\n'          Text.Whitespace
+
+'b'           Name.Variable
+'='           Operator
+'  '          Text.Whitespace
+"'abc'"       Literal.String.Single
+'#$41'        Literal.String.Char
+"'def'"       Literal.String.Single
+'\n'          Text.Whitespace
+
+'c'           Name.Variable
+' '           Text.Whitespace
+'='           Operator
+'#65'         Literal.String.Char
+'   '         Text.Whitespace
+'/*'          Comment.Multiline
+' multiline comment ' Comment.Multiline
+'*'           Comment.Multiline
+' '           Comment.Multiline
+'/'           Comment.Multiline
+' '           Comment.Multiline
+'*'           Comment.Multiline
+' '           Comment.Multiline
+'/'           Comment.Multiline
+' '           Comment.Multiline
+'*/'          Comment.Multiline
+'/*'          Comment.Multiline
+'\ncomment '  Comment.Multiline
+'*/'          Comment.Multiline
+' '           Text.Whitespace
+'d'           Name.Variable
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'10'          Literal.Number.Integer
+'   '         Text.Whitespace
+'; inline comment /* still inline */' Comment.Single
+'\n'          Text.Whitespace
+
+'e'           Name.Variable
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'d'           Name.Variable
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+'20'          Literal.Number.Integer
+' '           Text.Whitespace
+'-'           Operator
+' '           Text.Whitespace
+'('           Literal.String.Symbol
+'('           Literal.String.Symbol
+'$a'          Literal.Number.Hex
+' '           Text.Whitespace
+'*'           Operator
+' '           Text.Whitespace
+'2'           Literal.Number.Integer
+')'           Literal.String.Symbol
+' '           Text.Whitespace
+'/'           Operator
+' '           Text.Whitespace
+'4'           Literal.Number.Integer
+')'           Literal.String.Symbol
+' '           Text.Whitespace
+'<<'          Operator
+' '           Text.Whitespace
+'3'           Literal.Number.Integer
+' '           Text.Whitespace
+'%'           Operator
+' '           Text.Whitespace
+'('           Literal.String.Symbol
+'2'           Literal.Number.Integer
+' '           Text.Whitespace
+'>>'          Operator
+' '           Text.Whitespace
+'1'           Literal.Number.Integer
+')'           Literal.String.Symbol
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+'result'      Name.Builtin
+'\n\n\n'      Text.Whitespace
+
+':thing'      Name.Label
+'\n\n'        Text.Whitespace
+
+'strcompare'  Keyword
+' '           Text.Whitespace
+'c'           Name.Variable
+' '           Text.Whitespace
+'"thing"'     Literal.String.Double
+'\n'          Text.Whitespace
+
+'if'          Keyword
+' '           Text.Whitespace
+'result'      Name.Builtin
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'1'           Literal.Number.Integer
+' '           Text.Whitespace
+'then'        Keyword
+'\n    '      Text.Whitespace
+'goto'        Keyword
+' '           Text.Whitespace
+'label_'      Name.Label
+'\n'          Text.Whitespace
+
+'elseif'      Keyword
+' '           Text.Whitespace
+'result'      Name.Builtin
+' '           Text.Whitespace
+'>'           Operator
+' '           Text.Whitespace
+'-'           Operator
+'1'           Literal.Number.Integer
+' '           Text.Whitespace
+'then'        Keyword
+'\n    '      Text.Whitespace
+'goto'        Keyword
+' '           Text.Whitespace
+'10'          Name.Label
+'\n'          Text.Whitespace
+
+'elseif'      Keyword
+' '           Text.Whitespace
+'d'           Name.Variable
+' '           Text.Whitespace
+'>'           Operator
+' '           Text.Whitespace
+'('           Literal.String.Symbol
+'1'           Literal.Number.Integer
+'+'           Operator
+'2'           Literal.Number.Integer
+'*'           Operator
+'3'           Literal.Number.Integer
+')'           Literal.String.Symbol
+'/'           Operator
+'7'           Literal.Number.Integer
+' '           Text.Whitespace
+'then'        Keyword
+'\n    '      Text.Whitespace
+'messagebox'  Keyword
+' '           Text.Whitespace
+'"thing"'     Literal.String.Double
+'\n'          Text.Whitespace
+
+'else'        Keyword
+'\n    '      Text.Whitespace
+'messagebox'  Keyword
+' '           Text.Whitespace
+'"done"'      Literal.String.Double
+'\n'          Text.Whitespace
+
+'endif'       Keyword
+'\n\n'        Text.Whitespace
+
+'if'          Keyword
+' '           Text.Whitespace
+'abc'         Name.Variable
+' '           Text.Whitespace
+'messagebox'  Keyword
+' '           Text.Whitespace
+'"thing1"'    Literal.String.Double
+' '           Text.Whitespace
+'"title"'     Literal.String.Double
+'\n'          Text.Whitespace

@@ -1,0 +1,109 @@
+# This file created by conda-build 26.3.0
+# meta.yaml template originally from:
+# /home/task_178703950895005/opentelemetry-sdk-feedstock/recipe, last modified Tue Aug 18 07:52:04 2026
+# ------------------------------------------------
+
+package:
+  name: opentelemetry-sdk
+  version: 1.43.0
+source:
+  url: https://pypi.org/packages/source/o/opentelemetry-sdk/opentelemetry_sdk-1.43.0.tar.gz
+  sha256: d8187c81c162df9913e4003dd6485f7390d9a24fc17026ec7387b8b8218b08e9
+build:
+  number: '0'
+  script: /home/task_178703950895005/croot/opentelemetry-sdk_1787039552347/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_pla/bin/python
+    -m pip install . --no-deps --no-build-isolation -vv
+  string: py314h06a4308_0
+requirements:
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 52_gnu
+    - bzip2 1.0.8 h5eee18b_6
+    - ca-certificates 2026.7.16 h06a4308_0
+    - hatchling 1.31.0 py314h06a4308_0
+    - ld_impl_linux-64 2.44 h9e0c5a2_3
+    - libexpat 2.8.2 h7354ed3_1
+    - libffi 3.4.8 h06d3fd0_3
+    - libgcc 15.2.0 h69a1729_8
+    - libgcc-ng 15.2.0 h166f726_8
+    - libmpdec 4.0.1 h47b2149_0
+    - libstdcxx 15.2.0 h39759b7_8
+    - libstdcxx-ng 15.2.0 hc03a8fd_8
+    - libuuid 1.41.5 h5eee18b_0
+    - libxcb 1.17.0 h9b100fa_0
+    - libzlib 1.3.2 h47b2149_0
+    - lz4-c 1.9.4 h7354ed3_5
+    - ncurses 6.5 h7934f7d_0
+    - openssl 3.5.7 h1b28b03_0
+    - packaging 26.2 py314h06a4308_0
+    - pathspec 1.1.1 py314h06a4308_0
+    - pip 26.1.2 pyh0d26453_0
+    - pluggy 1.6.0 py314h06a4308_0
+    - pthread-stubs 0.3 h47b2149_2
+    - python 3.14.7 h2bd7c14_101_cp314
+    - python_abi 3.14 4_cp314
+    - readline 8.3 hc2a1206_0
+    - sqlite 3.53.2 h795bf6d_0
+    - tk 9.0.4 h3840b71_1
+    - trove-classifiers 2026.6.1.19 py314h06a4308_0
+    - tzdata 2026c he532380_0
+    - xorg-libx11 1.8.12 h9b100fa_1
+    - xorg-libxau 1.0.12 h9b100fa_0
+    - xorg-libxdmcp 1.1.5 h9b100fa_0
+    - xorg-xorgproto 2024.1 h47b2149_2
+    - xz 5.8.2 h448239c_0
+    - zlib 1.3.2 h47b2149_0
+    - zstd 1.5.7 h11fc155_0
+  run:
+    - opentelemetry-api ==1.43.0
+    - opentelemetry-semantic-conventions ==0.64b0
+    - python >=3.14,<3.15.0a0
+    - python_abi 3.14.* *_cp314
+    - typing_extensions >=4.5.0
+  run_constrained:
+    - jsonschema >=4.0
+    - pyyaml >=6.0.0
+test:
+  source_files:
+    - tests
+  imports:
+    - opentelemetry.sdk
+    - opentelemetry.sdk.resources
+  commands:
+    - pip check
+    - pytest -v tests  --ignore=tests/test_configurator.py --ignore=tests/metrics/exponential_histogram/test_exponent_mapping.py
+      --ignore=tests/metrics/exponential_histogram/test_exponential_bucket_histogram_aggregation.py
+      --ignore=tests/metrics/integration_test/test_console_exporter.py --ignore=tests/metrics/integration_test/test_exporter_concurrency.py
+      --ignore=tests/metrics/test_backward_compat.py --ignore=tests/metrics/test_import.py
+      --ignore=tests/metrics/test_metric_reader_storage.py --ignore=tests/metrics/test_metrics.py
+      --ignore=tests/metrics/test_periodic_exporting_metric_reader.py --ignore=tests/trace/test_trace.py  --deselect=tests/context/test_asyncio.py::TestAsyncio::test_with_asyncio
+  requires:
+    - jsonschema >=4.0
+    - pip
+    - pytest >=7.4.4
+    - pyyaml >=6.0.0
+about:
+  home: https://github.com/open-telemetry/opentelemetry-python/tree/main/opentelemetry-sdk
+  license: Apache-2.0
+  license_family: Apache
+  license_file: LICENSE
+  summary: OpenTelemetry Python / SDK
+  description: 'OpenTelemetry, also known as OTel for short, is a vendor-neutral open-source
+
+    Observability framework for instrumenting, generating, collecting, and exporting
+
+    telemetry data such as traces, metrics, logs. As an industry-standard
+
+    it is natively supported by a number of vendors.'
+  doc_url: https://opentelemetry-python.readthedocs.io
+  dev_url: https://github.com/open-telemetry/opentelemetry-python/tree/main/opentelemetry-sdk
+extra:
+  recipe-maintainers:
+    - mariusvniekerk
+  final: true
+  copy_test_source_files: true
+  remote_url: https://github.com/AnacondaRecipes/opentelemetry-sdk-feedstock
+  sha: cc24cc946215fa169cb5f840caf48ee334314b3c
+  task_id: RZhznpaYQ_qg5-qPKc_WfA
+  task_run_id: '0'
+  pbp_graph_uuid: 6a3ed1fb-dbe2-465c-bf4f-7252af000dcc

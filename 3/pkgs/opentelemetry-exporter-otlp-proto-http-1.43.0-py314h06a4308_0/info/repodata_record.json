@@ -1,0 +1,30 @@
+{
+  "arch": "x86_64",
+  "build": "py314h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64/",
+  "constrains": [],
+  "depends": [
+    "googleapis-common-protos >=1.52,<2",
+    "opentelemetry-api >=1.15,<2",
+    "opentelemetry-exporter-otlp-proto-common 1.43.0",
+    "opentelemetry-proto 1.43.0",
+    "opentelemetry-sdk 1.43.0",
+    "python >=3.14,<3.15.0a0",
+    "python_abi 3.14.* *_cp314",
+    "requests >=2.7,<3",
+    "typing-extensions >=4.5.0"
+  ],
+  "fn": "opentelemetry-exporter-otlp-proto-http-1.43.0-py314h06a4308_0.conda",
+  "license": "Apache-2.0",
+  "license_family": "Apache",
+  "md5": "5099bbb0aee05db170c491199a074a5e",
+  "name": "opentelemetry-exporter-otlp-proto-http",
+  "platform": "linux",
+  "sha256": "0d76aca670f04b167e9425f5de708a040f6295af825a31afcec614f8937f564b",
+  "size": 39784,
+  "subdir": "linux-64",
+  "timestamp": 1787061457000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/opentelemetry-exporter-otlp-proto-http-1.43.0-py314h06a4308_0.conda",
+  "version": "1.43.0"
+}

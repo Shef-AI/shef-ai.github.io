@@ -1,0 +1,23 @@
+diff --git a/include/X11/meson.build b/include/X11/meson.build
+index 1c33c64..703ab19 100644
+--- a/include/X11/meson.build
++++ b/include/X11/meson.build
+@@ -1,7 +1,8 @@
+ fd_set_maybe_headers = [ 'sys/param.h',
+                          'sys/types.h',
+                          'sys/time.h',
+-                         'sys/select.h'
++                         'sys/select.h',
++                         'winsock2.h'
+ ]
+ fd_set_headers = ''
+ foreach h : fd_set_maybe_headers
+@@ -15,6 +16,8 @@ if cc.has_member('fd_set', 'fds_bits', prefix: fd_set_headers)
+     fds_bits = 'fds_bits'
+ elif cc.has_member('fd_set', '__fds_bits', prefix: fd_set_headers)
+     fds_bits = '__fds_bits'
++elif cc.has_member('fd_set', 'fd_count', prefix: fd_set_headers)
++    fds_bits = 'fd_count'
+ else
+     error('Your fd_set is too weird.')
+ endif

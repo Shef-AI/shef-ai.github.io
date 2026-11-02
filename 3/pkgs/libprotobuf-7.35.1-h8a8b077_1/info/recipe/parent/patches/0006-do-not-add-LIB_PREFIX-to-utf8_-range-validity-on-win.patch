@@ -1,0 +1,27 @@
+From d50756b6efe4f96bc3c235912d4e6718bfdd9ce8 Mon Sep 17 00:00:00 2001
+From: "H. Vetinari" <h.vetinari@gmx.com>
+Date: Sat, 5 Jul 2025 12:22:19 +1100
+Subject: [PATCH 6/9] do not add LIB_PREFIX to utf8_{range,validity} on windows
+
+---
+ third_party/utf8_range/CMakeLists.txt | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/third_party/utf8_range/CMakeLists.txt b/third_party/utf8_range/CMakeLists.txt
+index 231197022a..23139474bb 100644
+--- a/third_party/utf8_range/CMakeLists.txt
++++ b/third_party/utf8_range/CMakeLists.txt
+@@ -21,11 +21,11 @@ add_library (utf8_validity utf8_range.c)
+ 
+ set_target_properties(utf8_range PROPERTIES
+   VERSION ${protobuf_VERSION}
+-  OUTPUT_NAME ${LIB_PREFIX}utf8_range
++  OUTPUT_NAME utf8_range
+ )
+ set_target_properties(utf8_validity PROPERTIES
+   VERSION ${protobuf_VERSION}
+-  OUTPUT_NAME ${LIB_PREFIX}utf8_validity
++  OUTPUT_NAME utf8_validity
+ )
+ 
+ target_include_directories(utf8_validity PUBLIC

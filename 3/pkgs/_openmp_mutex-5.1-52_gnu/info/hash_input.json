@@ -1,0 +1,6 @@
+{
+  "openmp_mutex_impl": "gnu",
+  "channel_targets": "defaults",
+  "target_platform": "linux-64",
+  "version": "5.1"
+}

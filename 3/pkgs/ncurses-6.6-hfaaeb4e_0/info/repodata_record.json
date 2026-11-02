@@ -1,0 +1,24 @@
+{
+  "arch": "x86_64",
+  "build": "hfaaeb4e_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.28,<3.0.a0",
+    "libgcc >=14",
+    "libstdcxx >=14"
+  ],
+  "fn": "ncurses-6.6-hfaaeb4e_0.conda",
+  "license": "MIT AND X11",
+  "license_family": "MIT",
+  "md5": "f48732796aeb8f94aaebd16cee789513",
+  "name": "ncurses",
+  "platform": "linux",
+  "sha256": "a080cfac9b51bb62dcd54823622e602cd8cd8d67406c76cbbdfc0602f9e822b8",
+  "size": 914805,
+  "subdir": "linux-64",
+  "timestamp": 1787317003000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/ncurses-6.6-hfaaeb4e_0.conda",
+  "version": "6.6"
+}

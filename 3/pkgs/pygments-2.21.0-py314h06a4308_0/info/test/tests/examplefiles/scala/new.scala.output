@@ -1,0 +1,44 @@
+'new'         Keyword
+' '           Text.Whitespace
+'A'           Name.Class
+'\n'          Text.Whitespace
+
+'new'         Keyword
+' '           Text.Whitespace
+'{'           Punctuation
+' '           Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace
+
+'new'         Keyword
+' '           Text.Whitespace
+'Foo'         Name.Class
+'\n'          Text.Whitespace
+
+'new'         Keyword
+' '           Text.Whitespace
+'foo'         Name
+'.'           Punctuation
+'Foo'         Name.Class
+'\n'          Text.Whitespace
+
+'new'         Keyword
+' '           Text.Whitespace
+'Foo'         Name.Class
+'.'           Punctuation
+'Foo'         Name.Class
+'\n'          Text.Whitespace
+
+'new'         Keyword
+' '           Text.Whitespace
+'A'           Name.Class
+':'           Punctuation
+'\n  '        Text.Whitespace
+'def'         Keyword
+' '           Text.Whitespace
+'f'           Name.Function
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'3'           Literal.Number.Integer
+'\n'          Text.Whitespace

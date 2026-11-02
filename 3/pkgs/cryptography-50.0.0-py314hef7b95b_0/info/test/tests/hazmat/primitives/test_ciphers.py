@@ -1,0 +1,237 @@
+# This file is dual licensed under the terms of the Apache License, Version
+# 2.0, and the BSD License. See the LICENSE file in the root of this repository
+# for complete details.
+
+
+import binascii
+import os
+import sys
+import typing
+
+import pytest
+
+from cryptography import utils
+from cryptography.exceptions import AlreadyFinalized
+from cryptography.hazmat.decrepit.ciphers.algorithms import Camellia
+from cryptography.hazmat.decrepit.ciphers.modes import CFB, CFB8, OFB
+from cryptography.hazmat.primitives import ciphers
+from cryptography.hazmat.primitives.ciphers import modes
+from cryptography.hazmat.primitives.ciphers.algorithms import AES
+
+from ...utils import load_nist_vectors, load_vectors_from_file
+from .test_aead import large_mmap
+
+
+def test_deprecated_ciphers_import_with_warning():
+    with pytest.warns(utils.CryptographyDeprecationWarning):
+        from cryptography.hazmat.primitives.ciphers.algorithms import (
+            ARC4,  # noqa: F401
+        )
+    with pytest.warns(utils.CryptographyDeprecationWarning):
+        from cryptography.hazmat.primitives.ciphers.algorithms import (
+            TripleDES,  # noqa: F401
+        )
+    with pytest.warns(utils.CryptographyDeprecationWarning):
+        from cryptography.hazmat.primitives.ciphers.algorithms import (
+            Camellia,  # noqa: F401
+        )
+
+
+class TestAES:
+    @pytest.mark.parametrize(
+        ("key", "keysize"),
+        [(b"0" * 32, 128), (b"0" * 48, 192), (b"0" * 64, 256)],
+    )
+    def test_key_size(self, key, keysize):
+        cipher = AES(binascii.unhexlify(key))
+        assert cipher.key_size == keysize
+
+    def test_invalid_key_size(self):
+        with pytest.raises(ValueError):
+            AES(binascii.unhexlify(b"0" * 12))
+
+    def test_invalid_key_type(self):
+        with pytest.raises(TypeError, match="key must be bytes"):
+            AES(typing.cast(typing.Any, "0" * 32))
+
+
+class TestAESXTS:
+    @pytest.mark.parametrize("mode", (modes.CBC, modes.CTR, CFB, CFB8, OFB))
+    def test_invalid_key_size_with_mode(self, mode):
+        with pytest.raises(ValueError):
+            ciphers.Cipher(AES(b"0" * 64), mode(b"0" * 16))
+
+    def test_xts_tweak_not_bytes(self):
+        with pytest.raises(TypeError):
+            modes.XTS(typing.cast(typing.Any, 32))
+
+    def test_xts_tweak_too_small(self):
+        with pytest.raises(ValueError):
+            modes.XTS(b"0")
+
+    def test_xts_wrong_key_size(self):
+        with pytest.raises(ValueError):
+            ciphers.Cipher(AES(b"0" * 16), modes.XTS(b"0" * 16))
+
+
+class TestGCM:
+    @pytest.mark.parametrize("size", [7, 129])
+    def test_gcm_min_max(self, size):
+        with pytest.raises(ValueError):
+            modes.GCM(b"0" * size)
+
+    @pytest.mark.parametrize("min_tag_length", [0, 1, 2, 3])
+    def test_gcm_rejects_delayed_tag_min_tag_length_too_short(
+        self, min_tag_length
+    ):
+        with pytest.raises(ValueError, match="min_tag_length must be >= 4"):
+            modes.GCM(b"\x00" * 12, min_tag_length=min_tag_length)
+
+
+class TestCamellia:
+    @pytest.mark.parametrize(
+        ("key", "keysize"),
+        [(b"0" * 32, 128), (b"0" * 48, 192), (b"0" * 64, 256)],
+    )
+    def test_key_size(self, key, keysize):
+        cipher = Camellia(binascii.unhexlify(key))
+        assert cipher.key_size == keysize
+
+    def test_invalid_key_size(self):
+        with pytest.raises(ValueError):
+            Camellia(binascii.unhexlify(b"0" * 12))
+
+    def test_invalid_key_type(self):
+        with pytest.raises(TypeError, match="key must be bytes"):
+            Camellia(typing.cast(typing.Any, "0" * 32))
+
+
+class TestCipherUpdateInto:
+    @pytest.mark.parametrize(
+        "params",
+        load_vectors_from_file(
+            os.path.join("ciphers", "AES", "ECB", "ECBGFSbox128.rsp"),
+            load_nist_vectors,
+        ),
+    )
+    def test_update_into(self, params):
+        key = binascii.unhexlify(params["key"])
+        pt = binascii.unhexlify(params["plaintext"])
+        ct = binascii.unhexlify(params["ciphertext"])
+        c = ciphers.Cipher(AES(key), modes.ECB())
+        encryptor = c.encryptor()
+        buf = bytearray(len(pt) + 15)
+        res = encryptor.update_into(pt, buf)
+        assert res == len(pt)
+        assert bytes(buf)[:res] == ct
+
+    def test_update_into_gcm(self):
+        key = binascii.unhexlify(b"e98b72a9881a84ca6b76e0f43e68647a")
+        iv = binascii.unhexlify(b"8b23299fde174053f3d652ba")
+        ct = binascii.unhexlify(b"5a3c1cf1985dbb8bed818036fdd5ab42")
+        pt = binascii.unhexlify(b"28286a321293253c3e0aa2704a278032")
+        c = ciphers.Cipher(AES(key), modes.GCM(iv))
+        encryptor = c.encryptor()
+        buf = bytearray(len(pt) + 15)
+        res = encryptor.update_into(pt, buf)
+        assert res == len(pt)
+        assert bytes(buf)[:res] == ct
+        encryptor.finalize()
+        c = ciphers.Cipher(AES(key), modes.GCM(iv, encryptor.tag))
+        decryptor = c.decryptor()
+        res = decryptor.update_into(ct, buf)
+        decryptor.finalize()
+        assert res == len(pt)
+        assert bytes(buf)[:res] == pt
+
+    def test_finalize_with_tag_already_finalized(self):
+        key = binascii.unhexlify(b"e98b72a9881a84ca6b76e0f43e68647a")
+        iv = binascii.unhexlify(b"8b23299fde174053f3d652ba")
+        encryptor = ciphers.Cipher(AES(key), modes.GCM(iv)).encryptor()
+        ciphertext = encryptor.update(b"abc") + encryptor.finalize()
+
+        decryptor = ciphers.Cipher(
+            AES(key), modes.GCM(iv, tag=encryptor.tag)
+        ).decryptor()
+        decryptor.update(ciphertext)
+        decryptor.finalize()
+        with pytest.raises(AlreadyFinalized):
+            decryptor.finalize_with_tag(encryptor.tag)
+
+    def test_finalize_with_tag_duplicate_tag(self):
+        decryptor = ciphers.Cipher(
+            AES(b"\x00" * 16), modes.GCM(b"\x00" * 12, tag=b"\x00" * 16)
+        ).decryptor()
+        with pytest.raises(ValueError):
+            decryptor.finalize_with_tag(b"\x00" * 16)
+
+    @pytest.mark.parametrize(
+        "params",
+        load_vectors_from_file(
+            os.path.join("ciphers", "AES", "ECB", "ECBGFSbox128.rsp"),
+            load_nist_vectors,
+        ),
+    )
+    def test_update_into_multiple_calls(self, params):
+        key = binascii.unhexlify(params["key"])
+        pt = binascii.unhexlify(params["plaintext"])
+        ct = binascii.unhexlify(params["ciphertext"])
+        c = ciphers.Cipher(AES(key), modes.ECB())
+        encryptor = c.encryptor()
+        buf = bytearray(len(pt) + 15)
+        res = encryptor.update_into(pt[:3], buf)
+        assert res == 0
+        res = encryptor.update_into(pt[3:], buf)
+        assert res == len(pt)
+        assert bytes(buf)[:res] == ct
+
+    def test_update_into_buffer_too_small(self):
+        key = b"\x00" * 16
+        c = ciphers.Cipher(AES(key), modes.ECB())
+        encryptor = c.encryptor()
+        buf = bytearray(16)
+        with pytest.raises(ValueError):
+            encryptor.update_into(b"testing", buf)
+
+    def test_update_into_immutable(self):
+        key = b"\x00" * 16
+        c = ciphers.Cipher(AES(key), modes.ECB())
+        encryptor = c.encryptor()
+        buf = b"\x00" * 32
+        with pytest.raises((TypeError, BufferError)):
+            encryptor.update_into(b"testing", buf)
+
+    def test_update_into_buffer_too_small_gcm(self):
+        key = b"\x00" * 16
+        c = ciphers.Cipher(AES(key), modes.GCM(b"\x00" * 12))
+        encryptor = c.encryptor()
+        buf = bytearray(5)
+        with pytest.raises(ValueError):
+            encryptor.update_into(b"testing", buf)
+
+    def test_update_with_invalid_type(self):
+        key = b"\x00" * 16
+        c = ciphers.Cipher(AES(key), modes.GCM(b"\x00" * 12))
+        encryptor = c.encryptor()
+        with pytest.raises(TypeError, match=r"bytestring instead\?"):
+            encryptor.update(typing.cast(typing.Any, "hello"))
+        with pytest.raises(TypeError, match="instance to a buffer"):
+            encryptor.update(typing.cast(typing.Any, object))
+
+
+@pytest.mark.skipif(
+    sys.platform not in {"linux", "darwin"}, reason="mmap required"
+)
+def test_update_auto_chunking():
+    large_data = large_mmap(length=2**29 + 2**20)
+
+    key = b"\x00" * 16
+    c = ciphers.Cipher(AES(key), modes.ECB())
+    encryptor = c.encryptor()
+
+    result = encryptor.update(memoryview(large_data))
+    assert len(result) == len(large_data)
+
+    decryptor = c.decryptor()
+    result = decryptor.update(result)
+    assert result == large_data[:]

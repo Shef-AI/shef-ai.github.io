@@ -1,0 +1,1 @@
+["sysroot_linux-64 2.28.*", "pkg-config", "cmake", "gxx_linux-64 14.3.0.*", "ninja-base"]

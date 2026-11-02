@@ -1,0 +1,13 @@
+{
+  "c_stdlib": "sysroot",
+  "icu": "78",
+  "c_compiler": "gcc",
+  "channel_targets": "defaults",
+  "zlib": "1",
+  "libxml2": "2.15",
+  "target_platform": "linux-64",
+  "c_stdlib_version": "2.28",
+  "VERBOSE_AT": "V=1",
+  "c_compiler_version": "14.3.0",
+  "__glibc": "__glibc >=2.28,<3.0.a0"
+}

@@ -1,0 +1,34 @@
+---input---
+// Top-level comment
+/* Multiline comment (control)
+ */
+.font-light {
+    font-weight: 100; // Comment
+    /* Another control comment */
+}
+
+---tokens---
+'// Top-level comment\n' Comment.Single
+
+'/* Multiline comment (control)\n */' Comment.Multiline
+'\n'          Text.Whitespace
+
+'.'           Punctuation
+'font-light'  Name.Class
+' '           Text.Whitespace
+'{'           Punctuation
+'\n    '      Text.Whitespace
+'font-weight' Keyword
+':'           Punctuation
+' '           Text.Whitespace
+'100'         Literal.Number.Integer
+';'           Punctuation
+' '           Text.Whitespace
+'// Comment\n' Comment.Single
+
+'    '        Text.Whitespace
+'/* Another control comment */' Comment.Multiline
+'\n'          Text.Whitespace
+
+'}'           Punctuation
+'\n'          Text.Whitespace

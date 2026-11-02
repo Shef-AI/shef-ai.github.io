@@ -1,0 +1,23 @@
+From ef70fbd6db78d741ac4332dd6fea84c190382588 Mon Sep 17 00:00:00 2001
+From: "H. Vetinari" <h.vetinari@gmx.com>
+Date: Sat, 29 Jun 2024 09:50:18 +1100
+Subject: [PATCH 02/10] don't link statically on windows
+
+---
+ python/dist/setup.py | 3 ---
+ 1 file changed, 3 deletions(-)
+
+diff --git a/python/dist/setup.py b/python/dist/setup.py
+index a1f20c026d..cc84912c07 100755
+--- a/python/dist/setup.py
++++ b/python/dist/setup.py
+@@ -34,9 +34,6 @@ def GetVersion():
+ current_dir = os.path.dirname(os.path.abspath(__file__))
+ extra_link_args = ["-Wl,--version-script=python/version_script.lds"]
+ 
+-if sys.platform.startswith('win'):
+-  extra_link_args = ['-static']
+-
+ # If at some point the fasttable decoder is ready for prime time, we could
+ # enable it here. But even then we'll need to disable it on platforms where
+ # it will not work (eg. 32-bit, MSVC).

@@ -1,0 +1,291 @@
+{
+  "name": "conda-lockfiles",
+  "version": "0.2.2",
+  "build": "py314h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "subdir": "linux-64",
+  "fn": "conda-lockfiles-0.2.2-py314h06a4308_0.conda",
+  "md5": "cc112e782f483f2fa7e573976627b2a8",
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/conda-lockfiles-0.2.2-py314h06a4308_0.conda",
+  "sha256": "9760da95ed658c047389ac9fac89cee0c35ad8a1fa5fff5915cdba904e3b60ad",
+  "arch": "x86_64",
+  "platform": "linux",
+  "depends": [
+    "conda >=26.3.0",
+    "pydantic >=2.12.5,<3",
+    "python >=3.14,<3.15.0a0",
+    "python_abi 3.14.* *_cp314",
+    "ruamel.yaml"
+  ],
+  "constrains": [],
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "timestamp": 1790166139000,
+  "size": 37377,
+  "requested_spec": "https://repo.anaconda.com/pkgs/main/linux-64::conda-lockfiles==0.2.2=py314h06a4308_0",
+  "package_tarball_full_path": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/conda-lockfiles-0.2.2-py314h06a4308_0.conda",
+  "extracted_package_dir": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/conda-lockfiles-0.2.2-py314h06a4308_0",
+  "files": [
+    "lib/python3.14/site-packages/conda_lockfiles-0.2.2.dist-info/INSTALLER",
+    "lib/python3.14/site-packages/conda_lockfiles-0.2.2.dist-info/METADATA",
+    "lib/python3.14/site-packages/conda_lockfiles-0.2.2.dist-info/RECORD",
+    "lib/python3.14/site-packages/conda_lockfiles-0.2.2.dist-info/REQUESTED",
+    "lib/python3.14/site-packages/conda_lockfiles-0.2.2.dist-info/WHEEL",
+    "lib/python3.14/site-packages/conda_lockfiles-0.2.2.dist-info/direct_url.json",
+    "lib/python3.14/site-packages/conda_lockfiles-0.2.2.dist-info/entry_points.txt",
+    "lib/python3.14/site-packages/conda_lockfiles-0.2.2.dist-info/licenses/AUTHORS.md",
+    "lib/python3.14/site-packages/conda_lockfiles-0.2.2.dist-info/licenses/LICENSE",
+    "lib/python3.14/site-packages/conda_lockfiles/__init__.py",
+    "lib/python3.14/site-packages/conda_lockfiles/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/conda_lockfiles/__pycache__/_version.cpython-314.pyc",
+    "lib/python3.14/site-packages/conda_lockfiles/__pycache__/exceptions.cpython-314.pyc",
+    "lib/python3.14/site-packages/conda_lockfiles/__pycache__/load_yaml.cpython-314.pyc",
+    "lib/python3.14/site-packages/conda_lockfiles/__pycache__/plugin.cpython-314.pyc",
+    "lib/python3.14/site-packages/conda_lockfiles/__pycache__/records_from_conda_urls.cpython-314.pyc",
+    "lib/python3.14/site-packages/conda_lockfiles/__pycache__/validate_urls.cpython-314.pyc",
+    "lib/python3.14/site-packages/conda_lockfiles/_version.py",
+    "lib/python3.14/site-packages/conda_lockfiles/conda_lock/__init__.py",
+    "lib/python3.14/site-packages/conda_lockfiles/conda_lock/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/conda_lockfiles/conda_lock/__pycache__/v1.cpython-314.pyc",
+    "lib/python3.14/site-packages/conda_lockfiles/conda_lock/v1.py",
+    "lib/python3.14/site-packages/conda_lockfiles/exceptions.py",
+    "lib/python3.14/site-packages/conda_lockfiles/load_yaml.py",
+    "lib/python3.14/site-packages/conda_lockfiles/plugin.py",
+    "lib/python3.14/site-packages/conda_lockfiles/rattler_lock/__init__.py",
+    "lib/python3.14/site-packages/conda_lockfiles/rattler_lock/__pycache__/__init__.cpython-314.pyc",
+    "lib/python3.14/site-packages/conda_lockfiles/rattler_lock/__pycache__/v6.cpython-314.pyc",
+    "lib/python3.14/site-packages/conda_lockfiles/rattler_lock/v6.py",
+    "lib/python3.14/site-packages/conda_lockfiles/records_from_conda_urls.py",
+    "lib/python3.14/site-packages/conda_lockfiles/validate_urls.py"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "lib/python3.14/site-packages/conda_lockfiles-0.2.2.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5,
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/conda_lockfiles-0.2.2.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "6f6ff48503ad537773c6822cc23464ac03997628176e71ad335b693be5a25b99",
+        "size_in_bytes": 6261,
+        "sha256_in_prefix": "6f6ff48503ad537773c6822cc23464ac03997628176e71ad335b693be5a25b99"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/conda_lockfiles-0.2.2.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "284580769871421734ea89248c498615fd8e21401e25188e29c40933fc3f1a0b",
+        "size_in_bytes": 2505,
+        "sha256_in_prefix": "284580769871421734ea89248c498615fd8e21401e25188e29c40933fc3f1a0b"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/conda_lockfiles-0.2.2.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/conda_lockfiles-0.2.2.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "942926c567d0b1273d09f20295879abd37507845f6b683eab9f87d808df91100",
+        "size_in_bytes": 87,
+        "sha256_in_prefix": "942926c567d0b1273d09f20295879abd37507845f6b683eab9f87d808df91100"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/conda_lockfiles-0.2.2.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "bc6887813e05567cfb049c92428cb906f079c1bd13f7db02c62cbca0d828fdcb",
+        "size_in_bytes": 101,
+        "sha256_in_prefix": "bc6887813e05567cfb049c92428cb906f079c1bd13f7db02c62cbca0d828fdcb"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/conda_lockfiles-0.2.2.dist-info/entry_points.txt",
+        "path_type": "hardlink",
+        "sha256": "85ab8512bb362c64ce46e813ade2bb491f8f22b75a8a6f8808d9fee4b486836c",
+        "size_in_bytes": 49,
+        "sha256_in_prefix": "85ab8512bb362c64ce46e813ade2bb491f8f22b75a8a6f8808d9fee4b486836c"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/conda_lockfiles-0.2.2.dist-info/licenses/AUTHORS.md",
+        "path_type": "hardlink",
+        "sha256": "056823efddb51f3baa7763adf446fa9ad077ed78971c799d27f2778e1075a72e",
+        "size_in_bytes": 311,
+        "sha256_in_prefix": "056823efddb51f3baa7763adf446fa9ad077ed78971c799d27f2778e1075a72e"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/conda_lockfiles-0.2.2.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "795145c6bdaa43d81998105f89ab06662fa956d519e24e080e662160ac21e3f8",
+        "size_in_bytes": 1544,
+        "sha256_in_prefix": "795145c6bdaa43d81998105f89ab06662fa956d519e24e080e662160ac21e3f8"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/conda_lockfiles/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "65b6463580c0278d9fc7f1c0fcc3d7d871d0fb201bdc10d028ce41226fdeac28",
+        "size_in_bytes": 1172,
+        "sha256_in_prefix": "65b6463580c0278d9fc7f1c0fcc3d7d871d0fb201bdc10d028ce41226fdeac28"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/conda_lockfiles/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "646337491bbbace2859e9687e0946f1c824b9b7f8be9b09df688fe7496e48a9d",
+        "size_in_bytes": 1099,
+        "sha256_in_prefix": "646337491bbbace2859e9687e0946f1c824b9b7f8be9b09df688fe7496e48a9d"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/conda_lockfiles/__pycache__/_version.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "8a501037f568127795c097fb43b54a4479574abed957f1a2744edbe2d693d501",
+        "size_in_bytes": 654,
+        "sha256_in_prefix": "8a501037f568127795c097fb43b54a4479574abed957f1a2744edbe2d693d501"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/conda_lockfiles/__pycache__/exceptions.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "4b16b697120d51cd258697a98d0798e66db7a6131e2c7f973dc239ba24173f79",
+        "size_in_bytes": 6225,
+        "sha256_in_prefix": "4b16b697120d51cd258697a98d0798e66db7a6131e2c7f973dc239ba24173f79"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/conda_lockfiles/__pycache__/load_yaml.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "8505428080389edffa5f115f884c89ba802f03791853f8168f0ad773a8c6796d",
+        "size_in_bytes": 961,
+        "sha256_in_prefix": "8505428080389edffa5f115f884c89ba802f03791853f8168f0ad773a8c6796d"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/conda_lockfiles/__pycache__/plugin.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "ba361e4b963dfd27fe4c9bddb5a9b3fdebe81e2e1879c9552b87b386b8fd2f1c",
+        "size_in_bytes": 2576,
+        "sha256_in_prefix": "ba361e4b963dfd27fe4c9bddb5a9b3fdebe81e2e1879c9552b87b386b8fd2f1c"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/conda_lockfiles/__pycache__/records_from_conda_urls.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "0ab5dff2a1cace788f2d5fb93a5e02ae0e67ba083cbdcb2479d5aca54af11494",
+        "size_in_bytes": 2948,
+        "sha256_in_prefix": "0ab5dff2a1cace788f2d5fb93a5e02ae0e67ba083cbdcb2479d5aca54af11494"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/conda_lockfiles/__pycache__/validate_urls.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "afb457be2d4890d6974a5c37c03fb4476c3c225e1e68007d779e5722c21cbc82",
+        "size_in_bytes": 1107,
+        "sha256_in_prefix": "afb457be2d4890d6974a5c37c03fb4476c3c225e1e68007d779e5722c21cbc82"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/conda_lockfiles/_version.py",
+        "path_type": "hardlink",
+        "sha256": "6c5cdf3496e0ac5f9d83bebd72d85efc5d275d1987960da0d891025b165a015b",
+        "size_in_bytes": 520,
+        "sha256_in_prefix": "6c5cdf3496e0ac5f9d83bebd72d85efc5d275d1987960da0d891025b165a015b"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/conda_lockfiles/conda_lock/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/conda_lockfiles/conda_lock/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "ed1b80917a5947460a0d06d1885e540a242fd0944358a4a5d7af3797c1424e48",
+        "size_in_bytes": 166,
+        "sha256_in_prefix": "ed1b80917a5947460a0d06d1885e540a242fd0944358a4a5d7af3797c1424e48"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/conda_lockfiles/conda_lock/__pycache__/v1.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "18bacb07b3fa718260b70b0968e01bcebc1359ab34605e0f3b166ba0d65d4f73",
+        "size_in_bytes": 17714,
+        "sha256_in_prefix": "18bacb07b3fa718260b70b0968e01bcebc1359ab34605e0f3b166ba0d65d4f73"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/conda_lockfiles/conda_lock/v1.py",
+        "path_type": "hardlink",
+        "sha256": "205beada189ca05c30dcf7d8b07ccc4f572acc922a783756220c00254840305f",
+        "size_in_bytes": 12036,
+        "sha256_in_prefix": "205beada189ca05c30dcf7d8b07ccc4f572acc922a783756220c00254840305f"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/conda_lockfiles/exceptions.py",
+        "path_type": "hardlink",
+        "sha256": "d0087da0d1d2de1ac768f2bf7174b0466d9846a907de0f596e8850b49bd89910",
+        "size_in_bytes": 3227,
+        "sha256_in_prefix": "d0087da0d1d2de1ac768f2bf7174b0466d9846a907de0f596e8850b49bd89910"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/conda_lockfiles/load_yaml.py",
+        "path_type": "hardlink",
+        "sha256": "f45582a46bb2464958f9945fa53e1402a20f5d009d95f1aea88cefda00edafda",
+        "size_in_bytes": 324,
+        "sha256_in_prefix": "f45582a46bb2464958f9945fa53e1402a20f5d009d95f1aea88cefda00edafda"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/conda_lockfiles/plugin.py",
+        "path_type": "hardlink",
+        "sha256": "7b656e1094b543da2b001ffb3108f9cc88bac1fa361c3579d9733a0f65b58b85",
+        "size_in_bytes": 2135,
+        "sha256_in_prefix": "7b656e1094b543da2b001ffb3108f9cc88bac1fa361c3579d9733a0f65b58b85"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/conda_lockfiles/rattler_lock/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/conda_lockfiles/rattler_lock/__pycache__/__init__.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "dd6a078f027fa85813a5477324ba908e90230b98b78dca48ad3a9b3cccbe2259",
+        "size_in_bytes": 168,
+        "sha256_in_prefix": "dd6a078f027fa85813a5477324ba908e90230b98b78dca48ad3a9b3cccbe2259"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/conda_lockfiles/rattler_lock/__pycache__/v6.cpython-314.pyc",
+        "path_type": "hardlink",
+        "sha256": "9ff688518ba93735f8aea138c6dbee5895cfde3e175e948b8efc5ca90dea467d",
+        "size_in_bytes": 18630,
+        "sha256_in_prefix": "9ff688518ba93735f8aea138c6dbee5895cfde3e175e948b8efc5ca90dea467d"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/conda_lockfiles/rattler_lock/v6.py",
+        "path_type": "hardlink",
+        "sha256": "c2b3f30371d1ae02c19f63469138c1f3b4125bd0deff25a34d4797ba4145f34a",
+        "size_in_bytes": 13402,
+        "sha256_in_prefix": "c2b3f30371d1ae02c19f63469138c1f3b4125bd0deff25a34d4797ba4145f34a"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/conda_lockfiles/records_from_conda_urls.py",
+        "path_type": "hardlink",
+        "sha256": "e5e855014d9d85f9a9c2fb9542585e1634994a651e82b9f0ef5cc5e875a99821",
+        "size_in_bytes": 2060,
+        "sha256_in_prefix": "e5e855014d9d85f9a9c2fb9542585e1634994a651e82b9f0ef5cc5e875a99821"
+      },
+      {
+        "_path": "lib/python3.14/site-packages/conda_lockfiles/validate_urls.py",
+        "path_type": "hardlink",
+        "sha256": "015ce231fd30d9966934dacb018101bdf749f1aaadb1146b5e8ec5a710471927",
+        "size_in_bytes": 556,
+        "sha256_in_prefix": "015ce231fd30d9966934dacb018101bdf749f1aaadb1146b5e8ec5a710471927"
+      }
+    ]
+  },
+  "link": {
+    "source": "/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/pkgs/conda-lockfiles-0.2.2-py314h06a4308_0",
+    "type": 1
+  },
+  "requested_specs": [
+    "https://repo.anaconda.com/pkgs/main/linux-64::conda-lockfiles==0.2.2=py314h06a4308_0"
+  ]
+}

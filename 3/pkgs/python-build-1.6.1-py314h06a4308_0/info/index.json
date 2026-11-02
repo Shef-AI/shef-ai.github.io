@@ -1,0 +1,22 @@
+{
+  "arch": "x86_64",
+  "build": "py314h06a4308_0",
+  "build_number": 0,
+  "constrains": [
+    "uv >=0.1.18",
+    "virtualenv >=20.36.1"
+  ],
+  "depends": [
+    "packaging >=24.0",
+    "pyproject_hooks",
+    "python >=3.14,<3.15.0a0",
+    "python_abi 3.14.* *_cp314"
+  ],
+  "license": "MIT",
+  "license_family": "MIT",
+  "name": "python-build",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1791365212378,
+  "version": "1.6.1"
+}

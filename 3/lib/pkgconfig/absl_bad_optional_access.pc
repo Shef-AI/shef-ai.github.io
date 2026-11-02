@@ -1,0 +1,12 @@
+prefix=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3
+exec_prefix=${prefix}
+libdir=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/lib
+includedir=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/include
+
+Name: absl_bad_optional_access
+Description: Abseil bad_optional_access library
+URL: https://abseil.io/
+Version: 20260526
+Requires:
+Libs: -L${libdir}  
+Cflags: -I${includedir}

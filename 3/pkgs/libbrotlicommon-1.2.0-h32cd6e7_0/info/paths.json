@@ -1,0 +1,61 @@
+{
+  "paths": [
+    {
+      "_path": "lib/libbrotlicommon.so",
+      "path_type": "softlink",
+      "sha256": "fe36e92852cd870bb772e834b0791197612a0aa92a2dc484b3c5b53248757c28",
+      "size_in_bytes": 143800
+    },
+    {
+      "_path": "lib/libbrotlicommon.so.1",
+      "path_type": "softlink",
+      "sha256": "fe36e92852cd870bb772e834b0791197612a0aa92a2dc484b3c5b53248757c28",
+      "size_in_bytes": 143800
+    },
+    {
+      "_path": "lib/libbrotlicommon.so.1.2.0",
+      "path_type": "hardlink",
+      "sha256": "fe36e92852cd870bb772e834b0791197612a0aa92a2dc484b3c5b53248757c28",
+      "size_in_bytes": 143800
+    },
+    {
+      "_path": "lib/pkgconfig/libbrotlicommon.pc",
+      "file_mode": "text",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/home/task_176236350079666/conda-bld/brotli-split_1762363540655/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac",
+      "sha256": "e9fc16d081f6e4bee50d5f44681224a7751fa58233a7bfd5f72c23f96036dc7b",
+      "size_in_bytes": 761
+    },
+    {
+      "_path": "share/man/man1/brotli.1",
+      "path_type": "hardlink",
+      "sha256": "5592e0207f942e1b7be075bacd948ad20b76792845626a21592f5b9742c7af93",
+      "size_in_bytes": 5130
+    },
+    {
+      "_path": "share/man/man3/constants.h.3",
+      "path_type": "hardlink",
+      "sha256": "2ac99f4d97a57a170877fed3ff93251612850f43598ba4eaf234e246787c978d",
+      "size_in_bytes": 1767
+    },
+    {
+      "_path": "share/man/man3/decode.h.3",
+      "path_type": "hardlink",
+      "sha256": "be0a93be98e80f00d075bf43dc6a0bb84cb4028ce0082211e958d1ef18112d8f",
+      "size_in_bytes": 17452
+    },
+    {
+      "_path": "share/man/man3/encode.h.3",
+      "path_type": "hardlink",
+      "sha256": "893ebea4d0d29ff3f2b83004c6bcb4d3610ced41f7cb04f72c1710ff339f5a90",
+      "size_in_bytes": 24310
+    },
+    {
+      "_path": "share/man/man3/types.h.3",
+      "path_type": "hardlink",
+      "sha256": "c9afc281d042e84df6ba5ef4ac4a39f7e1ad8cae4d98adc702055b99c38b2267",
+      "size_in_bytes": 3081
+    }
+  ],
+  "paths_version": 1
+}

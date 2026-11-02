@@ -1,0 +1,7 @@
+prefix=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3
+includedir=${prefix}/include
+
+Name: XwaylandProto
+Description: Xwayland extension headers
+Version: 1.0
+Cflags: -I${includedir}

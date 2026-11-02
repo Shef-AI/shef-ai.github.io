@@ -1,0 +1,27 @@
+{
+  "arch": "x86_64",
+  "build": "py314h06a4308_0",
+  "build_number": 0,
+  "constrains": [
+    "linkify-it-py >=1,<3",
+    "sphinx-book-theme >=1,<2",
+    "mistune >=3.0,<4.0",
+    "markdown >=3.4,<4",
+    "mdit-py-plugins >=0.5.0",
+    "commonmark >=0.9,<0.10",
+    "mistletoe >=1.0,<2.0",
+    "panflute >=2.3,<2.4"
+  ],
+  "depends": [
+    "mdurl >=0.1,<0.2",
+    "python >=3.14,<3.15.0a0",
+    "python_abi 3.14.* *_cp314"
+  ],
+  "license": "MIT",
+  "license_family": "MIT",
+  "name": "markdown-it-py",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1787310589167,
+  "version": "4.2.0"
+}

@@ -1,0 +1,15 @@
+'package'     Keyword
+'\n'          Text.Whitespace
+
+''            Text
+'package'     Keyword
+' '           Text.Whitespace
+'com'         Name
+'\n'          Text.Whitespace
+
+'package'     Keyword
+' '           Text.Whitespace
+'com'         Name.Namespace
+'.'           Punctuation
+'example'     Name
+'\n'          Text.Whitespace

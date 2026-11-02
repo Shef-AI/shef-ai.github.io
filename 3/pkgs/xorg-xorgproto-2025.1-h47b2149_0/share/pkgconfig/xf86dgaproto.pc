@@ -1,0 +1,7 @@
+prefix=/home/task_178784343179487/croot/xorg-xorgproto_1787843457862/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh
+includedir=${prefix}/include
+
+Name: XF86DGAProto
+Description: XF86DGA extension headers
+Version: 2.1
+Cflags: -I${includedir}

@@ -1,0 +1,73 @@
+'?'           Generic.Prompt
+' '           Text.Whitespace
+'7'           Literal.Number.Integer
+' '           Text.Whitespace
+'*'           Operator
+' '           Text.Whitespace
+'52'          Literal.Number.Integer
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'=> 364\n'    Generic.Output
+
+'?'           Generic.Prompt
+' '           Text.Whitespace
+'define'      Keyword
+' '           Text.Whitespace
+'variable'    Name.Builtin
+' '           Text.Whitespace
+'*your-variable*' Name.Variable.Global
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'$foo'        Name.Constant
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'?'           Generic.Prompt
+' '           Text.Whitespace
+'begin'       Keyword
+'\n'          Text.Whitespace
+
+' '           Generic.Prompt
+'  '          Text.Whitespace
+'let'         Keyword
+' '           Text.Whitespace
+'yours'       Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'"'           Literal.String
+'apple'       Literal.String
+'"'           Literal.String
+';'           Punctuation
+'\n'          Text.Whitespace
+
+' '           Generic.Prompt
+'  '          Text.Whitespace
+'let'         Keyword
+' '           Text.Whitespace
+'mine'        Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'yours'       Name
+';'           Punctuation
+'\n'          Text.Whitespace
+
+' '           Generic.Prompt
+'  '          Text.Whitespace
+'mine'        Name
+' '           Text.Whitespace
+'=='          Operator
+' '           Text.Whitespace
+'yours'       Name
+';'           Punctuation
+'\n'          Text.Whitespace
+
+' '           Generic.Prompt
+'end'         Keyword
+';'           Punctuation
+'\n'          Text.Whitespace
+
+'=> #t\n'     Generic.Output

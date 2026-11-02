@@ -1,0 +1,1520 @@
+'; bigtest.nsi' Comment
+'\n'          Text.Whitespace
+
+';'           Comment
+'\n'          Text.Whitespace
+
+'; This script attempts to test most of the functionality of the NSIS exehead.' Comment
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+';--------------------------------' Comment
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'!ifdef'      Comment.Preproc
+' '           Text.Whitespace
+'HAVE_UPX'    Text
+'\n'          Text.Whitespace
+
+'!packhdr'    Comment.Preproc
+' '           Text.Whitespace
+'tmp.dat'     Text
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'upx\\upx -9 tmp.dat' Literal.String.Double
+'"'           Literal.String.Double
+'\n'          Text.Whitespace
+
+'!endif'      Comment.Preproc
+'\n\n'        Text.Whitespace
+
+'!ifdef'      Comment.Preproc
+' '           Text.Whitespace
+'NOCOMPRESS'  Text
+'\n'          Text.Whitespace
+
+'SetCompress' Keyword
+' '           Text.Whitespace
+'off'         Name.Constant
+'\n'          Text.Whitespace
+
+'!endif'      Comment.Preproc
+'\n\n'        Text.Whitespace
+
+';--------------------------------' Comment
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'Name'        Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'BigNSISTest' Literal.String.Double
+'"'           Literal.String.Double
+'\n'          Text.Whitespace
+
+'Caption'     Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'NSIS Big Test' Literal.String.Double
+'"'           Literal.String.Double
+'\n'          Text.Whitespace
+
+'Icon'        Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'${NSISDIR}'  Name.Builtin
+'\\Contrib\\Graphics\\Icons\\nsis1-install.ico' Literal.String.Double
+'"'           Literal.String.Double
+'\n'          Text.Whitespace
+
+'OutFile'     Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'bigtest.exe' Literal.String.Double
+'"'           Literal.String.Double
+'\n\n'        Text.Whitespace
+
+'SetDateSave' Keyword
+' '           Text.Whitespace
+'on'          Name.Constant
+'\n'          Text.Whitespace
+
+'SetDatablockOptimize' Keyword
+' '           Text.Whitespace
+'on'          Name.Constant
+'\n'          Text.Whitespace
+
+'CRCCheck'    Keyword
+' '           Text.Whitespace
+'on'          Name.Constant
+'\n'          Text.Whitespace
+
+'SilentInstall' Keyword
+' '           Text.Whitespace
+'normal'      Name.Constant
+'\n'          Text.Whitespace
+
+'BGGradient'  Keyword
+' '           Text.Whitespace
+'000000'      Text
+' '           Text.Whitespace
+'800000'      Text
+' '           Text.Whitespace
+'FFFFFF'      Text
+'\n'          Text.Whitespace
+
+'InstallColors' Keyword
+' '           Text.Whitespace
+'FF8080'      Text
+' '           Text.Whitespace
+'000030'      Text
+'\n'          Text.Whitespace
+
+'XPStyle'     Keyword
+' '           Text.Whitespace
+'on'          Name.Constant
+'\n\n'        Text.Whitespace
+
+'InstallDir'  Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'$PROGRAMFILES' Name.Variable
+'\\NSISTest\\BigNSISTest' Literal.String.Double
+'"'           Literal.String.Double
+'\n'          Text.Whitespace
+
+'InstallDirRegKey' Keyword
+' '           Text.Whitespace
+'HKLM'        Name.Constant
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'Software\\NSISTest\\BigNSISTest' Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'Install_Dir' Literal.String.Double
+'"'           Literal.String.Double
+'\n\n'        Text.Whitespace
+
+'CheckBitmap' Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'${NSISDIR}'  Name.Builtin
+'\\Contrib\\Graphics\\Checks\\classic-cross.bmp' Literal.String.Double
+'"'           Literal.String.Double
+'\n\n'        Text.Whitespace
+
+'LicenseText' Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+"A test text, make sure it's all there" Literal.String.Double
+'"'           Literal.String.Double
+'\n'          Text.Whitespace
+
+'LicenseData' Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'bigtest.nsi' Literal.String.Double
+'"'           Literal.String.Double
+'\n\n'        Text.Whitespace
+
+'RequestExecutionLevel' Keyword
+' '           Text.Whitespace
+'admin'       Name.Constant
+'\n\n'        Text.Whitespace
+
+';--------------------------------' Comment
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'Page'        Keyword
+' '           Text.Whitespace
+'license'     Text
+'\n'          Text.Whitespace
+
+'Page'        Keyword
+' '           Text.Whitespace
+'components'  Text
+'\n'          Text.Whitespace
+
+'Page'        Keyword
+' '           Text.Whitespace
+'directory'   Text
+'\n'          Text.Whitespace
+
+'Page'        Keyword
+' '           Text.Whitespace
+'instfiles'   Text
+'\n\n'        Text.Whitespace
+
+'UninstPage'  Keyword
+' '           Text.Whitespace
+'uninstConfirm' Text
+'\n'          Text.Whitespace
+
+'UninstPage'  Keyword
+' '           Text.Whitespace
+'instfiles'   Text
+'\n\n'        Text.Whitespace
+
+';--------------------------------' Comment
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'!ifndef'     Comment.Preproc
+' '           Text.Whitespace
+'NOINSTTYPES' Text
+' '           Text.Whitespace
+'; only if not defined' Comment
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'InstType'    Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'Most'        Literal.String.Double
+'"'           Literal.String.Double
+'\n  '        Text.Whitespace
+'InstType'    Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'Full'        Literal.String.Double
+'"'           Literal.String.Double
+'\n  '        Text.Whitespace
+'InstType'    Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'More'        Literal.String.Double
+'"'           Literal.String.Double
+'\n  '        Text.Whitespace
+'InstType'    Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'Base'        Literal.String.Double
+'"'           Literal.String.Double
+'\n  '        Text.Whitespace
+';InstType /NOCUSTOM' Comment
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+';InstType /COMPONENTSONLYONCUSTOM' Comment
+'\n'          Text.Whitespace
+
+'!endif'      Comment.Preproc
+'\n\n'        Text.Whitespace
+
+'AutoCloseWindow' Keyword
+' '           Text.Whitespace
+'false'       Name.Constant
+'\n'          Text.Whitespace
+
+'ShowInstDetails' Keyword
+' '           Text.Whitespace
+'show'        Name.Constant
+'\n\n'        Text.Whitespace
+
+';--------------------------------' Comment
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'Section'     Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'; empty string makes it hidden, so would starting with -' Comment
+'\n'          Text.Whitespace
+
+'\n  '        Text.Whitespace
+'; write reg info' Comment
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'StrCpy'      Keyword
+' '           Text.Whitespace
+'$1'          Name.Builtin.Pseudo
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'POOOOOOOOOOOP' Literal.String.Double
+'"'           Literal.String.Double
+'\n  '        Text.Whitespace
+'DetailPrint' Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'I like to be able to see what is going on (debug) $1' Literal.String.Double
+'"'           Literal.String.Double
+'\n  '        Text.Whitespace
+'WriteRegStr' Keyword
+' '           Text.Whitespace
+'HKLM'        Name.Constant
+' '           Text.Whitespace
+'SOFTWARE'    Text
+'\\'          Punctuation
+'NSISTest'    Text
+'\\'          Punctuation
+'BigNSISTest' Text
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'Install_Dir' Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'$INSTDIR'    Name.Variable.Global
+'"'           Literal.String.Double
+'\n\n  '      Text.Whitespace
+'; write uninstall strings' Comment
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'WriteRegStr' Keyword
+' '           Text.Whitespace
+'HKLM'        Name.Constant
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\BigNSISTest' Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'DisplayName' Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'BigNSISTest (remove only)' Literal.String.Double
+'"'           Literal.String.Double
+'\n  '        Text.Whitespace
+'WriteRegStr' Keyword
+' '           Text.Whitespace
+'HKLM'        Name.Constant
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\BigNSISTest' Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'UninstallString' Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'\'"$INSTDIR\\bt-uninst.exe"\'' Literal.String.Single
+'\n\n  '      Text.Whitespace
+'SetOutPath'  Keyword
+' '           Text.Whitespace
+'$INSTDIR'    Name.Variable.Global
+'\n  '        Text.Whitespace
+'File'        Keyword
+' '           Text.Whitespace
+'/a'          Name.Attribute
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'silent.nsi'  Literal.String.Double
+'"'           Literal.String.Double
+'\n  '        Text.Whitespace
+'CreateDirectory' Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'$INSTDIR'    Name.Variable.Global
+'\\MyProjectFamily\\MyProject' Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'; 2 recursively create a directory for fun.' Comment
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'WriteUninstaller' Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'bt-uninst.exe' Literal.String.Double
+'"'           Literal.String.Double
+'\n  \n  '    Text.Whitespace
+'Nop'         Keyword
+' '           Text.Whitespace
+'; for fun'   Comment
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'SectionEnd'  Keyword
+'\n\n'        Text.Whitespace
+
+'Section'     Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'TempTest'    Literal.String.Double
+'"'           Literal.String.Double
+'\n\n'        Text.Whitespace
+
+'SectionIn'   Keyword
+' '           Text.Whitespace
+'1'           Text
+' '           Text.Whitespace
+'2'           Text
+' '           Text.Whitespace
+'3'           Text
+'\n  '        Text.Whitespace
+'Start'       Name.Label
+':'           Punctuation
+' '           Text.Whitespace
+'MessageBox'  Keyword
+' '           Text.Whitespace
+'MB_OK'       Name.Constant
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'Start:'      Literal.String.Double
+'"'           Literal.String.Double
+'\n\n  '      Text.Whitespace
+'MessageBox'  Keyword
+' '           Text.Whitespace
+'MB_YESNO'    Name.Constant
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'Goto MyLabel' Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'IDYES'       Name.Constant
+' '           Text.Whitespace
+'MyLabel'     Text
+'\n\n  '      Text.Whitespace
+'MessageBox'  Keyword
+' '           Text.Whitespace
+'MB_OK'       Name.Constant
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'Right before MyLabel:' Literal.String.Double
+'"'           Literal.String.Double
+'\n\n  '      Text.Whitespace
+'MyLabel'     Name.Label
+':'           Punctuation
+' '           Text.Whitespace
+'MessageBox'  Keyword
+' '           Text.Whitespace
+'MB_OK'       Name.Constant
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'MyLabel:'    Literal.String.Double
+'"'           Literal.String.Double
+'\n  \n  '    Text.Whitespace
+'MessageBox'  Keyword
+' '           Text.Whitespace
+'MB_OK'       Name.Constant
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'Right after MyLabel:' Literal.String.Double
+'"'           Literal.String.Double
+'\n\n  '      Text.Whitespace
+'MessageBox'  Keyword
+' '           Text.Whitespace
+'MB_YESNO'    Name.Constant
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'Goto Start:?' Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'IDYES'       Name.Constant
+' '           Text.Whitespace
+'Start'       Text
+'\n\n'        Text.Whitespace
+
+'SectionEnd'  Keyword
+'\n\n'        Text.Whitespace
+
+'SectionGroup' Keyword
+' '           Text.Whitespace
+'/e'          Name.Attribute
+' '           Text.Whitespace
+'SectionGroup1' Text
+'\n\n'        Text.Whitespace
+
+'Section'     Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'Test Registry/INI functions' Literal.String.Double
+'"'           Literal.String.Double
+'\n\n'        Text.Whitespace
+
+'SectionIn'   Keyword
+' '           Text.Whitespace
+'1'           Text
+' '           Text.Whitespace
+'4'           Text
+' '           Text.Whitespace
+'3'           Text
+'\n\n  '      Text.Whitespace
+'WriteRegStr' Keyword
+' '           Text.Whitespace
+'HKLM'        Name.Constant
+' '           Text.Whitespace
+'SOFTWARE'    Text
+'\\'          Punctuation
+'NSISTest'    Text
+'\\'          Punctuation
+'BigNSISTest' Text
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'StrTest_INSTDIR' Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'$INSTDIR'    Name.Variable.Global
+'"'           Literal.String.Double
+'\n  '        Text.Whitespace
+'WriteRegDword' Keyword
+' '           Text.Whitespace
+'HKLM'        Name.Constant
+' '           Text.Whitespace
+'SOFTWARE'    Text
+'\\'          Punctuation
+'NSISTest'    Text
+'\\'          Punctuation
+'BigNSISTest' Text
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'DwordTest_0xDEADBEEF' Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'0xdeadbeef'  Text
+'\n  '        Text.Whitespace
+'WriteRegDword' Keyword
+' '           Text.Whitespace
+'HKLM'        Name.Constant
+' '           Text.Whitespace
+'SOFTWARE'    Text
+'\\'          Punctuation
+'NSISTest'    Text
+'\\'          Punctuation
+'BigNSISTest' Text
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'DwordTest_123456' Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'123456'      Text
+'\n  '        Text.Whitespace
+'WriteRegDword' Keyword
+' '           Text.Whitespace
+'HKLM'        Name.Constant
+' '           Text.Whitespace
+'SOFTWARE'    Text
+'\\'          Punctuation
+'NSISTest'    Text
+'\\'          Punctuation
+'BigNSISTest' Text
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'DwordTest_0123' Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'0123'        Text
+'\n  '        Text.Whitespace
+'WriteRegBin' Keyword
+' '           Text.Whitespace
+'HKLM'        Name.Constant
+' '           Text.Whitespace
+'SOFTWARE'    Text
+'\\'          Punctuation
+'NSISTest'    Text
+'\\'          Punctuation
+'BigNSISTest' Text
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'BinTest_deadbeef01f00dbeef' Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'DEADBEEF01F00DBEEF' Literal.String.Double
+'"'           Literal.String.Double
+'\n  '        Text.Whitespace
+'StrCpy'      Keyword
+' '           Text.Whitespace
+'$8'          Name.Builtin.Pseudo
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'$SYSDIR'     Name.Builtin
+'\\IniTest'   Literal.String.Double
+'"'           Literal.String.Double
+'\n  '        Text.Whitespace
+'WriteINIStr' Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'$INSTDIR'    Name.Variable.Global
+'\\test.ini'  Literal.String.Double
+'"'           Literal.String.Double
+'  '          Text.Whitespace
+'"'           Literal.String.Double
+'MySection'   Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'Value1'      Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'$8'          Name.Builtin.Pseudo
+'\n  '        Text.Whitespace
+'WriteINIStr' Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'$INSTDIR'    Name.Variable.Global
+'\\test.ini'  Literal.String.Double
+'"'           Literal.String.Double
+'  '          Text.Whitespace
+'"'           Literal.String.Double
+'MySectionIni' Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'Value1'      Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'$8'          Name.Builtin.Pseudo
+'\n  '        Text.Whitespace
+'WriteINIStr' Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'$INSTDIR'    Name.Variable.Global
+'\\test.ini'  Literal.String.Double
+'"'           Literal.String.Double
+'  '          Text.Whitespace
+'"'           Literal.String.Double
+'MySectionIni' Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'Value2'      Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'$8'          Name.Builtin.Pseudo
+'\n  '        Text.Whitespace
+'WriteINIStr' Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'$INSTDIR'    Name.Variable.Global
+'\\test.ini'  Literal.String.Double
+'"'           Literal.String.Double
+'  '          Text.Whitespace
+'"'           Literal.String.Double
+'IniOn'       Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'Value1'      Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'$8'          Name.Builtin.Pseudo
+'\n\n  '      Text.Whitespace
+'Call'        Keyword
+' '           Text.Whitespace
+'MyFunctionTest' Text
+'\n\n  '      Text.Whitespace
+'DeleteINIStr' Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'$INSTDIR'    Name.Variable.Global
+'\\test.ini'  Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'IniOn'       Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'Value1'      Literal.String.Double
+'"'           Literal.String.Double
+'\n  '        Text.Whitespace
+'DeleteINISec' Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'$INSTDIR'    Name.Variable.Global
+'\\test.ini'  Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'MySectionIni' Literal.String.Double
+'"'           Literal.String.Double
+'\n\n  '      Text.Whitespace
+'ReadINIStr'  Keyword
+' '           Text.Whitespace
+'$1'          Name.Builtin.Pseudo
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'$INSTDIR'    Name.Variable.Global
+'\\test.ini'  Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'MySectionIni' Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'Value1'      Literal.String.Double
+'"'           Literal.String.Double
+'\n  '        Text.Whitespace
+'StrCmp'      Keyword
+' '           Text.Whitespace
+'$1'          Name.Builtin.Pseudo
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'INIDelSuccess' Text
+'\n    '      Text.Whitespace
+'MessageBox'  Keyword
+' '           Text.Whitespace
+'MB_OK'       Name.Constant
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'DeleteINISec failed' Literal.String.Double
+'"'           Literal.String.Double
+'\n  '        Text.Whitespace
+'INIDelSuccess' Name.Label
+':'           Punctuation
+'\n\n  '      Text.Whitespace
+'ClearErrors' Keyword
+'\n  '        Text.Whitespace
+'ReadRegStr'  Keyword
+' '           Text.Whitespace
+'$1'          Name.Builtin.Pseudo
+' '           Text.Whitespace
+'HKCR'        Name.Constant
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'software\\microsoft' Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'xyz_cc_does_not_exist' Text
+'\n  '        Text.Whitespace
+'IfErrors'    Keyword
+' '           Text.Whitespace
+'0'           Text
+' '           Text.Whitespace
+'NoError'     Text
+'\n    '      Text.Whitespace
+'MessageBox'  Keyword
+' '           Text.Whitespace
+'MB_OK'       Name.Constant
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'could not read from HKCR\\software\\microsoft\\xyz_cc_does_not_exist' Literal.String.Double
+'"'           Literal.String.Double
+'\n    '      Text.Whitespace
+'Goto'        Keyword
+' '           Text.Whitespace
+'ErrorYay'    Text
+'\n  '        Text.Whitespace
+'NoError'     Name.Label
+':'           Punctuation
+'\n    '      Text.Whitespace
+'MessageBox'  Keyword
+' '           Text.Whitespace
+'MB_OK'       Name.Constant
+' '           Text.Whitespace
+'"'           Literal.String.Double
+"read '$1' from HKCR\\software\\microsoft\\xyz_cc_does_not_exist" Literal.String.Double
+'"'           Literal.String.Double
+'\n  '        Text.Whitespace
+'ErrorYay'    Name.Label
+':'           Punctuation
+'\n  \n'      Text.Whitespace
+
+'SectionEnd'  Keyword
+'\n\n'        Text.Whitespace
+
+'Section'     Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'Test CreateShortCut' Literal.String.Double
+'"'           Literal.String.Double
+'\n\n  '      Text.Whitespace
+'SectionIn'   Keyword
+' '           Text.Whitespace
+'1'           Text
+' '           Text.Whitespace
+'2'           Text
+' '           Text.Whitespace
+'3'           Text
+'\n\n  '      Text.Whitespace
+'Call'        Keyword
+' '           Text.Whitespace
+'CSCTest'     Text
+'\n\n'        Text.Whitespace
+
+'SectionEnd'  Keyword
+'\n\n'        Text.Whitespace
+
+'SectionGroup' Keyword
+' '           Text.Whitespace
+'Group2'      Text
+'\n\n'        Text.Whitespace
+
+'Section'     Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'Test Branching' Literal.String.Double
+'"'           Literal.String.Double
+' \n  \n  '   Text.Whitespace
+'BeginTestSection' Name.Label
+':'           Punctuation
+'\n  '        Text.Whitespace
+'SectionIn'   Keyword
+' '           Text.Whitespace
+'1'           Text
+' '           Text.Whitespace
+'2'           Text
+' '           Text.Whitespace
+'3'           Text
+'\n \n  '     Text.Whitespace
+'SetOutPath'  Keyword
+' '           Text.Whitespace
+'$INSTDIR'    Name.Variable.Global
+'\n\n  '      Text.Whitespace
+'IfFileExists' Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'$INSTDIR'    Name.Variable.Global
+'\\LogicLib.nsi' Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'0'           Text
+' '           Text.Whitespace
+'BranchTest69' Text
+'\n    \n    ' Text.Whitespace
+'MessageBox'  Keyword
+' '           Text.Whitespace
+'MB_YESNO'    Name.Constant
+'|'           Operator
+'MB_ICONQUESTION' Name.Constant
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'Would you like to overwrite $INSTDIR\\LogicLib.nsi?' Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'IDNO'        Name.Constant
+' '           Text.Whitespace
+'NoOverwrite' Text
+' '           Text.Whitespace
+"; skipped if file doesn't exist" Comment
+'\n'          Text.Whitespace
+
+'\n    '      Text.Whitespace
+'BranchTest69' Name.Label
+':'           Punctuation
+'\n  \n    '  Text.Whitespace
+'SetOverwrite' Keyword
+' '           Text.Whitespace
+'ifnewer'     Name.Constant
+' '           Text.Whitespace
+'; NOT AN INSTRUCTION, NOT COUNTED IN SKIPPINGS' Comment
+'\n'          Text.Whitespace
+
+'\n  '        Text.Whitespace
+'NoOverwrite' Name.Label
+':'           Punctuation
+'\n\n  '      Text.Whitespace
+'File'        Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'LogicLib.nsi' Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'; skipped if answered no' Comment
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'SetOverwrite' Keyword
+' '           Text.Whitespace
+'try'         Name.Constant
+' '           Text.Whitespace
+'; NOT AN INSTRUCTION, NOT COUNTED IN SKIPPINGS' Comment
+'\n'          Text.Whitespace
+
+'\n  '        Text.Whitespace
+'MessageBox'  Keyword
+' '           Text.Whitespace
+'MB_YESNO'    Name.Constant
+'|'           Operator
+'MB_ICONQUESTION' Name.Constant
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'Would you like to skip the rest of this section?' Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'IDYES'       Name.Constant
+' '           Text.Whitespace
+'EndTestBranch' Text
+'\n  '        Text.Whitespace
+'MessageBox'  Keyword
+' '           Text.Whitespace
+'MB_YESNO'    Name.Constant
+'|'           Operator
+'MB_ICONQUESTION' Name.Constant
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'Would you like to go back to the beginning of this section?' Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'IDYES'       Name.Constant
+' '           Text.Whitespace
+'BeginTestSection' Text
+'\n  '        Text.Whitespace
+'MessageBox'  Keyword
+' '           Text.Whitespace
+'MB_YESNO'    Name.Constant
+'|'           Operator
+'MB_ICONQUESTION' Name.Constant
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'Would you like to hide the installer and wait five seconds?' Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'IDNO'        Name.Constant
+' '           Text.Whitespace
+'NoHide'      Text
+'\n\n    '    Text.Whitespace
+'HideWindow'  Keyword
+'\n    '      Text.Whitespace
+'Sleep'       Keyword
+' '           Text.Whitespace
+'5000'        Text
+'\n    '      Text.Whitespace
+'BringToFront' Keyword
+'\n\n  '      Text.Whitespace
+'NoHide'      Name.Label
+':'           Punctuation
+'\n\n  '      Text.Whitespace
+'MessageBox'  Keyword
+' '           Text.Whitespace
+'MB_YESNO'    Name.Constant
+'|'           Operator
+'MB_ICONQUESTION' Name.Constant
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'Would you like to call the function 5 times?' Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'IDNO'        Name.Constant
+' '           Text.Whitespace
+'NoRecurse'   Text
+'\n\n    '    Text.Whitespace
+'StrCpy'      Keyword
+' '           Text.Whitespace
+'$1'          Name.Builtin.Pseudo
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'x'           Literal.String.Double
+'"'           Literal.String.Double
+'\n\n  '      Text.Whitespace
+'LoopTest'    Name.Label
+':'           Punctuation
+' \n      \n    ' Text.Whitespace
+'Call'        Keyword
+' '           Text.Whitespace
+'myfunc'      Text
+'\n    '      Text.Whitespace
+'StrCpy'      Keyword
+' '           Text.Whitespace
+'$1'          Name.Builtin.Pseudo
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'x$1'         Literal.String.Double
+'"'           Literal.String.Double
+'\n    '      Text.Whitespace
+'StrCmp'      Keyword
+' '           Text.Whitespace
+'$1'          Name.Builtin.Pseudo
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'xxxxxx'      Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'0'           Text
+' '           Text.Whitespace
+'LoopTest'    Text
+'\n      \n  ' Text.Whitespace
+'NoRecurse'   Name.Label
+':'           Punctuation
+'\n\n  '      Text.Whitespace
+'EndTestBranch' Name.Label
+':'           Punctuation
+'\n\n'        Text.Whitespace
+
+'SectionEnd'  Keyword
+'\n\n'        Text.Whitespace
+
+'SectionGroupEnd' Keyword
+'\n\n'        Text.Whitespace
+
+'Section'     Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'Test CopyFiles' Literal.String.Double
+'"'           Literal.String.Double
+'\n\n  '      Text.Whitespace
+'SectionIn'   Keyword
+' '           Text.Whitespace
+'1'           Text
+' '           Text.Whitespace
+'2'           Text
+' '           Text.Whitespace
+'3'           Text
+'\n\n  '      Text.Whitespace
+'SetOutPath'  Keyword
+' '           Text.Whitespace
+'$INSTDIR'    Name.Variable.Global
+'\\'          Punctuation
+'cpdest'      Text
+'\n  '        Text.Whitespace
+'CopyFiles'   Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'$WINDIR'     Name.Builtin
+'\\*.ini'     Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'$INSTDIR'    Name.Variable.Global
+'\\cpdest'    Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'0'           Text
+'\n\n'        Text.Whitespace
+
+'SectionEnd'  Keyword
+'\n\n'        Text.Whitespace
+
+'SectionGroupEnd' Keyword
+'\n\n'        Text.Whitespace
+
+'Section'     Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'Test Exec functions' Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'TESTIDX'     Text
+'\n\n  '      Text.Whitespace
+'SectionIn'   Keyword
+' '           Text.Whitespace
+'1'           Text
+' '           Text.Whitespace
+'2'           Text
+' '           Text.Whitespace
+'3'           Text
+'\n  \n  '    Text.Whitespace
+'SearchPath'  Keyword
+' '           Text.Whitespace
+'$1'          Name.Builtin.Pseudo
+' '           Text.Whitespace
+'notepad.exe' Text
+'\n\n  '      Text.Whitespace
+'MessageBox'  Keyword
+' '           Text.Whitespace
+'MB_OK'       Name.Constant
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'notepad.exe=$1' Literal.String.Double
+'"'           Literal.String.Double
+'\n  '        Text.Whitespace
+'Exec'        Keyword
+' '           Text.Whitespace
+'\'"$1"\''    Literal.String.Single
+'\n  '        Text.Whitespace
+'ExecShell'   Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'open'        Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'\'"$INSTDIR"\'' Literal.String.Single
+'\n  '        Text.Whitespace
+'Sleep'       Keyword
+' '           Text.Whitespace
+'500'         Text
+'\n  '        Text.Whitespace
+'BringToFront' Keyword
+'\n\n'        Text.Whitespace
+
+'SectionEnd'  Keyword
+'\n\n'        Text.Whitespace
+
+'Section'     Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'Test ActiveX control registration' Literal.String.Double
+'"'           Literal.String.Double
+'\n\n  '      Text.Whitespace
+'SectionIn'   Keyword
+' '           Text.Whitespace
+'2'           Text
+'\n\n  '      Text.Whitespace
+'UnRegDLL'    Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'$SYSDIR'     Name.Builtin
+'\\spin32.ocx' Literal.String.Double
+'"'           Literal.String.Double
+'\n  '        Text.Whitespace
+'Sleep'       Keyword
+' '           Text.Whitespace
+'1000'        Text
+'\n  '        Text.Whitespace
+'RegDLL'      Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'$SYSDIR'     Name.Builtin
+'\\spin32.ocx' Literal.String.Double
+'"'           Literal.String.Double
+'\n  '        Text.Whitespace
+'Sleep'       Keyword
+' '           Text.Whitespace
+'1000'        Text
+'\n  \n'      Text.Whitespace
+
+'SectionEnd'  Keyword
+'\n\n'        Text.Whitespace
+
+';--------------------------------' Comment
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'Function'    Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'CSCTest'     Literal.String.Double
+'"'           Literal.String.Double
+'\n  \n  '    Text.Whitespace
+'CreateDirectory' Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'$SMPROGRAMS' Name.Builtin
+'\\Big NSIS Test' Literal.String.Double
+'"'           Literal.String.Double
+'\n  '        Text.Whitespace
+'SetOutPath'  Keyword
+' '           Text.Whitespace
+'$INSTDIR'    Name.Variable.Global
+' '           Text.Whitespace
+'; for working directory' Comment
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'CreateShortCut' Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'$SMPROGRAMS' Name.Builtin
+'\\Big NSIS Test\\Uninstall BIG NSIS Test.lnk' Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'$INSTDIR'    Name.Variable.Global
+'\\bt-uninst.exe' Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'; use defaults for parameters, icon, etc.' Comment
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+"; this one will use notepad's icon, start it minimized, and give it a hotkey (of Ctrl+Shift+Q)" Comment
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'CreateShortCut' Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'$SMPROGRAMS' Name.Builtin
+'\\Big NSIS Test\\silent.nsi.lnk' Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'$INSTDIR'    Name.Variable.Global
+'\\silent.nsi' Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'$WINDIR'     Name.Builtin
+'\\notepad.exe' Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'0'           Text
+' '           Text.Whitespace
+'SW_SHOWMINIMIZED' Name.Constant
+' '           Text.Whitespace
+'CONTROL'     Text
+'|'           Operator
+'SHIFT'       Text
+'|'           Operator
+'Q'           Text
+'\n  '        Text.Whitespace
+'CreateShortCut' Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'$SMPROGRAMS' Name.Builtin
+'\\Big NSIS Test\\TheDir.lnk' Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'$INSTDIR'    Name.Variable.Global
+'\\'          Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'0'           Text
+' '           Text.Whitespace
+'SW_SHOWMAXIMIZED' Name.Constant
+' '           Text.Whitespace
+'CONTROL'     Text
+'|'           Operator
+'SHIFT'       Text
+'|'           Operator
+'Z'           Text
+'\n\n'        Text.Whitespace
+
+'FunctionEnd' Keyword
+'\n\n'        Text.Whitespace
+
+'Function'    Keyword
+' '           Text.Whitespace
+'myfunc'      Text
+'\n\n  '      Text.Whitespace
+'StrCpy'      Keyword
+' '           Text.Whitespace
+'$2'          Name.Builtin.Pseudo
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'MyTestVar=$1' Literal.String.Double
+'"'           Literal.String.Double
+'\n  '        Text.Whitespace
+'MessageBox'  Keyword
+' '           Text.Whitespace
+'MB_OK'       Name.Constant
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'myfunc: $2'  Literal.String.Double
+'"'           Literal.String.Double
+'\n\n'        Text.Whitespace
+
+'FunctionEnd' Keyword
+'\n\n'        Text.Whitespace
+
+'Function'    Keyword
+' '           Text.Whitespace
+'MyFunctionTest' Text
+'\n\n  '      Text.Whitespace
+'ReadINIStr'  Keyword
+' '           Text.Whitespace
+'$1'          Name.Builtin.Pseudo
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'$INSTDIR'    Name.Variable.Global
+'\\test.ini'  Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'MySectionIni' Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'Value1'      Literal.String.Double
+'"'           Literal.String.Double
+'\n  '        Text.Whitespace
+'StrCmp'      Keyword
+' '           Text.Whitespace
+'$1'          Name.Builtin.Pseudo
+' '           Text.Whitespace
+'$8'          Name.Builtin.Pseudo
+' '           Text.Whitespace
+'NoFailedMsg' Text
+'\n    '      Text.Whitespace
+'MessageBox'  Keyword
+' '           Text.Whitespace
+'MB_OK'       Name.Constant
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'WriteINIStr failed' Literal.String.Double
+'"'           Literal.String.Double
+'\n  \n  '    Text.Whitespace
+'NoFailedMsg' Name.Label
+':'           Punctuation
+'\n\n'        Text.Whitespace
+
+'FunctionEnd' Keyword
+'\n\n'        Text.Whitespace
+
+'Function'    Keyword
+' '           Text.Whitespace
+'.onSelChange' Text
+'\n\n  '      Text.Whitespace
+'SectionGetText' Keyword
+' '           Text.Whitespace
+'${TESTIDX}'  Keyword.Pseudo
+' '           Text.Whitespace
+'$0'          Name.Builtin.Pseudo
+'\n  '        Text.Whitespace
+'StrCmp'      Keyword
+' '           Text.Whitespace
+'$0'          Name.Builtin.Pseudo
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'e'           Text
+'\n    '      Text.Whitespace
+'SectionSetText' Keyword
+' '           Text.Whitespace
+'${TESTIDX}'  Keyword.Pseudo
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'"'           Literal.String.Double
+'\n  '        Text.Whitespace
+'Goto'        Keyword
+' '           Text.Whitespace
+'e2'          Text
+'\n'          Text.Whitespace
+
+'e'           Name.Label
+':'           Punctuation
+'\n  '        Text.Whitespace
+'SectionSetText' Keyword
+' '           Text.Whitespace
+'${TESTIDX}'  Keyword.Pseudo
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'TextInSection' Literal.String.Double
+'"'           Literal.String.Double
+'\n'          Text.Whitespace
+
+'e2'          Name.Label
+':'           Punctuation
+'\n\n'        Text.Whitespace
+
+'FunctionEnd' Keyword
+'\n\n'        Text.Whitespace
+
+';--------------------------------' Comment
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'; Uninstaller' Comment
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'UninstallText' Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'This will uninstall example2. Hit next to continue.' Literal.String.Double
+'"'           Literal.String.Double
+'\n'          Text.Whitespace
+
+'UninstallIcon' Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'${NSISDIR}'  Name.Builtin
+'\\Contrib\\Graphics\\Icons\\nsis1-uninstall.ico' Literal.String.Double
+'"'           Literal.String.Double
+'\n\n'        Text.Whitespace
+
+'Section'     Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'Uninstall'   Literal.String.Double
+'"'           Literal.String.Double
+'\n\n  '      Text.Whitespace
+'DeleteRegKey' Keyword
+' '           Text.Whitespace
+'HKLM'        Name.Constant
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\BigNSISTest' Literal.String.Double
+'"'           Literal.String.Double
+'\n  '        Text.Whitespace
+'DeleteRegKey' Keyword
+' '           Text.Whitespace
+'HKLM'        Name.Constant
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'SOFTWARE\\NSISTest\\BigNSISTest' Literal.String.Double
+'"'           Literal.String.Double
+'\n  '        Text.Whitespace
+'Delete'      Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'$INSTDIR'    Name.Variable.Global
+'\\silent.nsi' Literal.String.Double
+'"'           Literal.String.Double
+'\n  '        Text.Whitespace
+'Delete'      Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'$INSTDIR'    Name.Variable.Global
+'\\LogicLib.nsi' Literal.String.Double
+'"'           Literal.String.Double
+'\n  '        Text.Whitespace
+'Delete'      Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'$INSTDIR'    Name.Variable.Global
+'\\bt-uninst.exe' Literal.String.Double
+'"'           Literal.String.Double
+'\n  '        Text.Whitespace
+'Delete'      Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'$INSTDIR'    Name.Variable.Global
+'\\test.ini'  Literal.String.Double
+'"'           Literal.String.Double
+'\n  '        Text.Whitespace
+'Delete'      Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'$SMPROGRAMS' Name.Builtin
+'\\Big NSIS Test\\*.*' Literal.String.Double
+'"'           Literal.String.Double
+'\n  '        Text.Whitespace
+'RMDir'       Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'$SMPROGRAMS' Name.Builtin
+'\\BiG NSIS Test' Literal.String.Double
+'"'           Literal.String.Double
+'\n  \n  '    Text.Whitespace
+'MessageBox'  Keyword
+' '           Text.Whitespace
+'MB_YESNO'    Name.Constant
+'|'           Operator
+'MB_ICONQUESTION' Name.Constant
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'Would you like to remove the directory $INSTDIR\\cpdest?' Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'IDNO'        Name.Constant
+' '           Text.Whitespace
+'NoDelete'    Text
+'\n    '      Text.Whitespace
+'Delete'      Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'$INSTDIR'    Name.Variable.Global
+'\\cpdest\\*.*' Literal.String.Double
+'"'           Literal.String.Double
+'\n    '      Text.Whitespace
+'RMDir'       Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'$INSTDIR'    Name.Variable.Global
+'\\cpdest'    Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'; skipped if no' Comment
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'NoDelete'    Name.Label
+':'           Punctuation
+'\n  \n  '    Text.Whitespace
+'RMDir'       Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'$INSTDIR'    Name.Variable.Global
+'\\MyProjectFamily\\MyProject' Literal.String.Double
+'"'           Literal.String.Double
+'\n  '        Text.Whitespace
+'RMDir'       Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'$INSTDIR'    Name.Variable.Global
+'\\MyProjectFamily' Literal.String.Double
+'"'           Literal.String.Double
+'\n  '        Text.Whitespace
+'RMDir'       Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'$INSTDIR'    Name.Variable.Global
+'"'           Literal.String.Double
+'\n\n  '      Text.Whitespace
+'IfFileExists' Keyword
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'$INSTDIR'    Name.Variable.Global
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'0'           Text
+' '           Text.Whitespace
+'NoErrorMsg'  Text
+'\n    '      Text.Whitespace
+'MessageBox'  Keyword
+' '           Text.Whitespace
+'MB_OK'       Name.Constant
+' '           Text.Whitespace
+'"'           Literal.String.Double
+'Note: $INSTDIR could not be removed!' Literal.String.Double
+'"'           Literal.String.Double
+' '           Text.Whitespace
+'IDOK'        Name.Constant
+' '           Text.Whitespace
+'0'           Text
+' '           Text.Whitespace
+"; skipped if file doesn't exist" Comment
+'\n'          Text.Whitespace
+
+'  '          Text.Whitespace
+'NoErrorMsg'  Name.Label
+':'           Punctuation
+'\n\n'        Text.Whitespace
+
+'SectionEnd'  Keyword
+'\n'          Text.Whitespace

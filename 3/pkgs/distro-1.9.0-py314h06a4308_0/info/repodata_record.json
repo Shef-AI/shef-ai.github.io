@@ -1,0 +1,23 @@
+{
+  "arch": "x86_64",
+  "build": "py314h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64/",
+  "constrains": [],
+  "depends": [
+    "python >=3.14,<3.15.0a0",
+    "python_abi 3.14.* *_cp314"
+  ],
+  "fn": "distro-1.9.0-py314h06a4308_0.conda",
+  "license": "Apache-2.0",
+  "license_family": "Apache",
+  "md5": "9dba822b179b696580bc63321b65c2a2",
+  "name": "distro",
+  "platform": "linux",
+  "sha256": "19394a831694509fb4a48a4d5467b7e3fe849a15faef7d3c3bba025d3deecf9a",
+  "size": 41665,
+  "subdir": "linux-64",
+  "timestamp": 1759959195000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/distro-1.9.0-py314h06a4308_0.conda",
+  "version": "1.9.0"
+}

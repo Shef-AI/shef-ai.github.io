@@ -1,0 +1,12 @@
+prefix=/home/task_179256651125846/croot/abseil-split_1792566589052/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol
+exec_prefix=${prefix}
+libdir=/home/task_179256651125846/croot/abseil-split_1792566589052/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol/lib
+includedir=/home/task_179256651125846/croot/abseil-split_1792566589052/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehol/include
+
+Name: absl_raw_hash_map
+Description: Abseil raw_hash_map library
+URL: https://abseil.io/
+Version: 20260526
+Requires: absl_config = 20260526, absl_common_policy_traits = 20260526, absl_container_memory = 20260526, absl_core_headers = 20260526, absl_raw_hash_set = 20260526, absl_type_traits = 20260526, absl_throw_delegate = 20260526
+Libs: -L${libdir}  
+Cflags: -I${includedir} -DNOMINMAX

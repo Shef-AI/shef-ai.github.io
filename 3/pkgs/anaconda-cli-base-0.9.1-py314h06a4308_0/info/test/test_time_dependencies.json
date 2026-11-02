@@ -1,0 +1,1 @@
+["pip", "pytest", "types-requests", "pytest-mock"]

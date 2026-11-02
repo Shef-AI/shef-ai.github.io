@@ -1,0 +1,189 @@
+'apple'       Name
+'.'           Operator
+'filter'      Name
+'('           Punctuation
+'x'           Name
+','           Punctuation
+' '           Text
+'y'           Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'apple'       Name
+'.'           Operator
+'\\\n'        Text
+
+'    '        Text
+'filter'      Name.Builtin
+'('           Punctuation
+'x'           Name
+','           Punctuation
+' '           Text
+'y'           Name
+')'           Punctuation
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'1'           Literal.Number.Integer
+' '           Text
+'\\\n'        Text
+
+'    '        Text
+'.'           Operator
+' '           Text
+'\\\n'        Text
+
+'    '        Text
+'__str__'     Name.Function.Magic
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'from'        Keyword.Namespace
+' '           Text.Whitespace
+'os'          Name.Namespace
+' '           Text.Whitespace
+'import'      Keyword.Namespace
+' '           Text
+'path'        Name
+'\n'          Text.Whitespace
+
+'from'        Keyword.Namespace
+' \\\n        ' Text.Whitespace
+'os'          Name.Namespace
+' '           Text
+'\\\n'        Text
+
+'        '    Text
+'import'      Keyword.Namespace
+' \\\n        ' Text.Whitespace
+'path'        Name.Namespace
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'import'      Keyword.Namespace
+' '           Text.Whitespace
+'os'          Name.Namespace
+'.'           Name.Namespace
+'path'        Name.Namespace
+' '           Text.Whitespace
+'as'          Keyword
+' '           Text.Whitespace
+'something'   Name.Namespace
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'import'      Keyword.Namespace
+' \\\n        ' Text.Whitespace
+'os'          Name.Namespace
+'.'           Name.Namespace
+'path'        Name.Namespace
+' '           Text
+'\\\n'        Text
+
+'        '    Text
+'as'          Keyword
+' '           Text
+'\\\n'        Text
+
+'        '    Text
+'something'   Name
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'class'       Keyword
+' \\\n '      Text.Whitespace
+'Spam'        Name.Class
+':'           Punctuation
+'\n'          Text.Whitespace
+
+'    '        Text
+'pass'        Keyword
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'class'       Keyword
+' '           Text.Whitespace
+'Spam'        Name.Class
+':'           Punctuation
+' '           Text
+'pass'        Keyword
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'class'       Keyword
+' '           Text.Whitespace
+'Spam'        Name.Class
+'('           Punctuation
+'object'      Name.Builtin
+')'           Punctuation
+':'           Punctuation
+'\n'          Text.Whitespace
+
+'    '        Text
+'pass'        Keyword
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'class'       Keyword
+' \\\n '      Text.Whitespace
+'Spam'        Name.Class
+' '           Text
+'\\\n'        Text
+
+'  '          Text
+'('           Punctuation
+'\n'          Text.Whitespace
+
+'   '         Text
+'object'      Name.Builtin
+'\n'          Text.Whitespace
+
+' '           Text
+')'           Punctuation
+' '           Text
+'\\\n'        Text
+
+' '           Text
+':'           Punctuation
+'\n'          Text.Whitespace
+
+' '           Text
+'pass'        Keyword
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'\n'          Text.Whitespace
+
+'def'         Keyword
+' \\\n '      Text.Whitespace
+'spam'        Name.Function
+' '           Text
+'\\\n'        Text
+
+'  '          Text
+'('           Punctuation
+' '           Text
+'\\\n'        Text
+
+'  '          Text
+')'           Punctuation
+' '           Text
+'\\\n'        Text
+
+'  '          Text
+':'           Punctuation
+' '           Text
+'\\\n'        Text
+
+'  '          Text
+'pass'        Keyword
+'\n'          Text.Whitespace

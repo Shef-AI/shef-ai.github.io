@@ -1,0 +1,95 @@
+{
+  "paths": [
+    {
+      "_path": "site-packages/certifi-2026.10.19.dist-info/INSTALLER",
+      "path_type": "hardlink",
+      "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+      "size_in_bytes": 5
+    },
+    {
+      "_path": "site-packages/certifi-2026.10.19.dist-info/METADATA",
+      "path_type": "hardlink",
+      "sha256": "a5c0be3a42daeef0edfaf58e6ea5b7550f3e4e8eb35420f72e902df9bcf00f5c",
+      "size_in_bytes": 2526
+    },
+    {
+      "_path": "site-packages/certifi-2026.10.19.dist-info/RECORD",
+      "path_type": "hardlink",
+      "sha256": "0c3f4b0b3fbbdbe456696f59780f537cba48a5979f9d5def4c45433e7a6b4035",
+      "size_in_bytes": 1501
+    },
+    {
+      "_path": "site-packages/certifi-2026.10.19.dist-info/REQUESTED",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "site-packages/certifi-2026.10.19.dist-info/WHEEL",
+      "path_type": "hardlink",
+      "sha256": "69e6228a0d35958183cc1812f07c565ce837b95eb51bd8a33acba9fa4f68d6c9",
+      "size_in_bytes": 91
+    },
+    {
+      "_path": "site-packages/certifi-2026.10.19.dist-info/direct_url.json",
+      "path_type": "hardlink",
+      "sha256": "6504ac91e3417998735a99cb84f248cb5fc9bb8e0f08a6ef544ae963b6ae4907",
+      "size_in_bytes": 101
+    },
+    {
+      "_path": "site-packages/certifi-2026.10.19.dist-info/licenses/LICENSE",
+      "path_type": "hardlink",
+      "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7",
+      "size_in_bytes": 989
+    },
+    {
+      "_path": "site-packages/certifi-2026.10.19.dist-info/top_level.txt",
+      "path_type": "hardlink",
+      "sha256": "28cbb8bd409fb232eb90f6d235d81d7a44bea552730402453bffe723c345ebe5",
+      "size_in_bytes": 8
+    },
+    {
+      "_path": "site-packages/certifi/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "f8ccfc10235998c7edd340f2f305b5f3d71aed978aea82a02af30d7877bee902",
+      "size_in_bytes": 94
+    },
+    {
+      "_path": "site-packages/certifi/__main__.py",
+      "path_type": "hardlink",
+      "sha256": "c410688fdd394d45812d118034e71fee88ba7beddd30fe1c1281bd3b232cd758",
+      "size_in_bytes": 243
+    },
+    {
+      "_path": "site-packages/certifi/cacert.pem",
+      "path_type": "hardlink",
+      "sha256": "50f79f98dac192b20dbf73f35c56f0b0c557ab267ff5199d1117cc1180b70785",
+      "size_in_bytes": 238856
+    },
+    {
+      "_path": "site-packages/certifi/core.py",
+      "path_type": "hardlink",
+      "sha256": "5c55f2727746e697f7edac9e17c377d8752e0da7ecca191531b3b80403d61dad",
+      "size_in_bytes": 3394
+    },
+    {
+      "_path": "site-packages/certifi/py.typed",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "site-packages/certifi/tests/__init__.py",
+      "path_type": "hardlink",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_in_bytes": 0
+    },
+    {
+      "_path": "site-packages/certifi/tests/test_certify.py",
+      "path_type": "hardlink",
+      "sha256": "7c179d1edf37f7e912b133663735fb46c6338d5d0e5f8915d11c3bc287d227b8",
+      "size_in_bytes": 467
+    }
+  ],
+  "paths_version": 1
+}

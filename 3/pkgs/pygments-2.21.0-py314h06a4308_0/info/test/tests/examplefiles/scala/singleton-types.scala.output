@@ -1,0 +1,89 @@
+'val'         Keyword.Declaration
+' '           Text.Whitespace
+'x'           Name
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'???'         Operator
+'\n'          Text.Whitespace
+
+'trait'       Keyword
+' '           Text.Whitespace
+'Foo'         Name.Class
+'['           Punctuation
+'T'           Name.Class
+' '           Text.Whitespace
+'<:'          Operator
+' '           Text.Whitespace
+'x'           Name
+'.'           Punctuation
+'type'        Keyword
+']'           Punctuation
+'\n'          Text.Whitespace
+
+'val'         Keyword.Declaration
+' '           Text.Whitespace
+'a'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'x'           Name
+'.'           Punctuation
+'type'        Keyword
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'???'         Operator
+'\n'          Text.Whitespace
+
+'val'         Keyword.Declaration
+' '           Text.Whitespace
+'b'           Name
+':'           Punctuation
+' '           Text.Whitespace
+'Foo'         Name.Class
+'['           Punctuation
+'x'           Name
+'.'           Punctuation
+'type'        Keyword
+']'           Punctuation
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'???'         Operator
+'\n\n'        Text.Whitespace
+
+'type'        Keyword
+' '           Text.Whitespace
+'Test'        Name.Class
+'['           Punctuation
+'A'           Name.Class
+']'           Punctuation
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'Int'         Name.Class
+'\n'          Text.Whitespace
+
+'type'        Keyword
+' '           Text.Whitespace
+'MyTest'      Name.Class
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'Test'        Name.Class
+'['           Punctuation
+'1'           Literal.Number.Integer
+']'           Punctuation
+'\n\n'        Text.Whitespace
+
+'val'         Keyword.Declaration
+' '           Text.Whitespace
+'one'         Name
+':'           Punctuation
+' '           Text.Whitespace
+'1'           Literal.Number.Integer
+' '           Text.Whitespace
+'='           Operator
+' '           Text.Whitespace
+'1'           Literal.Number.Integer
+'\n'          Text.Whitespace

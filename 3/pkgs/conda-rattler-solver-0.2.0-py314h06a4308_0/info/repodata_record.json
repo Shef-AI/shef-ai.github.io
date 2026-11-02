@@ -1,0 +1,25 @@
+{
+  "arch": "x86_64",
+  "build": "py314h06a4308_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64/",
+  "constrains": [],
+  "depends": [
+    "conda >=26.7.0",
+    "py-rattler >=0.26.0,<0.27.0a0",
+    "python >=3.14,<3.15.0a0",
+    "python_abi 3.14.* *_cp314"
+  ],
+  "fn": "conda-rattler-solver-0.2.0-py314h06a4308_0.conda",
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "md5": "400bf739eb60f0fbb47d9f3d87250d3d",
+  "name": "conda-rattler-solver",
+  "platform": "linux",
+  "sha256": "967ebc67764ab31d16156cbbc68718dcd0ada21536cb577a1cf27a6465b67118",
+  "size": 157129,
+  "subdir": "linux-64",
+  "timestamp": 1790366551000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/conda-rattler-solver-0.2.0-py314h06a4308_0.conda",
+  "version": "0.2.0"
+}

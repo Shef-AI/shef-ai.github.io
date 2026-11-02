@@ -1,0 +1,23 @@
+{
+  "arch": "x86_64",
+  "build": "h32cd6e7_0",
+  "build_number": 0,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64/",
+  "constrains": [],
+  "depends": [
+    "__glibc >=2.28,<3.0.a0",
+    "libgcc-ng >=11.2.0"
+  ],
+  "fn": "libbrotlicommon-1.2.0-h32cd6e7_0.conda",
+  "license": "MIT",
+  "license_family": "MIT",
+  "md5": "cdc0bbfec0c99b30d435b22341a716b0",
+  "name": "libbrotlicommon",
+  "platform": "linux",
+  "sha256": "a389948434028846cd8a844a0fda48e2dbff9d639563c8cee643f754d30a90cd",
+  "size": 78282,
+  "subdir": "linux-64",
+  "timestamp": 1762363571000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/libbrotlicommon-1.2.0-h32cd6e7_0.conda",
+  "version": "1.2.0"
+}

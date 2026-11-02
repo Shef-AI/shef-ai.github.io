@@ -1,0 +1,13 @@
+prefix=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libarchive
+Description: library that can create and read several streaming archive formats
+Version: 3.8.8
+Cflags: -I${includedir}
+Cflags.private: -DLIBARCHIVE_STATIC
+Libs: -L${libdir} -larchive
+Libs.private:  -lz -lbz2 -llzma -llz4 -lzstd -lcrypto -lxml2 -lssl -L/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/lib -lxml2 -ldl -lpthread -L/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/lib -lz -L/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/lib -lm -L/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/lib -licuuc -licudata -lpthread -ldl -lm
+Requires.private: 

@@ -1,0 +1,76 @@
+# This file created by conda-build 25.1.2
+# meta.yaml template originally from:
+# /home/task_176036377076491/libidn2-feedstock/recipe, last modified Mon Oct 13 14:04:48 2025
+# ------------------------------------------------
+
+package:
+  name: libidn2
+  version: 2.3.8
+source:
+  sha256: f557911bf6171621e1f72ff35f5b1825bb35b52ed45325dcdee931e5d3c0787a
+  url: https://ftp.gnu.org/gnu/libidn/libidn2-2.3.8.tar.gz
+build:
+  number: '0'
+  run_exports:
+    - libidn2 >=2,<3.0a0
+  string: hf80d704_0
+requirements:
+  build:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - binutils_impl_linux-64 2.40 h5293946_0
+    - binutils_linux-64 2.40.0 hc2dff05_2
+    - gcc_impl_linux-64 11.2.0 h1234567_1
+    - gcc_linux-64 11.2.0 h5c386dc_2
+    - gnuconfig 2021.05.24 hd3eb1b0_0
+    - kernel-headers_linux-64 4.18.0 h528b178_0
+    - ld_impl_linux-64 2.40 h12ee557_0
+    - libgcc-devel_linux-64 11.2.0 h1234567_1
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - make 4.2.1 h1bed415_1
+    - pkg-config 0.29.2 h1bed415_8
+    - sysroot_linux-64 2.28 h528b178_0
+    - tzdata 2025b h04d1e81_0
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - gettext 0.21.0 hedfda30_2
+    - icu 73.1 h6a678d5_0
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libiconv 1.16 h5eee18b_3
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - libunistring 1.3 hb25bd0a_0
+    - libxml2 2.13.8 hfdd30dd_0
+    - libzlib 1.3.1 hb25bd0a_0
+    - ncurses 6.5 h7934f7d_0
+    - xz 5.6.4 h5eee18b_1
+    - zlib 1.3.1 hb25bd0a_0
+  run:
+    - __glibc >=2.28,<3.0.a0
+    - gettext >=0.21.0,<1.0a0
+    - libgcc-ng >=11.2.0
+    - libiconv >=1.16,<2.0a0
+    - libunistring >=1,<2.0a0
+test:
+  commands:
+    - test -f "${PREFIX}/include/idn2.h"
+    - test -f "${PREFIX}/lib/libidn2${SHLIB_EXT}"
+    - test ! -f "${PREFIX}/lib/libidn2.a"
+about:
+  description: Library for internationalized domain names (IDNA2008) support
+  dev_url: https://gitlab.com/libidn/libidn2
+  doc_url: https://libidn.gitlab.io/libidn2/manual/libidn2.html
+  home: https://www.gnu.org/software/libidn/#libidn2
+  license: LGPL-2.0 AND LGPL-3.0-or-later AND GPL-3.0-or-later
+  license_family: OTHER
+  license_file: COPYING
+  summary: Library for internationalized domain names (IDNA2008) support
+extra:
+  copy_test_source_files: true
+  final: true
+  recipe-maintainers:
+    - chenghlee
+    - hmaarrfk

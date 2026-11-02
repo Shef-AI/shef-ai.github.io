@@ -1,0 +1,254 @@
+'∇'           Name.Builtin.Pseudo
+' '           Text.Whitespace
+'R'           Name.Variable
+'←'           Keyword.Declaration
+'M'           Name.Variable
+' '           Text.Whitespace
+'COMBIN'      Name.Variable
+' '           Text.Whitespace
+'N'           Name.Variable
+';'           Literal.String.Regex
+'D'           Name.Variable
+';'           Literal.String.Regex
+'E'           Name.Variable
+';'           Literal.String.Regex
+'F'           Name.Variable
+';'           Literal.String.Regex
+'G'           Name.Variable
+';'           Literal.String.Regex
+'P'           Name.Variable
+'\n  '        Text.Whitespace
+'⍝ Returns a matrix of every possible' Comment.Single
+'\n  '        Text.Whitespace
+'⍝ combination of M elements from the' Comment.Single
+'\n  '        Text.Whitespace
+'⍝ vector ⍳N.  That is, returns a' Comment.Single
+'\n  '        Text.Whitespace
+'⍝ matrix with M!N rows and N columns.' Comment.Single
+'\n  '        Text.Whitespace
+'⍝'           Comment.Single
+'\n  '        Text.Whitespace
+'E'           Name.Variable
+'←'           Keyword.Declaration
+'('           Punctuation
+'⍳'           Operator
+'P'           Name.Variable
+'←'           Keyword.Declaration
+'N'           Name.Variable
+'-'           Operator
+'R'           Name.Variable
+'←'           Keyword.Declaration
+'M'           Name.Variable
+'-'           Operator
+'1'           Literal.Number
+')'           Punctuation
+'-'           Operator
+'⎕IO'         Name.Function
+'\n  '        Text.Whitespace
+'D'           Name.Variable
+'←'           Keyword.Declaration
+'R'           Name.Variable
+'+'           Operator
+'⍳'           Operator
+'P'           Name.Variable
+'\n  '        Text.Whitespace
+'R'           Name.Variable
+'←'           Keyword.Declaration
+'('           Punctuation
+'P'           Name.Variable
+','           Operator
+'1'           Literal.Number
+')'           Punctuation
+'⍴'           Operator
+'D'           Name.Variable
+'\n  '        Text.Whitespace
+'P'           Name.Variable
+'←'           Keyword.Declaration
+'P'           Name.Variable
+'⍴'           Operator
+'1'           Literal.Number
+'\n '         Text.Whitespace
+'L1'          Name.Variable
+':'           Name.Builtin.Pseudo
+'→'           Keyword.Declaration
+'('           Punctuation
+'⎕IO'         Name.Function
+'>'           Operator
+'1'           Literal.Number
+'↑'           Operator
+'D'           Name.Variable
+'←'           Keyword.Declaration
+'D'           Name.Variable
+'-'           Operator
+'1'           Literal.Number
+')'           Punctuation
+'⍴'           Operator
+'0'           Literal.Number
+'\n  '        Text.Whitespace
+'P'           Name.Variable
+'←'           Keyword.Declaration
+'+'           Operator
+'\\'          Name.Attribute
+'P'           Name.Variable
+'\n  '        Text.Whitespace
+'G'           Name.Variable
+'←'           Keyword.Declaration
+'+'           Operator
+'\\'          Name.Attribute
+'¯1'          Literal.Number
+'↓'           Operator
+'0'           Literal.Number
+','           Operator
+'F'           Name.Variable
+'←'           Keyword.Declaration
+'⌽'           Operator
+'P'           Name.Variable
+'\n  '        Text.Whitespace
+'E'           Name.Variable
+'←'           Keyword.Declaration
+'F'           Name.Variable
+'/'           Name.Attribute
+'E'           Name.Variable
+'-'           Operator
+'G'           Name.Variable
+'\n  '        Text.Whitespace
+'R'           Name.Variable
+'←'           Keyword.Declaration
+'('           Punctuation
+'F'           Name.Variable
+'/'           Name.Attribute
+'D'           Name.Variable
+')'           Punctuation
+','           Operator
+'R'           Name.Variable
+'['           Literal.String.Regex
+'E'           Name.Variable
+'+'           Operator
+'⍳'           Operator
+'⍴'           Operator
+'E'           Name.Variable
+';'           Literal.String.Regex
+']'           Literal.String.Regex
+'\n  '        Text.Whitespace
+'E'           Name.Variable
+'←'           Keyword.Declaration
+'G'           Name.Variable
+'\n  '        Text.Whitespace
+'→'           Keyword.Declaration
+'L1'          Name.Variable
+'\n'          Text.Whitespace
+
+'∇'           Name.Builtin.Pseudo
+'\n\n'        Text.Whitespace
+
+'∇'           Name.Builtin.Pseudo
+' '           Text.Whitespace
+'R'           Name.Variable
+'←'           Keyword.Declaration
+'M'           Name.Variable
+' '           Text.Whitespace
+'QUICKEXP'    Name.Variable
+' '           Text.Whitespace
+'N'           Name.Variable
+'\n  '        Text.Whitespace
+'⍝ Matrix exponentiation' Comment.Single
+'\n  '        Text.Whitespace
+'B'           Name.Variable
+' '           Text.Whitespace
+'←'           Keyword.Declaration
+' '           Text.Whitespace
+'⌊'           Operator
+' '           Text.Whitespace
+'1'           Literal.Number
+' '           Text.Whitespace
+'+'           Operator
+' '           Text.Whitespace
+'2'           Literal.Number
+' '           Text.Whitespace
+'⍟'           Operator
+' '           Text.Whitespace
+'N'           Name.Variable
+'\n  '        Text.Whitespace
+'V'           Name.Variable
+' '           Text.Whitespace
+'←'           Keyword.Declaration
+' '           Text.Whitespace
+'('           Punctuation
+'B'           Name.Variable
+' '           Text.Whitespace
+'⍴'           Operator
+' '           Text.Whitespace
+'2'           Literal.Number
+')'           Punctuation
+' '           Text.Whitespace
+'⊤'           Operator
+' '           Text.Whitespace
+'N'           Name.Variable
+'\n  '        Text.Whitespace
+'L'           Name.Variable
+' '           Text.Whitespace
+'←'           Keyword.Declaration
+' '           Text.Whitespace
+'⊂'           Operator
+' '           Text.Whitespace
+'M'           Name.Variable
+'\n  '        Text.Whitespace
+'R'           Name.Variable
+' '           Text.Whitespace
+'←'           Keyword.Declaration
+' '           Text.Whitespace
+'⊃'           Operator
+' '           Text.Whitespace
+'+'           Operator
+'.'           Name.Attribute
+'×'           Operator
+' '           Text.Whitespace
+'/'           Name.Attribute
+' '           Text.Whitespace
+'V'           Name.Variable
+' '           Text.Whitespace
+'/'           Name.Attribute
+' '           Text.Whitespace
+'L'           Name.Variable
+' '           Text.Whitespace
+'⊣'           Operator
+' '           Text.Whitespace
+'{'           Keyword.Type
+' '           Text.Whitespace
+'L'           Name.Variable
+' '           Text.Whitespace
+'←'           Keyword.Declaration
+' '           Text.Whitespace
+'('           Punctuation
+'⊂'           Operator
+' '           Text.Whitespace
+'A'           Name.Variable
+' '           Text.Whitespace
+'+'           Operator
+'.'           Name.Attribute
+'×'           Operator
+' '           Text.Whitespace
+'A'           Name.Variable
+' '           Text.Whitespace
+'←'           Keyword.Declaration
+' '           Text.Whitespace
+'↑'           Operator
+'L'           Name.Variable
+')'           Punctuation
+' '           Text.Whitespace
+','           Operator
+' '           Text.Whitespace
+'L'           Name.Variable
+' '           Text.Whitespace
+'}'           Keyword.Type
+'¨'           Name.Attribute
+' '           Text.Whitespace
+'⍳'           Operator
+' '           Text.Whitespace
+'B'           Name.Variable
+'-'           Operator
+'1'           Literal.Number
+'\n'          Text.Whitespace
+
+'∇'           Name.Builtin.Pseudo
+'\n'          Text.Whitespace

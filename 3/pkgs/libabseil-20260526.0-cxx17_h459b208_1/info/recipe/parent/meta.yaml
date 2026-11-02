@@ -1,0 +1,169 @@
+{% set version = "20260526.0" %}
+{% set v_major = version.split(".")[0] %}
+# needs to match across all dependent packages; using C++20
+# is potentially problematic in some cases, see #45
+{% set cxx_standard = 17 %}
+
+package:
+  name: abseil-split
+  version: {{ version }}
+
+source:
+  url: https://github.com/abseil/abseil-cpp/archive/refs/tags/{{ version }}.tar.gz
+  sha256: 6e1aee535473414164bf83e4ebc40240dec71a4701f8a642d906e95bea1aea0c
+  patches:
+    # Helps downstream packages import the dll without an extra define
+    # https://github.com/conda-forge/abseil-cpp-feedstock/issues/43#issuecomment-1242969515
+    - patches/0001-default-dll-import-for-windows.patch
+    # avoid that compilation in C++20 mode changes the ABI vs. C++17
+    - patches/0002-don-t-use-C-20-stdlib-features-which-change-ABI-comp.patch
+    # Avoid SHELL:-Xarch… flags leaking into pkg-config files
+    # These flagse are not used anyways in our setup
+    - patches/0003-Don-t-try-to-compile-to-multiple-OSX-arches.patch
+
+build:
+  number: 1
+
+outputs:
+  # default behaviour is shared; however note that upstream does not support
+  # fully shared builds on windows, and some static libs will remain
+  # (see ALWAYS_STATIC list in test-abseil-libs.{sh,bat})
+  - name: libabseil
+    script: build-abseil.sh  # [unix]
+    script: build-abseil.bat  # [win]
+    build:
+      string: cxx{{ cxx_standard }}_h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}
+      run_exports:
+        - {{ pin_subpackage("libabseil", max_pin="x") }}
+        # also pin on ABI variant
+        - libabseil =*=cxx{{ cxx_standard }}*
+
+    requirements:
+      build:
+        - {{ compiler('c') }}
+        - {{ compiler('cxx') }}
+        - {{ stdlib('c') }}
+        - cmake
+        - ninja-base
+      run_constrained:
+        - libabseil-static ={{ version }}=cxx{{ cxx_standard }}*
+        # make sure we don't co-install with old version of old package name
+        - abseil-cpp ={{ version }}
+
+    test:
+      requires:
+        - {{ compiler('cxx') }}
+        - {{ stdlib('c') }}
+        - cmake
+        - ninja-base
+        - pkg-config
+      files:
+        - cmake_test/
+        - test-abseil-libs.sh   # [unix]
+        - test-abseil-libs.bat  # [win]
+      commands:
+        # windows-only (almost-)all-in-one DLL + import library
+        - if not exist %LIBRARY_BIN%\\abseil_dll.dll exit 1           # [win]
+        - if not exist %LIBRARY_LIB%\\abseil_dll.lib exit 1           # [win]
+        # absence of test targets in regular abseil output
+        - if exist %LIBRARY_BIN%\\abseil_test_dll.dll exit 1          # [win]
+        - if exist %LIBRARY_LIB%\\abseil_test_dll.lib exit 1          # [win]
+
+        # absl_* libraries (looped checks live in test-abseil-libs scripts)
+        - bash ./test-abseil-libs.sh libabseil                        # [unix]
+        - call test-abseil-libs.bat libabseil                         # [win]
+
+        # pkg-config (abseil_dll)
+        - pkg-config --print-errors --exact-version "{{ v_major }}" abseil_dll  # [win]
+
+        # CMake integration
+        - cd cmake_test
+        - export CMAKE_ARGS="$CMAKE_ARGS -GNinja -DCMAKE_BUILD_TYPE=Release"  # [unix]
+        - set "CMAKE_ARGS=%CMAKE_ARGS% -GNinja -DCMAKE_BUILD_TYPE=Release"    # [win]
+        - cmake $CMAKE_ARGS  -DCMAKE_CXX_STANDARD={{ cxx_standard }} .        # [unix]
+        - cmake %CMAKE_ARGS% -DCMAKE_CXX_STANDARD={{ cxx_standard }} .        # [win]
+        - cmake --build .
+        - ./flags_example    # [unix]
+        - flags_example.exe  # [win]
+        # Check for absence of disturbing SHELL:-Xarch... content in pkg-config files
+        - grep -q SHELL $PREFIX/lib/pkgconfig/absl_random_internal_randen_hwaes.pc && exit 1 || exit 0  # [unix]
+
+  # tests & test-helpers
+  - name: libabseil-tests
+    script: build-abseil.sh  # [unix]
+    script: build-abseil.bat  # [win]
+    build:
+      string: cxx{{ cxx_standard }}_h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}
+      always_include_files:
+        # Must overwrite cmake metadata from libabseil
+        - lib/cmake/absl/          # [unix]
+        - Library/lib/cmake/absl/  # [win]
+
+    requirements:
+      build:
+        - {{ compiler('c') }}
+        - {{ compiler('cxx') }}
+        - {{ stdlib('c') }}
+        - cmake
+        - ninja-base
+      host:
+        - gtest {{ gtest }}
+        - {{ pin_subpackage("libabseil", exact=True) }}
+      run:
+        - gtest
+        - {{ pin_subpackage("libabseil", exact=True) }}
+
+    test:
+      requires:
+        - {{ compiler('cxx') }}
+        - {{ stdlib('c') }}
+        - cmake
+        - ninja-base
+        - pkg-config
+      files:
+        - cmake_test/
+        - test-abseil-libs.sh   # [unix]
+        - test-abseil-libs.bat  # [win]
+      commands:
+        # windows-only (almost-)all-in-one DLL + import library
+        - if not exist %LIBRARY_BIN%\\abseil_test_dll.dll exit 1      # [win]
+        - if not exist %LIBRARY_LIB%\\abseil_test_dll.lib exit 1      # [win]
+
+        # absl_* test helper libraries (looped checks in test-abseil-libs scripts)
+        - bash ./test-abseil-libs.sh libabseil-tests                   # [unix]
+        - call test-abseil-libs.bat libabseil-tests                    # [win]
+
+        # pkg-config abseil_test_dll
+        - pkg-config --print-errors --exact-version "{{ v_major }}" abseil_test_dll  # [win]
+
+        # CMake integration
+        - cd cmake_test
+        - export CMAKE_ARGS="$CMAKE_ARGS -GNinja -DCMAKE_BUILD_TYPE=Release"  # [unix]
+        - set "CMAKE_ARGS=%CMAKE_ARGS% -GNinja -DCMAKE_BUILD_TYPE=Release"    # [win]
+        - cmake $CMAKE_ARGS  -DCMAKE_CXX_STANDARD={{ cxx_standard }} .        # [unix]
+        - cmake %CMAKE_ARGS% -DCMAKE_CXX_STANDARD={{ cxx_standard }} .        # [win]
+        # enable search for test target
+        - export TRY_TEST_TARGET=1  # [unix]
+        - set TRY_TEST_TARGET=1     # [win]
+        - cmake --build .
+        - ./flags_example    # [unix]
+        - flags_example.exe  # [win]
+about:
+  home: https://github.com/abseil/abseil-cpp
+  license: Apache-2.0
+  license_family: Apache
+  license_file: LICENSE
+  summary: Abseil Common Libraries (C++)
+  description: |
+    Abseil is an open-source collection of C++ code (compliant to C++11)
+    designed to augment the C++ standard library.
+  doc_url: https://github.com/abseil/abseil-cpp
+  dev_url: https://github.com/abseil/abseil-cpp
+
+extra:
+  recipe-maintainers:
+    - njzjz
+    - bluescarni
+    - xhochy
+    - h-vetinari
+  feedstock-name: abseil-cpp

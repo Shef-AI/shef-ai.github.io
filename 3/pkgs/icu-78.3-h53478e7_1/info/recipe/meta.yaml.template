@@ -1,0 +1,156 @@
+{% set version = "78.3" %}
+{% set major = version.split(".")[0] %}
+
+package:
+  name: icu
+  version: {{ version }}
+
+source:
+  - url: https://github.com/unicode-org/icu/releases/download/release-{{ version }}/icu4c-{{ version }}-sources.tgz
+    sha256: 3a2e7a47604ba702f345878308e6fefeca612ee895cf4a5f222e7955fabfe0c0
+    patches:
+      - patches/ctestfw-dll-output.patch  # [win]
+      - patches/mach-port-t.patch  # [osx]
+
+  # Without this archive ICU's `data/` Makefile cannot regenerate the
+  # locale resource bundles on Windows (`make[1]: *** No rule to make
+  # target 'out/tmp/dirs.timestamp'`). The sources tarball ships a
+  # pre-built icudt78l.dat for shared-data builds, but the per-locale
+  # source files needed for the Windows pkgdata flow live in this zip.
+  - url: https://github.com/unicode-org/icu/releases/download/release-{{ version }}/icu4c-{{ version }}-data.zip
+    sha256: 9d8b3899096aeb83e4e21ef8a40fec9e03b28db18c48452efac882ce25a91e27
+    folder: source/data
+
+build:
+  number: 1
+  run_exports:
+    # icu changes their file extension with each major rev.  Default pin OK.
+    - {{ pin_subpackage('icu') }}
+
+requirements:
+  build:
+    - {{ stdlib('c') }}
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - libtool        # [unix]
+    - make           # [unix]
+
+test:
+  files:
+    # From http://source.icu-project.org/repos/icu/data/trunk/charset/data/ucm/gb-18030-2000.ucm
+    - tests/gb-18030-2000.ucm
+    # From ICU's data folder
+    - tests/de.txt
+  {% set libs = [
+     "libicudata",
+     "libicui18n",
+     "libicuio",
+     "libicutest",
+     "libicutu",
+     "libicuuc"
+   ] %}
+  commands:
+    # Static libraries
+    {% for each_lib in libs %}
+    - test -f $PREFIX/lib/{{ each_lib }}.a  # [not win]
+    {% endfor %}
+
+    # Shared libraries (full version, major version, and unversioned symlink)
+    {% for each_lib in libs %}
+    - test -f $PREFIX/lib/{{ each_lib }}.{{ version }}.dylib   # [osx]
+    - test -f $PREFIX/lib/{{ each_lib }}.{{ major }}.dylib     # [osx]
+    - test -L $PREFIX/lib/{{ each_lib }}.dylib                 # [osx]
+    - test -f $PREFIX/lib/{{ each_lib }}.so.{{ version }}      # [linux]
+    - test -f $PREFIX/lib/{{ each_lib }}.so.{{ major }}        # [linux]
+    - test -L $PREFIX/lib/{{ each_lib }}.so                    # [linux]
+    {% endfor %}
+
+    # Windows shared libraries (versioned + unversioned names) and import libs
+    {% set win_dlls = ["icudt", "icuin", "icuio", "icutest", "icutu", "icuuc"] %}
+    {% for dll in win_dlls %}
+    - if not exist %LIBRARY_BIN%\{{ dll }}{{ major }}.dll exit 1  # [win]
+    - if not exist %LIBRARY_BIN%\{{ dll }}.dll exit 1  # [win]
+    {% endfor %}
+    {% set win_libs = ["icudt", "icuin", "icuio", "icutest", "icutu", "icuuc"] %}
+    {% for lib in win_libs %}
+    - if not exist %LIBRARY_LIB%\{{ lib }}.lib exit 1  # [win]
+    {% endfor %}
+
+    # Public headers
+    - test -f $PREFIX/include/unicode/utypes.h    # [not win]
+    - test -f $PREFIX/include/unicode/uvernum.h   # [not win]
+    - test -f $PREFIX/include/unicode/ucnv.h      # [not win]
+    - test -f $PREFIX/include/unicode/unistr.h    # [not win]
+    - if not exist %LIBRARY_INC%\unicode\utypes.h exit 1    # [win]
+    - if not exist %LIBRARY_INC%\unicode\uvernum.h exit 1   # [win]
+    - if not exist %LIBRARY_INC%\unicode\ucnv.h exit 1      # [win]
+    - if not exist %LIBRARY_INC%\unicode\unistr.h exit 1    # [win]
+
+    # ICU version macros in public headers
+    - grep -q "U_ICU_VERSION_MAJOR_NUM {{ major }}" $PREFIX/include/unicode/uvernum.h    # [not win]
+    - grep -q 'U_ICU_VERSION "{{ version }}"' $PREFIX/include/unicode/uvernum.h          # [not win]
+    - findstr /C:"U_ICU_VERSION_MAJOR_NUM {{ major }}" %LIBRARY_INC%\unicode\uvernum.h >nul  # [win]
+    - findstr /C:"U_ICU_VERSION \"{{ version }}\"" %LIBRARY_INC%\unicode\uvernum.h >nul      # [win]
+
+    # pkg-config files (presence + version metadata)
+    - test -f $PREFIX/lib/pkgconfig/icu-uc.pc     # [not win]
+    - test -f $PREFIX/lib/pkgconfig/icu-i18n.pc   # [not win]
+    - test -f $PREFIX/lib/pkgconfig/icu-io.pc     # [not win]
+    - if not exist %LIBRARY_LIB%\pkgconfig\icu-uc.pc exit 1     # [win]
+    - if not exist %LIBRARY_LIB%\pkgconfig\icu-i18n.pc exit 1   # [win]
+    - if not exist %LIBRARY_LIB%\pkgconfig\icu-io.pc exit 1     # [win]
+
+    # ICU data bundle (pkgdata.inc / Makefile.inc let users rebuild data)
+    - test -d $PREFIX/lib/icu                                 # [not win]
+    - test -f $PREFIX/lib/icu/{{ version }}/pkgdata.inc       # [not win]
+    - test -f $PREFIX/lib/icu/{{ version }}/Makefile.inc      # [not win]
+
+    # icu-config plumbing
+    - test "$(icu-config --version)" = "{{ version }}"        # [not win]
+    - test -n "$(icu-config --prefix)"                        # [not win]
+    - test -n "$(icu-config --cflags)"                        # [not win]
+    - test -n "$(icu-config --cxxflags)"                      # [not win]
+    - test -n "$(icu-config --cppflags)"                      # [not win]
+    - test -n "$(icu-config --ldflags)"                       # [not win]
+    - test -n "$(icu-config --ldflags-icuio)"                 # [not win]
+
+    # CLI tools
+    - genbrk --help
+    - gencfu --help
+    - gencnval --help
+    - gendict --help
+    # genrb --help returns exit 1 in ICU 78.x (quirk of the tool); the
+    # functional `genrb tests/de.txt` below covers it instead.
+    - icuexportdata --help
+    - icuinfo --help
+    - icuinfo | findstr /C:"{{ version }}"  # [win]
+    - icu-config --help                           # [not win]
+
+    # Functional checks
+    - icuinfo | grep -F "{{ version }}"           # [not win]
+    - genrb tests/de.txt                          # [not win]
+    - test -s de.res                              # [not win]
+    - makeconv -d . tests/gb-18030-2000.ucm
+    - test -s gb-18030-2000.cnv                   # [not win]
+
+about:
+  home: https://icu.unicode.org
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: International Components for Unicode
+  description: |
+    ICU is a mature, widely used set of C/C++ and Java libraries providing
+    Unicode and Globalization support for software applications. ICU is
+    widely portable and gives applications the same results on all platforms
+    and between C/C++ and Java software.
+  doc_url: https://unicode-org.github.io/icu
+  dev_url: https://github.com/unicode-org/icu
+
+extra:
+  recipe-maintainers:
+    - ccordoba12
+    - jakirkham
+    - msarahan
+    - ocefpaf
+    - xhochy

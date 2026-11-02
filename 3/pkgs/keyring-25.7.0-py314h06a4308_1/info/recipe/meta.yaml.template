@@ -1,0 +1,75 @@
+{% set version = "25.7.0" %}
+{% set name = "keyring" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: fe01bd85eb3f8fb3dd0405defdeac9a5b4f6f0439edbb3149577f244a2e8245b
+
+build:
+  number: 1
+  skip: true  # [py<39]
+  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
+  entry_points:
+    - keyring = keyring.cli:main
+
+requirements:
+  host:
+    - python
+    - pip
+    - setuptools >=77
+    - toml
+    - setuptools-scm >=3.4.1
+  run:
+    - python
+    - pywin32-ctypes >=0.2.0  # [win]
+    - secretstorage >=3.2  # [linux]
+    - jeepney >=0.4.2  # [linux]
+    - jaraco.classes
+    - importlib_resources  # [py<39]
+    - importlib-metadata >=4.11.4  # [py<312]
+    - jaraco.functools
+    - jaraco.context
+  run_constrained:
+    - shtab >=1.1.0
+    - pytest-checkdocs >=2.4
+    - pytest-enabler >=3.4
+    - pytest-mypy >=1.0.1
+
+test:
+  requires:
+    - pip
+    - pytest >=6,!=8.1.*
+  source_files:
+    - tests/*
+  imports:
+    - keyring
+    - keyring.backends
+    - keyring.util
+  commands:
+    - pip check
+    # skip tests on OS-X, the default keychain is not available in the build environment
+    - py.test -v tests  # [not osx]
+    - keyring --help
+
+about:
+  home: https://github.com/jaraco/keyring
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: Store and access your passwords safely
+  description: |
+    The python keyring lib provides a easy way to access the system keyring
+    service from python.  it can be used in any application that needs safe
+    password storage.
+  doc_url: https://pypi.org/project/keyring
+  dev_url: https://github.com/jaraco/keyring
+
+extra:
+  recipe-maintainers:
+    - licode
+    - tacaswell
+    - ccordoba12

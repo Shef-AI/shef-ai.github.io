@@ -1,0 +1,105 @@
+From 43cce39c1c324528114b2bd7b35e332a021272fa Mon Sep 17 00:00:00 2001
+From: Julien Jerphanion <git@jjerphan.xyz>
+Date: Tue, 9 Jun 2026 12:00:00 +0000
+Subject: [PATCH 17/18] silence absl MutexLock pointer deprecation warnings
+
+Newer abseil versions deprecate absl::MutexLock(Mutex*) in favor of
+MutexLock(Mutex&). gRPC still uses the pointer form in hundreds of
+places, which spams -Wdeprecated-declarations during test builds.
+
+Provide thin grpc_core/grpc::internal wrappers that accept Mutex* but
+delegate to absl's reference-taking constructors.
+---
+
+diff --git c/include/grpcpp/impl/sync.h i/include/grpcpp/impl/sync.h
+index dcd4dcd..66001ec 100644
+--- c/include/grpcpp/impl/sync.h
++++ i/include/grpcpp/impl/sync.h
+@@ -48,10 +48,39 @@ namespace internal {
+ #ifdef GPR_ABSEIL_SYNC
+ 
+ using Mutex = absl::Mutex;
+-using MutexLock = absl::MutexLock;
+-using ReleasableMutexLock = absl::ReleasableMutexLock;
+ using CondVar = absl::CondVar;
+ 
++// absl deprecated MutexLock(Mutex*) in favor of MutexLock(Mutex&), but grpc
++// still uses the pointer form widely. Wrap absl's lockers so call sites keep
++// working without -Wdeprecated-declarations spam from newer abseil.
++class ABSL_SCOPED_LOCKABLE MutexLock {
++ public:
++  explicit MutexLock(Mutex& mu) ABSL_EXCLUSIVE_LOCK_FUNCTION(mu) : lock_(mu) {}
++  explicit MutexLock(Mutex* mu) ABSL_EXCLUSIVE_LOCK_FUNCTION(mu) : lock_(*mu) {}
++
++  MutexLock(const MutexLock&) = delete;
++  MutexLock& operator=(const MutexLock&) = delete;
++
++ private:
++  absl::MutexLock lock_;
++};
++
++class ABSL_SCOPED_LOCKABLE ReleasableMutexLock {
++ public:
++  explicit ReleasableMutexLock(Mutex& mu) ABSL_EXCLUSIVE_LOCK_FUNCTION(mu)
++      : lock_(mu) {}
++  explicit ReleasableMutexLock(Mutex* mu) ABSL_EXCLUSIVE_LOCK_FUNCTION(mu)
++      : lock_(*mu) {}
++
++  void Release() ABSL_UNLOCK_FUNCTION() { lock_.Release(); }
++
++  ReleasableMutexLock(const ReleasableMutexLock&) = delete;
++  ReleasableMutexLock& operator=(const ReleasableMutexLock&) = delete;
++
++ private:
++  absl::ReleasableMutexLock lock_;
++};
++
+ #else
+ 
+ class ABSL_LOCKABLE Mutex {
+diff --git c/src/core/util/sync.h i/src/core/util/sync.h
+index 77d1a54..33c7c13 100644
+--- c/src/core/util/sync.h
++++ i/src/core/util/sync.h
+@@ -44,10 +44,39 @@ namespace grpc_core {
+ #ifdef GPR_ABSEIL_SYNC
+ 
+ using Mutex = absl::Mutex;
+-using MutexLock = absl::MutexLock;
+-using ReleasableMutexLock = absl::ReleasableMutexLock;
+ using CondVar = absl::CondVar;
+ 
++// absl deprecated MutexLock(Mutex*) in favor of MutexLock(Mutex&), but grpc
++// still uses the pointer form widely. Wrap absl's lockers so call sites keep
++// working without -Wdeprecated-declarations spam from newer abseil.
++class ABSL_SCOPED_LOCKABLE MutexLock {
++ public:
++  explicit MutexLock(Mutex& mu) ABSL_EXCLUSIVE_LOCK_FUNCTION(mu) : lock_(mu) {}
++  explicit MutexLock(Mutex* mu) ABSL_EXCLUSIVE_LOCK_FUNCTION(mu) : lock_(*mu) {}
++
++  MutexLock(const MutexLock&) = delete;
++  MutexLock& operator=(const MutexLock&) = delete;
++
++ private:
++  absl::MutexLock lock_;
++};
++
++class ABSL_SCOPED_LOCKABLE ReleasableMutexLock {
++ public:
++  explicit ReleasableMutexLock(Mutex& mu) ABSL_EXCLUSIVE_LOCK_FUNCTION(mu)
++      : lock_(mu) {}
++  explicit ReleasableMutexLock(Mutex* mu) ABSL_EXCLUSIVE_LOCK_FUNCTION(mu)
++      : lock_(*mu) {}
++
++  void Release() ABSL_UNLOCK_FUNCTION() { lock_.Release(); }
++
++  ReleasableMutexLock(const ReleasableMutexLock&) = delete;
++  ReleasableMutexLock& operator=(const ReleasableMutexLock&) = delete;
++
++ private:
++  absl::ReleasableMutexLock lock_;
++};
++
+ // Returns the underlying gpr_mu from Mutex. This should be used only when
+ // it has to like passing the C++ mutex to C-core API.
+ // TODO(veblush): Remove this after C-core no longer uses gpr_mu.

@@ -1,0 +1,65 @@
+{% set name = "opentelemetry-proto" %}
+{% set version = "1.43.0" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  url: https://github.com/open-telemetry/{{ name.split('-')[0] }}-python/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 92b8082f603dbacf2f9175fae57e6c8f07fddb70e6aeff66aeb7a7b310242747
+
+build:
+  number: 0
+  script: {{ PYTHON }} -m pip install ./{{ name }} -vv --no-deps --no-build-isolation
+  skip: true  # [py<310]
+
+requirements:
+  host:
+    - pip
+    - python
+    - hatchling
+  run:
+    - python
+    - protobuf >=5.0,<8.0
+
+test:
+  source_files:
+    - {{ name }}/tests
+  imports:
+    - opentelemetry
+    - opentelemetry.proto
+    - opentelemetry.proto.collector
+    - opentelemetry.proto.common
+    - opentelemetry.proto.logs
+    - opentelemetry.proto.metrics
+    - opentelemetry.proto.profiles
+    - opentelemetry.proto.resource
+    - opentelemetry.proto.trace
+  commands:
+    - pip check
+    - pytest -v {{ name }}/tests
+  requires:
+    - pip
+    - pytest >=7.4.4
+    - colorama >=0.4.6
+    - iniconfig >=2.0.0
+    - packaging >=24.0
+
+about:
+  home: https://github.com/open-telemetry/opentelemetry-python/tree/main/opentelemetry-proto
+  license: Apache-2.0
+  license_family: Apache
+  license_file: LICENSE
+  summary: OpenTelemetry Python / Proto
+  description: |-
+    OpenTelemetry, also known as OTel for short, is a vendor-neutral open-source
+    Observability framework for instrumenting, generating, collecting, and exporting
+    telemetry data such as traces, metrics, logs. As an industry-standard
+    it is natively supported by a number of vendors.
+  doc_url: https://opentelemetry-python.readthedocs.io
+  dev_url: https://github.com/open-telemetry/opentelemetry-python
+
+extra:
+  recipe-maintainers:
+    - mariusvniekerk

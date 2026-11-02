@@ -1,0 +1,75 @@
+# This file created by conda-build 26.1.0
+# ------------------------------------------------
+
+package:
+  name: libgettextpo-devel
+  version: 0.25.1
+source:
+  url: https://ftp.gnu.org/pub/gnu/gettext/gettext-0.25.1.tar.xz
+  sha256: 2c8294be238f03fb3fa65b8051057e5b68167f3e21f08008070cf40a7051ba22
+  patches: null
+build:
+  run_exports:
+    - libgettextpo >=0.25.1,<1.0a0
+  ignore_run_exports_from:
+    - gxx_linux-64 14.3.0.*
+  number: 0
+  string: hf2ab22a_0
+requirements:
+  build:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - binutils_impl_linux-64 2.44 h4b9a079_2
+    - binutils_linux-64 2.44 hc03a8fd_2
+    - gcc_impl_linux-64 14.3.0 h4943218_4
+    - gcc_linux-64 14.3.0 hda73cce_12
+    - gxx_impl_linux-64 14.3.0 he634eba_4
+    - gxx_linux-64 14.3.0 hca8765c_12
+    - kernel-headers_linux-64 4.18.0 h3108a97_1
+    - ld_impl_linux-64 2.44 h153f514_2
+    - libgcc 15.2.0 h69a1729_7
+    - libgcc-devel_linux-64 14.3.0 he7458c1_104
+    - libgcc-ng 15.2.0 h166f726_7
+    - libgomp 15.2.0 h4751f2c_7
+    - libltdl 2.6.0 h47b2149_0
+    - libsanitizer 14.3.0 hd4faa28_4
+    - libstdcxx 15.2.0 h39759b7_7
+    - libstdcxx-devel_linux-64 14.3.0 he7458c1_104
+    - libtool 2.6.0 h7354ed3_0
+    - make 4.2.1 h1bed415_1
+    - sysroot_linux-64 2.28 h3108a97_1
+    - tzdata 2025c he532380_0
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - libgcc 15.2.0 h69a1729_7
+    - libgettextpo 0.25.1 hf2ab22a_0
+    - libgomp 15.2.0 h4751f2c_7
+    - libiconv 1.18 h75a1612_0
+  run:
+    - __glibc >=2.28,<3.0.a0
+    - libgcc >=14
+    - libgettextpo 0.25.1 hf2ab22a_0
+    - libiconv >=1.18,<2.0a0
+test:
+  commands:
+    - test -f ${PREFIX}/lib/libgettextpo$SHLIB_EXT
+about:
+  home: https://www.gnu.org/software/gettext
+  license: GPL-3.0-or-later
+  license_file: COPYING
+  summary: library for interfacing programmatically with GNU gettext .po files
+extra:
+  feedstock-name: gettext
+  recipe-maintainers:
+    - ocefpaf
+    - pkgw
+    - scopatz
+    - xhochy
+  final: true
+  copy_test_source_files: true
+  remote_url: https://github.com/AnacondaRecipes/gettext-feedstock
+  sha: 4bf3d3ea276e8ac4d8833cf6edee3f440fe7f401
+  task_id: AU3TsZcCRaK9jiaCosfOMQ
+  task_run_id: '0'
+  pbp_graph_uuid: 3e8405fd-0d33-4442-9c6e-741a46b5c97d

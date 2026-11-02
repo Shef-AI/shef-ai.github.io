@@ -1,0 +1,13 @@
+{
+  "c_stdlib": "sysroot",
+  "target_platform": "linux-64",
+  "channel_targets": "defaults",
+  "ncurses": "6",
+  "c_compiler_version": "14.3.0",
+  "zlib": "1",
+  "readline": "8",
+  "sqlite": "3",
+  "c_stdlib_version": "2.28",
+  "c_compiler": "gcc",
+  "__glibc": "__glibc >=2.28,<3.0.a0"
+}

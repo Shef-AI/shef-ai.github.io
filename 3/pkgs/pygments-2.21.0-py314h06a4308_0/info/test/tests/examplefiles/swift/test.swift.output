@@ -1,0 +1,500 @@
+'//'          Comment.Single
+'\n'          Text.Whitespace
+
+'//'          Comment.Single
+'  test.swift' Comment.Single
+'\n'          Text.Whitespace
+
+'//'          Comment.Single
+'  from https://github.com/fullstackio/FlappySwift' Comment.Single
+'\n'          Text.Whitespace
+
+'//'          Comment.Single
+'\n'          Text.Whitespace
+
+'//'          Comment.Single
+'  Created by Nate Murray on 6/2/14.' Comment.Single
+'\n'          Text.Whitespace
+
+'//'          Comment.Single
+'  Copyright (c) 2014 Fullstack.io. All rights reserved.' Comment.Single
+'\n'          Text.Whitespace
+
+'//'          Comment.Single
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+'import'      Keyword.Declaration
+' '           Text.Whitespace
+'UIKit'       Name.Class
+'\n'          Text.Whitespace
+
+'import'      Keyword.Declaration
+' '           Text.Whitespace
+'SpriteKit'   Name.Class
+'\n'          Text.Whitespace
+
+'\n'          Text
+
+'extension'   Keyword.Declaration
+' '           Text.Whitespace
+'SKNode'      Name.Builtin.Pseudo
+' '           Text.Whitespace
+'{'           Punctuation
+'\n'          Text
+
+'    '        Text.Whitespace
+'class'       Keyword.Declaration
+' '           Text.Whitespace
+'func'        Keyword.Declaration
+' '           Text.Whitespace
+'unarchiveFromFile' Name.Function
+'('           Punctuation
+'file'        Name
+' '           Text.Whitespace
+':'           Punctuation
+' '           Text.Whitespace
+'NSString'    Name.Builtin.Pseudo
+')'           Punctuation
+' '           Text.Whitespace
+'->'          Punctuation
+' '           Text.Whitespace
+'SKNode'      Name.Builtin.Pseudo
+'?'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n'          Text
+
+'        \n        ' Text.Whitespace
+'let'         Keyword.Declaration
+' '           Text.Whitespace
+'path'        Name.Variable
+' '           Text.Whitespace
+'='           Punctuation
+' '           Text.Whitespace
+'NSBundle'    Name.Builtin.Pseudo
+'.'           Punctuation
+'mainBundle'  Name
+'('           Punctuation
+')'           Punctuation
+'.'           Punctuation
+'pathForResource' Name
+'('           Punctuation
+'file'        Name
+','           Punctuation
+' '           Text.Whitespace
+'ofType'      Name
+':'           Punctuation
+' '           Text.Whitespace
+'"'           Literal.String
+'sks'         Literal.String
+'"'           Literal.String
+')'           Punctuation
+'\n'          Text
+
+'        \n        ' Text.Whitespace
+'var'         Keyword.Declaration
+' '           Text.Whitespace
+'sceneData'   Name.Variable
+' '           Text.Whitespace
+'='           Punctuation
+' '           Text.Whitespace
+'NSData'      Name.Builtin.Pseudo
+'.'           Punctuation
+'dataWithContentsOfFile' Name
+'('           Punctuation
+'path'        Name
+','           Punctuation
+' '           Text.Whitespace
+'options'     Name
+':'           Punctuation
+' '           Text.Whitespace
+'.'           Punctuation
+'DataReadingMappedIfSafe' Name
+','           Punctuation
+' '           Text.Whitespace
+'error'       Name
+':'           Punctuation
+' '           Text.Whitespace
+'nil'         Keyword.Constant
+')'           Punctuation
+'\n'          Text
+
+'        '    Text.Whitespace
+'var'         Keyword.Declaration
+' '           Text.Whitespace
+'archiver'    Name.Variable
+' '           Text.Whitespace
+'='           Punctuation
+' '           Text.Whitespace
+'NSKeyedUnarchiver' Name.Builtin.Pseudo
+'('           Punctuation
+'forReadingWithData' Name
+':'           Punctuation
+' '           Text.Whitespace
+'sceneData'   Name
+')'           Punctuation
+'\n'          Text
+
+'        \n        ' Text.Whitespace
+'archiver'    Name
+'.'           Punctuation
+'setClass'    Name
+'('           Punctuation
+'self'        Keyword.Constant
+'.'           Punctuation
+'classForKeyedUnarchiver' Name
+'('           Punctuation
+')'           Punctuation
+','           Punctuation
+' '           Text.Whitespace
+'forClassName' Name
+':'           Punctuation
+' '           Text.Whitespace
+'"'           Literal.String
+'SKScene'     Literal.String
+'"'           Literal.String
+')'           Punctuation
+'\n'          Text
+
+'        '    Text.Whitespace
+'let'         Keyword.Declaration
+' '           Text.Whitespace
+'scene'       Name.Variable
+' '           Text.Whitespace
+'='           Punctuation
+' '           Text.Whitespace
+'archiver'    Name
+'.'           Punctuation
+'decodeObjectForKey' Name
+'('           Punctuation
+'NSKeyedArchiveRootObjectKey' Name
+')'           Punctuation
+' '           Text.Whitespace
+'as'          Keyword
+' '           Text.Whitespace
+'GameScene'   Name
+'\n'          Text
+
+'        '    Text.Whitespace
+'archiver'    Name
+'.'           Punctuation
+'finishDecoding' Name
+'('           Punctuation
+')'           Punctuation
+'\n'          Text
+
+'        '    Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'scene'       Name
+'\n'          Text
+
+'    '        Text.Whitespace
+'}'           Punctuation
+'\n'          Text
+
+'}'           Punctuation
+'\n'          Text
+
+'\n'          Text
+
+'class'       Keyword.Declaration
+' '           Text.Whitespace
+'GameViewController' Name.Class
+':'           Punctuation
+' '           Text.Whitespace
+'UIViewController' Name.Builtin.Pseudo
+' '           Text.Whitespace
+'{'           Punctuation
+'\n'          Text
+
+'\n'          Text
+
+'    '        Text.Whitespace
+'override'    Keyword.Reserved
+' '           Text.Whitespace
+'func'        Keyword.Declaration
+' '           Text.Whitespace
+'viewDidLoad' Name.Function
+'('           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n'          Text
+
+'        '    Text.Whitespace
+'super'       Keyword.Constant
+'.'           Punctuation
+'viewDidLoad' Name
+'('           Punctuation
+')'           Punctuation
+'\n'          Text
+
+'\n'          Text
+
+'        '    Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'let'         Keyword.Declaration
+' '           Text.Whitespace
+'scene'       Name.Variable
+' '           Text.Whitespace
+'='           Punctuation
+' '           Text.Whitespace
+'GameScene'   Name
+'.'           Punctuation
+'unarchiveFromFile' Name
+'('           Punctuation
+'"'           Literal.String
+'GameScene'   Literal.String
+'"'           Literal.String
+')'           Punctuation
+' '           Text.Whitespace
+'as'          Keyword
+'?'           Punctuation
+' '           Text.Whitespace
+'GameScene'   Name
+' '           Text.Whitespace
+'{'           Punctuation
+'\n'          Text
+
+'            ' Text.Whitespace
+'//'          Comment.Single
+' Configure the view.' Comment.Single
+'\n'          Text.Whitespace
+
+'            ' Text.Whitespace
+'let'         Keyword.Declaration
+' '           Text.Whitespace
+'skView'      Name.Variable
+' '           Text.Whitespace
+'='           Punctuation
+' '           Text.Whitespace
+'self'        Keyword.Constant
+'.'           Punctuation
+'view'        Name
+' '           Text.Whitespace
+'as'          Keyword
+' '           Text.Whitespace
+'SKView'      Name.Builtin.Pseudo
+'\n'          Text
+
+'            ' Text.Whitespace
+'skView'      Name
+'.'           Punctuation
+'showsFPS'    Name
+' '           Text.Whitespace
+'='           Punctuation
+' '           Text.Whitespace
+'true'        Keyword.Constant
+'\n'          Text
+
+'            ' Text.Whitespace
+'skView'      Name
+'.'           Punctuation
+'showsNodeCount' Name
+' '           Text.Whitespace
+'='           Punctuation
+' '           Text.Whitespace
+'true'        Keyword.Constant
+'\n'          Text
+
+'            \n            ' Text.Whitespace
+'/*'          Comment.Multiline
+' Sprite Kit applies additional optimizations to improve rendering performance ' Comment.Multiline
+'*/'          Comment.Multiline
+'\n'          Text
+
+'            ' Text.Whitespace
+'skView'      Name
+'.'           Punctuation
+'ignoresSiblingOrder' Name
+' '           Text.Whitespace
+'='           Punctuation
+' '           Text.Whitespace
+'true'        Keyword.Constant
+'\n'          Text
+
+'            \n            ' Text.Whitespace
+'/*'          Comment.Multiline
+' Set the scale mode to scale to fit the window ' Comment.Multiline
+'*/'          Comment.Multiline
+'\n'          Text
+
+'            ' Text.Whitespace
+'scene'       Name
+'.'           Punctuation
+'scaleMode'   Name
+' '           Text.Whitespace
+'='           Punctuation
+' '           Text.Whitespace
+'.'           Punctuation
+'AspectFill'  Name
+'\n'          Text
+
+'            \n            ' Text.Whitespace
+'skView'      Name
+'.'           Punctuation
+'presentScene' Name
+'('           Punctuation
+'scene'       Name
+')'           Punctuation
+'\n'          Text
+
+'        '    Text.Whitespace
+'}'           Punctuation
+'\n'          Text
+
+'    '        Text.Whitespace
+'}'           Punctuation
+'\n'          Text
+
+'\n'          Text
+
+'    '        Text.Whitespace
+'override'    Keyword.Reserved
+' '           Text.Whitespace
+'func'        Keyword.Declaration
+' '           Text.Whitespace
+'shouldAutorotate' Name.Function
+'('           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'->'          Punctuation
+' '           Text.Whitespace
+'Bool'        Name.Builtin
+' '           Text.Whitespace
+'{'           Punctuation
+'\n'          Text
+
+'        '    Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'true'        Keyword.Constant
+'\n'          Text
+
+'    '        Text.Whitespace
+'}'           Punctuation
+'\n'          Text
+
+'\n'          Text
+
+'    '        Text.Whitespace
+'override'    Keyword.Reserved
+' '           Text.Whitespace
+'func'        Keyword.Declaration
+' '           Text.Whitespace
+'supportedInterfaceOrientations' Name.Function
+'('           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'->'          Punctuation
+' '           Text.Whitespace
+'Int'         Name.Builtin
+' '           Text.Whitespace
+'{'           Punctuation
+'\n'          Text
+
+'        '    Text.Whitespace
+'if'          Keyword
+' '           Text.Whitespace
+'UIDevice'    Name.Builtin.Pseudo
+'.'           Punctuation
+'currentDevice' Name
+'('           Punctuation
+')'           Punctuation
+'.'           Punctuation
+'userInterfaceIdiom' Name
+' '           Text.Whitespace
+'='           Punctuation
+'='           Punctuation
+' '           Text.Whitespace
+'.'           Punctuation
+'Phone'       Name
+' '           Text.Whitespace
+'{'           Punctuation
+'\n'          Text
+
+'            ' Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'Int'         Name.Builtin
+'('           Punctuation
+'UIInterfaceOrientationMask' Name
+'.'           Punctuation
+'AllButUpsideDown' Name
+'.'           Punctuation
+'toRaw'       Name
+'('           Punctuation
+')'           Punctuation
+')'           Punctuation
+'\n'          Text
+
+'        '    Text.Whitespace
+'}'           Punctuation
+' '           Text.Whitespace
+'else'        Keyword
+' '           Text.Whitespace
+'{'           Punctuation
+'\n'          Text
+
+'            ' Text.Whitespace
+'return'      Keyword
+' '           Text.Whitespace
+'Int'         Name.Builtin
+'('           Punctuation
+'UIInterfaceOrientationMask' Name
+'.'           Punctuation
+'All'         Name
+'.'           Punctuation
+'toRaw'       Name
+'('           Punctuation
+')'           Punctuation
+')'           Punctuation
+'\n'          Text
+
+'        '    Text.Whitespace
+'}'           Punctuation
+'\n'          Text
+
+'    '        Text.Whitespace
+'}'           Punctuation
+'\n'          Text
+
+'\n'          Text
+
+'    '        Text.Whitespace
+'override'    Keyword.Reserved
+' '           Text.Whitespace
+'func'        Keyword.Declaration
+' '           Text.Whitespace
+'didReceiveMemoryWarning' Name.Function
+'('           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'{'           Punctuation
+'\n'          Text
+
+'        '    Text.Whitespace
+'super'       Keyword.Constant
+'.'           Punctuation
+'didReceiveMemoryWarning' Name
+'('           Punctuation
+')'           Punctuation
+'\n'          Text
+
+'        '    Text.Whitespace
+'//'          Comment.Single
+" Release any cached data, images, etc that aren't in use." Comment.Single
+'\n'          Text.Whitespace
+
+'    '        Text.Whitespace
+'}'           Punctuation
+'\n'          Text
+
+'    \n'      Text.Whitespace
+
+'}'           Punctuation
+'\n'          Text

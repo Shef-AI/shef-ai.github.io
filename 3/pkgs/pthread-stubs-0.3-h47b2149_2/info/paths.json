@@ -1,0 +1,13 @@
+{
+  "paths": [
+    {
+      "_path": "lib/pkgconfig/pthread-stubs.pc",
+      "file_mode": "text",
+      "path_type": "hardlink",
+      "prefix_placeholder": "/home/task_IvKTYlU4Sf-Bz_0/croot/pthread-stubs_1784896770088/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho",
+      "sha256": "1a22f4ed8316c96eecdd789f5ee4d73efa64cdfdc8e4926420a7fef52d484674",
+      "size_in_bytes": 420
+    }
+  ],
+  "paths_version": 1
+}

@@ -1,0 +1,74 @@
+# This file created by conda-build 26.3.0
+# meta.yaml template originally from:
+# /home/task_177945828478666/jansson-feedstock/recipe, last modified Fri May 22 13:58:22 2026
+# ------------------------------------------------
+
+package:
+  name: jansson
+  version: 2.15.0
+source:
+  url: https://github.com/akheron/jansson/archive/refs/tags/v2.15.0.tar.gz
+  sha256: 73ac12bbc62ff536e40c7a3e15ed007993c5ca4d23897de23f1906f891b5a4bb
+build:
+  number: '0'
+  run_exports:
+    - jansson >=2.15.0,<3.0a0
+  string: hbcba0ee_0
+requirements:
+  build:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 52_gnu
+    - autoconf 2.71 pl5340h5eee18b_0
+    - automake 1.16.5 pl5340h06a4308_1
+    - binutils_impl_linux-64 2.44 h78f17ca_3
+    - binutils_linux-64 2.44 hc03a8fd_3
+    - gcc_impl_linux-64 14.3.0 h4943218_4
+    - gcc_linux-64 14.3.0 hda73cce_14
+    - kernel-headers_linux-64 4.18.0 h3108a97_1
+    - ld_impl_linux-64 2.44 h9e0c5a2_3
+    - libgcc 15.2.0 h69a1729_8
+    - libgcc-devel_linux-64 14.3.0 he7458c1_104
+    - libgcc-ng 15.2.0 h166f726_8
+    - libgomp 15.2.0 h4751f2c_8
+    - libltdl 2.6.0 h47b2149_0
+    - libsanitizer 14.3.0 hd4faa28_4
+    - libstdcxx 15.2.0 h39759b7_8
+    - libtool 2.6.0 h7354ed3_0
+    - m4 1.4.18 h4e445db_0
+    - make 4.2.1 h1bed415_1
+    - perl 5.42.2 1_h47b2149_perl5
+    - sysroot_linux-64 2.28 h3108a97_1
+    - tzdata 2026a he532380_0
+  host:
+    - _openmp_mutex 5.1 52_gnu
+    - libgcc 15.2.0 h69a1729_8
+  run:
+    - __glibc >=2.28,<3.0.a0
+    - libgcc >=14
+test:
+  commands:
+    - test ! -f ${PREFIX}/lib/libjansson.a
+    - test -f ${PREFIX}/lib/libjansson${SHLIB_EXT}
+about:
+  home: https://github.com/akheron/jansson
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: Jansson is a C library for encoding, decoding and manipulating JSON data.
+  description: "Jansson is a C library for encoding, decoding and manipulating JSON\
+    \ data.\nIts main features and design principles are:\n  Simple and intuitive\
+    \ API and data model\n  Comprehensive documentation\n  No dependencies on other\
+    \ libraries\n  Full Unicode support (UTF-8)\n  Extensive test suite\n"
+  doc_url: https://jansson.readthedocs.io
+  dev_url: https://github.com/akheron/jansson
+extra:
+  recipe-maintainers:
+    - mariusvniekerk
+    - xhochy
+  final: true
+  copy_test_source_files: true
+  remote_url: https://github.com/AnacondaRecipes/jansson-feedstock
+  sha: 61a000639c641f95743349a6f32b23a809deff3a
+  task_id: IuoxwYXzRUSiult8rbwNHw
+  task_run_id: '0'
+  pbp_graph_uuid: bc54c2dd-2b77-48ef-bab3-9f2f867694fc

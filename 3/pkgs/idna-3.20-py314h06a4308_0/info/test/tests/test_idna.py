@@ -1,0 +1,605 @@
+import unittest
+import warnings
+
+import idna
+
+
+class IDNATests(unittest.TestCase):
+    def setUp(self):
+        self.tld_strings: list[tuple[str, bytes]] = [
+            ("\u6d4b\u8bd5", b"xn--0zwm56d"),
+            ("\u092a\u0930\u0940\u0915\u094d\u0937\u093e", b"xn--11b5bs3a9aj6g"),
+            ("\ud55c\uad6d", b"xn--3e0b707e"),
+            ("\u09ad\u09be\u09b0\u09a4", b"xn--45brj9c"),
+            ("\u09ac\u09be\u0982\u09b2\u09be", b"xn--54b7fta0cc"),
+            (
+                "\u0438\u0441\u043f\u044b\u0442\u0430\u043d\u0438\u0435",
+                b"xn--80akhbyknj4f",
+            ),
+            ("\u0441\u0440\u0431", b"xn--90a3ac"),
+            ("\ud14c\uc2a4\ud2b8", b"xn--9t4b11yi5a"),
+            (
+                "\u0b9a\u0bbf\u0b99\u0bcd\u0b95\u0baa\u0bcd\u0baa\u0bc2\u0bb0\u0bcd",
+                b"xn--clchc0ea0b2g2a9gcd",
+            ),
+            ("\u05d8\u05e2\u05e1\u05d8", b"xn--deba0ad"),
+            ("\u4e2d\u56fd", b"xn--fiqs8s"),
+            ("\u4e2d\u570b", b"xn--fiqz9s"),
+            ("\u0c2d\u0c3e\u0c30\u0c24\u0c4d", b"xn--fpcrj9c3d"),
+            ("\u0dbd\u0d82\u0d9a\u0dcf", b"xn--fzc2c9e2c"),
+            ("\u6e2c\u8a66", b"xn--g6w251d"),
+            ("\u0aad\u0abe\u0ab0\u0aa4", b"xn--gecrj9c"),
+            ("\u092d\u093e\u0930\u0924", b"xn--h2brj9c"),
+            ("\u0622\u0632\u0645\u0627\u06cc\u0634\u06cc", b"xn--hgbk6aj7f53bba"),
+            ("\u0baa\u0bb0\u0bbf\u0b9f\u0bcd\u0b9a\u0bc8", b"xn--hlcj6aya9esc7a"),
+            ("\u0443\u043a\u0440", b"xn--j1amh"),
+            ("\u9999\u6e2f", b"xn--j6w193g"),
+            ("\u03b4\u03bf\u03ba\u03b9\u03bc\u03ae", b"xn--jxalpdlp"),
+            ("\u0625\u062e\u062a\u0628\u0627\u0631", b"xn--kgbechtv"),
+            ("\u53f0\u6e7e", b"xn--kprw13d"),
+            ("\u53f0\u7063", b"xn--kpry57d"),
+            ("\u0627\u0644\u062c\u0632\u0627\u0626\u0631", b"xn--lgbbat1ad8j"),
+            ("\u0639\u0645\u0627\u0646", b"xn--mgb9awbf"),
+            ("\u0627\u06cc\u0631\u0627\u0646", b"xn--mgba3a4f16a"),
+            ("\u0627\u0645\u0627\u0631\u0627\u062a", b"xn--mgbaam7a8h"),
+            ("\u067e\u0627\u06a9\u0633\u062a\u0627\u0646", b"xn--mgbai9azgqp6j"),
+            ("\u0627\u0644\u0627\u0631\u062f\u0646", b"xn--mgbayh7gpa"),
+            ("\u0628\u06be\u0627\u0631\u062a", b"xn--mgbbh1a71e"),
+            ("\u0627\u0644\u0645\u063a\u0631\u0628", b"xn--mgbc0a9azcg"),
+            ("\u0627\u0644\u0633\u0639\u0648\u062f\u064a\u0629", b"xn--mgberp4a5d4ar"),
+            ("\u10d2\u10d4", b"xn--node"),
+            ("\u0e44\u0e17\u0e22", b"xn--o3cw4h"),
+            ("\u0633\u0648\u0631\u064a\u0629", b"xn--ogbpf8fl"),
+            ("\u0440\u0444", b"xn--p1ai"),
+            ("\u062a\u0648\u0646\u0633", b"xn--pgbs0dh"),
+            ("\u0a2d\u0a3e\u0a30\u0a24", b"xn--s9brj9c"),
+            ("\u0645\u0635\u0631", b"xn--wgbh1c"),
+            ("\u0642\u0637\u0631", b"xn--wgbl6a"),
+            ("\u0b87\u0bb2\u0b99\u0bcd\u0b95\u0bc8", b"xn--xkc2al3hye2a"),
+            ("\u0b87\u0ba8\u0bcd\u0ba4\u0bbf\u0baf\u0bbe", b"xn--xkc2dl3a5ee0h"),
+            ("\u65b0\u52a0\u5761", b"xn--yfro4i67o"),
+            ("\u0641\u0644\u0633\u0637\u064a\u0646", b"xn--ygbi2ammx"),
+            ("\u30c6\u30b9\u30c8", b"xn--zckzah"),
+            ("\u049b\u0430\u0437", b"xn--80ao21a"),
+            ("\u0645\u0644\u064a\u0633\u064a\u0627", b"xn--mgbx4cd0ab"),
+            ("\u043c\u043e\u043d", b"xn--l1acc"),
+            ("\u0633\u0648\u062f\u0627\u0646", b"xn--mgbpl2fh"),
+        ]
+
+    def testIDNTLDALabels(self):
+        for u, a in self.tld_strings:
+            self.assertEqual(a, idna.alabel(u))
+
+    def testIDNTLDULabels(self):
+        for u, a in self.tld_strings:
+            self.assertEqual(u, idna.ulabel(a))
+
+    def test_valid_label_length(self):
+        self.assertTrue(idna.valid_label_length("a" * 63))
+        self.assertFalse(idna.valid_label_length("a" * 64))
+        self.assertRaises(idna.IDNAError, idna.encode, "a" * 64)
+
+    def test_decode_domain_length_leniency(self):
+        # UTS #46 ToUnicode checks no lengths, so decode()'s whole-domain
+        # bound is a lenient pre-filter that always allows the trailing-dot
+        # octet, while encode() enforces the exact RFC 1035 limit: a
+        # 254-octet domain without a trailing dot decodes but does not
+        # re-encode (OSS-Fuzz 4694619275984896), and with one it round-trips.
+        domain = b"aaa." * 63 + b"aa"  # 254 octets, every label within limits
+        decoded = idna.decode(domain, strict=True)
+        self.assertRaises(idna.IDNAError, idna.encode, decoded, strict=True)
+        dotted = domain[:-1] + b"."
+        self.assertEqual(idna.encode(idna.decode(dotted, strict=True), strict=True), dotted)
+
+    def test_oversized_input_rejected_promptly(self):
+        # GHSA-65pc-fj4g-8rjx: encode/decode must reject inputs that
+        # exceed the maximum DNS domain length before per-codepoint
+        # validation runs, so labels dominated by CONTEXTO codepoints
+        # cannot drive validation into quadratic time.
+        import time
+
+        for payload in ("٠" * 8000, "・" * 8000 + "漢"):
+            start = time.perf_counter()
+            self.assertRaises(idna.IDNAError, idna.encode, payload)
+            self.assertRaises(idna.IDNAError, idna.decode, payload)
+            self.assertLess(time.perf_counter() - start, 1.0)
+
+    def test_oversized_label_rejected_promptly(self):
+        # The whole-domain cap in encode()/decode() does not cover direct
+        # callers of alabel/ulabel/check_label, nor the idna2008
+        # incremental codec which calls alabel/ulabel per label. Without a
+        # per-label cap, a single oversized CONTEXTO-heavy label still
+        # drives validation into quadratic time.
+        import codecs
+        import time
+
+        import idna.codec  # register the idna2008 codec
+
+        payload = "・" * 8000 + "漢"
+        start = time.perf_counter()
+        self.assertRaises(idna.IDNAError, idna.check_label, payload)
+        self.assertRaises(idna.IDNAError, idna.alabel, payload)
+        self.assertRaises(idna.IDNAError, idna.ulabel, payload)
+        self.assertRaises(
+            idna.IDNAError,
+            codecs.getincrementalencoder("idna2008")().encode,
+            payload,
+            True,
+        )
+        self.assertLess(time.perf_counter() - start, 1.0)
+
+    def test_check_bidi(self):
+        la = "\u0061"
+        r = "\u05d0"
+        al = "\u0627"
+        an = "\u0660"
+        en = "\u0030"
+        es = "\u002d"
+        cs = "\u002c"
+        et = "\u0024"
+        on = "\u0021"
+        bn = "\u200c"
+        nsm = "\u0610"
+        ws = "\u0020"
+
+        # RFC 5893 Rule 1
+        self.assertTrue(idna.check_bidi(la))
+        self.assertTrue(idna.check_bidi(r))
+        self.assertTrue(idna.check_bidi(al))
+        self.assertRaises(idna.IDNABidiError, idna.check_bidi, an)
+
+        # RFC 5893 Rule 2
+        self.assertTrue(idna.check_bidi(r + al))
+        self.assertTrue(idna.check_bidi(r + an))
+        self.assertTrue(idna.check_bidi(r + en))
+        self.assertTrue(idna.check_bidi(r + es + al))
+        self.assertTrue(idna.check_bidi(r + cs + al))
+        self.assertTrue(idna.check_bidi(r + et + al))
+        self.assertTrue(idna.check_bidi(r + on + al))
+        self.assertTrue(idna.check_bidi(r + bn + al))
+        self.assertTrue(idna.check_bidi(r + nsm))
+        self.assertRaises(idna.IDNABidiError, idna.check_bidi, r + la)
+        self.assertRaises(idna.IDNABidiError, idna.check_bidi, r + ws)
+
+        # RFC 5893 Rule 3
+        self.assertTrue(idna.check_bidi(r + al))
+        self.assertTrue(idna.check_bidi(r + en))
+        self.assertTrue(idna.check_bidi(r + an))
+        self.assertTrue(idna.check_bidi(r + nsm))
+        self.assertTrue(idna.check_bidi(r + nsm + nsm))
+        self.assertRaises(idna.IDNABidiError, idna.check_bidi, r + on)
+
+        # RFC 5893 Rule 4
+        self.assertTrue(idna.check_bidi(r + en))
+        self.assertTrue(idna.check_bidi(r + an))
+        self.assertRaises(idna.IDNABidiError, idna.check_bidi, r + en + an)
+        self.assertRaises(idna.IDNABidiError, idna.check_bidi, r + an + en)
+
+        # RFC 5893 Rule 5
+        self.assertTrue(idna.check_bidi(la + en, check_ltr=True))
+        self.assertTrue(idna.check_bidi(la + es + la, check_ltr=True))
+        self.assertTrue(idna.check_bidi(la + cs + la, check_ltr=True))
+        self.assertTrue(idna.check_bidi(la + et + la, check_ltr=True))
+        self.assertTrue(idna.check_bidi(la + on + la, check_ltr=True))
+        self.assertTrue(idna.check_bidi(la + bn + la, check_ltr=True))
+        self.assertTrue(idna.check_bidi(la + nsm, check_ltr=True))
+
+        # RFC 5893 Rule 6
+        self.assertTrue(idna.check_bidi(la + la, check_ltr=True))
+        self.assertTrue(idna.check_bidi(la + en, check_ltr=True))
+        self.assertTrue(idna.check_bidi(la + en + nsm, check_ltr=True))
+        self.assertTrue(idna.check_bidi(la + en + nsm + nsm, check_ltr=True))
+        self.assertRaises(idna.IDNABidiError, idna.check_bidi, la + cs, check_ltr=True)
+
+    def test_check_initial_combiner(self):
+        m = "\u0300"
+        a = "\u0061"
+
+        self.assertTrue(idna.check_initial_combiner(a))
+        self.assertTrue(idna.check_initial_combiner(a + m))
+        self.assertRaises(idna.IDNAError, idna.check_initial_combiner, m + a)
+        self.assertTrue(idna.check_initial_combiner(""))
+
+    def test_check_hyphen_ok(self):
+        self.assertTrue(idna.check_hyphen_ok("abc"))
+        self.assertTrue(idna.check_hyphen_ok("a--b"))
+        self.assertRaises(idna.IDNAError, idna.check_hyphen_ok, "aa--")
+        self.assertRaises(idna.IDNAError, idna.check_hyphen_ok, "a-")
+        self.assertRaises(idna.IDNAError, idna.check_hyphen_ok, "-a")
+        self.assertRaises(idna.IDNAError, idna.check_hyphen_ok, "-")
+        self.assertTrue(idna.check_hyphen_ok(""))
+
+    def test_valid_contextj(self):
+        zwnj = "\u200c"
+        zwj = "\u200d"
+        virama = "\u094d"
+        latin = "\u0061"
+
+        # RFC 5892 Appendix A.1 (Zero Width Non-Joiner)
+        self.assertFalse(idna.valid_contextj(zwnj, 0))
+        self.assertFalse(idna.valid_contextj(latin + zwnj, 1))  # No preceding Virama
+        self.assertTrue(idna.valid_contextj(virama + zwnj, 1))  # Preceding Virama
+
+        # RFC 5892 Appendix A.2 (Zero Width Joiner)
+        self.assertFalse(idna.valid_contextj(zwj, 0))
+        self.assertFalse(idna.valid_contextj(latin + zwj, 1))  # No preceding Virama
+        self.assertTrue(idna.valid_contextj(virama + zwj, 1))  # Preceding Virama
+
+    def test_check_label_contextj_violation(self):
+        zwnj = "\u200c"
+        zwj = "\u200d"
+        virama = "\u094d"
+        latin = "\u0061"
+
+        for joiner in (zwnj, zwj):
+            with self.assertRaises(idna.InvalidCodepointContext) as context:
+                idna.check_label(latin + joiner + latin)
+            self.assertIn("not allowed at position 2", str(context.exception))
+            self.assertRaises(idna.InvalidCodepointContext, idna.encode, latin + joiner + latin)
+
+        # Valid joiner contexts are still accepted
+        idna.check_label(latin + virama + zwj + latin)
+        idna.check_label(latin + virama + zwnj + latin)
+
+    def test_check_label_contextj_unknown_codepoint(self):
+        # An adjacent codepoint unknown to unicodedata (e.g. in a
+        # newer Unicode version than the Python build supports) must still
+        # surface as an IDNAError. Need to mock this to test.
+        from unittest import mock
+
+        with (
+            mock.patch("idna.core._combining_class", side_effect=ValueError("Unknown character in unicodedata")),
+            self.assertRaises(idna.IDNAError) as context,
+        ):
+            idna.check_label("\u0061\u200d\u0061")
+        self.assertNotIsInstance(context.exception, idna.InvalidCodepointContext)
+        self.assertIn("Unknown codepoint adjacent to joiner", str(context.exception))
+
+    def test_valid_contexto(self):
+        latin = "\u0061"
+        latin_l = "\u006c"
+        greek = "\u03b1"
+        hebrew = "\u05d0"
+        katakana = "\u30a1"
+        hiragana = "\u3041"
+        han = "\u6f22"
+        arabic_digit = "\u0660"
+        ext_arabic_digit = "\u06f0"
+
+        # RFC 5892 Rule A.3 (Middle Dot)
+        latin_middle_dot = "\u00b7"
+        self.assertTrue(idna.valid_contexto(latin_l + latin_middle_dot + latin_l, 1))
+        self.assertFalse(idna.valid_contexto(latin_middle_dot + latin_l, 1))
+        self.assertFalse(idna.valid_contexto(latin_l + latin_middle_dot, 0))
+        self.assertFalse(idna.valid_contexto(latin_middle_dot, 0))
+        self.assertFalse(idna.valid_contexto(latin_l + latin_middle_dot + latin, 1))
+
+        # RFC 5892 Rule A.4 (Greek Lower Numeral Sign)
+        glns = "\u0375"
+        self.assertTrue(idna.valid_contexto(glns + greek, 0))
+        self.assertFalse(idna.valid_contexto(glns + latin, 0))
+        self.assertFalse(idna.valid_contexto(glns, 0))
+        self.assertFalse(idna.valid_contexto(greek + glns, 1))
+
+        # RFC 5892 Rule A.5 (Hebrew Punctuation Geresh)
+        geresh = "\u05f3"
+        self.assertTrue(idna.valid_contexto(hebrew + geresh, 1))
+        self.assertFalse(idna.valid_contexto(latin + geresh, 1))
+
+        # RFC 5892 Rule A.6 (Hebrew Punctuation Gershayim)
+        gershayim = "\u05f4"
+        self.assertTrue(idna.valid_contexto(hebrew + gershayim, 1))
+        self.assertFalse(idna.valid_contexto(latin + gershayim, 1))
+
+        # RFC 5892 Rule A.7 (Katakana Middle Dot)
+        ja_middle_dot = "\u30fb"
+        self.assertTrue(idna.valid_contexto(katakana + ja_middle_dot + katakana, 1))
+        self.assertTrue(idna.valid_contexto(hiragana + ja_middle_dot + hiragana, 1))
+        self.assertTrue(idna.valid_contexto(han + ja_middle_dot + han, 1))
+        self.assertTrue(idna.valid_contexto(han + ja_middle_dot + latin, 1))
+        self.assertTrue(idna.valid_contexto("\u6f22\u30fb\u5b57", 1))
+        self.assertFalse(idna.valid_contexto("\u0061\u30fb\u0061", 1))
+
+        # RFC 5892 Rule A.8 (Arabic-Indic Digits)
+        self.assertTrue(idna.valid_contexto(arabic_digit + arabic_digit, 0))
+        self.assertFalse(idna.valid_contexto(arabic_digit + ext_arabic_digit, 0))
+
+        # RFC 5892 Rule A.9 (Extended Arabic-Indic Digits)
+        self.assertTrue(idna.valid_contexto(ext_arabic_digit + ext_arabic_digit, 0))
+        self.assertFalse(idna.valid_contexto(ext_arabic_digit + arabic_digit, 0))
+
+    def test_encode(self, encode=None, skip_bytes=False):
+        if encode is None:
+            encode = idna.encode
+
+        self.assertEqual(encode("xn--zckzah.xn--zckzah"), b"xn--zckzah.xn--zckzah")
+        self.assertEqual(encode("\u30c6\u30b9\u30c8.xn--zckzah"), b"xn--zckzah.xn--zckzah")
+        self.assertEqual(encode("\u30c6\u30b9\u30c8.\u30c6\u30b9\u30c8"), b"xn--zckzah.xn--zckzah")
+        self.assertEqual(encode("abc.abc"), b"abc.abc")
+        self.assertEqual(encode("xn--zckzah.abc"), b"xn--zckzah.abc")
+        self.assertEqual(encode("\u30c6\u30b9\u30c8.abc"), b"xn--zckzah.abc")
+        self.assertEqual(
+            encode("\u0521\u0525\u0523-\u0523\u0523-----\u0521\u0523\u0523\u0523.aa"),
+            b"xn---------90gglbagaar.aa",
+        )
+        if encode is idna.encode:
+            self.assertRaises(
+                idna.IDNAError,
+                encode,
+                "\u0521\u0524\u0523-\u0523\u0523-----\u0521\u0523\u0523\u0523.aa",
+                uts46=False,
+            )
+        self.assertEqual(encode("a" * 63), b"a" * 63)
+        self.assertRaises(idna.IDNAError, encode, "a" * 64)
+        self.assertRaises(idna.core.InvalidCodepoint, encode, "*")
+        if not skip_bytes:
+            self.assertRaises(idna.IDNAError, encode, b"\x0a\x33\x81")
+
+    def test_decode(self, decode=None, skip_str=False):
+        if decode is None:
+            decode = idna.decode
+        self.assertEqual(decode(b"xn--zckzah.xn--zckzah"), "\u30c6\u30b9\u30c8.\u30c6\u30b9\u30c8")
+        self.assertEqual(
+            decode(b"xn--d1acufc.xn--80akhbyknj4f"),
+            "\u0434\u043e\u043c\u0435\u043d.\u0438\u0441\u043f\u044b\u0442\u0430\u043d\u0438\u0435",
+        )
+        if not skip_str:
+            self.assertEqual(
+                decode("\u30c6\u30b9\u30c8.xn--zckzah"),
+                "\u30c6\u30b9\u30c8.\u30c6\u30b9\u30c8",
+            )
+            self.assertEqual(
+                decode("\u30c6\u30b9\u30c8.\u30c6\u30b9\u30c8"),
+                "\u30c6\u30b9\u30c8.\u30c6\u30b9\u30c8",
+            )
+            self.assertEqual(decode("abc.abc"), "abc.abc")
+        self.assertEqual(
+            decode(b"xn---------90gglbagaar.aa"),
+            "\u0521\u0525\u0523-\u0523\u0523-----\u0521\u0523\u0523\u0523.aa",
+        )
+        self.assertRaises(idna.IDNAError, decode, b"XN---------90GGLBAGAAC.AA")
+        self.assertRaises(idna.IDNAError, decode, b"xn---------90gglbagaac.aa")
+        self.assertRaises(idna.IDNAError, decode, b"xn--")
+        self.assertRaises(idna.IDNAError, decode, b"\x8d\xd2")
+        self.assertRaises(
+            idna.IDNAError,
+            decode,
+            b"A.A.0.a.a.A.0.a.A.A.0.a.A.0A.2.a.A.A.0.a.A.0.A.a.A0.a.a.A.0.a.fB.A.A.a.A.A.B.A.A.a.A.A.B.A.A.a.A.A.0.a.A.a.a.A.A.0.a.A.0.A.a.A0.a.a.A.0.a.fB.A.A.a.A.A.B.0A.A.a.A.A.B.A.A.a.A.A.a.A.A.B.A.A.a.A.0.a.B.A.A.a.A.B.A.a.A.A.5.a.A.0.a.Ba.A.B.A.A.a.A.0.a.Xn--B.A.A.A.a",
+        )
+        self.assertRaises(idna.IDNAError, decode, b"xn--ukba655qaaaa14431eeaaba.c")
+
+    def test_encode_transitional_deprecation_warning(self):
+        with warnings.catch_warnings(record=True) as w:
+            warnings.simplefilter("always")
+            idna.encode("example.com", uts46=True, transitional=True)
+            self.assertEqual(len(w), 1)
+            self.assertTrue(issubclass(w[0].category, DeprecationWarning))
+            self.assertIn("transitional", str(w[0].message).lower())
+
+    def test_uts46_remap_transitional_deprecation_warning(self):
+        with warnings.catch_warnings(record=True) as w:
+            warnings.simplefilter("always")
+            idna.uts46_remap("example.com", transitional=True)
+            self.assertEqual(len(w), 1)
+            self.assertTrue(issubclass(w[0].category, DeprecationWarning))
+            self.assertIn("transitional", str(w[0].message).lower())
+        with warnings.catch_warnings(record=True) as w:
+            warnings.simplefilter("always")
+            idna.uts46_remap("example.com")
+            self.assertEqual(len(w), 0)
+
+    def test_encode_no_transitional_no_warning(self):
+        with warnings.catch_warnings(record=True) as w:
+            warnings.simplefilter("always")
+            idna.encode("example.com", uts46=True)
+            self.assertEqual(len(w), 0)
+
+    def test_encode_decode_invalid_input_type(self):
+        # encode() and decode() are documented to raise IDNAError on bad
+        # input.  Inputs that are not str, bytes, or bytes-like used to leak
+        # a raw TypeError out of str(s, "ascii"); they should be wrapped in
+        # IDNAError just like UnicodeDecodeError already is.
+        for value in (42, None, 1.5, ["a", "b"], {"a": 1}):
+            self.assertRaises(idna.IDNAError, idna.encode, value)
+            self.assertRaises(idna.IDNAError, idna.decode, value)
+
+    def test_uts46_remap(self):
+        remap = idna.uts46_remap
+        # Empty and unchanged input, including the no-copy path for a
+        # non-ASCII string that needs no mapping.
+        self.assertEqual(remap(""), "")
+        self.assertEqual(remap("\u0431\u0443\u043a\u0432\u044b"), "\u0431\u0443\u043a\u0432\u044b")
+        # Mapped (M) characters interleaved with runs of valid ones: case
+        # folding, fullwidth forms, and the alternative label separators.
+        self.assertEqual(remap("\u0411\u0443\u041a\u0432\u042b"), "\u0431\u0443\u043a\u0432\u044b")
+        self.assertEqual(remap("ab\uff23\uff24ef"), "abcdef")
+        self.assertEqual(remap("a\u3002b\uff0ec\uff61d"), "a.b.c.d")
+        # Ignored (I) characters are dropped, wherever they fall.
+        self.assertEqual(remap("\u00ada\u00adb\u00ad"), "ab")
+        # Deviation (D) characters are kept. Transitional processing, which
+        # mapped them, is deprecated in UTS #46 and the flag has no effect.
+        self.assertEqual(remap("a\u00dfb"), "a\u00dfb")
+        self.assertEqual(remap("a\u03c2b"), "a\u03c2b")
+        self.assertEqual(remap("a\u200cb"), "a\u200cb")
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore", DeprecationWarning)
+            self.assertEqual(remap("a\u00dfb", transitional=True), "a\u00dfb")
+            self.assertEqual(remap("a\u03c2b", transitional=True), "a\u03c2b")
+            self.assertEqual(remap("a\u200cb", transitional=True), "a\u200cb")
+            self.assertEqual(remap("\u1e9e", transitional=True), "\u00df")
+        # Output is NFC even when the input is not.
+        self.assertEqual(remap("e\u0301"), "\u00e9")
+        # Disallowed (X) characters raise, reporting the 1-based position in
+        # the input.
+        with self.assertRaises(idna.InvalidCodepoint) as cm:
+            remap("ab\ufffdc")
+        self.assertIn("position 3", str(cm.exception))
+        self.assertRaises(idna.IDNAError, remap, "a" * 1025)
+
+    def test_uts46_remap_ascii(self):
+        # uts46_remap() takes a shortcut for pure-ASCII input on the basis
+        # that the only ASCII mapping in UTS #46 is upper- to lowercase and
+        # every other ASCII codepoint has status V. Pin that against the
+        # table so a future table change cannot silently invalidate it.
+        from idna.uts46data import uts46_replacements, uts46_statuses
+
+        for cp in range(128):
+            char = chr(cp)
+            if "A" <= char <= "Z":
+                self.assertEqual(chr(uts46_statuses[cp]), "M", char)
+                self.assertEqual(uts46_replacements[cp], char.lower(), char)
+            else:
+                self.assertEqual(chr(uts46_statuses[cp]), "V", char)
+                self.assertIsNone(uts46_replacements[cp], char)
+        for std3_rules in (True, False):
+            self.assertEqual(idna.uts46_remap("WWW.Example.COM", std3_rules=std3_rules), "www.example.com")
+        self.assertEqual(idna.uts46_remap("a-b_c d~", std3_rules=False), "a-b_c d~")
+        self.assertRaises(idna.InvalidCodepoint, idna.uts46_remap, "a-b_c d~", std3_rules=True)
+        self.assertRaises(idna.IDNAError, idna.uts46_remap, "A" * 1025)
+
+    def test_uts46_remap_std3(self):
+        # UTS #46 §4.1: with UseSTD3ASCIIRules, an ASCII character in the
+        # mapped output must be a lowercase letter, digit or hyphen (or the
+        # label separator). The offending codepoint and position reported are
+        # those of the *input* character, including when the ASCII character
+        # was produced by a mapping.
+        remap = idna.uts46_remap
+        for domain, expected, cp, position in (
+            ("a_b", "a_b", "U+005F", 2),  # ASCII fast path
+            ("A B", "a b", "U+0020", 2),
+            ("a/b.c", "a/b.c", "U+002F", 2),
+            ("a\uff01b", "a!b", "U+FF01", 2),  # fullwidth ! maps to !
+            ("\u00a0x", " x", "U+00A0", 1),  # NBSP maps to space
+            ("a\u2100b", "aa/cb", "U+2100", 2),  # ACCOUNT OF maps to a/c
+            ("a\u03b2_", "a\u03b2_", "U+005F", 3),  # in a run after a non-ASCII char
+            ("\u03b2\u0391a~", "\u03b2\u03b1a~", "U+007E", 4),  # in the tail run
+            ("~\u0391", "~\u03b1", "U+007E", 1),  # in a run before a mapped char
+        ):
+            with self.subTest(domain=domain):
+                self.assertEqual(remap(domain, std3_rules=False), expected)
+                with self.assertRaises(idna.InvalidCodepoint) as cm:
+                    remap(domain, std3_rules=True)
+                self.assertEqual(str(cm.exception), f"Codepoint {cp} not allowed at position {position} in {domain!r}")
+        # Letters, digits, hyphens and label separators (including the ones
+        # mapped to U+002E) are fine either way.
+        for domain, expected in (
+            ("a-b.c9", "a-b.c9"),
+            ("XN--80AK6AA92E.COM", "xn--80ak6aa92e.com"),
+            ("\u0431\uff0e\u0432\u3002\u0433\uff61", "\u0431.\u0432.\u0433."),
+            ("\uff21\uff22\uff23", "abc"),
+        ):
+            for std3_rules in (True, False):
+                self.assertEqual(remap(domain, std3_rules=std3_rules), expected)
+        # encode() forwards the flag (default off): with it on the mapping
+        # step rejects the character; with it off the character survives
+        # mapping and is only rejected later by IDNA 2008 label validation.
+        with self.assertRaises(idna.InvalidCodepoint) as cm:
+            idna.encode("a_b", uts46=True, std3_rules=True)
+        self.assertEqual(str(cm.exception), "Codepoint U+005F not allowed at position 2 in 'a_b'")
+        with self.assertRaises(idna.InvalidCodepoint) as cm:
+            idna.encode("a_b", uts46=True)
+        self.assertEqual(str(cm.exception), "Codepoint U+005F at position 2 of 'a_b' not allowed")
+        self.assertEqual(idna.encode("a\u00adb", uts46=True, std3_rules=True), b"ab")
+
+    def test_bytes_input_errors_are_idnaerror(self):
+        # bytes given to the label helpers must fail with IDNAError, not leak
+        # UnicodeDecodeError: check_label() decodes bytes as UTF-8, ulabel()
+        # treats bytes as ASCII.
+        self.assertRaises(idna.IDNAError, idna.check_label, b"\xff")
+        self.assertRaises(idna.IDNAError, idna.ulabel, b"\xff")
+        self.assertRaises(idna.IDNAError, idna.ulabel, b"\xc3\x9f")  # valid UTF-8 for U+00DF, still not ASCII
+        self.assertRaises(idna.IDNAError, idna.ulabel, bytearray(b"xn--\xff"))
+        self.assertEqual(idna.ulabel(b"xn--e1afmkfd"), "\u043f\u0440\u0438\u043c\u0435\u0440")
+
+    def test_non_canonical_alabel(self):
+        # RFC 5891 §5.3: an A-label must re-encode to itself. "xn---bbk" is
+        # a non-canonical Punycode spelling of "xn--bbk" (RFC 3492 permits
+        # a delimiter before an empty basic-code-point run, so both decode
+        # to the same U-label); accepting it would let two different
+        # wire-format names display identically.
+        self.assertEqual(idna.ulabel("xn--bbk"), "\u307e")
+        self.assertEqual(idna.encode("xn--bbk"), b"xn--bbk")
+        for label in ("xn---bbk", b"xn---bbk", "XN---BBK"):
+            with self.subTest(label=label):
+                with self.assertRaises(idna.IDNAError) as ctx:
+                    idna.ulabel(label)
+                self.assertEqual(ctx.exception.code, "non_canonical_alabel")
+        self.assertRaises(idna.IDNAError, idna.alabel, "xn---bbk")
+        self.assertRaises(idna.IDNAError, idna.encode, "xn---bbk.example")
+        self.assertRaises(idna.IDNAError, idna.decode, "xn---bbk.example")
+        # display decoding keeps the wire form rather than the misleading U-label
+        self.assertEqual(idna.decode("XN---BBK.example", display=True), "xn---bbk.example")
+        # ASCII case in the input is not a canonicality violation
+        self.assertEqual(idna.ulabel("XN--MNCHEN-3YA"), "m\xfcnchen")
+        self.assertEqual(idna.ulabel("xn--Mnchen-3ya"), "m\xfcnchen")
+
+    def test_decode_display(self):
+        # A label whose Punycode decode succeeds but contains disallowed
+        # codepoints — under display decoding, the original A-label is kept.
+        self.assertRaises(idna.IDNAError, idna.decode, "a.b.c.xn--pokxncvks")
+        self.assertEqual(
+            idna.decode("a.b.c.xn--pokxncvks", display=True),
+            "a.b.c.xn--pokxncvks",
+        )
+
+        # Mixed valid/invalid labels: the valid label still decodes, the
+        # invalid xn-- label is preserved verbatim.
+        self.assertEqual(
+            idna.decode("xn--zckzah.xn--pokxncvks", display=True),
+            "テスト.xn--pokxncvks",
+        )
+
+        # A label whose Punycode itself is malformed.
+        self.assertEqual(
+            idna.decode("xn--.example", display=True),
+            "xn--.example",
+        )
+
+        # Uppercase A-label prefix: the kept label is lowercased to match
+        # what a successful ulabel() call would have returned.
+        self.assertEqual(
+            idna.decode("XN--POKXNCVKS.example", display=True),
+            "xn--pokxncvks.example",
+        )
+
+        # display must not swallow errors for non-xn-- labels.
+        self.assertRaises(
+            idna.IDNAError,
+            idna.decode,
+            "-bad.example",
+            display=True,
+        )
+
+        # display should be a no-op for fully valid input.
+        self.assertEqual(
+            idna.decode("xn--zckzah.xn--zckzah", display=True),
+            "テスト.テスト",
+        )
+
+        # Trailing dot preserved under display recovery.
+        self.assertEqual(
+            idna.decode("xn--pokxncvks.", display=True),
+            "xn--pokxncvks.",
+        )
+
+        # Bytes input is supported, matching decode()'s normal contract.
+        self.assertEqual(
+            idna.decode(b"a.b.c.xn--pokxncvks", display=True),
+            "a.b.c.xn--pokxncvks",
+        )
+
+
+class UnicodeVersionTests(unittest.TestCase):
+    def test_unicode_version_is_exported_and_consistent(self):
+        import idna.idnadata
+        import idna.uts46data
+
+        self.assertIn("unicode_version", idna.__all__)
+        self.assertRegex(idna.unicode_version, r"^\d+\.\d+\.\d+$")
+        # The two generated tables must always be regenerated together.
+        self.assertEqual(idna.unicode_version, idna.idnadata.__version__)
+        self.assertEqual(idna.unicode_version, idna.uts46data.__version__)
+
+
+if __name__ == "__main__":
+    unittest.main()

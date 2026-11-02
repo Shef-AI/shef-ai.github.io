@@ -1,0 +1,18 @@
+{
+  "c_stdlib": "sysroot",
+  "c_compiler": "gcc",
+  "libgrpc": "1.83",
+  "cxx_compiler_version": "14.3.0",
+  "c_stdlib_version": "2.28",
+  "libabseil": "20260526",
+  "c_ares": "1",
+  "cxx_compiler": "gxx",
+  "zlib": "1",
+  "libprotobuf": "7.35.1",
+  "c_compiler_version": "14.3.0",
+  "openssl": "3",
+  "channel_targets": "defaults",
+  "target_platform": "linux-64",
+  "re2": "2025",
+  "__glibc": "__glibc >=2.28,<3.0.a0"
+}

@@ -1,0 +1,12 @@
+prefix=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3
+exec_prefix=${prefix}
+libdir=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/lib
+includedir=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/include
+
+Name: absl_hash_container_defaults
+Description: Abseil hash_container_defaults library
+URL: https://abseil.io/
+Version: 20260526
+Requires: absl_config = 20260526, absl_hash_function_defaults = 20260526
+Libs: -L${libdir}  
+Cflags: -I${includedir} -DNOMINMAX

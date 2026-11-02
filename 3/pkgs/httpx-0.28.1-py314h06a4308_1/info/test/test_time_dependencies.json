@@ -1,0 +1,1 @@
+["zstandard", "brotli-python", "uvicorn", "pytest", "trustme", "rich", "trio", "click", "h2", "chardet", "pip"]

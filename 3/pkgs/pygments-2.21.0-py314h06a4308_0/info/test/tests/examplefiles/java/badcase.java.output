@@ -1,0 +1,16 @@
+'// this used to take ages' Comment.Single
+'\n'          Text.Whitespace
+
+'void'        Keyword.Type
+' '           Text.Whitespace
+'foo'         Name.Function
+'('           Punctuation
+')'           Punctuation
+' '           Text.Whitespace
+'throws'      Keyword.Declaration
+' '           Text.Whitespace
+'xxxxxxxxxxxxxxxxxxxxxx' Name
+'{'           Punctuation
+' '           Text.Whitespace
+'}'           Punctuation
+'\n'          Text.Whitespace

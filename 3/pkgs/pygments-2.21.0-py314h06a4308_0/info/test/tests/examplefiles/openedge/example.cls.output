@@ -1,0 +1,112 @@
+'USING'       Name.Builtin
+' '           Text.Whitespace
+'Progress'    Name.Builtin
+'.'           Punctuation
+'L'           Name.Variable
+'a'           Name.Variable
+'n'           Name.Variable
+'g'           Name.Variable
+'.'           Punctuation
+'*'           Operator
+'.'           Punctuation
+'\n\n'        Text.Whitespace
+
+'CLASS'       Name.Builtin
+' '           Text.Whitespace
+'T'           Name.Variable
+'e'           Name.Variable
+'s'           Name.Variable
+'t'           Name.Variable
+' '           Text.Whitespace
+'INHERITS'    Name.Builtin
+' '           Text.Whitespace
+'Progress'    Name.Builtin
+'.'           Punctuation
+'S'           Name.Variable
+'u'           Name.Variable
+'c'           Name.Variable
+'k'           Name.Variable
+'s'           Name.Variable
+':'           Punctuation
+'\n\n  '      Text.Whitespace
+'DEFINE'      Keyword.Declaration
+' '           Text.Whitespace
+'PRIVATE'     Name.Builtin
+' '           Text.Whitespace
+'VARIABLE'    Name.Builtin
+' '           Text.Whitespace
+'c'           Name.Variable
+'T'           Name.Variable
+'e'           Name.Variable
+'s'           Name.Variable
+'t'           Name.Variable
+' '           Text.Whitespace
+'AS'          Name.Builtin
+' '           Text.Whitespace
+'CHAR'        Keyword.Type
+' '           Text.Whitespace
+'NO-UNDO'     Name.Builtin
+'.'           Punctuation
+'\n\n  '      Text.Whitespace
+'CONSTRUCTOR' Name.Builtin
+' '           Text.Whitespace
+'PUBLIC'      Name.Builtin
+' '           Text.Whitespace
+'T'           Name.Variable
+'e'           Name.Variable
+'s'           Name.Variable
+'t'           Name.Variable
+'('           Punctuation
+')'           Punctuation
+':'           Punctuation
+'\n    '      Text.Whitespace
+'SUPER'       Name.Builtin
+'('           Punctuation
+')'           Punctuation
+'.'           Punctuation
+'\n    '      Text.Whitespace
+'MESSAGE '    Name.Builtin
+'"Why are you punishing yourself by coding in this language?"' Literal.String.Double
+'.'           Punctuation
+'\n  '        Text.Whitespace
+'END'         Name.Builtin
+' '           Text.Whitespace
+'CONSTRUCTOR' Name.Builtin
+'.'           Punctuation
+'\n\n  '      Text.Whitespace
+'METHOD'      Name.Builtin
+' '           Text.Whitespace
+'PUBLIC'      Name.Builtin
+' '           Text.Whitespace
+'LOGICAL'     Keyword.Type
+' '           Text.Whitespace
+'B'           Name.Variable
+'l'           Name.Variable
+'o'           Name.Variable
+'w'           Name.Variable
+'u'           Name.Variable
+'p'           Name.Variable
+'('           Punctuation
+'INPUT'       Name.Builtin
+' '           Text.Whitespace
+'i'           Name.Variable
+'T'           Name.Variable
+'i'           Name.Variable
+'m'           Name.Variable
+'e'           Name.Variable
+' '           Text.Whitespace
+'AS'          Name.Builtin
+' '           Text.Whitespace
+'INT'         Keyword.Type
+')'           Punctuation
+':'           Punctuation
+'\n  '        Text.Whitespace
+'END'         Name.Builtin
+'.'           Punctuation
+'\n\n'        Text.Whitespace
+
+'END'         Name.Builtin
+' '           Text.Whitespace
+'CLASS'       Name.Builtin
+'.'           Punctuation
+'\n'          Text.Whitespace

@@ -1,0 +1,64 @@
+{% set name = "python-dotenv" %}
+{% set version = "1.2.2" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  url: https://github.com/theskumar/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 58f0f1016f35872bf90649f28d8777ee4897bb88f9075c315f71dc485410002a
+
+build:
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation --ignore-installed --no-cache-dir -vv
+  skip: true  # [py<310]
+  entry_points:
+    - dotenv = dotenv.__main__:cli
+
+requirements:
+  host:
+    - pip
+    - python
+    - setuptools >=77.0
+  run:
+    - python
+  run_constrained:
+    - click >=5.0
+
+# skipping tests for windows due to upstream tests depend on UNIX ‘sh’ which isn’t available on Win-64
+# Only on CI osx
+# E       assert 1 == 0
+{% set disabled_tests = " not test_set_key_permission_error" %}  # [not win]
+{% set disabled_tests = disabled_tests + " and not test_set_key_unauthorized_file" %}  # [not win]
+{% set disabled_tests = disabled_tests + " and not test_run_with_command_flag" %}  # [osx]
+
+test:
+  imports:
+    - dotenv
+  source_files:
+    - tests
+  requires:
+    - pip
+    - pytest >=3.9
+    - click
+    - sh >=2  # [not win]
+  commands:
+    - pip check
+    - pytest tests -vv -k "{{ disabled_tests }}"  # [not win]
+
+about:
+  home: https://saurabh-kumar.com/python-dotenv
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
+  summary: Get and set values in your .env file in local and production servers like Heroku does.
+  description: |
+    Python-dotenv reads key-value pairs from a .env file and can set them as environment variables.
+    It helps in the development of applications following the 12-factor principles.
+  dev_url: https://github.com/theskumar/python-dotenv
+  doc_url: https://github.com/theskumar/python-dotenv/tree/main/docs
+
+extra:
+  recipe-maintainers:
+    - proinsias

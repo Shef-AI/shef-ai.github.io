@@ -1,0 +1,97 @@
+# This file created by conda-build 26.7.1
+# meta.yaml template originally from:
+# /home/task_179258894426025/pip-feedstock/recipe, last modified Wed Oct 21 13:22:49 2026
+# ------------------------------------------------
+
+package:
+  name: pip
+  version: 26.2.2
+source:
+  url: https://pypi.org/packages/source/p/pip/pip-26.2.2.tar.gz
+  sha256: 3a8e5c800492787f33a4114ef54444546c340df428974ebba17e0fd47e11af2f
+build:
+  noarch: python
+  number: '0'
+  disable_pip: true
+  entry_points:
+    - pip = pip._internal.cli.main:main
+    - pip3 = pip._internal.cli.main:main
+  string: pyh0d26453_0
+requirements:
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 52_gnu
+    - bzip2 1.0.8 h5eee18b_6
+    - ca-certificates 2026.10.20 h06a4308_0
+    - flit-core 3.12.0 py315hf2ffce6_2
+    - ld_impl_linux-64 2.44 h9e0c5a2_3
+    - libexpat 2.9.0 h7354ed3_0
+    - libffi 3.4.8 h06d3fd0_3
+    - libgcc 15.2.0 h69a1729_8
+    - libgcc-ng 15.2.0 h166f726_8
+    - libmpdec 4.0.1 h47b2149_0
+    - libstdcxx 15.2.0 h39759b7_8
+    - libstdcxx-ng 15.2.0 hc03a8fd_8
+    - libuuid 1.41.5 h5eee18b_0
+    - libxcb 1.17.0 h9b100fa_0
+    - libzlib 1.3.2 h47b2149_0
+    - lz4-c 1.9.4 h7354ed3_5
+    - ncurses 6.6 hfaaeb4e_0
+    - openssl 3.5.9 h1b28b03_0
+    - pthread-stubs 0.3 h47b2149_2
+    - python 3.15.0 h3697fdf_100_cp315
+    - python_abi 3.15 5_cp315
+    - readline 8.3 hc2a1206_0
+    - sqlite 3.53.4 h795bf6d_0
+    - tk 9.0.4 h3840b71_1
+    - tzdata 2026c he532380_0
+    - xorg-libx11 1.8.14 h65de747_0
+    - xorg-libxau 1.0.12 h9b100fa_0
+    - xorg-libxdmcp 1.1.5 h9b100fa_0
+    - xorg-xorgproto 2025.1 h47b2149_0
+    - xz 5.8.4 h140a991_0
+    - zlib 1.3.2 h47b2149_0
+    - zstd 1.5.7 h11fc155_0
+  run:
+    - python >=3.14.0a0
+test:
+  requires:
+    - python 3.14.*
+  commands:
+    - pip -h
+    - pip list
+  imports:
+    - pip
+about:
+  home: https://pip.pypa.io
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE.txt
+  summary: PyPA recommended tool for installing Python packages
+  description: 'pip is the package installer for Python.
+
+    You can use pip to install packages from the Python Package
+
+    Index and other indexes.
+
+    '
+  doc_url: https://pip.pypa.io
+  dev_url: https://github.com/pypa/pip
+extra:
+  recipe-maintainers:
+    - jakirkham
+    - mingwandroid
+    - msarahan
+    - ocefpaf
+    - pelson
+  skip-lints:
+    - missing_pip_check
+    - python_build_tool_in_run
+    - python_build_tools_in_host
+  final: true
+  copy_test_source_files: true
+  remote_url: https://github.com/AnacondaRecipes/pip-feedstock
+  sha: 92a8d466454d9bb3158b1e51221dc7668aed8562
+  task_id: D65putcNS_GYpENFgP6exg
+  task_run_id: '0'
+  pbp_graph_uuid: 6b053b43-1054-4a9d-ae2e-2ba29cd954af

@@ -1,0 +1,29 @@
+'Lemma'       Name
+' '           Text.Whitespace
+'FalseLemma'  Name
+' '           Text.Whitespace
+':'           Operator
+' '           Text.Whitespace
+'False'       Name
+' '           Text.Whitespace
+'<'           Operator
+'-'           Operator
+'>'           Operator
+' '           Text.Whitespace
+'False'       Name
+'.'           Punctuation
+'\n'          Text.Whitespace
+
+'tauto'       Name
+'.'           Punctuation
+'\n'          Text.Whitespace
+
+'Qed'         Name
+'.'           Punctuation
+'\n'          Text.Whitespace
+
+'Check'       Name
+' '           Text.Whitespace
+'FalseLemma'  Name
+'.'           Punctuation
+'\n'          Text.Whitespace

@@ -1,0 +1,126 @@
+{% set name = "nghttp2" %}
+{% set version = "1.69.0" %}
+
+package:
+  name: {{ name|lower }}-split
+  version: {{ version }}
+
+source:
+  url: https://github.com/{{ name }}/{{ name }}/releases/download/v{{ version }}/{{ name }}-{{ version }}.tar.gz
+  sha256: c866b7477cbb7512ab6863a685027adbb1bb8da8fc3bab7429ed43d3281d5aa9
+
+build:
+  number: 1
+  
+requirements:
+  build:
+    - libtool  # [unix]
+    - {{ stdlib('c') }}
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - cmake       # [win]
+    - ninja-base  # [win]
+    - make        # [unix]
+    - pkg-config  # [unix]
+  host:
+    - zlib {{ zlib }}
+    - libev {{ libev }}      # [unix]
+    - c-ares {{ c_ares }}
+    - libxml2 {{ libxml2 }}
+    - jansson {{ jansson }}
+    - openssl {{ openssl }}  # [unix]
+  run:
+    - zlib
+    - libev    # [unix]
+    - c-ares
+    - libxml2
+    - jansson
+    - openssl  # [unix]
+
+outputs:
+  - name: libnghttp2
+    script: install.sh  # [unix]
+    script: install.bat  # [win]
+    build:
+      run_exports:
+        - {{ pin_subpackage('libnghttp2', max_pin='x.x') }}
+    requirements:
+      build:
+        - libtool  # [unix]
+        - {{ stdlib('c') }}
+        - {{ compiler('c') }}
+        - {{ compiler('cxx') }}
+        - cmake       # [win]
+        - ninja-base  # [win]
+        - make        # [unix]
+        - pkg-config  # [unix]
+      host:
+        - zlib {{ zlib }}
+        - libev {{ libev }}      # [unix]
+        - c-ares {{ c_ares }}
+        - libxml2 {{ libxml2 }}
+        - jansson {{ jansson }}
+        - openssl {{ openssl }}  # [unix]
+      run:
+        - zlib
+        - libev    # [unix]
+        - c-ares
+        - libxml2
+        - jansson
+        - openssl  # [unix]
+    files:                         # [unix]
+      - include/nghttp2/nghttp2*   # [unix]
+      - lib/libnghttp2*            # [unix]
+      - lib/nghttp2*               # [unix]
+      - lib/pkgconfig/libnghttp2*  # [unix]
+      - bin/nghttp*                # [unix]
+    test:
+      commands:
+        # The binary command requires libev which we don't have on the main channel
+        # on windows
+        - nghttp -nv https://nghttp2.org                           # [unix]
+        - test ! -f ${PREFIX}/lib/lib{{ name }}.a                  # [unix]
+        - test -f ${PREFIX}/lib/lib{{ name }}${SHLIB_EXT}          # [unix]
+        - if not exist %PREFIX%\\Library\\bin\\nghttp2.dll exit 1  # [win]
+        - if not exist %PREFIX%\\Library\\lib\\nghttp2.lib exit 1  # [win]
+  - name: libnghttp2-static
+    script: install.sh  # [unix]
+    build:
+      skip: true  # [not unix]
+    requirements:
+      build:
+        - {{ stdlib('c') }}
+        - {{ compiler('c') }}
+        - {{ compiler('cxx') }}
+        - make        # [unix]
+        - pkg-config  # [unix]
+      host:
+        - {{ pin_subpackage('libnghttp2', exact=True) }}
+      run:
+        - {{ pin_subpackage('libnghttp2', exact=True) }}
+        - libev-static
+        - c-ares-static
+    test:
+      commands:
+        - test -f ${PREFIX}/lib/lib{{ name }}.a  # [unix]
+
+about:
+  home: https://github.com/nghttp2/nghttp2
+  license: MIT
+  license_family: MIT
+  license_file: COPYING
+  summary: This is an implementation of Hypertext Transfer Protocol version 2.
+  description: |
+    This is an implementation of the Hypertext Transfer Protocol version 2 in C.
+
+    The framing layer of HTTP/2 is implemented as a reusable C library. On top
+    of that, we have implemented an HTTP/2 client, server and proxy. We have
+    also developed load test and benchmarking tools for HTTP/2.
+  doc_url: https://nghttp2.org/documentation
+  dev_url: https://github.com/nghttp2/nghttp2
+
+extra:
+  recipe-maintainers:
+    - cpaulik
+    - mariusvniekerk
+    - wolfv

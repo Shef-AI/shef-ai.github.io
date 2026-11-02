@@ -1,0 +1,49 @@
+{% set name = "httpcore" %}
+{% set version = "1.0.9" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 6e34463af53fd2ab5d807f399a9b45ea31c3dfa2276f15a2c3f00afff6e176e8
+
+build:
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  skip: True  # [py<38]
+
+requirements:
+  host:
+    - pip
+    - python
+    - hatchling
+    - hatch-fancy-pypi-readme
+  run:
+    - python
+    - certifi
+    - h11 >=0.16
+
+test:
+  requires:
+    - pip
+  imports:
+    - httpcore
+  commands:
+    - pip check
+
+about:
+  home: https://github.com/encode/httpcore
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE.md
+  summary: The next generation HTTP client.
+  description: The HTTP Core package provides a minimal low-level HTTP client, which does one thing only. Sending HTTP requests.
+  dev_url: https://github.com/encode/httpcore
+  doc_url: https://www.encode.io/httpcore/
+
+extra:
+  recipe-maintainers:
+    - nicoddemus
+    - synapticarbors

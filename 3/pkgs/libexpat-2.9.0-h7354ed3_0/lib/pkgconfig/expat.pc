@@ -1,0 +1,13 @@
+prefix=/home/task_179137239367197/croot/expat-split_1791372421497/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: expat
+Version: 2.9.0
+Description: expat XML parser
+URL: https://libexpat.github.io/
+Libs: -L${libdir} -lexpat
+Libs.private: -lm
+Cflags: -I${includedir}
+Cflags.private: -DXML_STATIC

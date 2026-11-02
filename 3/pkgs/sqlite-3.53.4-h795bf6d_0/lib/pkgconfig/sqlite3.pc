@@ -1,0 +1,13 @@
+# Package Information for pkg-config
+
+prefix=/home/task_178904672867460/croot/sqlite_1789046775634/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_plac
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: SQLite
+Description: SQL database engine
+Version: 3.53.4
+Libs: -L${libdir} -lsqlite3
+Libs.private: -lm -lz -ldl -lpthread 
+Cflags: -I${includedir}

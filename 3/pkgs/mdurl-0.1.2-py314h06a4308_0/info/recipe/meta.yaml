@@ -1,0 +1,91 @@
+# This file created by conda-build 25.5.0
+# meta.yaml template originally from:
+# /work/buildout/aggregate/mdurl-feedstock/recipe, last modified Tue Oct  7 21:45:55 2025
+# ------------------------------------------------
+
+package:
+  name: mdurl
+  version: 0.1.2
+source:
+  - url: https://pypi.org/packages/source/m/mdurl/mdurl-0.1.2.tar.gz
+    sha256: bb413d29f5eea38f31dd4754dd7377d4465116fb207585f97bf925588687c1ba
+  - url: https://github.com/executablebooks/mdurl/archive/refs/tags/0.1.2.tar.gz
+    sha256: 99d4fabddab7ee4a05fa458deb1a6f0d009966e4631c50d1b875767a1cd3896d
+    folder: gh
+build:
+  number: '0'
+  script: /work/buildout/croot/mdurl_1759954141496/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/bin/python
+    -m pip install . -vv --no-deps --no-build-isolation
+  string: py314h06a4308_0
+requirements:
+  host:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - bzip2 1.0.8 h5eee18b_6
+    - ca-certificates 2025.9.9 h06a4308_0
+    - expat 2.7.1 h6a678d5_0
+    - flit-core 3.12.0 py314hf2ffce6_0
+    - ld_impl_linux-64 2.44 h153f514_2
+    - libffi 3.4.4 h6a678d5_1
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libmpdec 4.0.0 h5eee18b_0
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - libuuid 1.41.5 h5eee18b_0
+    - libxcb 1.17.0 h9b100fa_0
+    - libzlib 1.3.1 hb25bd0a_0
+    - lz4-c 1.9.4 h6a678d5_1
+    - ncurses 6.5 h7934f7d_0
+    - openssl 3.0.18 hd6dcaed_0
+    - pip 25.1 pyh0d26453_1
+    - pthread-stubs 0.3 h0ce48e5_1
+    - python 3.14.0 h3fc5862_100_cp314
+    - python_abi 3.14 1_cp314
+    - readline 8.3 hc2a1206_0
+    - sqlite 3.50.2 hb25bd0a_1
+    - tk 8.6.15 h54e0aa7_0
+    - tzdata 2025b h04d1e81_0
+    - xorg-libx11 1.8.12 h9b100fa_1
+    - xorg-libxau 1.0.12 h9b100fa_0
+    - xorg-libxdmcp 1.1.5 h9b100fa_0
+    - xorg-xorgproto 2024.1 h5eee18b_1
+    - xz 5.6.4 h5eee18b_1
+    - zlib 1.3.1 hb25bd0a_0
+    - zstd 1.5.7 h11fc155_0
+  run:
+    - python >=3.14,<3.15.0a0
+    - python_abi 3.14.* *_cp314
+test:
+  source_files:
+    - gh/tests
+  imports:
+    - mdurl
+    - mdurl._decode
+    - mdurl._encode
+    - mdurl._format
+    - mdurl._parse
+    - mdurl._url
+  requires:
+    - pip
+    - pytest
+  commands:
+    - pip check
+    - python -c "from importlib.metadata import version; assert(version('mdurl')=='0.1.2')"
+    - pytest -v gh/tests
+about:
+  home: https://github.com/executablebooks/mdurl
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: This is a Python port of the JavaScript mdurl package. See the upstream
+    README.md file for API documentation.
+  description: This is a Python port of the JavaScript mdurl package. See the upstream
+    README.md file for API documentation.
+  dev_url: https://github.com/executablebooks/mdurl
+  doc_url: https://github.com/executablebooks/mdurl/blob/master/README.md
+extra:
+  recipe-maintainers:
+    - chrisjsewell
+  final: true
+  copy_test_source_files: true
+  tool: perseverence-python-buildout

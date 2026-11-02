@@ -1,0 +1,328 @@
+'# MAQL script' Comment.Single
+'\n'          Text.Whitespace
+
+'CREATE'      Keyword
+' '           Text.Whitespace
+'DATASET'     Keyword
+' '           Text.Whitespace
+'{dataset.quotes}' Name.Variable
+' '           Text.Whitespace
+'VISUAL'      Keyword
+'('           Punctuation
+'TITLE'       Keyword
+' '           Text.Whitespace
+'"'           Literal.String
+'St'          Literal.String
+'\\\\'        Literal.String.Escape
+'tock Qu'     Literal.String
+'\\t'         Literal.String.Escape
+'otes Data'   Literal.String
+'"'           Literal.String
+')'           Punctuation
+';'           Punctuation
+'\n\n'        Text.Whitespace
+
+'# A comment' Comment.Single
+'\n'          Text.Whitespace
+
+'CREATE'      Keyword
+' '           Text.Whitespace
+'DATASET'     Keyword
+' '           Text.Whitespace
+'{dataset.quotes}' Name.Variable
+' '           Text.Whitespace
+'VISUAL'      Keyword
+'('           Punctuation
+'TITLE'       Keyword
+' '           Text.Whitespace
+'"'           Literal.String
+'Stock Qu'    Literal.String
+'\\"'         Literal.String.Escape
+'otes Data'   Literal.String
+'"'           Literal.String
+')'           Punctuation
+';'           Punctuation
+'\n\n'        Text.Whitespace
+
+'CREATE'      Keyword
+' '           Text.Whitespace
+'DATASET'     Keyword
+' '           Text.Whitespace
+'{dataset.quotes}' Name.Variable
+' '           Text.Whitespace
+'VISUAL'      Keyword
+'('           Punctuation
+'TITLE'       Keyword
+' '           Text.Whitespace
+'"'           Literal.String
+'Stock Quotes Data' Literal.String
+'"'           Literal.String
+')'           Punctuation
+';'           Punctuation
+'\n\n'        Text.Whitespace
+
+'ALTER'       Keyword
+' '           Text.Whitespace
+'DATASET'     Keyword
+' '           Text.Whitespace
+'{dataset.quotes}' Name.Variable
+' '           Text.Whitespace
+'ADD'         Keyword
+' '           Text.Whitespace
+'{attribute.sector}' Name.Variable
+';'           Punctuation
+'\n\n'        Text.Whitespace
+
+'ALTER'       Keyword
+' '           Text.Whitespace
+'DATASET'     Keyword
+' '           Text.Whitespace
+'{dataset.quotes}' Name.Variable
+' '           Text.Whitespace
+'DROP'        Keyword
+' '           Text.Whitespace
+'{attribute.symbol}' Name.Variable
+';'           Punctuation
+'\n\n'        Text.Whitespace
+
+'ALTER'       Keyword
+' '           Text.Whitespace
+'DATASET'     Keyword
+' '           Text.Whitespace
+'{dataset.quotes}' Name.Variable
+' '           Text.Whitespace
+'VISUAL'      Keyword
+'('           Punctuation
+'TITLE'       Keyword
+' '           Text.Whitespace
+'"'           Literal.String
+'Internal Quotes Data' Literal.String
+'"'           Literal.String
+')'           Punctuation
+';'           Punctuation
+'\n\n'        Text.Whitespace
+
+'CREATE'      Keyword
+' '           Text.Whitespace
+'ATTRIBUTE'   Keyword
+' '           Text.Whitespace
+'{attr.quotes.symbol}' Name.Variable
+'\n    '      Text.Whitespace
+'VISUAL'      Keyword
+'('           Punctuation
+'TITLE'       Keyword
+' '           Text.Whitespace
+'"'           Literal.String
+'Symbol'      Literal.String
+'"'           Literal.String
+','           Punctuation
+' '           Text.Whitespace
+'FOLDER'      Keyword
+' '           Text.Whitespace
+'{folder.quotes.attr}' Name.Variable
+')'           Punctuation
+'\n    '      Text.Whitespace
+'AS'          Keyword
+' '           Text.Whitespace
+'{d_quotes_symbol.nm_symbol}' Name.Variable
+';'           Punctuation
+'\n\n'        Text.Whitespace
+
+'ALTER'       Keyword
+' '           Text.Whitespace
+'ATTRIBUTE'   Keyword
+' '           Text.Whitespace
+'{attr.quotes.symbol}' Name.Variable
+'\n    '      Text.Whitespace
+'ADD'         Keyword
+' '           Text.Whitespace
+'LABELS'      Keyword
+' '           Text.Whitespace
+'{attr.quotes.company}' Name.Variable
+' '           Text.Whitespace
+'VISUAL'      Keyword
+'('           Punctuation
+'TITLE'       Keyword
+' '           Text.Whitespace
+'"'           Literal.String
+'Company'     Literal.String
+'"'           Literal.String
+')'           Punctuation
+'\n    '      Text.Whitespace
+'AS'          Keyword
+' '           Text.Whitespace
+'{d_quotes_symbol.nm_company}' Name.Variable
+';'           Punctuation
+'\n\n'        Text.Whitespace
+
+'CREATE'      Keyword
+' '           Text.Whitespace
+'FACT'        Keyword
+' '           Text.Whitespace
+'{fact.quotes.open_price}' Name.Variable
+'\n    '      Text.Whitespace
+'VISUAL'      Keyword
+'('           Punctuation
+' '           Text.Whitespace
+'TITLE'       Keyword
+' '           Text.Whitespace
+'"'           Literal.String
+'Open Price'  Literal.String
+'"'           Literal.String
+','           Punctuation
+' '           Text.Whitespace
+'FOLDER'      Keyword
+' '           Text.Whitespace
+'{folder.quotes.fact}' Name.Variable
+')'           Punctuation
+' '           Text.Whitespace
+'AS'          Keyword
+' '           Text.Whitespace
+'{f_quotes.f_open_price}' Name.Variable
+';'           Punctuation
+'\n\n'        Text.Whitespace
+
+'ALTER'       Keyword
+' '           Text.Whitespace
+'FACT'        Keyword
+' '           Text.Whitespace
+'{fact.quotes.open_price}' Name.Variable
+' '           Text.Whitespace
+'ADD'         Keyword
+' '           Text.Whitespace
+'{f_quotes2.f_open_price}' Name.Variable
+';'           Punctuation
+'\n\n'        Text.Whitespace
+
+'CREATE'      Keyword
+' '           Text.Whitespace
+'FOLDER'      Keyword
+' '           Text.Whitespace
+'{folder.quotes.attr}' Name.Variable
+'\n    '      Text.Whitespace
+'VISUAL'      Keyword
+' '           Text.Whitespace
+'('           Punctuation
+' '           Text.Whitespace
+'TITLE'       Keyword
+' '           Text.Whitespace
+'"'           Literal.String
+'Stock Quotes Data' Literal.String
+'"'           Literal.String
+','           Punctuation
+'\n             ' Text.Whitespace
+'DESCRIPTION' Keyword
+' '           Text.Whitespace
+'"'           Literal.String
+'Stock quotes data obtained from John Doe etc.' Literal.String
+'"'           Literal.String
+' '           Text.Whitespace
+')'           Punctuation
+'\n    '      Text.Whitespace
+'TYPE'        Keyword
+' '           Text.Whitespace
+'ATTRIBUTE'   Keyword
+';'           Punctuation
+'\n\n'        Text.Whitespace
+
+'ALTER'       Keyword
+' '           Text.Whitespace
+'DATATYPE'    Keyword
+' '           Text.Whitespace
+'{d_quotes_symbol.nm_symbol}' Name.Variable
+' '           Text.Whitespace
+'VARCHAR'     Keyword
+'('           Punctuation
+'4'           Literal.Number
+')'           Punctuation
+','           Punctuation
+'\n    '      Text.Whitespace
+'{d_quotes_symbol.nm_symbol}' Name.Variable
+' '           Text.Whitespace
+'VARCHAR'     Keyword
+'('           Punctuation
+'80'          Literal.Number
+')'           Punctuation
+','           Punctuation
+'\n    '      Text.Whitespace
+'{f_quotes.f_open_price}' Name.Variable
+' '           Text.Whitespace
+'DECIMAL'     Keyword
+'('           Punctuation
+'10'          Literal.Number
+','           Punctuation
+'2'           Literal.Number
+')'           Punctuation
+';'           Punctuation
+'\n\n'        Text.Whitespace
+
+'INCLUDE'     Keyword
+' '           Text.Whitespace
+'TEMPLATE'    Keyword
+' '           Text.Whitespace
+'"'           Literal.String
+'URN:GOODDATA:DATE' Literal.String
+'"'           Literal.String
+' '           Text.Whitespace
+'MODIFY'      Keyword
+' '           Text.Whitespace
+'('           Punctuation
+'IDENTIFIER'  Name.Builtin
+' '           Text.Whitespace
+'"'           Literal.String
+'my-date'     Literal.String
+'"'           Literal.String
+','           Punctuation
+' '           Text.Whitespace
+'TITLE'       Keyword
+' '           Text.Whitespace
+'"'           Literal.String
+'quote'       Literal.String
+'"'           Literal.String
+')'           Punctuation
+'\n\n'        Text.Whitespace
+
+'ALTER'       Keyword
+' '           Text.Whitespace
+'ATTRIBUTE'   Keyword
+' '           Text.Whitespace
+'{attr.quotes.symbol}' Name.Variable
+' '           Text.Whitespace
+'ADD'         Keyword
+' '           Text.Whitespace
+'KEYS'        Keyword
+' '           Text.Whitespace
+'{d_quotes_symbol.nm_symbol}' Name.Variable
+' '           Text.Whitespace
+'PRIMARY'     Keyword
+';'           Punctuation
+'\n\n'        Text.Whitespace
+
+'ALTER'       Keyword
+' '           Text.Whitespace
+'ATTRIBUTE'   Keyword
+' '           Text.Whitespace
+'{attr.quotes.symbol}' Name.Variable
+' '           Text.Whitespace
+'DROP'        Keyword
+' '           Text.Whitespace
+'KEYS'        Keyword
+' '           Text.Whitespace
+'{d_quotes_symbol.nm_symbol}' Name.Variable
+';'           Punctuation
+'\n\n'        Text.Whitespace
+
+'ALTER'       Keyword
+' '           Text.Whitespace
+'FACT'        Keyword
+' '           Text.Whitespace
+'{fact.quotes.open_price}' Name.Variable
+' '           Text.Whitespace
+'ADD'         Keyword
+' '           Text.Whitespace
+'{f_quotes2.f_open_price}' Name.Variable
+';'           Punctuation
+'\n\n'        Text.Whitespace
+
+'# Another comment' Comment.Single
+'\n'          Text.Whitespace

@@ -1,0 +1,10 @@
+{
+  "c_compiler_version": "11.2.0",
+  "target_platform": "linux-64",
+  "c_stdlib_version": "2.28",
+  "c_stdlib": "sysroot",
+  "channel_targets": "defaults",
+  "libbrotlicommon": "1.0",
+  "c_compiler": "gcc",
+  "__glibc": "__glibc >=2.28,<3.0.a0"
+}

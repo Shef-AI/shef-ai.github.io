@@ -1,0 +1,271 @@
+import sys
+from collections.abc import Iterable
+from inspect import Parameter, Signature, signature
+from typing import Annotated, Any, Generic, TypeVar
+
+import pytest
+from annotated_types import Gt
+from typing_extensions import get_origin  # noqa: UP035
+from typing_inspection import typing_objects
+
+from pydantic import BaseModel, ConfigDict, Field, create_model
+
+
+def _equals(a: str | Iterable[str], b: str | Iterable[str]) -> bool:
+    """
+    compare strings with spaces removed
+    """
+    if isinstance(a, str) and isinstance(b, str):
+        return a.replace(' ', '') == b.replace(' ', '')
+    elif isinstance(a, Iterable) and isinstance(b, Iterable):
+        return all(_equals(a_, b_) for a_, b_ in zip(a, b))
+    else:
+        raise TypeError(f'arguments must be both strings or both lists, not {type(a)}, {type(b)}')
+
+
+def test_model_signature():
+    class Model(BaseModel):
+        a: float = Field(title='A')
+        b: int = Field(10)
+        c: int = Field(default_factory=lambda: 1)
+
+    sig = signature(Model)
+    assert sig != signature(BaseModel)
+    assert _equals(map(str, sig.parameters.values()), ('a: float', 'b: int = 10', 'c: int = <factory>'))
+    assert _equals(str(sig), '(*, a: float, b: int = 10, c: int = <factory>) -> None')
+
+
+def test_generic_model_signature():
+    T = TypeVar('T')
+
+    class Model(BaseModel, Generic[T]):
+        a: T
+
+    sig = signature(Model[int])
+    assert sig != signature(BaseModel)
+    assert _equals(map(str, sig.parameters.values()), ('a: int',))
+    assert _equals(str(sig), '(*, a: int) -> None')
+
+
+def test_custom_init_signature():
+    class MyModel(BaseModel):
+        id: int
+        name: str = 'John Doe'
+        f__: str = Field(alias='foo')
+
+        model_config = ConfigDict(extra='allow')
+
+        def __init__(self, id: int = 1, bar=2, *, baz: Any, **data):
+            super().__init__(id=id, **data)
+            self.bar = bar
+            self.baz = baz
+
+    sig = signature(MyModel)
+    assert _equals(
+        map(str, sig.parameters.values()),
+        ('id: int = 1', 'bar=2', 'baz: Any', "name: str = 'John Doe'", 'foo: str', '**data'),
+    )
+
+    assert _equals(str(sig), "(id: int = 1, bar=2, *, baz: Any, name: str = 'John Doe', foo: str, **data) -> None")
+
+
+def test_custom_init_signature_with_no_var_kw():
+    class Model(BaseModel):
+        a: float
+        b: int = 2
+        c: int
+
+        def __init__(self, a: float, b: int):
+            super().__init__(a=a, b=b, c=1)
+
+        model_config = ConfigDict(extra='allow')
+
+    assert _equals(str(signature(Model)), '(a: float, b: int) -> None')
+
+
+def test_invalid_identifiers_signature():
+    model = create_model(
+        'Model',
+        **{'123 invalid identifier!': (int, Field(123, alias='valid_identifier')), '!': (int, Field(0, alias='yeah'))},
+    )
+    assert _equals(str(signature(model)), '(*, valid_identifier: int = 123, yeah: int = 0) -> None')
+    model = create_model('Model', **{'123 invalid identifier!': (int, 123), '!': (int, Field(0, alias='yeah'))})
+    assert _equals(str(signature(model)), '(*, yeah: int = 0, **extra_data: Any) -> None')
+
+
+def test_invalid_identifiers_signature_falls_back_to_var_kw():
+    # Neither the alias nor the field name can be used as a parameter name, so the
+    # field is only reachable through the var-keyword parameter.
+    model = create_model(
+        'Model',
+        __config__=ConfigDict(validate_by_name=True),
+        **{'123 invalid identifier!': (int, Field(0, alias='also invalid!'))},
+    )
+    assert _equals(str(signature(model)), '(**extra_data: Any) -> None')
+
+
+def test_use_field_name():
+    class Foo(BaseModel):
+        foo: str = Field(alias='this is invalid')
+
+        model_config = ConfigDict(validate_by_name=True)
+
+    assert _equals(str(signature(Foo)), '(*, foo: str) -> None')
+
+
+def test_populate_by_name_overrides_validate_by_alias():
+    # For backwards compatibility, `populate_by_name=True` forces `validate_by_alias=True`
+    # in the core config. The signature should reflect the effective configuration:
+    class Foo(BaseModel):
+        foo: str = Field(alias='foo_alias')
+
+        model_config = ConfigDict(populate_by_name=True, validate_by_alias=False)
+
+    assert _equals(str(signature(Foo)), '(*, foo_alias: str) -> None')
+
+
+def test_does_not_use_reserved_word():
+    class Foo(BaseModel):
+        from_: str = Field(alias='from')
+
+        model_config = ConfigDict(validate_by_name=True)
+
+    assert _equals(str(signature(Foo)), '(*, from_: str) -> None')
+
+
+def test_validate_by_alias_false_uses_field_name():
+    class Model(BaseModel):
+        model_config = ConfigDict(validate_by_alias=False, validate_by_name=True)
+
+        my_field: int = Field(alias='myAlias')
+
+    sig = signature(Model)
+    assert _equals(str(sig), '(*, my_field: int) -> None')
+
+    # The signature must describe the arguments `__init__` actually accepts:
+    sig.bind(my_field=1)
+    with pytest.raises(TypeError):
+        sig.bind(myAlias=1)
+
+
+def test_validate_by_alias_false_uses_field_name_with_validation_alias():
+    class Model(BaseModel):
+        model_config = ConfigDict(validate_by_alias=False, validate_by_name=True)
+
+        my_field: int = Field(validation_alias='myAlias')
+
+    assert _equals(str(signature(Model)), '(*, my_field: int) -> None')
+
+
+def test_validate_by_alias_false_uses_field_name_with_extra_allow():
+    class Model(BaseModel):
+        model_config = ConfigDict(validate_by_alias=False, validate_by_name=True, extra='allow')
+
+        my_field: int = Field(alias='myAlias')
+
+    assert _equals(str(signature(Model)), '(*, my_field: int, **extra_data: Any) -> None')
+
+
+def test_validate_by_alias_true_still_uses_alias():
+    class Model(BaseModel):
+        model_config = ConfigDict(validate_by_name=True)
+
+        my_field: int = Field(alias='myAlias')
+
+    assert _equals(str(signature(Model)), '(*, myAlias: int) -> None')
+
+
+def test_validate_by_alias_false_is_not_inherited_by_outer_model():
+    class Inner(BaseModel):
+        model_config = ConfigDict(validate_by_alias=False, validate_by_name=True)
+
+        inner_field: int = Field(alias='innerAlias')
+
+    class Outer(BaseModel):
+        outer_field: int = Field(alias='outerAlias')
+        inner: Inner
+
+    assert _equals(str(signature(Inner)), '(*, inner_field: int) -> None')
+    assert signature(Outer).parameters['outerAlias'].name == 'outerAlias'
+
+
+def test_extra_allow_no_conflict():
+    class Model(BaseModel):
+        spam: str
+
+        model_config = ConfigDict(extra='allow')
+
+    assert _equals(str(signature(Model)), '(*, spam: str, **extra_data: Any) -> None')
+
+
+def test_extra_allow_conflict():
+    class Model(BaseModel):
+        extra_data: str
+
+        model_config = ConfigDict(extra='allow')
+
+    assert _equals(str(signature(Model)), '(*, extra_data: str, **extra_data_: Any) -> None')
+
+
+def test_extra_allow_conflict_twice():
+    class Model(BaseModel):
+        extra_data: str
+        extra_data_: str
+
+        model_config = ConfigDict(extra='allow')
+
+    assert _equals(str(signature(Model)), '(*, extra_data: str, extra_data_: str, **extra_data__: Any) -> None')
+
+
+def test_extra_allow_conflict_custom_signature():
+    class Model(BaseModel):
+        extra_data: int
+
+        def __init__(self, extra_data: int = 1, **foobar: Any):
+            super().__init__(extra_data=extra_data, **foobar)
+
+        model_config = ConfigDict(extra='allow')
+
+    assert _equals(str(signature(Model)), '(extra_data: int = 1, **foobar: Any) -> None')
+
+
+def test_signature_is_class_only():
+    class Model(BaseModel):
+        foo: int = 123
+
+        def __call__(self, a: int) -> bool:
+            pass
+
+    assert _equals(str(signature(Model)), '(*, foo: int = 123) -> None')
+    assert _equals(str(signature(Model())), '(a: int) -> bool')
+    assert not hasattr(Model(), '__signature__')
+
+
+def test_optional_field():
+    class Model(BaseModel):
+        foo: int | None = None
+
+    assert signature(Model) == Signature(
+        [Parameter('foo', Parameter.KEYWORD_ONLY, default=None, annotation=int | None)], return_annotation=None
+    )
+
+
+@pytest.mark.skipif(sys.version_info < (3, 12), reason='repr different on older versions')
+def test_annotated_field():
+
+    class Model(BaseModel):
+        foo: Annotated[int, Gt(1)] = 1
+
+    sig = signature(Model)
+    assert str(sig) == '(*, foo: Annotated[int, Gt(gt=1)] = 1) -> None'
+    # check that the `Annotated` we created is a valid `Annotated`
+    assert typing_objects.is_annotated(get_origin(sig.parameters['foo'].annotation))
+
+
+@pytest.mark.skipif(sys.version_info < (3, 12), sys.version_info >= (3, 14), reason='repr different on newer versions')
+def test_annotated_optional_field():
+
+    class Model(BaseModel):
+        foo: Annotated[int | None, Gt(1)] = None
+
+    assert str(signature(Model)) == '(*, foo: Annotated[int | None, Gt(gt=1)] = None) -> None'

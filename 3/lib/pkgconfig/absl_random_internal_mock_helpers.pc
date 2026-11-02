@@ -1,0 +1,12 @@
+prefix=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3
+exec_prefix=${prefix}
+libdir=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/lib
+includedir=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/include
+
+Name: absl_random_internal_mock_helpers
+Description: Abseil random_internal_mock_helpers library
+URL: https://abseil.io/
+Version: 20260526
+Requires: absl_config = 20260526, absl_fast_type_id = 20260526, absl_optional = 20260526, absl_random_mocking_access = 20260526
+Libs: -L${libdir}  
+Cflags: -I${includedir} -DNOMINMAX
