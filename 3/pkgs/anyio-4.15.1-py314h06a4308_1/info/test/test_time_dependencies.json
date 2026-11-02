@@ -1,1 +1,0 @@
-["pytest-timeout", "psutil >=5.9", "truststore >= 0.9.1", "pytest >=9.0", "trustme >= 1.0.0", "trio", "uvloop >=0.22.1", "hypothesis >=4.18.2", "pytest-mock >=3.14", "pip"]

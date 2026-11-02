@@ -1,7 +1,0 @@
-prefix=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3/envs/test
-includedir=${prefix}/include
-
-Name: RandrProto
-Description: Randr extension headers
-Version: 1.6.0
-Cflags: -I${includedir}

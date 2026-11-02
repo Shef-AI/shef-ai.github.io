@@ -1,8 +1,0 @@
----input---
-end valx
-
----tokens---
-'end'         Keyword
-' '           Text.Whitespace
-'valx'        Name.Namespace
-'\n'          Text.Whitespace

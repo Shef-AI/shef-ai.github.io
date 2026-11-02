@@ -1,7 +1,0 @@
-include/jansson.h
-include/jansson_config.h
-lib/cmake/jansson/janssonConfig.cmake
-lib/libjansson.so
-lib/libjansson.so.4
-lib/libjansson.so.4.15.0
-lib/pkgconfig/jansson.pc

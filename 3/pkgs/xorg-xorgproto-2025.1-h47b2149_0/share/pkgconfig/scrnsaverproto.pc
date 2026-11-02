@@ -1,7 +1,0 @@
-prefix=/home/task_178784343179487/croot/xorg-xorgproto_1787843457862/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh
-includedir=${prefix}/include
-
-Name: ScrnSaverProto
-Description: ScrnSaver extension headers
-Version: 1.2.3
-Cflags: -I${includedir}

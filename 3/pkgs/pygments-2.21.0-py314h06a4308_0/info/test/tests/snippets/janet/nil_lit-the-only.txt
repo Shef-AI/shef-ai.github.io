@@ -1,6 +1,0 @@
----input---
-nil
-
----tokens---
-'nil'         Keyword.Constants
-'\n'          Text.Whitespace

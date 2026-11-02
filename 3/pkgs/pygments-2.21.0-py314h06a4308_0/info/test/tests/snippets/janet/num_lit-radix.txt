@@ -1,6 +1,0 @@
----input---
-2r0101010001
-
----tokens---
-'2r0101010001' Literal.Number
-'\n'          Text.Whitespace

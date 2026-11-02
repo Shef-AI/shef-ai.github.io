@@ -1,6 +1,0 @@
----input---
-\#
-
----tokens---
-'\\#'         Text
-'\n'          Text.Whitespace

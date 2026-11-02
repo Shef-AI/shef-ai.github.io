@@ -1,7 +1,0 @@
-prefix=/home/task_178784343179487/croot/xorg-xorgproto_1787843457862/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh
-includedir=${prefix}/include
-
-Name: XF86VidModeProto
-Description: XF86VidMode extension headers
-Version: 2.3.1
-Cflags: -I${includedir}

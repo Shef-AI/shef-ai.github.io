@@ -1,6 +1,0 @@
----input---
-:breathe
-
----tokens---
-':breathe'    Name.Constant
-'\n'          Text.Whitespace

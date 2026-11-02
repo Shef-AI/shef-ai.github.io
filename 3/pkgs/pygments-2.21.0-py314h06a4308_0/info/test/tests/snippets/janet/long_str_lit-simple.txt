@@ -1,7 +1,0 @@
----input---
-`A nice
-long-string`
-
----tokens---
-'`A nice\nlong-string`' Literal.String
-'\n'          Text.Whitespace

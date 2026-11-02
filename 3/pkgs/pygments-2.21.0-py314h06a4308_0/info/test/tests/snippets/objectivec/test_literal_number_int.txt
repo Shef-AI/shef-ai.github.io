@@ -1,9 +1,0 @@
----input---
-@(1);
-
----tokens---
-'@('          Literal
-'1'           Literal.Number.Integer
-')'           Literal
-';'           Punctuation
-'\n'          Text.Whitespace

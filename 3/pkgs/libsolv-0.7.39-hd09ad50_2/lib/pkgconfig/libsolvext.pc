@@ -1,9 +1,0 @@
-libdir=/home/task_179265716557808/croot/libsolv-suite_1792657207229/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/lib
-includedir=/home/task_179265716557808/croot/libsolv-suite_1792657207229/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeho/include
-
-Name: libsolvext
-Description: Library for reading repositories
-Version: 0.7.39
-Requires: libsolv
-Libs: -L${libdir} -lsolvext
-Cflags: -I${includedir}

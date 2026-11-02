@@ -1,8 +1,0 @@
----input---
-select settings
-
----tokens---
-'select'      Keyword
-' '           Text.Whitespace
-'settings'    Name
-'\n'          Text.Whitespace

@@ -1,7 +1,0 @@
-prefix=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3
-includedir=${prefix}/include
-
-Name: DamageProto
-Description: Damage extension headers
-Version: 1.2.1
-Cflags: -I${includedir}

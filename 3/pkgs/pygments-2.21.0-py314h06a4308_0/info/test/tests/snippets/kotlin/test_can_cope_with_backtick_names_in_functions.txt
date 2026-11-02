@@ -1,8 +1,0 @@
----input---
-fun `wo bble`
-
----tokens---
-'fun'         Keyword.Declaration
-' '           Text.Whitespace
-'`wo bble`'   Name.Function
-'\n'          Text.Whitespace

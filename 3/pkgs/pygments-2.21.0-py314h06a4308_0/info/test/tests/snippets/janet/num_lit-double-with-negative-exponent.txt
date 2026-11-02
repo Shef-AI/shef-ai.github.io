@@ -1,6 +1,0 @@
----input---
-2e-1
-
----tokens---
-'2e-1'        Literal.Number.Float
-'\n'          Text.Whitespace

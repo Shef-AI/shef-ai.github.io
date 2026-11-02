@@ -1,8 +1,0 @@
-prefix=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3
-includedir=${prefix}/include
-includex11dir=${prefix}/include/X11
-
-Name: Xproto
-Description: Xproto headers
-Version: 7.0.34
-Cflags: -I${includedir}

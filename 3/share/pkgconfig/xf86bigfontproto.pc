@@ -1,7 +1,0 @@
-prefix=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3
-includedir=${prefix}/include
-
-Name: XF86BigFontProto
-Description: XF86BigFont extension headers
-Version: 1.2.0
-Cflags: -I${includedir}

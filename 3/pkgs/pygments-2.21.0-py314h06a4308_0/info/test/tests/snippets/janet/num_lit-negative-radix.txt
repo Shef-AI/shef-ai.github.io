@@ -1,6 +1,0 @@
----input---
--36r20
-
----tokens---
-'-36r20'      Literal.Number
-'\n'          Text.Whitespace

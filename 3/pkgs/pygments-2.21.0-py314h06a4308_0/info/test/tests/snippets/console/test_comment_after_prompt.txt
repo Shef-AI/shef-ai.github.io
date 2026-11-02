@@ -1,6 +1,0 @@
----input---
-$# comment
-
----tokens---
-'$'           Generic.Prompt
-'# comment\n' Comment.Single

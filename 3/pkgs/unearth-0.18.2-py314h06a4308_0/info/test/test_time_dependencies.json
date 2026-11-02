@@ -1,1 +1,0 @@
-["pytest-mock >=3.12.0", "flask >=2.1.2", "pytest-httpserver >=1.0.4", "pip", "requests-wsgi-adapter >=0.4.1", "keyring", "pytest >=6.1"]

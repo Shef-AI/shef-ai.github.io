@@ -1,6 +1,0 @@
----input---
-"Some 'text"
-
----tokens---
-'"Some \'text"' Literal.String
-'\n'          Text.Whitespace

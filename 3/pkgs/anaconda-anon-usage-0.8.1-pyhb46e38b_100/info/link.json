@@ -1,9 +1,0 @@
-{
-  "noarch": {
-    "entry_points": [
-      "anaconda-anon-usage = anaconda_anon_usage.main:main"
-    ],
-    "type": "python"
-  },
-  "package_metadata_version": 1
-}

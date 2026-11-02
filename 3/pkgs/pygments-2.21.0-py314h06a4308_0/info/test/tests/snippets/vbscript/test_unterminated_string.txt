@@ -1,7 +1,0 @@
----input---
-"x\nx
-
----tokens---
-'"'           Literal.String.Double
-'x\\nx'       Literal.String.Double
-'\n'          Error

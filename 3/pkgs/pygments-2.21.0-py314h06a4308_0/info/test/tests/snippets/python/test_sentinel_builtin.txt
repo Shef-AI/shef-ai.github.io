@@ -1,8 +1,0 @@
-# Tests that 'sentinel' is recognized as a built-in
-
----input---
-sentinel
-
----tokens---
-'sentinel'    Name.Builtin
-'\n'          Text.Whitespace

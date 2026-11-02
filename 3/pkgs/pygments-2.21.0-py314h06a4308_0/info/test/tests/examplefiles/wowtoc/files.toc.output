@@ -1,8 +1,0 @@
-'a'           Name
-'\n'          Text.Whitespace
-
-'Foo.lua'     Name
-'\n'          Text.Whitespace
-
-'Spaces allowed.lua' Name
-'\n'          Text.Whitespace

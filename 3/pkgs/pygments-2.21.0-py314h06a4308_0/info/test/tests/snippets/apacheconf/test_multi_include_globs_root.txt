@@ -1,8 +1,0 @@
----input---
-Include /*conf/*.conf
-
----tokens---
-'Include'     Name.Builtin
-' '           Text.Whitespace
-'/*conf/*.conf' Literal.String.Other
-'\n'          Text.Whitespace

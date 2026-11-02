@@ -1,5 +1,0 @@
-{
-  "channel_targets": "defaults",
-  "target_platform": "linux-64",
-  "numpy": "2.3"
-}

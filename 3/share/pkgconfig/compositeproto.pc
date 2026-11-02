@@ -1,7 +1,0 @@
-prefix=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3
-includedir=${prefix}/include
-
-Name: CompositeExt
-Description: Composite extension headers
-Version: 0.4.2
-Cflags: -I${includedir}

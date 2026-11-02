@@ -1,6 +1,0 @@
----input---
-*global-var*
-
----tokens---
-'*global-var*' Name.Variable
-'\n'          Text.Whitespace

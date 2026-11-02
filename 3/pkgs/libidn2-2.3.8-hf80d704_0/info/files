@@ -1,6 +1,0 @@
-bin/idn2
-include/idn2.h
-lib/libidn2.so
-lib/libidn2.so.0
-lib/libidn2.so.0.4.0
-lib/pkgconfig/libidn2.pc

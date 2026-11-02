@@ -1,9 +1,0 @@
-{
-  "channel_targets": "defaults",
-  "cross_target_stdlib": "sysroot",
-  "cross_target_stdlib_version": "2.28",
-  "triplet": "x86_64-conda-linux-gnu",
-  "cross_target_platform": "linux-64",
-  "target_platform": "linux-64",
-  "__glibc": "__glibc >=2.28,<3.0.a0"
-}

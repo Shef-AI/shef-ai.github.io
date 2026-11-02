@@ -1,6 +1,0 @@
----input---
-go_gc_duration_seconds
-
----tokens---
-'go_gc_duration_seconds' Name.Variable
-'\n'          Text.Whitespace

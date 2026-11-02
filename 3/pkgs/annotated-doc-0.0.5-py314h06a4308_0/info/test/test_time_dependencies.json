@@ -1,1 +1,0 @@
-["pip", "pytest >=8.3.5", "coverage >=7.6.1", "typer >=0.16.1", "toml"]

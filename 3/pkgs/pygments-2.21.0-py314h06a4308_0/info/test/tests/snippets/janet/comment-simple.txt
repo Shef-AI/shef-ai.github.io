@@ -1,6 +1,0 @@
----input---
-# a comment
-
----tokens---
-'# a comment' Comment.Single
-'\n'          Text.Whitespace

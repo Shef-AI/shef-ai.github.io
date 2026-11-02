@@ -1,8 +1,0 @@
----input---
-3?10
-
----tokens---
-'3'           Literal.Number.Integer
-'?'           Operator
-'10'          Literal.Number.Integer
-'\n'          Text.Whitespace

@@ -1,6 +1,0 @@
-{
-  "libgrpc": "1.83",
-  "channel_targets": "defaults",
-  "target_platform": "linux-64",
-  "libprotobuf": "7.35.1"
-}

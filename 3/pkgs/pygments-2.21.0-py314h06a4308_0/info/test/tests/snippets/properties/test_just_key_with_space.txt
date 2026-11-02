@@ -1,8 +1,0 @@
----input---
-just\ key
-
----tokens---
-'just'        Name.Attribute
-'\\ '         Literal.String.Escape
-'key'         Name.Attribute
-'\n'          Text.Whitespace

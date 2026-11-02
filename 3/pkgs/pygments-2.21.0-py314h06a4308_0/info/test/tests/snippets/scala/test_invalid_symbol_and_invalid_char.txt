@@ -1,8 +1,0 @@
----input---
-'1 //'
-
----tokens---
-"'"           Error
-'1'           Literal.Number.Integer
-' '           Text.Whitespace
-"//'\n"       Comment.Single

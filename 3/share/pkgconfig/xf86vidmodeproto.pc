@@ -1,7 +1,0 @@
-prefix=/home/runner/work/shef-ai.github.io/shef-ai.github.io/3
-includedir=${prefix}/include
-
-Name: XF86VidModeProto
-Description: XF86VidMode extension headers
-Version: 2.3.1
-Cflags: -I${includedir}

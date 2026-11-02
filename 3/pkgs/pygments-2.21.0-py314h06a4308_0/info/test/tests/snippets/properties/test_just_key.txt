@@ -1,6 +1,0 @@
----input---
-justkey
-
----tokens---
-'justkey'     Name.Attribute
-'\n'          Text.Whitespace

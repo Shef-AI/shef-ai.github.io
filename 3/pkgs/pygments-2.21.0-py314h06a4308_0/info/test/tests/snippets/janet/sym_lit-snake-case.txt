@@ -1,6 +1,0 @@
----input---
-snake_case_symbol
-
----tokens---
-'snake_case_symbol' Name.Variable
-'\n'          Text.Whitespace

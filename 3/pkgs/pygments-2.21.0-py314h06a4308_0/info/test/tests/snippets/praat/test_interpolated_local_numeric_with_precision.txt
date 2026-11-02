@@ -1,6 +1,0 @@
----input---
-'a.a:3'
-
----tokens---
-"'a.a:3'"     Literal.String.Interpol
-'\n'          Text.Whitespace

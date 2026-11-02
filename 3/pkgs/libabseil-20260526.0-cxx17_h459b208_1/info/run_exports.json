@@ -1,1 +1,0 @@
-{"weak": ["libabseil >=20260526.0,<20260527.0a0", "libabseil =*=cxx17*"]}

@@ -1,8 +1,0 @@
-prefix=/home/task_178784343179487/croot/xorg-xorgproto_1787843457862/_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placeh
-includedir=${prefix}/include
-includex11dir=${prefix}/include/X11
-
-Name: Xproto
-Description: Xproto headers
-Version: 7.0.34
-Cflags: -I${includedir}

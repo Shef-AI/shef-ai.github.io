@@ -1,8 +1,0 @@
-services:
-  typer:
-    build:
-      context: ../../
-      dockerfile: scripts/docker/Dockerfile
-    volumes:
-      - ../../:/code
-    command: sleep infinity

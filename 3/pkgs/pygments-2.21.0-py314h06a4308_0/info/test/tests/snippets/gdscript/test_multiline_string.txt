@@ -1,8 +1,0 @@
----input---
-"""
-Multiline
-"""
-
----tokens---
-'"""\nMultiline\n"""' Literal.String.Doc
-'\n'          Text.Whitespace

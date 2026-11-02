@@ -1,9 +1,0 @@
----input---
-@import ModuleA;
-
----tokens---
-'@import'     Keyword
-' '           Text.Whitespace
-'ModuleA'     Name
-';'           Punctuation
-'\n'          Text.Whitespace
