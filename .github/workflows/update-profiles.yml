@@ -30,6 +30,7 @@ jobs:
         uses: conda-incubator/setup-miniconda@v2
         with:
           miniconda-version: "latest"
+          installation-dir: /home/runner/miniconda3
           auto-update-conda: true
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies
@@ -51,6 +52,7 @@ jobs:
         uses: peter-evans/create-pull-request@v4
         with:
           token: ${{ secrets.PAT }}
+          add-paths: people/**
           commit-message: Update profiles
           committer: GitHub <noreply@github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
